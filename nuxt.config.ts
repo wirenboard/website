@@ -16,4 +16,15 @@ export default defineNuxtConfig({
     defaultLocale: 'ru',
     strategy: 'prefix_and_default',
   },
+  app: {
+    head: {
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/png',
+          href: '/img/favicon.png',
+        }
+      ]
+    }
+  }
 })
