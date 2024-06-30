@@ -2,7 +2,9 @@ name: ci
 
 on:
   push:
-    branches: [ '**' ]
+    branches:
+    - '!main'
+    - '**'
 
 jobs:
   docker:
@@ -32,8 +34,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          platforms: linux/amd64
+          platforms: linux/amd64,arm64
           tags: |
             ghcr.io/wirenboard/website:${{ env.BRANCH }}-${{ env.GIT_REVISION }}
             ghcr.io/wirenboard/website:${{ env.BRANCH }}
-            ghcr.io/wirenboard/website:latest
