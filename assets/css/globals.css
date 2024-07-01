@@ -1,4 +1,4 @@
-body {
+main {
   font-size: 18px;
   line-height: 24px;
   font-family: 'Plumb', sans-serif;
@@ -7,26 +7,31 @@ body {
   max-width: 1280px;
 }
 
-p {
+main p {
   margin: 1.3em 0;
 }
 
-a {
+main a {
   color: var(--link-color);
   text-decoration: none;
 }
 
-a:hover {
+main a:hover {
   text-decoration: underline;
 }
 
-details summary::-webkit-details-marker,
-details summary::marker {
+main details summary::-webkit-details-marker,
+main details summary::marker {
   display: none;
   content: '';
 }
 
-hr {
+main hr {
   border-top: 1px solid var(--border-color);
   border-left: 0;
+  margin: 9px 0
+}
+
+main h2 {
+  font-size: 27px;
 }
