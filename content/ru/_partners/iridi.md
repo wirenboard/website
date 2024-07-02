@@ -1,0 +1,28 @@
+---
+sort: 110
+type: software
+---
+
+::partner
+---
+logo: /img/partners/iridi.webp
+phone: 74993227329
+---
+
+#title
+iRidium mobile
+
+#website
+https://iridi.com/ru
+
+#email
+contact@iridi.com
+
+#description
+Российская компания-разработчик программного обеспечения для управления системами автоматизации, А/В оборудованием и IoT устройствами.
+iRidium позволяет интегрировать любые системы автоматизации, А/В оборудованием и Медиа Серверы и управлять проектом с любого мобильного устройства на базе iOS, Android, Windows, используя любой дизайн интерфейса.
+
+#note
+Предлагаемое нами решение является отличным сочетанием двух достойных продуктов. Контроллеры Wiren Board Zero надежные, многофункциональные, сравнительно легкие в настройке и доступные по цене. [Wiren Board + iRidium server — новое решение для домашней и промышленной автоматизации](https://blog.iridi.com/ru/wiren-board-iridium-server-novoe-reshenie-dlya-domashnej-i-pro/).
+
+::
