@@ -1,6 +1,13 @@
 @font-face {
   font-family: 'Plumb';
   src: url('/fonts/plumb-bl-webfont.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Plumb';
+  src: url('/fonts/plumb-bo-webfont.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
