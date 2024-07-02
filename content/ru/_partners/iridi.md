@@ -7,16 +7,12 @@ type: software
 ---
 logo: /img/partners/iridi.webp
 phone: 74993227329
+website: https://iridi.com/ru
+email: contact@iridi.com
 ---
 
 #title
 iRidium mobile
-
-#website
-https://iridi.com/ru
-
-#email
-contact@iridi.com
 
 #description
 Российская компания-разработчик программного обеспечения для управления системами автоматизации, А/В оборудованием и IoT устройствами.

@@ -7,16 +7,12 @@ type: software
 ---
 logo: /img/partners/intra.webp
 phone: 78352240378
+website: https://intrascada.ru
+email: info@ih-systems.com
 ---
 
 #title
 ООО «Интра»
-
-#website
-https://intrascada.ru
-
-#email
-info@ih-systems.com
 
 #description
 Российский разработчик программного обеспечения для систем автоматизации и диспетчеризации.

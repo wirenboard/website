@@ -7,16 +7,12 @@ type: software
 ---
 logo: /img/partners/rapid_scada.webp
 phone: 74732303612
+website: https://rapidscada.ru
+email: info@rapidscada.ru
 ---
 
 #title
 ООО «Рапид Софтвэа»
-
-#website
-https://rapidscada.ru
-
-#email
-info@rapidscada.ru
 
 #description
 Rapid SCADA — это платформа для промышленной автоматизации с открытым исходным кодом. Функционал «из коробки» позволяет быстро создавать системы мониторинга и диспетчеризации.

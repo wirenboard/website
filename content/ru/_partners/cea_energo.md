@@ -7,17 +7,12 @@ type: software
 ---
 logo: /img/partners/cea_energo.webp
 phone: 74952347643
+website: https://cea-energo.ru
+email: info@cea-energo.ru
 ---
 
 #title
 ООО «ЦентрЭнергоАвтоматика»
-
-#website
-https://cea-energo.ru
-
-#email
-info@cea-energo.ru
-
 
 #description
 Разработчик программного обеспечения в области диспетчеризации, телемеханики и АСУТП на объектах электроэнергетики и ЖКХ.

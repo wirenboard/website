@@ -2,7 +2,11 @@
 export default defineNuxtConfig({
   ssr: true,
   generate: {
-    routes: ['/', '/jobs']
+    routes: [
+      '/',
+      '/jobs',
+      '/partners',
+    ]
   },
   devtools: { enabled: false },
   css: [
@@ -10,7 +14,7 @@ export default defineNuxtConfig({
     '~/assets/css/globals.css',
     '~/assets/css/fonts.css',
   ],
-  modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxt/image'],
+  modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxt/image', '@nuxt/icon'],
   content: {
     locales: ['ru', 'en'],
     defaultLocale: 'ru',

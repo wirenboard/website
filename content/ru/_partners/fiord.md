@@ -7,16 +7,12 @@ type: software
 ---
 logo: /img/partners/fiord.webp
 phone: 78123236212
+website: https://fiord.com/
+email: info@fiord.com
 ---
 
 #title
 ФИОРД
-
-#website
-https://fiord.com/
-
-#email
-info@fiord.com
 
 #description
 Официальный дистрибьютор Rockwell Automation - разработчика ISaGRAF. ISaGRAF - инструментальная графическая среда разработки прикладных программ для контроллеров на языках МЭК.

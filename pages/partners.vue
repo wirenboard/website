@@ -5,7 +5,9 @@ const { t, locale } = useI18n();
 
 // const data = await useLocalizedData('jobs');
 
-// useContentHead(data);
+useHead({
+  title: 'Партнёры — Wiren Board',
+})
 
 const query: QueryBuilderParams = { path: '/_partners', where: [{  _locale: locale.value }], sort: [{ sort: 1 }] }
 </script>
@@ -26,7 +28,7 @@ const query: QueryBuilderParams = { path: '/_partners', where: [{  _locale: loca
 
     <template #not-found>
       aaaaa
-      <!--      <p>{{t('noVacancies')}}</p>-->
+      <!-- <p>{{t('noVacancies')}}</p> -->
     </template>
   </ContentList>
 </template>

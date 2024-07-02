@@ -7,20 +7,15 @@ type: software
 ---
 logo: /img/partners/master_scada.webp
 phone: 78007755790
+website: https://masterscada.ru
+email: info@masterscada.ru
 ---
 
 #title
 МПС Софт
 
-#website
-https://masterscada.ru
-
-#email
-info@masterscada.ru
-
 #description
 Разработчик программного обеспечения в области автоматизации и диспетчеризации промышленных систем.
-
 
 #note
 Основной продукт компании — кроссплатформенный вертикально-интегрированный программный комплекс MasterSCADA, предназначенный для разработки систем управления и диспетчеризации. Список внедрений MasterSCADA насчитывает десятки тысяч систем, которые успешно работают на территории СНГ.

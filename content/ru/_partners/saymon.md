@@ -7,18 +7,14 @@ type: software
 ---
 logo: /img/partners/saymon.webp
 phone: 78123099885
+website: https://saymon.info
+email: welcome@saymon.info
 
 [//]: # (TODO разобраться нужно их или новых)
 ---
 
 #title
 Saymon
-
-#website
-https://saymon.info
-
-#email
-welcome@saymon.info
 
 #description
 Компания-разработчик платформы мониторинга и сбора данных, поддерживающей решения на базе Wiren Board.
