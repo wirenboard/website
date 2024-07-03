@@ -1,13 +1,6 @@
-FROM nginx
+FROM ghcr.io/wirenboard/website-base-image:initial
 
 WORKDIR /var/www
-
-RUN apt-get update
-
-RUN apt-get install -y \
-    npm
-
-RUN npm install -g pnpm
 
 COPY . /var/www
 
