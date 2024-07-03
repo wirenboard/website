@@ -1,4 +1,4 @@
-FROM ghcr.io/wirenboard/website-base-image:initial
+FROM ghcr.io/wirenboard/website-base-image:initial as builder
 
 WORKDIR /var/www
 
@@ -8,4 +8,6 @@ RUN pnpm install
 
 RUN pnpm run build
 
-RUN cp -r /var/www/.output/public/* /usr/share/nginx/html
+FROM nginx
+
+COPY --from=builder /var/www/.output/public/ /usr/share/nginx/html/
