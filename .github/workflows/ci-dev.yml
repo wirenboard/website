@@ -28,6 +28,17 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build static content
+        uses: addnab/docker-run-action@v3
+        with:
+          registry: ghcr.io
+          image: ghcr.io/wirenboard/website-base-image:initial
+          options: -v ${{ github.workspace }}:/var/www -e ABC=123
+          run: |
+            cd /var/www
+            pnpm install
+            pnpm run build
       -
         name: Build and push
         uses: docker/build-push-action@v5
