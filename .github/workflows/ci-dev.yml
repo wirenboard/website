@@ -32,6 +32,8 @@ jobs:
       - name: Build static content
         uses: addnab/docker-run-action@v3
         with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           image: ghcr.io/wirenboard/website-base-image:initial
           options: -v ${{ github.workspace }}:/var/www -e ABC=123
