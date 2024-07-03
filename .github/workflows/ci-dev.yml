@@ -31,6 +31,7 @@ jobs:
 
       - name: Checkout 
         uses: actions/checkout@v2 # Required to mount the Github Workspace to a volume 
+
       - name: Build static content
         uses: addnab/docker-run-action@v3
         with:
@@ -43,10 +44,12 @@ jobs:
             cd /var/www
             pnpm install
             pnpm run build
+            
       -
         name: Build and push
         uses: docker/build-push-action@v5
         with:
+          context: .
           push: true
           platforms: linux/amd64,arm64
           tags: |
