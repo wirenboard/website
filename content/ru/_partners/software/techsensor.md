@@ -1,11 +1,10 @@
 ---
 sort: 104
-type: software
 ---
 
 ::partner
 ---
-logo: /img/partners/techsensor.webp
+logo: /img/partners/software/techsensor.webp
 phone: 74996575911
 website: https://techsensor.ru
 email: mail@techsensor.ru

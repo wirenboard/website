@@ -1,11 +1,10 @@
 ---
 sort: 105
-type: software
 ---
 
 ::partner
 ---
-logo: /img/partners/liten.webp
+logo: /img/partners/software/liten.webp
 phone: 74993437243
 website: https://liten-soft.ru
 email: info@liten-soft.ru
@@ -15,8 +14,8 @@ email: info@liten-soft.ru
 ООО «ЛАЙТЭН»
 
 #description
-Российская компания — разработчик облачной IIoT платформы SVAROG для систем автоматизации
-и энергоэффективной диспетчеризации инженерных систем.
+Российская компания — разработчик облачной IIoT платформы SVAROG для **систем автоматизации
+и энергоэффективной диспетчеризации инженерных систем**.
 
 #note
 Ключевые особенности платформы:

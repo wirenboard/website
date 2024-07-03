@@ -13,38 +13,43 @@ const formatPhoneNumber = (phone: number) => {
 
 <template>
   <article class="partner">
-    <NuxtImg :src="logo" class="partner-logo" />
-
-    <h3 class="partner-title">
-      <ContentSlot :use="$slots.title" unwrap="p" />
-    </h3>
-
-    <template v-if="$slots.description">
-      <div class="partner-description">
-        <ContentSlot :use="$slots.description" />
+    <div class="partner-info">
+      <NuxtImg :src="logo" class="partner-logo" />
+      <h3 class="partner-title">
+        <ContentSlot :use="$slots.title" unwrap="p" />
+      </h3>
+      <div class="partner-contacts">
+        <a v-if="website" :href="website" target="_blank" class="partner-contact"><Icon name="ion:earth" /> {{website}}</a>
+        <a v-if="email" :href="`mailto:${email}`" target="_blank" class="partner-contact"><Icon name="ion:mail" /> {{email}}</a>
+        <a v-if="phone" :href="`tel:+${phone}`" class="partner-contact"><Icon name="ion:call" /> {{formatPhoneNumber(phone)}}</a>
       </div>
-    </template>
 
-    <div class="partner-contacts">
-      <a v-if="website" :href="website" target="_blank" class="partner-contact"><Icon name="ion:earth" /> {{website}}</a>
-      <a v-if="email" :href="`mailto:${email}`" target="_blank" class="partner-contact"><Icon name="ion:mail" /> {{email}}</a>
-      <a v-if="phone" :href="`tel:+${phone}`" class="partner-contact"><Icon name="ion:call" /> {{formatPhoneNumber(phone)}}</a>
+    </div>
+
+    <div class="partner-details">
+      <ContentSlot :use="$slots.description" />
+      <ContentSlot :use="$slots.note" />
     </div>
   </article>
 </template>
 
-<style scoped>
+<style>
 .partner {
   border-radius: 4px;
-  border: 1px solid var(--border-color);
-  box-shadow: 0 0 6px var(--border-color);
+  display: flex;
   padding: 24px;
+  gap: 12px;
+}
+
+.partner-info {
+  min-width: 280px;
 }
 
 .partner-logo {
   display: block;
-  margin: 0 auto 24px;
-  height: 45px;
+  margin-bottom: 12px;
+  max-height: 50px;
+  max-width: 100%;
 }
 
 .partner-title {
@@ -63,7 +68,22 @@ const formatPhoneNumber = (phone: number) => {
   gap: 8px;
 }
 
-.partner-description {
-  margin-top: 24px;
+.partner-contact:last-of-type {
+  margin-bottom: 0;
+}
+
+.partner-details p {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.partner-details > :last-child {
+  margin-bottom: 0;
+}
+
+.partner ul {
+  padding-left: 20px;
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 </style>

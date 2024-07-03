@@ -1,11 +1,10 @@
 ---
 sort: 114
-type: software
 ---
 
 ::partner
 ---
-logo: /img/partners/simplight.webp
+logo: /img/partners/software/simplight.webp
 phone: 73432472133
 website: https://simplight.ru
 email: simp@simplight.ru
@@ -15,7 +14,7 @@ email: simp@simplight.ru
 СИМП Лайт
 
 #description
-Российская компания, занимается разработкой, продажей и поддержкой программного обеспечения для автоматизации производства, объектов ЖКХ, зданий и сооружений.
+Российская компания, занимается разработкой, продажей и поддержкой программного обеспечения для **автоматизации производства, объектов ЖКХ, зданий и сооружений**.
 
 [Wiren Board - официальный поставщик оборудования для Simp Light](https://simplight.ru/our-partners/).
 
@@ -26,5 +25,5 @@ email: simp@simplight.ru
 * поддерживает Wiren Board;
 * оперативная техническая поддержка;
 * возможность подобрать решение под любой бюджет.
-* 
+
 ::

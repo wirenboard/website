@@ -1,11 +1,10 @@
 ---
 sort: 107
-type: software
 ---
 
 ::partner
 ---
-logo: /img/partners/saymon.webp
+logo: /img/partners/software/saymon.webp
 phone: 78123099885
 website: https://saymon.info
 email: welcome@saymon.info
@@ -17,7 +16,7 @@ email: welcome@saymon.info
 Saymon
 
 #description
-Компания-разработчик платформы мониторинга и сбора данных, поддерживающей решения на базе Wiren Board.
+Компания-разработчик **платформы мониторинга и сбора данных**, поддерживающей решения на базе Wiren Board.
 
 #note
 Ключевые особенности платформы:
