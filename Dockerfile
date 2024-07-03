@@ -1,3 +1,3 @@
 FROM nginx
 
-COPY ./.output/public/ /usr/share/nginx/html/
+COPY .output/public/ /usr/share/nginx/html/
