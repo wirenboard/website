@@ -29,6 +29,8 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Checkout 
+        uses: actions/checkout@v2 # Required to mount the Github Workspace to a volume 
       - name: Build static content
         uses: addnab/docker-run-action@v3
         with:
