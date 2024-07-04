@@ -16,7 +16,7 @@ email: simp@simplight.ru
 #description
 Российская компания, занимается разработкой, продажей и поддержкой программного обеспечения для **автоматизации производства, объектов ЖКХ, зданий и сооружений**.
 
-[Wiren Board - официальный поставщик оборудования для Simp Light](https://simplight.ru/our-partners/).
+[Wiren Board — официальный поставщик оборудования для Simp Light](https://simplight.ru/our-partners/).
 
 #note
 Ключевые особенности SCADA Simp Light:

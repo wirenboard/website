@@ -13,7 +13,7 @@ const { data } = await useAsyncData('home', () => queryContent(query.path).find(
 </script>
 
 <template>
-  <Map :items="data" />
+  <Map :items="data" :center="[53, 45]" />
 
   <ContentList :query="query">
     <template #default="{ list }">

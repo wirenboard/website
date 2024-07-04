@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{ items: { coordinates: number[] }[] }>();
+defineProps<{ items: { coordinates: number[] }[], center: number[] }>();
 
 import { ref } from 'vue'
 const zoom = ref(4)
@@ -10,7 +10,7 @@ const zoom = ref(4)
     <LMap
       ref="map"
       :zoom="zoom"
-      :center="items[0].coordinates"
+      :center="center"
       :use-global-leaflet="false"
     >
       <LMarker
