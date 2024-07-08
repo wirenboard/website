@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { MarkdownRoot, QueryBuilderParams } from '@nuxt/content';
+import type { QueryBuilderParams } from '@nuxt/content';
 
 const { t, locale } = useI18n();
 
@@ -14,8 +14,11 @@ const query: QueryBuilderParams = { path: '/_partners/software', where: [{  _loc
   <ContentList :query="query">
     <template #default="{ list }">
       <div class="partners">
-        <template v-for="(article, i) in list" :key="article._path">
-          <ContentRendererMarkdown :value="article.body as MarkdownRoot" v-if="article._partial" />
+        <template v-for="(partner, i) in list" :key="partner._path">
+          <Partner v-bind="partner">
+            <ContentRendererMarkdown :value="partner" />
+          </Partner>
+
           <hr class="partners-separator" v-if="i !== list.length - 1" />
         </template>
       </div>

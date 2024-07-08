@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{ logo: string; phone?: number; website?: string; email?: string; }>();
+defineProps<{ title: string; logo: string; phone?: number; website?: string; email?: string; note?: string }>();
 
 const formatPhoneNumber = (phone: number) => {
   if (!phone) {
@@ -15,8 +15,8 @@ const formatPhoneNumber = (phone: number) => {
   <article class="partner">
     <div class="partner-info">
       <NuxtImg :src="logo" class="partner-logo" />
-      <h3 class="partner-title">
-        <ContentSlot :use="$slots.title" unwrap="p" />
+      <h3 class="partner-title" :id="title?.replace(/\s/gi, '-')">
+        {{ title }}
       </h3>
       <div class="partner-contacts">
         <a v-if="website" :href="website" target="_blank" class="partner-contact"><Icon name="ion:earth" /> {{website}}</a>
@@ -27,8 +27,7 @@ const formatPhoneNumber = (phone: number) => {
     </div>
 
     <div class="partner-details">
-      <ContentSlot :use="$slots.description" />
-      <ContentSlot :use="$slots.note" />
+      <slot />
     </div>
   </article>
 </template>

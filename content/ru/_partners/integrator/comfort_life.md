@@ -2,23 +2,16 @@
 sort: 101
 district: [moscow, spb]
 coordinates: [59.99963804437398, 30.36195935639194]
----
-
-::partner
----
+title: Comfort-Life
 logo: /img/partners/integrator/comfort_life.webp
 phone: 78129639778
 website: https://comf.life
 email: info@comf.life
 ---
 
-#title
-Comfort-Life
-
-#description
 Компания «Comfort-Life» — занимается разработкой и внедрением системы «Умный дом» для квартир и загородных домов под ключ в Санкт-Петербурге и Москве.
 
-#note
+
 Выполняют следующие услуги:
 * проектирование системы «Умный дом», электрики, слаботочных сетей и мультимедиа;
 * черновой электромонтаж;
@@ -41,5 +34,3 @@ Comfort-Life
 * [ЖК «Риверсайд» Квартира 353 кв. м.](https://comf.life/shchit-umnogo-doma-wirenboard-za-916000-rublej.html)
 * [КП «Охта Парк» дом 130 кв.м.](https://comf.life/obekt-kp-ohta-park.html)
 * [ЖК «Ozerki Style Tower» квартира 140 кв.м.](https://comf.life/obekt-kp-zhk-ozerki-style-tower.html)
-
-::

@@ -6,7 +6,11 @@ export default defineNuxtConfig({
       '/',
       '/jobs',
       '/partners/software',
+      '/ru/partners/software',
+      '/en/partners/software',
       '/partners/integrator',
+      '/ru/partners/integrator',
+      '/en/partners/integrator',
     ]
   },
   devtools: { enabled: false },

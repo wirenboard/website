@@ -1,8 +1,13 @@
 <script setup lang="ts">
-defineProps<{ items: { coordinates: number[] }[], center: number[] }>();
+const props = defineProps<{ items: { title: string; coordinates: number[] }[], center: number[], zoom: number }>();
 
 import { ref } from 'vue'
-const zoom = ref(4)
+
+const map = ref();
+
+watch(() => props.center, () => {
+  map.value.leafletObject.setView(props.center);
+});
 </script>
 
 <template>
@@ -16,7 +21,9 @@ const zoom = ref(4)
       <LMarker
         v-for="(item, index) in items"
         :key="index"
-        :lat-lng="item.coordinates" />
+        :lat-lng="item.coordinates"
+        @click="$router.push(`#${item.title.replace(/\s/gi, '-')}`)"
+      />
       <LTileLayer
         :no-wrap="true"
         url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
