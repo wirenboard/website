@@ -36,5 +36,3 @@ email: info@xiot.ru
 * [Проект автоматизации сдвоенной квартиры 41 кв.м. г. Москва](https://wirenboard.com/statics/content/files/65faeda93fc69.pdf)
 * [Проект автоматизации сдвоенной квартиры 56 кв.м. г. Москва](https://wirenboard.com/statics/content/files/65faedc06bfb5.pdf)
 * [Проект автоматизации квартиры 130 кв.м. г. Москва, Wiren Board + KNX](https://wirenboard.com/statics/content/files/66549ba2c5f42.pdf)
-
-::

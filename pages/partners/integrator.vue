@@ -22,14 +22,14 @@ const filterChanged = () => {
 };
 
 const districts = [
-  { value: undefined, label: 'Выберите область', coordinates: [53, 45], zoom: 4 },
-  { value: 'moscow', label: 'Москва и область', coordinates: [55.8, 37.5], zoom: 9 },
-  { value: 'spb', label: 'Северо-запад', coordinates: [59.95, 30.4], zoom: 10 },
-  { value: 'center', label: 'Центральный округ', coordinates: [54.21, 37.62], zoom: 12 },
-  { value: 'volga', label: 'Приволжье', coordinates: [57.5, 51], zoom: 6 },
-  { value: 'ural', label: 'Урал', coordinates: [56.84, 60.57], zoom: 12 },
-  { value: 'by', label: 'Беларусь', coordinates: [53.95, 27.6], zoom: 9 },
-  { value: 'kg', label: 'Кыргызстан', coordinates: [43, 74.5], zoom: 8 },
+  { value: undefined, label: t('chooseArea'), coordinates: [53, 45], zoom: 4 },
+  { value: 'moscow', label: t('moscow'), coordinates: [55.8, 37.5], zoom: 9 },
+  { value: 'spb', label: t('spb'), coordinates: [59.95, 30.4], zoom: 10 },
+  { value: 'center', label: t('center'), coordinates: [54.21, 37.62], zoom: 12 },
+  { value: 'volga', label: t('volga'), coordinates: [57.5, 51], zoom: 6 },
+  { value: 'ural', label: t('ural'), coordinates: [56.84, 60.57], zoom: 12 },
+  { value: 'by', label: t('by'), coordinates: [53.95, 27.6], zoom: 9 },
+  { value: 'kg', label: t('kg'), coordinates: [43, 74.5], zoom: 8 },
 ]
 </script>
 
@@ -80,10 +80,26 @@ const districts = [
 <i18n>
 {
   "ru": {
-    "title": "Партнёры — Wiren Board"
+    "title": "Партнёры — Wiren Board",
+    "chooseArea": "Выберите область",
+    "moscow": "Москва и область",
+    "spb": "Северо-запад",
+    "center": "Центральный округ",
+    "volga": "Приволжье",
+    "ural": "Урал",
+    "by": "Беларусь",
+    "kg": "Кыргызстан"
   },
   "en": {
-    "title": "Partners — Wiren Board"
+    "title": "Partners — Wiren Board",
+    "chooseArea": "Select a region",
+    "moscow": "Moscow and Moscow region",
+    "spb": "North-western federal restrict",
+    "center": "Central federal district",
+    "volga": "Volga federal district",
+    "ural": "Ural federal district",
+    "by": "Republic of Belarus",
+    "kg": "Republic of Kyrgyzstan"
   }
 }
 </i18n>

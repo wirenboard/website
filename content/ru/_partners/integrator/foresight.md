@@ -2,7 +2,7 @@
 sort: 110
 district: [moscow]
 coordinates: [55.794322812542234, 37.54353093370438]
-title: FullHouse
+title: Форсайт
 logo: /img/partners/integrator/foresight.webp
 phone: 74956636806
 website: https://foresight-fund.ru

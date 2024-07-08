@@ -3,7 +3,7 @@ sort: 127
 district: [by]
 coordinates: [53.946722375392426, 27.61806785065508]
 title: LedFarm.by
-logo: /img/partners/integrator/leadfarm.webp
+logo: /img/partners/integrator/ledfarm.webp
 website: https://ledfarm.by
 email: info@ledfarm.by
 ---
