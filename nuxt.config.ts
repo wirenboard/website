@@ -25,6 +25,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/i18n',
     '@nuxtjs/leaflet',
+    '@primevue/nuxt-module',
   ],
   content: {
     locales: ['ru', 'en'],
@@ -44,6 +45,11 @@ export default defineNuxtConfig({
           href: '/img/favicon.png',
         }
       ]
+    }
+  },
+  primevue: {
+    options: {
+      unstyled: true
     }
   }
 })
