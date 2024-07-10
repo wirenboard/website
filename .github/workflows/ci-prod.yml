@@ -39,7 +39,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           image: ghcr.io/wirenboard/website-base-image:initial
-          options: -v ${{ github.workspace }}:/var/www -e ABC=123
+          options: -v ${{ github.workspace }}:/var/www
           run: |
             cd /var/www
             pnpm install
