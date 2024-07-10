@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import MarkerIcon from '~/assets/marker.svg'
+import type { ParsedContent } from "@nuxt/content";
 
-const props = defineProps<{ items: { title: string; coordinates: number[] }[], center: number[], zoom: number }>();
+const props = defineProps<{ items: ParsedContent[] | null, center: number[], zoom: number }>();
 
-import { ref } from 'vue'
 
 const map = ref();
 
@@ -24,7 +24,7 @@ watch(() => props.center, () => {
         v-for="(item, index) in items"
         :key="index"
         :lat-lng="item.coordinates"
-        @click="$router.push(`#${item.title.replace(/\s/gi, '-')}`)"
+        @click="$router.push(`#${item?.title?.replace(/\s/gi, '-')}`)"
       >
         <LIcon
           :icon-size="[34, 34]"
