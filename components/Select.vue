@@ -31,6 +31,11 @@ const model = defineModel();
   box-shadow: var(--input-shadow);
   font-size: 16px;
   font-family: 'Plumb', sans-serif;
+  transition: border-color 0.2s;
+}
+
+[data-pc-name="select"]:hover {
+  border: 1px solid var(--border-color-hover);
 }
 
 [data-pc-section="label"] {
@@ -44,7 +49,6 @@ const model = defineModel();
   cursor: pointer;
   border: 0 none;
   outline: 0 none;
-  background: #fff;
 }
 
 [data-pc-section="dropdown"] {
@@ -60,14 +64,20 @@ const model = defineModel();
   margin-right: 12px;
 }
 
-[data-pc-section="list"] {
+[data-pc-section="listcontainer"] {
   box-shadow: 1px 1px 12px var(--gray-color);
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  border-radius: 6px;
+  margin-top: 3px;
+}
+
+[data-pc-section="list"] {
   margin: 0;
   padding: 3px;
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  background: #fff;
 }
 
 [data-pc-section="option"] {

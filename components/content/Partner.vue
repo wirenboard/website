@@ -38,6 +38,10 @@ const formatPhoneNumber = (phone: number) => {
   display: flex;
   padding: 24px;
   gap: 12px;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
 }
 
 .partner-info {

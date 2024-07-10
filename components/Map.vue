@@ -36,6 +36,10 @@ watch(() => props.center, () => {
 <style>
 .map {
   height: 400px;
+
+  @media (max-width: 500px) {
+    height: 200px;
+  }
 }
 
 .leaflet-control-attribution {

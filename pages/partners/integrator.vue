@@ -84,7 +84,7 @@ const districts = [
 <i18n>
 {
   "ru": {
-    "title": "Партнёры — Wiren Board",
+    "title": "Компании-интеграторы — Wiren Board",
     "chooseArea": "Выберите область",
     "moscow": "Москва и область",
     "spb": "Северо-запад",
@@ -95,7 +95,7 @@ const districts = [
     "kg": "Кыргызстан"
   },
   "en": {
-    "title": "Partners — Wiren Board",
+    "title": "Integrators — Wiren Board",
     "chooseArea": "Select a region",
     "moscow": "Moscow and Moscow region",
     "spb": "North-western federal restrict",
