@@ -25,6 +25,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/icon',
     '@nuxt/image',
+    'nuxt-svgo',
     '@nuxtjs/i18n',
     '@nuxtjs/leaflet',
     '@primevue/nuxt-module',

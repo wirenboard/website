@@ -2,7 +2,7 @@
 sort: 128
 district: [kg]
 coordinates: [42.82789274724515, 74.60996178787109]
-title: ОсОО «ТекоПро»
+title: ООО «ТекоПро»
 logo: /img/partners/integrator/produmano.webp
 website: https://produmano.kg
 email: tekopro2016@gmail.com
