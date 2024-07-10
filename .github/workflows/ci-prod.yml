@@ -27,7 +27,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      -
+
       # Required to mount the Github Workspace to a volume
       - name: Checkout
         uses: actions/checkout@v4
