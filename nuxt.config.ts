@@ -5,6 +5,8 @@ export default defineNuxtConfig({
     routes: [
       '/',
       '/jobs',
+      '/ru/jobs',
+      '/en/jobs',
       '/partners/software',
       '/ru/partners/software',
       '/en/partners/software',

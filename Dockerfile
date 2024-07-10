@@ -1,18 +1,6 @@
 FROM nginx
 
-WORKDIR /var/www
+# Not really useful outside GitHub Actions - actual builds happens there,
+# Dockerfile just copies the output to various flavors of Nginx image
 
-RUN apt-get update
-
-RUN apt-get install -y \
-    npm
-
-RUN npm install -g pnpm
-
-COPY . /var/www
-
-RUN pnpm install
-
-RUN pnpm run build
-
-RUN cp -r /var/www/.output/public/* /usr/share/nginx/html
+COPY .output/public/ /usr/share/nginx/html/

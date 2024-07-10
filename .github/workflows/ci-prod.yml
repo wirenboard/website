@@ -28,11 +28,29 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       -
-        name: Build and push
+      # Required to mount the Github Workspace to a volume
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build static content
+        uses: addnab/docker-run-action@v3
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: ghcr.io
+          image: ghcr.io/wirenboard/website-base-image:initial
+          options: -v ${{ github.workspace }}:/var/www
+          run: |
+            cd /var/www
+            pnpm install
+            pnpm run build
+
+      - name: Build and push
         uses: docker/build-push-action@v5
         with:
+          context: .
           push: true
-          platforms: linux/amd64
+          platforms: linux/amd64,arm64
           tags: |
             ghcr.io/wirenboard/website:${{ env.BRANCH }}-${{ env.GIT_REVISION }}
             ghcr.io/wirenboard/website:${{ env.BRANCH }}
