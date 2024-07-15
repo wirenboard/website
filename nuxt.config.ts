@@ -15,6 +15,9 @@ export default defineNuxtConfig({
       '/en/partners/integrator',
     ]
   },
+  experimental: {
+    payloadExtraction: false
+  },
   devtools: { enabled: false },
   css: [
     '~/assets/css/variables.css',
