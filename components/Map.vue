@@ -57,6 +57,10 @@ watch(() => props.center, () => {
   display: none;
 }
 
+.leaflet-container {
+  z-index: 1;
+}
+
 .leaflet-div-icon {
   background: none;
   border: none;
