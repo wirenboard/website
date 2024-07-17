@@ -2,7 +2,10 @@
 export default defineNuxtConfig({
   ssr: true,
   generate: {
-    routes: ['/ru/jobs', '/en/jobs']
+    routes: [
+      '/ru/pages/jobs',
+      '/en/pages/jobs',
+    ]
   },
   devtools: { enabled: false },
   css: [
