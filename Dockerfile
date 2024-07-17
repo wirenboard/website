@@ -1,6 +1,13 @@
-FROM nginx
+FROM ghcr.io/wirenboard/website-base-image:initial
 
-# Not really useful outside GitHub Actions - actual builds happens there,
-# Dockerfile just copies the output to various flavors of Nginx image
+WORKDIR /var/www
 
-COPY .output/public/ /usr/share/nginx/html/
+COPY package.json /var/www
+RUN pnpm install
+
+COPY . /var/www
+RUN pnpm run build
+
+ENV PORT=80
+
+ENTRYPOINT ["/usr/bin/node", "/var/www/.output/server/index.mjs"]
