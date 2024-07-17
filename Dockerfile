@@ -1,13 +1,9 @@
-FROM ghcr.io/wirenboard/website-base-image:initial
+FROM node:18.19.0-slim
 
 WORKDIR /var/www
 
-COPY package.json /var/www
-RUN pnpm install
-
-COPY . /var/www
-RUN pnpm run build
+COPY .output /var/www
 
 ENV PORT=80
 
-ENTRYPOINT ["/usr/bin/node", "/var/www/.output/server/index.mjs"]
+ENTRYPOINT ["node", "/var/www/server/index.mjs"]

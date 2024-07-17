@@ -32,6 +32,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Build static content
+        uses: addnab/docker-run-action@v3
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: ghcr.io
+          image: ghcr.io/wirenboard/website-base-image:initial
+          options: -v ${{ github.workspace }}:/var/www
+          run: |
+            cd /var/www
+            pnpm install
+            pnpm run build
+
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
