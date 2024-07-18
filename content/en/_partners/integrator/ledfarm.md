@@ -4,6 +4,7 @@ district: [by]
 coordinates: [53.946722375392426, 27.61806785065508]
 title: LedFarm.by
 logo: /img/partners/integrator/ledfarm.webp
+phone: 375259237554
 website: https://ledfarm.by
 email: info@ledfarm.by
 ---

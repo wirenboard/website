@@ -15,6 +15,9 @@ const model = defineModel();
     :placeholder="placeholder"
     @change="changeCallback"
     showClear
+    :overlayStyle="{
+      zIndex: 100,
+    }"
   />
 </template>
 
@@ -65,11 +68,14 @@ const model = defineModel();
 }
 
 [data-pc-section="listcontainer"] {
+  margin-top: 3px;
+}
+
+[role="listbox"] {
   box-shadow: 1px 1px 12px var(--gray-color);
   border: 1px solid #e2e8f0;
   background: #fff;
   border-radius: 6px;
-  margin-top: 3px;
 }
 
 [data-pc-section="list"] {

@@ -8,7 +8,9 @@ const formatPhoneNumber = (phone: number) => {
     return null;
   }
   const phoneString = String(phone);
-  return `+${phoneString[0]} (${phoneString.slice(1, 4)}) ${phoneString.slice(4, 7)}-${phoneString.slice(7, 9)}-${phoneString.slice(9)}`;
+  return phoneString[0] === '7'
+    ? `+${phoneString[0]} (${phoneString.slice(1, 4)}) ${phoneString.slice(4, 7)}-${phoneString.slice(7, 9)}-${phoneString.slice(9)}`
+    : `+${phoneString.slice(0, 3)} (${phoneString.slice(3, 5)}) ${phoneString.slice(5, 8)}-${phoneString.slice(8, 10)}-${phoneString.slice(10, 12)}`;
 }
 
 </script>
