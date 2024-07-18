@@ -1,6 +1,6 @@
 ---
 sort: 114
-district: [moscow, spb]
+district: [moscow]
 coordinates: [55.778042963214986, 37.69286596613755]
 title: Группа ICS
 logo: /img/partners/integrator/ics.webp

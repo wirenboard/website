@@ -1,30 +1,36 @@
 <script setup lang="ts">
+import type { ParsedContent } from '@nuxt/content';
+import { slug } from 'github-slugger';
 import MarkerIcon from '~/assets/marker.svg'
-import type { ParsedContent } from "@nuxt/content";
 
 const props = defineProps<{ items: ParsedContent[] | null, center: number[], zoom: number }>();
 
-
 const map = ref();
+// new props can conflict with setView method, so we hardcode them
+const initialCenter = props.center;
+const initialZoom = props.zoom;
 
 watch(() => props.center, () => {
-  map.value.leafletObject.setView(props.center);
+  map.value.leafletObject.setView(props.center, props.zoom);
 });
+
+const scrollToElement = (title: string) => {
+  document.querySelector(`#${slug(title)}`)?.scrollIntoView({ behavior: 'smooth' });
+};
 </script>
 
 <template>
   <div class="map">
     <LMap
       ref="map"
-      :zoom="zoom"
-      :center="center"
+      :zoom="initialZoom"
+      :center="initialCenter"
       :use-global-leaflet="false"
     >
       <LMarker
         v-for="(item, index) in items"
         :key="index"
         :lat-lng="item.coordinates"
-        @click="$router.push(`#${item?.title?.replace(/\s/gi, '-')}`)"
       >
         <LIcon
           :icon-size="[34, 34]"
@@ -34,6 +40,10 @@ watch(() => props.center, () => {
             :fontControlled="false"
           />
         </LIcon>
+        <LPopup>
+          <NuxtImg :src="item.logo" class="partner-logo" />
+          <strong class="map-detailsLink" @click="scrollToElement(item.title as string)">{{ item.title }}</strong>
+        </LPopup>
       </LMarker>
       <LTileLayer
         :no-wrap="true"
@@ -51,6 +61,16 @@ watch(() => props.center, () => {
   @media (max-width: 500px) {
     height: 200px;
   }
+}
+
+.map-detailsLink {
+  margin-top: 6px;
+  color: var(--link-color);
+  cursor: pointer;
+}
+
+.map-detailsLink:hover {
+  text-decoration: underline;
 }
 
 .leaflet-control-attribution {

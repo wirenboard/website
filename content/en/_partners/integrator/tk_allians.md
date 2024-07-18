@@ -2,7 +2,7 @@
 sort: 126
 district: [by]
 coordinates: [53.947585900865356, 27.69945695143718]
-title: Private company "TKAllianceBel
+title: Private company "TKAllianceBel"
 logo: /img/partners/integrator/tk_allians.webp
 website: https://tk-allians.by
 email: info@tk-allians.by

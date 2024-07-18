@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { slug } from 'github-slugger';
+
 defineProps<{ title: string; logo: string; phone?: number; website?: string; email?: string; note?: string }>();
 
 const formatPhoneNumber = (phone: number) => {
@@ -15,7 +17,7 @@ const formatPhoneNumber = (phone: number) => {
   <article class="partner">
     <div class="partner-info">
       <NuxtImg :src="logo" class="partner-logo" />
-      <h3 class="partner-title" :id="title?.replace(/\s/gi, '-')">
+      <h3 class="partner-title" :id="slug(title)">
         {{ title }}
       </h3>
       <div class="partner-contacts">

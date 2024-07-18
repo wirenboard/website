@@ -1,6 +1,6 @@
 ---
 sort: 102
-district: [moscow, spb]
+district: [moscow]
 coordinates: [55.76214414610599, 37.54876833275032]
 title: ЛИИС
 logo: /img/partners/integrator/liis.webp
