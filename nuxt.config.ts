@@ -4,8 +4,8 @@ export default defineNuxtConfig({
   generate: {
     routes: [
       '/',
-      '/ru/jobs',
-      '/en/jobs',
+      '/ru/pages/jobs',
+      '/en/pages/jobs',
       '/ru/pages/partners',
       '/en/pages/partners',
       '/ru/pages/integrators',
