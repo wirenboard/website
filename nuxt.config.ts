@@ -1,17 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: true,
-  generate: {
-    routes: [
-      '/',
-      '/ru/pages/jobs',
-      '/en/pages/jobs',
-      '/ru/pages/partners',
-      '/en/pages/partners',
-      '/ru/pages/integrators',
-      '/en/pages/integrators',
-    ]
-  },
   experimental: {
     payloadExtraction: false
   },
