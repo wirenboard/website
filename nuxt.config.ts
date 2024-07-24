@@ -1,11 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: true,
-  generate: {
-    routes: [
-      '/ru/pages/jobs',
-      '/en/pages/jobs',
-    ]
+  experimental: {
+    payloadExtraction: false
   },
   devtools: { enabled: false },
   css: [
@@ -13,7 +10,15 @@ export default defineNuxtConfig({
     '~/assets/css/globals.css',
     '~/assets/css/fonts.css',
   ],
-  modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxt/image'],
+  modules: [
+    '@nuxt/content',
+    '@nuxt/icon',
+    '@nuxt/image',
+    'nuxt-svgo',
+    '@nuxtjs/i18n',
+    '@nuxtjs/leaflet',
+    '@primevue/nuxt-module',
+  ],
   content: {
     locales: ['ru', 'en'],
     defaultLocale: 'ru',
@@ -32,6 +37,11 @@ export default defineNuxtConfig({
           href: '/img/favicon.png',
         }
       ]
+    }
+  },
+  primevue: {
+    options: {
+      unstyled: true
     }
   }
 })

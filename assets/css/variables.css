@@ -1,8 +1,11 @@
 :root {
   --text-color: #7a7a7a;
   --border-color: #dcdcdc;
+  --border-color-hover: #94a3b8;
   --gray-color: #f7f7f7;
   --link-color: #00b7f4;
   --primary-color: #5cb300;
   --primary-color-hover: #4d9900;
+
+  --input-shadow: 0px 0px #0000, 0px 0px #0000, 0px 1px 2px 0px rgba(18,18,23,0.05);
 }

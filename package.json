@@ -6,18 +6,25 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
+    "preview": "nuxt preview --port=80",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "@nuxt/content": "2.13.0",
+    "@nuxt/icon": "1.0.0",
     "@nuxt/image": "1.7.0",
     "@nuxtjs/i18n": "8.3.1",
+    "@nuxtjs/leaflet": "1.0.14",
+    "github-slugger": "2.0.0",
     "nuxt": "3.12.2",
+    "primevue": "4.0.0",
     "vue": "3.4.29",
     "vue-router": "4.3.3"
   },
   "devDependencies": {
+    "@primevue/nuxt-module": "4.0.0",
+    "nuxt-svgo": "4.0.1",
     "typescript": "5.4.5"
-  }
+  },
+  "packageManager": "pnpm@9.4.0"
 }

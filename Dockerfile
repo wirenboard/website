@@ -1,6 +1,9 @@
-FROM nginx
+FROM node:18.19.0-slim
 
-# Not really useful outside GitHub Actions - actual builds happens there,
-# Dockerfile just copies the output to various flavors of Nginx image
+WORKDIR /var/www
 
-COPY .output/public/ /usr/share/nginx/html/
+COPY .output /var/www
+
+ENV PORT=80
+
+ENTRYPOINT ["node", "/var/www/server/index.mjs"]

@@ -11,10 +11,10 @@ jobs:
     steps:
       - name: Extract branch variable
         run: echo "BRANCH=${GITHUB_REF##*/}" >> $GITHUB_ENV
-      
+
       - name: Extract revision variable
         run: echo "GIT_REVISION=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
-        
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
@@ -28,9 +28,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      # Required to mount the Github Workspace to a volume 
-      - name: Checkout 
-        uses: actions/checkout@v4 
+      # Required to mount the Github Workspace to a volume
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Build static content
         uses: addnab/docker-run-action@v3
@@ -44,7 +44,7 @@ jobs:
             cd /var/www
             pnpm install
             pnpm run build
-            
+
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
