@@ -62,7 +62,7 @@ const formatPhoneNumber = (phone: number) => {
 .partner-title {
   margin: 0;
   font-size: 22px;
-  scroll-margin-top: 144px;
+  scroll-margin-top: var(--scroll-margin-top);
 }
 
 .partner-contacts {

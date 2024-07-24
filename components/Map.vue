@@ -42,7 +42,9 @@ const scrollToElement = (title: string) => {
         </LIcon>
         <LPopup>
           <NuxtImg :src="item.logo" class="partner-logo" />
-          <strong class="map-detailsLink" @click="scrollToElement(item.title as string)">{{ item.title }}</strong>
+          <strong class="map-detailsLink" @click="scrollToElementById(slug(item.title as string))">
+            {{ item.title }}
+          </strong>
         </LPopup>
       </LMarker>
       <LTileLayer
