@@ -53,7 +53,7 @@ const flattenCategories = (categories) => {
 
 <template>
   <div class="articles">
-    <div v-if="filter === 'По категориям'">
+    <div v-if="filter === 'По категориям'" class="articles-content">
       <template v-for="(category, i) in flattenCategories(categories)" :key="category.name">
         <h3
           v-if="category.type === ArticleType.SubCategory"
@@ -78,7 +78,7 @@ const flattenCategories = (categories) => {
       </template>
     </div>
 
-    <div v-else>
+    <div v-else class="articles-content">
       <ContentList :query="{ path: '/_articles', sort: [{ date: filterDate === 'filter_asc' ? -1 : 1 }] }">
         <template #default="{ list }">
           <div class="articles-list">
@@ -126,6 +126,10 @@ const flattenCategories = (categories) => {
   }
 }
 
+.articles-content {
+  flex-grow: 1;
+}
+
 .articles-title {
   line-height: normal;
   scroll-margin-top: var(--app-bar-height);
@@ -133,6 +137,14 @@ const flattenCategories = (categories) => {
 
 .articles-title:first-child {
   margin-top: 0;
+}
+
+h2.articles-title {
+  font-size: 27px;
+}
+
+h3.articles-title {
+  font-size: 21px;
 }
 
 .articles-title a {
