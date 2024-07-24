@@ -37,7 +37,7 @@ main h2 {
 }
 
 [data-pc-section="input"] {
-  -webkit-appearance: auto;
+  -webkit-appearance: auto !important;
 }
 
 [data-pc-name="radiobutton"] {

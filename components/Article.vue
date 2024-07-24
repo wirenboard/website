@@ -55,6 +55,7 @@ defineProps<{ title: string; cover: string; url: string; date: string; }>();
 
 .article-title {
   margin: 6px 0 12px;
+  font-weight: bold;
   color: var(--text-color);
 }
 
