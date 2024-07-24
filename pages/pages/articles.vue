@@ -127,7 +127,8 @@ const flattenCategories = (categories) => {
 }
 
 .articles-title {
-  scroll-margin-top: var(--scroll-margin-top);
+  line-height: normal;
+  scroll-margin-top: var(--app-bar-height);
 }
 
 .articles-title:first-child {

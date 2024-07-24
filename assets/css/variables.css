@@ -8,5 +8,5 @@
   --primary-color-hover: #4d9900;
 
   --input-shadow: 0px 0px #0000, 0px 0px #0000, 0px 1px 2px 0px rgba(18,18,23,0.05);
-  --scroll-margin-top: 144px;
+  --app-bar-height: 80px;
 }
