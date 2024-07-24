@@ -9,7 +9,6 @@ defineProps<{ title: string; cover: string; url: string; date: string; }>();
   <NuxtLink :to="url" class="article">
     <NuxtImg
       :src="cover"
-      format="webp"
       class="article-cover"
       loading="lazy"
       :alt="title"
