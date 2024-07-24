@@ -1,5 +1,4 @@
 ---
-sort: 102
 title: ООО «Интра»
 logo: /img/partners/software/intra.webp
 phone: 78352240378

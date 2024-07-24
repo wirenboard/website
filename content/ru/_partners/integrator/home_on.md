@@ -1,5 +1,4 @@
 ---
-sort: 119
 district: [ural]
 coordinates: [56.8305163965088, 60.587592276649985]
 title: HomeOn

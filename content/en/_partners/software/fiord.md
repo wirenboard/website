@@ -1,5 +1,4 @@
 ---
-sort: 113
 title: FIORD
 logo: /img/partners/software/fiord.webp
 phone: 78123236212

@@ -1,5 +1,4 @@
 ---
-sort: 124
 district: [volga]
 coordinates: [57.984953077944795, 56.265589147424635]
 title: Home Control умный дом

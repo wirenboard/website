@@ -1,5 +1,4 @@
 ---
-sort: 122
 district: [volga]
 coordinates: [55.82427415604684, 49.19640453369345]
 title: Abrom

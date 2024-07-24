@@ -1,5 +1,4 @@
 ---
-sort: 105
 title: ООО «ЛАЙТЭН»
 logo: /img/partners/software/liten.webp
 phone: 74993437243

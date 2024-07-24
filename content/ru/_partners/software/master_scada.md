@@ -1,5 +1,4 @@
 ---
-sort: 103
 title: МПС Софт
 logo: /img/partners/software/master_scada.webp
 phone: 78007755790

@@ -1,5 +1,4 @@
 ---
-sort: 107
 district: [moscow]
 coordinates: [56.013887234186754, 37.08702518024896]
 title: Тепломонитор

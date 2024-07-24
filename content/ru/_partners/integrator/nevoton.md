@@ -1,5 +1,4 @@
 ---
-sort: 116
 district: [spb]
 coordinates: [59.86276945754903, 30.47150626459452]
 title: Невотон

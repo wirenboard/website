@@ -1,5 +1,4 @@
 ---
-sort: 108
 title: ООО «ЦОДУМ»
 logo: /img/partners/software/smartdcim.webp
 phone: 78123099885

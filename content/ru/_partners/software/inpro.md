@@ -1,5 +1,4 @@
 ---
-sort: 106
 title: Интерактивные пространства
 logo: /img/partners/software/inpro.webp
 phone: 74997556219

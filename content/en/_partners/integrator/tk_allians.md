@@ -1,5 +1,4 @@
 ---
-sort: 126
 district: [by]
 coordinates: [53.947585900865356, 27.69945695143718]
 title: Private company "TKAllianceBel"

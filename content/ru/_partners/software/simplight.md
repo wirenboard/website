@@ -1,5 +1,4 @@
 ---
-sort: 114
 title: СИМП Лайт
 logo: /img/partners/software/simplight.webp
 phone: 73432472133

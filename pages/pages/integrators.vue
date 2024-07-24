@@ -17,7 +17,7 @@ const mapCenter = computed(() => {
 
 const query: QueryBuilderParams = reactive({ path: '/_partners/integrator', where: [{
     _locale: locale.value, district: { $contains: district.value }
-  }], sort: [{ sort: 1 }] });
+  }], sort: [{ title: 1 }, { priority: 1 }] });
 
 const { data, refresh } = await useAsyncData('home', () => queryContent(query.path).where({ _locale: locale.value, district: { $contains: district.value } }).find());
 

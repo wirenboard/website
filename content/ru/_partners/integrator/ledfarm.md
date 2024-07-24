@@ -1,5 +1,4 @@
 ---
-sort: 127
 district: [by]
 coordinates: [53.946722375392426, 27.61806785065508]
 title: LedFarm.by

@@ -1,5 +1,4 @@
 ---
-sort: 108
 district: [moscow]
 coordinates: [55.756056921132384, 37.59262076232987]
 title: KonstArtStudio

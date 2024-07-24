@@ -1,5 +1,4 @@
 ---
-sort: 123
 district: [volga]
 coordinates: [55.761654129228596, 49.19752531264067]
 title: IotSmartSystem

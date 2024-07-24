@@ -1,5 +1,4 @@
 ---
-sort: 112
 district: [moscow]
 coordinates: [54.964402453961696, 39.046903519929316]
 title: ООО «Эксперт»

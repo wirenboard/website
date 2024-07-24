@@ -79,6 +79,7 @@ const scrollToElement = (title: string) => {
 
 .leaflet-container {
   z-index: 1;
+  outline: none;
 }
 
 .leaflet-div-icon {

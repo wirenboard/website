@@ -1,5 +1,4 @@
 ---
-sort: 115
 title: Rightech IoT Cloud
 logo: /img/partners/software/rightech.webp
 phone: 74994506525

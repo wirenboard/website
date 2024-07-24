@@ -1,5 +1,4 @@
 ---
-sort: 104
 title: Techsensor
 logo: /img/partners/software/techsensor.webp
 phone: 74996575911

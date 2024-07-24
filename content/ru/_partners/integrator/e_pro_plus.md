@@ -1,5 +1,4 @@
 ---
-sort: 118
 district: [ural]
 coordinates: [56.82504365721301, 60.566293814714406]
 title: Энерго ПРО

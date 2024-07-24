@@ -1,5 +1,4 @@
 ---
-sort: 101
 title: ООО «Рапид Софтвэа»
 logo: /img/partners/software/rapid_scada.webp
 phone: 74732303612

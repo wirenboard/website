@@ -1,5 +1,4 @@
 ---
-sort: 110
 district: [moscow]
 coordinates: [55.794322812542234, 37.54353093370438]
 title: Форсайт

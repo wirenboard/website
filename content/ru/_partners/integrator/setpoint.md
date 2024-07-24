@@ -1,5 +1,4 @@
 ---
-sort: 115
 district: [spb]
 coordinates: [59.560505028833084, 31.023961409991077]
 title: Setpoint

@@ -1,5 +1,4 @@
 ---
-sort: 110
 title: iRidium mobile
 logo: /img/partners/software/iridi.webp
 phone: 74993227329

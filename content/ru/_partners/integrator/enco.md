@@ -1,5 +1,4 @@
 ---
-sort: 104
 district: [moscow]
 coordinates: [55.56537581413944, 37.48486319851014]
 title: ENCO

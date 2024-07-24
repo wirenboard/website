@@ -1,5 +1,4 @@
 ---
-sort: 103
 district: [moscow]
 coordinates: [55.79939704520921, 37.58644358122949]
 title: Инфосистемы Джет

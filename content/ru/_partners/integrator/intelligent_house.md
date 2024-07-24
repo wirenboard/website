@@ -1,5 +1,4 @@
 ---
-sort: 111
 district: [moscow]
 coordinates: [55.73233355594546, 37.69716221261671]
 title: Intelligent House

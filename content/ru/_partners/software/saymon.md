@@ -1,5 +1,4 @@
 ---
-sort: 107
 title: Saymon
 logo: /img/partners/software/saymon.webp
 phone: 78123099885

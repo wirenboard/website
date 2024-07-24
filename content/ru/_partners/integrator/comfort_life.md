@@ -1,5 +1,4 @@
 ---
-sort: 101
 district: [moscow]
 coordinates: [59.99963804437398, 30.36195935639194]
 title: Comfort-Life

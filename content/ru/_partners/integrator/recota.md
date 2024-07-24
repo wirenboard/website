@@ -1,5 +1,4 @@
 ---
-sort: 105
 district: [moscow]
 coordinates: [55.67914612700775, 37.583402295766]
 title: Recota

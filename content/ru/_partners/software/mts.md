@@ -1,5 +1,4 @@
 ---
-sort: 112
 title: МТС
 logo: /img/partners/software/mts.webp
 phone: 78002500990

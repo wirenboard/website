@@ -1,5 +1,4 @@
 ---
-sort: 111
 title: ООО «ИНТЕЛЛИТЕХ»
 logo: /img/partners/software/intellytech.webp
 phone: 74959689886

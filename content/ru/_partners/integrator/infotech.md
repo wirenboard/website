@@ -1,5 +1,4 @@
 ---
-sort: 121
 district: [volga]
 coordinates: [58.61506434861371, 49.65493736161975]
 title: INFOTECH
