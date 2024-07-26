@@ -1,3 +1,10 @@
+# Инструкции редакторам
+
+- [Как добавить партнера](./content/ru/_partners/software/.README.md)
+- [Как добавить интегратора](./content/ru/_partners/integrator/.README.md)
+- [Как добавить вакансию](./content/ru/jobs/.README.md)
+- [Как добавить ссылку на статью](./content/ru/_articles/.README.md)
+
 # Wirenboard website
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
