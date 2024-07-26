@@ -35,3 +35,12 @@ main hr {
 main h2 {
   font-size: 27px;
 }
+
+[data-pc-section="input"] {
+  -webkit-appearance: auto !important;
+}
+
+[data-pc-name="radiobutton"] {
+  display: flex;
+  align-items: center;
+}
