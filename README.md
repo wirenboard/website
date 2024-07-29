@@ -1,46 +1,31 @@
-# Инструкции редакторам
+# Wirenboard website
+
+## Инструкции редакторам
+Для локального просмотра md файлов можно использовать [плагин](https://marketplace.visualstudio.com/items?itemName=Nuxt.mdc).
 
 - [Как добавить партнера](./content/ru/_partners/software/.README.md)
 - [Как добавить интегратора](./content/ru/_partners/integrator/.README.md)
 - [Как добавить вакансию](./content/ru/jobs/.README.md)
 - [Как добавить ссылку на статью](./content/ru/_articles/.README.md)
 
-# Wirenboard website
+## Как запустить сайт локально
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+- установите [NodeJS](https://nodejs.org/en/download/).
+- установите [pnpm](https://pnpm.io/installation).
+- установите зависимости проекта
 
-## Setup
+    ```bash
+    pnpm install
+    ```
+- запустите сервер локально
 
-Make sure to install the dependencies:
+    ```bash
+    pnpm run dev
+    ```
 
-```bash
-# pnpm
-pnpm install
-```
+Просмотрел будет доступен по адресу `http://localhost:3000`
 
-## Development Server
 
-Start the development server on `http://localhost:3000`:
+## Деплой в продакшен
 
-```bash
-# pnpm
-pnpm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# pnpm
-pnpm run build
-```
-
-Locally preview production build:
-
-```bash
-# pnpm
-pnpm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Создайте пул реквест в `main` ветку и после ревью смержьте ее. После сборки все будет доступно по адресу `https://wirenboard.com`.
