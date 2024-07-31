@@ -21,7 +21,7 @@ const showHiddenContent = () => {
 <style>
 .spoiler-summary {
   color: var(--link-color);
-  display: flex;
+  display: inline-flex;
   gap: 6px;
   cursor: pointer;
 }
