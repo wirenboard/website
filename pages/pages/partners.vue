@@ -7,7 +7,7 @@ useHead({
   title: t('title'),
 })
 
-const query: QueryBuilderParams = { path: '/_partners/software', where: [{  _locale: locale.value }], sort: [{ title: 1 }, { priority: 1 }] }
+const query: QueryBuilderParams = { path: '/_partners', where: [{ _locale: locale.value }], sort: [{ title: 1 }, { priority: 1 }] }
 </script>
 
 <template>
@@ -15,7 +15,7 @@ const query: QueryBuilderParams = { path: '/_partners/software', where: [{  _loc
     <template #default="{ list }">
       <div class="partners">
         <template v-for="(partner, i) in list" :key="partner._path">
-          <Partner v-bind="partner">
+          <Partner v-bind="partner as any">
             <ContentRendererMarkdown :value="partner" />
           </Partner>
 
