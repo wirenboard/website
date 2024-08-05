@@ -22,6 +22,11 @@ email: info@comf.life
 
 В компанию обращаются на этапе голых стен, во время или после подготовки дизайн проекта дома или квартиры.
 
+::spoiler
+#summary
+Примеры работ
+
+#content
 Некоторые проекты в Москве:
 * [ЖК «Хорошевский» квартира 85 кв.м. на WirenBoard Pro](https://comf.life/shchit-umnogo-doma-za-839000-rub-umnyj-dom-na-wirenBoard-pro.html)
 * [ЖК «Квартал 38» квартира 155 кв.м. на WirenBoard Pro](https://comf.life/shchit-umnogo-doma-na-WirenBoard-za-942000-rub.html)
@@ -33,3 +38,4 @@ email: info@comf.life
 * [ЖК «Риверсайд» Квартира 353 кв. м.](https://comf.life/shchit-umnogo-doma-wirenboard-za-916000-rublej.html)
 * [КП «Охта Парк» дом 130 кв.м.](https://comf.life/obekt-kp-ohta-park.html)
 * [ЖК «Ozerki Style Tower» квартира 140 кв.м.](https://comf.life/obekt-kp-zhk-ozerki-style-tower.html)
+::

@@ -14,6 +14,11 @@ email: info@xiot.ru
 
 Построение систем только на проверенном и надежном оборудовании с использованием современных технологий.
 
+::spoiler
+#summary
+Примеры работ
+
+#content
 * [Проект электрического щита для квартиры 200 кв.м г. Москва](https://wirenboard.com/statics/content/files/5fb53c8992702.pdf)
 * [Проект автоматизации квартиры 199 кв.м г. Москва](https://wirenboard.com/statics/content/files/5fb53bbbe8d08.pdf)
 * [Проект автоматизации квартиры 105 кв.м. г. Красногорск](https://wirenboard.com/statics/content/files/5f92809c4fd27.pdf)
@@ -34,3 +39,4 @@ email: info@xiot.ru
 * [Проект автоматизации сдвоенной квартиры 41 кв.м. г. Москва](https://wirenboard.com/statics/content/files/65faeda93fc69.pdf)
 * [Проект автоматизации сдвоенной квартиры 56 кв.м. г. Москва](https://wirenboard.com/statics/content/files/65faedc06bfb5.pdf)
 * [Проект автоматизации квартиры 130 кв.м. г. Москва, Wiren Board + KNX](https://wirenboard.com/statics/content/files/66549ba2c5f42.pdf)
+::
