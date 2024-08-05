@@ -1,39 +1,42 @@
-# Wirenboard website
+# Wiren Board website
+Данный репозиторий содержит в себе контент для сайта https://wirenboard.com.
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Инструкции редакторам
+Для работы с md файлами локально можно использовать [плагин](https://marketplace.visualstudio.com/items?itemName=Nuxt.mdc) для VSCode.
+Это позволит вам предварительно просматривать контент прямо в редакторе. Однако для более точного представления конечного вида контента рекомендуется запускать сайт локально. Ниже приведены инструкции по запуску сайта.
 
-## Setup
+- [Как добавить партнера](./content/ru/_partners/software/.README.md);
+- [Как добавить интегратора](./content/ru/_partners/integrator/.README.md);
+- [Как добавить вакансию](./content/ru/jobs/.README.md);
+- [Как добавить ссылку на статью](./content/ru/_articles/.README.md);
+- [Дополнительные компоненты](./doc/components.md).
 
-Make sure to install the dependencies:
+## Как запустить сайт локально
+Запуск сайта в браузере позволит вам видеть все внесенные изменения в реальном времени — страница будет обновляться после каждого сохранения файла. Для этого выполните следующие шаги:
 
-```bash
-# pnpm
-pnpm install
-```
+- Клонируйте этот репозиторий:
+  ```
+  https://github.com/wirenboard/website.git
+  ```
+- Установите NodeJS. Скачайте и установите [NodeJS](https://nodejs.org/en/download/prebuilt-installer) для вашей операционной системы.
+- Установите пакетный менеджер [pnpm](https://pnpm.io/installation). В процессе установки подвтерждайте предложенные варианты.
+- Установите зависимости проекта. Перейдите в корневую директорию проекта и выполните команду:
+    ```bash
+    pnpm install
+    ```
+- Запустите локальный сервер, выполнив команду:
+    ```bash
+    pnpm run dev
+    ```
 
-## Development Server
+Просмотр будет доступен в браузере по адресу `http://localhost:3000`. Не забудьте ввести в адресную строку url редактируемой страницы, например `http://localhost:3000/ru/pages/articles`.
+Отображаться будет только контент, без остального содержимого сайта (навигации, футера и пр.).
 
-Start the development server on `http://localhost:3000`:
+![Пример страницы](doc/example.png)
+## Деплой в продакшен
 
-```bash
-# pnpm
-pnpm run dev
-```
+Для деплоя изменений на продакшен выполните следующие шаги:
 
-## Production
-
-Build the application for production:
-
-```bash
-# pnpm
-pnpm run build
-```
-
-Locally preview production build:
-
-```bash
-# pnpm
-pnpm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+1. Создайте пул реквест в ветку main вашего репозитория.
+2. Пройдите процесс ревью и смержьте изменения.
+3. После успешной сборки изменения будут доступны по адресу https://wirenboard.com.
