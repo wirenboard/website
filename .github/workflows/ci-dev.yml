@@ -54,3 +54,4 @@ jobs:
           tags: |
             ghcr.io/wirenboard/website:${{ env.BRANCH }}-${{ env.GIT_REVISION }}
             ghcr.io/wirenboard/website:${{ env.BRANCH }}
+            ghcr.io/wirenboard/website:testing
