@@ -2,7 +2,7 @@
 title: Working for the Wiren Board
 ---
 
-<youtube id="_DCYosDFSVE"></youtube>
+:youtube{url="https://www.youtube.com/watch?v=jlpzJGvw5-o"}
 
 Wiren Board develops and manufactures electronics for the automation of engineering systems: industrial and commercial facilities, private homes and apartments. Customers include both professional integrators and smart home enthusiasts.
 
