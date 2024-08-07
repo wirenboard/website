@@ -12,7 +12,7 @@ export const categories: Categories = {
       ]
     },
     { name: 'hardware_selection', label: 'Подбор оборудования' },
-    { name: 'educational', label: 'Обучающие ролики', sub_category: [
+    { name: 'educational', label: 'Обучающие статьи', sub_category: [
         { name: 'beginners', label: 'Начинающим' },
         { name: 'node_red', label: 'Автоматизация на Node-RED' },
         { name: 'ventilation', label: 'Вентиляция' },
