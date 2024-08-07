@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { slug } from 'github-slugger';
+import { districts } from '~/common/districts';
 
-defineProps<{ title: string; logo: string; phone?: number; website?: string; email?: string; note?: string }>();
+defineProps<{ title: string; logo: string; phone?: number; website?: string; email?: string; note?: string; district: string[]; }>();
+
+const { locale } = useI18n();
 
 const formatPhoneNumber = (phone: number) => {
   if (!phone) {
@@ -26,6 +29,11 @@ const formatPhoneNumber = (phone: number) => {
         <a v-if="website" :href="website" target="_blank" class="partner-contact"><Icon name="ion:earth" /> {{website}}</a>
         <a v-if="email" :href="`mailto:${email}`" target="_blank" class="partner-contact"><Icon name="ion:mail" /> {{email}}</a>
         <a v-if="phone" :href="`tel:+${phone}`" class="partner-contact"><Icon name="ion:call" /> {{formatPhoneNumber(phone)}}</a>
+        <div>
+          <span v-for="region in district">
+            {{districts[locale].find((district) => district.value === region)!.label}}<br />
+          </span>
+        </div>
       </div>
 
     </div>

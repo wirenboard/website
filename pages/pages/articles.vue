@@ -1,8 +1,11 @@
 <script lang="ts" setup>
+import { categories } from '~/common/article_categories';
 import { ArticleType } from '~/common/constants';
+import type { Categories, Category } from '~/common/types';
 import SelectButton from '~/components/SelectButton.vue';
+import type { QueryBuilderParams } from '@nuxt/content';
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
 useHead({
   title: t('title'),
@@ -11,40 +14,20 @@ useHead({
 const filter = ref(t('filter_category'));
 const filterDate = ref('filter_asc');
 const options = ref([t('filter_category'), t('filter_date')]);
-const categories = [
-  { name: 'user_experience', sub_category: [
-      { name: 'retail' },
-      { name: 'business_objects' },
-      { name: 'tsod' },
-      { name: 'apartments' },
-      { name: 'embedded' },
-      { name: 'home_automation' },
-    ]
-  },
-  { name: 'hardware_selection' },
-  { name: 'educational', sub_category: [
-      { name: 'beginners' },
-      { name: 'node_red' },
-      { name: 'ventilation' },
-      { name: 'heating' },
-      { name: 'electrics' },
-      { name: 'integrations' },
-      { name: '3rd_party_devices' },
-    ]
-  },
-  { name: 'manufactoring' },
-];
 const filterDates = ['filter_asc', 'filter_desc'];
 
-const flattenCategories = (categories) => {
-  return categories.reduce((acc, category) => {
+const query: QueryBuilderParams = { path: '/_articles', where: [{ _locale: locale.value }] }
+const { data } = await useAsyncData('articles', () => queryContent(query.path).where({ _locale: locale.value }).find());
+
+const flattenCategories = (categories: Categories) => {
+  return categories[locale.value].reduce((acc: any, category: Category) => {
     if (category.sub_category) {
-      acc.push({ name: category.name, type: ArticleType.WithSubCategories });
-      category.sub_category.forEach(sub => {
-        acc.push({ ...sub, type: ArticleType.SubCategory });
+      acc.push({ name: category.name, type: ArticleType.WithSubCategories, label: category.label });
+      category.sub_category.forEach((sub) => {
+        acc.push({ ...sub, type: ArticleType.SubCategory, label: sub.label });
       });
     } else {
-      acc.push({ name: category.name, type: ArticleType.WithoutSubCategories });
+      acc.push({ name: category.name, type: ArticleType.WithoutSubCategories, label: category.label });
     }
     return acc;
   }, []);
@@ -59,33 +42,27 @@ const flattenCategories = (categories) => {
           v-if="category.type === ArticleType.SubCategory"
           class="articles-title"
           :id="category.name">
-          <a :href="`#${category.name}`">{{ t(category.name) }}</a>
+          <a :href="`#${category.name}`">{{ category.label }}</a>
         </h3>
         <h2
           v-else
           class="articles-title"
           :id="category.name">
-          <a :href="`#${category.name}`">{{ t(category.name) }}</a>
+          <a :href="`#${category.name}`">{{ category.label }}</a>
         </h2>
-        <ContentList v-if="category.type !== ArticleType.WithSubCategories" :query="{ path: '/_articles', where: [category.type === ArticleType.SubCategory ? { sub_category: category.name } : { category: category.name } ], sort: [{ date: -1 }] }">
-          <template #default="{ list }">
-            <div class="articles-list">
-              <Article v-bind="article" v-for="article in list" :key="article._path" />
-            </div>
-          </template>
-        </ContentList>
+
+        <div class="articles-list" v-if="data.filter((item) => item.category === category.name).length">
+          <Article v-bind="article as any" v-for="article in data.filter((item) => item.category === category.name).sort((a, b) => new Date(b.date) - new Date(a.date) )" :key="article._path" />
+        </div>
+
         <hr v-if="category.type !== ArticleType.WithSubCategories && i !== flattenCategories(categories).length - 1" class="articles-separator" />
       </template>
     </div>
 
     <div v-else class="articles-content">
-      <ContentList :query="{ path: '/_articles', sort: [{ date: filterDate === 'filter_asc' ? -1 : 1 }] }">
-        <template #default="{ list }">
-          <div class="articles-list">
-            <Article v-bind="article" v-for="article in list" :key="article._path" />
-          </div>
-        </template>
-      </ContentList>
+      <div class="articles-list">
+        <Article v-bind="article as any" v-for="article in data.sort((a, b) => filterDate === 'filter_asc' ? new Date(b.date) - new Date(a.date) : new Date(a.date) - new Date(b.date) )" :key="article._path" />
+      </div>
     </div>
 
     <aside>
@@ -94,11 +71,11 @@ const flattenCategories = (categories) => {
 
         <div class="articles-filterContent">
           <ul v-if="filter === 'По категориям'">
-            <li v-for="category in categories" :key="category.name">
-              <div @click="scrollToElementById(category.name)">{{ t(category.name) }}</div>
+            <li v-for="category in categories[locale]" :key="category.name">
+              <div @click="scrollToElementById(category.name)">{{ category.label }}</div>
               <ul v-if="category.sub_category">
                 <li v-for="category in category.sub_category" :key="category.name">
-                  <div @click="scrollToElementById(category.name)">{{ t(category.name) }}</div>
+                  <div @click="scrollToElementById(category.name)">{{ category.label }}</div>
                 </li>
               </ul>
             </li>
@@ -235,24 +212,7 @@ h3.articles-title {
     "filter_category": "По категориям",
     "filter_date": "По дате публикации",
     "filter_asc": "Сначала новые",
-    "filter_desc": "Сначала старые",
-    "user_experience": "Опыт пользователей",
-    "retail": "Ритейл, рестораны и отели",
-    "business_objects": "Бизнес-объекты",
-    "tsod": "ЦОД",
-    "apartments": "Многоквартирные дома и ЖК",
-    "embedded": "Встраиваемые системы и метеостанции",
-    "home_automation": "Домашняя автоматизация",
-    "hardware_selection": "Подбор оборудования",
-    "educational": "Обучающие ролики",
-    "beginners": "Начинающим",
-    "node_red": "Автоматизация на Node-RED",
-    "ventilation": "Вентиляция",
-    "heating": "Отопление",
-    "electrics": "Электрика",
-    "integrations": "Интеграция со сторонним ПО",
-    "3rd_party_devices": "Подключение сторонних устройств",
-    "manufactoring": "О производстве и процессах"
+    "filter_desc": "Сначала старые"
   }
 }
 </i18n>

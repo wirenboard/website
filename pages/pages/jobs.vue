@@ -7,7 +7,7 @@ const data = await useLocalizedData('jobs');
 
 useContentHead(data);
 
-const query: QueryBuilderParams = { path: '/jobs/_vacancies', where: [{ actual: true, _locale: locale.value }] }
+const query: QueryBuilderParams = { path: '/jobs/_includes', where: [{ actual: true, _locale: locale.value }] }
 </script>
 
 <template>

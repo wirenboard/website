@@ -15,5 +15,5 @@
 ## Youtube плеер
 
 ```
-:youtube{id="ID ролика"}
+:youtube{url="URL youtube ролика"}
 ```

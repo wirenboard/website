@@ -1,5 +1,7 @@
 <script setup lang="ts">
-defineProps<{ id: string; }>();
+const props = defineProps<{ url: string; }>();
+const url = new URL(props.url);
+const id = url.searchParams.get('v')
 </script>
 
 <template>

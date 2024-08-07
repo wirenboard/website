@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import dayjs from 'dayjs';
 import 'dayjs/locale/ru';
+import type { Article as ArticleParams } from '~/common/types';
 
-defineProps<{ title: string; cover: string; url: string; date: string; }>();
+defineProps<ArticleParams>();
 </script>
 
 <template>
