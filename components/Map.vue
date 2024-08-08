@@ -27,26 +27,48 @@ const scrollToElement = (title: string) => {
       :center="initialCenter"
       :use-global-leaflet="false"
     >
-      <LMarker
-        v-for="(item, index) in items"
-        :key="index"
-        :lat-lng="item.coordinates"
-      >
-        <LIcon
-          :icon-size="[34, 34]"
-          :icon-anchor="[17, 33]"
-          :popup-anchor="[0, 4]">
-          <MarkerIcon
-            :fontControlled="false"
-          />
-        </LIcon>
-        <LPopup>
-          <NuxtImg :src="item.logo" class="partner-logo" />
-          <strong class="map-detailsLink" @click="scrollToElementById(slug(item.title as string))">
-            {{ item.title }}
-          </strong>
-        </LPopup>
-      </LMarker>
+      <template v-for="(item, index) in items" :key="index">
+        <template v-if="Array.isArray(item.coordinates[0])" v-for="(markerCoordinates, key) in item.coordinates" :key="key">
+          <LMarker
+            :lat-lng="markerCoordinates"
+          >
+            <LIcon
+              :icon-size="[34, 34]"
+              :icon-anchor="[17, 33]"
+              :popup-anchor="[0, 4]">
+              <MarkerIcon
+                :fontControlled="false"
+              />
+            </LIcon>
+            <LPopup>
+              <NuxtImg :src="item.logo" class="partner-logo" />
+              <strong class="map-detailsLink" @click="scrollToElementById(slug(item.title as string))">
+                {{ item.title }}
+              </strong>
+            </LPopup>
+          </LMarker>
+        </template>
+        <template v-else>
+          <LMarker
+            :lat-lng="item.coordinates"
+          >
+            <LIcon
+              :icon-size="[34, 34]"
+              :icon-anchor="[17, 33]"
+              :popup-anchor="[0, 4]">
+              <MarkerIcon
+                :fontControlled="false"
+              />
+            </LIcon>
+            <LPopup>
+              <NuxtImg :src="item.logo" class="partner-logo" />
+              <strong class="map-detailsLink" @click="scrollToElementById(slug(item.title as string))">
+                {{ item.title }}
+              </strong>
+            </LPopup>
+          </LMarker>
+        </template>
+      </template>
       <LTileLayer
         :no-wrap="true"
         url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
