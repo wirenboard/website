@@ -28,8 +28,8 @@ email: info@comf.life
 
 #content
 Некоторые проекты в Москве:
-* [ЖК «Хорошевский» квартира 85 кв.м. на WirenBoard Pro](https://comf.life/shchit-umnogo-doma-za-839000-rub-umnyj-dom-na-wirenBoard-pro.html)
-* [ЖК «Квартал 38» квартира 155 кв.м. на WirenBoard Pro](https://comf.life/shchit-umnogo-doma-na-WirenBoard-za-942000-rub.html)
+* [ЖК «Хорошевский» квартира 85 кв.м. на WIRENBOARD PRO](https://comf.life/shchit-umnogo-doma-za-839000-rub-umnyj-dom-na-wirenBoard-pro.html)
+* [ЖК «Квартал 38» квартира 155 кв.м. на WIRENBOARD PRO](https://comf.life/shchit-umnogo-doma-na-WirenBoard-za-942000-rub.html)
 * [ЖК «Серебрянный фонтан» квартира 96 кв.м.](https://comf.life/shchita-umnogo-doma-za-854000-rub.html)
 * [ЖК «Династия» квартира 140 кв.м.](https://comf.life/shchit-umnogo-doma-za-1398000-rublej-wirenboard.html)
 
