@@ -1,6 +1,6 @@
 ---
 district: [spb]
-coordinates: [59.560505028833084, 31.023961409991077]
+coordinates: [59.931722, 30.332847]
 title: Setpoint
 logo: /img/integrators/setpoint.webp
 phone: 78129438141
