@@ -16,8 +16,6 @@
 
 В описании вакансии используется карточка компонента `::vacancy` и пропсы `#title, #salary, #description, #goals, #requirements, #advantage, #conditions`. Подробнее про компоненты и список доступных смотрите в файле [/doc/components.md](/doc/components.md).
 
-Также для формирования списка карточек мы используем [Front-matter](https://content.nuxt.com/usage/markdown) — то что в верхней части файла между знаками `---`. 
-
 Шаблон описания вакансии:
 ```
 ---
