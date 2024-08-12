@@ -1,3 +1,5 @@
+# Изменение раздела с вакансиями
+
 Файл `content/[locale]/index.md` описывает контент страницы на сайте:
 * [/content/ru/jobs/index.md](/content/ru/jobs/index.md) — [Работа в Wiren Board](https://wirenboard.com/ru/pages/jobs/) в русской версии сайта;
 * [/content/en/jobs/index.md](/content/en/jobs/index.md) — [Jobs](https://wirenboard.com/en/pages/jobs/) в английской версии сайта. 
