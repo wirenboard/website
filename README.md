@@ -11,7 +11,7 @@
 ## Онлайн-редактор
 Если вам надо добавить интегратора или внести небольшие исправления в существующие страницы, это удобно делать через веб-интерфейс Github. Документация на английском:
 - [управление файлами](https://docs.github.com/ru/repositories/working-with-files/managing-files);
-- [создание и удаление веток](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository)
+- [создание и удаление веток](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository);
 - [создание пуллреквестов](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 Общий алгоритм такой:
