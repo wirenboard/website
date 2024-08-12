@@ -1,3 +1,5 @@
+# Изменение раздела с интеграторами
+
 Содержимое папки `content/[locale]/_integrators` автоматически формирует разделы на сайте. Например:
 * [content/ru/_integrators ](/content/ru/_integrators) — [Интеграторы](https://wirenboard.com/ru/pages/integrators/) в русской версии сайта;
 * [content/en/_integrators ](/content/en/_integrators) — [Integrators](https://wirenboard.com/en/pages/integrators/) в английской версии сайта. 
