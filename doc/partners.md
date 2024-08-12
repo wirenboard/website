@@ -1,3 +1,5 @@
+# Изменение раздела с партнерами
+
 Содержимое папки `content/[locale]/_partners` автоматически формирует разделы на сайте. Например:
 * [content/ru/_partners ](/content/ru/_partners) — [Партнеры](https://wirenboard.com/ru/pages/partners/) в русской версии сайта;
 * [content/en/_partners ](/content/en/_partners) — [Partners](https://wirenboard.com/en/pages/partners/) в английской версии сайта. 
