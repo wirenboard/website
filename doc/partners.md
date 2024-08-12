@@ -2,7 +2,7 @@
 * [content/ru/_partners ](/content/ru/_partners) — [Партнеры](https://wirenboard.com/ru/pages/partners/) в русской версии сайта;
 * [content/en/_partners ](/content/en/_partners) — [Partners](https://wirenboard.com/en/pages/partners/) в английской версии сайта. 
 
-Чтобы добавить нового партнёра:
+Чтобы добавить партнёра:
 1. Создайте в нужной папке файл с расширением **.md**, например, `my_parnter.md` и заполните файл по шаблону.
 2. Добавьте в папку [public/img/partners](/public/img/partners) логотип в формате webp и шириной не больше 500px.
 
