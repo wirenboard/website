@@ -5,8 +5,8 @@
 * [content/en/_integrators ](/content/en/_integrators) — [Integrators](https://wirenboard.com/en/pages/integrators/) в английской версии сайта. 
 
 Чтобы добавить интегратора:
-1. Создайте в нужной папке файл с расширением **.md**, например, `my_integrator.md` и заполните файл по шаблону.
-2. Добавьте в папку [public/img/integrators](/public/img/integrators) логотип в формате webp и шириной не больше 500px.
+1. Добавьте в папку [public/img/integrators](/public/img/integrators) логотип в формате webp и шириной не больше 500px.
+2. Создайте в нужной папке файл с расширением **.md**, например, `my_integrator.md` и заполните файл по шаблону.
 
 Для редактирования просто измените описание интегратора в нужном файле.
 
