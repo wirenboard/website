@@ -6,6 +6,7 @@ logo: /img/integrators/liis.webp
 phone: 74952780720
 website: https://liis.su
 email: info@liis.su
+priority: 1
 ---
 
 ЛИИС – передовой системный интегратор с 2006 года.

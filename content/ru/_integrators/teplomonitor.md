@@ -6,6 +6,7 @@ logo: /img/integrators/teplomonitor.webp
 phone: 74996478913
 website: https://teplomonitor.ru
 email: 1@teplomonitor.ru
+priority: 1
 ---
 
 Компания «Тепломонитор» — производитель и поставщик автоматики для отопления, теплоснабжения, управления котельными и климат-контроля частных домов. Совместно с компанией Wiren Board выпускает контроллер SmartWeb K, совместимый с модулями расширения MOD2 и MOD3 и WBIO.
