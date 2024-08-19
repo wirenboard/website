@@ -6,6 +6,7 @@ logo: /img/integrators/comfort_life.webp
 phone: 78129639778
 website: https://comf.life
 email: info@comf.life
+priority: 1
 ---
 
 Компания «Comfort-Life» — занимается разработкой и внедрением системы «Умный дом» для квартир и загородных домов под ключ в Санкт-Петербурге и Москве.
