@@ -6,6 +6,7 @@ logo: /img/integrators/xiot.webp
 phone: 74952051272
 website: https://xiot.ru
 email: info@xiot.ru
+priority: 1
 ---
 
 Компания XIOT интегратор систем «Умный дом» с многолетним опытом, специализируется на проектах среднего и премиум уровня под ключ.
