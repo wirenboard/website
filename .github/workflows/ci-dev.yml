@@ -44,8 +44,9 @@ jobs:
             cd /var/www
             pnpm install
             pnpm run build
-            echo "${BRANCH}" > .output/version.txt
-            echo "${GIT_REVISION}" >> .output/version.txt
+            echo "${GITHUB_REF##*/}" > .output/version.txt
+            echo "${GITHUB_SHA}" | cut -c1-8 >> .output/version.txt
+            echo "Version set to $(cat .output/version.txt)"
 
       - name: Build and push
         uses: docker/build-push-action@v5
