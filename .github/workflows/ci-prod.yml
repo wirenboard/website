@@ -42,6 +42,8 @@ jobs:
           options: -v ${{ github.workspace }}:/var/www
           run: |
             cd /var/www
+            echo "${{ env.BRANCH }}@${{ env.GIT_REVISION }}" > public/version.txt
+            echo "Version set to $(cat public/version.txt)"            
             pnpm install
             pnpm run build
 
