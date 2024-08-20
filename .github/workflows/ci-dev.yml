@@ -42,10 +42,10 @@ jobs:
           options: -v ${{ github.workspace }}:/var/www
           run: |
             cd /var/www
-            pnpm install
-            pnpm run build
             echo "${{ env.BRANCH }}@${{ env.GIT_REVISION }}" > .output/public/version.txt
             echo "Version set to $(cat .output/public/version.txt)"
+            pnpm install
+            pnpm run build
 
       - name: Build and push
         uses: docker/build-push-action@v5
