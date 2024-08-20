@@ -44,8 +44,8 @@ jobs:
             cd /var/www
             pnpm install
             pnpm run build
-            echo "${{ env.BRANCH }}@${{ env.GIT_REVISION }}" > .output/version.txt
-            echo "Version set to $(cat .output/version.txt)"
+            echo "${{ env.BRANCH }}@${{ env.GIT_REVISION }}" > .output/public/version.txt
+            echo "Version set to $(cat .output/public/version.txt)"
 
       - name: Build and push
         uses: docker/build-push-action@v5
