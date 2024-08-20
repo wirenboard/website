@@ -44,6 +44,8 @@ jobs:
             cd /var/www
             pnpm install
             pnpm run build
+            echo "${BRANCH}" > .output/version.txt
+            echo "${GIT_REVISION}" >> .output/version.txt
 
       - name: Build and push
         uses: docker/build-push-action@v5
