@@ -39,13 +39,12 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           image: ghcr.io/wirenboard/website-base-image:initial
-          options: -v ${{ github.workspace }}:/var/www
+          options: -v ${{ github.workspace }}:/var/www -e GIT_VERSION="${BRANCH}-${GIT_REVISION}"
           run: |
             cd /var/www
             pnpm install
             pnpm run build
-            echo "${GITHUB_REF##*/}" > .output/version.txt
-            echo "${GITHUB_SHA}" | cut -c1-8 >> .output/version.txt
+            echo "${GIT_VERSION}" > .output/version.txt
             echo "Version set to $(cat .output/version.txt)"
 
       - name: Build and push
