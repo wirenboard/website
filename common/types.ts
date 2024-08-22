@@ -15,6 +15,7 @@ export interface Article {
   cover: string;
   url: string;
   date: string;
+  _path: string;
 }
 
 export interface District {

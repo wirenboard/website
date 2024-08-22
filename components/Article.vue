@@ -7,7 +7,7 @@ defineProps<ArticleParams>();
 </script>
 
 <template>
-  <NuxtLink :to="url" class="article">
+  <NuxtLink :to="url || `${$route.path}/${_path.split('/').at(-1)}`" class="article">
     <NuxtImg
       :src="cover"
       class="article-cover"
@@ -42,6 +42,7 @@ defineProps<ArticleParams>();
   text-decoration: none;
   object-fit: cover;
   border: 1px solid var(--gray-color);
+  min-height: 125px;
 
   @media (min-width: 400px) and (max-width: 940px) {
     width: 220px;

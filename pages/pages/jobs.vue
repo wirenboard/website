@@ -3,7 +3,7 @@ import type { MarkdownRoot, QueryBuilderParams } from '@nuxt/content';
 
 const { t, locale } = useI18n();
 
-const data = await useLocalizedData('jobs');
+const { data } = await useLocalizedData('jobs');
 
 useContentHead(data);
 
