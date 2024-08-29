@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{ src: string; caption?: string; width?: number; float?: 'right' | 'left' | 'center' }>();
+defineProps<{ src: string; caption?: string; width?: number; isGallery?: boolean; float?: 'right' | 'left' | 'center' }>();
 </script>
 
 <template>
@@ -11,12 +11,16 @@ defineProps<{ src: string; caption?: string; width?: number; float?: 'right' | '
       'photo-floatLeft': float === 'left',
       'photo-center': float === 'center',
       }"
-    :style="width ? `max-width: ${width}px;` : ''"
+    :style="`${width ? `max-width: ${width}px;` : ''}${isGallery ? 'width: 100%;' : ''}`"
   >
     <Image
       :src="src"
       :alt="caption"
-      :imageClass="{ 'photo-imageWithCaption': caption, 'photo-image': true }"
+      :imageClass="{
+         'photo-imageWithCaption': caption,
+         'photo-fromGallery': isGallery,
+         'photo-image': true,
+      }"
       :width="width"
       preview
     />
@@ -35,6 +39,13 @@ defineProps<{ src: string; caption?: string; width?: number; float?: 'right' | '
   flex-direction: column;
   gap: 6px;
   width: fit-content;
+}
+
+.photo-fromGallery {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .photo-center {

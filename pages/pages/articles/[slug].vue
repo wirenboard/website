@@ -14,7 +14,7 @@ useContentHead(data);
       <ContentRendererMarkdown :value="data" />
       <i class="article-author">
         <span rel="author">{{ data.author || t('team') }}</span>,
-        <time :datetime="dayjs(data.date).format('d.MM.YYYY')">{{ dayjs(data.date).format('d.MM.YYYY') }}</time>
+        <time :datetime="dayjs(data.date).format('d.MM.YYYY')">{{ dayjs(data.date).format('D.MM.YYYY') }}</time>
       </i>
     </ContentRenderer>
 

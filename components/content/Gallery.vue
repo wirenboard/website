@@ -8,15 +8,13 @@ const numberOfColumns = props.data.length >= 5 ? 5 : props.data.length;
 
 <template>
   <div class="gallery">
-    <div v-for="([src, caption, width], i) in data" :key="i">
-      <Photo :src="src" :caption="caption" :width="width" />
-    </div>
+    <Photo :src="src" :caption="caption" :height="300" isGallery v-for="([src, caption], i) in data" :key="i"/>
   </div>
 </template>
 
 <style>
 .gallery {
-  gap: 12px;
+  gap: 0 12px;
   max-width: 100%;
   clear: both;
   display: grid;
