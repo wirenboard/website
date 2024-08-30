@@ -31,7 +31,7 @@ const src = computed(() => {
       </svg>
       <img
          :src="cover"
-         class="peertube"
+         class="peertube peertube-coverImage"
          :width="width || 500"
          :height="height || 280"
          :style="`${width || 500 ? `max-width: ${width || 500}px;` : ''}`"
@@ -92,6 +92,11 @@ const src = computed(() => {
    align-items: center;
    justify-content: center;
    cursor: pointer;
+}
+
+.peertube-coverImage {
+   object-fit: cover;
+   object-position: center;
 }
 
 .peertube-coverPlay {
