@@ -1,15 +1,11 @@
 <script setup lang="ts">
 const props = defineProps<{ url: string; width?: number; height?: number; float?: 'right' | 'left'; cover?: string; }>();
-const url = new URL(props.url);
-const isShowCover = ref(!!props.cover);
-const isAutoplay = ref(0);
-const video = ref();
-const id = url.pathname.split('/').at(-1);
-const start = url.searchParams.get('start');
 
 const src = computed(() => {
+   const url = new URL(props.url);
+   const id = url.pathname.split('/').at(-1);
+   const start = url.searchParams.get('start');
    const source = reactive(new URL(`https://peertube.wirenboard.com/videos/embed/${id}`));
-   source.searchParams.set('autoplay', String(isAutoplay.value));
    source.searchParams.append('warningTitle', '0');
    source.searchParams.append('amp;p2p', '0');
    if (start) {
@@ -18,23 +14,20 @@ const src = computed(() => {
 
    return source.href
 });
-
-const playVideo = () => {
-   isAutoplay.value = 1;
-   isShowCover.value = false;
-};
 </script>
 
 <template>
-   <div
-      v-if="isShowCover"
+   <a
+      v-if="cover"
+      :href="url"
+      target="_blank"
       class="peertube-cover"
       :class="{ 'peertube-floatRight': float === 'right', 'peertube-floatLeft': float === 'left' }"
       :style="`${width || 500 ? `max-width: ${width || 500}px;` : ''}`"
    >
-      <svg class="peertube-coverPlay" width="80" height="80" viewBox="0 0 512 512" fill="#222F3D" style="font-size: 2.88em;">
-         <path fill="currentColor" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"></path>
-         <path d="M216.32 334.44l114.45-69.14a10.89 10.89 0 000-18.6l-114.45-69.14a10.78 10.78 0 00-16.32 9.31v138.26a10.78 10.78 0 0016.32 9.31z"></path>
+      <svg class="peertube-coverPlay" width="80" height="80" viewBox="0 0 512 512" fill="#222f3d">
+         <path fill="currentColor" d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z" />
+         <path d="M216.32 334.44l114.45-69.14a10.89 10.89 0 000-18.6l-114.45-69.14a10.78 10.78 0 00-16.32 9.31v138.26a10.78 10.78 0 0016.32 9.31z" />
       </svg>
       <img
          :src="cover"
@@ -42,14 +35,12 @@ const playVideo = () => {
          :width="width || 500"
          :height="height || 280"
          :style="`${width || 500 ? `max-width: ${width || 500}px;` : ''}`"
-         @click="playVideo"
          alt=""
       />
-   </div>
+   </a>
 
    <iframe
-      ref="video"
-      v-if="!isShowCover"
+      v-if="!cover"
       class="peertube"
       :class="{ 'peertube-floatRight': float === 'right', 'peertube-floatLeft': float === 'left' }"
       :width="width || 500"
@@ -66,12 +57,12 @@ const playVideo = () => {
 .peertube {
    @media(max-width: 650px) {
       width:350px !important;
-      height: 198px !important
+      height: 198px !important;
    }
 
    @media(max-width: 350px) {
       width:250px !important;
-      height: 141px !important
+      height: 141px !important;
    }
 }
 
@@ -105,10 +96,13 @@ const playVideo = () => {
 
 .peertube-coverPlay {
    position: absolute;
-   color: #fff
+   color: #fff;
+   opacity: 0.8;
 }
 
 .peertube-cover:hover .peertube-coverPlay {
-   color: var(--primary-color)
+   color: var(--primary-color);
+   fill: #fff;
+   opacity: 0.9;
 }
 </style>
