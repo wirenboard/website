@@ -1,5 +1,11 @@
 <script setup lang="ts">
-defineProps<{ src: string; caption?: string; width?: number; isGallery?: boolean; float?: 'right' | 'left' | 'center' }>();
+defineProps<{ src: string; caption?: string; width?: number; isGallery?: boolean; float?: 'right' | 'left' | 'center'; }>();
+
+const photo = ref();
+
+defineExpose({ photo });
+
+defineEmits(['openPhoto']);
 </script>
 
 <template>
@@ -7,6 +13,7 @@ defineProps<{ src: string; caption?: string; width?: number; isGallery?: boolean
     class="photo"
     :class="{
       'photo-withCaption': caption,
+      'photo-fromGallery': isGallery,
       'photo-floatRight': float === 'right',
       'photo-floatLeft': float === 'left',
       'photo-center': float === 'center',
@@ -14,15 +21,18 @@ defineProps<{ src: string; caption?: string; width?: number; isGallery?: boolean
     :style="`${width ? `max-width: ${width}px;` : ''}${isGallery ? 'width: 100%;' : ''}`"
   >
     <Image
+      ref="photo"
       :src="src"
       :alt="caption"
       :imageClass="{
          'photo-imageWithCaption': caption,
-         'photo-fromGallery': isGallery,
+         'photo-imageFromGallery': isGallery,
          'photo-image': true,
       }"
       :width="width"
       preview
+      @show="$emit('openPhoto', photo.$attrSelector)"
+      @hide="$emit('openPhoto', null)"
     />
 
     <figcaption v-if="caption" class="photo-imageCaption">{{ caption }}</figcaption>
@@ -35,13 +45,17 @@ defineProps<{ src: string; caption?: string; width?: number; isGallery?: boolean
   font-size: 16px;
   margin: 12px 0;
   clear: both;
-  display: flex;
+  display: table;
   flex-direction: column;
   gap: 6px;
   width: fit-content;
 }
 
 .photo-fromGallery {
+   display: flex;
+}
+
+.photo-imageFromGallery {
   height: 250px;
   width: 100%;
   object-fit: cover;
@@ -75,8 +89,14 @@ defineProps<{ src: string; caption?: string; width?: number; isGallery?: boolean
 .photo-withCaption {
   background: var(--gray-color);
   border: 1px solid var(--border-color);
-  border-radius: 6px;
+  border-bottom: 0;
+  border-radius: 6px 6px 0 0;
   padding: 6px;
+}
+
+.photo-fromGallery.photo-withCaption {
+   border-bottom: 1px solid var(--border-color);
+   border-radius: 6px;
 }
 
 .photo-image {
@@ -93,8 +113,25 @@ defineProps<{ src: string; caption?: string; width?: number; isGallery?: boolean
 
 .photo-imageCaption {
   text-align: left;
-  display: inline-block;
   white-space: pre-line;
+  display: table-caption;
+  caption-side: bottom;
+  border: 1px solid var(--border-color);
+  border-top: 0;
+  border-radius: 0 0 6px 6px;
+  background: var(--gray-color);
+  padding: 6px;
+}
+
+.photo-fromGallery .photo-imageCaption {
+   display: initial;
+   padding: 0;
+   border: 0;
+   margin-top: -6px;
+}
+
+.photo:not(.photo-fromGallery) .photo-imageCaption {
+   margin-top: -16px;
 }
 
 [data-pc-section="root"] {
