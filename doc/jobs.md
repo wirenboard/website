@@ -5,7 +5,7 @@
 * [/content/en/jobs/index.md](/content/en/jobs/index.md) — [Jobs](https://wirenboard.com/en/pages/jobs/) в английской версии сайта. 
 
 Список вакансий формируется автоматически из описаний в папке `content/[locale]/jobs/_includes`:
-* [/content/en/jobs/_includes](/content/ru/jobs/_includes) — в русской версии сайта;
+* [/content/ru/jobs/_includes](/content/ru/jobs/_includes) — в русской версии сайта;
 * [/content/en/jobs/_includes](/content/en/jobs/_includes) — в английской версии сайта. 
 
 Чтобы добавить вакансию, создайте в нужной папке файл с расширением **.md**, например, `my_vacancy.md` и заполните файл по шаблону.
