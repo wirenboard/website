@@ -7,7 +7,7 @@ defineProps<ArticleParams>();
 </script>
 
 <template>
-  <NuxtLink :to="url || `${$route.path}/${_path.split('/').at(-1)}`" class="article">
+  <NuxtLink :to="url || _path.split('/').at(-1)" class="article">
     <NuxtImg
       :src="cover"
       class="article-cover"
