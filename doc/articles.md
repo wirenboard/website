@@ -1,8 +1,8 @@
 # Редактирование статей 
 
 Содержимое папки `content/[locale]/_articles` автоматически формирует список статей на сайте:
-* [content/ru/_articles ](/content/ru/_articles) — [Статьи](https://wirenboard.com/ru/pages/articles/) в русской версии;
-* [content/en/_articles ](/content/en/_articles) — [Articles](https://wirenboard.com/en/pages/articles/) в английской версии.
+* [content/ru/_articles ](/content/ru/_articles) — [Статьи](https://wirenboard.com/ru/contents/articles/) в русской версии;
+* [content/en/_articles ](/content/en/_articles) — [Articles](https://wirenboard.com/en/contents/articles/) в английской версии.
 
 Вы можете добавить статью на сайт или ссылку на статью на стороннем ресурсе.
 
@@ -61,8 +61,8 @@ author: Опциональное поле для статей опубликов
 
 ## Предпросмотр 
 Если вы редактируете и запускаете сайт локально на компьютере, вот ссылки для предпросмотра:
-* http://localhost:3000/ru/pages/articles раздел статьи на русском языке
-* http://localhost:3000/en/pages/articles раздел статьи на английском языке
-* http://localhost:3000/ru/pages/articles/ARTICLE_NAME страница статьи, где нужно заменить `ARTICLE_NAME` на имя файла, например wb_ci_cd 
+* http://localhost:3000/ru/contents/articles раздел статьи на русском языке
+* http://localhost:3000/en/contents/articles раздел статьи на английском языке
+* http://localhost:3000/ru/contents/articles/ARTICLE_NAME страница статьи, где нужно заменить `ARTICLE_NAME` на имя файла, например wb_ci_cd 
 
 Изменения на сайт попадут после отправки пуллреквеста и вливания утверждённых изменений. Как это сделать, читайте в файле [README.md](/README.md).

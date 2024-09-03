@@ -1,8 +1,8 @@
 # Изменение раздела с вакансиями
 
 Файл `content/[locale]/index.md` описывает контент страницы на сайте:
-* [/content/ru/jobs/index.md](/content/ru/jobs/index.md) — [Работа в Wiren Board](https://wirenboard.com/ru/pages/jobs/) в русской версии сайта;
-* [/content/en/jobs/index.md](/content/en/jobs/index.md) — [Jobs](https://wirenboard.com/en/pages/jobs/) в английской версии сайта. 
+* [/content/ru/jobs/index.md](/content/ru/jobs/index.md) — [Работа в Wiren Board](https://wirenboard.com/ru/contents/jobs/) в русской версии сайта;
+* [/content/en/jobs/index.md](/content/en/jobs/index.md) — [Jobs](https://wirenboard.com/en/contents/jobs/) в английской версии сайта. 
 
 Список вакансий формируется автоматически из описаний в папке `content/[locale]/jobs/_includes`:
 * [/content/en/jobs/_includes](/content/ru/jobs/_includes) — в русской версии сайта;
@@ -55,5 +55,5 @@ actual: true/false (в зависимости от того актуальна �
 ::
 ```
 Если вы редактируете и запускаете сайт локально на компьютере, вот ссылки для предпросмотра:
-* http://localhost:3000/en/pages/jobs
-* http://localhost:3000/ru/pages/jobs
+* http://localhost:3000/en/contents/jobs
+* http://localhost:3000/ru/contents/jobs
