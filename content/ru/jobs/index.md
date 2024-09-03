@@ -2,8 +2,8 @@
 title: Работа в Wiren Board
 ---
 
-:youtube{
-    url="https://www.youtube.com/watch?v=jlpzJGvw5-o"
+:peertube{
+    url="https://peertube.wirenboard.com/w/bbHYTc72XoaFzbx1XbGGrN"
     float="right"
 }
 
