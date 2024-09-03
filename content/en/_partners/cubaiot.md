@@ -1,7 +1,7 @@
 ---
 title: CUBA IoT Platform
 logo: /img/partners/cubaiot.webp
-phone: +7(705)1879805
+phone: 77051879805
 website: https://cubaiot.kz
 email: sales@cubaiot.kz
 ---
