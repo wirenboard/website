@@ -24,16 +24,26 @@ defineEmits(['openPhoto']);
       ref="photo"
       :src="src"
       :alt="caption"
-      :imageClass="{
-         'photo-imageWithCaption': caption,
-         'photo-imageFromGallery': isGallery,
-         'photo-image': true,
-      }"
       :width="width"
       preview
       @show="$emit('openPhoto', photo.$attrSelector)"
       @hide="$emit('openPhoto', null)"
-    />
+    >
+      <template #image>
+        <NuxtImg
+          :src="src"
+          :alt="caption"
+          data-pc-section="image"
+          densities="x1"
+          :class="{
+            'photo-imageWithCaption': caption,
+            'photo-imageFromGallery': isGallery,
+            'photo-image': true,
+          }"
+          loading="lazy"
+        />
+      </template>
+    </Image>
 
     <figcaption v-if="caption" class="photo-imageCaption">{{ caption }}</figcaption>
   </figure>
@@ -52,7 +62,7 @@ defineEmits(['openPhoto']);
 }
 
 .photo-fromGallery {
-   display: flex;
+  display: flex;
 }
 
 .photo-imageFromGallery {
@@ -95,8 +105,8 @@ defineEmits(['openPhoto']);
 }
 
 .photo-fromGallery.photo-withCaption {
-   border-bottom: 1px solid var(--border-color);
-   border-radius: 6px;
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 6px;
 }
 
 .photo-image {
@@ -124,14 +134,14 @@ defineEmits(['openPhoto']);
 }
 
 .photo-fromGallery .photo-imageCaption {
-   display: initial;
-   padding: 0;
-   border: 0;
-   margin-top: -6px;
+  display: initial;
+  padding: 0;
+  border: 0;
+  margin-top: -6px;
 }
 
 .photo:not(.photo-fromGallery) .photo-imageCaption {
-   margin-top: -16px;
+  margin-top: -16px;
 }
 
 [data-pc-section="root"] {
