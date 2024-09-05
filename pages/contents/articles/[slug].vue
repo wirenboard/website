@@ -45,6 +45,21 @@ useContentHead(data);
   display: block;
   text-align: right;
 }
+
+.article h1,
+.article h2,
+.article h3,
+.article h4 {
+  font-weight: bold;
+}
+
+.article h2 {
+  font-size: 27px;
+}
+
+.article h3 {
+  font-size: 21px;
+}
 </style>
 
 <i18n>
