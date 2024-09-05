@@ -3,11 +3,13 @@ import dayjs from 'dayjs';
 import 'dayjs/locale/ru';
 import type { Article as ArticleParams } from '~/common/types';
 
-defineProps<ArticleParams>();
+const props = defineProps<ArticleParams>();
+const route = useRoute();
+const to = props.url || `${route.path}${route.path.at(-1) === '/' ? '' : '/'}${props._path?.split('/').at(-1)}`;
 </script>
 
 <template>
-  <NuxtLink :to="url || `${$route.path}/${_path.split('/').at(-1)}`" class="article">
+  <NuxtLink :to="to" class="article">
     <NuxtImg
       :src="cover"
       class="article-cover"

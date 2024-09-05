@@ -1,8 +1,8 @@
 # Изменение раздела с интеграторами
 
 Содержимое папки `content/[locale]/_integrators` автоматически формирует разделы на сайте:
-* [content/ru/_integrators ](/content/ru/_integrators) — [Интеграторы](https://wirenboard.com/ru/pages/integrators/) в русской версии сайта;
-* [content/en/_integrators ](/content/en/_integrators) — [Integrators](https://wirenboard.com/en/pages/integrators/) в английской версии сайта. 
+* [content/ru/_integrators ](/content/ru/_integrators) — [Интеграторы](https://wirenboard.com/ru/contents/integrators/) в русской версии сайта;
+* [content/en/_integrators ](/content/en/_integrators) — [Integrators](https://wirenboard.com/en/contents/integrators/) в английской версии сайта. 
 
 Чтобы добавить интегратора:
 1. Добавьте в папку [public/img/integrators](/public/img/integrators) логотип в формате webp и шириной не больше 500px.
@@ -28,5 +28,5 @@ priority: Опциональное поле — выставляет приор�
 А здесь описание в формате md разметки.
 ```
 Если вы редактируете и запускаете сайт локально на компьютере, вот ссылки для предпросмотра:
-* http://localhost:3000/en/pages/integrators
-* http://localhost:3000/ru/pages/integrators
+* http://localhost:3000/en/contents/integrators
+* http://localhost:3000/ru/contents/integrators
