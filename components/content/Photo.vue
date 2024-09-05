@@ -43,6 +43,16 @@ defineEmits(['openPhoto']);
           loading="lazy"
         />
       </template>
+      <template #preview="slotProps">
+        <NuxtImg
+          :src="src"
+          :alt="caption"
+          data-pc-section="image"
+          densities="x1"
+          :style="slotProps.style"
+          @click="slotProps.onClick"
+        />
+      </template>
     </Image>
 
     <figcaption v-if="caption" class="photo-imageCaption">{{ caption }}</figcaption>
