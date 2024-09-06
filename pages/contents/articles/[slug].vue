@@ -6,13 +6,13 @@ const { locale } = useI18n();
 const route = useRoute();
 const { data } = await useLocalizedData(`/_articles/${route.params.slug}`, true, { url: { $exists: false } });
 
-useContentHead(data);
-
-useHead({
-  title: t('title'),
-  meta: [
-    { name: 'wb-bc', content: `/${locale.value}/contents/articles|Статьи` },
-  ]
+useContentHead({
+  ...data.value,
+  head: {
+    meta: [
+      { name: 'wb-bc', content: `/${locale.value}/contents/articles|Статьи` },
+    ]
+  }
 });
 </script>
 
