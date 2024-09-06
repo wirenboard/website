@@ -9,7 +9,7 @@ const to = props.url || `${route.path}${route.path.at(-1) === '/' ? '' : '/'}${p
 </script>
 
 <template>
-  <NuxtLink :to="to" class="article">
+  <a :href="to" class="article">
     <NuxtImg
       :src="cover"
       class="article-cover"
@@ -20,7 +20,7 @@ const to = props.url || `${route.path}${route.path.at(-1) === '/' ? '' : '/'}${p
       <h4 class="article-title">{{ title }}</h4>
       <time :datetime="date" class="article-date">{{ dayjs(date).locale('ru').format('D MMMM YYYY') }}</time>
     </div>
-  </NuxtLink>
+  </a>
 </template>
 
 <style scoped>
