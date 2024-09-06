@@ -6,6 +6,13 @@ const { locale } = useI18n();
 const route = useRoute();
 const { data } = await useLocalizedData(`/_articles/${route.params.slug}`, true, { url: { $exists: false } });
 
+if (!data.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: `Page not found: ${route.path}`,
+  });
+}
+
 useContentHead({
   ...data.value,
   head: {
