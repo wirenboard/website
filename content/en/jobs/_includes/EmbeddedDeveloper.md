@@ -30,13 +30,10 @@ We are looking for a C and STM32 microcontroller programmer to join our team to 
 * understanding the features of computer operation in a broad sense (OS device, bootloaders, network protocols, etc.).
 
 #advantage
-* knowledge of Python;
-* participation in international youth robot competitions - Eurobot.
+* knowledge of Python.
 
 #conditions
-* hybrid or remote work format;
-* employment under the Labor Code;
-* work schedule: 5/2 any convenient, the main thing is to be in touch at certain hours of the day;
-* large kitchen, where there is always fruit, nuts, cookies, tea, coffee beans and other snacks for every taste.
+* remote work format;
+* work schedule: 5/2 any convenient, the main thing is to be in touch at certain hours of the day.
 
 ::

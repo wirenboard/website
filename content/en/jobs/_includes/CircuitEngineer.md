@@ -36,10 +36,9 @@ We are looking for an electronic engineer to participate in the development of d
 * knowledge of industrial automation.
 
 #conditions
-* employment under the Labor Code of the Russian Federation;
-* work at a unique Russian production facility for smart home electronics;
-* work schedule: Monday - Friday from 9:20 to 17:20, on Friday until 16:20;
+* work at a unique production facility for smart home electronics;
 * large kitchen, where there is always fruit, nuts, cookies, tea, coffee beans and other snacks for every taste;
 * adequate and pleasant team. We are against excessive bureaucracy and formalism in communication;
-* spacious and comfortable office, with a tennis table and a massage chair, which is easy to get to: from the Novodachnaya platform (MCD-1) or by car along Dmitrovskoe highway.
+* work schedule: 5/2;
+* comfortable office Comfortable office in Astana, Kazakhstan.
 ::
