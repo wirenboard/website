@@ -81,7 +81,7 @@ const filterChanged = () => {
 {
   "ru": {
     "title": "Компании-интеграторы — Wiren Board",
-    "chooseArea": "Выберите область"
+    "chooseArea": "Выберите регион"
   },
   "en": {
     "title": "Integrators — Wiren Board",
