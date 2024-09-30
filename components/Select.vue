@@ -90,6 +90,7 @@ const model = defineModel();
   border-radius: 6px;
   padding: 6px 10px;
   cursor: pointer;
+  margin-bottom: 2px;
   font-family: 'Plumb', sans-serif;
 }
 
