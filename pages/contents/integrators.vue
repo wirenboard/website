@@ -4,6 +4,7 @@ import Select from '~/components/Select.vue';
 
 const { t, locale } = useI18n();
 const district = ref();
+const visibleItems = ref<string[]>([]);
 
 useHead({
   title: t('title'),
@@ -27,6 +28,10 @@ const filterChanged = () => {
   }]
   refresh();
 };
+
+const onChangeMapItems = (items: string[]) => {
+  visibleItems.value = items;
+};
 </script>
 
 <template>
@@ -34,6 +39,7 @@ const filterChanged = () => {
     :items="data"
     :center="mapCenter"
     :zoom="district ? districts[locale].find(item => item.value === district)?.zoom as number : 4"
+    @visibleItemsChange="onChangeMapItems"
   />
 
   <Select
@@ -49,13 +55,16 @@ const filterChanged = () => {
   <ContentList :query="query">
     <template #default="{ list }">
       <div class="partners">
-        <template v-for="(partner, i) in list" :key="partner._path">
+        <template v-for="(partner, i) in list.filter(item => visibleItems.includes(item._id))" :key="partner._path">
           <Partner v-bind="partner as any">
             <ContentRendererMarkdown :value="partner" />
           </Partner>
 
           <hr class="partners-separator" v-if="i !== list.length - 1" />
         </template>
+        <div v-if="!list.filter(item => visibleItems.includes(item._id)).length">
+          {{ t('empty') }}
+        </div>
       </div>
     </template>
   </ContentList>
@@ -81,11 +90,13 @@ const filterChanged = () => {
 {
   "ru": {
     "title": "Компании-интеграторы — Wiren Board",
-    "chooseArea": "Выберите регион"
+    "chooseArea": "Выберите регион",
+    "empty": "В данной области пока нет компаний-интеграторов"
   },
   "en": {
     "title": "Integrators — Wiren Board",
-    "chooseArea": "Select a region"
+    "chooseArea": "Select a region",
+    "empty": "There are no integrators in this area yet"
   }
 }
 </i18n>
