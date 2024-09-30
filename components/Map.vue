@@ -20,21 +20,24 @@ const scrollToElement = (title: string) => {
 };
 
 const onMapMove = (ev: any) => {
-  const visibleMarkers: string[] = [];
+  setTimeout(() => {
+    const visibleMarkers: string[] = [];
 
-  const bounds = ev.target.getBounds();
-  props.items?.forEach(marker => {
-    if(Array.isArray(marker.coordinates[0])) {
-      marker.coordinates.forEach((item: number[]) => {
-        if (bounds.contains(item)) {
-          visibleMarkers.push(marker._id);
-        }
-      })
-    } else if (bounds.contains(marker.coordinates)) {
-      visibleMarkers.push(marker._id);
-    }
-  });
-  emit('visibleItemsChange', visibleMarkers);
+    const bounds = ev.target.getBounds();
+    props.items?.forEach(marker => {
+      if(Array.isArray(marker.coordinates[0])) {
+        marker.coordinates.forEach((item: number[]) => {
+          if (bounds.contains(item)) {
+            visibleMarkers.push(marker._id);
+          }
+        })
+      } else if (bounds.contains(marker.coordinates)) {
+        visibleMarkers.push(marker._id);
+      }
+    });
+
+    emit('visibleItemsChange', visibleMarkers);
+  }, 100)
 }
 </script>
 
@@ -46,6 +49,7 @@ const onMapMove = (ev: any) => {
       :center="initialCenter"
       :use-global-leaflet="false"
       @move="onMapMove"
+      @change="console.log(111)"
       @ready="(target: any) => onMapMove({ target })"
     >
       <template v-for="item in items" :key="item._id">
