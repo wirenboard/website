@@ -201,7 +201,7 @@ h3.articles-title {
 <i18n>
 {
   "ru": {
-    "title": "Статьи — Wiren Board",
+    "title": "Примеры внедрений — Wiren Board",
     "filter_category": "По категориям",
     "filter_date": "По дате публикации",
     "filter_asc": "Сначала новые",

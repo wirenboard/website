@@ -10,7 +10,7 @@ useContentHead({
   ...data.value,
   head: {
     meta: [
-      { name: 'wb-bc', content: `/${locale.value}/contents/solutions|Статьи` },
+      { name: 'wb-bc', content: `/${locale.value}/contents/solutions|Примеры внедрений` },
     ]
   }
 });
