@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { categories } from '~/common/article_categories';
+import type { QueryBuilderParams } from '@nuxt/content';
+import { categories } from '~/common/solution_categories';
 import { ArticleType } from '~/common/constants';
 import SelectButton from '~/components/SelectButton.vue';
-import type { QueryBuilderParams } from '@nuxt/content';
 
 const { t, locale } = useI18n();
 const route = useRoute();
@@ -16,8 +16,8 @@ const filterDate = ref('filter_asc');
 const options = ref([t('filter_category'), t('filter_date')]);
 const filterDates = ['filter_asc', 'filter_desc'];
 
-const query: QueryBuilderParams = { path: '/_articles', where: [{ _locale: locale.value }] }
-const { data } = await useAsyncData('articles', () => queryContent(query.path).where({ _locale: locale.value }).find());
+const query: QueryBuilderParams = { path: '/_solutions', where: [{ _locale: locale.value }] }
+const { data } = await useAsyncData('solutions', () => queryContent(query.path).where({ _locale: locale.value }).find());
 
 if (!data.value?.length) {
   throw createError({
@@ -54,7 +54,7 @@ if (!data.value?.length) {
 
     <div v-else class="articles-content">
       <div class="articles-list">
-        <Article v-bind="article as any" v-for="article in data!.sort((a, b) => filterDate === 'filter_asc' ? new Date(b.date) - new Date(a.date) : new Date(a.date) - new Date(b.date) )" :key="article._path" />
+        <Article v-bind="article as any" v-for="article in data.sort((a, b) => filterDate === 'filter_asc' ? new Date(b.date) - new Date(a.date) : new Date(a.date) - new Date(b.date) )" :key="article._path" />
       </div>
     </div>
 
@@ -208,7 +208,7 @@ h3.articles-title {
     "filter_desc": "Сначала старые"
   },
   "en": {
-    "title": "Articles — Wiren Board",
+    "title": "Solutions — Wiren Board",
     "filter_category": "By category",
     "filter_date": "By date",
     "filter_asc": "New ones first",
