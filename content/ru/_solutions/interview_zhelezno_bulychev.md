@@ -3,5 +3,5 @@ title: 'Первый умный дом класса А в России: инте
 url: https://wirenboard.com/ru/pages/interview-zhelezno-bulychev/
 cover: /img/solutions/interview_zhelezno_bulychev.jpg
 date: 2022-10-21
-category: home_dispatching
+category: building_dispatching
 ---

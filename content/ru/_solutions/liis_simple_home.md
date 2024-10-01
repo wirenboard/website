@@ -3,5 +3,5 @@ title: Simple Home — готовое решение Умного Дома дл�
 url: https://wirenboard.com/ru/pages/solutions-liis-simple-home/
 cover: /img/solutions/liis_simple_home.jpg
 date: 2023-06-19
-category: home_dispatching
+category: building_dispatching
 ---
