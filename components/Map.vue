@@ -49,7 +49,6 @@ const onMapMove = (ev: any) => {
       :center="initialCenter"
       :use-global-leaflet="false"
       @move="onMapMove"
-      @change="console.log(111)"
       @ready="(target: any) => onMapMove({ target })"
     >
       <template v-for="item in items" :key="item._id">
