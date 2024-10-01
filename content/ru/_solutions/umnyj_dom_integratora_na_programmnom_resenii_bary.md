@@ -3,5 +3,5 @@ title: Умный дом интегратора на программном ре
 url: https://wirenboard.com/ru/pages/umnyj-dom-integratora-na-programmnom-resenii-bary/
 cover: /img/solutions/umnyj_dom_integratora_na_programmnom_resenii_bary.jpg
 date: 2024-06-25
-category: appartments_automation
+category: apartments_automation
 ---

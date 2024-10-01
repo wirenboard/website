@@ -3,5 +3,5 @@ title: 'Intelligent House: автоматизация усадьбы площа�
 url: https://wirenboard.com/ru/pages/solutions-intelligenthouse-knyaje/
 cover: /img/solutions/intelligenthouse_knyaje.jpg
 date: 2023-03-13
-category: appartments_automation
+category: apartments_automation
 ---

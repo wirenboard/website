@@ -3,5 +3,5 @@ title: Умная квартира 180 м² с примыкающей терра
 url: https://wirenboard.com/ru/pages/abrom-terrace-smart-home/
 cover: /img/solutions/abrom_terrace_smart_home.jpg
 date: 2024-07-23
-category: appartments_automation
+category: apartments_automation
 ---

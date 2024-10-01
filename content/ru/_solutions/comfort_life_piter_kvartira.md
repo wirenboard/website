@@ -3,5 +3,5 @@ title: 'Comfort-Life: автоматизация квартиры площадь
 url: https://wirenboard.com/ru/pages/comfort-life-piter-kvartira/
 cover: /img/solutions/comfort_life_piter_kvartira.jpg
 date: 2023-08-09
-category: appartments_automation
+category: apartments_automation
 ---

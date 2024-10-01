@@ -3,5 +3,5 @@ title: Добавляем диммеры и реле Wiren Board к умному
 url: https://wirenboard.com/ru/pages/raspberry-pi-home-assistant/
 cover: /img/solutions/raspberry_pi_home_assistant.jpg
 date: 2023-11-15
-category: appartments_automation
+category: apartments_automation
 ---

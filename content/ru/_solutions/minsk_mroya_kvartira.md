@@ -3,5 +3,5 @@ title: Умная квартира 80 м² с проводной инфраст�
 url: https://wirenboard.com/ru/pages/minsk-mroya-kvartira/
 cover: /img/solutions/minsk_mroya_kvartira.jpg
 date: 2024-04-08
-category: appartments_automation
+category: apartments_automation
 ---

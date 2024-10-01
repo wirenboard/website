@@ -3,5 +3,5 @@ title: 'Рекота: автоматизация частного дома пл�
 url: https://wirenboard.com/ru/pages/solutions-rekota-house/
 cover: /img/solutions/rekota_house.jpg
 date: 2022-03-14
-category: appartments_automation
+category: apartments_automation
 ---

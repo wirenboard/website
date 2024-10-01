@@ -9,7 +9,7 @@ export const categories: Categories = {
     { name: 'industrial_dispatching_monitoring', label: 'Диспетчеризация и мониторинг промышленных объектов' },
     { name: 'agriculture_automation', label: 'Автоматизация объектов сельского хозяйства' },
     { name: 'embedded_systems', label: 'Встраиваемые системы' },
-    { name: 'appartments_automation', label: 'Автоматизация частных квартир и домов' },
+    { name: 'apartments_automation', label: 'Автоматизация частных квартир и домов' },
   ],
   en: [],
 };

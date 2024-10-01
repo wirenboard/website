@@ -3,5 +3,5 @@ title: 'Intelligent House: автоматизация частного дома 
 url: https://wirenboard.com/ru/pages/solutions-intelligenthouse-sunny/
 cover: /img/solutions/intelligenthouse_sunny.jpg
 date: 2023-03-14
-category: appartments_automation
+category: apartments_automation
 ---

@@ -3,5 +3,5 @@ title: Двухкомнатная умная квартира с приточн�
 url: https://wirenboard.com/ru/pages/intelligent-house-vent/
 cover: /img/solutions/intelligent_house_vent.png
 date: 2024-07-29
-category: appartments_automation
+category: apartments_automation
 ---
