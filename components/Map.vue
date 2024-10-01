@@ -4,6 +4,7 @@ import { slug } from 'github-slugger';
 import MarkerIcon from '~/assets/marker.svg'
 
 const props = defineProps<{ items: ParsedContent[] | null, center: number[], zoom: number }>();
+const emit = defineEmits(['visibleItemsChange']);
 
 const map = ref();
 // new props can conflict with setView method, so we hardcode them
@@ -17,6 +18,27 @@ watch(() => props.center, () => {
 const scrollToElement = (title: string) => {
   document.querySelector(`#${slug(title)}`)?.scrollIntoView({ behavior: 'smooth' });
 };
+
+const onMapMove = (ev: any) => {
+  setTimeout(() => {
+    const visibleMarkers: string[] = [];
+
+    const bounds = ev.target.getBounds();
+    props.items?.forEach(marker => {
+      if(Array.isArray(marker.coordinates[0])) {
+        marker.coordinates.forEach((item: number[]) => {
+          if (bounds.contains(item)) {
+            visibleMarkers.push(marker._id);
+          }
+        })
+      } else if (bounds.contains(marker.coordinates)) {
+        visibleMarkers.push(marker._id);
+      }
+    });
+
+    emit('visibleItemsChange', visibleMarkers);
+  }, 100)
+}
 </script>
 
 <template>
@@ -26,8 +48,10 @@ const scrollToElement = (title: string) => {
       :zoom="initialZoom"
       :center="initialCenter"
       :use-global-leaflet="false"
+      @move="onMapMove"
+      @ready="(target: any) => onMapMove({ target })"
     >
-      <template v-for="(item, index) in items" :key="index">
+      <template v-for="item in items" :key="item._id">
         <template v-if="Array.isArray(item.coordinates[0])" v-for="(markerCoordinates, key) in item.coordinates" :key="key">
           <LMarker
             :lat-lng="markerCoordinates"
