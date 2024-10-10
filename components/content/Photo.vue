@@ -47,7 +47,7 @@ defineEmits(['openPhoto']);
         <NuxtImg
           :src="src"
           :alt="caption"
-          data-pc-section="image"
+          data-pc-section="original"
           densities="x1"
           :style="slotProps.style"
           @click="slotProps.onClick"
