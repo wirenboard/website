@@ -42,7 +42,6 @@ watch(openedPhoto, () => {
 </script>
 
 <template>
-   {{openedPhoto}}
   <div class="gallery">
     <Photo
        v-for="([src, caption], i) in data"
