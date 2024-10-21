@@ -2,7 +2,7 @@
 const route = useRoute();
 const { t } = useI18n();
 const { locale } = useI18n();
-const { data } = await useLocalizedData(`/${route.params.slug}`);
+const { data } = await useLocalizedData(`/pages/${route.params.slug}`);
 
 if (!data.value) {
   throw createError({
