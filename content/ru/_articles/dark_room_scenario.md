@@ -5,4 +5,3 @@ cover: /img/articles/dark_room_scenario.webp
 date: 2022-08-04
 category: beginners
 ---
-``

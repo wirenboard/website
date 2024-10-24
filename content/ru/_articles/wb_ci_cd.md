@@ -16,7 +16,7 @@ _Расшифровка нашего доклада с вебинара «Кон
 
 О спикере: Евгений Богер (@evgeny_boger) — технический директор и сооснователь Wiren Board. Занимается встраиваемыми системами и, в особенности, встраиваемыми Linux.
 
-:peertube{
+:video-player{
     url="https://peertube.wirenboard.com/w/t276rxEadLXqYQxKKHrKJ4"
     width="650"
     height="367"

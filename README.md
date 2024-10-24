@@ -7,7 +7,8 @@
 - [Партнеры](./doc/partners.md);
 - [Интеграторы](./doc/integrators.md);
 - [Вакансии](./doc/jobs.md);
-- [Статьи](./doc/articles.md).
+- [Статьи](./doc/articles.md);
+- [Видео](./doc/video.md);
 - [Внедрения](./doc/solutions.md).
 
 ## Онлайн-редактор
