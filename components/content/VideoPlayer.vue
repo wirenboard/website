@@ -67,7 +67,7 @@ const width = Number.isInteger(props.width) ? `${(props.width || 500)}px` : prop
     frameborder="0"
     allowfullscreen
     referrerpolicy="strict-origin-when-cross-origin"
-    sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+    sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-forms"
   />
 </template>
 

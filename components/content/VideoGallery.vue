@@ -1,13 +1,16 @@
 <script setup lang="ts">
 import VideoPlayer from './VideoPlayer.vue';
 
-type Video = [string, string, string];
+type Url = string;
+type Title = string;
+type Cover = string;
+type Video = [Url, Title, Cover];
 
 const props = defineProps<{ data: Video[]; }>();
 </script>
 
 <template>
-  <div class="videoGallery">
+  <div class="videoGallery" v-if="data.length">
     <div v-for="video in data" :key="video[0]">
       <VideoPlayer
         :url="video[0]"

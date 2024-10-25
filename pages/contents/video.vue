@@ -17,7 +17,7 @@ const filterDate = ref('filter_asc');
 const options = ref([t('filter_category'), t('filter_date')]);
 const filterDates = ['filter_asc', 'filter_desc'];
 
-const query: QueryBuilderParams = { path: '/_video', where: [{ _locale: locale.value }] }
+const query: QueryBuilderParams = { path: '/_video', where: [{ _locale: locale.value }] };
 const { data } = await useAsyncData('video', () => queryContent(query.path).where({ _locale: locale.value }).find());
 
 if (!data.value?.length) {
@@ -26,12 +26,23 @@ if (!data.value?.length) {
     statusMessage: `Page not found: ${route.path}`,
   });
 }
+
+const flattenedCategories = computed(() => flattenCategories(videoCategories, locale.value));
+
+const getFinalData = (videos) => {
+  const sorted = (a, b) => filter.value !== 'По категориям' && filterDate.value === 'filter_asc'
+    ? new Date(b.date) - new Date(a.date)
+    : new Date(a.date) - new Date(b.date);
+
+  return videos.sort(sorted)
+    .map(video => [video.url, video.title, video.cover]);
+};
 </script>
 
 <template>
   <div class="video">
-    <div v-if="filter === 'По категориям'" class="video-content">
-      <template v-for="(category, i) in flattenCategories(videoCategories, locale)" :key="category.name">
+    <div v-if="filter === 'По категориям'">
+      <template v-for="(category, i) in flattenedCategories" :key="category.name">
         <h3
           v-if="category.type === ArticleType.SubCategory"
           class="video-title"
@@ -45,24 +56,13 @@ if (!data.value?.length) {
           <a :href="`#${category.name}`">{{ category.label }}</a>
         </h2>
 
-        <template v-if="data!.filter((item) => item.category === category.name).length">
-          <VideoGallery
-            :data="data!.filter((item) => item.category === category.name)
-            .sort((a, b) => new Date(a.date) - new Date(b.date))
-            .map(video => [video.url, video.title, video.cover])"
-          />
-        </template>
+        <VideoGallery :data="getFinalData(data!.filter((item) => item.category === category.name))" />
 
-        <hr v-if="category.type !== ArticleType.WithSubCategories && i !== flattenCategories(videoCategories, locale).length - 1" class="video-separator" />
+        <hr v-if="category.type !== ArticleType.WithSubCategories && i !== flattenedCategories.length - 1" class="video-separator" />
       </template>
     </div>
 
-    <div v-else class="video-content">
-      <VideoGallery
-        :data="data.sort((a, b) => filterDate === 'filter_asc' ? new Date(b.date) - new Date(a.date) : new Date(a.date) - new Date(b.date))
-          .map(video => [video.url, video.title, video.cover])"
-      />
-    </div>
+    <VideoGallery v-else :data="getFinalData(data)" />
 
     <aside>
       <div class="video-filter">
@@ -100,10 +100,6 @@ if (!data.value?.length) {
     flex-direction: column-reverse;
     gap: 24px;
   }
-}
-
-.video-content {
-  flex-grow: 1;
 }
 
 .video-title {
