@@ -5,4 +5,3 @@ cover: /img/articles/hardware_selection.webp
 date: 2020-09-04
 category: beginners
 ---
-``

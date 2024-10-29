@@ -5,4 +5,3 @@ cover: /img/articles/sensors_placement.webp
 date: 2022-08-19
 category: beginners
 ---
-``

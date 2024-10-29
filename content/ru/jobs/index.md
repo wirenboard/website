@@ -2,7 +2,7 @@
 title: Работа в Wiren Board
 ---
 
-:peertube{
+:video-player{
     url="https://peertube.wirenboard.com/w/bbHYTc72XoaFzbx1XbGGrN"
     float="right"
 }

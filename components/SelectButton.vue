@@ -31,6 +31,7 @@ const change = ({ value }) => {
   border-radius: 1px;
   white-space: nowrap;
   position: relative;
+  min-height: 33px;
   font-size: 16px;
   display: inline-flex;
   cursor: pointer;
