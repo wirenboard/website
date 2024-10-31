@@ -24,7 +24,7 @@ useContentHead({
 </script>
 
 <template>
-  <article class="article">
+  <article class="article page-content">
     <ContentRenderer v-if="data">
       <ContentRendererMarkdown :value="data" />
       <i class="article-author">

@@ -28,7 +28,7 @@ if (!data.value?.length) {
 </script>
 
 <template>
-  <div class="articles">
+  <div class="articles page-content">
     <div v-if="filter === 'По категориям'" class="articles-content">
       <template v-for="(category, i) in flattenCategories(categories, locale)" :key="category.name">
         <h3
@@ -58,7 +58,7 @@ if (!data.value?.length) {
       </div>
     </div>
 
-    <aside>
+    <aside class="sidebar">
       <div class="articles-filter">
         <SelectButton v-model="filter" :options="options" />
 

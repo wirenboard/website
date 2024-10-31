@@ -40,7 +40,7 @@ const getFinalData = (videos) => {
 </script>
 
 <template>
-  <div class="video">
+  <div class="video page-content">
     <div v-if="filter === 'По категориям'">
       <template v-for="(category, i) in flattenedCategories" :key="category.name">
         <h3
@@ -64,7 +64,7 @@ const getFinalData = (videos) => {
 
     <VideoGallery v-else :data="getFinalData(data)" />
 
-    <aside>
+    <aside class="sidebar">
       <div class="video-filter">
         <SelectButton v-model="filter" :options="options" />
 
