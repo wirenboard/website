@@ -30,7 +30,10 @@ const formatPhoneNumber = (phone: number) => {
         <a v-if="email" :href="`mailto:${email}`" target="_blank" class="partner-contact"><Icon name="ion:mail" />{{email}}</a>
         <template v-if="phone">
           <template v-if="Array.isArray(phone)">
-            <a v-for="phoneNumber in phone" :href="`tel:+${phoneNumber}`" class="partner-contact"><Icon name="ion:call" :key="phoneNumber" />{{formatPhoneNumber(phoneNumber)}}</a>
+            <a v-for="phoneNumber in phone" :href="`tel:+${phoneNumber}`" class="partner-contact" :key="phoneNumber">
+              <Icon name="ion:call" />
+              {{formatPhoneNumber(phoneNumber)}}
+            </a>
           </template>
           <a v-else :href="`tel:+${phone}`" class="partner-contact"><Icon name="ion:call" />{{formatPhoneNumber(phone)}}</a>
         </template>
