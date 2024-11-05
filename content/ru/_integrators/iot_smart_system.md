@@ -5,7 +5,7 @@ title: IotSmartSystem
 logo: /img/integrators/iot_smart_system.webp
 phone: 78432085506
 website: https://iotsmartsystem.ru
-email: smart@iotsmartsystem.ru
+email: all@iotsmartsystem.ru
 ---
 
 Российская компания-интегратор в области автоматизации, «Умных Домов», диспетчеризации инженерных систем, построение систем учета ресурсов (АСКУЭ)
