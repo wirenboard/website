@@ -3,5 +3,5 @@ title: "Как открыть окно, если не можешь встать 
 url: https://habr.com/ru/companies/wirenboard/articles/828022/
 cover: /img/articles/kak_otkryt_okno_esli_ne_mozhesh_vstat.webp
 date: 2024-07-11
-category: IMPORTED_SELECT_CATEGORY
+category: home_automation
 ---
