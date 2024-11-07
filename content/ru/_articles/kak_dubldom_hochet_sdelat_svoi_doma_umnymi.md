@@ -3,5 +3,5 @@ title: "Как «ДубльДом» хочет сделать свои дома 
 url: https://habr.com/ru/companies/wirenboard/articles/854818/
 cover: /img/articles/kak_dubldom_hochet_sdelat_svoi_doma_umnymi.webp
 date: 2024-10-31
-category: IMPORTED_SELECT_CATEGORY
+category: home_automation
 ---
