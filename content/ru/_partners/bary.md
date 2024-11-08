@@ -1,8 +1,6 @@
 ---
-district: [voronezh]
-coordinates: [51.650924, 39.181171]
 title: BARY
-logo: /img/partners/BARY.webp
+logo: /img/partners/bary.webp
 phone: 74950440404
 website: https://bary.io/
 email: support@bary.io
