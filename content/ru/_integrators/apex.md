@@ -1,5 +1,5 @@
 ---
-district: [moscow,spb,vologda]
+district: [moscow,spb,volga]
 coordinates: [55.678555, 37.583032]
 title: Apex Технологии Комфорта
 logo: /img/integrators/apex.webp
