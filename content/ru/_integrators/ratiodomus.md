@@ -1,6 +1,6 @@
 ---
 district: [by]
-coordinates: [55.9199817, 37.5037807]
+coordinates: [53.923053, 27.670267]
 title: ООО «Рацио Домус»
 logo: /img/integrators/ratiodomus.webp
 phone: 375296249415
