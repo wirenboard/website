@@ -1,4 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+const apiUrl = process.env.NUXT_API_URL || 'https://wirenboard.com';
+const headers = process.env.NUXT_SITE_LOGIN
+  ? { 'Authorization': `Basic ${btoa(`${process.env.NUXT_SITE_LOGIN}:${process.env.NUXT_SITE_PASSWORD}`)}` }
+  : {};
+
+
 export default defineNuxtConfig({
   ssr: true,
   experimental: {
@@ -37,6 +43,11 @@ export default defineNuxtConfig({
           href: '/img/favicon.png',
         }
       ]
+    }
+  },
+  nitro: {
+    routeRules: {
+      '/data/**': { proxy: `${apiUrl}/ng/api/v1/**`, headers },
     }
   },
   primevue: {
