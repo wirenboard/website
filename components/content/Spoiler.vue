@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import ArrowDownIcon from '~/assets/icons/arrow-down-b.svg';
+import ArrowRightIcon from '~/assets/icons/arrow-right-b.svg';
+
 const isVisible = ref(false);
 
 const showHiddenContent = () => {
@@ -9,7 +12,8 @@ const showHiddenContent = () => {
 <template>
   <div class="spoiler">
     <div class="spoiler-summary" @click="showHiddenContent">
-      <Icon :name="isVisible ? 'wb-icon:arrow-down-b' : 'wb-icon:arrow-right-b'" class="spoiler-icon" />
+      <ArrowDownIcon v-if="isVisible" class="spoiler-icon" />
+      <ArrowRightIcon v-else class="spoiler-icon" />
       <ContentSlot :use="$slots.summary" />
     </div>
     <div v-show="isVisible">
