@@ -43,5 +43,10 @@ export default defineNuxtConfig({
     options: {
       unstyled: true
     }
-  }
+  },
+  icon: {
+    serverBundle: {
+      collections: ['ion']
+    }
+  },
 })
