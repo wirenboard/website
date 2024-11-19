@@ -45,13 +45,11 @@ export default defineNuxtConfig({
     }
   },
   icon: {
-    mode: 'svg',
-    icons: [
-      'ion:arrow-down-b',
-      'ion:arrow-right-b',
-      'ion:call',
-      'ion:mail',
-      'ion:earth',
+    customCollections: [
+      {
+        prefix: 'wb-icon',
+        dir: './assets/icons'
+      },
     ],
   },
 })
