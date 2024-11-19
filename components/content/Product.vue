@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import LinkIcon from '~/assets/icons/external-link.svg';
 import type { Product } from '~/common/types';
 import ContentGallery from '~/components/content/Gallery.vue';
 import VideoPlayer from '~/components/content/VideoPlayer.vue';
@@ -20,8 +21,6 @@ const product = await useFetch<Product>(requestUrl, {
     'Authorization': `Basic ${btoa('ninedev:r3Bhs1Jio2Fe')}`
   },
 }).then(({ data }) => JSON.parse(data.value));
-
-console.log(product )
 </script>
 
 <template>
@@ -48,7 +47,7 @@ console.log(product )
         <li class="product-navigationItem" v-if="data.documentation">
           <a :href="data.documentation" target="_blank">
             Документация
-            <Icon name="humbleicons:external-link" class="product-externalLink" />
+            <LinkIcon class="product-externalLink" />
           </a>
         </li>
       </ul>
@@ -200,6 +199,10 @@ console.log(product )
   position: absolute;
   top: 10px;
   margin-left: 2px;
+}
+
+.product-externalLink path {
+  fill: none;
 }
 
 .product-section {

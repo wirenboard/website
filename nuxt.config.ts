@@ -1,9 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-const apiUrl = process.env.NUXT_API_URL || 'https://wirenboard.com';
+const apiUrl = process.env.NUXT_API_URL || '';
 const headers = process.env.NUXT_SITE_LOGIN
   ? { 'Authorization': `Basic ${btoa(`${process.env.NUXT_SITE_LOGIN}:${process.env.NUXT_SITE_PASSWORD}`)}` }
   : {};
-
 
 export default defineNuxtConfig({
   ssr: true,
