@@ -45,6 +45,13 @@ export default defineNuxtConfig({
     }
   },
   icon: {
-    mode: 'svg'
+    mode: 'svg',
+    icons: [
+      'ion:arrow-down-b',
+      'ion:arrow-right-b',
+      'ion:call',
+      'ion:mail',
+      'ion:earth',
+    ],
   },
 })
