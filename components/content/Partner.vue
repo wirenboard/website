@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { slug } from 'github-slugger';
+import CallIcon from '~/assets/icons/call.svg';
+import EarthIcon from '~/assets/icons/earth.svg';
+import MailIcon from '~/assets/icons/mail.svg';
 import { districts } from '~/common/districts';
 
 defineProps<{ title: string; logo: string; phone?: number; website?: string; email?: string; note?: string; district: string[]; }>();
@@ -26,16 +29,17 @@ const formatPhoneNumber = (phone: number) => {
         {{ title }}
       </h3>
       <div class="partner-contacts">
-        <a v-if="website" :href="website" target="_blank" class="partner-contact"><Icon name="ion:earth" />{{website}}</a>
-        <a v-if="email" :href="`mailto:${email}`" target="_blank" class="partner-contact"><Icon name="ion:mail" />{{email}}</a>
+        <a v-if="website" :href="website" target="_blank" class="partner-contact"><EarthIcon />{{website}}</a>
+        <a v-if="email" :href="`mailto:${email}`" target="_blank" class="partner-contact"><MailIcon />{{email}}</a>
         <template v-if="phone">
           <template v-if="Array.isArray(phone)">
             <a v-for="phoneNumber in phone" :href="`tel:+${phoneNumber}`" class="partner-contact" :key="phoneNumber">
-              <Icon name="ion:call" />
+              <CallIcon />
               {{formatPhoneNumber(phoneNumber)}}
             </a>
           </template>
-          <a v-else :href="`tel:+${phone}`" class="partner-contact"><Icon name="ion:call" />{{formatPhoneNumber(phone)}}</a>
+          <a v-else :href="`tel:+${phone}`" class="partner-contact">
+            <CallIcon />{{formatPhoneNumber(phone)}}</a>
         </template>
         <div>
           <span v-for="region in district">
