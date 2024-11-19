@@ -12,7 +12,6 @@ export default defineNuxtConfig({
   ],
   modules: [
     '@nuxt/content',
-    '@nuxt/icon',
     '@nuxt/image',
     'nuxt-svgo',
     '@nuxtjs/i18n',
@@ -43,13 +42,5 @@ export default defineNuxtConfig({
     options: {
       unstyled: true
     }
-  },
-  icon: {
-    customCollections: [
-      {
-        prefix: 'wb-icon',
-        dir: './assets/icons'
-      },
-    ],
   },
 })
