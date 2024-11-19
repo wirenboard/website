@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { ParsedContent } from '@nuxt/content';
 import { slug } from 'github-slugger';
-import MarkerIcon from 'assets/icons/marker.svg'
+import MarkerIcon from '~/assets/icons/marker.svg';
 
 const props = defineProps<{ items: ParsedContent[] | null, center: number[], zoom: number }>();
 const emit = defineEmits(['visibleItemsChange']);
