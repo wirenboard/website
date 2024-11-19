@@ -9,7 +9,7 @@ const showHiddenContent = () => {
 <template>
   <div class="spoiler">
     <div class="spoiler-summary" @click="showHiddenContent">
-      <Icon :name="isVisible ? 'ion:arrow-down-b' : 'ion:arrow-right-b'" class="spoiler-icon" mode="svg" />
+      <Icon :name="isVisible ? 'ion:arrow-down-b' : 'ion:arrow-right-b'" class="spoiler-icon" />
       <ContentSlot :use="$slots.summary" />
     </div>
     <div v-show="isVisible">
