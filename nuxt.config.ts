@@ -4,6 +4,8 @@ const headers = process.env.NUXT_SITE_LOGIN
   ? { 'Authorization': `Basic ${btoa(`${process.env.NUXT_SITE_LOGIN}:${process.env.NUXT_SITE_PASSWORD}`)}` }
   : {};
 
+console.log('api url', apiUrl);
+
 export default defineNuxtConfig({
   ssr: true,
   experimental: {
