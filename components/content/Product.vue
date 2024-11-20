@@ -35,7 +35,7 @@ const product = await useApi<Product>(requestUrl, {
       </div>
 
       <div class="product-coverWrapper">
-        <img :src="`${imageFolder}/${data.cover}`" class="product-cover" :alt="data.title" />
+        <NuxtImg :src="`${imageFolder}/${data.cover}`" class="product-cover" :alt="data.title" />
       </div>
     </div>
 
