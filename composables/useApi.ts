@@ -5,9 +5,10 @@ export const useApi: typeof useFetch = (url: string, opts?) => {
     ? { 'Authorization': `Basic ${btoa(`${config.login}:${config.password}`)}` }
     : {};
 
-  const userId = useRequestHeaders(['x-wb-user-id']);
+  const header = useRequestHeaders(['x-wb-user-id']);
 
-  console.log('user id', userId);
+  console.log('user id', header['x-wb-user-id']);
 
-  return useFetch(url, { baseURL: `${config.apiUrl}/ng/api/v1` || '', ...opts, key: url, params: { user_id: userId } });
+  // @ts-ignore
+  return useFetch(url, { baseURL: `${config.apiUrl}/ng/api/v1` || '', ...opts, key: url, params: { user_id: header['x-wb-user-id'] }, headers });
 }
