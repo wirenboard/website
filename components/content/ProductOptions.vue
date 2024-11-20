@@ -7,18 +7,20 @@ interface Option {
 }
 
 defineProps<{ type: 'option' | 'component'; productId: number; options: Option[] }>();
+const calculatorClass = 'add-to-basket-set';
 </script>
 
 <template>
   <div class="product-options">
     <div
       v-for="option in options"
-      class="product-option" :key="option.id"
+      :class="`product-option ${calculatorClass}`"
       :data-option_id="option.id"
       :data-product_id="productId"
       :data-option_type="type"
       data-url="/basket/add/"
       data-count="1"
+      :key="option.id"
     >
       <NuxtImg class="product-optionImage" :src="`https://wirenboard.com/storage/cache/${option.image}`" />
       <div class="product-optionName">{{ option.name }}</div>
