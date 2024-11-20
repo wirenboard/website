@@ -15,9 +15,9 @@ const imageFolder = `/img/${data.value._stem.slice(4)}`;
 const headers = useRequestHeaders(['cookie']);
 
 let requestUrl = `/product/${data.value.article}/?locale=${locale.value}`;
-if (headers.user_id) {
-  requestUrl += `&user_id=${headers.user_id}`;
-}
+// if (headers.user_id) {
+//   requestUrl += `&user_id=${headers.user_id}`;
+// }
 const product = await useApi<Product>(requestUrl, {
   headers: {
     'Authorization': `Basic ${btoa('ninedev:r3Bhs1Jio2Fe')}`
