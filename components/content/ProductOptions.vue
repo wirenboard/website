@@ -7,7 +7,7 @@ interface Option {
 }
 
 defineProps<{ type: 'option' | 'component'; productId: number; options: Option[] }>();
-const calculatorClass = 'add-to-basket-set';
+const calculatorClass = 'add-to-basket-set activate_option';
 </script>
 
 <template>
