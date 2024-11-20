@@ -7,8 +7,6 @@ export const useApi: typeof useFetch = (url: string, opts?) => {
 
   const userId = useRequestHeader('x-wb-user-id');
 
-  console.log('user id', userId);
-
   // @ts-ignore
   return useFetch(url, { baseURL: `${config.apiUrl}/ng/api/v1` || '', ...opts, key: url, params: { user_id: userId }, headers });
 }

@@ -4,20 +4,15 @@ import type { Product } from '~/common/types';
 import ContentGallery from '~/components/content/Gallery.vue';
 import VideoPlayer from '~/components/content/VideoPlayer.vue';
 import ProductOptions from '~/components/content/ProductOptions.vue';
+import { useApi } from '~/composables/useApi';
 import { scrollToElementById } from '~/utils/scrollToElementById';
-import {useApi} from "~/composables/useApi";
 
 const route = useRoute();
 const { t, locale } = useI18n();
 const { data } = await useLocalizedData(`_catalog`, true, { _file: { $icontains: route.params.slug } });
 const imageFolder = `/img/${data.value._stem.slice(4)}`;
 
-const headers = useRequestHeaders(['cookie']);
-
 let requestUrl = `/product/${data.value.article}/?locale=${locale.value}`;
-// if (headers.user_id) {
-//   requestUrl += `&user_id=${headers.user_id}`;
-// }
 const product = await useApi<Product>(requestUrl, {
   headers: {
     'Authorization': `Basic ${btoa('ninedev:r3Bhs1Jio2Fe')}`

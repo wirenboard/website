@@ -20,6 +20,7 @@ useContentHead({
     meta: [
       { name: 'description', content: data.value.meta },
       { name: 'keywords', content: data.value.keywords },
+      { name: 'wb-hide-heading', content: 'true' },
     ]
   }
 });
