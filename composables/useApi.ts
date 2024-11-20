@@ -1,4 +1,4 @@
-export const useApi: typeof useFetch = (url, opts?) => {
+export const useApi: typeof useFetch = (url: string, opts?) => {
   const config = useRuntimeConfig();
 
   const headers = config.login
@@ -7,5 +7,5 @@ export const useApi: typeof useFetch = (url, opts?) => {
 
   console.log('11111 request url', `${config.apiUrl}/ng/api/v1${url}`)
 
-  return useFetch(url, { baseURL: `${config.apiUrl}/ng/api/v1` || '', ...opts });
+  return useFetch(url, { baseURL: `${config.apiUrl}/ng/api/v1` || '', ...opts, key: url });
 }
