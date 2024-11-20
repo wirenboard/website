@@ -1,15 +1,20 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-const apiUrl = process.env.NUXT_API_URL || '';
-const headers = process.env.NUXT_SITE_LOGIN
-  ? { 'Authorization': `Basic ${btoa(`${process.env.NUXT_SITE_LOGIN}:${process.env.NUXT_SITE_PASSWORD}`)}` }
-  : {};
-
-console.log('api url', apiUrl);
+// const apiUrl = process.env.NUXT_API_URL || '';
+// const headers = process.env.NUXT_SITE_LOGIN
+//   ? { 'Authorization': `Basic ${btoa(`${process.env.NUXT_SITE_LOGIN}:${process.env.NUXT_SITE_PASSWORD}`)}` }
+//   : {};
+//
+// console.log('api url', apiUrl);
 
 export default defineNuxtConfig({
   ssr: true,
   experimental: {
     payloadExtraction: false
+  },
+  runtimeConfig: {
+    apiUrl: process.env.NUXT_API_URL,
+    login: process.env.NUXT_SITE_LOGIN,
+    password: process.env.NUXT_SITE_PASSWORD,
   },
   devtools: { enabled: false },
   css: [
@@ -46,11 +51,11 @@ export default defineNuxtConfig({
       ]
     }
   },
-  nitro: {
-    routeRules: {
-      '/data/**': { proxy: `${apiUrl}/ng/api/v1/**`, headers },
-    }
-  },
+  // nitro: {
+  //   routeRules: {
+  //     '/data/**': { proxy: `${process.env}/ng/api/v1/**`, headers },
+  //   }
+  // },
   primevue: {
     options: {
       unstyled: true
