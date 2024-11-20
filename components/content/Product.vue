@@ -13,7 +13,7 @@ const { data } = await useLocalizedData(`_catalog`, true, { _file: { $icontains:
 const imageFolder = `/img/${data.value._stem.slice(4)}`;
 
 const headers = useRequestHeaders(['cookie']);
-console.log('headers', headers)
+
 let requestUrl = `/product/${data.value.article}/?locale=${locale.value}`;
 if (headers.user_id) {
   requestUrl += `&user_id=${headers.user_id}`;

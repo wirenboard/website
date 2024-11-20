@@ -5,7 +5,9 @@ export const useApi: typeof useFetch = (url: string, opts?) => {
     ? { 'Authorization': `Basic ${btoa(`${config.login}:${config.password}`)}` }
     : {};
 
-  console.log('11111 request url', `${config.apiUrl}/ng/api/v1${url}`)
+  const websiteHeaders = useRequestHeaders(['cookie']);
+
+  console.log('headers', websiteHeaders);
 
   return useFetch(url, { baseURL: `${config.apiUrl}/ng/api/v1` || '', ...opts, key: url });
 }

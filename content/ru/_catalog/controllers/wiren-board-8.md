@@ -12,7 +12,7 @@ images:
   - 1.webp
 video:
   - https://peertube.wirenboard.com/w/bX7A9UTvBaNzx2Qm1pe7ms?start=1s
-type: io_module
+type: controller
 sort: 100
 weight: 0.08
 show_type: all
