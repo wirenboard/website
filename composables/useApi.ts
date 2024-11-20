@@ -5,7 +5,7 @@ export const useApi: typeof useFetch = (url: string, opts?) => {
     ? { 'Authorization': `Basic ${btoa(`${config.login}:${config.password}`)}` }
     : {};
 
-  const websiteHeaders = useRequestHeaders(['cookie']);
+  const websiteHeaders = useRequestHeaders();
 
   console.log('headers', websiteHeaders);
 
