@@ -68,7 +68,14 @@ const addToOrderClass = (product?.options?.length || product?.components?.length
         <div class="product-note">{{ t('retailPrice') }} <span v-if="product.price_max">{{ t('from') }} {{ toTriads(product.price) }} {{ t('to') }} {{ toTriads(product.price_max) }} ₽ {{ t('dependsOnOptions') }}</span></div>
         <div class="product-availability">
           {{ t('inStock') }} {{ toTriads(product.items.available) }} {{ t('pcs') }}<span v-if="product.items.inv_final_assembly">, {{ t('more') }} {{ toTriads(product.items.inv_final_assembly) }} {{ t('pcs') }} {{ t('scheduled') }} {{ t(product.items.schedule_unit) }}</span></div>
-        <button :class="`product-orderButton ${addToOrderClass}`" type="button">{{ (product?.options?.length || product?.components?.length) ? t('chooseOptions') : t('addToBasket') }}</button>
+        <button
+          :class="`product-orderButton ${addToOrderClass}`"
+          :data-product_id="product.id"
+          data-count="1"
+          type="button"
+        >
+          {{ (product?.options?.length || product?.components?.length) ? t('chooseOptions') : t('addToBasket') }}
+        </button>
       </aside>
     </div>
 
