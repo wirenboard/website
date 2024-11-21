@@ -68,7 +68,7 @@ const addToOrderClass = (product?.options?.length || product?.components?.length
         <div class="product-note">{{ t('retailPrice') }} <span v-if="product.price_max">{{ t('from') }} {{ toTriads(product.price) }} {{ t('to') }} {{ toTriads(product.price_max) }} ₽ {{ t('dependsOnOptions') }}</span></div>
         <div class="product-availability">
           {{ t('inStock') }} {{ toTriads(product.items.available) }} {{ t('pcs') }}<span v-if="product.items.inv_final_assembly">, {{ t('more') }} {{ toTriads(product.items.inv_final_assembly) }} {{ t('pcs') }} {{ t('scheduled') }} {{ t(product.items.schedule_unit) }}</span></div>
-        <button :class="`product-orderButton ${addToOrderClass}`" type="button">{{ t('addToBasket') }}</button>
+        <button :class="`product-orderButton ${addToOrderClass}`" type="button">{{ (product?.options?.length || product?.components?.length) ? t('chooseOptions') : t('addToBasket') }}</button>
       </aside>
     </div>
 
@@ -361,6 +361,7 @@ const addToOrderClass = (product?.options?.length || product?.components?.length
     "discontinued": "Товар не продаётся, чтобы заказать",
     "contactUs": "свяжитесь с нами",
     "addToBasket": "Добавить в заказ",
+    "chooseOptions": "Посмотреть опции",
     "retailPrice": "Розничная цена",
     "from": "от",
     "to": "до",
@@ -383,6 +384,7 @@ const addToOrderClass = (product?.options?.length || product?.components?.length
     "discontinued": "Product is no longer available to order",
     "contactUs": "contact us",
     "addToBasket": "Add to Basket",
+    "chooseOptions": "View options",
     "retailPrice": "Retail price",
     "from": "from",
     "to": "to",
