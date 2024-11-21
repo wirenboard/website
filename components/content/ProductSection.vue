@@ -4,7 +4,6 @@ defineProps<{ title: string; }>();
 
 <template>
   <section class="productSection">
-    <h3>{{ title }}</h3>
     <ContentSlot :use="$slots.default" />
   </section>
 </template>
