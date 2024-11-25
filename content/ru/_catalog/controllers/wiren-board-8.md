@@ -1,23 +1,17 @@
 ---
 article: WB8-ALL
 name: Wiren Board 8.4
+type: Контроллер для автоматизаци
 title: Модульный подход к возможностям и цене
 sub_title: Модульный программируемый контроллер для автоматизации и мониторинга с открытым ПО на базе Linux
 cover: 1.webp
 documentation: https://wirenboard.com/wiki/Wiren_Board_8
-support_link:
 meta: Мощный универсальный свободно программируемый контроллер в промышленном исполнении
 keywords: контроллер для автоматизации, wiren board, диспетчеризация, PLC на Linux, ПЛК
 images:
   - 1.webp
 video:
   - https://peertube.wirenboard.com/w/bX7A9UTvBaNzx2Qm1pe7ms?start=1s
-type: controller
-sort: 100
-weight: 0.08
-show_type: all
-available: true
-withdraw: false
 ---
 
 ::product

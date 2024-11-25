@@ -3,8 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import LinkIcon from '~/assets/icons/external-link.svg';
 import type { Product } from '~/common/types';
 import ContentGallery from '~/components/content/Gallery.vue';
-import VideoPlayer from '~/components/content/VideoPlayer.vue';
 import ProductOptions from '~/components/content/ProductOptions.vue';
+import ProductSolutions from '~/components/content/ProductSolutions.vue';
 import { useApi } from '~/composables/useApi';
 import { scrollToElementById } from '~/utils/scrollToElementById';
 import 'swiper/css';
@@ -41,9 +41,10 @@ const addToOrderClass = (product?.options?.length || product?.components?.length
       >
         <swiper-slide class="product-navigationItem" @click="scrollToElementById('description')">{{ t('description') }}</swiper-slide>
         <swiper-slide class="product-navigationItem" @click="scrollToElementById('gallery')" v-if="data?.images?.length">{{ t('images') }}</swiper-slide>
-        <swiper-slide class="product-navigationItem" @click="scrollToElementById('options')" v-if="product.options?.length">{{ t('options') }}</swiper-slide>
-        <swiper-slide class="product-navigationItem" @click="scrollToElementById('components')" v-if="product.components?.length">{{ t('components') }}</swiper-slide>
+        <swiper-slide class="product-navigationItem" @click="scrollToElementById('options')" v-if="product?.options?.length">{{ t('options') }}</swiper-slide>
+        <swiper-slide class="product-navigationItem" @click="scrollToElementById('components')" v-if="product?.components?.length">{{ t('components') }}</swiper-slide>
         <swiper-slide class="product-navigationItem" @click="scrollToElementById('video')" v-if="data?.video?.length">{{ t('video') }}</swiper-slide>
+        <swiper-slide class="product-navigationItem" @click="scrollToElementById('useCases')" v-if="data?.use_cases?.length">{{ t('useCases') }}</swiper-slide>
         <swiper-slide class="product-navigationItem" v-if="data.documentation">
           <a :href="data.documentation" target="_blank">
             {{ t('documentation') }}
@@ -56,21 +57,21 @@ const addToOrderClass = (product?.options?.length || product?.components?.length
     <div class="product-descriptionWrapper">
       <template v-if="$slots.description">
         <div class="product-description product-section" id="description">
-          <p v-if="product.discontinued" class="product-discontinued">
+          <p v-if="product?.discontinued" class="product-discontinued">
             {{ t('discontinued') }} — <a href="https://wirenboard.com/ru/pages/contacts/">{{ t('contactUs') }}</a>.
           </p>
           <ContentSlot :use="$slots.description" />
         </div>
       </template>
 
-      <aside class="product-orderInfo"  v-if="!product.discontinued">
-        <div class="product-price" v-if="product.price">{{ toTriads(product.price) }} <sup class="product-priceUnit">₽</sup></div>
-        <div class="product-note">{{ t('retailPrice') }} <span v-if="product.price_max">{{ t('from') }} {{ toTriads(product.price) }} {{ t('to') }} {{ toTriads(product.price_max) }} ₽ {{ t('dependsOnOptions') }}</span></div>
+      <aside class="product-orderInfo" v-if="!product?.discontinued">
+        <div class="product-price" v-if="product?.price">{{ toTriads(product.price) }} <sup class="product-priceUnit">₽</sup></div>
+        <div class="product-note">{{ t('retailPrice') }} <span v-if="product?.price_max">{{ t('from') }} {{ toTriads(product.price) }} {{ t('to') }} {{ toTriads(product.price_max) }} ₽ {{ t('dependsOnOptions') }}</span></div>
         <div class="product-availability">
-          {{ t('inStock') }} {{ toTriads(product.items.available) }} {{ t('pcs') }}<span v-if="product.items.inv_final_assembly">, {{ t('more') }} {{ toTriads(product.items.inv_final_assembly) }} {{ t('pcs') }} {{ t('scheduled') }} {{ t(product.items.schedule_unit) }}</span></div>
+          {{ t('inStock') }} {{ toTriads(product?.items.available) }} {{ t('pcs') }}<span v-if="product?.items.inv_final_assembly">, {{ t('more') }} {{ toTriads(product.items.inv_final_assembly) }} {{ t('pcs') }} {{ t('scheduled') }} {{ t(product.items.schedule_unit) }}</span></div>
         <button
           :class="`product-orderButton ${addToOrderClass}`"
-          :data-product_id="product.id"
+          :data-product_id="product?.id"
           data-count="1"
           type="button"
         >
@@ -100,7 +101,12 @@ const addToOrderClass = (product?.options?.length || product?.components?.length
 
     <div class="product-section" id="video" v-if="data?.video?.length">
       <h2>{{ t('video') }}</h2>
-      <VideoPlayer v-for="(url, key) in data?.video" :url="url" :key="key" />
+      <VideoGallery :data="data?.video.map((video: string) => [video])" />
+    </div>
+
+    <div class="product-section" id="useCases" v-if="data?.use_cases?.length">
+      <h2>{{ t('useCases') }}</h2>
+      <ProductSolutions :data="data?.use_cases" />
     </div>
   </article>
 </template>
@@ -364,6 +370,7 @@ const addToOrderClass = (product?.options?.length || product?.components?.length
     "options": "Опции",
     "components": "Комплектация",
     "video": "Видео",
+    "useCases": "Примеры использования",
     "documentation": "Документация",
     "discontinued": "Товар не продаётся, чтобы заказать",
     "contactUs": "свяжитесь с нами",
@@ -387,6 +394,7 @@ const addToOrderClass = (product?.options?.length || product?.components?.length
     "options": "Options",
     "components": "Configuration",
     "video": "Video",
+    "useCases": "Use cases",
     "documentation": "Documentation",
     "discontinued": "Product is no longer available to order",
     "contactUs": "contact us",

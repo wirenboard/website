@@ -1,11 +1,11 @@
 ---
 article: WBIO-DI-WD-14
 name: WBIO-DI-WD-14
+type: Модуль ввода-вывода
 title: Модуль ввода-вывода
 sub_title: 14 дискретных входов
 cover: 1.jpg
 documentation: https://wirenboard.com/wiki/WBIO-DI-WD-14_Discrete_Inputs
-support_link:
 meta: Модуль ввода-вывода WBIO-DI-WD-14
 keywords: DI-WD14, WD14, WD-14, DI-WD-14, WD, WBIO-WD-14, 14, WD 14
 images:
@@ -17,12 +17,6 @@ images:
   - 6.jpg
 video:
   - https://peertube.wirenboard.com/w/2DwV6Qd7xSqU6autzeaTMz?start=6s
-type: io_module
-sort: 100
-weight: 0.08
-show_type: all
-available: true
-withdraw: false
 ---
 
 ::product

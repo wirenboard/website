@@ -54,4 +54,5 @@ export interface Product {
   },
   options: ProductOption[];
   components: ProductOption[];
+  use_cases: string[];
 }

@@ -4,7 +4,9 @@ defineProps<{ title: string; }>();
 
 <template>
   <section class="productSection">
+    <h3>{{ title }}</h3>
     <ContentSlot :use="$slots.default" />
+    <div class="productSection-clear" />
   </section>
 </template>
 
@@ -23,5 +25,9 @@ defineProps<{ title: string; }>();
 .productSection:last-of-type {
   border-bottom: 0;
   padding-bottom: 0;
+}
+
+.productSection-clear {
+  clear: both;
 }
 </style>
