@@ -94,7 +94,7 @@ const addToOrderClass = (product?.options?.length || product?.components?.length
       <ProductOptions :product-id="product.id" type="option" :options="product.options" />
     </div>
 
-    <div class="product-section" id="components" v-if="product?.options?.length">
+    <div class="product-section" id="components" v-if="product?.components?.length">
       <h2>{{ t('components') }}</h2>
       <ProductOptions :product-id="product.id" type="component" :options="product.components" />
     </div>
