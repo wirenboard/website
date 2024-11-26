@@ -10,7 +10,7 @@ _«Контроллеры Wiren Board обеспечили надежность 
 ## О компании
 
 :photo{
-    src="/img/solutions//mediakiosk/1.jpg"
+    src="/img/solutions/mediakiosk/1.jpg"
     caption="Коллаж на тему медиакиосков в Калининграде"
     width="400"
     float="right"
