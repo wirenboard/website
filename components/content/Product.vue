@@ -14,7 +14,7 @@ const { t, locale } = useI18n();
 const { data } = await useLocalizedData(`_catalog`, true, { _file: { $icontains: route.params.slug } });
 const imageFolder = `/img/${data.value._stem.slice(4)}`;
 
-const product: any = await useApi<Product>(`/product/${data.value.article}/?locale=${locale.value}`);
+const product = await useApi<Product>(`/product/${data.value.article}/?locale=${locale.value}`);
 
 const addToOrderClass = (product?.options?.length || product?.components?.length) ? 'add-to-basket-set' : 'add-to-basket';
 </script>
