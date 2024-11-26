@@ -34,14 +34,3 @@ const { data } = await useAsyncData('solutions', () => queryContent(query.path)
   }
 }
 </style>
-
-<i18n>
-{
-  "ru": {
-    "title": "Примеры использования"
-  },
-  "en": {
-    "title": "Use cases"
-  }
-}
-</i18n>
