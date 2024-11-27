@@ -119,13 +119,16 @@ const addToOrderClass = (product?.options?.length || product?.components?.length
 
 .product {
   line-height: 32px;
+  margin-bottom: 40px;
 }
 
 .product h2 {
   display: flex;
   align-items: center;
   white-space: nowrap;
+  color: var(--text-color);
   font-size: 36px;
+  margin: 24px 0;
 
   @media (max-width: 768px) {
     font-size: 24px;
