@@ -15,8 +15,6 @@ const { data } = await useLocalizedData(`_catalog`, true, { _file: { $icontains:
 const imageFolder = `/img/${data.value._stem.slice(4)}`;
 
 const product = await useApi<Product>(`/product/${data.value.article}/?locale=${locale.value}`);
-
-const addToOrderClass = (product?.options?.length || product?.components?.length) ? 'add-to-basket-set' : 'add-to-basket';
 </script>
 
 <template>
@@ -70,7 +68,11 @@ const addToOrderClass = (product?.options?.length || product?.components?.length
         <div class="product-availability">
           {{ t('inStock') }} {{ toTriads(product?.items.available) }} {{ t('pcs') }}<span v-if="product?.items.inv_final_assembly">, {{ t('more') }} {{ toTriads(product.items.inv_final_assembly) }} {{ t('pcs') }} {{ t('scheduled') }} {{ t(product.items.schedule_unit) }}</span></div>
         <button
-          :class="`product-orderButton ${addToOrderClass}`"
+          :class="{
+            'product-orderButton': true,
+            'add-to-basket-set': (product?.options?.length || product?.components?.length),
+            'add-to-basket': !(product?.options?.length || product?.components?.length),
+          }"
           :data-product_id="product?.id"
           data-count="1"
           type="button"
@@ -245,8 +247,9 @@ const addToOrderClass = (product?.options?.length || product?.components?.length
 
 .product-externalLink {
   position: absolute;
-  top: 10px;
+  top: 7px;
   margin-left: 2px;
+  width: 14px;
 }
 
 .product-externalLink path {
