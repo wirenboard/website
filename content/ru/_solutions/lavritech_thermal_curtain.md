@@ -1,5 +1,5 @@
 ---
-title: 'Умные медиакиоски для остановок'
+title: 'Диспетчеризация и управление тепловыми завесами крупного объекта'
 cover: /img/solutions/lavritech_thermal_curtain.webp
 date: 2024-11-29
 category: commercial_estate_monitoring
