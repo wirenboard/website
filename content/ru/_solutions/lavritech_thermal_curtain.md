@@ -128,7 +128,7 @@ LoRaWAN применили для зон, где покрытие Wi-Fi недо
 :gallery{
     :data='[
         ["/img/solutions/lavritech_thermal_curtain/18.png", "Анализ — полезный инструмент для подведения итогов"],
-        ["/img/solutions/lavritech_thermal_curtain/19.png", "Расход по месяцам, можно посмотреть значения в рублях
+        ["/img/solutions/lavritech_thermal_curtain/19.png", "Расход по месяцам, можно посмотреть значения в рублях"],
         ["/img/solutions/lavritech_thermal_curtain/20.png", "Или в процентах"],
         ["/img/solutions/lavritech_thermal_curtain/21.png", "Месяц с ощутимой экономией"]
     ]'
@@ -141,7 +141,7 @@ LoRaWAN применили для зон, где покрытие Wi-Fi недо
 ## Преимущества
 
 :photo{
-    src="/img/solutions/lavritech_thermal_curtain/22.jpeg"
+    src="/img/solutions/lavritech_thermal_curtain/22.jpg"
     caption="Коллаж на тему статьи"
     width="400"
     float="right"
