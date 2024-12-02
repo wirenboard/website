@@ -4,14 +4,21 @@ name: Wiren Board 8.4
 type: Контроллер для автоматизаци
 title: Модульный подход к возможностям и цене
 sub_title: Модульный программируемый контроллер для автоматизации и мониторинга с открытым ПО на базе Linux
-cover: 1.webp
+cover: img/catalog/controllers/wiren-board-8/1.webp
 documentation: https://wirenboard.com/wiki/Wiren_Board_8
 meta: Мощный универсальный свободно программируемый контроллер в промышленном исполнении
 keywords: контроллер для автоматизации, wiren board, диспетчеризация, PLC на Linux, ПЛК
-images:
-  - 1.webp
-video:
-  - https://peertube.wirenboard.com/w/bX7A9UTvBaNzx2Qm1pe7ms?start=1s
+images: [
+  ["img/catalog/controllers/wiren-board-8/1.webp"],
+  ["img/catalog/controllers/wiren-board-8/2.jpg"],
+  ["img/catalog/controllers/wiren-board-8/3.jpg"],
+  ["img/catalog/controllers/wiren-board-8/4.jpg"],
+  ["img/catalog/controllers/wiren-board-8/5.jpg"],
+  ["img/catalog/controllers/wiren-board-8/6.jpg"],
+]
+video: [
+  ["https://peertube.wirenboard.com/w/bX7A9UTvBaNzx2Qm1pe7ms?start=1s"]
+]
 ---
 
 ::product
@@ -25,9 +32,9 @@ Wiren Board 8 — это универсальный модульный конт�
 **В ревизии 8.4 в MOD1 можно установить только модули дискретных входов и выходов, MOD2 и MOD3 без ограничений, а MOD4 недоступен.**
 
 #info
-![](img/catalog/controllers/wiren-board-8/wide.png)
 
 ## Основные характеристики
+![](img/catalog/controllers/wiren-board-8/wide.png)
 
 ::product-section{title="Аппаратная часть и ПО"}
 :photo{

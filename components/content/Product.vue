@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import LinkIcon from '~/assets/icons/external-link.svg';
+import { hardwarePlaylist } from '~/common/links';
 import type { Product } from '~/common/types';
 import ContentGallery from '~/components/content/Gallery.vue';
 import ProductOptions from '~/components/content/ProductOptions.vue';
@@ -27,7 +28,7 @@ const product = await useApi<Product>(`/product/${data.value.article}/?locale=${
       </div>
 
       <div class="product-coverWrapper">
-        <NuxtImg :src="`${imageFolder}/${data.cover}`" class="product-cover" :alt="data.title" />
+        <NuxtImg :src="data.cover" class="product-cover" :alt="data.title" />
       </div>
     </div>
 
@@ -38,11 +39,11 @@ const product = await useApi<Product>(`/product/${data.value.article}/?locale=${
         simulate-touch
       >
         <swiper-slide class="product-navigationItem" @click="scrollToElementById('description')">{{ t('description') }}</swiper-slide>
+        <swiper-slide class="product-navigationItem" @click="scrollToElementById('useCases')" v-if="data?.use_cases?.length">{{ t('useCases') }}</swiper-slide>
+        <swiper-slide class="product-navigationItem" @click="scrollToElementById('video')" v-if="data?.video?.length">{{ t('video') }}</swiper-slide>
         <swiper-slide class="product-navigationItem" @click="scrollToElementById('gallery')" v-if="data?.images?.length">{{ t('images') }}</swiper-slide>
         <swiper-slide class="product-navigationItem" @click="scrollToElementById('options')" v-if="product?.options?.length">{{ t('options') }}</swiper-slide>
         <swiper-slide class="product-navigationItem" @click="scrollToElementById('components')" v-if="product?.components?.length">{{ t('components') }}</swiper-slide>
-        <swiper-slide class="product-navigationItem" @click="scrollToElementById('video')" v-if="data?.video?.length">{{ t('video') }}</swiper-slide>
-        <swiper-slide class="product-navigationItem" @click="scrollToElementById('useCases')" v-if="data?.use_cases?.length">{{ t('useCases') }}</swiper-slide>
         <swiper-slide class="product-navigationItem" v-if="data.documentation">
           <a :href="data.documentation" target="_blank">
             {{ t('documentation') }}
@@ -69,10 +70,10 @@ const product = await useApi<Product>(`/product/${data.value.article}/?locale=${
           {{ t('inStock') }} {{ toTriads(product?.items.available) }} {{ t('pcs') }}<span v-if="product?.items.inv_final_assembly">, {{ t('more') }} {{ toTriads(product.items.inv_final_assembly) }} {{ t('pcs') }} {{ t('scheduled') }} {{ t(product.items.schedule_unit) }}</span></div>
         <button
           :class="{
-            'product-orderButton': true,
-            'add-to-basket-set': (product?.options?.length || product?.components?.length),
-            'add-to-basket': !(product?.options?.length || product?.components?.length),
-          }"
+         'product-orderButton': true,
+         'add-to-basket-set': (product?.options?.length || product?.components?.length),
+         'add-to-basket': !(product?.options?.length || product?.components?.length),
+       }"
           :data-product_id="product?.id"
           data-count="1"
           type="button"
@@ -82,13 +83,24 @@ const product = await useApi<Product>(`/product/${data.value.article}/?locale=${
       </aside>
     </div>
 
+    <div class="product-section" id="useCases" v-if="data?.use_cases?.length">
+      <h2>{{ t('useCases') }}</h2>
+      <ProductSolutions :data="data?.use_cases" />
+    </div>
+
+    <div class="product-section" id="video" v-if="data?.video?.length">
+      <h2>{{ t('video') }}</h2>
+      <VideoGallery :data="data?.video" />
+      <div class="product-otherVideos">{{ t('otherVideos') }} <a :href="hardwarePlaylist">{{ t('videosLink') }}</a>.</div>
+    </div>
+
     <div class="product-section">
       <ContentSlot :use="$slots.info" unwrap="p" />
     </div>
 
     <div class="product-section" id="gallery" v-if="data?.images?.length">
       <h2>{{ t('images') }}</h2>
-      <ContentGallery :data="data?.images.map((image: string) => [`/${imageFolder}/${image}`])" />
+      <ContentGallery :data="data.images" withBorder />
     </div>
 
     <div class="product-section" id="options" v-if="product?.options?.length">
@@ -99,16 +111,6 @@ const product = await useApi<Product>(`/product/${data.value.article}/?locale=${
     <div class="product-section" id="components" v-if="product?.components?.length">
       <h2>{{ t('components') }}</h2>
       <ProductOptions :product-id="product.id" type="component" :options="product.components" />
-    </div>
-
-    <div class="product-section" id="video" v-if="data?.video?.length">
-      <h2>{{ t('video') }}</h2>
-      <VideoGallery :data="data?.video.map((video: string) => [video])" />
-    </div>
-
-    <div class="product-section" id="useCases" v-if="data?.use_cases?.length">
-      <h2>{{ t('useCases') }}</h2>
-      <ProductSolutions :data="data?.use_cases" />
     </div>
   </article>
 </template>
@@ -158,7 +160,8 @@ const product = await useApi<Product>(`/product/${data.value.article}/?locale=${
   display: grid;
   gap: 24px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  height: calc(100dvh - var(--nav-height) - var(--app-bar-height) - var(--nav-margin));
+  max-height: 600px;
+  height: 100%;
   align-items: center;
   width: 100%;
   margin-bottom: var(--nav-margin);
@@ -194,6 +197,7 @@ const product = await useApi<Product>(`/product/${data.value.article}/?locale=${
 
   @media (max-width: 768px) {
     font-size: 40px;
+    line-height: 40px;
   }
 }
 
@@ -208,7 +212,7 @@ const product = await useApi<Product>(`/product/${data.value.article}/?locale=${
   max-height: 560px;
 
   @media (max-width: 768px) {
-    max-height: none;
+    max-height: 400px;
   }
 }
 
@@ -363,6 +367,11 @@ const product = await useApi<Product>(`/product/${data.value.article}/?locale=${
   color: #fff;
   background: var(--primary-color);
 }
+
+.product-otherVideos {
+  font-size: 16px;
+  margin-top: 36px;
+}
 </style>
 
 <i18n>
@@ -389,7 +398,9 @@ const product = await useApi<Product>(`/product/${data.value.article}/?locale=${
     "inStock": "На складе",
     "pcs": "шт.",
     "more": "ещё",
-    "scheduled": "ожидается через 2—3"
+    "scheduled": "ожидается через 2—3",
+    "otherVideos": "Все ролики про оборудование можно",
+    "videosLink": "посмотреть здесь"
   },
   "en": {
     "days": "days",
@@ -413,7 +424,9 @@ const product = await useApi<Product>(`/product/${data.value.article}/?locale=${
     "inStock": "In stock",
     "pcs": "pcs",
     "more": "more",
-    "scheduled": "on order in"
+    "scheduled": "on order in",
+    "otherVideos": "Other hardware videos",
+    "videosLink": "here"
   }
 }
 </i18n>

@@ -4,26 +4,28 @@ name: WB-MSW v.4
 type: Настенный комбинированный датчик
 title: Настенный комбинированный датчик c RS-485, Modbus RTU
 sub_title: Температура, влажность, освещённость, шум, уровень CO2 и VOC, движение, ИК-передатчик.
-cover: 1.webp
+cover: img/catalog/sensors/wb-msw-v4/1.webp
 documentation: https://wirenboard.com/wiki/WB-MSW_v.4_Modbus_Sensor
 meta: Настенный комбинированный датчик c RS-485, Modbus RTU
 keywords: Настенный комбинированный датчик, Modbus RTUПЛК
-images:
-  - 1.webp
-  - 2.jpg
-  - 3.jpg
-  - 4.jpg
-  - 5.jpg
-  - 6.jpg
-  - 7.jpg
-  - 8.jpg
-  - 9.jpg
-  - 10.jpg
-  - 11.jpg
-video:
-  - https://peertube.wirenboard.com/videos/embed/0a424378-a514-446c-bfc7-6e9b7393080c
-  - https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2
-  - https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb9
+images: [
+  ["img/catalog/sensors/wb-msw-v4/1.webp"],
+  ["img/catalog/sensors/wb-msw-v4/2.jpg"],
+  ["img/catalog/sensors/wb-msw-v4/3.jpg"],
+  ["img/catalog/sensors/wb-msw-v4/4.jpg"],
+  ["img/catalog/sensors/wb-msw-v4/5.jpg"],
+  ["img/catalog/sensors/wb-msw-v4/6.jpg"],
+  ["img/catalog/sensors/wb-msw-v4/7.jpg"],
+  ["img/catalog/sensors/wb-msw-v4/8.jpg"],
+  ["img/catalog/sensors/wb-msw-v4/9.jpg"],
+  ["img/catalog/sensors/wb-msw-v4/10.jpg"],
+  ["img/catalog/sensors/wb-msw-v4/11.jpg"],
+]
+video: [
+  ["https://peertube.wirenboard.com/videos/embed/0a424378-a514-446c-bfc7-6e9b7393080c"],
+  ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
+  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb9"],
+]
 use_cases:
   - liten_magnit
   - techsensor_module_cafe
