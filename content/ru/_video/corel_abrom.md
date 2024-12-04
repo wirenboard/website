@@ -1,7 +1,7 @@
 ---
-title: Проектирование умного дома в Corel Draw | ABROM
-url: https://www.youtube.com/embed/videoseries?si=mjbN6oFoG5qXCDmr&list=PL65qywpig4-VPe5LBvRvdE59tlQbDpDvL
-date: 2024-03-01
+title: Проектирование умного дома в Corel Draw. Освещение и выключатели | ABROM
+url: https://rutube.ru/video/db1875e0d43debc01bb4e18118e4aea1/
+date: 2024-10-08
 cover: /img/video/corel_abrom.webp
 category: educational
 ---
