@@ -28,3 +28,31 @@ export interface District {
 export interface Districts {
   [locale: Locale]: District[];
 }
+
+interface ProductOption {
+  id: number;
+  name: string;
+  image: string;
+  description: string;
+}
+
+export interface Product {
+  locale: Locale;
+  id: number;
+  discontinued: number;
+  can_order: number;
+  price: number;
+  price_min?: number;
+  price_max?: number;
+  items: {
+    available: number;
+    scheduled: number;
+    schedule_unit: 'days' | 'weeks' | 'months';
+    inv_final_assembly: number;
+    inv_ready_to_assembly: number;
+    inv_scheduled: number;
+  },
+  options: ProductOption[];
+  components: ProductOption[];
+  use_cases: string[];
+}

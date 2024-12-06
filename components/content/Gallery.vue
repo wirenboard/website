@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Photo from './Photo.vue';
 
-const props = defineProps<{ data: [string, string, number][]; }>();
+const props = defineProps<{ data: [string, string, number][]; withBorder?: boolean; }>();
 const photos = ref();
 const openedPhoto = ref(null);
 
@@ -49,6 +49,7 @@ watch(openedPhoto, () => {
        :src="src"
        :caption="caption"
        :height="300"
+       :withBorder="withBorder"
        isGallery
        :key="i"
        @open-photo="(openedPhotoAttr) => openedPhoto = openedPhotoAttr"

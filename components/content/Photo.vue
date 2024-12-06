@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{ src: string; caption?: string; width?: number; isGallery?: boolean; float?: 'right' | 'left' | 'center'; }>();
+defineProps<{ src: string; caption?: string; width?: number; isGallery?: boolean; withBorder?: boolean; float?: 'right' | 'left' | 'center'; }>();
 
 const photo = ref();
 
@@ -12,7 +12,7 @@ defineEmits(['openPhoto']);
   <figure
     class="photo"
     :class="{
-      'photo-withCaption': caption,
+      'photo-withCaption': caption || withBorder,
       'photo-fromGallery': isGallery,
       'photo-floatRight': float === 'right',
       'photo-floatLeft': float === 'left',
