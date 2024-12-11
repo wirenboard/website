@@ -1,7 +1,7 @@
 ---
 title: СМИ, блоггерам и авторам статей
 ---
-
+## Сотрудничество
 Если вы пишете статьи, снимаете видео или хотите рассказать о решениях для автоматизации, мы готовы поддержать вас!
 
 Предлагаем:
@@ -14,5 +14,17 @@ title: СМИ, блоггерам и авторам статей
 
 Свяжитесь с нами, и мы вместе расскажем миру о решениях для автоматизации!
 
-**Почта для связи:** [info@wirenboard.com](mailto:info@wirenboard.com)
+**Почта для связи:** [media@wirenboard.com](mailto:media@wirenboard.com)
 
+## Примеры результов
+
+Вы сами выбираете формат итоговых материалов, это может быть новость, статья, видео, подкаст и другие форматы. Ниже пара свежих метариалов: обзоры оборудования и интервью.
+
+:video-gallery{
+    :data='[
+        ["https://youtu.be/WB4W5pIHoUc?si=dV2RiQfv-kcdj-Dw", "Проводной умный дом – СЛОЖНО?", "/img/pages/media-support/armenak.webp"],
+        ["https://youtu.be/cYqUwmnTryk?si=d4D_VU2csB-jrn9D", "Wiren Board 8. Большой обзор", "/img/pages/media-support/wb8-review.webp"],
+        ["https://youtu.be/lb4kKJM8UEY?si=mIWGoJ-vS7NCtLeW", "Как студенты МФТИ создали одного из лидеров проводного умного дома", "/img/pages/media-support/wb-history.webp"]
+
+    ]'
+}
