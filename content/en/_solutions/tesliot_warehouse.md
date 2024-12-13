@@ -16,7 +16,7 @@ _«Wiren Board equipment has proven to be a reliable and flexible platform for i
     float="right"
 }
 
-[TESLA SMART UZ](https://www.tesliot.com/en) is the Uzbek branch of the Russian company TESLA SMART, specializing in the development and production of wireless TESLiOT equipment for climate monitoring and access control systems. Their solutions are used in both mobile facilities — such as refrigerated trucks and containers within Fleet Management Systems (FMS) — and stationary facilities like food production sites, warehouses requiring specific temperature and humidity conditions, supermarkets, restaurants, server rooms, and data centers in IoT systems.
+[TESLA SMART UZ](https://www.tesliot.com/en) specializes in the development and production of wireless TESLiOT equipment for climate monitoring and access control systems. Their solutions are used in both mobile facilities — such as refrigerated trucks and containers within Fleet Management Systems (FMS) — and stationary facilities like food production sites, warehouses requiring specific temperature and humidity conditions, supermarkets, restaurants, server rooms, and data centers in IoT systems.
 
 The company's product range includes advanced Bluetooth 5.2-based solutions, such as base stations and sensors that offer high data exchange rates, extended communication range, energy efficiency, and reliability. Integrators deploy the company's products in industrial automation, logistics, and other fields that require precise monitoring of storage conditions and data processing.
 
