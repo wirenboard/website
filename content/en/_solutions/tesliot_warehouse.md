@@ -73,13 +73,13 @@ A [**Wiren Board controller**](https://wirenboard.com/en/catalog/kontrollery/) w
     float="right"
 }
 
-*Fast Implementation*: The system was installed and operational in just one working day.
+_Fast Implementation_: The system was installed and operational in just one working day.
 
-*Automation*: Manual entry of temperature logs was completely eliminated, increasing accuracy and ease of monitoring.
+_Automation_: Manual entry of temperature logs was completely eliminated, increasing accuracy and ease of monitoring.
 
-*Remote Monitoring*: The central office gained the ability to remotely monitor climate conditions in the regional warehouse.
+_Remote Monitoring_: The central office gained the ability to remotely monitor climate conditions in the regional warehouse.
 
-*Reliability and Durability*: Protected components and autonomous sensors ensure stable operation even in challenging freezer environments.
+_Reliability and Durability_: Protected components and autonomous sensors ensure stable operation even in challenging freezer environments.
 
 The system streamlined the monitoring of storage conditions, guaranteeing product safety—an essential factor for the distributor. After seven months of successful operation, the customer decided to equip approximately ten more BTA warehouses across all regional centers of Uzbekistan with the TESLiOT Long Range Edition system.
 
