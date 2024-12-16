@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { districts } from '~/common/districts';
+import type { District } from "~/common/types";
 import Select from '~/components/Select.vue';
 
 const { t, locale } = useI18n();
@@ -16,18 +17,29 @@ const mapCenter = computed(() => {
     : locale.value === 'ru' ? [53, 45] : [50, 52]
 });
 
-const query = reactive({ path: '/_integrators', where: [{
-    _locale: locale.value, district: { $contains: district.value }
-  }], sort: [{ title: 1 }, { priority: 1 }] });
+const query = reactive({
+  path: '/_integrators',
+  where: [
+    {
+      district: { $contains: district.value },
+      _locale: locale.value
+    }
+  ],
+  sort: [
+    { title: 1 },
+    { priority: 1 },
+  ]
+});
 
-const { data, refresh } = await useAsyncData('integrators', () => queryContent(query.path).where({ _locale: locale.value, district: { $contains: district.value } }).find());
+const { data, refresh } = await useAsyncData('integrators', () => queryContent(query.path).where({ _locale: locale.value }).find());
+const actualDistricts = ref();
 
-const filterChanged = () => {
-  query.where = [{
-    _locale: locale.value, district: { $contains: district.value }
-  }]
-  refresh();
-};
+watch(data, async (value) => {
+    const districtsInList = [...new Set(value?.map(item => item.district).flat())];
+    actualDistricts.value = districts[locale.value].filter((district) => districtsInList.includes(district.value));
+  },
+  { once: true, immediate: true }
+);
 
 const onChangeMapItems = (items: string[]) => {
   visibleItems.value = items;
@@ -38,18 +50,18 @@ const onChangeMapItems = (items: string[]) => {
   <Map
     :items="data"
     :center="mapCenter"
-    :zoom="district ? districts[locale].find(item => item.value === district)?.zoom as number : 4"
+    :zoom="district ? actualDistricts.find((item: District) => item.value === district)?.zoom as number : 4"
     @visibleItemsChange="onChangeMapItems"
   />
 
   <Select
     class="partners-filter"
     v-model="district"
-    :options="districts[locale]"
     optionLabel="label"
     optionValue="value"
+    :options="actualDistricts"
     :placeholder="t('chooseArea')"
-    :change-callback="filterChanged"
+    :change-callback="refresh"
   />
 
   <ContentList :query="query">
