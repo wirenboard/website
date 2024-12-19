@@ -6,7 +6,7 @@ type Title = string;
 type Cover = string;
 type Video = [Url, Title, Cover];
 
-const props = defineProps<{ data: Video[]; }>();
+defineProps<{ data: Video[]; }>();
 </script>
 
 <template>

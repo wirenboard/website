@@ -4,6 +4,11 @@ export default defineNuxtConfig({
   experimental: {
     payloadExtraction: false
   },
+  runtimeConfig: {
+    apiUrl: process.env.NUXT_API_URL,
+    login: process.env.NUXT_SITE_LOGIN,
+    password: process.env.NUXT_SITE_PASSWORD,
+  },
   devtools: { enabled: false },
   css: [
     '~/assets/css/variables.css',

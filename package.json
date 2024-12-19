@@ -18,6 +18,7 @@
     "github-slugger": "2.0.0",
     "nuxt": "3.12.2",
     "primevue": "4.0.0",
+    "swiper": "^11.1.15",
     "vue": "3.4.29",
     "vue-router": "4.3.3"
   },
