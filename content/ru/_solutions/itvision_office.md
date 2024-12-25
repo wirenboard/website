@@ -1,7 +1,7 @@
 ---
 title: 'Мониторинг инженерных систем офисных помещений'
 cover: /img/solutions/itvision_office.webp
-date: 2024-12-04
+date: 2024-12-25
 category: commercial_estate_monitoring
 ---
 
