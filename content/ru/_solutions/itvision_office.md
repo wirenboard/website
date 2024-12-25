@@ -1,5 +1,5 @@
 ---
-title: 'Установка беспроводной системы контроля микроклимата продовольственного склада за один день'
+title: 'Мониторинг инженерных систем офисных помещений'
 cover: /img/solutions/itvision_office.webp
 date: 2024-12-04
 category: commercial_estate_monitoring
