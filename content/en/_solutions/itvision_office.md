@@ -1,6 +1,6 @@
 ---
 title: 'Monitoring of Office Engineering Systems'
-cover: /img/solutions/itvision_office_en.webp
+cover: /img/solutions/en/itvision_office.webp
 date: 2025-01-04
 category: commercial_estate_monitoring
 ---
@@ -28,10 +28,10 @@ This project marked a turning point for IT Vision. Vladimir became convinced of 
 
 :gallery{
     :data='[
-        ["/img/solutions/itvision_office_en/2.jpeg", "Floor plan showing office spaces"],
-        ["/img/solutions/itvision_office_en/3.jpeg", "Floor-level leak detection panel"],
-        ["/img/solutions/itvision_office_en/4.jpeg", "Panel with WB-MAP3E power meters"],
-        ["/img/solutions/itvision_office_en/5.png", "Load monitoring on the input cables"]
+        ["/img/solutions/en/itvision_office/2.jpeg", "Floor plan showing office spaces"],
+        ["/img/solutions/en/itvision_office/3.jpeg", "Floor-level leak detection panel"],
+        ["/img/solutions/en/itvision_office/4.jpeg", "Panel with WB-MAP3E power meters"],
+        ["/img/solutions/en/itvision_office/5.png", "Load monitoring on the input cables"]
     ]'
 }
 
@@ -50,10 +50,10 @@ The project also faced construction challenges. Transoms at a height of 2.3 mete
 
 :gallery{
     :data='[
-        ["/img/solutions/itvision_office_en/6.png", "Monitoring power consumption on input cables"],
-        ["/img/solutions/itvision_office_en/7.png", "Cumulative power consumption graph"],
-        ["/img/solutions/itvision_office_en/8.png", "Power consumption graphs by input lines"],
-        ["/img/solutions/itvision_office_en/9.png", "Turkov ventilation system widget"]
+        ["/img/solutions/en/itvision_office/6.png", "Monitoring power consumption on input cables"],
+        ["/img/solutions/en/itvision_office/7.png", "Cumulative power consumption graph"],
+        ["/img/solutions/en/itvision_office/8.png", "Power consumption graphs by input lines"],
+        ["/img/solutions/en/itvision_office/9.png", "Turkov ventilation system widget"]
     ]'
 }
 
@@ -77,10 +77,10 @@ Wiren Board Cloud proved invaluable, enabling integrators to connect to the cont
 
 :gallery{
     :data='[
-        ["/img/solutions/itvision_office_en/10.jpeg", "Server room panel for air conditioner rotation"],
-        ["/img/solutions/itvision_office_en/11.jpeg", "IR control unit (BRKV)"],
-        ["/img/solutions/itvision_office_en/12.png", "Air conditioner rotation management"],
-        ["/img/solutions/itvision_office_en/13.png", "Alerts via Telegram bot"]
+        ["/img/solutions/en/itvision_office/10.jpeg", "Server room panel for air conditioner rotation"],
+        ["/img/solutions/en/itvision_office/11.jpeg", "IR control unit (BRKV)"],
+        ["/img/solutions/en/itvision_office/12.png", "Air conditioner rotation management"],
+        ["/img/solutions/en/itvision_office/13.png", "Alerts via Telegram bot"]
     ]'
 }
 
@@ -97,7 +97,7 @@ Additionally, the integrator tested the connection of a Turkov air handling unit
 ## Advantages
 
 :photo{
-    src="/img/solutions/itvision_office_en/14.jpg"
+    src="/img/solutions/en/itvision_office/14.png"
     caption="Air conditioner operation can be monitored based on power consumption"
     width="400"
     float="right"
@@ -112,8 +112,6 @@ The Wiren Board controller demonstrated exceptional reliability, scalability, an
 Wiren Board designs and provides a wide range of devices for automation and dispatching, from programmable controllers and climate sensors to energy meters, refrigerator network cards, and relay modules. These devices are built to fit customer needs, integrate easily with existing systems, and allow for future upgrades.
 
 The company provides a two-year warranty on all equipment, offering replacement without the need for prior dispatch to a service center. Their technical support engineers are readily available to assist with both standard and unique challenges.
-
-## Additional Materials
 
 
 
