@@ -10,7 +10,7 @@ _«Wiren Board is more than just hardware; it is a comprehensive platform that c
 ## About the Company
 
 :photo{
-    src="/img/solutions/itvision_office_en/1.jpeg"
+    src="/img/solutions/en/itvision_office/1.jpeg"
     caption="Current transformers on the input cable"
     width="400"
     float="right"
