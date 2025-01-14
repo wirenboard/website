@@ -10,7 +10,7 @@ useContentHead({
   ...data.value,
   head: {
     meta: [
-      { name: 'wb-bc', content: `/${locale.value}/contents/solutions|Примеры внедрений` },
+      { name: 'wb-bc', content: `/${locale.value}/contents/solutions|${t('title')}` },
     ]
   }
 });
@@ -72,11 +72,13 @@ useContentHead({
 <i18n>
 {
   "ru": {
+    "title": "Примеры внедрений",
     "team": "Команда Wiren Board",
     "notFoundTitle": "Страница не найдена (#404)",
     "notFoundDescription": "Что-то пошло не так"
   },
   "en": {
+    "title": "Solutions",
     "team": "Wiren Board team",
     "notFoundTitle": "Page not found (#404)",
     "notFoundDescription": "Something went wrong"

@@ -5,6 +5,7 @@ import type { Article as ArticleParams } from '~/common/types';
 
 const props = defineProps<ArticleParams>();
 const route = useRoute();
+const { locale } = useI18n();
 const to = props.url || `${route.path}${route.path.at(-1) === '/' ? '' : '/'}${props._path?.split('/').at(-1)}`;
 </script>
 
@@ -18,7 +19,9 @@ const to = props.url || `${route.path}${route.path.at(-1) === '/' ? '' : '/'}${p
     />
     <div>
       <h4 class="article-title">{{ title }}</h4>
-      <time :datetime="date" class="article-date">{{ dayjs(date).locale('ru').format('D MMMM YYYY') }}</time>
+      <time :datetime="date" class="article-date">
+        {{ locale === 'ru' ? dayjs(date).locale('en').format('D MMMM YYYY') : dayjs(date).format('MMM D, YYYY') }}
+      </time>
     </div>
   </a>
 </template>
