@@ -24,8 +24,8 @@ Egor first encountered Wiren Board equipment while working as an installer on sm
 
 :gallery{
     :data='[
-        ["/img/solutions/en/almaty_egrid/2.jpeg", "Apartment building in Almaty, home to Alexander's apartment"],
-        ["/img/solutions/en/almaty_egrid/3.jpeg", "Spacious children's room. The owner has two daughters; their beds will be on the upper tier"],
+        ["/img/solutions/en/almaty_egrid/2.jpeg", "Apartment building in Almaty, home to Alexander&apos;s apartment"],
+        ["/img/solutions/en/almaty_egrid/3.jpeg", "Spacious children&apos;s room. The owner has two daughters; their beds will be on the upper tier"],
         ["/img/solutions/en/almaty_egrid/4.jpeg", "Walk-in closet with a central island. Can you spot the WB-MSW universal sensor?"],
         ["/img/solutions/en/almaty_egrid/5.jpeg", "The walk-in closet connects to the master bedroom"]
     ]'
@@ -166,8 +166,8 @@ Motion sensors are essential in a smart home, especially in high-traffic areas. 
 :gallery{
     :data='[
         ["/img/solutions/en/almaty_egrid/26.jpeg", "Curtain drives in the living room"],
-        ["/img/solutions/en/almaty_egrid/27.jpeg", "View from the children's room to the balcony"],
-        ["/img/solutions/en/almaty_egrid/28.jpeg", "Curtains drawn in the children's room, with a light fixture on the right"],
+        ["/img/solutions/en/almaty_egrid/27.jpeg", "View from the children&apos;s room to the balcony"],
+        ["/img/solutions/en/almaty_egrid/28.jpeg", "Curtains drawn in the children&apos;s room, with a light fixture on the right"],
         ["/img/solutions/en/almaty_egrid/29.jpeg", "Two ventilation maintenance hatches, a camera, spotlights, and an access point"]
     ]'
 }
