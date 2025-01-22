@@ -7,38 +7,37 @@ const openedPhoto = ref(null);
 
 const numberOfColumns = computed(() => props.data.length >= 5 ? 5 : props.data.length);
 
+ const susbscribeKeyPress = debounce(function({ keyCode }) {
+    if (!openedPhoto.value) {
+       return;
+    }
+    const currentPhoto = photos.value?.find((item: any) => item.photo.$attrSelector === openedPhoto.value);
+    const openPhotoByIndex = (index: number) => {
+       photos.value[index].photo.$el.querySelector('button').click();
+    };
+
+    const LEFT_ARROW = 37;
+    const RIGHT_ARROW = 39;
+    if (keyCode === LEFT_ARROW) {
+       const index = photos.value.indexOf(currentPhoto) === 0 ? photos.value.length - 1 : photos.value.indexOf(currentPhoto) - 1;
+       currentPhoto?.photo.hidePreview();
+       openPhotoByIndex(index);
+    }
+
+    if (keyCode === RIGHT_ARROW) {
+       const index = photos.value.indexOf(currentPhoto) === photos.value.length - 1 ? 0 : photos.value.indexOf(currentPhoto) + 1;
+       currentPhoto?.photo.hidePreview();
+       openPhotoByIndex(index);
+    }
+ }, 500, true);
+
 watch(openedPhoto, () => {
-   const susbscribeKeyPress = debounce(function({ keyCode }) {
-      if (!openedPhoto.value) {
-         return;
-      }
-      const currentPhoto = photos.value?.find((item: any) => item.photo.$attrSelector === openedPhoto.value);
-      const openPhotoByIndex = (index: number) => {
-         photos.value[index].photo.$el.querySelector('button').click();
-      };
-
-      const LEFT_ARROW = 37;
-      const RIGHT_ARROW = 39;
-      if (keyCode === LEFT_ARROW) {
-         const index = photos.value.indexOf(currentPhoto) === 0 ? photos.value.length - 1 : photos.value.indexOf(currentPhoto) - 1;
-         currentPhoto?.photo.hidePreview();
-         openPhotoByIndex(index);
-      }
-
-      if (keyCode === RIGHT_ARROW) {
-         const index = photos.value.indexOf(currentPhoto) === photos.value.length - 1 ? 0 : photos.value.indexOf(currentPhoto) + 1;
-         currentPhoto?.photo.hidePreview();
-         openPhotoByIndex(index);
-      }
-   }, 500, true);
-
    if (openedPhoto.value) {
       document.addEventListener('keyup', susbscribeKeyPress, false);
    } else {
       document.removeEventListener('keyup', susbscribeKeyPress, false);
    }
-})
-
+});
 </script>
 
 <template>
@@ -53,6 +52,7 @@ watch(openedPhoto, () => {
        isGallery
        :key="i"
        @open-photo="(openedPhotoAttr) => openedPhoto = openedPhotoAttr"
+       @open-other-photo="(keyCode) => susbscribeKeyPress({ keyCode })"
     />
   </div>
 </template>
@@ -69,5 +69,10 @@ watch(openedPhoto, () => {
   @media (max-width: 700px) {
     grid-template-columns: 1fr;
   }
+}
+
+body:has(div[role="dialog"]) {
+  overflow: hidden !important;
+  scrollbar-gutter: stable;
 }
 </style>
