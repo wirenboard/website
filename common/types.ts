@@ -56,3 +56,8 @@ export interface Product {
   components: ProductOption[];
   use_cases: string[];
 }
+
+type Url = string;
+type Title = string;
+type Cover = string;
+export type Video = [Url, Title, Cover];
