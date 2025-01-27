@@ -9,6 +9,10 @@ const photo = ref();
 defineExpose({ photo });
 
 defineEmits(['openPhoto', 'openOtherPhoto']);
+enum Directions {
+  Previous = 37,
+  Next = 39,
+}
 </script>
 
 <template>
@@ -47,7 +51,7 @@ defineEmits(['openPhoto', 'openOtherPhoto']);
         />
       </template>
       <template #preview="slotProps">
-        <button v-if="isGallery" class="photo-button photo-button-previous" @click="$emit('openOtherPhoto', 37)">
+        <button v-if="isGallery" class="photo-button photo-button-previous" @click="$emit('openOtherPhoto', Directions.Previous)">
           <ArrowLeft />
         </button>
         <NuxtImg
@@ -58,7 +62,7 @@ defineEmits(['openPhoto', 'openOtherPhoto']);
           :style="slotProps.style"
           @click="slotProps.onClick"
         />
-        <button v-if="isGallery" class="photo-button photo-button-next" @click="$emit('openOtherPhoto', 39)">
+        <button v-if="isGallery" class="photo-button photo-button-next" @click="$emit('openOtherPhoto', Directions.Next)">
           <ArrowRight />
         </button>
       </template>
