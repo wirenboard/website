@@ -43,8 +43,8 @@ _Антон Степанов, генеральный директор ООО "Ф
 
 :gallery{
     :data='[
-        ["/img/solutions/ferron_236/06.jpg", "Щит автоматики котельной"],
-        ["/img/solutions/ferron_236/07.jpg"]
+        ["/img/solutions/ferron_236/06.jpg", "Щит автоматики котельной снаружи"],
+        ["/img/solutions/ferron_236/07.jpg", "и внутри"]
     ]'
 }
 
