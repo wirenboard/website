@@ -30,11 +30,14 @@ defineEmits(['openPhoto']);
       @hide="$emit('openPhoto', null)"
     >
       <template #image>
-        <NuxtImg
+        <NuxtPicture
           :src="src"
           :alt="caption"
           data-pc-section="image"
           densities="x1"
+          preset="preview"
+          :width="width"
+          sizes="md:100vw"
           :class="{
             'photo-imageWithCaption': caption,
             'photo-imageFromGallery': isGallery,
@@ -44,10 +47,12 @@ defineEmits(['openPhoto']);
         />
       </template>
       <template #preview="slotProps">
-        <NuxtImg
+        <NuxtPicture
           :src="src"
           :alt="caption"
           data-pc-section="original"
+          preset="original"
+          sizes="xl:90vw"
           densities="x1"
           :style="slotProps.style"
           @click="slotProps.onClick"
@@ -122,6 +127,9 @@ defineEmits(['openPhoto']);
 .photo-image {
   margin: 0 auto;
   max-width: 100%;
+}
+
+.photo-image img {
   min-height: 100px;
   max-height: 50vh;
 }
