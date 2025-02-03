@@ -48,10 +48,13 @@ const to = props.url || `${route.path}${route.path.at(-1) === '/' ? '' : '/'}${p
   object-fit: cover;
   border: 1px solid var(--gray-color);
   min-height: 125px;
+  flex-shrink: 0;
 
   @media (min-width: 400px) and (max-width: 940px) {
-    width: 220px;
-    height: auto;
+    width: 100%;
+    max-width: 220px;
+    height: 100%;
+    max-height: 126px;
   }
 
   @media (max-width: 460px) {

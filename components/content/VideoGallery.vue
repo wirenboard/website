@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import VideoPlayer from './VideoPlayer.vue';
-
-type Url = string;
-type Title = string;
-type Cover = string;
-type Video = [Url, Title, Cover];
+import type { Video } from '~/common/types';
 
 defineProps<{ data: Video[]; }>();
 </script>
