@@ -43,6 +43,31 @@ export default defineNuxtConfig({
       ]
     }
   },
+  image: {
+    format: ['webp'],
+    screens: {
+      'xs': 320,
+      'md': 768,
+      'lg': 1024,
+      'xl': 1280,
+    },
+    presets: {
+      preview: {
+        modifiers: {
+          width: 800,
+          quality: 70,
+          format: 'webp',
+        }
+      },
+      original: {
+        modifiers: {
+          width: 1280,
+          quality: 90,
+          format: 'webp',
+        }
+      }
+    }
+  },
   primevue: {
     options: {
       unstyled: true
