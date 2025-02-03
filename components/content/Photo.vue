@@ -1,11 +1,18 @@
 <script setup lang="ts">
+import ArrowRight from '~/assets/icons/arrow-next.svg';
+import ArrowLeft from '~/assets/icons/arrow-previous.svg';
+
 defineProps<{ src: string; caption?: string; width?: number; isGallery?: boolean; withBorder?: boolean; float?: 'right' | 'left' | 'center'; }>();
 
 const photo = ref();
 
 defineExpose({ photo });
 
-defineEmits(['openPhoto']);
+defineEmits(['openPhoto', 'openOtherPhoto']);
+enum Directions {
+  Previous = 37,
+  Next = 39,
+}
 </script>
 
 <template>
@@ -33,30 +40,36 @@ defineEmits(['openPhoto']);
         <NuxtPicture
           :src="src"
           :alt="caption"
-          data-pc-section="image"
           densities="x1"
           preset="preview"
-          :width="width"
           sizes="md:100vw"
-          :class="{
-            'photo-imageWithCaption': caption,
-            'photo-imageFromGallery': isGallery,
-            'photo-image': true,
+          :img-attrs="{
+            width,
+            class: `photo-image ${isGallery ? 'photo-imageFromGall1ery' : ''} ${caption ? 'photo-imageWithCaption' : ''}`,
+            'data-pc-section': 'image',
           }"
           loading="lazy"
         />
       </template>
       <template #preview="slotProps">
+        <button v-if="isGallery" class="photo-button photo-button-previous" @click="$emit('openOtherPhoto', Directions.Previous)">
+          <ArrowLeft />
+        </button>
         <NuxtPicture
           :src="src"
           :alt="caption"
-          data-pc-section="original"
+          :img-attrs="{
+            'data-pc-section': 'original'
+          }"
           preset="original"
           sizes="xl:90vw"
           densities="x1"
           :style="slotProps.style"
           @click="slotProps.onClick"
         />
+        <button v-if="isGallery" class="photo-button photo-button-next" @click="$emit('openOtherPhoto', Directions.Next)">
+          <ArrowRight />
+        </button>
       </template>
     </Image>
 
@@ -74,6 +87,7 @@ defineEmits(['openPhoto']);
   flex-direction: column;
   gap: 6px;
   width: fit-content;
+  min-height: 100px;
 }
 
 .photo-fromGallery {
@@ -117,6 +131,7 @@ defineEmits(['openPhoto']);
   border-bottom: 0;
   border-radius: 6px 6px 0 0;
   padding: 6px;
+  height: fit-content;
 }
 
 .photo-fromGallery.photo-withCaption {
@@ -127,6 +142,7 @@ defineEmits(['openPhoto']);
 .photo-image {
   margin: 0 auto;
   max-width: 100%;
+  height: fit-content;
 }
 
 .photo-image img {
@@ -220,7 +236,7 @@ defineEmits(['openPhoto']);
   left: auto;
   bottom: auto;
   display: flex;
-  z-index: 1;
+  z-index: 2;
   padding: .5rem;
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(8px);
@@ -266,7 +282,36 @@ defineEmits(['openPhoto']);
 
 img[data-pc-section="original"] {
   transition: transform 0.15s;
-  max-width: 100vw;
-  max-height: 100vh;
+  max-width: calc(100vw - 120px);
+  max-height: calc(100vh - 50px);
+}
+
+.photo-button {
+  position: fixed;
+  top: 0;
+  appearance: none;
+  border: 0;
+  height: 100%;
+  width: 60px;
+  z-index: 1;
+  cursor: pointer;
+  background: transparent;
+  font-size: 24px;
+}
+
+.photo-button:hover {
+  background: rgba(1,1,1,0.5);
+}
+
+.photo-button .nuxt-icon--fill * {
+  fill: none;
+}
+
+.photo-button-previous {
+  left: 0;
+}
+
+.photo-button-next {
+  right: 0;
 }
 </style>
