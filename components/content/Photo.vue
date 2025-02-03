@@ -40,15 +40,13 @@ enum Directions {
         <NuxtPicture
           :src="src"
           :alt="caption"
-          data-pc-section="image"
           densities="x1"
           preset="preview"
-          :width="width"
           sizes="md:100vw"
-          :class="{
-            'photo-imageWithCaption': caption,
-            'photo-imageFromGallery': isGallery,
-            'photo-image': true,
+          :img-attrs="{
+            width,
+            class: `photo-image ${isGallery ? 'photo-imageFromGall1ery' : ''} ${caption ? 'photo-imageWithCaption' : ''}`,
+            'data-pc-section': 'image',
           }"
           loading="lazy"
         />
@@ -60,7 +58,9 @@ enum Directions {
         <NuxtPicture
           :src="src"
           :alt="caption"
-          data-pc-section="original"
+          :img-attrs="{
+            'data-pc-section': 'original'
+          }"
           preset="original"
           sizes="xl:90vw"
           densities="x1"
@@ -87,6 +87,7 @@ enum Directions {
   flex-direction: column;
   gap: 6px;
   width: fit-content;
+  min-height: 100px;
 }
 
 .photo-fromGallery {
@@ -130,6 +131,7 @@ enum Directions {
   border-bottom: 0;
   border-radius: 6px 6px 0 0;
   padding: 6px;
+  height: fit-content;
 }
 
 .photo-fromGallery.photo-withCaption {
@@ -140,6 +142,7 @@ enum Directions {
 .photo-image {
   margin: 0 auto;
   max-width: 100%;
+  height: fit-content;
 }
 
 .photo-image img {
@@ -280,7 +283,7 @@ enum Directions {
 img[data-pc-section="original"] {
   transition: transform 0.15s;
   max-width: calc(100vw - 120px);
-  max-height: 100vh;
+  max-height: calc(100vh - 50px);
 }
 
 .photo-button {
