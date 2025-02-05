@@ -71,7 +71,7 @@ watch(openedPhoto, () => {
   }
 }
 
-body:has(div[role="dialog"]) {
+body:has(div[role="dialog"][data-pc-section="mask"]) {
   overflow: hidden !important;
   scrollbar-gutter: stable;
 }
