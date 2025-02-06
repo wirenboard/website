@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Select from 'primevue/select';
 
-defineProps<{ options: any[]; optionLabel: string; optionValue: string; placeholder: string; changeCallback: () => void; }>();
+defineProps<{ options: any[]; optionLabel: string; optionValue: string; placeholder: string; changeCallback?: () => void; }>();
 
 const model = defineModel();
 </script>

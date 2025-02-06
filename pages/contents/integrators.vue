@@ -1,10 +1,11 @@
 <script lang="ts" setup>
 import { districts } from '~/common/districts';
-import type { District } from "~/common/types";
+import { tags } from '~/common/integrator_tags';
 import Select from '~/components/Select.vue';
 
 const { t, locale } = useI18n();
 const district = ref();
+const tag = ref();
 const visibleItems = ref<string[]>([]);
 
 useHead({
@@ -22,6 +23,7 @@ const query = reactive({
   where: [
     {
       district: { $contains: district.value },
+      tags: { $contains: tag.value },
       _locale: locale.value
     }
   ],
@@ -31,15 +33,18 @@ const query = reactive({
   ]
 });
 
-const { data, refresh } = await useAsyncData('integrators', () => queryContent(query.path).where({ _locale: locale.value }).find());
-const actualDistricts = ref();
+const { data, refresh } = await useAsyncData('integrators', () => queryContent(query.path).where(query.where[0]).find());
+const { data: allData } = await useAsyncData('all_integrators', () => queryContent(query.path).where({ _locale: locale.value }).find());
 
-watch(data, async (value) => {
-    const districtsInList = [...new Set(value?.map(item => item.district).flat())];
-    actualDistricts.value = districts[locale.value].filter((district) => districtsInList.includes(district.value));
-  },
-  { once: true, immediate: true }
-);
+const actualDistricts = computed(() => {
+  const districtsInList = [...new Set(data.value?.map((item) => item.district).flat())];
+  return districts[locale.value].filter((district) => districtsInList.includes(district.value));
+});
+
+const actualTags = computed(() => {
+  const tagsInList = [...new Set(allData.value?.map((item) => item.tags).flat())];
+  return tags[locale.value].filter((tag) => tagsInList.includes(tag.name));
+});
 
 const onChangeMapItems = (items: string[]) => {
   visibleItems.value = items;
@@ -50,7 +55,7 @@ const onChangeMapItems = (items: string[]) => {
   <Map
     :items="data"
     :center="mapCenter"
-    :zoom="district ? actualDistricts.find((item: District) => item.value === district)?.zoom as number : 4"
+    :zoom="district ? actualDistricts.find((item) => item.value === district)?.zoom as number : 4"
     @visibleItemsChange="onChangeMapItems"
   />
 
@@ -64,9 +69,20 @@ const onChangeMapItems = (items: string[]) => {
     :change-callback="refresh"
   />
 
-  <ContentList :query="query">
-    <template #default="{ list }">
-      <div class="partners">
+  <Select
+    v-if="!!actualTags.length"
+    class="partners-filter"
+    v-model="query.where[0].tags.$contains"
+    optionLabel="label"
+    optionValue="name"
+    :options="actualTags"
+    :placeholder="t('tags')"
+    :change-callback="refresh"
+  />
+
+  <div class="partners">
+    <ContentList :query="query">
+      <template #default="{ list }">
         <template v-for="(partner, i) in list.filter(item => visibleItems.includes(item._id))" :key="partner._path">
           <Partner v-bind="partner as any">
             <ContentRendererMarkdown :value="partner" />
@@ -77,9 +93,14 @@ const onChangeMapItems = (items: string[]) => {
         <div v-if="!list.filter(item => visibleItems.includes(item._id)).length">
           {{ t('empty') }}
         </div>
-      </div>
-    </template>
-  </ContentList>
+      </template>
+      <template #not-found>
+        <div>
+          {{ t('empty') }}
+        </div>
+      </template>
+    </ContentList>
+  </div>
 </template>
 
 <style>
@@ -87,6 +108,7 @@ const onChangeMapItems = (items: string[]) => {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  margin-top: 12px;
 }
 
 .partners-separator {
@@ -94,7 +116,8 @@ const onChangeMapItems = (items: string[]) => {
 }
 
 .partners-filter {
-  margin: 12px 0;
+  margin: 16px 12px 0 0;
+  min-width: 230px;
 }
 </style>
 
@@ -102,12 +125,14 @@ const onChangeMapItems = (items: string[]) => {
 {
   "ru": {
     "title": "Компании-интеграторы — Wiren Board",
-    "chooseArea": "Выберите регион",
+    "chooseArea": "Регион",
+    "tags": "Профиль организации",
     "empty": "В данной области пока нет компаний-интеграторов"
   },
   "en": {
     "title": "Integrators — Wiren Board",
-    "chooseArea": "Select a region",
+    "chooseArea": "Region",
+    "tags": "Category",
     "empty": "There are no integrators in this area yet"
   }
 }
