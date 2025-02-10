@@ -5,7 +5,7 @@ import EarthIcon from '~/assets/icons/earth.svg';
 import MailIcon from '~/assets/icons/mail.svg';
 import { districts } from '~/common/districts';
 
-defineProps<{ title: string; logo: string; phone?: number; website?: string; email?: string; note?: string; district: string[]; }>();
+defineProps<{ title: string; logo: string; phone?: number | number[]; website?: string; email?: string; note?: string; district: string[]; }>();
 
 const { locale } = useI18n();
 
@@ -75,7 +75,7 @@ const formatPhoneNumber = (phone: number) => {
 .partner-logo {
   display: block;
   margin-bottom: 12px;
-  max-height: 50px;
+  max-height: 70px;
   max-width: 100%;
 }
 

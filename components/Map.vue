@@ -135,4 +135,8 @@ const onMapMove = (ev: any) => {
   border: none;
   color: #5cb300;
 }
+
+.leaflet-control-zoom a:hover {
+  text-decoration: none;
+}
 </style>
