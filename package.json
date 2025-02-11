@@ -17,6 +17,7 @@
     "dayjs": "1.11.11",
     "github-slugger": "2.0.0",
     "nuxt": "3.12.2",
+    "nuxt-content-assets": "^1.4.4",
     "primevue": "4.0.0",
     "swiper": "^11.1.15",
     "vue": "3.4.29",
