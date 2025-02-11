@@ -20,7 +20,7 @@ const to = props.url || `${route.path}${route.path.at(-1) === '/' ? '' : '/'}${p
     <div>
       <h4 class="article-title">{{ title }}</h4>
       <time :datetime="date" class="article-date">
-        {{ locale === 'ru' ? dayjs(date).locale('en').format('D MMMM YYYY') : dayjs(date).format('MMM D, YYYY') }}
+        {{ locale === 'ru' ? dayjs(date).locale('ru').format('D MMMM YYYY') : dayjs(date).format('MMM D, YYYY') }}
       </time>
     </div>
   </a>
