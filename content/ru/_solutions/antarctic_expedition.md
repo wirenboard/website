@@ -24,10 +24,10 @@ _«Wiren Board 8 отвечал за всю автоматизацию жилы�
 
 :gallery{
     :data='[
-        ["/img/solutions/antarctic_expedition/1.jpg", "Жилой модуль и солнечные батареи"],
-        ["/img/solutions/antarctic_expedition/2.jpg", "Сбор участников экспедиции в жилом модуле"],
-        ["/img/solutions/antarctic_expedition/6.jpg", "Участники экспедиции завтракают"],
-        ["/img/solutions/antarctic_expedition/8.jpg", "Жилой модуль и солнечные батареи"]
+        ["/img/solutions/antarctic_expedition/1.JPG", "Жилой модуль и солнечные батареи"],
+        ["/img/solutions/antarctic_expedition/2.JPG", "Сбор участников экспедиции в жилом модуле"],
+        ["/img/solutions/antarctic_expedition/6.JPG", "Участники экспедиции завтракают"],
+        ["/img/solutions/antarctic_expedition/8.JPG", "Жилой модуль и солнечные батареи"]
     ]'
 }
 
@@ -43,10 +43,10 @@ _«Wiren Board 8 отвечал за всю автоматизацию жилы�
 
 :gallery{
     :data='[
-        ["/img/solutions/antarctic_expedition/3.jpg", "Красивая природа Антарктиды"],
-        ["/img/solutions/antarctic_expedition/4.jpg", "Красивая природа Антарктиды"],
-        ["/img/solutions/antarctic_expedition/5.jpg", "Красивая природа Антарктиды"],
-        ["/img/solutions/antarctic_expedition/7.jpg", "Красивая природа Антарктиды"]
+        ["/img/solutions/antarctic_expedition/3.JPG", "Красивая природа Антарктиды"],
+        ["/img/solutions/antarctic_expedition/4.JPG", "Красивая природа Антарктиды"],
+        ["/img/solutions/antarctic_expedition/5.JPG", "Красивая природа Антарктиды"],
+        ["/img/solutions/antarctic_expedition/7.JPG", "Красивая природа Антарктиды"]
     ]'
 }
 
