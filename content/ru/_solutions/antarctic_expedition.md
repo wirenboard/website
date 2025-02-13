@@ -62,8 +62,8 @@ _«Wiren Board 8 отвечал за всю автоматизацию жилы�
 
 :gallery{
     :data='[
-        ["/img/solutions/antarctic_expedition/9.jpg", "Красивая природа Антарктиды"],
-        ["/img/solutions/antarctic_expedition/10.jpg", "Ледяная пещера"],
+        ["/img/solutions/antarctic_expedition/9.jpg", "Ледяная пещера"],
+        ["/img/solutions/antarctic_expedition/10.jpg", "Участники антарктической экспедиции"],
         ["/img/solutions/antarctic_expedition/14.jpg", "Участники экспедиции фотографируют чайку"],
         ["/img/solutions/antarctic_expedition/12.jpg", "Щит с оборудованием Wiren Board в интерьере модуля"]
     ]'
