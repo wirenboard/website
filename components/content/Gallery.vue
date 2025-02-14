@@ -5,7 +5,7 @@ const props = defineProps<{ data: [string, string, number][]; withBorder?: boole
 const photos = ref();
 const openedPhoto = ref(null);
 
-const numberOfColumns = computed(() => props.data.length >= 5 ? 5 : props.data.length);
+const numberOfGalleryColumns = computed(() => props.data.length >= 5 ? 5 : props.data.length);
 
  const susbscribeKeyPress = debounce(function({ keyCode }) {
     if (!openedPhoto.value) {
@@ -57,13 +57,13 @@ watch(openedPhoto, () => {
   </div>
 </template>
 
-<style>
+<style scoped>
 .gallery {
   gap: 0 12px;
   max-width: 100%;
   clear: both;
   display: grid;
-  grid-template-columns: repeat(v-bind('numberOfColumns'), 1fr);
+  grid-template-columns: repeat(v-bind('numberOfGalleryColumns'), 1fr);
   width: fit-content;
 
   @media (max-width: 700px) {
