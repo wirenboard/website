@@ -41,11 +41,14 @@ enum Directions {
           :src="src"
           :alt="caption"
           densities="x1"
+          :class="{
+            'photo-imageFromGallery': isGallery
+          }"
           preset="preview"
           sizes="md:100vw"
           :img-attrs="{
             width,
-            class: `photo-image ${isGallery ? 'photo-imageFromGall1ery' : ''} ${caption ? 'photo-imageWithCaption' : ''}`,
+            class: `photo-image ${isGallery ? 'photo-imageFromGallery' : ''} ${caption ? 'photo-imageWithCaption' : ''}`,
             'data-pc-section': 'image',
           }"
           loading="lazy"
@@ -95,7 +98,7 @@ enum Directions {
 }
 
 .photo-imageFromGallery {
-  height: 250px;
+  height: 250px !important;
   width: 100%;
   object-fit: cover;
   object-position: center;
