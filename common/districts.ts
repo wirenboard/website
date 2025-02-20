@@ -16,6 +16,6 @@ export const districts: Districts = {
     { value: 'by', label: 'Republic of Belarus', coordinates: [53.95, 27.65], zoom: 12 },
     { value: 'kz', label: 'Kazakhstan', coordinates: [43.24, 76.88], zoom: 10 },
     { value: 'kg', label: 'Republic of Kyrgyzstan', coordinates: [42.90, 74.5], zoom: 10 },
-    { value: 'uz', label: 'Republic of Uzbekistan', coordinates: [41.31, 69.26], zoom: 10 },
+    { value: 'uz', label: 'Republic of Uzbekistan', coordinates: [41.31, 69.26], zoom: 10 }
   ],
 };
