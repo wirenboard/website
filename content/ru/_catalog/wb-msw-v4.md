@@ -1,9 +1,5 @@
 ---
 article: WB-MSW4
-name: WB-MSW v.4
-type: Настенный комбинированный датчик
-title: Настенный комбинированный датчик c RS-485, Modbus RTU
-sub_title: Температура, влажность, освещённость, шум, уровень CO2 и VOC, движение, ИК-передатчик.
 cover: img/catalog/sensors/wb-msw-v4/1.webp
 documentation: https://wirenboard.com/wiki/WB-MSW_v.4_Modbus_Sensor
 meta: Настенный комбинированный датчик c RS-485, Modbus RTU

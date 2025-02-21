@@ -39,6 +39,10 @@ interface ProductOption {
 export interface Product {
   locale: Locale;
   id: number;
+  name: string;
+  type: string;
+  title: string;
+  sub_title: string;
   discontinued: number;
   can_order: number;
   price: number;
