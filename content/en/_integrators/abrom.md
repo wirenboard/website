@@ -1,7 +1,7 @@
 ---
-district: [volga, kg]
+district: [kg]
 tags: [smart_home]
-coordinates: [[55.82427415604684, 49.19640453369345], [56.146224, 47.248783], [42.874621, 74.569762]]
+coordinates: [42.874621, 74.569762]
 title: ABROM
 logo: /img/integrators/abrom.webp
 phone: 996554801076
