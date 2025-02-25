@@ -1,5 +1,5 @@
 ---
-district: [central]
+district: [center]
 coordinates: [56.129057, 40.406635]
 title: Next Level House
 logo: /img/integrators/nlhouse.webp
