@@ -16,7 +16,7 @@ _«Thanks to the modular architecture of Wiren Board and its compatibility with 
     float="right"
 }
 
-Abrom is a seasoned integrator of smart home systems operating in CIS countries. The company specializes in implementing smart technologies in apartments and houses during the rough construction or renovation stage.
+[Abrom](https://abrom.kg/en.html) is a seasoned integrator of smart home systems operating in CIS countries. The company specializes in implementing smart technologies in apartments and houses during the rough construction or renovation stage.
 
 With **53 successful projects** covering a total area of over **10,000 m²**, Abrom provides services that include the design of power supply systems, home automation, and structured cabling systems (SCS), as well as the assembly of automation panels, system programming, and commissioning. Additionally, the company supplies consumables and equipment for smart homes.
 
@@ -43,7 +43,7 @@ The owner tasked the designer with creating a functional yet elegant living spac
 
 Electrical outlets were installed at a height of 30 cm from the floor, with switches positioned at 90 cm, placed 20 cm away from doorways. In the kitchen, outlet placement was coordinated with the furniture layout. In areas with electric underfloor heating, the thermostat was mounted at 120 cm from the floor.
 
-Once the design phase was complete, the integrator **Abrom** was brought in. The team made several adjustments to the design, including the placement of the automation panel, sensors, and switches. The apartment’s wiring plan included both low-voltage twisted pair cables and 230 V power lines. Since the curtains and air conditioners were automated, additional wiring was required for their operation.
+Once the design phase was complete, the integrator [Abrom](https://abrom.kg/en.html) was brought in. The team made several adjustments to the design, including the placement of the automation panel, sensors, and switches. The apartment’s wiring plan included both low-voltage twisted pair cables and 230 V power lines. Since the curtains and air conditioners were automated, additional wiring was required for their operation.
 
 
 ## Solution
