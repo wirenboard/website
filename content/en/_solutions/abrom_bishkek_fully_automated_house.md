@@ -5,7 +5,7 @@ date: 2025-02-28
 category: apartments_automation
 ---
 
-_«Wiren Board stands for flexibility and scalability. If the customer decides to add new devices or integrations, the system can be easily expanded without the need to redesign the entire project,» **says Magdi Minullin, CTO of the integration company Abrom.**_
+_«Wiren Board represents flexibility and scalability. If the customer decides to add new devices or integrations, the system can be easily expanded without the need to redesign the entire project,» **says Magdi Minullin, CTO of the integration company Abrom.**_
 
 ## About the Company
 
@@ -22,7 +22,7 @@ With **53 successful projects** covering a total area of over **10,000 m²**, Ab
 
 To streamline the setup and integration of smart home systems, Abrom offers free software, **Abrom.soft**, which significantly speeds up commissioning processes.
 
-Magdi Minullin first encountered Wiren Board in 2019 while searching for a solution to automate Abrom’s initial project, which now serves as a showroom and testing ground.
+Magdi Minullin first came across Wiren Board in 2019 while looking for a solution to automate Abrom’s first project, which now serves as a showroom and testing ground.
 
 :gallery{
     :data='[
@@ -37,9 +37,9 @@ Magdi Minullin first encountered Wiren Board in 2019 while searching for a solut
 
 Sergey, a private business owner in Bishkek, built a 150 m² house in a prestigious neighborhood featuring a master bedroom, two children's rooms, and a living room combined with a kitchen. Initially, Sergey was skeptical about smart home technology, seeing it as a novelty. However, he eventually automated the lighting, climate, and roller shutters, reaching out to the integrator [Abrom](https://abrom.kg/en.html) for the installation.
 
-He opted not to make the wood-burning sauna smart. Sergey also chose not to integrate the diesel generator, solar panels, irrigation system, and other devices with the smart home.
+He chose not to automate the wood-burning sauna. Initially, Sergey decided against integrating the diesel generator, solar panels, and irrigation system into the smart home.
 
-As it turned out, that was a mistake. A few months later, Sergey returned to the integrator, asking to add these features to his smart home system. He had grown tired of juggling multiple apps for the TV, robot vacuum cleaner, generator, and irrigation system. He wanted voice control.
+However, he later realized this was a mistake. A few months later, Sergey returned to the integrator, asking to add these features to his smart home system. He had grown tired of juggling multiple apps for the TV, robot vacuum cleaner, generator, and irrigation system. Sergey wanted to control everything using voice commands.
 
 ## Solution
 
@@ -61,7 +61,7 @@ Now, let's move on to the second panel in the utility shed:
 * [**WB-M1W2**](https://wirenboard.com/en/product/WB-M1W2/): Module for connecting the outdoor temperature sensor.  
 * [**WB-MRM2-mini**](https://wirenboard.com/en/product/WB-MRM2-mini/): Compact relay module for controlling the gates and wicket.
 
-In wet areas, leak sensors were installed that automatically shut off the water supply when a leak is detected. These sensors are connected to the [**WB-MWAC**](https://wirenboard.com/en/product/WB-MWAC/) module, as are the Neptune servo drives. A second **WB-MWAC** module was installed in the shed to monitor water consumption, connected to a pulse meter. Sergey can now view the meter readings on his smartphone to send them to the utility company.
+In wet areas, leak sensors were installed that automatically shut off the water supply when a leak is detected. These sensors are connected to the [**WB-MWAC**](https://wirenboard.com/en/product/WB-MWAC/) module, as are the Neptune servo drives. A second **WB-MWAC** module was installed in the shed to monitor water consumption, connected to a pulse meter. Now, checking meter readings and sending them to the utility company is just a few taps away on his smartphone.
 
 :gallery{
     :data='[
@@ -101,9 +101,9 @@ The [**WB-MRM2-mini**](https://wirenboard.com/en/product/WB-MRM2-mini/) relay mo
 
 ### Climate
 
-Sergey opted not to install a supply ventilation unit but chose to install three Norvind Pro wall inlets in the children's rooms and the master bedroom. These inlets are equipped with filters, and the valves are mechanical, requiring manual operation. Exhaust fans were added in the bathrooms, and when the lights are turned on, the smart home system starts the fan via a relay. After the lights are switched off, the fan continues to run for a while. There is also an exhaust fan in the kitchen, but it is not automated.
+Sergey decided against installing a supply ventilation unit and instead installed three Norvind Pro wall inlets in the children's rooms and the master bedroom. These inlets are equipped with filters, and the valves are mechanical, requiring manual operation. Exhaust fans were added in the bathrooms, and when the lights are turned on, the smart home system starts the fan via a relay. After the lights are switched off, the fan continues to run for a while. There is also an exhaust fan in the kitchen, but it is not automated.
 
-For heating, water-based underfloor heating was installed, complemented by electric underfloor heating in the bathrooms and boiler room. This duplication allows the electric underfloor heating to be used in summer when the heating boiler's load is insufficient. There are no heating radiators, as the heat provided by the underfloor heating is sufficient. Cityron thermostats with built-in temperature sensors were installed in each room to control the warm water floors. The thermostats are connected via Modbus RTU. The electrothermal actuators of the water floors are controlled via [**WBIO-DO-R10A-8**](https://wirenboard.com/en/product/WBIO-DO-R10A-8/) modules. Temperature sensors, [1-wire DS18B20](https://wirenboard.com/en/product/1wire-DS18B20/), were integrated into the underfloor heating for temperature control and connected via [**WB-M1W2**](https://wirenboard.com/en/product/WB-M1W2/) modules.
+For heating, water-based underfloor heating was installed, complemented by electric underfloor heating in the bathrooms and boiler room. This duplication allows the electric underfloor heating to be used in summer when the heating boiler's load is insufficient. There are no heating radiators, as the heat provided by the underfloor heating is sufficient. Cityron thermostats with built-in temperature sensors were installed in each room to regulate the underfloor heating. The thermostats are connected via Modbus RTU. The electrothermal actuators of the water floors are controlled via [**WBIO-DO-R10A-8**](https://wirenboard.com/en/product/WBIO-DO-R10A-8/) modules. Temperature sensors, [1-wire DS18B20](https://wirenboard.com/en/product/1wire-DS18B20/), were integrated into the underfloor heating for temperature control and connected via [**WB-M1W2**](https://wirenboard.com/en/product/WB-M1W2/) modules.
 
 The temperature can be set on the thermostat, in the app, or through voice commands. In winter, Sergey keeps the indoor temperature at 23-24°C.
 
@@ -147,10 +147,12 @@ Of course, the homeowner can modify these scenarios or create their own in the a
 
 The **Wiren Board controller** was equipped with software modules developed by Abrom. The modular design simplifies setup for integrators. These modules can be deployed on other projects by merely adjusting configuration parameters, without requiring programming skills. This means a standard electrician can launch the smart home system. The modules significantly reduce the time needed to commission the project. Notably, Abrom provides these modules to other integrators for free upon request.
 
+To further simplify integration, Abrom developed specialized software modules for the Wiren Board controller.
+
 * The **first module** manages lighting by linking switches to specific lighting groups.  
 * The **second module** handles climate control, setting operating parameters for radiators, underfloor heating, and air conditioning.
 
-Для управления всеми системами дома служит платформа «Яндекс Умный дом» с интеграцией голосового ассистента Алисы. 
+The Yandex Smart Home platform with Alice voice assistant integration is used to manage all of the house systems. 
 
 ## Advantages
 
@@ -161,11 +163,11 @@ The **Wiren Board controller** was equipped with software modules developed by A
     float="right"
 }
 
-The integrator completed the project and handed it over, but Sergey wanted more features. He was tired of using separate apps for the robot vacuum, auto irrigation system, diesel generator, solar power system, and TV. Now, he wants to control all the functions by voice, as he’s accustomed to Alice. Sergey contacted the integrator to add all these devices to the smart home—and for free. However, integrating additional devices takes time and resources, so there will be additional charges.
+The integrator completed the project and handed it over, but Sergey wanted more features. He was tired of using separate apps for the robot vacuum, auto irrigation system, diesel generator, solar power system, and TV. Now, he wants to control all functions via voice commands, as he has grown accustomed to Alice. Sergey initially expected to integrate these devices at no extra cost. However, since integration requires additional time and resources, the service comes with an extra cost.
 
 The next question is: how feasible is this integration? Some devices can be added at the platform level (Yandex Smart Home, Sprut.Hub, or Wiren Board). But what if there’s no support for such devices? In this case, the integrator would need to create custom templates, requiring even more time and resources. It might even be necessary to install the **Home Assistant** system on the **Wiren Board** controller if it offers the required integration.
 
-This case is not unique. A smart home should not be seen as a final solution. New devices will inevitably be introduced, and sooner or later, integration will become necessary. More and more integrators are likely to provide services for adding devices to existing smart homes. This could lead to the emergence of a new market.
+This is a common scenario. A smart home should not be considered a final solution. New devices will inevitably be introduced, making future integration a necessity. More and more integrators are likely to provide services for adding devices to existing smart homes. This could lead to the emergence of a new market.
 
 This aspect should be considered when choosing a smart home ecosystem. The ability to expand features and integrate new devices in the future is becoming increasingly important. Therefore, a home must not only be smart but also flexible and expandable.
 
