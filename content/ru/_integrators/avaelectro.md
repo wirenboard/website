@@ -4,8 +4,8 @@ coordinates: [56.010543, 92.852581]
 title: AVAelectro
 logo: /img/integrators/avaelectro.webp
 phone: [79235578664, 79131952255]
-website: [https://vk.link/avaelectro, https://vk.com/avaelectro]
-email: [kazakof1979@mail.ru, Exspmsanya@bk.ru]
+website: [https://vk.com/avaelectro]
+email: [exspmsanya@bk.ru]
 ---
 
 Компания «AVAelectro» — это надежный партнер в сфере электромонтажа и автоматизации уже более 10 лет. 
