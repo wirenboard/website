@@ -1,6 +1,6 @@
 ---
-district: [spb]
-coordinates: [59.931722, 30.332847]
+district: [moscow, spb]
+coordinates: [[59.931722, 30.332847], [55.747115, 37.539087]]
 title: Setpoint
 logo: /img/integrators/setpoint.webp
 phone: 78129438141
