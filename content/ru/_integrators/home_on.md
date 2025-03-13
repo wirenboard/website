@@ -1,6 +1,6 @@
 ---
-district: [ural]
-coordinates: [56.8305163965088, 60.587592276649985]
+district: [ural, volga]
+coordinates: [[56.8305163965088, 60.587592276649985], [55.789871, 49.160448]]
 title: HomeOn
 logo: /img/integrators/home_on.webp
 phone: 79853570242
