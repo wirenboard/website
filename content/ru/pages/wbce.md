@@ -17,6 +17,6 @@ title: Конференция и выставка WBCE
 
 Отчёты:
 
-- [WBCE 2024](). 32 участника и более 750 гостей.
-- [WBCE 2023](). 30 участников и более 500 гостей.
+- [WBCE 2024](https://wirenboard.com/ru/contents/wbce2024). 32 участника и более 750 гостей.
+- [WBCE 2023](https://wirenboard.com/ru/contents/wbce2023). 30 участников и более 500 гостей.
 - [WBCE 2022](https://wirenboard.com/ru/contents/wbce2022). 14 участников и более 300 гостей.
