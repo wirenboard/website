@@ -29,41 +29,63 @@ Track software versions and controller statuses. Add additional information such
 ## Control  
 Manage the system using dashboards, graphical mimic panels, or the SSH console. All you need is a modern browser and an internet connection or access to a local server with the On-premise version of the service.  
 
-[Web interface](public/img/pages/cloud/dashboard.webp)
-[Browser-based SSH console](public/img/pages/cloud/console.webp)
-[SVG graphical panels](public/img/pages/cloud/electrical-dashboard.webp)
+:gallery{
+    :data='[
+        ["img/pages/cloud/dashboard.webp", "Web interface"],
+        ["img/pages/cloud/console.webp", "Browser-based SSH console"]
+        ["img/pages/cloud/electrical-dashboard.webp", "SVG graphical panels"]
+    ]'
+}
 
 ## Monitoring  
 Use the powerful built-in open-source tool **Grafana** to set up situation centers. Customize dashboards with graphs, indicators, and analytics.  
 
 Combine data from multiple controllers into a single dashboard for an overview of field equipment across multiple installations.  
 
-[Grafana graphs](public/img/pages/cloud/graphana.webp)
+:photo{
+    src="img/pages/cloud/graphana.webp"
+    caption="Grafana graphs"
+    width=""
+    float="left"
+}
 
 ## Multi-user Access  
 Invite colleagues to the organization and share access to controllers. A single user can belong to multiple organizations, making it convenient for companies managing multiple installations.  
 
-[User invitation](public/img/pages/cloud/invite-org.webp)
-[List of organizations](public/img/pages/cloud/organizations.webp)
+:gallery{
+    :data='[
+        ["img/pages/cloud/invite-org.webp", "User invitation"],
+        ["img/pages/cloud/organizations.webp", "List of organizations"]
+    ]'
+}
 
 ## Mobile Interface  
 Access the service from anywhere—its web interface automatically adapts to different screen resolutions, ensuring a seamless experience across all functions.  
 
 You can bookmark specific tools and open them with a single click.  
 
-[Mobile list of controllers](public/img/pages/cloud/mobile-list-controllers.webp)
-[Mobile controller page](public/img/pages/cloud/mobile-controller.webp)
-[Mobile graphs](public/img/pages/cloud/mobile-graphs.webp)
-[Mobile web interface](public/img/pages/cloud/mobile-dashboard.webp)
-[Mobile ssh console](public/img/pages/cloud/mobile-console.webp)
-[Mobile Graphana graphs](public/img/pages/cloud/mobile-graphana.webp)
+:gallery{
+    :data='[
+        ["img/pages/cloud/mobile-list-controllers.webp", "Mobile list of controllers"],
+        ["img/pages/cloud/mobile-controller.webp", "Mobile controller page"]
+        ["img/pages/cloud/mobile-graphs.webp", "Mobile graphs"]
+        ["img/pages/cloud/mobile-dashboard.webp", "Mobile web interface"]
+        ["img/pages/cloud/mobile-console.webp", "Mobile ssh console"]
+        ["img/pages/cloud/mobile-graphana.webp", "Mobile Graphana graphs"]
+    ]'
+}
 
 ## Data Control  
 Connect only the controllers you want to the service. New controllers do not send data to the service by default; users must create an account, set up an organization, and manually add controllers.  
 
 Wiren Board controllers authenticate in the service using a hardware key, preventing duplicate entries and unauthorized access to other controllers.  
 
-[Adding a controller to the cloud](public/img/pages/cloud/mobile-graphana.webp)
+:photo{
+    src="img/pages/cloud/mobile-graphana.webp"
+    caption="Adding a controller to the cloud"
+    width=""
+    float="left"
+}
 
 ## Autonomy  
 Wiren Board controllers always operate autonomously and do not depend on external internet services. Wiren Board Cloud adds new functionalities without affecting the standalone operation of the automation system.  
