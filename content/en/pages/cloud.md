@@ -19,8 +19,8 @@ In addition to the public version of Wiren Board Cloud, there is an On-premise o
 ## Inventory Management  
 Track software versions and controller statuses. Add additional information such as location, responsible person, last maintenance date, and more.  
 
-[List of controllers](public/img/pages/cloud/list-controllers.webp)
-[Controller page](public/img/pages/cloud/controller.webp)
+![List of controllers](public/img/pages/cloud/list-controllers.webp)
+![Controller page](public/img/pages/cloud/controller.webp)
 
 ## Control  
 Manage the system using dashboards, graphical mimic panels, or the SSH console. All you need is a modern browser and an internet connection or access to a local server with the On-premise version of the service.  
