@@ -45,7 +45,7 @@ Combine data from multiple controllers into a single dashboard for an overview o
 :photo{
     src="img/pages/cloud/graphana.webp"
     caption="Grafana graphs"
-    width=""
+    width="500"
     float="left"
 }
 
@@ -83,7 +83,7 @@ Wiren Board controllers authenticate in the service using a hardware key, preven
 :photo{
     src="img/pages/cloud/mobile-graphana.webp"
     caption="Adding a controller to the cloud"
-    width=""
+    width="500"
     float="left"
 }
 
