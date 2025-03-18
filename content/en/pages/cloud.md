@@ -46,7 +46,7 @@ Combine data from multiple controllers into a single dashboard for an overview o
     src="img/pages/cloud/graphana.webp"
     caption="Grafana graphs"
     width="500"
-    float="left"
+    float=""
 }
 
 ## Multi-user Access  
@@ -81,10 +81,10 @@ Connect only the controllers you want to the service. New controllers do not sen
 Wiren Board controllers authenticate in the service using a hardware key, preventing duplicate entries and unauthorized access to other controllers.  
 
 :photo{
-    src="img/pages/cloud/mobile-graphana.webp"
+    src="img/pages/cloud/add-to-cloud.webp"
     caption="Adding a controller to the cloud"
     width="500"
-    float="left"
+    float=""
 }
 
 ## Autonomy  
