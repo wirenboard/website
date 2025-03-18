@@ -32,7 +32,7 @@ Manage the system using dashboards, graphical mimic panels, or the SSH console. 
 :gallery{
     :data='[
         ["img/pages/cloud/dashboard.webp", "Web interface"],
-        ["img/pages/cloud/console.webp", "Browser-based SSH console"]
+        ["img/pages/cloud/console.webp", "Browser-based SSH console"],
         ["img/pages/cloud/electrical-dashboard.webp", "SVG graphical panels"]
     ]'
 }
@@ -67,10 +67,10 @@ You can bookmark specific tools and open them with a single click.
 :gallery{
     :data='[
         ["img/pages/cloud/mobile-list-controllers.webp", "Mobile list of controllers"],
-        ["img/pages/cloud/mobile-controller.webp", "Mobile controller page"]
-        ["img/pages/cloud/mobile-graphs.webp", "Mobile graphs"]
-        ["img/pages/cloud/mobile-dashboard.webp", "Mobile web interface"]
-        ["img/pages/cloud/mobile-console.webp", "Mobile ssh console"]
+        ["img/pages/cloud/mobile-controller.webp", "Mobile controller page"],
+        ["img/pages/cloud/mobile-graphs.webp", "Mobile graphs"],
+        ["img/pages/cloud/mobile-dashboard.webp", "Mobile web interface"],
+        ["img/pages/cloud/mobile-console.webp", "Mobile ssh console"],
         ["img/pages/cloud/mobile-graphana.webp", "Mobile Graphana graphs"]
     ]'
 }
