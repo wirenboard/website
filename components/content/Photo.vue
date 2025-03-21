@@ -145,7 +145,7 @@ enum Directions {
 .photo-image {
   margin: 0 auto;
   max-width: 100%;
-  height: fit-content;
+  height: auto;
 }
 
 .photo-image img {
