@@ -13,18 +13,16 @@ import 'swiper/css';
 const route = useRoute();
 const { t, locale } = useI18n();
 const { data } = await useLocalizedData(`_catalog`, true, { _file: { $icontains: route.params.slug } });
-const imageFolder = `/img/${data.value._stem.slice(4)}`;
-
-const product = await useApi<Product>(`/product/${data.value.article}/?locale=${locale.value}`);
+const { data: product } = await useApi<Product>(`/product/${data.value.article}/?locale=${locale.value}`);
 </script>
 
 <template>
   <article class="product">
     <div class="product-promo">
       <div>
-        <div class="product-subTitle">{{ data.title }}</div>
-        <h1 class="product-title">{{ data.name }}</h1>
-        <div>{{ data.sub_title }}</div>
+        <div class="product-subTitle">{{ product.title }}</div>
+        <h1 class="product-title">{{ product.name }}</h1>
+        <div>{{ product.sub_title }}</div>
       </div>
 
       <div class="product-coverWrapper">
