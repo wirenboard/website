@@ -20,9 +20,9 @@ const { data: product } = await useApi<Product>(`/product/${data.value.article}/
   <article class="product">
     <div class="product-promo">
       <div>
-        <div class="product-subTitle">{{ product.title }}</div>
-        <h1 class="product-title">{{ product.name }}</h1>
-        <div>{{ product.sub_title }}</div>
+        <div class="product-subTitle">{{ product?.title }}</div>
+        <h1 class="product-title">{{ product?.name }}</h1>
+        <div>{{ product?.sub_title }}</div>
       </div>
 
       <div class="product-coverWrapper">
