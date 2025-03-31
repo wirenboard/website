@@ -1,6 +1,6 @@
 ---
 title: 'Автоматизация сити-фермы: учебная установка на базе Wiren Board'
-cover: /img/solutions/city_​farm_training_facility.webp
+cover: /img/solutions/city_farm_training_facility.webp
 date: 2025-03-31
 category: agriculture_automation
 ---
