@@ -97,17 +97,7 @@ Control not only the data transmitted to the service but also the infrastructure
 
 This option is ideal for system integrators working with Wiren Board products as well as OEM clients developing solutions based on our products under their own brand.  
 
-## How to Connect  
-The public version of the service is free - just follow [the instructions](https://wirenboard.com/wiki/Wiren_Board_Cloud) to add your controller to Wiren Board Cloud.  
-
 If you are interested in the On-premise version, contact us at [info@wirenboard.com](mailto:info@wirenboard.com).  
-
-## Try It  
-A demo environment with a real controller is available:  
-
-- **[https://wirenboard.cloud/](https://wirenboard.cloud/)**
-- **Login:** demo+public@wirenboard.com  
-- **Password:** demopublic  
 
 ## Special Offer for Companies  
 If you're interested in Wiren Board Cloud, want to implement it, but need additional features—contact us at [info@wirenboard.com](mailto:info@wirenboard.com), and we will do our best to assist you.
