@@ -13,7 +13,7 @@ useHead({
 const filter = ref(Object.keys(FilterTypeParams).at(0));
 const filterDate = ref(Object.keys(FilterDateParams).at(0));
 
-const query: QueryBuilderParams = { path: '/_articles', where: [{ _locale: locale.value }] }
+const query: QueryBuilderParams = { path: '/articles', where: [{ _locale: locale.value }] }
 const { data } = await useAsyncData('articles', () => queryContent(query.path).where({ _locale: locale.value }).find());
 
 if (!data.value?.length) {

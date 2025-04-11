@@ -168,4 +168,4 @@ _Антон Степанов, генеральный директор ООО "Ф
     caption="Удобства для сервисного персонала"
 }
 
-:include{path="/_solutions/includes/footer"}
+:include{path="/solutions/includes/footer"}

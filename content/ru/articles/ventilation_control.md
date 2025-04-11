@@ -10,6 +10,7 @@ category: hardware_selection
 :photo{
     src="/img/articles/ventilation_control/cover.png"
     float="right"
+    width="500"
 }
 
 Вентиляция — обязательная система всех зданий: от жилых домов до офисов и заводов. В большинстве случаев применяют механическую вентиляцию с помощью вентиляторов.
@@ -28,6 +29,7 @@ category: hardware_selection
     src="/img/articles/ventilation_control/ventilation_1.jpg"
     caption="Устройство вентиляционной установки"
     float="right"
+    width="500"
 }
 
 Обычная приточная вент. установка, которая применяется в частных домах, состоит из элементов:

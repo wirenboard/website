@@ -1,8 +1,8 @@
 # Редактирование внедрений 
 
-Содержимое папки `content/[locale]/_solutions` автоматически формирует список внедрений:
-* [content/ru/_solutions](/content/ru/_solutions) — [Внедрения](https://wirenboard.com/ru/contents/solutions/) в русской версии;
-* [content/en/_solutions](/content/en/_solutions) — [Solutions](https://wirenboard.com/en/contents/solutions/) в английской версии.
+Содержимое папки `content/[locale]/solutions` автоматически формирует список внедрений:
+* [content/ru/solutions](/content/ru/solutions) — [Внедрения](https://wirenboard.com/ru/contents/solutions/) в русской версии;
+* [content/en/solutions](/content/en/solutions) — [Solutions](https://wirenboard.com/en/contents/solutions/) в английской версии.
 
 Вы можете добавить внедрения на сайт или ссылку на внедрение на стороннем ресурсе.
 

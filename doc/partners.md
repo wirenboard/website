@@ -1,8 +1,8 @@
 # Изменение раздела с партнерами
 
-Содержимое папки `content/[locale]/_partners` автоматически формирует разделы на сайте. Например:
-* [content/ru/_partners ](/content/ru/_partners) — [Партнеры](https://wirenboard.com/ru/contents/partners/) в русской версии сайта;
-* [content/en/_partners ](/content/en/_partners) — [Partners](https://wirenboard.com/en/contents/partners/) в английской версии сайта. 
+Содержимое папки `content/[locale]/partners` автоматически формирует разделы на сайте. Например:
+* [content/ru/partners ](/content/ru/partners) — [Партнеры](https://wirenboard.com/ru/contents/partners/) в русской версии сайта;
+* [content/en/partners ](/content/en/partners) — [Partners](https://wirenboard.com/en/contents/partners/) в английской версии сайта. 
 
 Чтобы добавить партнёра:
 1. Добавьте в папку [public/img/partners](/public/img/partners) логотип в формате webp и шириной не больше 500px.

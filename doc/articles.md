@@ -1,8 +1,8 @@
 # Редактирование статей 
 
-Содержимое папки `content/[locale]/_articles` автоматически формирует список статей на сайте:
-* [content/ru/_articles ](/content/ru/_articles) — [Статьи](https://wirenboard.com/ru/contents/articles/) в русской версии;
-* [content/en/_articles ](/content/en/_articles) — [Articles](https://wirenboard.com/en/contents/articles/) в английской версии.
+Содержимое папки `content/[locale]/articles` автоматически формирует список статей на сайте:
+* [content/ru/articles ](/content/ru/articles) — [Статьи](https://wirenboard.com/ru/contents/articles/) в русской версии;
+* [content/en/articles ](/content/en/articles) — [Articles](https://wirenboard.com/en/contents/articles/) в английской версии.
 
 Вы можете добавить статью на сайт или ссылку на статью на стороннем ресурсе.
 

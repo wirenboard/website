@@ -12,7 +12,7 @@ import 'swiper/css';
 
 const route = useRoute();
 const { t, locale } = useI18n();
-const { data } = await useLocalizedData(`_catalog`, true, { _file: { $icontains: route.params.slug } });
+const { data } = await useLocalizedData(`catalog`, false, { _file: { $icontains: route.params.slug } });
 const { data: product } = await useApi<Product>(`/product/${data.value.article}/?locale=${locale.value}`);
 </script>
 

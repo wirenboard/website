@@ -2,10 +2,10 @@
 const { t, locale } = useI18n();
 const props = defineProps<{ data: string[]; }>();
 
-const query = { path: '/_solutions', where: [{ _locale: locale.value }, { _path: { $in: props.data.map(item => `/_solutions/${item}`) } }] };
+const query = { path: '/solutions', where: [{ _locale: locale.value }, { _path: { $in: props.data.map(item => `/solutions/${item}`) } }] };
 
 const { data } = await useAsyncData('solutions', () => queryContent(query.path)
-  .where({ _path: { $in: props.data.map(item => `/_solutions/${item}`) } })
+  .where({ _path: { $in: props.data.map(item => `/solutions/${item}`) } })
   .where({ _locale: locale.value })
   .find());
 </script>

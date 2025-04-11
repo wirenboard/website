@@ -16,11 +16,11 @@ export default defineNuxtConfig({
     '~/assets/css/fonts.css',
   ],
   modules: [
-    'nuxt-content-assets',
     '@nuxt/content',
     '@nuxt/image',
-    'nuxt-svgo',
     '@nuxtjs/i18n',
+    'nuxt-content-assets',
+    'nuxt-svgo',
     '@nuxtjs/leaflet',
     '@primevue/nuxt-module',
   ],
