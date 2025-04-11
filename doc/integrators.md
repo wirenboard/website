@@ -1,8 +1,8 @@
 # Изменение раздела с интеграторами
 
-Содержимое папки `content/[locale]/_integrators` автоматически формирует разделы на сайте:
-* [content/ru/_integrators ](/content/ru/_integrators) — [Интеграторы](https://wirenboard.com/ru/contents/integrators/) в русской версии сайта;
-* [content/en/_integrators ](/content/en/_integrators) — [Integrators](https://wirenboard.com/en/contents/integrators/) в английской версии сайта. 
+Содержимое папки `content/[locale]/integrators` автоматически формирует разделы на сайте:
+* [content/ru/integrators ](/content/ru/integrators) — [Интеграторы](https://wirenboard.com/ru/contents/integrators/) в русской версии сайта;
+* [content/en/integrators ](/content/en/integrators) — [Integrators](https://wirenboard.com/en/contents/integrators/) в английской версии сайта. 
 
 Чтобы добавить интегратора:
 1. Добавьте в папку [public/img/integrators](/public/img/integrators) логотип в формате webp и шириной не больше 500px.

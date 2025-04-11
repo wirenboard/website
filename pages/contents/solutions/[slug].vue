@@ -4,7 +4,7 @@ import dayjs from 'dayjs';
 const { t } = useI18n();
 const { locale } = useI18n();
 const route = useRoute();
-const { data } = await useLocalizedData(`/_solutions/${route.params.slug}`, true, { url: { $exists: false } });
+const { data } = await useLocalizedData(`/solutions/${route.params.slug}`, false, { url: { $exists: false } });
 
 useContentHead({
   ...data.value,

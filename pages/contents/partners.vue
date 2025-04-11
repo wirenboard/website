@@ -7,7 +7,7 @@ useHead({
   title: t('title'),
 });
 
-const query: QueryBuilderParams = { path: '/_partners', where: [{ _locale: locale.value }], sort: [{ title: 1 }, { priority: 1 }] }
+const query: QueryBuilderParams = { path: '/partners', where: [{ _locale: locale.value }], sort: [{ title: 1 }, { priority: 1 }] }
 </script>
 
 <template>

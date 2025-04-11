@@ -19,7 +19,7 @@ const mapCenter = computed(() => {
 });
 
 const query = reactive({
-  path: '/_integrators',
+  path: '/integrators',
   where: [
     {
       district: { $contains: district.value },
