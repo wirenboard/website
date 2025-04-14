@@ -1,8 +1,8 @@
 # Добавление видео роликов
 
-Содержимое папки `content/[locale]/_video` автоматически формирует список видео роликов на сайте:
-* [content/ru/_video ](/content/ru/_video) — [Видео](https://wirenboard.com/ru/contents/video/) в русской версии;
-* [content/en/_video ](/content/en/_video) — [Articles](https://wirenboard.com/en/contents/video/) в английской версии.
+Содержимое папки `content/[locale]/video` автоматически формирует список видео роликов на сайте:
+* [content/ru/video ](/content/ru/video) — [Видео](https://wirenboard.com/ru/contents/video/) в русской версии;
+* [content/en/video ](/content/en/video) — [Articles](https://wirenboard.com/en/contents/video/) в английской версии.
 
 Вы можете разместить ролик c youtube или peertube.
 

@@ -1,8 +1,8 @@
 # Каталог товаров
 
-Содержимое папки `content/[locale]/_catalog` формирует страницы товаров на сайте:
-* content/ru/_catalog/TYPE/SLUG — в русской версии;
-* content/en/_catalog/TYPE/SLUG — в английской версии.
+Содержимое папки `content/[locale]/catalog` формирует страницы товаров на сайте:
+* content/ru/catalog/TYPE/SLUG — в русской версии;
+* content/en/catalog/TYPE/SLUG — в английской версии.
 TYPE это тип товара, например controllers, sensors, wb-extensions... SLUG это то, что попадет в url в конечном итоге.
 
 ## Добавление товара на нашем сайте
@@ -28,7 +28,7 @@ video: [
   ["https://peertube.wirenboard.com/videos/embed/0a424378-a514-446c-bfc7-6e9b7393080c"], (видео № 1)
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],(видео № 2)
 ]
-use_cases: примеры использования (опциональное поле, используем slug файлов из папки `_solutions`, например [liten_magnit, techsensor_module_cafe, rekota_hotel_vertical])
+use_cases: примеры использования (опциональное поле, используем slug файлов из папки `solutions`, например [liten_magnit, techsensor_module_cafe, rekota_hotel_vertical])
 ---
 
 ::product

@@ -4,7 +4,7 @@ import { toHast } from 'mdast-util-to-hast';
 
 export default defineEventHandler(async (event) => {
   const products = await serverQueryContent(event)
-    .where({ _path: { $contains: '_catalog' } })
+    .where({ _path: { $contains: 'catalog' } })
     .find();
 
   return products.reduce((acc: any, product) => {
