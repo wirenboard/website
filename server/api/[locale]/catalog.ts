@@ -3,8 +3,10 @@ import { toHtml } from 'hast-util-to-html';
 import { toHast } from 'mdast-util-to-hast';
 
 export default defineEventHandler(async (event) => {
+  const locale = getRouterParam(event, 'locale');
+
   const products = await serverQueryContent(event)
-    .where({ _path: { $contains: 'catalog' } })
+    .where({ _path: { $contains: 'catalog' }, _locale: locale })
     .find();
 
   return products.reduce((acc: any, product) => {
