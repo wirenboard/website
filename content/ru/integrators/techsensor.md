@@ -1,5 +1,5 @@
 ---
-district: [center]
+district: [moscow]
 tags: [automation, retail]
 coordinates: [55.79133540562334, 37.60314251975121]
 title: Techsensor
