@@ -14,7 +14,14 @@ export default defineEventHandler(async (event) => {
     const hast = toHast(product.body.children[0].children.find(item => Object.hasOwn(item.props, 'v-slot:description')));
 
     acc[product.article] = {
-      cover: `https://wirenboard.com/_ipx/h_120&q_70&f_webp/${product.cover}`,
+      covers: {
+        120: `https://wirenboard.com/_ipx/h_120&q_70&f_webp/${product.cover}`,
+        160: `https://wirenboard.com/_ipx/h_160&q_70&f_webp/${product.cover}`,
+        240: `https://wirenboard.com/_ipx/h_240&q_80&f_webp/${product.cover}`,
+        320: `https://wirenboard.com/_ipx/h_320&q_80&f_webp/${product.cover}`,
+        360: `https://wirenboard.com/_ipx/h_360&q_90&f_webp/${product.cover}`,
+        480: `https://wirenboard.com/_ipx/h_480&q_100&f_webp/${product.cover}`,
+      },
       description: toHtml(hast, { allowDangerousHtml: true })
     }
     return acc;
