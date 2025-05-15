@@ -42,7 +42,7 @@ watch(openedPhoto, () => {
 });
 
 const getUrl = (url: string) => {
-  return url.startsWith('/ru') || url.startsWith('/en')
+  return url.startsWith('/img')
     ? url
     : `${locale.value || 'ru'}/${route.path.split('/').at(-2)}/${url}`;
 };
