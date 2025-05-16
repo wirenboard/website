@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     payloadExtraction: false
   },
   runtimeConfig: {
-    apiUrl: process.env.NUXT_API_URL,
+    apiUrl: process.env.NUXT_API_URL || 'https://wirenboard.com',
     login: process.env.NUXT_SITE_LOGIN,
     password: process.env.NUXT_SITE_PASSWORD,
   },
