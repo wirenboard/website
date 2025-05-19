@@ -5,7 +5,13 @@ import type { Product } from '~/common/types';
 const { locale } = useI18n();
 const route = useRoute();
 const { data } = await useLocalizedData('catalog', false, { _file: { $icontains: route.params.slug } });
-const product = await useApi<Product>(`/product/${data.value.article}/?locale=${locale.value}`).catch(err => {
+console.log('slug get data')
+const product = await useApi<Product>(`/product/${data.value.article}/?locale=${locale.value}`)
+  .then(res => {
+    console.log(11111, res);
+    return res
+  })
+  .catch(err => {
   console.error(err);
 });
 
