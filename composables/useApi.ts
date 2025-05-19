@@ -12,6 +12,9 @@ export const useApi = async <T>(url: string, opts?: AsyncDataOptions<T>): Promis
   const userId = useRequestHeader('x-wb-user-id');
   const baseURL =  `${config.apiUrl || ''}/${locale.value}/ng/api/v1`;
 
+  console.log('baseURL', baseURL)
+  console.log('apiUrl', config.apiUr)
+
   return useAsyncData<T>(
     url,
     () => $fetch<T>(baseURL + url, { baseURL, headers, params: { user_id: userId } })
