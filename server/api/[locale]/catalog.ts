@@ -11,7 +11,15 @@ export default defineEventHandler(async (event) => {
 
   return products.reduce((acc: any, product) => {
     // @ts-ignore
-    const hast = toHast(product.body.children[0].children.find(item => Object.hasOwn(item.props, 'v-slot:description')));
+    const hast = toHast(product.body.children[0].children.find(item => Object.hasOwn(item.props, 'v-slot:description')), {
+      unknownHandler(state, node) {
+        return {
+          type: 'element',
+          tagName: node.tag === 'a' ? 'span' : 'div',
+          children: state.all(node)
+        };
+      },
+    });
 
     acc[product.article] = {
       covers: {
