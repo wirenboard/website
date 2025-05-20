@@ -1,6 +1,6 @@
 ---
 title: 'Автоматизация частного дома площадью 150 м²'
-cover: /img/solutions/abrom_bishkek_fully_automated_house.webp
+cover: abrom_bishkek_fully_automated_house/abrom_bishkek_fully_automated_house.webp
 date: 2025-02-28
 category: apartments_automation
 ---
@@ -10,7 +10,7 @@ _«Wiren Board – это гибкость и масштабируемость. 
 ## О компании
 
 :photo{
-    src="/img/solutions/abrom_bishkek_fully_automated_house/1.jpeg"
+    src="abrom_bishkek_fully_automated_house/1.jpeg"
     caption="План расстановки мебели"
     width="400"
     float="right"
@@ -26,10 +26,10 @@ C Wiren Board Минуллин Магди познакомился в 2019 го�
 
 :gallery{
     :data='[
-        ["/img/solutions/abrom_bishkek_fully_automated_house/2.jpeg", "Фрагмент гостиной"],
-        ["/img/solutions/abrom_bishkek_fully_automated_house/3.jpeg", "Прихожая"],
-        ["/img/solutions/abrom_bishkek_fully_automated_house/4.jpeg", "Коридор"],
-        ["/img/solutions/abrom_bishkek_fully_automated_house/5.jpeg", "Гостиная"]
+        ["abrom_bishkek_fully_automated_house/2.jpeg", "Фрагмент гостиной"],
+        ["abrom_bishkek_fully_automated_house/3.jpeg", "Прихожая"],
+        ["abrom_bishkek_fully_automated_house/4.jpeg", "Коридор"],
+        ["abrom_bishkek_fully_automated_house/5.jpeg", "Гостиная"]
     ]'
 }
 
@@ -66,10 +66,10 @@ C Wiren Board Минуллин Магди познакомился в 2019 го�
 
 :gallery{
     :data='[
-        ["/img/solutions/abrom_bishkek_fully_automated_house/6.jpeg", "Кухня"],
-        ["/img/solutions/abrom_bishkek_fully_automated_house/7.jpeg", "Санузел"],
-        ["/img/solutions/abrom_bishkek_fully_automated_house/8.jpeg", "Комната сына"],
-        ["/img/solutions/abrom_bishkek_fully_automated_house/9.jpeg", "Комната дочери"]
+        ["abrom_bishkek_fully_automated_house/6.jpeg", "Кухня"],
+        ["abrom_bishkek_fully_automated_house/7.jpeg", "Санузел"],
+        ["abrom_bishkek_fully_automated_house/8.jpeg", "Комната сына"],
+        ["abrom_bishkek_fully_automated_house/9.jpeg", "Комната дочери"]
     ]'
 }
 
@@ -93,10 +93,10 @@ C Wiren Board Минуллин Магди познакомился в 2019 го�
 
 :gallery{
     :data='[
-        ["/img/solutions/abrom_bishkek_fully_automated_house/10.jpeg", "Мастер-спальня"],
-        ["/img/solutions/abrom_bishkek_fully_automated_house/11.jpeg", "Модули Wiren Board во втором щите в бытовке"],
-        ["/img/solutions/abrom_bishkek_fully_automated_house/12.jpeg", "Подсветка крыльца во время нашего посещения (зима)"],
-        ["/img/solutions/abrom_bishkek_fully_automated_house/13.jpeg", "Подсветка забора"]
+        ["abrom_bishkek_fully_automated_house/10.jpeg", "Мастер-спальня"],
+        ["abrom_bishkek_fully_automated_house/11.jpeg", "Модули Wiren Board во втором щите в бытовке"],
+        ["abrom_bishkek_fully_automated_house/12.jpeg", "Подсветка крыльца во время нашего посещения (зима)"],
+        ["abrom_bishkek_fully_automated_house/13.jpeg", "Подсветка забора"]
     ]'
 }
 
@@ -122,10 +122,10 @@ C Wiren Board Минуллин Магди познакомился в 2019 го�
 
 :gallery{
     :data='[
-        ["/img/solutions/abrom_bishkek_fully_automated_house/14.jpeg", "Подсветка рабочей зоны"],
-        ["/img/solutions/abrom_bishkek_fully_automated_house/15.jpeg", "Опускаем рольставни, вид на дом с крытой веранды"],
-        ["/img/solutions/abrom_bishkek_fully_automated_house/16.jpeg", "Калитка с домофоном"],
-        ["/img/solutions/abrom_bishkek_fully_automated_house/17.jpeg", "Термостат Cityron"]
+        ["abrom_bishkek_fully_automated_house/14.jpeg", "Подсветка рабочей зоны"],
+        ["abrom_bishkek_fully_automated_house/15.jpeg", "Опускаем рольставни, вид на дом с крытой веранды"],
+        ["abrom_bishkek_fully_automated_house/16.jpeg", "Калитка с домофоном"],
+        ["abrom_bishkek_fully_automated_house/17.jpeg", "Термостат Cityron"]
     ]'
 }
 
@@ -151,7 +151,7 @@ C Wiren Board Минуллин Магди познакомился в 2019 го�
 ## Преимущества
 
 :photo{
-    src="/img/solutions/abrom_bishkek_fully_automated_house/18.jpeg"
+    src="abrom_bishkek_fully_automated_house/18.jpeg"
     caption="Часть модулей Wiren Board в основном щите автоматизации"
     width="400"
     float="right"

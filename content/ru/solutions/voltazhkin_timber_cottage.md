@@ -1,6 +1,6 @@
 ---
 title: 'Автоматизация двухэтажного коттеджа из клееного бруса'
-cover: /img/solutions/voltazhkin_timber_cottage.webp
+cover: voltazhkin_timber_cottage/voltazhkin_timber_cottage.webp
 date: 2025-01-18
 category: apartments_automation
 ---
@@ -10,7 +10,7 @@ _«Wiren Board — это платформа, благодаря которой 
 ## О компании
 
 :photo{
-    src="/img/solutions/voltazhkin_timber_cottage/1.jpeg"
+    src="voltazhkin_timber_cottage/1.jpeg"
     caption="Двор дома, вид на веранду"
     width="400"
     float="right"
@@ -26,10 +26,10 @@ C Wiren Board Артем Андрияшев познакомился в 2017 г�
 
 :gallery{
     :data='[
-        ["/img/solutions/voltazhkin_timber_cottage/2.jpeg", "Вид на веранду с другого ракурса"],
-        ["/img/solutions/voltazhkin_timber_cottage/3.jpeg", "Фасад дома подсвечивается"],
-        ["/img/solutions/voltazhkin_timber_cottage/4.jpeg", "Красивое дерево во дворе"],
-        ["/img/solutions/voltazhkin_timber_cottage/5.jpeg", "Сад камней и генератор"]
+        ["voltazhkin_timber_cottage/2.jpeg", "Вид на веранду с другого ракурса"],
+        ["voltazhkin_timber_cottage/3.jpeg", "Фасад дома подсвечивается"],
+        ["voltazhkin_timber_cottage/4.jpeg", "Красивое дерево во дворе"],
+        ["voltazhkin_timber_cottage/5.jpeg", "Сад камней и генератор"]
     ]'
 }
 
@@ -42,10 +42,10 @@ C Wiren Board Артем Андрияшев познакомился в 2017 г�
 
 :gallery{
     :data='[
-        ["/img/solutions/voltazhkin_timber_cottage/6.jpeg", "Вид из гостиной на веранду"],
-        ["/img/solutions/voltazhkin_timber_cottage/7.jpeg", "Вид из гостиной на веранду, другой ракурс"],
-        ["/img/solutions/voltazhkin_timber_cottage/8.jpeg", "Веранда с камином"],
-        ["/img/solutions/voltazhkin_timber_cottage/9.jpeg", "Лестница на второй этаж"]
+        ["voltazhkin_timber_cottage/6.jpeg", "Вид из гостиной на веранду"],
+        ["voltazhkin_timber_cottage/7.jpeg", "Вид из гостиной на веранду, другой ракурс"],
+        ["voltazhkin_timber_cottage/8.jpeg", "Веранда с камином"],
+        ["voltazhkin_timber_cottage/9.jpeg", "Лестница на второй этаж"]
     ]'
 }
 
@@ -64,10 +64,10 @@ C Wiren Board Артем Андрияшев познакомился в 2017 г�
 
 :gallery{
     :data='[
-        ["/img/solutions/voltazhkin_timber_cottage/10.jpeg", "Панель управления Zont в котельной"],
-        ["/img/solutions/voltazhkin_timber_cottage/11.jpeg", "Щит автоматизации Zont в котельной"],
-        ["/img/solutions/voltazhkin_timber_cottage/12.jpeg", "Электротермические приводы в котельной, они подключены к термостатам Valtec"],
-        ["/img/solutions/voltazhkin_timber_cottage/13.jpeg", "Система увлажнения в котельной, к ней подключена система очистки воды на основе обратного осмоса"]
+        ["voltazhkin_timber_cottage/10.jpeg", "Панель управления Zont в котельной"],
+        ["voltazhkin_timber_cottage/11.jpeg", "Щит автоматизации Zont в котельной"],
+        ["voltazhkin_timber_cottage/12.jpeg", "Электротермические приводы в котельной, они подключены к термостатам Valtec"],
+        ["voltazhkin_timber_cottage/13.jpeg", "Система увлажнения в котельной, к ней подключена система очистки воды на основе обратного осмоса"]
     ]'
 }
 
@@ -85,10 +85,10 @@ C Wiren Board Артем Андрияшев познакомился в 2017 г�
 
 :gallery{
     :data='[
-        ["/img/solutions/voltazhkin_timber_cottage/14.jpeg", "Красивый светильник в SPA-зоне и ванная"],
-        ["/img/solutions/voltazhkin_timber_cottage/15.jpeg", "Датчик протечки встроили в пол"],
-        ["/img/solutions/voltazhkin_timber_cottage/16.jpeg", "Датчик температуры 1-wire в потолке сауны"],
-        ["/img/solutions/voltazhkin_timber_cottage/17.jpeg", "Декоративная подсветка под полками"]
+        ["voltazhkin_timber_cottage/14.jpeg", "Красивый светильник в SPA-зоне и ванная"],
+        ["voltazhkin_timber_cottage/15.jpeg", "Датчик протечки встроили в пол"],
+        ["voltazhkin_timber_cottage/16.jpeg", "Датчик температуры 1-wire в потолке сауны"],
+        ["voltazhkin_timber_cottage/17.jpeg", "Декоративная подсветка под полками"]
     ]'
 }
 
@@ -98,10 +98,10 @@ C Wiren Board Артем Андрияшев познакомился в 2017 г�
 
 :gallery{
     :data='[
-        ["/img/solutions/voltazhkin_timber_cottage/18.jpeg", "Панель управления кондиционером Hisense, панель термостата Valtec, комбинированный датчик WB-MSW"],
-        ["/img/solutions/voltazhkin_timber_cottage/19.jpeg", "Справа вверху над камином можно увидеть датчики угарного газа и дыма"],
-        ["/img/solutions/voltazhkin_timber_cottage/20.jpeg", "Комбинированный датчик WB-MSW в мастер-спальне"],
-        ["/img/solutions/voltazhkin_timber_cottage/21.jpeg", "Печь Sangens"]
+        ["voltazhkin_timber_cottage/18.jpeg", "Панель управления кондиционером Hisense, панель термостата Valtec, комбинированный датчик WB-MSW"],
+        ["voltazhkin_timber_cottage/19.jpeg", "Справа вверху над камином можно увидеть датчики угарного газа и дыма"],
+        ["voltazhkin_timber_cottage/20.jpeg", "Комбинированный датчик WB-MSW в мастер-спальне"],
+        ["voltazhkin_timber_cottage/21.jpeg", "Печь Sangens"]
     ]'
 }
 
@@ -117,10 +117,10 @@ C Wiren Board Артем Андрияшев познакомился в 2017 г�
 
 :gallery{
     :data='[
-        ["/img/solutions/voltazhkin_timber_cottage/22.jpeg", "Светильники в гостиной"],
-        ["/img/solutions/voltazhkin_timber_cottage/23.jpeg", "Спотовые светильники в гостиной"],
-        ["/img/solutions/voltazhkin_timber_cottage/24.jpeg", "Поворотные выключатели выбрали неудачно"],
-        ["/img/solutions/voltazhkin_timber_cottage/25.jpeg", "Светильник в прихожей"]
+        ["voltazhkin_timber_cottage/22.jpeg", "Светильники в гостиной"],
+        ["voltazhkin_timber_cottage/23.jpeg", "Спотовые светильники в гостиной"],
+        ["voltazhkin_timber_cottage/24.jpeg", "Поворотные выключатели выбрали неудачно"],
+        ["voltazhkin_timber_cottage/25.jpeg", "Светильник в прихожей"]
     ]'
 }
 
@@ -138,10 +138,10 @@ C Wiren Board Артем Андрияшев познакомился в 2017 г�
 
 :gallery{
     :data='[
-        ["/img/solutions/voltazhkin_timber_cottage/26.jpeg", "Внутрипольный конвектор в детской и колонка с Алисой"],
-        ["/img/solutions/voltazhkin_timber_cottage/27.jpeg", "Блок кондиционирования в детской"],
-        ["/img/solutions/voltazhkin_timber_cottage/28.jpeg", "Форсунка системы увлажнения в детской"],
-        ["/img/solutions/voltazhkin_timber_cottage/29.jpeg", "Вентиляционные решетки над лестницей"]
+        ["voltazhkin_timber_cottage/26.jpeg", "Внутрипольный конвектор в детской и колонка с Алисой"],
+        ["voltazhkin_timber_cottage/27.jpeg", "Блок кондиционирования в детской"],
+        ["voltazhkin_timber_cottage/28.jpeg", "Форсунка системы увлажнения в детской"],
+        ["voltazhkin_timber_cottage/29.jpeg", "Вентиляционные решетки над лестницей"]
     ]'
 }
 
@@ -157,10 +157,10 @@ C Wiren Board Артем Андрияшев познакомился в 2017 г�
 
 :gallery{
     :data='[
-        ["/img/solutions/voltazhkin_timber_cottage/30.jpeg", "ИБП в гараже"],
-        ["/img/solutions/voltazhkin_timber_cottage/31.jpeg", "Щит умного дома в гараже"],
-        ["/img/solutions/voltazhkin_timber_cottage/32.png", "Состояние электропитания дома (правый скриншот) в интерфейсе Home Assistant"],
-        ["/img/solutions/voltazhkin_timber_cottage/33.png", "Управление ИБП и генератором в интерфейсе Home Assistant"]
+        ["voltazhkin_timber_cottage/30.jpeg", "ИБП в гараже"],
+        ["voltazhkin_timber_cottage/31.jpeg", "Щит умного дома в гараже"],
+        ["voltazhkin_timber_cottage/32.png", "Состояние электропитания дома (правый скриншот) в интерфейсе Home Assistant"],
+        ["voltazhkin_timber_cottage/33.png", "Управление ИБП и генератором в интерфейсе Home Assistant"]
     ]'
 }
 
@@ -170,17 +170,17 @@ C Wiren Board Артем Андрияшев познакомился в 2017 г�
 
 :gallery{
     :data='[
-        ["/img/solutions/voltazhkin_timber_cottage/35.jpeg", "Колонка с Алисой в гостиной"],
-        ["/img/solutions/voltazhkin_timber_cottage/36.png", "Интерфейс Home Assistant"],
-        ["/img/solutions/voltazhkin_timber_cottage/37.png", "Интерфейс Home Assistant"],
-        ["/img/solutions/voltazhkin_timber_cottage/38.png", "Интерфейс Home Assistant"]
+        ["voltazhkin_timber_cottage/35.jpeg", "Колонка с Алисой в гостиной"],
+        ["voltazhkin_timber_cottage/36.png", "Интерфейс Home Assistant"],
+        ["voltazhkin_timber_cottage/37.png", "Интерфейс Home Assistant"],
+        ["voltazhkin_timber_cottage/38.png", "Интерфейс Home Assistant"]
     ]'
 }
 
 ## Преимущества
 
 :photo{
-    src="/img/solutions/voltazhkin_timber_cottage/34.jpeg"
+    src="voltazhkin_timber_cottage/34.jpeg"
     caption="Модули Wiren Board крупным планом"
     width="400"
     float="right"

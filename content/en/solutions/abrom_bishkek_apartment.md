@@ -1,6 +1,6 @@
 ---
 title: 'Automation of a One-Bedroom Apartment in a New Development'
-cover: /img/solutions/en/abrom_bishkek_apartment.webp
+cover: abrom_bishkek_apartment/abrom_bishkek_apartment.webp
 date: 2025-01-18
 category: apartments_automation
 ---
@@ -10,7 +10,7 @@ _«Thanks to the modular architecture of Wiren Board and its compatibility with 
 ## About the Company
 
 :photo{
-    src="/img/solutions/en/abrom_bishkek_apartment/1.jpeg"
+    src="abrom_bishkek_apartment/1.jpeg"
     caption="Bedroom Rendering"
     width="400"
     float="right"
@@ -26,10 +26,10 @@ Magdi Minullin first encountered Wiren Board in 2019 while searching for a solut
 
 :gallery{
     :data='[
-        ["/img/solutions/en/abrom_bishkek_apartment/2.jpeg", "Apartment Layout"],
-        ["/img/solutions/en/abrom_bishkek_apartment/3.jpeg", "Living Room Rendering"],
-        ["/img/solutions/en/abrom_bishkek_apartment/4.jpeg", "Bedroom Rendering"],
-        ["/img/solutions/en/abrom_bishkek_apartment/5.jpeg", "Hallway Rendering"]
+        ["abrom_bishkek_apartment/2.jpeg", "Apartment Layout"],
+        ["abrom_bishkek_apartment/3.jpeg", "Living Room Rendering"],
+        ["abrom_bishkek_apartment/4.jpeg", "Bedroom Rendering"],
+        ["abrom_bishkek_apartment/5.jpeg", "Hallway Rendering"]
     ]'
 }
 
@@ -62,10 +62,10 @@ These modules unify the control of **lighting, climate, leak detection, and othe
 
 :gallery{
     :data='[
-        ["/img/solutions/en/abrom_bishkek_apartment/6.jpeg", "Automation panel hidden behind the left door in the hallway"],
-        ["/img/solutions/en/abrom_bishkek_apartment/7.jpeg", "Apartment Automation Panel"],
-        ["/img/solutions/en/abrom_bishkek_apartment/8.jpeg", "Close-up of Wiren Board Modules"],
-        ["/img/solutions/en/abrom_bishkek_apartment/9.jpeg", "Elegant Light Fixtures Above the Dining Table"]
+        ["abrom_bishkek_apartment/6.jpeg", "Automation panel hidden behind the left door in the hallway"],
+        ["abrom_bishkek_apartment/7.jpeg", "Apartment Automation Panel"],
+        ["abrom_bishkek_apartment/8.jpeg", "Close-up of Wiren Board Modules"],
+        ["abrom_bishkek_apartment/9.jpeg", "Elegant Light Fixtures Above the Dining Table"]
     ]'
 }
 
@@ -85,10 +85,10 @@ All windows are fitted with **230V motorized curtains**, controlled via Modbus. 
 
 :gallery{
     :data='[
-        ["/img/solutions/en/abrom_bishkek_apartment/10.jpeg", "Kitchen Lighting"],
-        ["/img/solutions/en/abrom_bishkek_apartment/11.jpeg", "Hallway Lighting"],
-        ["/img/solutions/en/abrom_bishkek_apartment/12.jpeg", "Living Room Lighting"],
-        ["/img/solutions/en/abrom_bishkek_apartment/13.jpeg", "Sofa in the Living Room"]
+        ["abrom_bishkek_apartment/10.jpeg", "Kitchen Lighting"],
+        ["abrom_bishkek_apartment/11.jpeg", "Hallway Lighting"],
+        ["abrom_bishkek_apartment/12.jpeg", "Living Room Lighting"],
+        ["abrom_bishkek_apartment/13.jpeg", "Sofa in the Living Room"]
     ]'
 }
 
@@ -104,10 +104,10 @@ All radiators are equipped with **wired thermoelectric actuators**. The system a
 
 :gallery{
     :data='[
-        ["/img/solutions/en/abrom_bishkek_apartment/14.jpeg", "Thermoelectric Radiator Actuator"],
-        ["/img/solutions/en/abrom_bishkek_apartment/15.jpeg", "Air Conditioner in the Living Room"],
-        ["/img/solutions/en/abrom_bishkek_apartment/16.jpeg", "Lighting Fixtures in the Living Room"],
-        ["/img/solutions/en/abrom_bishkek_apartment/17.jpeg", "Turning on the Light Fixture"]
+        ["abrom_bishkek_apartment/14.jpeg", "Thermoelectric Radiator Actuator"],
+        ["abrom_bishkek_apartment/15.jpeg", "Air Conditioner in the Living Room"],
+        ["abrom_bishkek_apartment/16.jpeg", "Lighting Fixtures in the Living Room"],
+        ["abrom_bishkek_apartment/17.jpeg", "Turning on the Light Fixture"]
     ]'
 }
 
@@ -121,10 +121,10 @@ For temperature monitoring, [1-Wire DS18B20 sensors](https://wirenboard.com/en/p
 
 :gallery{
     :data='[
-        ["/img/solutions/en/abrom_bishkek_apartment/18.jpeg", "Temperature Sensor in the Kitchen"],
-        ["/img/solutions/en/abrom_bishkek_apartment/19.jpeg", "Temperature Sensor in the Bathroom"],
-        ["/img/solutions/en/abrom_bishkek_apartment/20.jpeg", "Kitchen with Open Curtains"],
-        ["/img/solutions/en/abrom_bishkek_apartment/21.jpeg", "Closing the Curtains"]
+        ["abrom_bishkek_apartment/18.jpeg", "Temperature Sensor in the Kitchen"],
+        ["abrom_bishkek_apartment/19.jpeg", "Temperature Sensor in the Bathroom"],
+        ["abrom_bishkek_apartment/20.jpeg", "Kitchen with Open Curtains"],
+        ["abrom_bishkek_apartment/21.jpeg", "Closing the Curtains"]
     ]'
 }
 
@@ -154,17 +154,17 @@ The controller also includes the **Sprut.Hub interface**, enabling users to mana
 
 :gallery{
     :data='[
-        ["/img/solutions/en/abrom_bishkek_apartment/22.jpeg", "Zigbee Smart Outlet Installed in the Bedroom"],
-        ["/img/solutions/en/abrom_bishkek_apartment/23.jpeg", "Bedroom with Open Curtains"],
-        ["/img/solutions/en/abrom_bishkek_apartment/24.jpeg", "Curtain Actuator"],
-        ["/img/solutions/en/abrom_bishkek_apartment/25.jpeg", "Closet Lighting in the Living Room"]
+        ["abrom_bishkek_apartment/22.jpeg", "Zigbee Smart Outlet Installed in the Bedroom"],
+        ["abrom_bishkek_apartment/23.jpeg", "Bedroom with Open Curtains"],
+        ["abrom_bishkek_apartment/24.jpeg", "Curtain Actuator"],
+        ["abrom_bishkek_apartment/25.jpeg", "Closet Lighting in the Living Room"]
     ]'
 }
 
 ## Advantages
 
 :photo{
-    src="/img/solutions/en/abrom_bishkek_apartment/27.jpeg"
+    src="abrom_bishkek_apartment/27.jpeg"
     caption="Curtains in the Living Room"
     width="400"
     float="right"

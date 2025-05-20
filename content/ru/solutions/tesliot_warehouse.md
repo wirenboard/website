@@ -1,6 +1,6 @@
 ---
 title: 'Установка беспроводной системы контроля микроклимата продовольственного склада за один день'
-cover: /img/solutions/tesliot_warehouse.webp
+cover: tesliot_warehouse/tesliot_warehouse.webp
 date: 2024-12-04
 category: commercial_estate_monitoring
 ---
@@ -10,7 +10,7 @@ _«Оборудование Wiren Board зарекомендовало себя 
 ## О компании
 
 :photo{
-    src="/img/solutions/tesliot_warehouse/1.jpg"
+    src="tesliot_warehouse/1.jpg"
     caption="Продуктовый склад"
     width="400"
     float="right"
@@ -28,10 +28,10 @@ TESLA SMART UZ — узбекское подразделение российс�
 
 :gallery{
     :data='[
-        ["/img/solutions/tesliot_warehouse/3.jpg", "Продуктовый склад"],
-        ["/img/solutions/tesliot_warehouse/6.jpg", "Продуктовый склад"],
-        ["/img/solutions/tesliot_warehouse/19.jpg", "Раньше показания с датчиков записывали вручную"],
-        ["/img/solutions/tesliot_warehouse/8.jpg", "Вверху можно увидеть BLR-базу TESLiOT-HOST-X, когда она принимает данные от привязанных к ней 3 BLE-датчиков"]
+        ["tesliot_warehouse/3.jpg", "Продуктовый склад"],
+        ["tesliot_warehouse/6.jpg", "Продуктовый склад"],
+        ["tesliot_warehouse/19.jpg", "Раньше показания с датчиков записывали вручную"],
+        ["tesliot_warehouse/8.jpg", "Вверху можно увидеть BLR-базу TESLiOT-HOST-X, когда она принимает данные от привязанных к ней 3 BLE-датчиков"]
     ]'
 }
 
@@ -44,10 +44,10 @@ TESLA SMART UZ — узбекское подразделение российс�
 
 :gallery{
     :data='[
-        ["/img/solutions/tesliot_warehouse/18.jpg", "Слева старый логгер, справа BLE-датчик TESLiOT-TWO-X, посередине журнал, который перестали заполнять после установки системы"],
-        ["/img/solutions/tesliot_warehouse/5.jpg", "Слева старый логгер, справа BLE-датчик TESLiOT-TWO-X"],
-        ["/img/solutions/tesliot_warehouse/17.jpg", "BLR-база TESLiOT-HOST-X в защищенном корпусе"],
-        ["/img/solutions/tesliot_warehouse/13.jpg", "BLE-датчик температуры и влажности TESLiOT-TWO-X"]
+        ["tesliot_warehouse/18.jpg", "Слева старый логгер, справа BLE-датчик TESLiOT-TWO-X, посередине журнал, который перестали заполнять после установки системы"],
+        ["tesliot_warehouse/5.jpg", "Слева старый логгер, справа BLE-датчик TESLiOT-TWO-X"],
+        ["tesliot_warehouse/17.jpg", "BLR-база TESLiOT-HOST-X в защищенном корпусе"],
+        ["tesliot_warehouse/13.jpg", "BLE-датчик температуры и влажности TESLiOT-TWO-X"]
     ]'
 }
 
@@ -61,17 +61,17 @@ TESLA SMART UZ — узбекское подразделение российс�
 
 :gallery{
     :data='[
-        ["/img/solutions/tesliot_warehouse/4.jpg", "Панель мониторинга объекта"],
-        ["/img/solutions/tesliot_warehouse/7.jpg", "Дашборд с датчиками температуры и влажности"],
-        ["/img/solutions/tesliot_warehouse/10.jpg", "BLR-датчик TESLiOT-TWO-X"],
-        ["/img/solutions/tesliot_warehouse/15.jpg", "BLR-база TESLiOT-HOST-X"]
+        ["tesliot_warehouse/4.jpg", "Панель мониторинга объекта"],
+        ["tesliot_warehouse/7.jpg", "Дашборд с датчиками температуры и влажности"],
+        ["tesliot_warehouse/10.jpg", "BLR-датчик TESLiOT-TWO-X"],
+        ["tesliot_warehouse/15.jpg", "BLR-база TESLiOT-HOST-X"]
     ]'
 }
 
 ## Преимущества
 
 :photo{
-    src="/img/solutions/tesliot_warehouse/11.jpg"
+    src="tesliot_warehouse/11.jpg"
     caption="Контроллер диспетчеризации Wiren Board 7"
     width="400"
     float="right"

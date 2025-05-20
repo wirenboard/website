@@ -1,6 +1,6 @@
 ---
 title: 'Automation of a 150 m² Private House'
-cover: /img/solutions/en/abrom_bishkek_fully_automated_house.webp
+cover: abrom_bishkek_fully_automated_house/abrom_bishkek_fully_automated_house.webp
 date: 2025-02-28
 category: apartments_automation
 ---
@@ -10,7 +10,7 @@ _«Wiren Board represents flexibility and scalability. If the customer decides t
 ## About the Company
 
 :photo{
-    src="/img/solutions/en/abrom_bishkek_fully_automated_house/1.jpeg"
+    src="abrom_bishkek_fully_automated_house/1.jpeg"
     caption="Furniture Layout Plan"
     width="400"
     float="right"
@@ -26,10 +26,10 @@ Magdi Minullin first came across Wiren Board in 2019 while looking for a solutio
 
 :gallery{
     :data='[
-        ["/img/solutions/en/abrom_bishkek_fully_automated_house/2.jpeg", "Living Room Fragment"],
-        ["/img/solutions/en/abrom_bishkek_fully_automated_house/3.jpeg", "Entrance Hall"],
-        ["/img/solutions/en/abrom_bishkek_fully_automated_house/4.jpeg", "Corridor"],
-        ["/img/solutions/en/abrom_bishkek_fully_automated_house/5.jpeg", "Living Room"]
+        ["abrom_bishkek_fully_automated_house/2.jpeg", "Living Room Fragment"],
+        ["abrom_bishkek_fully_automated_house/3.jpeg", "Entrance Hall"],
+        ["abrom_bishkek_fully_automated_house/4.jpeg", "Corridor"],
+        ["abrom_bishkek_fully_automated_house/5.jpeg", "Living Room"]
     ]'
 }
 
@@ -65,10 +65,10 @@ In wet areas, leak sensors were installed that automatically shut off the water 
 
 :gallery{
     :data='[
-        ["/img/solutions/en/abrom_bishkek_fully_automated_house/6.jpeg", "Kitchen"],
-        ["/img/solutions/en/abrom_bishkek_fully_automated_house/7.jpeg", "Bathroom"],
-        ["/img/solutions/en/abrom_bishkek_fully_automated_house/8.jpeg", "Son&rsquo;s Room"],
-        ["/img/solutions/en/abrom_bishkek_fully_automated_house/9.jpeg", "Daughter&rsquo;s Room"]
+        ["abrom_bishkek_fully_automated_house/6.jpeg", "Kitchen"],
+        ["abrom_bishkek_fully_automated_house/7.jpeg", "Bathroom"],
+        ["abrom_bishkek_fully_automated_house/8.jpeg", "Son&rsquo;s Room"],
+        ["abrom_bishkek_fully_automated_house/9.jpeg", "Daughter&rsquo;s Room"]
     ]'
 }
 
@@ -92,10 +92,10 @@ The [**WB-MRM2-mini**](https://wirenboard.com/en/product/WB-MRM2-mini/) relay mo
 
 :gallery{
     :data='[
-        ["/img/solutions/en/abrom_bishkek_fully_automated_house/10.jpeg", "Master Bedroom"],
-        ["/img/solutions/en/abrom_bishkek_fully_automated_house/11.jpeg", "Wiren Board Modules in the Second Panel in the Utility Shed"],
-        ["/img/solutions/en/abrom_bishkek_fully_automated_house/12.jpeg", "Porch Lighting During Our Visit (Winter)"],
-        ["/img/solutions/en/abrom_bishkek_fully_automated_house/13.jpeg", "Fence Lighting"]
+        ["abrom_bishkek_fully_automated_house/10.jpeg", "Master Bedroom"],
+        ["abrom_bishkek_fully_automated_house/11.jpeg", "Wiren Board Modules in the Second Panel in the Utility Shed"],
+        ["abrom_bishkek_fully_automated_house/12.jpeg", "Porch Lighting During Our Visit (Winter)"],
+        ["abrom_bishkek_fully_automated_house/13.jpeg", "Fence Lighting"]
     ]'
 }
 
@@ -121,10 +121,10 @@ A backup power generator was installed, which can be turned on during long power
 
 :gallery{
     :data='[
-        ["/img/solutions/en/abrom_bishkek_fully_automated_house/14.jpeg", "Workspace Backlighting"],
-        ["/img/solutions/en/abrom_bishkek_fully_automated_house/15.jpeg", "Rolling Shutters Down, View of the House from the Covered Porch"],
-        ["/img/solutions/en/abrom_bishkek_fully_automated_house/16.jpeg", "Wicket Door with Intercom"],
-        ["/img/solutions/en/abrom_bishkek_fully_automated_house/17.jpeg", "Cityron Thermostat"]
+        ["abrom_bishkek_fully_automated_house/14.jpeg", "Workspace Backlighting"],
+        ["abrom_bishkek_fully_automated_house/15.jpeg", "Rolling Shutters Down, View of the House from the Covered Porch"],
+        ["abrom_bishkek_fully_automated_house/16.jpeg", "Wicket Door with Intercom"],
+        ["abrom_bishkek_fully_automated_house/17.jpeg", "Cityron Thermostat"]
     ]'
 }
 
@@ -157,7 +157,7 @@ The Yandex Smart Home platform with Alice voice assistant integration is used to
 ## Advantages
 
 :photo{
-    src="/img/solutions/en/abrom_bishkek_fully_automated_house/18.jpeg"
+    src="abrom_bishkek_fully_automated_house/18.jpeg"
     caption="Wiren Board Modules in the Main Automation Panel"
     width="400"
     float="right"

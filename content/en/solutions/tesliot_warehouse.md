@@ -1,6 +1,6 @@
 ---
 title: 'Installation of a Wireless Climate Control System for a Food Warehouse in One Day'
-cover: /img/solutions/tesliot_warehouse.webp
+cover: tesliot_warehouse.webp
 date: 2024-12-06
 category: commercial_estate_monitoring
 ---
@@ -10,7 +10,7 @@ _«Wiren Board equipment has proven to be a reliable and flexible platform for i
 ## About the Company
 
 :photo{
-    src="/img/solutions/tesliot_warehouse/1.jpg"
+    src="tesliot_warehouse/tesliot_warehouse.webp"
     caption="Food Warehouse"
     width="400"
     float="right"
@@ -24,10 +24,10 @@ Dmitry first heard about Wiren Board in 2017 from integrators in the FMS market 
 
 :gallery{
     :data='[
-        ["/img/solutions/tesliot_warehouse/3.jpg", "Food Warehouse"],
-        ["/img/solutions/tesliot_warehouse/6.jpg", "Food Warehouse"],
-        ["/img/solutions/tesliot_warehouse/19.jpg", "Previously, sensor readings were recorded manually"],
-        ["/img/solutions/tesliot_warehouse/8.jpg", "Above, you can see the TESLiOT-HOST-X BLR base station receiving data from three connected BLE sensors"]
+        ["tesliot_warehouse/3.jpg", "Food Warehouse"],
+        ["tesliot_warehouse/6.jpg", "Food Warehouse"],
+        ["tesliot_warehouse/19.jpg", "Previously, sensor readings were recorded manually"],
+        ["tesliot_warehouse/8.jpg", "Above, you can see the TESLiOT-HOST-X BLR base station receiving data from three connected BLE sensors"]
     ]'
 }
 
@@ -40,10 +40,10 @@ TESLA SMART UZ was tasked with promptly implementing a temperature and humidity 
 
 :gallery{
     :data='[
-        ["/img/solutions/tesliot_warehouse/18.jpg", "On the left is the old logger, on the right is the TESLiOT-TWO-X BLE sensor, and in the middle is the logbook that was no longer needed after installing the system"],
-        ["/img/solutions/tesliot_warehouse/5.jpg", "Old logger on the left, TESLiOT-TWO-X BLE sensor on the right"],
-        ["/img/solutions/tesliot_warehouse/17.jpg", "TESLiOT-HOST-X BLR base station in a protective enclosure"],
-        ["/img/solutions/tesliot_warehouse/13.jpg", "TESLiOT-TWO-X BLE temperature and humidity sensor"]
+        ["tesliot_warehouse/18.jpg", "On the left is the old logger, on the right is the TESLiOT-TWO-X BLE sensor, and in the middle is the logbook that was no longer needed after installing the system"],
+        ["tesliot_warehouse/5.jpg", "Old logger on the left, TESLiOT-TWO-X BLE sensor on the right"],
+        ["tesliot_warehouse/17.jpg", "TESLiOT-HOST-X BLR base station in a protective enclosure"],
+        ["tesliot_warehouse/13.jpg", "TESLiOT-TWO-X BLE temperature and humidity sensor"]
     ]'
 }
 
@@ -57,17 +57,17 @@ A [**Wiren Board controller**](https://wirenboard.com/en/catalog/kontrollery/) w
 
 :gallery{
     :data='[
-        ["/img/solutions/tesliot_warehouse/e1.jpg", "Facility Monitoring Panel"],
-        ["/img/solutions/tesliot_warehouse/e3.png", "Dashboard with temperature and humidity sensors"],
-        ["/img/solutions/tesliot_warehouse/10.jpg", "TESLiOT-TWO-X BLR sensor"],
-        ["/img/solutions/tesliot_warehouse/15.jpg", "TESLiOT-HOST-X BLR base station"]
+        ["tesliot_warehouse/e1.jpg", "Facility Monitoring Panel"],
+        ["tesliot_warehouse/e3.png", "Dashboard with temperature and humidity sensors"],
+        ["tesliot_warehouse/10.jpg", "TESLiOT-TWO-X BLR sensor"],
+        ["tesliot_warehouse/15.jpg", "TESLiOT-HOST-X BLR base station"]
     ]'
 }
 
 ## Advantages
 
 :photo{
-    src="/img/solutions/tesliot_warehouse/11.jpg"
+    src="tesliot_warehouse/11.jpg"
     caption="Wiren Board 7 Automation Controller"
     width="400"
     float="right"
