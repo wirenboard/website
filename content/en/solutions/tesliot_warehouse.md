@@ -1,6 +1,6 @@
 ---
 title: 'Installation of a Wireless Climate Control System for a Food Warehouse in One Day'
-cover: tesliot_warehouse.webp
+cover: tesliot_warehouse/tesliot_warehouse.webp
 date: 2024-12-06
 category: commercial_estate_monitoring
 ---
