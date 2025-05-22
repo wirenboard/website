@@ -11,7 +11,7 @@ email: simp@simplight.ru
 [Wiren Board — официальный поставщик оборудования для Simp Light](https://simplight.ru/our-partners/).
 
 
-Ключевые особенности SCADA Simp Light:
+Ключевые особенности SCADA SIMP Light:
 * стабильная и многофункциональная система;
 * интуитивно понятна пользователю;
 * поддерживает Wiren Board;
