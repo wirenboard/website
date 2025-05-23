@@ -1,6 +1,6 @@
 ---
 title: 'Автоматизация ротации кондиционеров в серверной промышленного объекта'
-cover: /img/solutions/itvision_industrial.webp
+cover: itvision_industrial/itvision_industrial.webp
 date: 2025-01-15
 category: industrial_dispatching_monitoring
 ---
@@ -10,7 +10,7 @@ _«Wiren Board отлично подходит и для промышленны�
 ## О компании
 
 :photo{
-    src="/img/solutions/itvision_industrial/9.png"
+    src="itvision_industrial/9.png"
     caption="Графики температуры с разных датчиков"
     width="400"
     float="right"
@@ -28,10 +28,10 @@ IT Vision сотрудничает с ведущими производител�
 
 :gallery{
     :data='[
-        ["/img/solutions/itvision_industrial/1.jpg", "Датчик контроля температуры и влажности WB-MS"],
-        ["/img/solutions/itvision_industrial/2.jpg", "Модули Wiren Board в серверной стойке"],
-        ["/img/solutions/itvision_industrial/3.jpg", "Один из кондиционеров в серверной"],
-        ["/img/solutions/itvision_industrial/4.png", "Правила на контроллере Wiren Board"]
+        ["itvision_industrial/1.jpg", "Датчик контроля температуры и влажности WB-MS"],
+        ["itvision_industrial/2.jpg", "Модули Wiren Board в серверной стойке"],
+        ["itvision_industrial/3.jpg", "Один из кондиционеров в серверной"],
+        ["itvision_industrial/4.png", "Правила на контроллере Wiren Board"]
     ]'
 }
 
@@ -43,10 +43,10 @@ IT Vision сотрудничает с ведущими производител�
 
 :gallery{
     :data='[
-        ["/img/solutions/itvision_industrial/6.jpg", "Кондиционеры в серверной с подключенными ИК-датчиками"],
-        ["/img/solutions/itvision_industrial/7.png", "Дашборд в веб-интерфейсе контроллера Wiren Board"],
-        ["/img/solutions/itvision_industrial/10.jpg", "Серверная на промышленном объекте"],
-        ["/img/solutions/itvision_industrial/8.png", "Телеграмм-канал с оповещениями"]
+        ["itvision_industrial/6.jpg", "Кондиционеры в серверной с подключенными ИК-датчиками"],
+        ["itvision_industrial/7.png", "Дашборд в веб-интерфейсе контроллера Wiren Board"],
+        ["itvision_industrial/10.jpg", "Серверная на промышленном объекте"],
+        ["itvision_industrial/8.png", "Телеграмм-канал с оповещениями"]
     ]'
 }
 
@@ -63,7 +63,7 @@ IT Vision сотрудничает с ведущими производител�
 ## Преимущества
 
 :photo{
-    src="/img/solutions/itvision_industrial/5.png"
+    src="itvision_industrial/5.png"
     caption="Дашборд мониторинга серверной"
     width="400"
     float="right"

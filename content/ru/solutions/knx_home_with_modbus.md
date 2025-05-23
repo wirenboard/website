@@ -1,6 +1,6 @@
 ---
 title: 'Добавление диспетчеризации на Modbus к умному дому на KNX'
-cover: /img/solutions/knx_home_with_modbus_logo.webp
+cover: knx_home_with_modbus/knx_home_with_modbus_logo.webp
 date: 2024-10-26
 category: apartments_automation
 ---
@@ -10,7 +10,7 @@ _«Мне понравилось, как контроллер Wiren Board раб
 ## О компании
 
 :photo{
-    src="/img/solutions/knx_home_with_modbus/logo.jpg"
+    src="knx_home_with_modbus/logo.jpg"
     caption="Коллаж на тему умного дома с KNX и Modbus"
     width="400"
     float="right"
@@ -32,10 +32,10 @@ _«Мне понравилось, как контроллер Wiren Board раб
 
 :gallery{
     :data='[
-        ["/img/solutions/knx_home_with_modbus/1.jpg", "В левом верхнем углу — блоки питания усилителя"],
-        ["/img/solutions/knx_home_with_modbus/2.jpg", "Модули реле и аналоговых входов Wiren Board"],
-        ["/img/solutions/knx_home_with_modbus/3.jpg", "Модуль WB-MCM8, к нему подключили счетчики воды"],
-        ["/img/solutions/knx_home_with_modbus/4.jpg", "iRidium Server"]
+        ["knx_home_with_modbus/1.jpg", "В левом верхнем углу — блоки питания усилителя"],
+        ["knx_home_with_modbus/2.jpg", "Модули реле и аналоговых входов Wiren Board"],
+        ["knx_home_with_modbus/3.jpg", "Модуль WB-MCM8, к нему подключили счетчики воды"],
+        ["knx_home_with_modbus/4.jpg", "iRidium Server"]
     ]'
 }
 
@@ -49,17 +49,17 @@ _«Мне понравилось, как контроллер Wiren Board раб
 
 :gallery{
     :data='[
-        ["/img/solutions/knx_home_with_modbus/5.jpg", "Контроллер Wiren Board 7 отвечает за диспетчеризацию"],
-        ["/img/solutions/knx_home_with_modbus/10.jpg", "Сергей показывает нам интерфейс управления умным домом. Кнопки в нижнем левом углу как раз управляют системами, которые подключили через Wiren Board"],
-        ["/img/solutions/knx_home_with_modbus/19.jpg", "Щит с модулями KNX"],
-        ["/img/solutions/knx_home_with_modbus/15.jpg", "Термостат"]
+        ["knx_home_with_modbus/5.jpg", "Контроллер Wiren Board 7 отвечает за диспетчеризацию"],
+        ["knx_home_with_modbus/10.jpg", "Сергей показывает нам интерфейс управления умным домом. Кнопки в нижнем левом углу как раз управляют системами, которые подключили через Wiren Board"],
+        ["knx_home_with_modbus/19.jpg", "Щит с модулями KNX"],
+        ["knx_home_with_modbus/15.jpg", "Термостат"]
     ]'
 }
 
 ## Преимущества
 
 :photo{
-    src="/img/solutions/knx_home_with_modbus/scr1.jpg"
+    src="knx_home_with_modbus/scr1.jpg"
     caption="Скриншот интерфейса Iridium. Управление подсветкой фасада"
     width="400"
     float="right"

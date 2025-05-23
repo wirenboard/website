@@ -1,6 +1,6 @@
 ---
 title: 'Автоматизация двухкомнатной квартиры в новостройке'
-cover: /img/solutions/abrom_bishkek_kvartira.webp
+cover: abrom_bishkek_kvartira/abrom_bishkek_kvartira.webp
 date: 2025-01-15
 category: apartments_automation
 ---
@@ -10,7 +10,7 @@ _«Благодаря модульной архитектуре Wiren Board и �
 ## О компании
 
 :photo{
-    src="/img/solutions/abrom_bishkek_kvartira/1.jpg"
+    src="abrom_bishkek_kvartira/1.jpg"
     caption="Коллаж на тему квартиры"
     width="400"
     float="right"
@@ -26,10 +26,10 @@ C Wiren Board Минуллин Магди познакомился в 2019 го�
 
 :gallery{
     :data='[
-        ["/img/solutions/abrom_bishkek_kvartira/2.jpeg", "План квартиры"],
-        ["/img/solutions/abrom_bishkek_kvartira/3.jpeg", "Рендер гостиной"],
-        ["/img/solutions/abrom_bishkek_kvartira/4.jpeg", "Рендер спальни"],
-        ["/img/solutions/abrom_bishkek_kvartira/5.jpeg", "Рендер прихожей. Вид от входной двери. Слева: спальня. Справа: кухня и гостиная"]
+        ["abrom_bishkek_kvartira/2.jpeg", "План квартиры"],
+        ["abrom_bishkek_kvartira/3.jpeg", "Рендер гостиной"],
+        ["abrom_bishkek_kvartira/4.jpeg", "Рендер спальни"],
+        ["abrom_bishkek_kvartira/5.jpeg", "Рендер прихожей. Вид от входной двери. Слева: спальня. Справа: кухня и гостиная"]
     ]'
 }
 
@@ -62,10 +62,10 @@ C Wiren Board Минуллин Магди познакомился в 2019 го�
 
 :gallery{
     :data='[
-        ["/img/solutions/abrom_bishkek_kvartira/6.jpeg", "За левой дверцей в прихожей спрятан щит автоматизации"],
-        ["/img/solutions/abrom_bishkek_kvartira/7.jpeg", "Щит автоматизации квартиры"],
-        ["/img/solutions/abrom_bishkek_kvartira/8.jpeg", "Модули Wiren Board крупным планом"],
-        ["/img/solutions/abrom_bishkek_kvartira/9.jpeg", "Красивые светильники над обеденным столом"]
+        ["abrom_bishkek_kvartira/6.jpeg", "За левой дверцей в прихожей спрятан щит автоматизации"],
+        ["abrom_bishkek_kvartira/7.jpeg", "Щит автоматизации квартиры"],
+        ["abrom_bishkek_kvartira/8.jpeg", "Модули Wiren Board крупным планом"],
+        ["abrom_bishkek_kvartira/9.jpeg", "Красивые светильники над обеденным столом"]
     ]'
 }
 
@@ -85,10 +85,10 @@ C Wiren Board Минуллин Магди познакомился в 2019 го�
 
 :gallery{
     :data='[
-        ["/img/solutions/abrom_bishkek_kvartira/10.jpeg", "Подсветка самой кухни"],
-        ["/img/solutions/abrom_bishkek_kvartira/11.jpeg", "Подсветка в коридоре"],
-        ["/img/solutions/abrom_bishkek_kvartira/12.jpeg", "Подсветка в гостиной"],
-        ["/img/solutions/abrom_bishkek_kvartira/13.jpeg", "Диван в гостиной"]
+        ["abrom_bishkek_kvartira/10.jpeg", "Подсветка самой кухни"],
+        ["abrom_bishkek_kvartira/11.jpeg", "Подсветка в коридоре"],
+        ["abrom_bishkek_kvartira/12.jpeg", "Подсветка в гостиной"],
+        ["abrom_bishkek_kvartira/13.jpeg", "Диван в гостиной"]
     ]'
 }
 
@@ -100,10 +100,10 @@ C Wiren Board Минуллин Магди познакомился в 2019 го�
 
 :gallery{
     :data='[
-        ["/img/solutions/abrom_bishkek_kvartira/14.jpeg", "Термоэлектрический привод радиатора"],
-        ["/img/solutions/abrom_bishkek_kvartira/15.jpeg", "Кондиционер в гостиной"],
-        ["/img/solutions/abrom_bishkek_kvartira/16.jpeg", "Светильники в гостиной"],
-        ["/img/solutions/abrom_bishkek_kvartira/17.jpeg", "А теперь включим светильник"]
+        ["abrom_bishkek_kvartira/14.jpeg", "Термоэлектрический привод радиатора"],
+        ["abrom_bishkek_kvartira/15.jpeg", "Кондиционер в гостиной"],
+        ["abrom_bishkek_kvartira/16.jpeg", "Светильники в гостиной"],
+        ["abrom_bishkek_kvartira/17.jpeg", "А теперь включим светильник"]
     ]'
 }
 
@@ -117,10 +117,10 @@ C Wiren Board Минуллин Магди познакомился в 2019 го�
 
 :gallery{
     :data='[
-        ["/img/solutions/abrom_bishkek_kvartira/18.jpeg", "Датчик температуры на кухне"],
-        ["/img/solutions/abrom_bishkek_kvartira/19.jpeg", "Датчик температуры в санузле"],
-        ["/img/solutions/abrom_bishkek_kvartira/20.jpeg", "Кухня с открытыми шторами"],
-        ["/img/solutions/abrom_bishkek_kvartira/21.jpeg", "А теперь закрываем шторы"]
+        ["abrom_bishkek_kvartira/18.jpeg", "Датчик температуры на кухне"],
+        ["abrom_bishkek_kvartira/19.jpeg", "Датчик температуры в санузле"],
+        ["abrom_bishkek_kvartira/20.jpeg", "Кухня с открытыми шторами"],
+        ["abrom_bishkek_kvartira/21.jpeg", "А теперь закрываем шторы"]
     ]'
 }
 
@@ -152,17 +152,17 @@ C Wiren Board Минуллин Магди познакомился в 2019 го�
 
 :gallery{
     :data='[
-        ["/img/solutions/abrom_bishkek_kvartira/22.jpeg", "В спальне добавили умную розетку Zigbee"],
-        ["/img/solutions/abrom_bishkek_kvartira/23.jpeg", "Спальня с открытыми шторами"],
-        ["/img/solutions/abrom_bishkek_kvartira/24.jpeg", "Привод для штор"],
-        ["/img/solutions/abrom_bishkek_kvartira/25.jpeg", "Подсветка шкафа в гостиной"]
+        ["abrom_bishkek_kvartira/22.jpeg", "В спальне добавили умную розетку Zigbee"],
+        ["abrom_bishkek_kvartira/23.jpeg", "Спальня с открытыми шторами"],
+        ["abrom_bishkek_kvartira/24.jpeg", "Привод для штор"],
+        ["abrom_bishkek_kvartira/25.jpeg", "Подсветка шкафа в гостиной"]
     ]'
 }
 
 ## Преимущества
 
 :photo{
-    src="/img/solutions/abrom_bishkek_kvartira/27.jpeg"
+    src="abrom_bishkek_kvartira/27.jpeg"
     caption="Шторы в гостиной"
     width="400"
     float="right"

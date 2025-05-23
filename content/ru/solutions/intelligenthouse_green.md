@@ -1,7 +1,7 @@
 ---
 title: 'Intelligent House: автоматизация одноэтажного коттеджа площадью 500 м² с тёплыми полами'
 url: https://wirenboard.com/ru/pages/solutions-intelligenthouse-green/  
-cover: /img/solutions/intelligenthouse_green.jpg
+cover: intelligenthouse_green/intelligenthouse_green.jpg
 date: 2023-04-28
 category: apartments_automation
 ---

@@ -1,6 +1,6 @@
 ---
 title: 'Умная квартира 205 м² с пятью комнатами'
-cover: /img/solutions/avaelectro_apartments.webp
+cover: avaelectro_apartments/avaelectro_apartments.webp
 date: 2025-03-26
 category: apartments_automation
 ---
@@ -10,7 +10,7 @@ _«Wiren Board — партнер, который разделяет наш по
 ## О компании
 
 :photo{
-    src="/img/solutions/avaelectro_apartments/1.jpg"
+    src="avaelectro_apartments/1.jpg"
     caption="Коллаж на тему квартиры"
     width="400"
     float="right"
@@ -24,10 +24,10 @@ AVAelectro сочетает инженерный подход, внимание 
 
 :gallery{
     :data='[
-        ["/img/solutions/avaelectro_apartments/2.jpeg", "План квартиры с расстановкой мебели"],
-        ["/img/solutions/avaelectro_apartments/3.jpeg", "Рендер. Слева — прихожая, справа — кухня-гостиная"],
-        ["/img/solutions/avaelectro_apartments/4.jpeg", "Рендер. Кухня-гостиная"],
-        ["/img/solutions/avaelectro_apartments/5.jpeg", "Рендер. Мастер-спальня"]
+        ["avaelectro_apartments/2.jpeg", "План квартиры с расстановкой мебели"],
+        ["avaelectro_apartments/3.jpeg", "Рендер. Слева — прихожая, справа — кухня-гостиная"],
+        ["avaelectro_apartments/4.jpeg", "Рендер. Кухня-гостиная"],
+        ["avaelectro_apartments/5.jpeg", "Рендер. Мастер-спальня"]
     ]'
 }
 
@@ -46,10 +46,10 @@ AVAelectro сочетает инженерный подход, внимание 
 
 :gallery{
     :data='[
-        ["/img/solutions/avaelectro_apartments/6.jpeg", "Кухня-гостиная"],
-        ["/img/solutions/avaelectro_apartments/7.jpeg", "Коридор"],
-        ["/img/solutions/avaelectro_apartments/8.jpeg", "Лоток для кота установили в гардеробной, снизу оставили зазор, чтобы питомец мог попадать внутрь даже при закрытых дверях"],
-        ["/img/solutions/avaelectro_apartments/9.jpeg", "Мастер-спальня"]
+        ["avaelectro_apartments/6.jpeg", "Кухня-гостиная"],
+        ["avaelectro_apartments/7.jpeg", "Коридор"],
+        ["avaelectro_apartments/8.jpeg", "Лоток для кота установили в гардеробной, снизу оставили зазор, чтобы питомец мог попадать внутрь даже при закрытых дверях"],
+        ["avaelectro_apartments/9.jpeg", "Мастер-спальня"]
     ]'
 }
 
@@ -73,10 +73,10 @@ AVAelectro сочетает инженерный подход, внимание 
 
 :gallery{
     :data='[
-        ["/img/solutions/avaelectro_apartments/10.jpeg", "Щит в гардеробной, верхняя часть выделена под автоматизацию"],
-        ["/img/solutions/avaelectro_apartments/11.jpeg", "Нижняя — под электрику"],
-        ["/img/solutions/avaelectro_apartments/12.jpeg", "Сборка щита в мастерской AVAelectro"],
-        ["/img/solutions/avaelectro_apartments/13.jpeg", "Сборка щита в мастерской AVAelectro"]
+        ["avaelectro_apartments/10.jpeg", "Щит в гардеробной, верхняя часть выделена под автоматизацию"],
+        ["avaelectro_apartments/11.jpeg", "Нижняя — под электрику"],
+        ["avaelectro_apartments/12.jpeg", "Сборка щита в мастерской AVAelectro"],
+        ["avaelectro_apartments/13.jpeg", "Сборка щита в мастерской AVAelectro"]
     ]'
 }
 
@@ -100,10 +100,10 @@ AVAelectro сочетает инженерный подход, внимание 
 
 :gallery{
     :data='[
-        ["/img/solutions/avaelectro_apartments/14.jpeg", "Светильники в коридоре"],
-        ["/img/solutions/avaelectro_apartments/15.jpeg", "Светильники и подсветка в коридоре"],
-        ["/img/solutions/avaelectro_apartments/16.jpeg", "Светильник подсветки"],
-        ["/img/solutions/avaelectro_apartments/17.jpeg", "Подсветка в другом коридоре"]
+        ["avaelectro_apartments/14.jpeg", "Светильники в коридоре"],
+        ["avaelectro_apartments/15.jpeg", "Светильники и подсветка в коридоре"],
+        ["avaelectro_apartments/16.jpeg", "Светильник подсветки"],
+        ["avaelectro_apartments/17.jpeg", "Подсветка в другом коридоре"]
     ]'
 } 
 
@@ -134,10 +134,10 @@ AVAelectro сочетает инженерный подход, внимание 
 
 :gallery{
     :data='[
-        ["/img/solutions/avaelectro_apartments/18.jpeg", "Вытяжка в гардеробной на переднем плане, в центре снимка - универсальный датчик WB-MSW"],
-        ["/img/solutions/avaelectro_apartments/19.jpeg", "Кондиционер в гостиной"],
-        ["/img/solutions/avaelectro_apartments/20.jpeg", "Термостат Lytko и универсальный датчик WB-MSW в прихожей"],
-        ["/img/solutions/avaelectro_apartments/21.jpeg", "Бризер TION 4s в гостиной"]
+        ["avaelectro_apartments/18.jpeg", "Вытяжка в гардеробной на переднем плане, в центре снимка - универсальный датчик WB-MSW"],
+        ["avaelectro_apartments/19.jpeg", "Кондиционер в гостиной"],
+        ["avaelectro_apartments/20.jpeg", "Термостат Lytko и универсальный датчик WB-MSW в прихожей"],
+        ["avaelectro_apartments/21.jpeg", "Бризер TION 4s в гостиной"]
     ]'
 }  
 
@@ -169,10 +169,10 @@ AVAelectro сочетает инженерный подход, внимание 
 
 :gallery{
     :data='[
-        ["/img/solutions/avaelectro_apartments/22.jpeg", "Умный замок Aqara Smart Lock D200i с внутренней стороны двери"],
-        ["/img/solutions/avaelectro_apartments/23.jpeg", "Умный робот-пылесос"],
-        ["/img/solutions/avaelectro_apartments/24.jpeg", "Умный замок Aqara Smart Lock D200i и звонок Aqara Doorbell G4 с внешней стороны двери"],
-        ["/img/solutions/avaelectro_apartments/25.jpeg", "Универсальный датчик WB-MSW в гостиной"]
+        ["avaelectro_apartments/22.jpeg", "Умный замок Aqara Smart Lock D200i с внутренней стороны двери"],
+        ["avaelectro_apartments/23.jpeg", "Умный робот-пылесос"],
+        ["avaelectro_apartments/24.jpeg", "Умный замок Aqara Smart Lock D200i и звонок Aqara Doorbell G4 с внешней стороны двери"],
+        ["avaelectro_apartments/25.jpeg", "Универсальный датчик WB-MSW в гостиной"]
     ]'
 }   
 
@@ -192,17 +192,17 @@ AVAelectro сочетает инженерный подход, внимание 
 
 :gallery{
     :data='[
-        ["/img/solutions/avaelectro_apartments/26.jpeg", "Колонка Duo Max с дисплеем на кухне"],
-        ["/img/solutions/avaelectro_apartments/27.jpeg", "Телевизор в гостиной с колонкой Max"],
-        ["/img/solutions/avaelectro_apartments/28.jpeg", "Алиса MiDi в комнате старшей дочери"],
-        ["/img/solutions/avaelectro_apartments/29.jpeg", "Телевизор и колонка Max в мастер-спальне"]
+        ["avaelectro_apartments/26.jpeg", "Колонка Duo Max с дисплеем на кухне"],
+        ["avaelectro_apartments/27.jpeg", "Телевизор в гостиной с колонкой Max"],
+        ["avaelectro_apartments/28.jpeg", "Алиса MiDi в комнате старшей дочери"],
+        ["avaelectro_apartments/29.jpeg", "Телевизор и колонка Max в мастер-спальне"]
     ]'
 }   
 
 ## Преимущества
 
 :photo{
-    src="/img/solutions/avaelectro_apartments/30.jpeg"
+    src="avaelectro_apartments/30.jpeg"
     caption="Подсветка шкафа в гостиной"
     width="400"
     float="right"

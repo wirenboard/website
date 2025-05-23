@@ -1,6 +1,6 @@
 ---
 title: 'ЖК «ЛесART»: умный дом даже в комфорт-классе'
-cover: /img/solutions/lesart.webp
+cover: lesart/lesart.webp
 date: 2024-11-28
 category: building_dispatching
 ---
@@ -10,7 +10,7 @@ _«Оборудование Wiren Board позволяет нам создава
 ## О компании
 
 :photo{
-    src="/img/solutions/lesart/1.jpg"
+    src="lesart/1.jpg"
     caption="Коллаж ЛесART"
     width="400"
     float="right"
@@ -34,10 +34,10 @@ _«Оборудование Wiren Board позволяет нам создава
 
 :gallery{
     :data='[
-        ["/img/solutions/lesart/2.jpeg", "Двор ЖК «ЛесART»"],
-        ["/img/solutions/lesart/3.jpeg", "Двор ЖК «ЛесART»"],
-        ["/img/solutions/lesart/4.jpeg", "Лестница в подъезде красивая"],
-        ["/img/solutions/lesart/5.jpeg", "Но лучше воспользоваться лифтом"]
+        ["lesart/2.jpeg", "Двор ЖК «ЛесART»"],
+        ["lesart/3.jpeg", "Двор ЖК «ЛесART»"],
+        ["lesart/4.jpeg", "Лестница в подъезде красивая"],
+        ["lesart/5.jpeg", "Но лучше воспользоваться лифтом"]
     ]'
 }
 
@@ -51,10 +51,10 @@ _«Оборудование Wiren Board позволяет нам создава
 
 :gallery{
     :data='[
-        ["/img/solutions/lesart/6.jpeg", "Первая демо-квартира однокомнатная с черновой отделкой. Но уже умная"],
-        ["/img/solutions/lesart/7.jpeg", "У всех радиаторов электротермические приводы"],
-        ["/img/solutions/lesart/8.jpeg", "Управляемый радиатор отопления"],
-        ["/img/solutions/lesart/9.jpeg", "Запорная арматура с контроллером «Гидролок», справа можно увидеть датчик протечки на полу"]
+        ["lesart/6.jpeg", "Первая демо-квартира однокомнатная с черновой отделкой. Но уже умная"],
+        ["lesart/7.jpeg", "У всех радиаторов электротермические приводы"],
+        ["lesart/8.jpeg", "Управляемый радиатор отопления"],
+        ["lesart/9.jpeg", "Запорная арматура с контроллером «Гидролок», справа можно увидеть датчик протечки на полу"]
     ]'
 }
 
@@ -68,10 +68,10 @@ _«Оборудование Wiren Board позволяет нам создава
 
 :gallery{
     :data='[
-        ["/img/solutions/lesart/10.jpeg", "Датчик движения WB-MSW при входе в квартиру"],
-        ["/img/solutions/lesart/11.jpeg", "Датчик температуры и влажности WB-MSW"],
-        ["/img/solutions/lesart/12.jpeg", "Переходим ко второй демо-квартире, уже двухкомнатной"],
-        ["/img/solutions/lesart/13.jpeg", "Здесь тоже используют запорную арматуру с контроллером «Гидролок» в стояке"]
+        ["lesart/10.jpeg", "Датчик движения WB-MSW при входе в квартиру"],
+        ["lesart/11.jpeg", "Датчик температуры и влажности WB-MSW"],
+        ["lesart/12.jpeg", "Переходим ко второй демо-квартире, уже двухкомнатной"],
+        ["lesart/13.jpeg", "Здесь тоже используют запорную арматуру с контроллером «Гидролок» в стояке"]
     ]'
 }
 
@@ -83,10 +83,10 @@ _«Оборудование Wiren Board позволяет нам создава
 
 :gallery{
     :data='[
-        ["/img/solutions/lesart/14.jpeg", "Мастер-спальня"],
-        ["/img/solutions/lesart/15.jpeg", "Кухня и умная колонка"],
-        ["/img/solutions/lesart/16.jpeg", "Планшет для управления умным домом"],
-        ["/img/solutions/lesart/17.jpeg", "Для управления используют приложение WISE Home"]
+        ["lesart/14.jpeg", "Мастер-спальня"],
+        ["lesart/15.jpeg", "Кухня и умная колонка"],
+        ["lesart/16.jpeg", "Планшет для управления умным домом"],
+        ["lesart/17.jpeg", "Для управления используют приложение WISE Home"]
     ]'
 }
 
@@ -104,17 +104,17 @@ _«Оборудование Wiren Board позволяет нам создава
 
 :gallery{
     :data='[
-        ["/img/solutions/lesart/18.jpeg", "Щит автоматизации с модулями реле"],
-        ["/img/solutions/lesart/19.png", "Скриншот приложения WISE Home от разработчика Wise City"],
-        ["/img/solutions/lesart/20.png", "Скриншот приложения WISE Home от разработчика Wise City"],
-        ["/img/solutions/lesart/21.png", "Скриншот приложения WISE Home от разработчика Wise City"]
+        ["lesart/18.jpeg", "Щит автоматизации с модулями реле"],
+        ["lesart/19.png", "Скриншот приложения WISE Home от разработчика Wise City"],
+        ["lesart/20.png", "Скриншот приложения WISE Home от разработчика Wise City"],
+        ["lesart/21.png", "Скриншот приложения WISE Home от разработчика Wise City"]
     ]'
 }
 
 ## Преимущества
 
 :photo{
-    src="/img/solutions/lesart/22.jpeg"
+    src="lesart/22.jpeg"
     caption="Контроллер Wiren Board 8"
     width="400"
     float="right"

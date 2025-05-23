@@ -1,6 +1,6 @@
 ---
 title: 'Automation of Air Conditioner Rotation in a Server Room of an Industrial Facility'
-cover: /img/solutions/en/itvision_industrial.webp
+cover: itvision_industrial/itvision_industrial.webp
 date: 2025-01-18
 category: industrial_dispatching_monitoring
 ---
@@ -10,7 +10,7 @@ _«Wiren Board is ideal for both industrial and commercial facilities. It allows
 ## About the Company
 
 :photo{
-    src="/img/solutions/en/itvision_industrial/9.png"
+    src="itvision_industrial/9.png"
     caption="Temperature graphs from multiple sensors"
     width="400"
     float="right"
@@ -28,10 +28,10 @@ This project marked a turning point for IT Vision. Vladimir became convinced of 
 
 :gallery{
     :data='[
-        ["/img/solutions/en/itvision_industrial/1.jpg", "WB-MS sensor for temperature and humidity monitoring"],
-        ["/img/solutions/en/itvision_industrial/2.jpg", "Wiren Board modules installed in the server rack"],
-        ["/img/solutions/en/itvision_industrial/3.jpg", "One of the air conditioners in the server room"],
-        ["/img/solutions/en/itvision_industrial/4.png", "Automation rules configured on the Wiren Board controller"]
+        ["itvision_industrial/1.jpg", "WB-MS sensor for temperature and humidity monitoring"],
+        ["itvision_industrial/2.jpg", "Wiren Board modules installed in the server rack"],
+        ["itvision_industrial/3.jpg", "One of the air conditioners in the server room"],
+        ["itvision_industrial/4.png", "Automation rules configured on the Wiren Board controller"]
     ]'
 }
 
@@ -43,10 +43,10 @@ Initially, the customer used the BRKV-04 air conditioner rotation unit with IR c
 
 :gallery{
     :data='[
-        ["/img/solutions/en/itvision_industrial/6.jpg", "Air conditioners in the server room equipped with IR sensors"],
-        ["/img/solutions/en/itvision_industrial/7.png", "Dashboard displayed in the web interface of the Wiren Board controller"],
-        ["/img/solutions/en/itvision_industrial/10.jpg", "Server room"],
-        ["/img/solutions/en/itvision_industrial/8.png", "Telegram channel for system alerts and notifications"]
+        ["itvision_industrial/6.jpg", "Air conditioners in the server room equipped with IR sensors"],
+        ["itvision_industrial/7.png", "Dashboard displayed in the web interface of the Wiren Board controller"],
+        ["itvision_industrial/10.jpg", "Server room"],
+        ["itvision_industrial/8.png", "Telegram channel for system alerts and notifications"]
     ]'
 }
 
@@ -63,7 +63,7 @@ To integrate data into Grafana, IT Vision used **MQTT** along with a custom **Py
 ## Advantages
 
 :photo{
-    src="/img/solutions/en/itvision_industrial/5.png"
+    src="itvision_industrial/5.png"
     caption="Server room monitoring dashboard"
     width="400"
     float="right"

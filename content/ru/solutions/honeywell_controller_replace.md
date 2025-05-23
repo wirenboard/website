@@ -1,6 +1,6 @@
 ---
 title: 'Заменяем Honeywell на Wiren Board: контроллер для диспетчеризации инженерных систем ресторана'
-cover: /img/solutions/honeywell_controller_replace.jpg
+cover: honeywell_controller_replace/honeywell_controller_replace.jpg
 date: 2024-09-17
 category: shops_restaurants_monitoring
 ---
@@ -41,10 +41,10 @@ C Wiren Board Кирилл познакомился на [выставке HI-TE
 
 :gallery{
     :data='[
-        ["/img/solutions/honeywell_controller_replace/board_1.jpg", "Новая версия щита с контроллером WIRENBOARD PRO"],
-        ["/img/solutions/honeywell_controller_replace/board_2.jpg", "Старая версия щита с контроллером Honeywell"],
-        ["/img/solutions/honeywell_controller_replace/panel_1.jpg", "Панель WEINTEK на щите для локального управления"],
-        ["/img/solutions/honeywell_controller_replace/panel_2.jpg", "Пульт управления контроллером SWEGON приточной вентиляционной установки"]
+        ["honeywell_controller_replace/board_1.jpg", "Новая версия щита с контроллером WIRENBOARD PRO"],
+        ["honeywell_controller_replace/board_2.jpg", "Старая версия щита с контроллером Honeywell"],
+        ["honeywell_controller_replace/panel_1.jpg", "Панель WEINTEK на щите для локального управления"],
+        ["honeywell_controller_replace/panel_2.jpg", "Пульт управления контроллером SWEGON приточной вентиляционной установки"]
     ]'
 }
 
@@ -63,20 +63,20 @@ C Wiren Board Кирилл познакомился на [выставке HI-TE
 
 :gallery{
     :data='[
-        ["/img/solutions/honeywell_controller_replace/scheme_1.png", "Схема подключения других контроллеров и модулей ввода/вывода к WIRENBOARD PRO"],
-        ["/img/solutions/honeywell_controller_replace/scheme_2.png", "Интерфейс системы диспетчеризации ресторана (2)"],
-        ["/img/solutions/honeywell_controller_replace/scheme_3.png", "Интерфейс системы диспетчеризации ресторана (3)"],
-        ["/img/solutions/honeywell_controller_replace/scheme_4.png", "Интерфейс системы диспетчеризации ресторана (4)"],
-        ["/img/solutions/honeywell_controller_replace/scheme_5.png", "Интерфейс MCS Configurator"],
-        ["/img/solutions/honeywell_controller_replace/scheme_6.png", "Интерфейс MCS Configurator (2)"],
-        ["/img/solutions/honeywell_controller_replace/scheme_7.png", "Графики в интерфейсе диспетчеризации"]
+        ["honeywell_controller_replace/scheme_1.png", "Схема подключения других контроллеров и модулей ввода/вывода к WIRENBOARD PRO"],
+        ["honeywell_controller_replace/scheme_2.png", "Интерфейс системы диспетчеризации ресторана (2)"],
+        ["honeywell_controller_replace/scheme_3.png", "Интерфейс системы диспетчеризации ресторана (3)"],
+        ["honeywell_controller_replace/scheme_4.png", "Интерфейс системы диспетчеризации ресторана (4)"],
+        ["honeywell_controller_replace/scheme_5.png", "Интерфейс MCS Configurator"],
+        ["honeywell_controller_replace/scheme_6.png", "Интерфейс MCS Configurator (2)"],
+        ["honeywell_controller_replace/scheme_7.png", "Графики в интерфейсе диспетчеризации"]
     ]'
     }
 
 ## Преимущества
 
 :photo{
-    src="/img/solutions/honeywell_controller_replace/interface.png"
+    src="honeywell_controller_replace/interface.png"
     caption="Интерфейс системы диспетчеризации ресторана"
     width="400"
     float="right"

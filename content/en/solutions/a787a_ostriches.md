@@ -1,6 +1,6 @@
 ---
 title: 'Farm Automation: Incubators, Brooders, and Poultry House'
-cover: /img/solutions/en/a787a_ostriches.webp
+cover: a787a_ostriches/a787a_ostriches.webp
 date: 2025-03-31
 category: agriculture_automation
 ---
@@ -10,7 +10,7 @@ _«The Wiren Board controller turned into a true Swiss Army knife on the farm. I
 ## About the Company
 
 :photo{
-    src="/img/solutions/en/a787a_ostriches/1.jpg"
+    src="a787a_ostriches/1.jpg"
     caption="Collage of the Ostrich Farm"
     width="400"
     float="right"
@@ -26,10 +26,10 @@ Maxim decided to fix this. He set out to build a control system from the ground 
 
 :gallery{
     :data='[
-        ["/img/solutions/en/a787a_ostriches/2.jpeg", "Ostrich on the farm"],
-        ["/img/solutions/en/a787a_ostriches/3.jpeg", "Ostrich on the farm"],
-        ["/img/solutions/en/a787a_ostriches/4.jpeg", "Peacocks are also present on the farm"],
-        ["/img/solutions/en/a787a_ostriches/5.jpeg", "Ostrich on the farm"]
+        ["a787a_ostriches/2.jpeg", "Ostrich on the farm"],
+        ["a787a_ostriches/3.jpeg", "Ostrich on the farm"],
+        ["a787a_ostriches/4.jpeg", "Peacocks are also present on the farm"],
+        ["a787a_ostriches/5.jpeg", "Ostrich on the farm"]
     ]'
 }
 
@@ -77,10 +77,10 @@ Another [**Wiren Board 7**](https://wirenboard.com/en/catalog/) manages devices 
 
 :gallery{
     :data='[
-        ["/img/solutions/en/a787a_ostriches/6.jpeg", "Ground floor switchboard"],
-        ["/img/solutions/en/a787a_ostriches/7.jpeg", "Automation switchboard on the second floor"],
-        ["/img/solutions/en/a787a_ostriches/8.jpeg", "Summer pens"],
-        ["/img/solutions/en/a787a_ostriches/9.jpeg", "More ostriches"]
+        ["a787a_ostriches/6.jpeg", "Ground floor switchboard"],
+        ["a787a_ostriches/7.jpeg", "Automation switchboard on the second floor"],
+        ["a787a_ostriches/8.jpeg", "Summer pens"],
+        ["a787a_ostriches/9.jpeg", "More ostriches"]
     ]'
 }
 
@@ -98,10 +98,10 @@ Although the enclosures don’t yet have supply ventilation, the exhaust fans ar
 
 :gallery{
     :data='[
-        ["/img/solutions/en/a787a_ostriches/10.jpeg", "Winter pens"],
-        ["/img/solutions/en/a787a_ostriches/11.jpeg", "Incubators"],
-        ["/img/solutions/en/a787a_ostriches/12.jpeg", "Test stand with Wiren Board"],
-        ["/img/solutions/en/a787a_ostriches/13.jpeg", "Temperature sensors for evaluating incubation quality"]
+        ["a787a_ostriches/10.jpeg", "Winter pens"],
+        ["a787a_ostriches/11.jpeg", "Incubators"],
+        ["a787a_ostriches/12.jpeg", "Test stand with Wiren Board"],
+        ["a787a_ostriches/13.jpeg", "Temperature sensors for evaluating incubation quality"]
     ]'
 }
 
@@ -129,10 +129,10 @@ To prevent outages from affecting incubation, all incubators are backed by a 10�
 
 :gallery{
     :data='[
-        ["/img/solutions/en/a787a_ostriches/14.jpeg", "Combined sensor in the incubator"],
-        ["/img/solutions/en/a787a_ostriches/15.jpeg", "Room for roosters"],
-        ["/img/solutions/en/a787a_ostriches/16.jpeg", "This number of roosters isn&apos;t needed on the farm, so they will soon be slaughtered for meat"],
-        ["/img/solutions/en/a787a_ostriches/17.jpeg", "But for now, the roosters are fed and watered"]
+        ["a787a_ostriches/14.jpeg", "Combined sensor in the incubator"],
+        ["a787a_ostriches/15.jpeg", "Room for roosters"],
+        ["a787a_ostriches/16.jpeg", "This number of roosters isn&apos;t needed on the farm, so they will soon be slaughtered for meat"],
+        ["a787a_ostriches/17.jpeg", "But for now, the roosters are fed and watered"]
     ]'
 }
 
@@ -158,10 +158,10 @@ Now, Maxim suspects inbreeding. The previous owner allowed free mating without s
 
 :gallery{
     :data='[
-        ["/img/solutions/en/a787a_ostriches/18.jpeg", "Ostrich hatch"],
-        ["/img/solutions/en/a787a_ostriches/19.jpeg", "Intermediate monitoring of the incubator&apos;s conditions"],
-        ["/img/solutions/en/a787a_ostriches/20.jpeg", "Lighting control in all hatchery rooms"],
-        ["/img/solutions/en/a787a_ostriches/21.jpeg", "WB-MSW sensor in the brooder rooms"]
+        ["a787a_ostriches/18.jpeg", "Ostrich hatch"],
+        ["a787a_ostriches/19.jpeg", "Intermediate monitoring of the incubator&apos;s conditions"],
+        ["a787a_ostriches/20.jpeg", "Lighting control in all hatchery rooms"],
+        ["a787a_ostriches/21.jpeg", "WB-MSW sensor in the brooder rooms"]
     ]'
 }
 
@@ -183,10 +183,10 @@ Ideal humidity in the poultry house is 50–60%. At this level, birds drink less
 
 :gallery{
     :data='[
-        ["/img/solutions/en/a787a_ostriches/22.jpeg", "Poultry house"],
-        ["/img/solutions/en/a787a_ostriches/23.jpeg", "Feeders and drinkers raised for cleaning"],
-        ["/img/solutions/en/a787a_ostriches/24.jpeg", "Brooder. The IP camera is visible, and behind the back panel, temperature sensors are installed"],
-        ["/img/solutions/en/a787a_ostriches/25.jpeg", "Different breeds of hens lay eggs of different colors"]
+        ["a787a_ostriches/22.jpeg", "Poultry house"],
+        ["a787a_ostriches/23.jpeg", "Feeders and drinkers raised for cleaning"],
+        ["a787a_ostriches/24.jpeg", "Brooder. The IP camera is visible, and behind the back panel, temperature sensors are installed"],
+        ["a787a_ostriches/25.jpeg", "Different breeds of hens lay eggs of different colors"]
     ]'
 }
 

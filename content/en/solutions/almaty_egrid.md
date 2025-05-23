@@ -1,6 +1,6 @@
 ---
 title: 'Smart 142 m² Apartment with an Advanced Ventilation and Air Conditioning System'
-cover: /img/solutions/en/almaty_egrid.webp
+cover: almaty_egrid/almaty_egrid.webp
 date: 2025-01-14
 category: apartments_automation
 ---
@@ -10,7 +10,7 @@ _"We chose the Wiren Board controller for our automation projects because of its
 ## About the Company
 
 :photo{
-    src="/img/solutions/en/almaty_egrid/1.jpg"
+    src="almaty_egrid/1.jpg"
     caption="Collage of the Apartment"
     width="400"
     float="right"
@@ -24,10 +24,10 @@ Egor first encountered Wiren Board equipment while working as an installer on sm
 
 :gallery{
     :data='[
-        ["/img/solutions/en/almaty_egrid/2.jpeg", "Apartment building in Almaty, home to Alexander&apos;s apartment"],
-        ["/img/solutions/en/almaty_egrid/3.jpeg", "Spacious children&apos;s room. The owner has two daughters; their beds will be on the upper tier"],
-        ["/img/solutions/en/almaty_egrid/4.jpeg", "Walk-in closet with a central island. Can you spot the WB-MSW universal sensor?"],
-        ["/img/solutions/en/almaty_egrid/5.jpeg", "The walk-in closet connects to the master bedroom"]
+        ["almaty_egrid/2.jpeg", "Apartment building in Almaty, home to Alexander&apos;s apartment"],
+        ["almaty_egrid/3.jpeg", "Spacious children&apos;s room. The owner has two daughters; their beds will be on the upper tier"],
+        ["almaty_egrid/4.jpeg", "Walk-in closet with a central island. Can you spot the WB-MSW universal sensor?"],
+        ["almaty_egrid/5.jpeg", "The walk-in closet connects to the master bedroom"]
     ]'
 }
 
@@ -41,10 +41,10 @@ A standout feature of the apartment is its advanced ventilation system, which su
 
 :gallery{
     :data='[
-        ["/img/solutions/en/almaty_egrid/6.jpeg", "Bedside feature wall in the master bedroom"],
-        ["/img/solutions/en/almaty_egrid/7.jpeg", "Smart speaker with Alice in the master bedroom"],
-        ["/img/solutions/en/almaty_egrid/8.jpeg", "WB-MSW universal sensor and control panels for ventilation and air conditioning in the master bedroom"],
-        ["/img/solutions/en/almaty_egrid/9.jpeg", "Spotlights in the walk-in closet, with a large motion sensor visible on the right"]
+        ["almaty_egrid/6.jpeg", "Bedside feature wall in the master bedroom"],
+        ["almaty_egrid/7.jpeg", "Smart speaker with Alice in the master bedroom"],
+        ["almaty_egrid/8.jpeg", "WB-MSW universal sensor and control panels for ventilation and air conditioning in the master bedroom"],
+        ["almaty_egrid/9.jpeg", "Spotlights in the walk-in closet, with a large motion sensor visible on the right"]
     ]'
 }
 
@@ -66,10 +66,10 @@ Leakage protection is implemented using the Ensystec system. In the event of a l
 
 :gallery{
     :data='[
-        ["/img/solutions/en/almaty_egrid/10.jpeg", "First panel with automation modules and LED strip power supplies"],
-        ["/img/solutions/en/almaty_egrid/11.jpeg", "Second automation panel"],
-        ["/img/solutions/en/almaty_egrid/12.jpeg", "Close-up view of the left side of the panel"],
-        ["/img/solutions/en/almaty_egrid/13.jpeg", "Close-up view of the right side of the panel"]
+        ["almaty_egrid/10.jpeg", "First panel with automation modules and LED strip power supplies"],
+        ["almaty_egrid/11.jpeg", "Second automation panel"],
+        ["almaty_egrid/12.jpeg", "Close-up view of the left side of the panel"],
+        ["almaty_egrid/13.jpeg", "Close-up view of the right side of the panel"]
     ]'
 }
 
@@ -92,10 +92,10 @@ Bticino call switches were installed to manage the lighting. These switches are 
 
 :gallery{
     :data='[
-        ["/img/solutions/en/almaty_egrid/14.jpeg", "Chandelier in the living room"],
-        ["/img/solutions/en/almaty_egrid/15.jpeg", "Spotlights, air diffusers, and Ubiquiti access point in the living room"],
-        ["/img/solutions/en/almaty_egrid/16.jpeg", "Lighting fixtures in the living room"],
-        ["/img/solutions/en/almaty_egrid/17.jpeg", "WB-MSW combination sensor in the bathroom"]
+        ["almaty_egrid/14.jpeg", "Chandelier in the living room"],
+        ["almaty_egrid/15.jpeg", "Spotlights, air diffusers, and Ubiquiti access point in the living room"],
+        ["almaty_egrid/16.jpeg", "Lighting fixtures in the living room"],
+        ["almaty_egrid/17.jpeg", "WB-MSW combination sensor in the bathroom"]
     ]'
 }
 
@@ -113,10 +113,10 @@ The centerpiece of the apartment’s comfort system is the Komfovent C5 Air Hand
 
 :gallery{
     :data='[
-        ["/img/solutions/en/almaty_egrid/18.jpeg", "WB-MSW universal sensor and control panels for the AHU and air conditioner in the living room"],
-        ["/img/solutions/en/almaty_egrid/19.jpeg", "Mechanical air diffusers, spotlights, and curtain actuators in the living room"],
-        ["/img/solutions/en/almaty_egrid/20.jpeg", "View from another angle"],
-        ["/img/solutions/en/almaty_egrid/21.jpeg", "Numerous air diffusers in the living room"]
+        ["almaty_egrid/18.jpeg", "WB-MSW universal sensor and control panels for the AHU and air conditioner in the living room"],
+        ["almaty_egrid/19.jpeg", "Mechanical air diffusers, spotlights, and curtain actuators in the living room"],
+        ["almaty_egrid/20.jpeg", "View from another angle"],
+        ["almaty_egrid/21.jpeg", "Numerous air diffusers in the living room"]
     ]'
 }
 
@@ -135,10 +135,10 @@ The owner prioritized functionality by leaving several access hatches throughout
 
 :gallery{
     :data='[
-        ["/img/solutions/en/almaty_egrid/22.jpeg", "Air diffusers in the hallway, a ventilation maintenance hatch on the right, and spotlights further down"],
-        ["/img/solutions/en/almaty_egrid/23.jpeg", "Exhaust fan in the bathroom"],
-        ["/img/solutions/en/almaty_egrid/24.jpeg", "Electrothermal actuators for underfloor heating, with the circulation pump on the left"],
-        ["/img/solutions/en/almaty_egrid/25.jpeg", "Comfovent air handling unit"]
+        ["almaty_egrid/22.jpeg", "Air diffusers in the hallway, a ventilation maintenance hatch on the right, and spotlights further down"],
+        ["almaty_egrid/23.jpeg", "Exhaust fan in the bathroom"],
+        ["almaty_egrid/24.jpeg", "Electrothermal actuators for underfloor heating, with the circulation pump on the left"],
+        ["almaty_egrid/25.jpeg", "Comfovent air handling unit"]
     ]'
 }
 
@@ -165,10 +165,10 @@ Motion sensors are essential in a smart home, especially in high-traffic areas. 
 
 :gallery{
     :data='[
-        ["/img/solutions/en/almaty_egrid/26.jpeg", "Curtain drives in the living room"],
-        ["/img/solutions/en/almaty_egrid/27.jpeg", "View from the children&apos;s room to the balcony"],
-        ["/img/solutions/en/almaty_egrid/28.jpeg", "Curtains drawn in the children&apos;s room, with a light fixture on the right"],
-        ["/img/solutions/en/almaty_egrid/29.jpeg", "Two ventilation maintenance hatches, a camera, spotlights, and an access point"]
+        ["almaty_egrid/26.jpeg", "Curtain drives in the living room"],
+        ["almaty_egrid/27.jpeg", "View from the children&apos;s room to the balcony"],
+        ["almaty_egrid/28.jpeg", "Curtains drawn in the children&apos;s room, with a light fixture on the right"],
+        ["almaty_egrid/29.jpeg", "Two ventilation maintenance hatches, a camera, spotlights, and an access point"]
     ]'
 }
 
@@ -185,7 +185,7 @@ The apartment’s network infrastructure is built on UniFi equipment, with the C
 ## Advantages
 
 :photo{
-    src="/img/solutions/en/almaty_egrid/30.jpeg"
+    src="almaty_egrid/30.jpeg"
     caption="Master bedroom: Door to the walk-in closet is open; WB-MSW universal sensor and control panels for the AHU and air conditioner are visible on the right"
     width="400"
     float="right"
