@@ -30,6 +30,7 @@ export default defineNuxtConfig({
   content: {
     locales: ['ru', 'en'],
     defaultLocale: 'ru',
+    ignores: ['jpeg', 'jpg', 'JPG', 'png', 'webp', 'avif'],
   },
   i18n: {
     locales: ['ru', 'en'],
@@ -77,4 +78,12 @@ export default defineNuxtConfig({
       unstyled: true
     }
   },
+  nitro: {
+    routeRules: {
+      '/.well-known/appspecific/**': {
+        headers: { 'cache-control': 'max-age=31536000' },
+        redirect: { to: '/', statusCode: 404 }
+      }
+    }
+  }
 })
