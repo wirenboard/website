@@ -6,7 +6,7 @@ website: https://fiord.com/
 email: info@fiord.com
 ---
 
-Официальный дистрибьютор Rockwell Automation — разработчика ISaGRAF. ISaGRAF — инструментальная **графическая среда разработки прикладных программ** для контроллеров на языках МЭК.
+Официальный дистрибьютор Rockwell Automation — разработчика ISaGRAF. ISaGRAF — инструментальная графическая среда разработки прикладных программ для контроллеров на языках МЭК.
 
 [Wiren Board 6 теперь имеет поддержку ISaGRAF 6](https://isagraf.ru/home/news/novosti/rossijskie-universalnye-modulnye-plk-novogo-pokoleniya-wiren-board-6-teper-mogut-rabotat-pod-upravleniem-isagraf-6).
 
