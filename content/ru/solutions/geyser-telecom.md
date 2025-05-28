@@ -1,4 +1,3 @@
-
 ---
 title: 'Мониторинг сельскохозяйственной техники при уборке урожая'
 cover: geyser-telecom/geyser-telecom.webp
