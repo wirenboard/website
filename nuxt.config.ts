@@ -58,6 +58,12 @@ export default defineNuxtConfig({
       xl: 1280,
     },
     presets: {
+      original: {
+        modifiers: {
+          quality: 90,
+          format: 'webp',
+        }
+      },
       preview: {
         modifiers: {
           width: 1168,
@@ -65,12 +71,13 @@ export default defineNuxtConfig({
           format: 'webp',
         }
       },
-      original: {
+      fullWidthPreview: {
         modifiers: {
-          quality: 90,
+          width: 1168,
+          quality: 100,
           format: 'webp',
         }
-      }
+      },
     }
   },
   primevue: {

@@ -49,7 +49,7 @@ const computedFigureStyle = computed(() => {
           :class="{
             'photo-imageFromGallery': isGallery
           }"
-          preset="preview"
+          :preset="width === '100%' ? 'fullWidthPreview' : 'preview'"
           :sizes="isGallery ? 'sm:50vw' : 'lg:100vw'"
           :img-attrs="{
             width,
