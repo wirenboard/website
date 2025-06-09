@@ -2,7 +2,7 @@
 import ArrowRight from '~/assets/icons/arrow-next.svg';
 import ArrowLeft from '~/assets/icons/arrow-previous.svg';
 
-defineProps<{ src: string; caption?: string; width?: number; isGallery?: boolean; withBorder?: boolean; float?: 'right' | 'left' | 'center'; }>();
+const props = defineProps<{ src: string; caption?: string; width?: number | string; isGallery?: boolean; withBorder?: boolean; float?: 'right' | 'left' | 'center'; }>();
 
 const photo = ref();
 
@@ -13,6 +13,11 @@ enum Directions {
   Previous = 37,
   Next = 39,
 }
+
+const computedFigureStyle = computed(() => {
+  const width = typeof props.width === 'string' ? props.width : `${props.width}px`;
+  return `${props.width ? `max-width: ${width};` : ''}${props.isGallery ? 'width: 100%;' : ''}`;
+});
 </script>
 
 <template>
@@ -25,7 +30,7 @@ enum Directions {
       'photo-floatLeft': float === 'left',
       'photo-center': float === 'center',
       }"
-    :style="`${width ? `max-width: ${width}px;` : ''}${isGallery ? 'width: 100%;' : ''}`"
+    :style="computedFigureStyle"
   >
     <Image
       ref="photo"
@@ -45,7 +50,7 @@ enum Directions {
             'photo-imageFromGallery': isGallery
           }"
           preset="preview"
-          sizes="md:100vw"
+          :sizes="isGallery ? 'sm:50vw' : 'lg:100vw'"
           :img-attrs="{
             width,
             class: `photo-image ${isGallery ? 'photo-imageFromGallery' : ''} ${caption ? 'photo-imageWithCaption' : ''}`,
@@ -65,7 +70,7 @@ enum Directions {
             'data-pc-section': 'original'
           }"
           preset="original"
-          sizes="xl:90vw"
+          sizes="(max-width: 1920px) 90vw, 1920px"
           densities="x1"
           :style="slotProps.style"
           @click="slotProps.onClick"

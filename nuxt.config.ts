@@ -51,22 +51,22 @@ export default defineNuxtConfig({
   image: {
     format: ['webp'],
     screens: {
-      'xs': 320,
-      'md': 768,
-      'lg': 1024,
-      'xl': 1280,
+      xs: 320,
+      sm: 768,
+      md: 1024,
+      lg: 1168,
+      xl: 1280,
     },
     presets: {
       preview: {
         modifiers: {
-          width: 800,
-          quality: 70,
+          width: 1168,
+          quality: 90,
           format: 'webp',
         }
       },
       original: {
         modifiers: {
-          width: 1280,
           quality: 90,
           format: 'webp',
         }
