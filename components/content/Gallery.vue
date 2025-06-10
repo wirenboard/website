@@ -9,6 +9,13 @@ const openedPhoto = ref(null);
 
 const numberOfGalleryColumns = computed(() => props.data.length >= 5 ? 5 : props.data.length);
 
+const previewWidth = computed(() => {
+  const cols = numberOfGalleryColumns.value;
+  const gap = 12;
+  const maxContainerWidth = 1280;
+  return Math.floor((maxContainerWidth - gap * (cols - 1)) / cols);
+});
+
 const susbscribeKeyPress = debounce(function({ keyCode }) {
   if (!openedPhoto.value) {
      return;
@@ -56,6 +63,7 @@ const getUrl = (url: string) => {
        :src="getUrl(src)"
        :caption="caption"
        :height="300"
+       :width="previewWidth"
        :withBorder="withBorder"
        isGallery
        :key="i"
