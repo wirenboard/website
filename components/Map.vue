@@ -66,7 +66,7 @@ const onMapMove = (ev: any) => {
             </LIcon>
             <LPopup>
               <NuxtImg :src="item.logo" class="partner-logo" />
-              <strong class="map-detailsLink" @click="scrollToElementById(slug(item.title as string))">
+              <strong class="map-detailsLink" @click="scrollToElementBySelector(`#${slug(item.title as string)}`)">
                 {{ item.title }}
               </strong>
             </LPopup>
@@ -86,7 +86,7 @@ const onMapMove = (ev: any) => {
             </LIcon>
             <LPopup>
               <NuxtImg :src="item.logo" class="partner-logo" />
-              <strong class="map-detailsLink" @click="scrollToElementById(slug(item.title as string))">
+              <strong class="map-detailsLink" @click="scrollToElementBySelector(`#${slug(item.title as string)}`)">
                 {{ item.title }}
               </strong>
             </LPopup>

@@ -7,7 +7,6 @@ import ContentGallery from '~/components/content/Gallery.vue';
 import ProductOptions from '~/components/content/ProductOptions.vue';
 import ProductSolutions from '~/components/content/ProductSolutions.vue';
 import { useApi } from '~/composables/useApi';
-import { scrollToElementById } from '~/utils/scrollToElementById';
 import 'swiper/css';
 
 const route = useRoute();
@@ -36,12 +35,12 @@ const { data: product } = await useApi<Product>(`/product/${data.value.article}/
         :spaceBetween="24"
         simulate-touch
       >
-        <swiper-slide class="product-navigationItem" @click="scrollToElementById('description')">{{ t('description') }}</swiper-slide>
-        <swiper-slide class="product-navigationItem" @click="scrollToElementById('useCases')" v-if="data?.use_cases?.length">{{ t('useCases') }}</swiper-slide>
-        <swiper-slide class="product-navigationItem" @click="scrollToElementById('video')" v-if="data?.video?.length">{{ t('video') }}</swiper-slide>
-        <swiper-slide class="product-navigationItem" @click="scrollToElementById('gallery')" v-if="data?.images?.length">{{ t('images') }}</swiper-slide>
-        <swiper-slide class="product-navigationItem" @click="scrollToElementById('options')" v-if="product?.options?.length">{{ t('options') }}</swiper-slide>
-        <swiper-slide class="product-navigationItem" @click="scrollToElementById('components')" v-if="product?.components?.length">{{ t('components') }}</swiper-slide>
+        <swiper-slide class="product-navigationItem" @click="scrollToElementBySelector('#description')">{{ t('description') }}</swiper-slide>
+        <swiper-slide class="product-navigationItem" @click="scrollToElementBySelector('#useCases')" v-if="data?.use_cases?.length">{{ t('useCases') }}</swiper-slide>
+        <swiper-slide class="product-navigationItem" @click="scrollToElementBySelector('#video')" v-if="data?.video?.length">{{ t('video') }}</swiper-slide>
+        <swiper-slide class="product-navigationItem" @click="scrollToElementBySelector('#gallery')" v-if="data?.images?.length">{{ t('images') }}</swiper-slide>
+        <swiper-slide class="product-navigationItem" @click="scrollToElementBySelector('#options')" v-if="product?.options?.length">{{ t('options') }}</swiper-slide>
+        <swiper-slide class="product-navigationItem" @click="scrollToElementBySelector('#components')" v-if="product?.components?.length">{{ t('components') }}</swiper-slide>
         <swiper-slide class="product-navigationItem" v-if="data.documentation">
           <a :href="data.documentation" target="_blank">
             {{ t('documentation') }}

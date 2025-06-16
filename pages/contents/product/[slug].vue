@@ -32,4 +32,5 @@ useContentHead({
   <ContentRenderer>
     <ContentRendererMarkdown :value="data" />
   </ContentRenderer>
+  <ScrollTopButton />
 </template>
