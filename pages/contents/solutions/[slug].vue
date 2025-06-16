@@ -72,7 +72,7 @@ useContentHead({
 <i18n>
 {
   "ru": {
-    "title": "Примеры внедрений",
+    "title": "Примеры использования",
     "team": "Команда Wiren Board",
     "notFoundTitle": "Страница не найдена (#404)",
     "notFoundDescription": "Что-то пошло не так"

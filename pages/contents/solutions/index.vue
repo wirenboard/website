@@ -136,7 +136,7 @@ h3.solutions-title {
 <i18n>
 {
   "ru": {
-    "title": "Примеры внедрений"
+    "title": "Примеры использования"
   },
   "en": {
     "title": "Solutions"

@@ -46,7 +46,7 @@ const { data } = await useAsyncData('solutions', () => queryContent(query.path)
 {
   "ru": {
     "additionalInfo": "Рассказы о других проектах смотрите на странице",
-    "solutionsPage": "Примеры внедрений"
+    "solutionsPage": "Примеры использования"
   },
   "en": {
     "additionalInfo": "other projects are available on",
