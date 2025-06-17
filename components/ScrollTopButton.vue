@@ -41,7 +41,7 @@ onUnmounted(() => {
   cursor: pointer;
   transition: background 0.4s ease;
 
-  @media (max-width: 400px) {
+  @media (max-width: 450px) {
     width: 48px;
     height: 48px;
     font-size: 24px;
