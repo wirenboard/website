@@ -25,8 +25,8 @@ onUnmounted(() => {
 <style>
 .scrollTopButton {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 15px;
+  right: 15px;
   width: 70px;
   height: 70px;
   display: flex;
@@ -42,8 +42,9 @@ onUnmounted(() => {
   transition: background 0.4s ease;
 
   @media (max-width: 400px) {
-    width: 60px;
-    height: 60px;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
   }
 }
 
