@@ -13,8 +13,7 @@ const filterDate = defineModel('filterDate');
 
 watch(() => filter.value, () => {
   if (props.pageId) {
-    console.log(1)
-    scrollToElementById(props.pageId);
+    scrollToElementBySelector(`#${props.pageId}`);
   }
 })
 </script>
@@ -25,10 +24,10 @@ watch(() => filter.value, () => {
     <div class="categoryFilter-content">
       <ul v-if="filter === FilterTypeKeys.ByCategory">
         <li v-for="category in categories[locale]" :key="category.name">
-          <div @click="scrollToElementById(category.name)">{{ category.label }}</div>
+          <div @click="scrollToElementBySelector(`#${category.name}`)">{{ category.label }}</div>
           <ul v-if="category.sub_category">
             <li v-for="subCategory in category.sub_category" :key="category.name">
-              <div @click="scrollToElementById(subCategory.name)">{{ subCategory.label }}</div>
+              <div @click="scrollToElementBySelector(`#${subCategory.name}`)">{{ subCategory.label }}</div>
             </li>
           </ul>
         </li>
