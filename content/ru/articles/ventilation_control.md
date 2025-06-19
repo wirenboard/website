@@ -1,6 +1,6 @@
 ---
 title: Управление вентиляцией. Из чего состоит и как управлять
-cover: /img/articles/ventilation_control.webp
+cover: ventilation_control/ventilation_control.webp
 date: 2023-04-03
 category: hardware_selection
 ---
@@ -8,7 +8,7 @@ category: hardware_selection
 ## Введение
 
 :photo{
-    src="/img/articles/ventilation_control/cover.png"
+    src="ventilation_control/cover.png"
     float="right"
     width="500"
 }
@@ -26,7 +26,7 @@ category: hardware_selection
 ## Устройство вентиляции
 
 :photo{
-    src="/img/articles/ventilation_control/ventilation_1.jpg"
+    src="ventilation_control/ventilation_1.jpg"
     caption="Устройство вентиляционной установки"
     float="right"
     width="500"
@@ -64,7 +64,7 @@ category: hardware_selection
 Структура системы автоматизации в таком случае может иметь следующий вид.
 
 :photo{
-    src="/img/articles/ventilation_control/scheme.png"
+    src="ventilation_control/scheme.png"
     caption="Структурная схема системы автоматизации вентиляции с водяным нагревом воздуха"
     float="center"
 }
@@ -85,8 +85,8 @@ category: hardware_selection
 
 :gallery{
     :data='[
-        ["/img/articles/ventilation_control/control_1.png", "Пример панели управления системой вентиляции в веб-интерфейсе контроллера Wiren Board"],
-        ["/img/articles/ventilation_control/control_2.png", "Виджеты устройств для управления вентиляцией в веб-интерфейсе контроллера Wiren Board"]
+        ["ventilation_control/control_1.png", "Пример панели управления системой вентиляции в веб-интерфейсе контроллера Wiren Board"],
+        ["ventilation_control/control_2.png", "Виджеты устройств для управления вентиляцией в веб-интерфейсе контроллера Wiren Board"]
     ]'
 }
 

@@ -1,7 +1,7 @@
 ---
 title: 'Погодозависимое управление котлом'
 url: https://pikabu.ru/story/pogodozavisimoe_upravleniya_kotlom_12636168
-cover: /img/articles/pogodozavisimoe_upravleniya_kotlom.webp
+cover: pogodozavisimoe_upravleniya_kotlom/pogodozavisimoe_upravleniya_kotlom.webp
 date: 2025-04-21
 category: heating
 ---
