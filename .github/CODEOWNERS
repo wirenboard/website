@@ -1,5 +1,5 @@
 * @wirenboard/frontend
 
 # Site content and images can be approved by docs team
-/public @wirenboard/docs
-/content @wirenboard/docs
+/public @wirenboard/marketing
+/content @wirenboard/marketing
