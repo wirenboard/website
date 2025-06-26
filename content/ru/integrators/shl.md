@@ -2,7 +2,7 @@
 district: [southern]
 coordinates: [46.347123, 48.031598]
 title: Smart Home Lab
-logo: /img/integrators/shl.webp
+logo: shl/shl.webp
 phone: 79617993434
 website: https://smart-home-lab.ru
 email: aleksandrov.a87@gmail.com

@@ -2,7 +2,7 @@
 district: [by]
 coordinates: [53.923053, 27.670267]
 title: ООО «Рацио Домус»
-logo: /img/integrators/ratiodomus.webp
+logo: ratiodomus/ratiodomus.webp
 phone: 375296249415
 website: https://z-wave.by
 email: info@z-wave.by

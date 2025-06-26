@@ -1,6 +1,6 @@
 ---
 title: Saymon
-logo: /img/partners/saymon.webp
+logo: saymon/saymon.webp
 phone: 78123099885
 website: https://saymon.info
 email: welcome@saymon.info

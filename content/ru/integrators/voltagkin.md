@@ -2,7 +2,7 @@
 district: [moscow]
 coordinates: [55.7980529, 37.5417883]
 title: Voltagkin
-logo: /img/integrators/voltagkin.webp
+logo: voltagkin/voltagkin.webp
 phone: 79952991512
 website: https://voltagkin.ru
 email: info@voltagkin.ru

@@ -3,7 +3,7 @@ district: [kg]
 tags: [smart_home]
 coordinates: [42.874621, 74.569762]
 title: ABROM
-logo: /img/integrators/abrom.webp
+logo: abrom/abrom.webp
 phone: 996554801076
 website: https://abrom.kg/en.html
 email: info@abrom.ru

@@ -2,7 +2,7 @@
 district: [center]
 coordinates: [58.050074, 38.850088]
 title: Новые возможности
-logo: /img/integrators/nvm.webp
+logo: nvm/nvm.webp
 phone: 79159913240
 website: https://нвм220.рф
 email: info@нвм220.рф

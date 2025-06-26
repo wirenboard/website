@@ -2,7 +2,7 @@
 district: [volga]
 coordinates: [57.984953077944795, 56.265589147424635]
 title: Home Control умный дом
-logo: /img/integrators/home_control.webp
+logo: home_control/home_control.webp
 phone: 78002017528
 website: https://homecontrol.pro
 email: info@homecontrol.pro

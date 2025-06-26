@@ -2,7 +2,7 @@
 district: [center]
 coordinates: [56.129057, 40.406635]
 title: Next Level House
-logo: /img/integrators/nlhouse.webp
+logo: nlhouse/nlhouse.webp
 phone: 79206244424
 website: https://nlhouse.ru
 email: nlhouse@yandex.ru

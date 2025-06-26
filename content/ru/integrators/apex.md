@@ -2,7 +2,7 @@
 district: [moscow,spb,volga]
 coordinates: [55.678555, 37.583032]
 title: Apex Технологии Комфорта
-logo: /img/integrators/apex.webp
+logo: apex/apex.webp
 phone: 74991139447
 website: https://apex-systems.ru/
 email: info@apex-systems.ru

@@ -2,7 +2,7 @@
 district: [moscow]
 coordinates: [56.013887234186754, 37.08702518024896]
 title: Тепломонитор
-logo: /img/integrators/teplomonitor.webp
+logo: teplomonitor/teplomonitor.webp
 phone: 74996478913
 website: https://teplomonitor.ru
 email: 1@teplomonitor.ru

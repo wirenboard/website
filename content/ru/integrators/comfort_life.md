@@ -2,7 +2,7 @@
 district: [moscow, spb]
 coordinates: [[59.99963804437398, 30.36195935639194], [55.926231656904626, 37.769142359062464]]
 title: Comfort-Life
-logo: /img/integrators/comfort_life.webp
+logo: comfort_life/comfort_life.webp
 phone: 78129639778
 website: https://comf.life
 email: info@comf.life

@@ -2,7 +2,7 @@
 district: [moscow]
 coordinates: [55.72505840921418, 37.39902580426399]
 title: XIOT
-logo: /img/integrators/xiot.webp
+logo: xiot/xiot.webp
 phone: 74952051272
 website: https://xiot.ru
 email: info@xiot.ru

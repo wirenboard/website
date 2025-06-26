@@ -1,6 +1,6 @@
 ---
 title: ООО «Интра»
-logo: /img/partners/intra.webp
+logo: intra/intra.webp
 phone: 78352240378
 website: https://intrascada.ru
 email: info@ih-systems.com

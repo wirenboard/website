@@ -1,6 +1,6 @@
 ---
 title: ООО «ЛАЙТЭН»
-logo: /img/partners/liten.webp
+logo: liten/liten.webp
 phone: 74993437243
 website: https://liten-soft.ru
 email: info@liten-soft.ru

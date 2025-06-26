@@ -2,7 +2,7 @@
 district: [moscow]
 coordinates: [55.794322812542234, 37.54353093370438]
 title: Форсайт
-logo: /img/integrators/foresight.webp
+logo: foresight/foresight.webp
 phone: 74956636806
 website: https://foresight-fund.ru
 email: inbox@fund-f.ru

@@ -2,7 +2,7 @@
 district: [by]
 coordinates: [55.178501, 30.223216]
 title: ОДО «Комсистем»
-logo: /img/integrators/comsystem.webp
+logo: comsystem/comsystem.webp
 phone: [375296272506, 375333055500]
 website: https://comsystem.by/
 email: info@comsystem.by

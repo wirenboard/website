@@ -3,7 +3,7 @@ district: [uz]
 tags: [automation, data_center]
 coordinates: [41.223542, 69.199574]
 title: TESLA SMART LLC
-logo: /img/integrators/tesliot.webp
+logo: tesliot/tesliot.webp
 phone: 998908294900
 website: https://www.tesliot.com
 email: info@tesliot.com

@@ -2,7 +2,7 @@
 district: [by]
 coordinates: [53.947585900865356, 27.69945695143718]
 title: Частное предприятие «ТКАльянсБел»
-logo: /img/integrators/tk_allians.webp
+logo: tk_allians/tk_allians.webp
 phone: 375447987353
 website: https://tk-allians.by
 email: info@tk-allians.by

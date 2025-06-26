@@ -2,7 +2,7 @@
 district: [volga]
 coordinates: [54.684017, 55.985748]
 title: MIKA
-logo: /img/integrators/mika.webp
+logo: mika/mika.webp
 phone: 73472727060
 website: http://www.mika-ufa.ru/
 email: mikaproekt@yandex.ru

@@ -2,7 +2,7 @@
 district: [moscow]
 coordinates: [55.79939704520921, 37.58644358122949]
 title: Инфосистемы Джет
-logo: /img/integrators/jet.webp
+logo: jet/jet.webp
 phone: 74954117601
 website: https://jet.su
 email: info@jet.su

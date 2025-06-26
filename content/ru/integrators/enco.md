@@ -2,7 +2,7 @@
 district: [moscow]
 coordinates: [55.56537581413944, 37.48486319851014]
 title: ENCO
-logo: /img/integrators/enco.webp
+logo: enco/enco.webp
 phone: 74951170077
 website: https://www.enco.house
 email: info@enco.house

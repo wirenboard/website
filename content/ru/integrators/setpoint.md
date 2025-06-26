@@ -2,7 +2,7 @@
 district: [moscow, spb]
 coordinates: [[59.931722, 30.332847], [55.747115, 37.539087]]
 title: Setpoint
-logo: /img/integrators/setpoint.webp
+logo: setpoint/setpoint.webp
 phone: 78129438141
 website: https://smartfulness.ru
 email: controllerwirenboard@gmail.com

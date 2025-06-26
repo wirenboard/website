@@ -3,7 +3,7 @@ district: [moscow]
 tags: [automation, retail]
 coordinates: [55.79133540562334, 37.60314251975121]
 title: Techsensor
-logo: /img/partners/techsensor.webp
+logo: techsensor/techsensor.webp
 phone: 74996575911
 website: https://techsensor.ru/
 email: mail@techsensor.ru

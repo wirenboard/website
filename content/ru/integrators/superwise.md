@@ -2,7 +2,7 @@
 district: [moscow]
 coordinates: [55.606004, 37.649957]
 title: SuperWise
-logo: /img/integrators/superwise.webp
+logo: superwise/superwise.webp
 phone: 74956479720
 website: https://superwise.ru
 email: info@superwise.ru

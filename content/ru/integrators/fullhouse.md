@@ -2,7 +2,7 @@
 district: [moscow]
 coordinates: [55.82475555992766, 37.45003410908481]
 title: FullHouse
-logo: /img/integrators/fullhouse.webp
+logo: fullhouse/fullhouse.webp
 phone: 74951991581
 website: https://fullhouse-online.ru
 email: order@fullhouse-online.ru

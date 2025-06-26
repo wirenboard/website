@@ -1,6 +1,6 @@
 ---
 title: СИМП Лайт
-logo: /img/partners/simplight.webp
+logo: simplight/simplight.webp
 phone: 73432472133
 website: https://simplight.ru
 email: simp@simplight.ru

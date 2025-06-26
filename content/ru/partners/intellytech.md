@@ -1,6 +1,6 @@
 ---
 title: ООО «ИНТЕЛЛИТЕХ»
-logo: /img/partners/intellytech.webp
+logo: intellytech/intellytech.webp
 phone: 74959689886
 website: https://intellytech.ru
 email: mail@intellytech.ru
