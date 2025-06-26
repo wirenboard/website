@@ -2,7 +2,7 @@
 district: [moscow]
 coordinates: [55.756056921132384, 37.59262076232987]
 title: KonstArtStudio
-logo: /img/integrators/konstartstudio.webp
+logo: konstartstudio/konstartstudio.webp
 phone: 79250575807
 website: https://konstartstudio.ru
 email: studio@konstart.ru

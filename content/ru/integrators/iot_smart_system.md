@@ -2,7 +2,7 @@
 district: [volga]
 coordinates: [55.761654129228596, 49.19752531264067]
 title: IotSmartSystem
-logo: /img/integrators/iot_smart_system.webp
+logo: iot_smart_system/iot_smart_system.webp
 phone: 78432085506
 website: https://iotsmartsystem.ru
 email: all@iotsmartsystem.ru

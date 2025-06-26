@@ -2,7 +2,7 @@
 district: [ural]
 coordinates: [56.838174714496695, 60.57425935122906]
 title: Смартсистема
-logo: /img/integrators/smart_systema.webp
+logo: smart_systema/smart_systema.webp
 phone: 73432877732
 website: https://smartsystema.com
 email: welcome@smartsystema.com

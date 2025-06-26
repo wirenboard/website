@@ -2,7 +2,7 @@
 district: [spb]
 coordinates: [59.9483126, 30.2497018]
 title: BCS (БИ СИ ЭС)
-logo: /img/integrators/bcsgroup.webp
+logo: bcsgroup/bcsgroup.webp
 phone: 78123391010
 website: https://bcsgroup.ru
 email: sale@bcsgroup.ru

@@ -2,7 +2,7 @@
 district: [volga]
 coordinates: [58.61506434861371, 49.65493736161975]
 title: INFOTECH
-logo: /img/integrators/infotech.webp
+logo: infotech/infotech.webp
 phone: 78002010699
 website: https://itekh.ru
 email: smart@itekh.ru

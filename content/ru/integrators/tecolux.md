@@ -2,7 +2,7 @@
 district: [moscow]
 coordinates: [55.9199817, 37.5037807]
 title: TECOLUX
-logo: /img/integrators/tecolux.webp
+logo: tecolux/tecolux.webp
 phone: 74991123315
 website: https://tecolux.ru
 email: welcome@tecolux.ru

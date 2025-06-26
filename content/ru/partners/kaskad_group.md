@@ -1,6 +1,6 @@
 ---
 title: НПО «Каскад-ГРУП»
-logo: /img/partners/kaskad_group.webp
+logo: kaskad_group/kaskad_group.webp
 phone: 78352223432
 website: https://kaskad-asu.com/
 email: info@kaskad-asu.com

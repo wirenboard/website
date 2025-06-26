@@ -2,7 +2,7 @@
 district: [center]
 coordinates: [54.207610692157054, 37.621188190035156]
 title: ООО «ИКС Мониторинг»
-logo: /img/integrators/ics_monitoring.webp
+logo: ics_monitoring/ics_monitoring.webp
 phone: 74872252500
 website: https://icsmonitoring.online
 email: sales@icsmonitoring.online

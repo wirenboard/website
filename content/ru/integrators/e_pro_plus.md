@@ -2,7 +2,7 @@
 district: [ural]
 coordinates: [56.82504365721301, 60.566293814714406]
 title: Энерго ПРО
-logo: /img/integrators/e_pro_plus.webp
+logo: e_pro_plus/e_pro_plus.webp
 phone: 73433833511
 website: https://e-proplus.ru
 email: info@e-proplus.ru

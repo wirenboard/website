@@ -2,7 +2,7 @@
 district: [moscow, spb, center]
 coordinates: [54.163080, 37.577382]
 title: Nice Device
-logo: /img/integrators/nice_device.webp
+logo: nice_device/nice_device.webp
 phone: 79800126488
 website: https://nd-home.ru
 email: info@nd-ss.ru

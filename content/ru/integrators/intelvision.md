@@ -2,7 +2,7 @@
 district: [moscow, spb, kz]
 coordinates: [[55.684270, 37.341547], [59.853491, 30.383736], [43.236073, 76.959694]]
 title: INTELVISION - Smart системный интегратор
-logo: /img/integrators/intelvision.webp
+logo: intelvision/intelvision.webp
 phone: [79190823481, 78126127760]
 website: https://www.intelvision.ru/
 email: office@intelvision.ru

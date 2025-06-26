@@ -1,6 +1,6 @@
 ---
 title: ФИОРД
-logo: /img/partners/fiord.webp
+logo: fiord/fiord.webp
 phone: 78123236212
 website: https://fiord.com/
 email: info@fiord.com

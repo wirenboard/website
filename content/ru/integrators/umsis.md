@@ -2,7 +2,7 @@
 district: [volga]
 coordinates: [55.780213, 49.133444]
 title: Умные системы
-logo: /img/integrators/umsis.webp
+logo: umsis/umsis.webp
 phone: 78432503488
 website: https://umsis.ru
 email: office@umsis.ru

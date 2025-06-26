@@ -1,6 +1,6 @@
 ---
 title: BARY
-logo: /img/partners/bary.webp
+logo: bary/bary.webp
 phone: 74950440404
 website: https://bary.io/
 email: support@bary.io

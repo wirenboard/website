@@ -2,7 +2,7 @@
 district: [moscow]
 coordinates: [55.76214414610599, 37.54876833275032]
 title: ЛИИС
-logo: /img/integrators/liis.webp
+logo: liis/liis.webp
 phone: 74952780720
 website: https://liis.su
 email: info@liis.su

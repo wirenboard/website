@@ -2,7 +2,7 @@
 district: [moscow]
 coordinates: [55.8642766417225, 37.65390605932286]
 title: ООО «Энергоэффективность»
-logo: /img/integrators/redpine.webp
+logo: redpine/redpine.webp
 phone: 74957893800
 website: https://redpine.pro
 email: redpine@hited.ru

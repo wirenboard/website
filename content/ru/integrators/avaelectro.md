@@ -2,7 +2,7 @@
 district: [siberian]
 coordinates: [56.010543, 92.852581]
 title: AVAelectro
-logo: /img/integrators/avaelectro.webp
+logo: avaelectro/avaelectro.webp
 phone: [79235578664, 79131952255]
 website: https://vk.com/avaelectro
 email: exspmsanya@bk.ru

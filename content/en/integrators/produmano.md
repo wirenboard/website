@@ -2,7 +2,7 @@
 district: [kg]
 coordinates: [42.82789274724515, 74.60996178787109]
 title: TekoPro LLC
-logo: /img/integrators/produmano.webp
+logo: produmano/produmano.webp
 phone: 996550881155
 website: https://produmano.kg
 email: tekopro2016@gmail.com

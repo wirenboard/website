@@ -2,7 +2,7 @@
 district: [moscow]
 coordinates: [55.594229, 37.741818]
 title: Автоматика-Центр
-logo: /img/integrators/avt.webp
+logo: avt/avt.webp
 phone: 74951233055
 website: https://avt-c.ru
 email: mail@avt-c.ru

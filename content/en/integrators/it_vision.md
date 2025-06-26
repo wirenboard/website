@@ -3,7 +3,7 @@ district: [kg]
 tags: [automation, data_center]
 coordinates: [42.843417, 74.604556]
 title: IT Vision
-logo: /img/integrators/it_vision.webp
+logo: it_vision/it_vision.webp
 phone: 996556147717
 website: https://itvision.kg/en/
 email: office@itvision.kg

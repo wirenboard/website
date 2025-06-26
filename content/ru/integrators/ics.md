@@ -2,7 +2,7 @@
 district: [moscow]
 coordinates: [55.778042963214986, 37.69286596613755]
 title: Группа ICS
-logo: /img/integrators/ics.webp
+logo: ics/ics.webp
 phone: 74957204900
 website: https://www.icsgroup.ru
 email: ics@icsgroup.ru

@@ -1,6 +1,6 @@
 ---
 title: МТС
-logo: /img/partners/mts.webp
+logo: mts/mts.webp
 phone: 78002500990
 website: https://mts.ru
 ---

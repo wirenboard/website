@@ -1,6 +1,6 @@
 ---
 title: LLC "Rapid Software"
-logo: /img/partners/rapid_scada.webp
+logo: rapid_scada/rapid_scada.webp
 phone: 
 website: https://rapidscada.org
 email: info@rapidscada.org

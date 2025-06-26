@@ -1,6 +1,6 @@
 ---
 title: Интерактивные пространства
-logo: /img/partners/inpro.webp
+logo: inpro/inpro.webp
 phone: 74997556219
 website: https://inpro.su
 email : contact@inpro.su

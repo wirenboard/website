@@ -1,6 +1,6 @@
 ---
 title: ООО «ЦентрЭнергоАвтоматика»
-logo: /img/partners/cea_energo.webp
+logo: cea_energo/cea_energo.webp
 phone: 74952347643
 website: https://cea-energo.ru
 email: info@cea-energo.ru

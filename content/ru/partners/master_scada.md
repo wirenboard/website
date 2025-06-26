@@ -1,6 +1,6 @@
 ---
 title: МПС Софт
-logo: /img/partners/master_scada.webp
+logo: master_scada/master_scada.webp
 phone: 78007755790
 website: https://masterscada.ru
 email: info@masterscada.ru

@@ -1,6 +1,6 @@
 ---
 title: WISE CITY
-logo: /img/partners/wise_city.webp
+logo: wise_city/wise_city.webp
 phone: 74991198680 
 website: https://wisecity-msk.ru
 email: info@wisecity-msk.ru

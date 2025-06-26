@@ -2,7 +2,7 @@
 district: [moscow, spb]
 coordinates: [[55.678555, 37.583032],[59.208498, 39.895349]]
 title: Recota
-logo: /img/integrators/recota.webp
+logo: recota/recota.webp
 phone: 74952666096
 website: https://recota.ru
 email: info@recota.ru

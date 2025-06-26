@@ -2,7 +2,7 @@
 district: [moscow]
 coordinates: [54.964402453961696, 39.046903519929316]
 title: ООО «Эксперт»
-logo: /img/integrators/expert.webp
+logo: expert/expert.webp
 phone: 78006006911
 website: https://expert-kolomna.ru
 email: info@expert-kolomna.ru

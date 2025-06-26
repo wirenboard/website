@@ -1,6 +1,6 @@
 ---
 title: ООО «Рапид Софтвэа»
-logo: /img/partners/rapid_scada.webp
+logo: rapid_scada/rapid_scada.webp
 phone: 74732303612
 website: https://rapidscada.ru
 email: info@rapidscada.ru

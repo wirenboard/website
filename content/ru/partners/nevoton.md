@@ -2,7 +2,7 @@
 district: [spb]
 coordinates: [59.86276945754903, 30.47150626459452]
 title: Невотон
-logo: /img/integrators/nevoton.webp
+logo: nevoton/nevoton.webp
 phone: 78005504433
 website: https://nevoton.ru
 email: sales@nevoton.ru

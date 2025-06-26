@@ -2,7 +2,7 @@
 district: [moscow]
 coordinates: [55.7263305, 37.6783846]
 title: ON-IP
-logo: /img/integrators/onip.webp
+logo: onip/onip.webp
 phone: 74952019241
 website: https://on-ip.ru
 email: info@on-ip.ru

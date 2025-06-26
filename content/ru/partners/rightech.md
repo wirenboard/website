@@ -1,6 +1,6 @@
 ---
 title: Rightech IoT Cloud
-logo: /img/partners/rightech.webp
+logo: rightech/rightech.webp
 phone: 74994506525
 website: https://rightech.io
 email: sales@rightech.io
