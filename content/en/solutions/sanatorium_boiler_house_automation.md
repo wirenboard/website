@@ -1,7 +1,7 @@
 ---
 title: 'Sanatorium Boiler House Automation and Dispatching Systems'
-cover: ferron_236/ferron_236.webp
-date: 2025-01-24
+cover: sanatorium_boiler_house_automation/boiler_house_cover.webp
+date: 2025-07-07
 category: industrial_dispatching_monitoring
 ---
 
@@ -20,7 +20,7 @@ This regional contractor has been working in the field for over 20 years, specia
 Development and implementation of APCS and ADCS for a standalone 2 MW autonomous gas boiler house serving a sanatorium.
 
 :photo{
-    src="ferron_236/01.jpg"
+    src="sanatorium_boiler_house_automation/01.jpg"
     caption="The boiler house and the sanatorium under construction at the time of the photo."
 }
 
@@ -43,8 +43,8 @@ The APCS and ADCS are built on the [Wiren Board 7](https://wirenboard.com/en/pro
 
 :gallery{
     :data='[
-        ["ferron_236/06.jpg", "Boiler house control panel exterior"],
-        ["ferron_236/07.jpg", "and interior"]
+        ["sanatorium_boiler_house_automation/06.jpg", "Boiler house control panel exterior"],
+        ["sanatorium_boiler_house_automation/07.jpg", "and interior"]
     ]'
 }
 
@@ -69,7 +69,7 @@ Control over MGV opening is implemented via a `wb-rules` script and is only poss
 The boiler house includes 16 pumps: 13 circulation, 2 feed, and 1 dosing pump.
 
 :photo{
-    src="ferron_236/03.jpg"
+    src="sanatorium_boiler_house_automation/03.jpg"
     caption="Circulation pumps"
 }
 
@@ -94,7 +94,7 @@ For pumps without an active backup, an auto-restart script attempts limited rest
 The boiler system includes a water storage tank, which is filled automatically.
 
 :photo{
-    src="ferron_236/08.jpg"
+    src="sanatorium_boiler_house_automation/08.jpg"
     caption="Water storage tank and feed pumps"
 }
 
@@ -124,7 +124,7 @@ Valve actuators are controlled by a WBIO-DO-SSR-8 module. Its opto-relay output 
 The facility houses four Thermex Coloss M condensing boilers with built-in control panels and modulating burners that independently maintain temperature.
 
 :photo{
-    src="ferron_236/02.jpg"
+    src="sanatorium_boiler_house_automation/02.jpg"
     caption="Thermex Coloss M boilers"
 }
 
@@ -157,7 +157,7 @@ All system events that affect equipment operation are recorded with timestamps i
 Every component of the boiler house (except safety-critical ones) can be switched to manual mode. This disables automation for that device, and an entry is made in the system log. This is intended for commissioning and maintenance purposes.
 
 :photo{
-    src="ferron_236/04.jpg"
+    src="sanatorium_boiler_house_automation/04.jpg"
     caption="Service personnel convenience features"
 }
 
