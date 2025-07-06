@@ -1,5 +1,5 @@
 ---
-title: 'Sanatorium Boiler House Automation and Dispatching Systems'
+title: 'Sanatorium Boiler House Automation'
 cover: sanatorium_boiler_house_automation/boiler_house_cover.webp
 date: 2025-07-07
 category: industrial_dispatching_monitoring
