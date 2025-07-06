@@ -28,7 +28,7 @@ The boiler house operates without permanent on-site personnel. It supplies heat 
 
 ## Solutions
 
-The APCS and ADCS are built on the [Wiren Board 7](https://wirenboard.com/ru/product/wiren-board-7/) controller and its expansion modules.
+The APCS and ADCS are built on the [Wiren Board 7](https://wirenboard.com/en/product/wiren-board-7/) controller and its expansion modules.
 
 ### Equipment Used:
 
@@ -52,7 +52,7 @@ All logic is implemented using the `wb-rules` scripting engine, without any thir
 
 ### Gas Leak Detection
 
-Detection of natural and carbon monoxide gas is handled by a stationary gas detector. Its dry contact outputs are connected to the inputs of the [WB-MR6C v.2](https://wirenboard.com/ru/product/WB-MR6C_v2/) relay module. The following are also wired into this module:
+Detection of natural and carbon monoxide gas is handled by a stationary gas detector. Its dry contact outputs are connected to the inputs of the [WB-MR6C v.2](https://wirenboard.com/en/product/WB-MR6C_v2/) relay module. The following are also wired into this module:
 
 - Fire alarm output  
 - Gas overpressure relay  
@@ -128,7 +128,7 @@ The facility houses four Thermex Coloss M condensing boilers with built-in contr
     caption="Thermex Coloss M boilers"
 }
 
-Temperature setpoints are delivered via 0–10 V signals from the [WB-MAO4](https://wirenboard.com/ru/product/WB-MAO4/) analog output module. Setpoints are maintained slightly above the highest required loop temperature.
+Temperature setpoints are delivered via 0–10 V signals from the [WB-MAO4](https://wirenboard.com/en/product/WB-MAO4/) analog output module. Setpoints are maintained slightly above the highest required loop temperature.
 
 Boiler lockout signals (dry contact) are generated upon low fluid and/or gas pressure using WBIO-DO-SSR-8.
 
@@ -140,7 +140,7 @@ Before ignition, the boiler pump starts. Ignition begins only once the pump reac
 
 ### User Interface
 
-User interface panels are placed on the boiler house automation cabinet door and in the guardroom. These [HMI panels](https://wirenboard.com/ru/product/YC-SM08P/) communicate with the controller over Ethernet. The user interface is implemented using the controller's built-in web interface.
+User interface panels are placed on the boiler house automation cabinet door and in the guardroom. These [HMI panels](https://wirenboard.com/en/product/YC-SM08P/) communicate with the controller over Ethernet. The user interface is implemented using the controller's built-in web interface.
 
 Audible and visual alarms are triggered by a signaling device mounted outside the boiler building, directly controlled by the controller.
 
