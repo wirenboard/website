@@ -6,7 +6,6 @@ logo: mika/mika.webp
 phone: 73472727060
 website: http://www.mika-ufa.ru/
 email: mikaproekt@yandex.ru
-priority: 34
 ---
 
 Компания «МИКА» более 20 лет работает на российском рынке электрооборудования и электромонтажа.
