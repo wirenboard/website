@@ -9,7 +9,7 @@ category: industrial_dispatching_monitoring
 
 The ability to remotely configure and program the controller without specialized devices or software was the key factor in our decision.
 
-_Anton Stepanov, Director of a local engineering company_
+_Director of a local engineering company_
 
 ## About the Company
 
