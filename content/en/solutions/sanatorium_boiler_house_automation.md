@@ -161,4 +161,4 @@ Every component of the boiler house (except safety-critical ones) can be switche
     caption="Service personnel convenience features"
 }
 
-:include{path="/solutions/includes/footer"}
+:include{path="/en/solutions/includes/footer"}
