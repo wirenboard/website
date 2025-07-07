@@ -6,7 +6,6 @@ logo: jet/jet.webp
 phone: 74954117601
 website: https://jet.su
 email: info@jet.su
-priority: 1
 ---
 
 «Инфосистемы Джет» — одна из крупнейших ИТ-компаний в России.
