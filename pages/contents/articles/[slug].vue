@@ -13,6 +13,10 @@ if (!data.value) {
   });
 }
 
+defineOptions({
+  name: 'Article',
+});
+
 useContentHead({
   ...data.value,
   head: {

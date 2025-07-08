@@ -6,6 +6,10 @@ const { locale } = useI18n();
 const route = useRoute();
 const { data } = await useLocalizedData(`/solutions/${route.params.slug}`, false, { url: { $exists: false } });
 
+defineOptions({
+  name: 'Solution'
+});
+
 useContentHead({
   ...data.value,
   head: {

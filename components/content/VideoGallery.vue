@@ -10,7 +10,7 @@ defineProps<{ data: Video[]; }>();
     <div v-for="video in data" :key="video[0]">
       <VideoPlayer
         :url="video[0]"
-        :cover="video[2]"
+        :cover="getImageUrl(video[2])"
         :height="162"
         width="100%"
       />

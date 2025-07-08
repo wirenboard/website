@@ -14,6 +14,10 @@ if (!data.value) {
   });
 }
 
+defineOptions({
+  name: 'Product',
+});
+
 useContentHead({
   ...data.value,
   // @ts-ignore
