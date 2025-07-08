@@ -146,7 +146,7 @@ Audible and visual alarms are triggered by a signaling device mounted outside th
 
 In the guardroom, the [MQTT Alert for IOT](https://play.google.com/store/apps/details?id=gigiosoft.MQTTAlert) app runs on the panel, playing sounds triggered by MQTT topic changes. The app only plays specific ringtones and is not used for visual alerts, including one for loss of controller connection.
 
-Maintenance personnel can access the controller's web interface remotely via the [Wiren Board Cloud](https://wirenboard.com/en/pages/cloud/), which ensures secure remote access. Alerts are also sent to a dedicated Telegram group. However, since message delivery isn’t guaranteed, guard personnel are instructed to manually notify engineers if no message or response is seen.
+Maintenance personnel can access the controller's web interface remotely via the [Wiren Board Cloud](https://wirenboard.com/en/contents/cloud), which ensures secure remote access. Alerts are also sent to a dedicated Telegram group. However, since message delivery isn’t guaranteed, guard personnel are instructed to manually notify engineers if no message or response is seen.
 
 ### Event Logging
 
