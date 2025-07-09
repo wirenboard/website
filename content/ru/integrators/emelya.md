@@ -1,5 +1,6 @@
 ---
 district: [spb, ural, southern]
+tags: [smart_home]
 coordinates: [[59.936016, 30.3253001], [43.574599, 39.730706], [56.838011, 60.597474]]
 title: Умный дом Емеля
 logo: emelya/emelya.webp
