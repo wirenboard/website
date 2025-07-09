@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import Photo from './Photo.vue';
 
-const { locale } = useI18n();
-const route = useRoute();
 const props = defineProps<{ data: [string, string, number][]; withBorder?: boolean; }>();
 const photos = ref();
 const openedPhoto = ref(null);
@@ -47,12 +45,6 @@ watch(openedPhoto, () => {
       document.removeEventListener('keyup', susbscribeKeyPress, false);
    }
 });
-
-const getUrl = (url: string) => {
-  return url.startsWith('/img') || url.startsWith('img')
-    ? url
-    : `${locale.value || 'ru'}/${route.path.split('/').at(-2)}/${url}`;
-};
 </script>
 
 <template>
@@ -60,7 +52,7 @@ const getUrl = (url: string) => {
     <Photo
        v-for="([src, caption], i) in data"
        ref="photos"
-       :src="getUrl(src)"
+       :src="getImageUrl(src)"
        :caption="caption"
        :height="300"
        :width="previewWidth"

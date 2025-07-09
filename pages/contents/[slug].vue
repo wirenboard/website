@@ -1,7 +1,5 @@
 <script lang="ts" setup>
 const route = useRoute();
-const { t } = useI18n();
-const { locale } = useI18n();
 const { data } = await useLocalizedData(`/pages/${route.params.slug}`);
 
 if (!data.value) {
@@ -10,6 +8,10 @@ if (!data.value) {
     statusMessage: `Page not found: ${route.path}`,
   });
 }
+
+defineOptions({
+  name: 'Page',
+});
 
 useContentHead(data.value);
 </script>
