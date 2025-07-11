@@ -21,8 +21,8 @@ title: Wiren Board Cloud
 
 :gallery{
     :data='[
-        ["img/pages/cloud/ru-list-controllers.webp", "Список контроллеров"],
-        ["img/pages/cloud/ru-controller.webp", "Страница контроллера"]
+        ["cloud/ru-list-controllers.webp", "Список контроллеров"],
+        ["cloud/ru-controller.webp", "Страница контроллера"]
     ]'
 }
 
@@ -31,9 +31,9 @@ title: Wiren Board Cloud
 
 :gallery{
     :data='[
-        ["img/pages/cloud/ru-dashboard.webp", "Веб-интерфейс"],
-        ["img/pages/cloud/ru-console.webp", "SSH-консоль в браузере"],
-        ["img/pages/cloud/ru-electrical-dashboard.webp", "Графические панели"]
+        ["cloud/ru-dashboard.webp", "Веб-интерфейс"],
+        ["cloud/ru-console.webp", "SSH-консоль в браузере"],
+        ["cloud/ru-electrical-dashboard.webp", "Графические панели"]
     ]'
 }
 
@@ -43,7 +43,7 @@ title: Wiren Board Cloud
 Объединяйте данные с разных контроллеров в один дашборд, чтобы получить общую картину работы полевого оборудования в нескольких инсталляциях.  
 
 :photo{
-    src="img/pages/cloud/ru-graphana.webp"
+    src="cloud/ru-graphana.webp"
     caption="Графики в Grafana"
     width="500"
     float=""
@@ -54,8 +54,8 @@ title: Wiren Board Cloud
 
 :gallery{
     :data='[
-        ["img/pages/cloud/ru-invite-org.webp", "Приглашение пользователя"],
-        ["img/pages/cloud/ru-organizations.webp", "Список организаций"]
+        ["cloud/ru-invite-org.webp", "Приглашение пользователя"],
+        ["cloud/ru-organizations.webp", "Список организаций"]
     ]'
 }
 
@@ -66,12 +66,12 @@ title: Wiren Board Cloud
 
 :gallery{
     :data='[
-        ["img/pages/cloud/ru-mobile-list-controllers.webp", "Список контроллеров"],
-        ["img/pages/cloud/ru-mobile-controller.webp", "Страница контроллера"],
-        ["img/pages/cloud/ru-mobile-graphs.webp", "Графики"],
-        ["img/pages/cloud/ru-mobile-dashboard.webp", "Веб-интерфейс"],
-        ["img/pages/cloud/ru-mobile-console.webp", "SSH на телефоне"],
-        ["img/pages/cloud/ru-mobile-graphana.webp", "Grafana"]
+        ["cloud/ru-mobile-list-controllers.webp", "Список контроллеров"],
+        ["cloud/ru-mobile-controller.webp", "Страница контроллера"],
+        ["cloud/ru-mobile-graphs.webp", "Графики"],
+        ["cloud/ru-mobile-dashboard.webp", "Веб-интерфейс"],
+        ["cloud/ru-mobile-console.webp", "SSH на телефоне"],
+        ["cloud/ru-mobile-graphana.webp", "Grafana"]
     ]'
 }
 
@@ -81,7 +81,7 @@ title: Wiren Board Cloud
 Авторизация контроллеров Wiren Board в сервисе происходит по аппаратному ключу, что исключает появление дублей и возможность получения доступа к чужому контроллеру.  
 
 :photo{
-    src="img/pages/cloud/ru-add-to-cloud.webp"
+    src="cloud/ru-add-to-cloud.webp"
     caption="Добавление контроллера в облако"
     width="500"
     float=""

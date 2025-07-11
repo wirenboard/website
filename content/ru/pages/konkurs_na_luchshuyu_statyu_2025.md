@@ -3,7 +3,7 @@ title: Конкурс на лучшую статью про устройства
 ---
 
 :photo{
-    src="/img/pages/konkurs_na_luchshuyu_statyu_2025/1.png"
+    src="konkurs_na_luchshuyu_statyu_2025/1.png"
     width="100%"
     float="center"
 }
