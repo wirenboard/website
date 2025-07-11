@@ -22,9 +22,9 @@ title: СМИ, блогерам и авторам статей
 
 :video-gallery{
     :data='[
-        ["https://youtu.be/WB4W5pIHoUc?si=dV2RiQfv-kcdj-Dw", "Проводной умный дом – СЛОЖНО?", "/img/pages/media-support/armenak.webp"],
-        ["https://youtu.be/cYqUwmnTryk?si=d4D_VU2csB-jrn9D", "Wiren Board 8. Большой обзор", "/img/pages/media-support/wb8-review.webp"],
-        ["https://youtu.be/lb4kKJM8UEY?si=mIWGoJ-vS7NCtLeW", "Как студенты МФТИ создали одного из лидеров проводного умного дома", "/img/pages/media-support/wb-history.webp"]
+        ["https://youtu.be/WB4W5pIHoUc?si=dV2RiQfv-kcdj-Dw", "Проводной умный дом – СЛОЖНО?", "media-support/armenak.webp"],
+        ["https://youtu.be/cYqUwmnTryk?si=d4D_VU2csB-jrn9D", "Wiren Board 8. Большой обзор", "media-support/wb8-review.webp"],
+        ["https://youtu.be/lb4kKJM8UEY?si=mIWGoJ-vS7NCtLeW", "Как студенты МФТИ создали одного из лидеров проводного умного дома", "media-support/wb-history.webp"]
 
     ]'
 }

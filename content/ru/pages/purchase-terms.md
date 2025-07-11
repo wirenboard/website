@@ -88,12 +88,12 @@ title: Как купить
 При отправке заказа курьерской службой мы дополнительно упаковываем устройства в коробки для транспортировки и прокладываем демпфирующим материалом — пленкой с воздушными пузырьками.
 
 :photo{
-    src="/img/pages/purchase-terms/package.png"
+    src="purchase-terms/package.png"
     caption="Индивидуальная упаковка наших устройств"
 }
 
 :photo{
-    src="/img/pages/purchase-terms/transport_package.png"
+    src="purchase-terms/transport_package.png"
     caption="Транспортная упаковка для отправки через курьерские службы"
 }
 

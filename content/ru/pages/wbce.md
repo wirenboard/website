@@ -3,7 +3,7 @@ title: Конференция и выставка WBCE
 ---
 
 :photo{
-    src="/img/pages/wbce/1.jpg"
+    src="wbce/1.jpg"
     width="100%"
     float="center"
 }
