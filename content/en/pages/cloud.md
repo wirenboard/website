@@ -21,8 +21,8 @@ Track software versions and controller statuses. Add additional information such
 
 :gallery{
     :data='[
-        ["img/pages/en/cloud/list-controllers.webp", "List of controllers"],
-        ["img/pages/en/cloud/controller.webp", "Controller page"]
+        ["cloud/list-controllers.webp", "List of controllers"],
+        ["cloud/controller.webp", "Controller page"]
     ]'
 }
 
@@ -31,9 +31,9 @@ Manage the system using dashboards, graphical mimic panels, or the SSH console. 
 
 :gallery{
     :data='[
-        ["img/pages/en/cloud/dashboard.webp", "Web interface"],
-        ["img/pages/en/cloud/console.webp", "Browser-based SSH console"],
-        ["img/pages/en/cloud/electrical-dashboard.webp", "SVG graphical panels"]
+        ["cloud/dashboard.webp", "Web interface"],
+        ["cloud/console.webp", "Browser-based SSH console"],
+        ["cloud/electrical-dashboard.webp", "SVG graphical panels"]
     ]'
 }
 
@@ -43,7 +43,7 @@ Use the powerful built-in open-source tool **Grafana** to set up situation cente
 Combine data from multiple controllers into a single dashboard for an overview of field equipment across multiple installations.  
 
 :photo{
-    src="img/pages/en/cloud/graphana.webp"
+    src="cloud/graphana.webp"
     caption="Grafana graphs"
     width="500"
     float=""
@@ -54,8 +54,8 @@ Invite colleagues to the organization and share access to controllers. A single 
 
 :gallery{
     :data='[
-        ["img/pages/en/cloud/invite-org.webp", "User invitation"],
-        ["img/pages/en/cloud/organizations.webp", "List of organizations"]
+        ["cloud/invite-org.webp", "User invitation"],
+        ["cloud/organizations.webp", "List of organizations"]
     ]'
 }
 
@@ -66,12 +66,12 @@ You can bookmark specific tools and open them with a single click.
 
 :gallery{
     :data='[
-        ["img/pages/en/cloud/mobile-list-controllers.webp", "Mobile list of controllers"],
-        ["img/pages/en/cloud/mobile-controller.webp", "Mobile controller page"],
-        ["img/pages/en/cloud/mobile-graphs.webp", "Mobile graphs"],
-        ["img/pages/en/cloud/mobile-dashboard.webp", "Mobile web interface"],
-        ["img/pages/en/cloud/mobile-console.webp", "Mobile ssh console"],
-        ["img/pages/en/cloud/mobile-graphana.webp", "Mobile Graphana graphs"]
+        ["cloud/mobile-list-controllers.webp", "Mobile list of controllers"],
+        ["cloud/mobile-controller.webp", "Mobile controller page"],
+        ["cloud/mobile-graphs.webp", "Mobile graphs"],
+        ["cloud/mobile-dashboard.webp", "Mobile web interface"],
+        ["cloud/mobile-console.webp", "Mobile ssh console"],
+        ["cloud/mobile-graphana.webp", "Mobile Graphana graphs"]
     ]'
 }
 
@@ -81,7 +81,7 @@ Connect only the controllers you want to the service. New controllers do not sen
 Wiren Board controllers authenticate in the service using a hardware key, preventing duplicate entries and unauthorized access to other controllers.  
 
 :photo{
-    src="img/pages/en/cloud/add-to-cloud.webp"
+    src="cloud/add-to-cloud.webp"
     caption="Adding a controller to the cloud"
     width="500"
     float=""
