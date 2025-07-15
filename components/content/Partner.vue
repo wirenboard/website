@@ -70,6 +70,7 @@ const formatPhoneNumber = (phone: number) => {
 
 .partner-info {
   min-width: 280px;
+  max-width: 280px;
 }
 
 .partner-logo {
