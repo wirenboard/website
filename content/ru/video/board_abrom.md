@@ -2,6 +2,6 @@
 title: Проектирование щита умного дома | ABROM
 url: https://www.youtube.com/embed/videoseries?si=SOrmphNOypXRiqId&list=PL65qywpig4-VCvYNRXLOSqYGMo0iSZpMT
 date: 2024-04-01
-cover: /img/video/board_abrom.webp
+cover: board_abrom/board_abrom.webp
 category: educational
 ---

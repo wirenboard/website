@@ -2,6 +2,6 @@
 title: WirenBoard - управление с iPhone и голосовые команды Яндекс Алиса | SmartoDom, 2021
 url: https://www.youtube.com/watch?v=oa7a_PcG3w0
 date: 2024-06-01
-cover: /img/video/iphone_control_smartodom.jpg
+cover: iphone_control_smartodom/iphone_control_smartodom.jpg
 category: buildings
 ---
