@@ -46,7 +46,6 @@ Combine data from multiple controllers into a single dashboard for an overview o
     src="cloud/graphana.webp"
     caption="Grafana graphs"
     width="500"
-    float=""
 }
 
 ## Multi-user Access  
@@ -84,7 +83,6 @@ Wiren Board controllers authenticate in the service using a hardware key, preven
     src="cloud/add-to-cloud.webp"
     caption="Adding a controller to the cloud"
     width="500"
-    float=""
 }
 
 ## Autonomy  
