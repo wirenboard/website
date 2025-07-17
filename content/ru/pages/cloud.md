@@ -46,7 +46,6 @@ title: Wiren Board Cloud
     src="cloud/ru-graphana.webp"
     caption="Графики в Grafana"
     width="500"
-    float=""
 }
 
 ## Многопользовательский доступ  
@@ -84,7 +83,6 @@ title: Wiren Board Cloud
     src="cloud/ru-add-to-cloud.webp"
     caption="Добавление контроллера в облако"
     width="500"
-    float=""
 }
 
 ## Автономность  

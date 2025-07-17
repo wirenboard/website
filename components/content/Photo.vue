@@ -2,7 +2,7 @@
 import ArrowRight from '~/assets/icons/arrow-next.svg';
 import ArrowLeft from '~/assets/icons/arrow-previous.svg';
 
-const props = defineProps<{ src: string; caption?: string; width?: number | string; isGallery?: boolean; withBorder?: boolean; float?: 'right' | 'left' | 'center'; }>();
+const props = defineProps<{ src: string; caption?: string; width?: number | string; isGallery?: boolean; previewPreset?: string | null; withBorder?: boolean; float?: 'right' | 'left' | 'center'; }>();
 
 const photo = ref();
 
@@ -49,8 +49,8 @@ const computedFigureStyle = computed(() => {
           :class="{
             'photo-imageFromGallery': isGallery
           }"
-          :preset="width === '100%' ? 'fullWidthPreview' : 'preview'"
-          :sizes="isGallery ? 'sm:50vw' : 'lg:100vw'"
+          :preset="previewPreset || width === '100%' ? 'fullWidthPreview' : 'preview'"
+          :sizes="previewPreset === '' ? 'xs:100vw' : 'lg:100vw'"
           :img-attrs="{
             width,
             class: `photo-image ${isGallery ? 'photo-imageFromGallery' : ''} ${caption ? 'photo-imageWithCaption' : ''}`,

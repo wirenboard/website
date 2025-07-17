@@ -57,6 +57,7 @@ watch(openedPhoto, () => {
        :height="300"
        :width="previewWidth"
        :withBorder="withBorder"
+       :previewPreset="data.length >= 5 ? 'fullWidthGalleryPreview' : null"
        isGallery
        :key="i"
        @open-photo="(openedPhotoAttr) => openedPhoto = openedPhotoAttr"
@@ -72,7 +73,7 @@ watch(openedPhoto, () => {
   clear: both;
   display: grid;
   grid-template-columns: repeat(v-bind('numberOfGalleryColumns'), 1fr);
-  width: fit-content;
+  width: 100%;
 
   @media (max-width: 700px) {
     grid-template-columns: 1fr;

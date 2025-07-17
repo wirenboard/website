@@ -66,14 +66,22 @@ export default defineNuxtConfig({
       },
       preview: {
         modifiers: {
-          width: 1168,
-          quality: 90,
+          width: 400,
+          quality: 100,
+          fit: 'inside',
           format: 'webp',
         }
       },
       fullWidthPreview: {
         modifiers: {
           width: 1168,
+          quality: 100,
+          format: 'webp',
+        }
+      },
+      fullWidthGalleryPreview: {
+        modifiers: {
+          width: 320,
           quality: 100,
           format: 'webp',
         }
