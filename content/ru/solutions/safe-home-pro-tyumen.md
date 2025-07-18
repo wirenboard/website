@@ -17,7 +17,7 @@ category: apartments_automation
 | Оборудование | Функции |
 | :---- | :---- |
 | [Wiren Board 7.4.2](https://wirenboard.com/ru/catalog/kontrollery/) | Контроллер |
-| [WB-MR6C v.2](https://wirenboard.com/ru/product/WB-MR6C/) | Управление приводами отопления Valtec; управление точечным освещением |
+| [WB-MR6C v.2](https://wirenboard.com/ru/product/WB-MR6C_v2/) | Управление приводами отопления Valtec; управление точечным освещением |
 | [WB-MRWL3](https://wirenboard.com/ru/product/wb-mrwl3/) | Управление электрическими теплыми полами |
 | [WB-M1W2](https://wirenboard.com/ru/product/WB-M1W2/) | Подключение датчиков температуры пола DS18B20 (1-Wire) |
 | [WB-LED](https://wirenboard.com/ru/product/WB-LED/) \+ [WB-AMPLED](https://wirenboard.com/ru/product/WB-AMPLED/) | Управление светодиодными лентами Dim-To-Warm |
@@ -60,7 +60,7 @@ _«В этом проекте мы постарались показать, чт
 
 Подсветка реализована с использованием светодиодных лент Arlight Dim-To-Warm, управляемых через [WB-LED](https://wirenboard.com/ru/product/WB-LED/) \+ [WB-AMPLED](https://wirenboard.com/ru/product/WB-AMPLED/). Подсветка включается по сигналу от потолочных датчиков присутствия Zigbee и регулируется с учетом времени суток. 
 
-Основное освещение — светодиодные светильники. Они управляются классически — релейными модулями [WB-MR6C v.2](https://wirenboard.com/ru/product/WB-MR6C/). 
+Основное освещение — светодиодные светильники. Они управляются классически — релейными модулями [WB-MR6C v.2](https://wirenboard.com/ru/product/WB-MR6C_v2/). 
 
 Электрокарнизы штор Onviz с моторами Dooya имеют интерфейс RS-485, по которому и управляются. Рулонная штора на мансардном окне подключена через модуль [WB-MRM2-mini v.2](https://wirenboard.com/ru/product/WB-MRM2-mini/).
 
