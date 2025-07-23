@@ -33,7 +33,7 @@ export const getImageUrl = (url?: string) => {
   if (parentTree.includes('Page')) {
     folder = 'pages';
   } else if (parentTree.includes('Product')) {
-    folder = 'catalog';
+    return url;
   } else if (parentTree.includes('Video')) {
     if (url.startsWith('/ru') || url.startsWith('/en')) {
       return url;
@@ -41,5 +41,5 @@ export const getImageUrl = (url?: string) => {
     folder = 'video';
   }
 
-  return `${locale.value}/${folder}/${url}`
+  return `${locale.value}/${folder}/${url}`;
 };

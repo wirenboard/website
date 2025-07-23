@@ -1,3 +1,5 @@
+import ParseInlinedImages from './modules/parse-inlined-images/parse-inlined-images';
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: true,
@@ -16,6 +18,7 @@ export default defineNuxtConfig({
     '~/assets/css/fonts.css',
   ],
   modules: [
+    ParseInlinedImages,
     '@nuxt/content',
     '@nuxt/image',
     '@nuxtjs/i18n',
