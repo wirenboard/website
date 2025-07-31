@@ -1,0 +1,12 @@
+# Все текстовые файлы → LF
+* text=auto eol=lf
+
+# Специально для Markdown
+*.md text eol=auto
+
+# JS/TS/Vue тоже в LF
+*.js text eol=auto
+*.ts text eol=auto
+*.js text eol=auto
+*.vue text eol=auto
+.gitattributes text eol=auto
