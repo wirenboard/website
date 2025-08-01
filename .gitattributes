@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.md text eol=auto
+*.js text eol=auto
+*.ts text eol=auto
+*.js text eol=auto
+*.vue text eol=auto
+.gitattributes text eol=auto

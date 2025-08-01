@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Photo from './Photo.vue';
 
-const props = defineProps<{ data: [string, string, number][]; withBorder?: boolean; }>();
+const props = defineProps<{ data: ([string] | [string, string])[]; withBorder?: boolean; }>();
 const photos = ref();
 const openedPhoto = ref(null);
 
