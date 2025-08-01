@@ -233,7 +233,6 @@ function validateTupleOrType(value, typeDef) {
   return validateType(value, [typeDef]);
 }
 
-// --- HELPERS ---
 function splitUnion(typeStr) {
   const result = [];
   let depth = 0, current = '';
