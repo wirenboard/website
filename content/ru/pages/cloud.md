@@ -90,22 +90,29 @@ title: Wiren Board Cloud
 
 Если у вас есть свой аналогичный сервис или вам не нужны функции Wiren Board Cloud, просто не подключайте контроллер к нему.  
 
-## On-premise  
+## Как подключиться  
+
+### Публичный на наших серверах
+Публичный вариант сервиса бесплатен, достаточно добавить контроллер в Wiren Board Cloud по [инструкции](https://wirenboard.com/wiki/Wiren_Board_Cloud). 
+
+### On-premise  
 Контролируйте не только передаваемые в сервис данные, но и инфраструктуру, где сервис размещен.  
 
 Вариант подходит как для компаний-интеграторов продукции Wiren Board, так и OEM-заказчиков, создающих решения на базе наших продуктов под своим брендом.  
 
-## Как подключиться  
-Публичный вариант сервиса бесплатен, достаточно добавить контроллер в Wiren Board Cloud по [инструкции](https://wirenboard.com/wiki/Wiren_Board_Cloud).  
-
-Если вас интересует On-premise вариант, напишите нам на [info@wirenboard.com](mailto:info@wirenboard.com).  
+[Репозиторий и инструкция по установке](https://github.com/wirenboard/cloud-on-premise).
 
 ## Попробовать  
-Есть демокабинет с реальным контроллером:  
+Есть демокабинет с реальным контроллером:
+1. Перейдите по ссылке [https://wirenboard.cloud/](https://wirenboard.cloud/).
+2. Нажмите «Демо-аккаунт».
 
-- **[https://wirenboard.cloud/](https://wirenboard.cloud/)**,
-- **логин:** demo+public@wirenboard.com,
-- **пароль:** demopublic.
+:gallery{
+  :data='[
+    ["cloud/demo.png", "Форма логина"],
+    ["cloud/demo-2.png", "Демоконтроллер"]
+  ]'
+}
 
 ## Специальное предложение для компаний  
 Если вам интересен Wiren Board Cloud, хотите внедрять его у себя, но чего-то не хватает — напишите на [info@wirenboard.com](mailto:info@wirenboard.com), постараемся помочь.
