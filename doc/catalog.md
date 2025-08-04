@@ -51,19 +51,17 @@ use_cases: [liten_magnit, techsensor_module_cafe, rekota_hotel_vertical]
 Описание самого товара, которое отображается рядом с ценой
 #info
 ## Основные характеристики
-::product-section{title=Название секции 1}
+::product-section{title="Название секции 1"}
 :photo{
   src="URL"
-  caption=""
   width="500px"
   float="right"
 }
 Содержимое секции 1
 ::
-::product-section{title=Название секции 2}
+::product-section{title="Название секции 2"}
 :photo{
   src="URL"
-  caption=""
   width="500px"
   float="right"
 }
@@ -82,6 +80,6 @@ use_cases: [liten_magnit, techsensor_module_cafe, rekota_hotel_vertical]
 
 Обычно для предпросмотра достаточно VSCode с плагином, но если вы запускаете сайт локально на компьютере, вот ссылки для предпросмотра: 
 - http://localhost:3000/ru/contents/product/SLUG
-- http://localhost:3000/ru/contents/product/SLUG
+- http://localhost:3000/en/contents/product/SLUG
 
 `SLUG` в адресе замените на имя файла без расширения, например `wb-my-device`.
