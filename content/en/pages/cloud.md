@@ -59,7 +59,7 @@ Invite colleagues to the organization and share access to controllers. A single 
 }
 
 ## Mobile Interface  
-Access the service from anywhere—its web interface automatically adapts to different screen resolutions, ensuring a seamless experience across all functions.  
+Access the service from anywhere — its web interface automatically adapts to different screen resolutions, ensuring a seamless experience across all functions.  
 
 You can bookmark specific tools and open them with a single click.  
 
@@ -90,12 +90,29 @@ Wiren Board controllers always operate autonomously and do not depend on externa
 
 If you have a similar service or do not need Wiren Board Cloud features, simply do not connect your controller to it.  
 
-## On-premise  
-Control not only the data transmitted to the service but also the infrastructure where the service is hosted.  
+## How to Connect  
 
-This option is ideal for system integrators working with Wiren Board products as well as OEM clients developing solutions based on our products under their own brand.  
+### Public on Our Servers
+The public service option is free — just add your controller to Wiren Board Cloud.  
 
-If you are interested in the On-premise version, contact us at [info@wirenboard.com](mailto:info@wirenboard.com).  
+### On-Premise  
+Control not only the data sent to the service but also the infrastructure where it’s hosted.  
+
+This option is suitable both for companies integrating Wiren Board products and for OEM customers building solutions based on our products under their own brand.  
+
+[Repository and installation guide](https://github.com/wirenboard/cloud-on-premise/blob/main/README_EN.md).
+
+## Try It Out  
+There’s a demo cabinet with a real controller:
+1. Go to the link [https://wirenboard.cloud/](https://wirenboard.cloud/).
+2. Click “Demo”.
+
+:gallery{
+  :data='[
+    ["cloud/demo.png", "Login Form"],
+    ["cloud/demo-2.png", "Demo Controller"]
+  ]'
+}
 
 ## Special Offer for Companies  
-If you're interested in Wiren Board Cloud, want to implement it, but need additional features—contact us at [info@wirenboard.com](mailto:info@wirenboard.com), and we will do our best to assist you.
+If you're interested in Wiren Board Cloud, want to implement it, but need additional features — contact us at [info@wirenboard.com](mailto:info@wirenboard.com), and we will do our best to assist you.
