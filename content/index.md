@@ -8,6 +8,7 @@
 - [Интеграторы](http://localhost:3000/ru/contents/integrators)
 - [Видео](http://localhost:3000/ru/contents/video)
 - Произвольные страницы — http://localhost:3000/ru/contents/FILENAME
+- Товар из каталога — http://localhost:3000/ru/contents/product/SLUG
 
 
 Английское:
@@ -18,6 +19,7 @@
 - [Integrators](http://localhost:3000/en/contents/integrators)
 - [Video](http://localhost:3000/en/contents/video)
 - Arbitrary pages — http://localhost:3000/en/contents/FILENAME
+- Goods from the catalog — http://localhost:3000/en/contents/product/SLUG
 
 Полезное:
 - [Документация в Гитхабе](https://github.com/wirenboard/website/blob/main/README.md)
