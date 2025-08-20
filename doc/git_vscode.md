@@ -23,5 +23,3 @@
     ![open folder](images/git_vscode/git_vscode9.png)
 10. В конце подтвердите, что доверяете авторам
     ![trust of authors](images/git_vscode/git_vscode10.png)
-
-Процесс работы с репозиторием описан в файле [git.md](git.md)
