@@ -1,7 +1,7 @@
 ---
 district: [volga]
 tags: [smart_home]
-coordinates: [[58.009921, 56.293125],[57.989403, 56.253797]]
+coordinates: [[58.009921, 56.293125], [57.989403, 56.253797]]
 title: Polo-tech
 logo: polo_tech/polo_tech.webp
 phone: 79125977600
