@@ -24,9 +24,10 @@ title: Обучение
 }
 
 ## Смотреть плейлист полностью
-:video-player{
-    url="https://peertube.wirenboard.com/w/p/dBwXZSnBMw4Tp4j3MdPXzw"
-    width="500px"
-    height="200px"
-    cover="education_cover/cover_playlist.png"
+
+:video-gallery{
+    :data='[
+        ["https://peertube.wirenboard.com/w/p/dBwXZSnBMw4Tp4j3MdPXzw", "", "education_cover/cover_playlist.png"] 
+    ]'
 }
+
