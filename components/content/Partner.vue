@@ -82,7 +82,7 @@ const formatPhoneNumber = (phone: number) => {
 
 .partner-title {
   margin: 0;
-  font-size: 22px;
+  font-size: 18px;
   scroll-margin-top: calc(var(--app-bar-height) + 64px);
 }
 
