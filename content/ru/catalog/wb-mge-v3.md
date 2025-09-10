@@ -34,7 +34,7 @@ use_cases: []
 ## Основные характеристики
 ::product-section{title="Ethernet и Wi-Fi"}
 :photo{
-  src="wb-mge-v3/wb-mge-v3-char-1.png"
+  src="wb-mge-v3/wb-mge-v3-no-photo.png"
   width="500px"
   float="right"
 }
@@ -51,7 +51,7 @@ use_cases: []
 
 ::product-section{title="2 x RS-485"}
 :photo{
-  src="wb-mge-v3/wb-mge-v3-char-1.png"
+  src="wb-mge-v3/wb-mge-v3-no-photo.png"
   width="500px"
   float="right"
 }
@@ -66,7 +66,7 @@ use_cases: []
 
 ::product-section{title="Терминаторы и failsafe bias на портах RS-485"}
 :photo{
-  src="wb-mge-v3/wb-mge-v3-char-1.png"
+  src="wb-mge-v3/wb-mge-v3-no-photo.png"
   width="500px"
   float="right"
 }
@@ -82,7 +82,7 @@ use_cases: []
 ::product-section{title="I/O Bus (WBIO)"}
 
 :photo{
-  src="wb-mge-v3/wb-mge-v3-char-1.png"
+  src="wb-mge-v3/wb-mge-v3-no-photo.png"
   float="right"
   width="500px"
 }
@@ -96,7 +96,7 @@ I/O Bus — это интерфейс для подключения боковы
 
 ::product-section{title="Питание модуля и подключенных устройств"}
 :photo{
-  src="wb-mge-v3/wb-mge-v3-char-1.png"
+  src="wb-mge-v3/wb-mge-v3-no-photo.png"
   width="500px"
   float="right"
 }
@@ -115,7 +115,7 @@ I/O Bus — это интерфейс для подключения боковы
 
 ::product-section{title="Индикация"}
 :photo{
-  src="wb-mge-v3/wb-mge-v3-char-1.png"
+  src="wb-mge-v3/wb-mge-v3-no-photo.png"
   width="500px"
   float="right"
 }
@@ -133,7 +133,7 @@ I/O Bus — это интерфейс для подключения боковы
 ::product-section{title="Веб-интерфейс для настройки"}
 
 :photo{
-  src="wb-mge-v3/wb-mge-v3-char-1.png"
+  src="wb-mge-v3/wb-mge-v3-no-photo.png"
   float="right"
   width="500px"
 }
@@ -147,7 +147,7 @@ I/O Bus — это интерфейс для подключения боковы
 ::product-section{title="Поддержка Быстрого Modbus"}
 
 :photo{
-  src="wb-mge-v3/wb-mge-v3-char-1.png"
+  src="wb-mge-v3/wb-mge-v3-no-photo.png"
   float="right"
   width="500px"
 }
@@ -164,7 +164,7 @@ WB-MGE v.3 поддерживает Быстрый Modbus во всех режи
 ::product-section{title="Сброс настроек и режим Factory"}
 
 :photo{
-  src="wb-mge-v3/wb-mge-v3-char-1.png"
+  src="wb-mge-v3/wb-mge-v3-no-photo.png"
   float="right"
   width="500px"
 }
@@ -178,7 +178,7 @@ WB-MGE v.3 поддерживает Быстрый Modbus во всех режи
 ::product-section{title="Обновление прошивки"}
 
 :photo{
-  src="wb-mge-v3/wb-mge-v3-char-1.png"
+  src="wb-mge-v3/wb-mge-v3-no-photo.png"
   float="right"
   width="500px"
 }
@@ -192,7 +192,7 @@ WB-MGE v.3 поддерживает Быстрый Modbus во всех режи
 ::product-section{title="DIY — экспериментируйте с прошивками"}
 
 :photo{
-  src="wb-mge-v3/wb-mge-v3-char-1.png"
+  src="wb-mge-v3/wb-mge-v3-no-photo.png"
   float="right"
   width="500px"
 }
