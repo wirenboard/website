@@ -1,5 +1,5 @@
 ---
-title: 'Автоматизация гостиничного комплекса с рестораном и фитнес-центром'
+title: 'SCADA для библиотеки: мониторинг и управление инженерными системами'
 cover: safe-home-library/safe-home-library.webp
 date: 2025-09-11
 category: commercial_estate_monitoring
