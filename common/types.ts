@@ -65,3 +65,5 @@ type Url = string;
 type Title = string;
 type Cover = string;
 export type Video = [Url, Title, Cover];
+
+export type PhotoLink = [Url, Title, Cover];
