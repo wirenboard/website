@@ -1,4 +1,4 @@
-::product-section{title="Контроль качества на каждом этапе производства "}
+::product-section{title="Quality control at each stage of production"}
 
 :photo{
   src="images/quality_control.png"

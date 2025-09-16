@@ -172,7 +172,7 @@ WB‑MGE v.3 supports Fast Modbus in all modes: **transparent gateway** and **Mo
   width="500px"
 }
 
-If you forget the module settings, you can always reset them to factory defaults using the **Reset/Config** button. The same can be done from the web interface.
+If you forget the module settings, you can always reset them to factory defaults using the **Config** button. The same can be done from the web interface.
 
 For edge cases when the firmware cannot boot, **Factory mode** is available to reliably flash the latest stable firmware.
 
@@ -204,7 +204,7 @@ WB‑MGE v.3 is based on an **ESP32** microcontroller and ships with our stock f
 
 However, you can use the hardware with your own firmware and turn the gateway into a compact smart‑home server with the features you need. For convenience we’ve added a **USB‑C** connector, so you only need a computer and a USB‑C cable to flash your software.
 
-The documentation provides full GPIO descriptions and examples for the popular **ESPHome** platform. Of course, you can use any tool or language you prefer: C, MicroPython, Lua, etc.
+The documentation provides full GPIO descriptions and examples for the popular **ESPHome** platform. Of course, you can use any tool or language you prefer: ***C, MicroPython, Lua, etc***.
 
 Whatever you try, you can always restore our stock gateway firmware and use the device as intended. The warranty remains valid.
 
