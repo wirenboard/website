@@ -22,11 +22,14 @@ use_cases: []
 ---
 ::product
 #description
+
+**The device in development, follow the news.**
+
 The WB-MGE v.3 gateway is designed to connect devices with RS‑485 and WBIO (I/O modules) interfaces over Ethernet and Wi‑Fi.
 
 It provides two independent RS‑485—TCP channels; each can operate in one of the following modes:
-1. **Modbus TCP** — for working with RS‑485 Modbus RTU devices.
-2. **Raw TCP Bridge** — for any serial RS‑485 protocol (e.g., Modbus RTU, DOOYA, AKKO, etc.).
+1. Modbus TCP — for working with RS‑485 Modbus RTU devices.
+2. Raw TCP Bridge — for any serial RS‑485 protocol (e.g., Modbus RTU, DOOYA, AKKO, etc.).
 
 WBIO modules connect via the side I/O Bus connector and are exposed as a Modbus device on the RS485‑2 bus with an address printed on the module label. WBIO support can be disabled in the web interface to free the port for any protocols.
 
