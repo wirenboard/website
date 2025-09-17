@@ -14,10 +14,6 @@ images: [
   ["wb-mge-v3/wb-mge-v3-pcb-1.png"],
   ["wb-mge-v3/wb-mge-v3-pcb-2.png"]
 ]
-video: [
-  ["https://peertube.wirenboard.com/w/dWoKUA1staBV8X6sPmRwfo"],
-  ["https://peertube.wirenboard.com/w/dbi1EHu4SC5WYmhCcjaidm"]
-]
 use_cases: []
 ---
 ::product
@@ -34,7 +30,7 @@ It provides two independent RS‑485—TCP channels; each can operate in one of 
 WBIO modules connect via the side I/O Bus connector and are exposed as a Modbus device on the RS485‑2 bus with an address printed on the module label. WBIO support can be disabled in the web interface to free the port for any protocols.
 
 #info
-## Main Specifications
+## Main Features
 ::product-section{title="Ethernet and Wi‑Fi"}
 :photo{
   src="wb-mge-v3/wb-mge-v3-no-photo.png"
@@ -155,7 +151,7 @@ If WB‑MGE v.3 is connected to one of the network interfaces of a Wiren Board c
   width="500px"
 }
 
-All Wiren Board devices, in addition to standard Modbus RTU, can operate with the extended [**Fast Modbus**](https://wirenboard.com/wiki/Fast_Modbus) ⚡ protocol, which adds:
+All Wiren Board devices, in addition to standard Modbus RTU, can operate with the extended [**Fast Modbus**](https://wiki.wirenboard.com/wiki/Fast_Modbus/en) ⚡ protocol, which adds:
 - instant reading of input states and measured values via events;
 - fast discovery of devices connected to the controller;
 - address collision resolution on the bus.
