@@ -14,7 +14,6 @@ images: [
   ["wb-mge-v3/wb-mge-v3-pcb-1.png"],
   ["wb-mge-v3/wb-mge-v3-pcb-2.png"]
 ]
-video: []
 use_cases: []
 ---
 ::product
@@ -152,7 +151,7 @@ If WB‑MGE v.3 is connected to one of the network interfaces of a Wiren Board c
   width="500px"
 }
 
-All Wiren Board devices, in addition to standard Modbus RTU, can operate with the extended [**Fast Modbus**](https://wirenboard.com/wiki/Fast_Modbus) ⚡ protocol, which adds:
+All Wiren Board devices, in addition to standard Modbus RTU, can operate with the extended [**Fast Modbus**](https://wiki.wirenboard.com/wiki/Fast_Modbus/en) ⚡ protocol, which adds:
 - instant reading of input states and measured values via events;
 - fast discovery of devices connected to the controller;
 - address collision resolution on the bus.
