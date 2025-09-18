@@ -1,14 +1,17 @@
 <script setup lang="ts">
+import dayjs from 'dayjs';
+import 'dayjs/locale/ru';
 import type { PhotoLink } from '~/common/types';
 
 const props = defineProps<{ data: PhotoLink[]; }>();
+const { locale } = useI18n();
 
 const numberOfGalleryColumns = computed(() => props.data.length >= 4 ? 4 : props.data.length);
 </script>
 
 <template>
   <div class="linkGallery-container">
-    <a v-for="([link, caption, src], i) in data" :href="link" class="linkGallery-link" :key="i">
+    <a v-for="([link, src, caption, date], i) in data" :href="link" class="linkGallery-link" :key="i">
       <NuxtImg
         :src="getImageUrl(src)"
         class="linkGallery-photo"
@@ -17,6 +20,9 @@ const numberOfGalleryColumns = computed(() => props.data.length >= 4 ? 4 : props
       />
       <div>
         <h4 class="linkGallery-title">{{ caption }}</h4>
+        <time v-if="date" :datetime="date" class="linkGallery-date">
+          {{ locale === 'ru' ? dayjs(date).locale('ru').format('D MMMM YYYY') : dayjs(date).format('MMM D, YYYY') }}
+        </time>
       </div>
     </a>
   </div>
@@ -24,7 +30,7 @@ const numberOfGalleryColumns = computed(() => props.data.length >= 4 ? 4 : props
 
 <style scoped>
 .linkGallery-container {
-  gap: 0 12px;
+  gap: 12px;
   max-width: 100%;
   clear: both;
   display: grid;
@@ -80,6 +86,11 @@ const numberOfGalleryColumns = computed(() => props.data.length >= 4 ? 4 : props
 .linkGallery-title {
   margin: 6px 0 12px;
   font-weight: bold;
+  color: var(--text-color);
+}
+
+.linkGallery-date {
+  font-size: 16px;
   color: var(--text-color);
 }
 </style>

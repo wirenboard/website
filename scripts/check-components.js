@@ -40,7 +40,9 @@ export async function checkComponents() {
 
       const vueFiles = await fg(`${componentsDir}/**/${componentName}.vue`);
       if (vueFiles.length === 0) {
-        errors.push(`${clickableLink(file)}\n  - ${colors.red}${componentName}${colors.reset}: [NOT FOUND] :${rawName}`);
+        errors.push(
+          `${clickableLink(file)}\n  - ${colors.red}${componentName}${colors.reset}: [NOT FOUND] :${rawName}`
+        );
         continue;
       }
 
@@ -56,27 +58,33 @@ export async function checkComponents() {
 
       for (const [prop, value] of Object.entries(passedProps)) {
         if (!props[prop]) {
-          errors.push(`${clickableLink(file)}\n  - ${colors.red}${componentName}${colors.reset}: [UNKNOWN PROP] "${prop}"`);
+          errors.push(
+            `${clickableLink(file)}\n  - ${colors.red}${componentName}${colors.reset}: [UNKNOWN PROP] "${prop}"`
+          );
           continue;
         }
 
         if (typeof value === 'object' && value.__rawExpression) {
-          warnings.push(`${clickableLink(file)}\n  - ${colors.yellow}${componentName}${colors.reset}: [SKIP TYPE CHECK] "${prop}"`);
+          warnings.push(
+            `${clickableLink(file)}\n  - ${colors.yellow}${componentName}${colors.reset}: [SKIP TYPE CHECK] "${prop}"`
+          );
           continue;
         }
 
-        const originalType = props[prop].original;
         const resolvedType = props[prop].resolved;
-        const typeLabel = originalType === resolvedType ? originalType : `${originalType} → (${resolvedType})`;
 
         if (!validateType(value, props[prop].type)) {
-          errors.push(`${clickableLink(file)}\n  - ${colors.red}${componentName}${colors.reset}: [TYPE MISMATCH] "${prop}" ожидает ${typeLabel}, получено "${JSON.stringify(value)}"`);
+          errors.push(
+            `${clickableLink(file)}\n  - ${colors.red}${componentName}${colors.reset}: [TYPE MISMATCH] "${prop}" ожидает ${resolvedType}, получено "${JSON.stringify(value)}"`
+          );
         }
       }
 
       for (const [propName, info] of Object.entries(props)) {
         if (info.required && !(propName in passedProps)) {
-          errors.push(`${clickableLink(file)}\n  - ${colors.red}${componentName}${colors.reset}: [MISSING REQUIRED PROP] "${propName}"`);
+          errors.push(
+            `${clickableLink(file)}\n  - ${colors.red}${componentName}${colors.reset}: [MISSING REQUIRED PROP] "${propName}"`
+          );
         }
       }
     }
@@ -157,7 +165,7 @@ function extractPropsWithAliases(script, aliasMap) {
                 type: splitUnion(resolvedType),
                 original: originalType,
                 resolved: resolvedType,
-                required: isRequired
+                required: isRequired,
               };
             }
           }
@@ -176,8 +184,16 @@ function resolveType(typeText, aliasMap, depth = 0) {
 
   let result = typeText.trim();
 
+  if (result.startsWith('(') && result.endsWith(')')) {
+    result = result.slice(1, -1).trim();
+  }
+
   if (aliasMap.has(result)) {
     return resolveType(aliasMap.get(result), aliasMap, depth + 1);
+  }
+
+  if (/^[A-Z][A-Za-z0-9_]*$/.test(result)) {
+    return 'string';
   }
 
   if (result.endsWith('[]')) {
@@ -198,7 +214,7 @@ function resolveType(typeText, aliasMap, depth = 0) {
       .join(' | ');
   }
 
-  return aliasMap.get(result) || result;
+  return result;
 }
 
 function validateType(value, expectedTypes) {
@@ -213,11 +229,26 @@ function validateType(value, expectedTypes) {
       if (!Array.isArray(value)) return false;
       const innerType = t.replace(/\[\]$/, '').trim();
 
-      if (innerType.startsWith('(') && innerType.endsWith(')')) {
-        const unionTypes = splitUnion(innerType.slice(1, -1));
-        return value.every(item => unionTypes.some(u => validateTupleOrType(item, u)));
+      if (innerType.startsWith('[') && innerType.endsWith(']')) {
+        return value.every(item => validateTupleOrType(item, innerType));
       }
-      return value.every(item => validateTupleOrType(item, innerType));
+
+      if (innerType.includes('|')) {
+        const variants = splitUnion(innerType);
+        return value.every(item =>
+          variants.some(v =>
+            v.startsWith('[') && v.endsWith(']')
+              ? validateTupleOrType(item, v)
+              : validateType(item, [v])
+          )
+        );
+      }
+
+      return value.every(item => validateType(item, [innerType]));
+    }
+
+    if (t.startsWith('[') && t.endsWith(']')) {
+      return validateTupleOrType(value, t);
     }
   }
   return false;
@@ -226,16 +257,46 @@ function validateType(value, expectedTypes) {
 function validateTupleOrType(value, typeDef) {
   if (typeDef.startsWith('[') && typeDef.endsWith(']')) {
     if (!Array.isArray(value)) return false;
-    const tupleTypes = typeDef.slice(1, -1).split(',').map(s => s.trim());
-    if (value.length !== tupleTypes.length) return false;
-    return value.every((val, i) => validateType(val, [tupleTypes[i]]));
+
+    const tupleTypes = typeDef
+      .slice(1, -1)
+      .split(',')
+      .map(s => s.trim());
+
+    const requiredLength = tupleTypes.filter(t => !t.endsWith('?')).length;
+    const maxLength = tupleTypes.length;
+
+    if (value.length < requiredLength || value.length > maxLength) {
+      return false;
+    }
+
+    for (let i = 0; i < value.length; i++) {
+      const expected = tupleTypes[i];
+      if (!expected) return false;
+
+      const isOptional = expected.endsWith('?');
+      const cleanType = expected.replace(/\?$/, '');
+
+      if (value[i] == null) {
+        if (isOptional) continue;
+        return false;
+      }
+
+      if (!validateType(value[i], [cleanType])) {
+        return false;
+      }
+    }
+
+    return true;
   }
+
   return validateType(value, [typeDef]);
 }
 
 function splitUnion(typeStr) {
   const result = [];
-  let depth = 0, current = '';
+  let depth = 0,
+    current = '';
   for (let char of typeStr) {
     if (char === '(' || char === '[') depth++;
     if (char === ')' || char === ']') depth--;
@@ -261,7 +322,10 @@ function parsePropsString(str) {
     let value = rawValue.trim();
 
     if (isExpression) {
-      if ((value.startsWith('[') && value.endsWith(']')) || (value.startsWith('{') && value.endsWith('}'))) {
+      if (
+        (value.startsWith('[') && value.endsWith(']')) ||
+        (value.startsWith('{') && value.endsWith('}'))
+      ) {
         try {
           const jsonLike = value.replace(/\n/g, ' ').replace(/\s+/g, ' ').replace(/'/g, '"');
           value = JSON.parse(jsonLike);
