@@ -25,7 +25,7 @@ const { data: product } = await useApi<Product>(`/product/${data.value.article}/
       </div>
 
       <div class="product-coverWrapper">
-        <NuxtImg :src="data.cover" class="product-cover" :alt="data.title" />
+        <NuxtImg :src="data.cover" class="product-cover" :alt="product?.title" />
       </div>
     </div>
 
@@ -64,7 +64,7 @@ const { data: product } = await useApi<Product>(`/product/${data.value.article}/
         <div class="product-price" v-if="product?.price">{{ toTriads(product.price) }} <sup class="product-priceUnit">₽</sup></div>
         <div class="product-note">{{ t('retailPrice') }} <span v-if="product?.price_max">{{ t('from') }} {{ toTriads(product.price) }} {{ t('to') }} {{ toTriads(product.price_max) }} ₽ {{ t('dependsOnOptions') }}</span></div>
         <div class="product-availability">
-          {{ t('inStock') }} {{ toTriads(product?.items.available) }} {{ t('pcs') }}<span v-if="product?.items.inv_final_assembly">, {{ t('more') }} {{ toTriads(product.items.inv_final_assembly) }} {{ t('pcs') }} {{ t('scheduled') }} {{ t(product.items.schedule_unit) }}</span></div>
+          {{ t('inStock') }} {{ toTriads(product?.items.available as number) }} {{ t('pcs') }}<span v-if="product?.items.inv_final_assembly">, {{ t('more') }} {{ toTriads(product.items.inv_final_assembly) }} {{ t('pcs') }} {{ t('scheduled') }} {{ t(product.items.schedule_unit) }}</span></div>
         <button
           :class="{
          'product-orderButton': true,

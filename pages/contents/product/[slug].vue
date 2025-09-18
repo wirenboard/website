@@ -21,7 +21,7 @@ defineOptions({
 useContentHead({
   ...data.value,
   // @ts-ignore
-  title: `${product.value?.type ?? ''} ${data.value.name ?? ''}`,
+  title: `${product.value?.type ?? ''} ${product.value.name ?? ''}`,
   head: {
     meta: [
       { name: 'description', content: data.value.meta },
