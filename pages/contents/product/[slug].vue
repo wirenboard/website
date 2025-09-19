@@ -5,7 +5,7 @@ import type { Product } from '~/common/types';
 const { locale } = useI18n();
 const route = useRoute();
 const { data } = await useLocalizedData('catalog', false, { _file: { $icontains: route.params.slug } });
-const product = await useApi<Product>(`/product/${data.value.article}/?locale=${locale.value}`);
+const { data: product } = await useApi<Product>(`/product/${data.value.article}/?locale=${locale.value}`);
 
 if (!data.value) {
   throw createError({
@@ -21,7 +21,7 @@ defineOptions({
 useContentHead({
   ...data.value,
   // @ts-ignore
-  title: `${product.value?.type ?? ''} ${product.value.name ?? ''}`,
+  title: `${product.value?.type ?? ''} ${product.value?.name ?? ''}`,
   head: {
     meta: [
       { name: 'description', content: data.value.meta },
