@@ -94,13 +94,13 @@ use_cases: ["liten_magnit", "techsensor_module_cafe", "rekota_hotel_vertical"]
 
 Для продуктовой страницы на руссском языке:
 ```
-:include{ path="/catalog/includes/quality_control" }
-:include{ path="/catalog/includes/certificates" }
+:include{path="/catalog/includes/quality_control"}
+:include{path="/catalog/includes/certificates"}
 ```
 
 Для продуктовой страницы на английском языке:
 ```
-:include{ path="/catalog/includes/quality_control" }
+:include{path="/catalog/includes/quality_control"}
 ```
 
 
