@@ -90,6 +90,20 @@ use_cases: ["liten_magnit", "techsensor_module_cafe", "rekota_hotel_vertical"]
 
 В тексте можно использовать [компоненты](./components.md).
 
+### Инклюды для продуктовой страницы, которые почти на всех страницах повторяются.
+
+Для продуктовой страницы на руссском языке:
+```
+:include{path="/catalog/includes/quality_control"}
+:include{path="/catalog/includes/certificates"}
+```
+
+Для продуктовой страницы на английском языке:
+```
+:include{path="/catalog/includes/quality_control"}
+```
+
+
 Изменения станут доступны для всех пользователей после отправки пуллреквеста и вливания утверждённых изменений.
 
 
