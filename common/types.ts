@@ -44,7 +44,7 @@ export interface Product {
   title: string;
   sub_title: string;
   discontinued: number;
-  can_order: number;
+  can_order: number | boolean;
   price: number;
   price_min?: number;
   price_max?: number;

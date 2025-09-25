@@ -54,7 +54,7 @@ const { data: product } = await useApi<Product>(`/product/${data.value.article}/
       <template v-if="$slots.description">
         <div class="product-description product-section" id="description">
           <p v-if="product?.discontinued" class="product-discontinued">
-            {{ t('discontinued') }} — <a href="https://wirenboard.com/ru/pages/contacts/">{{ t('contactUs') }}</a>.
+            {{ t('discontinued') }} — <a href="https://wirenboard.com/ru/pages/contacts/" class="product-contactLink">{{ t('contactUs') }}</a>.
           </p>
           <ContentSlot :use="$slots.description" />
         </div>
@@ -64,16 +64,23 @@ const { data: product } = await useApi<Product>(`/product/${data.value.article}/
         <div class="product-price" v-if="product?.price">{{ toTriads(product.price) }} <sup class="product-priceUnit">₽</sup></div>
         <div class="product-note">{{ t('retailPrice') }} <span v-if="product?.price_max">{{ t('from') }} {{ toTriads(product.price) }} {{ t('to') }} {{ toTriads(product.price_max) }} ₽ {{ t('dependsOnOptions') }}</span></div>
         <div class="product-availability">
-          {{ t('inStock') }} {{ toTriads(product?.items.available as number) }} {{ t('pcs') }}<span v-if="product?.items.inv_final_assembly">, {{ t('more') }} {{ toTriads(product.items.inv_final_assembly) }} {{ t('pcs') }} {{ t('scheduled') }} {{ t(product.items.schedule_unit) }}</span></div>
+          <template v-if="!product?.items.available">
+            {{ t('notAvailable') }}
+          </template>
+          <template v-else>
+            {{ t('inStock') }} {{ toTriads(product?.items.available as number) }} {{ t('pcs') }}<span v-if="product?.items.inv_final_assembly">, {{ t('more') }} {{ toTriads(product.items.inv_final_assembly) }} {{ t('pcs') }} {{ t('scheduled') }} {{ t(product.items.schedule_unit) }}</span>
+          </template>
+        </div>
         <button
           :class="{
-         'product-orderButton': true,
-         'add-to-basket-set': (product?.options?.length || product?.components?.length),
-         'add-to-basket': !(product?.options?.length || product?.components?.length),
-       }"
+            'product-orderButton': true,
+            'add-to-basket-set': (product?.options?.length || product?.components?.length),
+            'add-to-basket': !(product?.options?.length || product?.components?.length),
+          }"
           :data-product_id="product?.id"
           data-count="1"
           type="button"
+          :disabled="!product?.can_order"
         >
           {{ (product?.options?.length || product?.components?.length) ? t('chooseOptions') : t('addToBasket') }}
         </button>
@@ -339,6 +346,10 @@ const { data: product } = await useApi<Product>(`/product/${data.value.article}/
   cursor: pointer;
 }
 
+.product-contactLink {
+  text-decoration: underline;
+}
+
 .product-orderButton {
   color: var(--primary-color);
   font-family: 'Plumb', sans-serif;
@@ -365,6 +376,13 @@ const { data: product } = await useApi<Product>(`/product/${data.value.article}/
   background: var(--primary-color);
 }
 
+.product-orderButton:disabled {
+  background: #aeaeae;
+  border-color: #aeaeae;
+  color: #fff;
+  cursor: not-allowed ;
+}
+
 .product-otherVideos {
   font-size: 16px;
   margin-top: 36px;
@@ -386,6 +404,7 @@ const { data: product } = await useApi<Product>(`/product/${data.value.article}/
     "documentation": "Документация",
     "discontinued": "Товар не продаётся, чтобы заказать",
     "contactUs": "свяжитесь с нами",
+    "notAvailable": "Нет в наличии",
     "addToBasket": "Добавить в заказ",
     "chooseOptions": "Посмотреть опции",
     "retailPrice": "Розничная цена",
@@ -412,6 +431,7 @@ const { data: product } = await useApi<Product>(`/product/${data.value.article}/
     "documentation": "Documentation",
     "discontinued": "Product is no longer available to order",
     "contactUs": "contact us",
+    "notAvailable": "Not available",
     "addToBasket": "Add to Basket",
     "chooseOptions": "View options",
     "retailPrice": "Retail price",
