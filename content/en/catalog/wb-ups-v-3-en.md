@@ -4,18 +4,19 @@ name: WB-UPS v.3
 type: Battery module
 title: UPS module
 sub_title: on DIN rail
-cover: wb-ups-v-3-en/2OB3-lLPFq9hVB1O5aKaS9VKxGyb7iOU.png
+cover: wb-ups-v-3-en/wb-ups-v3-full-face-en.png
 documentation: https://wirenboard.com/wiki/UPS3
 images: [
-  ["wb-ups-v-3-en/9TKRRq5D66wy5AzpHOI_4E8ma9D10uUj.png"],
-  ["wb-ups-v-3-en/CxaKjo0rPYkXxY6DL3fUIv8AQ5swxNG3.png"],
-  ["wb-ups-v-3-en/yP_KSq4kHt8ofNQTt0POTLjIF8iMQf-_.png"],
-  ["wb-ups-v-3-en/AgcF-AUN7T6DtEABPBlgzOCVRnyL2W9c.png"],
-  ["wb-ups-v-3-en/jkpqFeWdZzGL5XrNGqrbemJL1lEOXrGY.png"],
-  ["wb-ups-v-3-en/qGRa6zOMPxyCSRtbBYHDeeqTVRMdSyxT.png"],
-  ["wb-ups-v-3-en/AEg850kRahvMoJK-ZaW2vZ5kSJZxO7Jn.png"],
-  ["wb-ups-v-3-en/bxkz7k7rrhgckCyOi8a_gQqRMfVgElLh.png"],
-  ["wb-ups-v-3-en/2OB3-lLPFq9hVB1O5aKaS9VKxGyb7iOU.png"]
+  ["wb-ups-v-3-en/wb-ups-v3-battery-en.png"],
+  ["wb-ups-v-3-en/wb-ups-v3-side1-en.png"],
+  ["wb-ups-v-3-en/wb-ups-v3-side2-en.png"],
+  ["wb-ups-v-3-en/wb-ups-v3-side3-en.png"],
+  ["wb-ups-v-3-en/wb-ups-v3-full-face-without-lid-en.png"],
+  ["wb-ups-v-3-en/wb-ups-v3-side1-board-en.png"],
+  ["wb-ups-v-3-en/wb-ups-v3-side2-board-en.png"],
+  ["wb-ups-v-3-en/wb-ups-v3-side4-en.png"],
+  ["wb-ups-v-3-en/wb-ups-v3-3-4-en.png"],
+  ["wb-ups-v-3-en/wb-ups-v3-full-face-en.png"]
 ]
 ---
 ::product
@@ -27,7 +28,7 @@ During a loss of input power, it provides 9 V to 25 V output to loads not exceed
 ## Основные характеристики
 ::product-section{title="Advantages"}
 :photo{
-  src="wb-ups-v-3-en/l2elkKVghi8chPK3MPuD1wRh3v61wctz.png"
+  src="wb-ups-v-3-en/wb-ups-v3-3-4-side-en.png"
   width="500px"
   float="right"
 }
@@ -41,7 +42,7 @@ During a loss of input power, it provides 9 V to 25 V output to loads not exceed
 ::
 ::product-section{title="Technical Specifications"}
 :photo{
-  src="wb-ups-v-3-en/am_zrp8IO9Tbi9qhPkuN4L2jP6KA7VB4.png"
+  src="wb-ups-v-3-en/wb-ups-v3-technical-characteristics-en.png"
   width="500px"
   float="right"
 }
@@ -57,7 +58,7 @@ During a loss of input power, it provides 9 V to 25 V output to loads not exceed
 ::
 ::product-section{title="Safety"}
 :photo{
-  src="wb-ups-v-3-en/VSTJEwU1n_ZLj3uCuZmNoQbNOnmPbaup.png"
+  src="wb-ups-v-3-en/wb-ups-v3-safety-en.png"
   width="500px"
   float="right"
 }
@@ -76,7 +77,7 @@ The battery is protected against overheating both by hardware and software mecha
 ::
 ::product-section{title="Prolonged Battery Service Life"}
 :photo{
-  src="wb-ups-v-3-en/4CBysTW2x470tqxaXlSFgj_v4BarruqO.png"
+  src="wb-ups-v-3-en/wb-ups-v3-battery-diagram-en.png"
   width="500px"
   float="right"
 }
@@ -90,7 +91,7 @@ A balancing circuit equalizes the voltage across the cells, ensuring uniform cha
 ::
 ::product-section{title="Parallel Operation Mode"}
 :photo{
-  src="wb-ups-v-3-en/Ldo93g0ADsNJW3ciKsHjkZUtfJP8GWn8.png"
+  src="wb-ups-v-3-en/wb-ups-v3-parallel-operation-mode-en.png"
   width="500px"
   float="right"
 }
@@ -98,7 +99,7 @@ If the power or capacity of a single WB-UPS v.3 is insufficient, multiple units 
 ::
 ::product-section{title="Transport Mode"}
 :photo{
-  src="wb-ups-v-3-en/9JeLyxeR7q-hVwOmKKezjAMs9AcZ0qQx.png"
+  src="wb-ups-v-3-en/wb-ups-v3-button-en.png"
   width="500px"
   float="right"
 }
@@ -106,7 +107,7 @@ Engaging the hidden button cuts off the battery to avoid discharge. The battery 
 ::
 ::product-section{title="Modbus RTU"}
 :photo{
-  src="wb-ups-v-3-en/X90ZjbBR4n4sRbKuaxkWJt4ylBhs10TQ.png"
+  src="wb-ups-v-3-en/wb-ups-v3-modbus-rtu-en.png"
   width="500px"
   float="right"
 }
@@ -130,7 +131,7 @@ It also enables turning the load on or off when external power is absent.
 ::
 ::product-section{title="Configuration"}
 :photo{
-  src="wb-ups-v-3-en/6h2yxweOFd_Om1YjVWn2LY7DXR6a7zZa.png"
+  src="wb-ups-v-3-en/wb-ups-v3-configuration-en.png"
   width="500px"
   float="right"
 }
@@ -140,7 +141,7 @@ When used with other equipment, configuration is performed by writing setup para
 ::
 ::product-section{title="Interface"}
 :photo{
-  src="wb-ups-v-3-en/Z4AW6j8aO8iOX3UYPP4Zefj1hSDNeX13.png"
+  src="wb-ups-v-3-en/wb-ups-v3-interface-en.png"
   width="500px"
   float="right"
 }
@@ -148,7 +149,7 @@ The device card in the Wiren Board controller’s web interface displays all cha
 ::
 ::product-section{title="Fast Modbus support"}
 :photo{
-  src="wb-ups-v-3-en/a_iN3eaAyqksvtKMdi02a65yfmRJ-Pfa.png"
+  src="wb-ups-v-3-en/wb-ups-v3-fast-modbus-support-en.png"
   width="500px"
   float="right"
 }
@@ -159,21 +160,6 @@ All Wiren Board devices, in addition to standard Modbus RTU, can operate with it
 - automatic resolution of address conflicts on the bus.
 These features are enabled automatically — if the device supports Fast Modbus, the controller will use it. Otherwise, it falls back to standard Modbus RTU.
 ::
-::product-section{title="Quality control at every stage production"}
-:photo{
-  src="wb-ups-v-3-en/lwkeIHZ8M0GwJHb3T3GQWQmEbY1OFQKj.jpg"
-  width="500px"
-  float="right"
-}
-We develop and manufacture all Wiren Board devices ourselves. All devices undergo multi-stage quality control:
-
-- During development — checking the components used for compliance with the declared characteristics and testing the prototype device at extreme operating conditions.
-- After installing SMD components — automated optical inspection.
-- After soldering the lead components — visual inspection of soldering.
-- After assembling the device — functional testing on an automated stand.
-- When shipped to the warehouse — control of completeness, stickers, appearance.
-Thanks to this approach, the failure rate is no more than 0.5% of all released devices. Read more in the article About device reliability.
-
-If the device fails within two years from the date of purchase, we will replace it for free without the need to send it to a service center.
+::include{path="/catalog/includes/quality_control"}
 ::
 ::

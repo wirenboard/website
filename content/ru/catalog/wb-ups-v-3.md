@@ -4,18 +4,19 @@ name: WB-UPS v.3
 type: Модуль резервного питания
 title: Модуль бесперебойного питания
 sub_title: на DIN-рейку
-cover: wb-ups-v-3/2OB3-lLPFq9hVB1O5aKaS9VKxGyb7iOU.png
+cover: wb-ups-v-3/wb-ups-v3-full-face.png
 documentation: https://wirenboard.com/wiki/UPS3
 images: [
-  ["wb-ups-v-3/9TKRRq5D66wy5AzpHOI_4E8ma9D10uUj.png"],
-  ["wb-ups-v-3/CxaKjo0rPYkXxY6DL3fUIv8AQ5swxNG3.png"],
-  ["wb-ups-v-3/yP_KSq4kHt8ofNQTt0POTLjIF8iMQf-_.png"],
-  ["wb-ups-v-3/AgcF-AUN7T6DtEABPBlgzOCVRnyL2W9c.png"],
-  ["wb-ups-v-3/jkpqFeWdZzGL5XrNGqrbemJL1lEOXrGY.png"],
-  ["wb-ups-v-3/qGRa6zOMPxyCSRtbBYHDeeqTVRMdSyxT.png"],
-  ["wb-ups-v-3/AEg850kRahvMoJK-ZaW2vZ5kSJZxO7Jn.png"],
-  ["wb-ups-v-3/bxkz7k7rrhgckCyOi8a_gQqRMfVgElLh.png"],
-  ["wb-ups-v-3/2OB3-lLPFq9hVB1O5aKaS9VKxGyb7iOU.png"]
+  ["wb-ups-v-3/wb-ups-v3-battery.png"],
+  ["wb-ups-v-3/wb-ups-v3-side1.png"],
+  ["wb-ups-v-3/wb-ups-v3-side2.png"],
+  ["wb-ups-v-3/wb-ups-v3-side3.png"],
+  ["wb-ups-v-3/wb-ups-v3-full-face-without-lid.png"],
+  ["wb-ups-v-3/wb-ups-v3-side1-board.png"],
+  ["wb-ups-v-3/wb-ups-v3-side2-board.png"],
+  ["wb-ups-v-3/wb-ups-v3-side4.png"],
+  ["wb-ups-v-3/wb-ups-v3-3-4.png"],
+  ["wb-ups-v-3/wb-ups-v3-full-face.png"]
 ]
 ---
 ::product
@@ -27,7 +28,7 @@ images: [
 ## Основные характеристики
 ::product-section{title="Преимущества"}
 :photo{
-  src="wb-ups-v-3/l2elkKVghi8chPK3MPuD1wRh3v61wctz.png"
+  src="wb-ups-v-3/wb-ups-v3-3-4-side.png"
   width="500px"
   float="right"
 }
@@ -41,7 +42,7 @@ images: [
 ::
 ::product-section{title="Технические характеристики"}
 :photo{
-  src="wb-ups-v-3/q44tzItUvTpxfGAEldT-v4Kpn2lSzpL_.png"
+  src="wb-ups-v-3/wb-ups-v3-technical-characteristics.png"
   width="500px"
   float="right"
 }
@@ -57,7 +58,7 @@ images: [
 ::
 ::product-section{title="Безопасность"}
 :photo{
-  src="wb-ups-v-3/590sjMsjjzZEFrAcLIORYmvskz0ynQev.png"
+  src="wb-ups-v-3/wb-ups-v3-safety.png"
   width="500px"
   float="right"
 }
@@ -76,7 +77,7 @@ images: [
 ::
 ::product-section{title="Увеличенный срок службы аккумуляторов"}
 :photo{
-  src="wb-ups-v-3/dBZ7uw56v4dtIlfCXEDd3xnv1ReyDHbT.png"
+  src="wb-ups-v-3/wb-ups-v3-battery-diagram.png"
   width="500px"
   float="right"
 }
@@ -90,7 +91,7 @@ images: [
 ::
 ::product-section{title="Режим параллельной работы"}
 :photo{
-  src="wb-ups-v-3/7H2oAnReVgqraYLeO8HnO9uzxfTJ8i7v.png"
+  src="wb-ups-v-3/wb-ups-v3-parallel-operation-mode.png"
   width="500px"
   float="right"
 }
@@ -98,7 +99,7 @@ images: [
 ::
 ::product-section{title="Транспортный режим"}
 :photo{
-  src="wb-ups-v-3/9JeLyxeR7q-hVwOmKKezjAMs9AcZ0qQx.png"
+  src="wb-ups-v-3/wb-ups-v3-button.png"
   width="500px"
   float="right"
 }
@@ -106,7 +107,7 @@ images: [
 ::
 ::product-section{title="Modbus RTU"}
 :photo{
-  src="wb-ups-v-3/X90ZjbBR4n4sRbKuaxkWJt4ylBhs10TQ.png"
+  src="wb-ups-v-3/wb-ups-v3-modbus-rtu.png"
   width="500px"
   float="right"
 }
@@ -130,7 +131,7 @@ images: [
 ::
 ::product-section{title="Настройка"}
 :photo{
-  src="wb-ups-v-3/6h2yxweOFd_Om1YjVWn2LY7DXR6a7zZa.png"
+  src="wb-ups-v-3/wb-ups-v3-configuration.png"
   width="500px"
   float="right"
 }
@@ -140,7 +141,7 @@ images: [
 ::
 ::product-section{title="Интерфейс"}
 :photo{
-  src="wb-ups-v-3/Z4AW6j8aO8iOX3UYPP4Zefj1hSDNeX13.png"
+  src="wb-ups-v-3/wb-ups-v3-interface.png"
   width="500px"
   float="right"
 }
@@ -148,7 +149,7 @@ images: [
 ::
 ::product-section{title="Поддержка Быстрого Modbus"}
 :photo{
-  src="wb-ups-v-3/MaxVaZrppZDn-ObtGgbc1zww1EdfslJA.png"
+  src="wb-ups-v-3/wb-ups-v3-fast-modbus-support.png"
   width="500px"
   float="right"
 }
@@ -159,29 +160,7 @@ images: [
 - разрешение коллизий адресов на шине.
 Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
 ::
-::product-section{title="Контроль качества на каждом этапе производства"}
-:photo{
-  src="wb-ups-v-3/owco4OgVHET9TkRD3fMnRL3RjID2LxoV.jpg"
-  width="500px"
-  float="right"
-}
-Все устройства Wiren Board мы разрабатываем и производим самостоятельно. Все устройства проходят многоэтапный контроль качества:
-
-- при разработке — проверка используемых компонентов на соответствие заявленным характеристикам и испытание прототипа устройства на предельных режимах работы;
-- после монтажа smd компонентов — автоматизированный оптический контроль;
-- после пайки выводных компонентов — визуальный контроль пайки;
-- после сборки устройства — функциональное тестирование на автоматизированном стенде;
-- при отгрузке на склад — контроль комплектности, наклейки, внешнего вида.
-Благодаря такому подходу процент отказа составляет не более 0.5% всех выпущенных устройств. Подробнее читайте в статье [Про надежность устройств](https://wirenboard.com/ru/pages/reliability/).
-
-Если же устройство вышло из строя в течение двух лет с момента покупки, [мы бесплатно его заменим](https://wirenboard.com/ru/pages/warranty/) без необходимости отправки в сервисный центр.
-::
-::product-section{title="Сертификаты"}
-:photo{
-  src="wb-ups-v-3/x3LmjTinGZvXllCskyC-Jg6DxmmsdKTM.png"
-  width="500px"
-  float="right"
-}
-Устройство соответствует требованиям [ТР ТС 004/2011](https://wirenboard.com/ru/pages/certificate/).
+::include{path="/catalog/includes/quality_control"}
+:include{path="/catalog/includes/certificates"}
 ::
 ::
