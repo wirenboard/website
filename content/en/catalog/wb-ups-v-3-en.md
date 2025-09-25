@@ -4,19 +4,19 @@ name: WB-UPS v.3
 type: Battery module
 title: UPS module
 sub_title: on DIN rail
-cover: wb-ups-v-3-en/wb-ups-v3-full-face-en.png
+cover: wb-ups-v-3-en/wb-ups-v3-full-face.png
 documentation: https://wirenboard.com/wiki/UPS3
 images: [
-  ["wb-ups-v-3-en/wb-ups-v3-battery-en.png"],
-  ["wb-ups-v-3-en/wb-ups-v3-side1-en.png"],
-  ["wb-ups-v-3-en/wb-ups-v3-side2-en.png"],
-  ["wb-ups-v-3-en/wb-ups-v3-side3-en.png"],
-  ["wb-ups-v-3-en/wb-ups-v3-full-face-without-lid-en.png"],
-  ["wb-ups-v-3-en/wb-ups-v3-side1-board-en.png"],
-  ["wb-ups-v-3-en/wb-ups-v3-side2-board-en.png"],
-  ["wb-ups-v-3-en/wb-ups-v3-side4-en.png"],
-  ["wb-ups-v-3-en/wb-ups-v3-3-4-en.png"],
-  ["wb-ups-v-3-en/wb-ups-v3-full-face-en.png"]
+  ["wb-ups-v-3-en/wb-ups-v3-battery.png"],
+  ["wb-ups-v-3-en/wb-ups-v3-side1.png"],
+  ["wb-ups-v-3-en/wb-ups-v3-side2.png"],
+  ["wb-ups-v-3-en/wb-ups-v3-side3.png"],
+  ["wb-ups-v-3-en/wb-ups-v3-full-face-without-lid.png"],
+  ["wb-ups-v-3-en/wb-ups-v3-side1-board.png"],
+  ["wb-ups-v-3-en/wb-ups-v3-side2-board.png"],
+  ["wb-ups-v-3-en/wb-ups-v3-side4.png"],
+  ["wb-ups-v-3-en/wb-ups-v3-3-4.png"],
+  ["wb-ups-v-3-en/wb-ups-v3-full-face.png"]
 ]
 ---
 ::product
@@ -28,7 +28,7 @@ During a loss of input power, it provides 9 V to 25 V output to loads not exceed
 ## Основные характеристики
 ::product-section{title="Advantages"}
 :photo{
-  src="wb-ups-v-3-en/wb-ups-v3-3-4-side-en.png"
+  src="wb-ups-v-3-en/wb-ups-v3-3-4-side.png"
   width="500px"
   float="right"
 }
@@ -42,7 +42,7 @@ During a loss of input power, it provides 9 V to 25 V output to loads not exceed
 ::
 ::product-section{title="Technical Specifications"}
 :photo{
-  src="wb-ups-v-3-en/wb-ups-v3-technical-characteristics-en.png"
+  src="wb-ups-v-3-en/wb-ups-v3-technical-characteristics.png"
   width="500px"
   float="right"
 }
@@ -58,7 +58,7 @@ During a loss of input power, it provides 9 V to 25 V output to loads not exceed
 ::
 ::product-section{title="Safety"}
 :photo{
-  src="wb-ups-v-3-en/wb-ups-v3-safety-en.png"
+  src="wb-ups-v-3-en/wb-ups-v3-safety.png"
   width="500px"
   float="right"
 }
@@ -77,7 +77,7 @@ The battery is protected against overheating both by hardware and software mecha
 ::
 ::product-section{title="Prolonged Battery Service Life"}
 :photo{
-  src="wb-ups-v-3-en/wb-ups-v3-battery-diagram-en.png"
+  src="wb-ups-v-3-en/wb-ups-v3-battery-diagram.png"
   width="500px"
   float="right"
 }
@@ -91,7 +91,7 @@ A balancing circuit equalizes the voltage across the cells, ensuring uniform cha
 ::
 ::product-section{title="Parallel Operation Mode"}
 :photo{
-  src="wb-ups-v-3-en/wb-ups-v3-parallel-operation-mode-en.png"
+  src="wb-ups-v-3-en/wb-ups-v3-parallel-operation-mode.png"
   width="500px"
   float="right"
 }
@@ -99,7 +99,7 @@ If the power or capacity of a single WB-UPS v.3 is insufficient, multiple units 
 ::
 ::product-section{title="Transport Mode"}
 :photo{
-  src="wb-ups-v-3-en/wb-ups-v3-button-en.png"
+  src="wb-ups-v-3-en/wb-ups-v3-button.png"
   width="500px"
   float="right"
 }
@@ -107,7 +107,7 @@ Engaging the hidden button cuts off the battery to avoid discharge. The battery 
 ::
 ::product-section{title="Modbus RTU"}
 :photo{
-  src="wb-ups-v-3-en/wb-ups-v3-modbus-rtu-en.png"
+  src="wb-ups-v-3-en/wb-ups-v3-modbus-rtu.png"
   width="500px"
   float="right"
 }
@@ -131,7 +131,7 @@ It also enables turning the load on or off when external power is absent.
 ::
 ::product-section{title="Configuration"}
 :photo{
-  src="wb-ups-v-3-en/wb-ups-v3-configuration-en.png"
+  src="wb-ups-v-3-en/wb-ups-v3-configuration.png"
   width="500px"
   float="right"
 }
@@ -141,7 +141,7 @@ When used with other equipment, configuration is performed by writing setup para
 ::
 ::product-section{title="Interface"}
 :photo{
-  src="wb-ups-v-3-en/wb-ups-v3-interface-en.png"
+  src="wb-ups-v-3-en/wb-ups-v3-interface.png"
   width="500px"
   float="right"
 }
@@ -149,7 +149,7 @@ The device card in the Wiren Board controller’s web interface displays all cha
 ::
 ::product-section{title="Fast Modbus support"}
 :photo{
-  src="wb-ups-v-3-en/wb-ups-v3-fast-modbus-support-en.png"
+  src="wb-ups-v-3-en/wb-ups-v3-fast-modbus-support.png"
   width="500px"
   float="right"
 }
