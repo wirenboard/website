@@ -44,11 +44,8 @@ const numberOfGalleryColumns = computed(() => props.data.length >= 4 ? 4 : props
 
 .linkGallery-link {
   text-decoration: none;
-
-  @media (min-width: 460px) and (max-width: 940px) {
-    display: flex;
-    gap: 12px;
-  }
+  display: flex;
+  flex-direction: column;
 }
 
 .linkGallery-link:focus {
