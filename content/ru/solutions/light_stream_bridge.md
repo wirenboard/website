@@ -16,7 +16,6 @@ category: commercial_estate_monitoring
 
 | Оборудование | Функции |
 | :---- | :---- |
-
 | [WB-MRWL3](https://wirenboard.com/ru/product/wb-mrwl3/) | Управление группами освещения |
 | [WB-MCM8](https://wirenboard.com/ru/product/WB-MCM8/) | Мониторинг состояния автоматических выключателей |
 | [WB-MGE v.2](https://wirenboard.com/ru/product/WB-MGE/) | Шлюз между Modbus RTU и Ethernet |
