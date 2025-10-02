@@ -3,7 +3,7 @@ title: Booklets and leaflets
 ---
 
 ::
-::product-section{title=""}
+::product-section{title="Wiren Board Booklet (2025)"}
 :photo{
   src="broshures/en_brochure_fed_2025_2.png"
   width="250px"
