@@ -20,7 +20,7 @@ category: commercial_estate_monitoring
 | [WB-MCM8](https://wirenboard.com/ru/product/WB-MCM8/) | Мониторинг состояния автоматических выключателей |
 | [WB-MGE v.2](https://wirenboard.com/ru/product/WB-MGE/) | Шлюз между Modbus RTU и Ethernet |
 | [WB-MAP3E](https://wirenboard.com/ru/product/WB-MAP3E/) | Учет потребления электроэнергии и контроль качества питания |
-| [WB-MSW v.4](https://wirenboard.com/ru/product/wb-msw-v4/) | Измерение температуры, влажности, освещённости, движение; контроль вскрытия шкафа |
+| [WB-MSW v.4](https://wirenboard.com/ru/product/wb-msw-v4/) | Измерение температуры, влажности, освещённости, движения; контроль вскрытия шкафа |
 
 _«Мы используем модули Wiren Board в проектах архитектурной подсветки: управление силовыми группами, дискретные сигналы, телеметрия. Это компактные, надежные и понятные устройства, которые хорошо вписываются в нашу архитектуру и экономят место в щите», **Александр Тишков, директор компании [Light Stream](https://lightstream.pro/)**_
 
