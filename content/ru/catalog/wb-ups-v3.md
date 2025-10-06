@@ -4,19 +4,19 @@ name: WB-UPS v.3
 type: Модуль резервного питания
 title: Модуль бесперебойного питания
 sub_title: на DIN-рейку
-cover: wb-ups-v-3/wb-ups-v3-full-face.png
+cover: wb-ups-v3/wb-ups-v3-full-face.png
 documentation: https://wirenboard.com/wiki/UPS3
 images: [
-  ["wb-ups-v-3/wb-ups-v3-battery.png"],
-  ["wb-ups-v-3/wb-ups-v3-side1.png"],
-  ["wb-ups-v-3/wb-ups-v3-side2.png"],
-  ["wb-ups-v-3/wb-ups-v3-side3.png"],
-  ["wb-ups-v-3/wb-ups-v3-full-face-without-lid.png"],
-  ["wb-ups-v-3/wb-ups-v3-side1-board.png"],
-  ["wb-ups-v-3/wb-ups-v3-side2-board.png"],
-  ["wb-ups-v-3/wb-ups-v3-side4.png"],
-  ["wb-ups-v-3/wb-ups-v3-3-4.png"],
-  ["wb-ups-v-3/wb-ups-v3-full-face.png"]
+  ["wb-ups-v3/wb-ups-v3-battery.png"],
+  ["wb-ups-v3/wb-ups-v3-side1.png"],
+  ["wb-ups-v3/wb-ups-v3-side2.png"],
+  ["wb-ups-v3/wb-ups-v3-side3.png"],
+  ["wb-ups-v3/wb-ups-v3-full-face-without-lid.png"],
+  ["wb-ups-v3/wb-ups-v3-side1-board.png"],
+  ["wb-ups-v3/wb-ups-v3-side2-board.png"],
+  ["wb-ups-v3/wb-ups-v3-side4.png"],
+  ["wb-ups-v3/wb-ups-v3-3-4.png"],
+  ["wb-ups-v3/wb-ups-v3-full-face.png"]
 ]
 ---
 ::product
@@ -28,7 +28,7 @@ images: [
 ## Основные характеристики
 ::product-section{title="Преимущества"}
 :photo{
-  src="wb-ups-v-3/wb-ups-v3-3-4-side.png"
+  src="wb-ups-v3/wb-ups-v3-3-4-side.png"
   width="500px"
   float="right"
 }
@@ -42,7 +42,7 @@ images: [
 ::
 ::product-section{title="Технические характеристики"}
 :photo{
-  src="wb-ups-v-3/wb-ups-v3-technical-characteristics.png"
+  src="wb-ups-v3/wb-ups-v3-technical-characteristics.png"
   width="500px"
   float="right"
 }
@@ -58,7 +58,7 @@ images: [
 ::
 ::product-section{title="Безопасность"}
 :photo{
-  src="wb-ups-v-3/wb-ups-v3-safety.png"
+  src="wb-ups-v3/wb-ups-v3-safety.png"
   width="500px"
   float="right"
 }
@@ -77,7 +77,7 @@ images: [
 ::
 ::product-section{title="Увеличенный срок службы аккумуляторов"}
 :photo{
-  src="wb-ups-v-3/wb-ups-v3-battery-diagram.png"
+  src="wb-ups-v3/wb-ups-v3-battery-diagram.png"
   width="500px"
   float="right"
 }
@@ -91,7 +91,7 @@ images: [
 ::
 ::product-section{title="Режим параллельной работы"}
 :photo{
-  src="wb-ups-v-3/wb-ups-v3-parallel-operation-mode.png"
+  src="wb-ups-v3/wb-ups-v3-parallel-operation-mode.png"
   width="500px"
   float="right"
 }
@@ -99,7 +99,7 @@ images: [
 ::
 ::product-section{title="Транспортный режим"}
 :photo{
-  src="wb-ups-v-3/wb-ups-v3-button.png"
+  src="wb-ups-v3/wb-ups-v3-button.png"
   width="500px"
   float="right"
 }
@@ -107,7 +107,7 @@ images: [
 ::
 ::product-section{title="Modbus RTU"}
 :photo{
-  src="wb-ups-v-3/wb-ups-v3-modbus-rtu.png"
+  src="wb-ups-v3/wb-ups-v3-modbus-rtu.png"
   width="500px"
   float="right"
 }
@@ -131,7 +131,7 @@ images: [
 ::
 ::product-section{title="Настройка"}
 :photo{
-  src="wb-ups-v-3/wb-ups-v3-configuration.png"
+  src="wb-ups-v3/wb-ups-v3-configuration.png"
   width="500px"
   float="right"
 }
@@ -141,7 +141,7 @@ images: [
 ::
 ::product-section{title="Интерфейс"}
 :photo{
-  src="wb-ups-v-3/wb-ups-v3-interface.png"
+  src="wb-ups-v3/wb-ups-v3-interface.png"
   width="500px"
   float="right"
 }
@@ -149,7 +149,7 @@ images: [
 ::
 ::product-section{title="Поддержка Быстрого Modbus"}
 :photo{
-  src="wb-ups-v-3/wb-ups-v3-fast-modbus-support.png"
+  src="wb-ups-v3/wb-ups-v3-fast-modbus-support.png"
   width="500px"
   float="right"
 }
@@ -160,7 +160,6 @@ images: [
 - разрешение коллизий адресов на шине.
 Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
 ::
-::include{path="/catalog/includes/quality_control"}
+:include{path="/catalog/includes/quality_control"}
 :include{path="/catalog/includes/certificates"}
-::
 ::
