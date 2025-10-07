@@ -10,6 +10,12 @@ export default defineEventHandler(async (event) => {
     .find();
 
   return products.reduce((acc: any, product) => {
+    const node = product.body?.children?.[0]?.children?.find(
+      (item: any) => item?.props && Object.hasOwn(item.props, 'v-slot:description')
+    );
+
+    if (!node) return acc;
+
     // @ts-ignore
     const hast = toHast(product.body.children[0].children.find(item => Object.hasOwn(item.props, 'v-slot:description')), {
       unknownHandler(state, node) {
