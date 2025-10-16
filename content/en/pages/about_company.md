@@ -12,8 +12,8 @@ Today Wiren Board is a great team of more than 50 highly qualified professionals
 
 :gallery{
     :data='[
-        ["about_company/5bacbb9891587.jpg", ""],
-        ["about_company/5bacbbe028352.jpg", ""],
-        ["about_company/66336cb636bae.jpg", ""],        
+        ["about_company/about_1.png", ""],
+        ["about_company/about_2.jpg", ""],
+        ["about_company/about_3.jpg", ""]        
     ]'
 }

@@ -14,7 +14,7 @@ Wiren Board — группа компаний, которая с 2013 года �
 
 :gallery{ 
     :data='[ 
-        ["about_company/65e8481365e80.jpg", "Стенд проверки контроллеров"], ["about_company/65e8481a898eb.jpg", "Склад компонентов"],    ["about_company/65e84820edf2f.jpg", "Пайка выводных компонентов"], ["about_company/65e8482cadd40.jpg", "Устройства перед упаковкой"], ["about_company/65e84836a2659.jpg", "Визуальная проверка пайки"], ["about_company/65e8484778910.jpg", "SMT-монтаж малых партий у нас"], ["about_company/65e8484bccbf4.jpg", "SMT-монтаж у партнеров"], ["about_company/65e8484f42c44.jpg", "Проверка пайки BGA у партнеров"]
+        ["about_company/about_1.jpg", "Стенд проверки контроллеров"], ["about_company/about_2.jpg", "Склад компонентов"],    ["about_company/about_3.jpg", "Пайка выводных компонентов"], ["about_company/about_4.jpg", "Устройства перед упаковкой"], ["about_company/about_5.jpg", "Визуальная проверка пайки"], ["about_company/about_6.jpg", "SMT-монтаж малых партий у нас"], ["about_company/about_7.jpg", "SMT-монтаж у партнеров"], ["about_company/about_8.jpg", "Проверка пайки BGA у партнеров"]
         ]'
         }
 
@@ -22,7 +22,7 @@ Wiren Board — группа компаний, которая с 2013 года �
 
 :video-gallery{
     :data='[
-        ["https://peertube.wirenboard.com/videos/embed/527ab223-0532-4ba6-9665-1f756e547f38", "Экскурсия по производству Wiren Board", "about_company/66336cb636bae.jpeg"]
+        ["https://peertube.wirenboard.com/videos/embed/527ab223-0532-4ba6-9665-1f756e547f38", "Экскурсия по производству Wiren Board", "about_company/vid_about.jpeg"]
         ]'
 }
 
@@ -32,19 +32,20 @@ Wiren Board — группа компаний, которая с 2013 года �
 
 :link-gallery{
     :data='[
-        ["https://habr.com/ru/companies/wirenboard/articles/817215/", "Новый контроллер, выключатели, DALI-шлюз и другие новости", "about_company/6697e882dd801.jpg"],
-        ["https://habr.com/ru/companies/wirenboard/articles/818499/", "Собственное облако, новый конфигуратор устройств и другие новости", "about_company/6697e87e0bafe.jpg"],
-        ["https://habr.com/ru/companies/wirenboard/articles/798325/", "Как мы тестируем устройства, которые производим", "about_company/65e84bec6c0df.jpg"],
-        ["https://wirenboard.com/ru/pages/reliability/", "Про надёжность устройств Wiren Board", "about_company/605361c97397e.png"], 
-        ["https://habr.com/ru/companies/wirenboard/articles/737402/", "Контроллер в металлическом корпусе, быстрый Modbus и другие новости", "about_company/658c4b6c74b74.jpg"],
-        ["https://wirenboard.com/ru/pages/wbce2022-report-wb/", "О работе компании, новых устройствах, весна 2022", "about_company/6710d407cdb3a.jpg"],
-        ["https://peertube.wirenboard.com/w/fmKConGTD7FJjiCgnZ2cQz", "Новый контроллер Wiren Board 7 и линейка для интеграторов", "about_company/658c4cab6cbdf.png"],
-        ["https://wirenboard.com/ru/pages/retail-fastfood-automation/", "Автоматизация и мониторинг в продуктовом ритейле и фастфуде", "about_company/658c4b892173b.jpg"],
-        ["https://wirenboard.com/ru/pages/wb_ci_cd/", "CI/CD для микроконтроллеров в Wiren Board", "about_company/658c4b901c22e.jpg"], 
-        ["https://habr.com/ru/company/oleg-bunin/blog/476304/", "Аутентификация по аппаратному ключу в ПО верхнего уровня", "about_company/658c4b9530f4e.jpg"],
-        ["https://wirenboard.com/wiki/images/a/a8/5ce50bcf26214.pdf", "Технический учёт и энергоменеджмент", "about_company/65e84e2a1b9a7.jpg"]               
+        ["https://habr.com/ru/companies/wirenboard/articles/817215/", "about_company/about_articles1.jpg", "Новый контроллер, выключатели, DALI-шлюз и другие новости"],
+        ["https://habr.com/ru/companies/wirenboard/articles/818499/", "about_company/about_articles2.jpg", "Собственное облако, новый конфигуратор устройств и другие новости"],
+        ["https://habr.com/ru/companies/wirenboard/articles/798325/", "about_company/about_articles3.jpg", "Как мы тестируем устройства, которые производим"],
+        ["https://wirenboard.com/ru/pages/reliability/", "about_company/about_articles4.png", "Про надёжность устройств Wiren Board"],
+        ["https://habr.com/ru/companies/wirenboard/articles/737402/", "about_company/about_articles5.jpg", "Контроллер в металлическом корпусе, быстрый Modbus и другие новости"],
+        ["https://wirenboard.com/ru/pages/wbce2022-report-wb/", "about_company/about_articles6.jpg", "О работе компании, новых устройствах, весна 2022"],
+        ["https://peertube.wirenboard.com/w/fmKConGTD7FJjiCgnZ2cQz", "about_company/about_articles7.png", "Новый контроллер Wiren Board 7 и линейка для интеграторов"],
+        ["https://wirenboard.com/ru/pages/retail-fastfood-automation/", "about_company/about_articles8.jpg", "Автоматизация и мониторинг в продуктовом ритейле и фастфуде"],
+        ["https://wirenboard.com/ru/pages/wb_ci_cd/", "about_company/about_articles9.jpg", "CI/CD для микроконтроллеров в Wiren Board"],
+        ["https://habr.com/ru/company/oleg-bunin/blog/476304/", "about_company/about_articles10.jpg", "Аутентификация по аппаратному ключу в ПО верхнего уровня"],
+        ["https://wirenboard.com/wiki/images/a/a8/5ce50bcf26214.pdf", "about_company/about_articles11.jpg", "Технический учёт и энергоменеджмент"]               
     ]'
 }
+
 
 ## Отзывы партнёров
 Эти и другие отзывы вы найдёте в плейлисте [Интервью с партнерами](https://peertube.wirenboard.com/w/p/qU5jWXxTYH2omMuSAhkMjG?playlistPosition=1). Также смотрите [примеры внедрений оборудования Wiren Board](https://wirenboard.com/ru/contents/solutions).
@@ -53,11 +54,11 @@ Wiren Board — группа компаний, которая с 2013 года �
 
 :video-gallery{
     :data='[
-        ["https://peertube.wirenboard.com/w/wz1SVzhopFUR1RQqrgvQaE", "«Оборудование Wiren Board привлекло нас своей функциональностью, надёжностью поставок и ценой.» Игорь Краюшкин, Smart Base", "about_company/658c1448b579d.jpg"],
-        ["https://peertube.wirenboard.com/w/g7FisXoyRWa77Nju41g72Y", "«Wiren Board — это открытая платформа, под которую удобно разрабатывать свой софт.» Михаил Дорогавцев, Techsensor", "about_company/658c144f957af.jpg"],
-        ["[URL ролика c подписью и обложкой](https://peertube.wirenboard.com/w/bMbPZf2Gpaep3Svr5SRbhy)", "«Оборудование Wiren Board мы выбрали за широкий ассортимент и надёжность.» Константин Струлев, ЦОДУМ", "about_company/658c145a9f95d.jpg"],
-        ["https://peertube.wirenboard.com/w/vhB9jiRkzsKr8zaUe3evK2", "«Контроллеры Wiren Board зарекомендовали себя как надёжные.» Николай Штремель, ПК Энергия", "about_company/658c1463b2fc4.jpg"],
-        ["https://peertube.wirenboard.com/w/bgdiP5H9GnzefaMdw29St2", "«Wiren Board — это практически неограниченные возможности интеграции с оборудованием других производителей.» Юрий Арслангереев, Intelligent House", "about_company/658c146b06260.jpg"],
-        ["https://peertube.wirenboard.com/w/kHNyUbBJZJn76qsm1PK8Kz", "«Разработчики Wiren Board умеют прислушиваться к пожеланиям партнёров и постоянно улучшают продуктовую линейку.» Иван Власов, Философт", "about_company/658c14737c520.jpg"]
+        ["https://peertube.wirenboard.com/w/wz1SVzhopFUR1RQqrgvQaE", "«Оборудование Wiren Board привлекло нас своей функциональностью, надёжностью поставок и ценой.» Игорь Краюшкин, Smart Base", "about_company/vid1_SmartBase.jpg"],
+        ["https://peertube.wirenboard.com/w/g7FisXoyRWa77Nju41g72Y", "«Wiren Board — это открытая платформа, под которую удобно разрабатывать свой софт.» Михаил Дорогавцев, Techsensor", "about_company/vid2_Techsensor.jpg"],
+        ["[URL ролика c подписью и обложкой](https://peertube.wirenboard.com/w/bMbPZf2Gpaep3Svr5SRbhy)", "«Оборудование Wiren Board мы выбрали за широкий ассортимент и надёжность.» Константин Струлев, ЦОДУМ", "about_company/vid3_CODUM.jpg"],
+        ["https://peertube.wirenboard.com/w/vhB9jiRkzsKr8zaUe3evK2", "«Контроллеры Wiren Board зарекомендовали себя как надёжные.» Николай Штремель, ПК Энергия", "about_company/vid4_PKEnergy.jpg"],
+        ["https://peertube.wirenboard.com/w/bgdiP5H9GnzefaMdw29St2", "«Wiren Board — это практически неограниченные возможности интеграции с оборудованием других производителей.» Юрий Арслангереев, Intelligent House", "about_company/vid5_IntelligentHouse.jpg"],
+        ["https://peertube.wirenboard.com/w/kHNyUbBJZJn76qsm1PK8Kz", "«Разработчики Wiren Board умеют прислушиваться к пожеланиям партнёров и постоянно улучшают продуктовую линейку.» Иван Власов, Философт", "about_company/vid6_Phylosoft.jpg"]
     ]'
 }
