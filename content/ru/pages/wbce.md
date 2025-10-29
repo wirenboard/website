@@ -14,10 +14,10 @@ title: Конференция и выставка WBCE
 Мы с партнёрами ежегодно проводим выставку и конференцию, где десятки компаний показывают решения для автоматизации инженерных систем, а также рассказывают о примерах внедрений оборудования Wiren Board на реальных объектах. Гости могут посетить наше производство с экскурсией.
 
 ## Предстоящие мероприятия:
-- [WBCE 2026](https://wirenboard.com/ru/contents/wbce2026)
+- **[WBCE 2026](https://wirenboard.com/ru/contents/wbce2026)**
 
 Отчёты:
-- **[WBCE 2025](https://wirenboard.com/ru/contents/wbce2025). 42 участника и более 1200 гостей.**
+- [WBCE 2025](https://wirenboard.com/ru/contents/wbce2025). 42 участника и более 1200 гостей.
 - [WBCE 2024](https://wirenboard.com/ru/contents/wbce2024). 32 участника и более 750 гостей.
 - [WBCE 2023](https://wirenboard.com/ru/contents/wbce2023). 30 участников и более 500 гостей.
 - [WBCE 2022](https://wirenboard.com/ru/contents/wbce2022). 14 участников и более 300 гостей.
