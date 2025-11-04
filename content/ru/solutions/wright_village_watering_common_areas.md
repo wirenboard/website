@@ -6,7 +6,7 @@ category: commercial_estate_monitoring
 ---
 
 :photo{
-    src="wright_village_cottage/0.jpeg"
+    src="wright_village_watering_common_areas/0.jpeg"
     caption="Поселковая аллея — газон над магистралью полива еще не пересажен"
     width="400"
     float="right"
