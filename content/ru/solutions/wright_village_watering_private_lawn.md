@@ -6,7 +6,7 @@ category: apartments_automation
 ---
 
 :photo{
-    src="wright_village_cottage/0.jpeg"
+    src="wright_village_watering_private_lawn/0.jpeg"
     caption="Зеленый газон — заслуга автополива"
     width="400"
     float="right"
