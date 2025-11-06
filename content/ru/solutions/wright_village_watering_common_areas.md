@@ -6,8 +6,8 @@ category: commercial_estate_monitoring
 ---
 
 :photo{
-    src="wright_village_watering_common_areas/0.jpeg"
-    caption="Поселковая аллея — газон над магистралью полива еще не пересажен"
+    src="wright_village_watering_common_areas/1.jpeg"
+    caption="Работает автополив"
     width="400"
     float="right"
 }
@@ -23,7 +23,7 @@ _«Контроллер Wiren Board управляет насосом, клап�
 
 :gallery{
     :data='[
-        ["wright_village_watering_common_areas/1.jpeg", "Работает автополив"],
+        ["wright_village_watering_common_areas/0.jpeg", "Поселковая аллея — газон над магистралью полива еще не пересажен"],
         ["wright_village_watering_common_areas/2.jpeg", "Щит автоматизации полива"],
         ["wright_village_watering_common_areas/3.jpeg", "Электромагнитные клапаны"],
         ["wright_village_watering_common_areas/4.jpeg", "Трубы полива и емкости с водой"]
