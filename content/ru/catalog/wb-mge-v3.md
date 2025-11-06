@@ -37,7 +37,7 @@ use_cases: []
 ## Основные характеристики
 ::product-section{title="Ethernet и Wi-Fi"}
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/1_WB-MGEv3_Ethernet_Wi-Fi_RU.png"
   width="500px"
   float="right"
 }
@@ -54,7 +54,7 @@ use_cases: []
 
 ::product-section{title="2 x RS-485"}
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/2_WB-MGEv3_RS-485_RU.png"
   width="500px"
   float="right"
 }
@@ -69,7 +69,7 @@ use_cases: []
 
 ::product-section{title="Терминаторы и failsafe bias на портах RS-485"}
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/3_WB-MGEv3_Терминатор_RU.png"
   width="500px"
   float="right"
 }
@@ -85,7 +85,7 @@ use_cases: []
 ::product-section{title="I/O Bus (WBIO)"}
 
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/4_WB-MGEv3_WBIO.png"
   float="right"
   width="500px"
 }
@@ -99,10 +99,11 @@ use_cases: []
 
 ::product-section{title="Питание модуля и подключенных устройств"}
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/5_WB-MGEv3_MR6Cv2_MWACv2.png"
   width="500px"
   float="right"
 }
+
 
 В базовой комплектации модуль питается от напряжений 9…28 В постоянного тока.
 
@@ -118,7 +119,7 @@ use_cases: []
 
 ::product-section{title="Индикация"}
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/6_WB-MGEv3_Индикация_RU.png"
   width="500px"
   float="right"
 }
@@ -136,7 +137,7 @@ use_cases: []
 ::product-section{title="Веб-интерфейс для настройки"}
 
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/7_WB-MGEv3_ВебUI_RU.png"
   float="right"
   width="500px"
 }
@@ -150,7 +151,7 @@ use_cases: []
 ::product-section{title="Поддержка Быстрого Modbus"}
 
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/8_WB-MGEv3_Быстрый Modbus_RU.png"
   float="right"
   width="500px"
 }
@@ -167,7 +168,7 @@ WB-MGE v.3 поддерживает Быстрый Modbus во всех режи
 ::product-section{title="Сброс настроек и режим Factory"}
 
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/9_WB-MGEv3_Сброс_RU.png"
   float="right"
   width="500px"
 }
@@ -181,7 +182,7 @@ WB-MGE v.3 поддерживает Быстрый Modbus во всех режи
 ::product-section{title="Обновление прошивки"}
 
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/10_WB-MGEv3_Обновление_RU.png"
   float="right"
   width="500px"
 }
@@ -195,7 +196,7 @@ WB-MGE v.3 поддерживает Быстрый Modbus во всех режи
 ::product-section{title="DIY — экспериментируйте с прошивками"}
 
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/11_WB-MGEv3_DIY.png"
   float="right"
   width="500px"
 }

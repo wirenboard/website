@@ -33,7 +33,7 @@ WBIO modules connect via the side I/O Bus connector and are exposed as a Modbus 
 ## Main Features
 ::product-section{title="Ethernet and Wi‑Fi"}
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/1_WB-MGEv3_Ethernet_Wi-Fi_ENG.png"
   width="500px"
   float="right"
 }
@@ -50,7 +50,7 @@ You can change the hostname, Wi‑Fi mode, and network settings. Default values 
 
 ::product-section{title="2 × RS‑485"}
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/2_WB-MGEv3_RS-485_ENG.png"
   width="500px"
   float="right"
 }
@@ -65,7 +65,7 @@ For each RS‑485 port you can set its TCP port and mode, then poll it over any 
 
 ::product-section{title="Termination and Failsafe Bias on RS‑485 Ports"}
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/3_WB-MGEv3_Терминатор_ENG.png"
   width="500px"
   float="right"
 }
@@ -81,7 +81,7 @@ This simplifies wiring and adds flexibility during design and commissioning.
 ::product-section{title="I/O Bus (WBIO)"}
 
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/4_WB-MGEv3_WBIO.png"
   float="right"
   width="500px"
 }
@@ -95,7 +95,7 @@ If WBIO support is not required and you want to use **RS485‑2** for other prot
 
 ::product-section{title="Power for the Module and Connected Devices"}
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/5_WB-MGEv3_MR6Cv2_MWACv2.png"
   width="500px"
   float="right"
 }
@@ -114,7 +114,7 @@ All this enables compact installations without extra terminal blocks — and, wh
 
 ::product-section{title="Indicators"}
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/6_WB-MGEv3_Индикация_ENG.png"
   width="500px"
   float="right"
 }
@@ -132,7 +132,7 @@ They let you assess the module state without opening the web interface.
 ::product-section{title="Web Interface for Reset/Configuration"}
 
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/7_WB-MGEv3_Веб-UI_ENG.png"
   float="right"
   width="500px"
 }
@@ -146,7 +146,7 @@ If WB‑MGE v.3 is connected to one of the network interfaces of a Wiren Board c
 ::product-section{title="Fast Modbus Support"}
 
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/8_WB-MGEv3_Быстрый Modbus_ENG.png"
   float="right"
   width="500px"
 }
@@ -163,7 +163,7 @@ WB‑MGE v.3 supports Fast Modbus in all modes: **transparent gateway** and **Mo
 ::product-section{title="Reset to Defaults and Factory Mode"}
 
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/9_WB-MGEv3_Сброс_ENG.png"
   float="right"
   width="500px"
 }
@@ -177,7 +177,7 @@ For edge cases when the firmware cannot boot, **Factory mode** is available to r
 ::product-section{title="Firmware Updates"}
 
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/10_WB-MGEv3_Обновление_ENG.png"
   float="right"
   width="500px"
 }
@@ -191,7 +191,7 @@ Users can upload a new version directly through the web interface — no program
 ::product-section{title="DIY — Experiment with Firmware"}
 
 :photo{
-  src="wb-mge-v3/wb-mge-v3-no-photo.png"
+  src="wb-mge-v3/11_WB-MGEv3_DIY.png"
   float="right"
   width="500px"
 }
