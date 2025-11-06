@@ -2,7 +2,7 @@
 title: 'Расширяем возможности умного дома на HDL и Iridium с помощью Wiren Board'
 cover: infotech_hdl_iridium/infotech_hdl_iridium.webp
 date: 2025-11-04
-category: commercial_estate_monitoring
+category: apartments_automation
 ---
 
 :photo{
