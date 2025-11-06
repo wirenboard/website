@@ -6,8 +6,8 @@ category: apartments_automation
 ---
 
 :photo{
-    src="wright_village_watering_private_lawn/1.jpeg"
-    caption="Светильники еще не установили"
+    src="wright_village_watering_private_lawn/0.jpeg"
+    caption="Зеленый газон — заслуга автополива"
     width="400"
     float="right"
 }
@@ -23,7 +23,7 @@ _«Вся система состоит из  одного контроллер�
 
 :gallery{
     :data='[
-        ["wright_village_watering_private_lawn/0.jpeg", "Зеленый газон — заслуга автополива"],
+        ["wright_village_watering_private_lawn/1.jpeg", "Светильники еще не установили"],
         ["wright_village_watering_private_lawn/2.jpeg", "Красивый ландшафт"],
         ["wright_village_watering_private_lawn/3.jpeg", "И красивые растения. Все поливаются"],
         ["wright_village_watering_private_lawn/4.jpeg", "Еще одно красивое место. Правда, ремонт пока не закончен"]
