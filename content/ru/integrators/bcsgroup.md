@@ -1,5 +1,6 @@
 ---
 district: [spb]
+tags: [smart_home]
 coordinates: [59.9483126, 30.2497018]
 title: BCS (БИ СИ ЭС)
 logo: bcsgroup/bcsgroup.webp
