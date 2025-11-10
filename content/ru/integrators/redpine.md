@@ -1,5 +1,6 @@
 ---
 district: [moscow]
+tags: [automation, data_center]
 coordinates: [55.8642766417225, 37.65390605932286]
 title: ООО «Энергоэффективность»
 logo: redpine/redpine.webp
