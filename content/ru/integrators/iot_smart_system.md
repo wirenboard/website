@@ -1,5 +1,6 @@
 ---
 district: [volga]
+tags: [smart_home]
 coordinates: [55.761654129228596, 49.19752531264067]
 title: IotSmartSystem
 logo: iot_smart_system/iot_smart_system.webp
