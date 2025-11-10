@@ -1,5 +1,6 @@
 ---
 district: [moscow, spb]
+tags: [smart_home]
 coordinates: [[55.678555, 37.583032],[59.208498, 39.895349]]
 title: Recota
 logo: recota/recota.webp

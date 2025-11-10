@@ -1,5 +1,6 @@
 ---
 district: [ural, volga]
+tags: [smart_home]
 coordinates: [[56.8305163965088, 60.587592276649985], [55.789871, 49.160448]]
 title: HomeOn
 logo: home_on/home_on.webp

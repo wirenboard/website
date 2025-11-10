@@ -1,5 +1,6 @@
 ---
 district: [moscow]
+tags: [smart_home, retail, automation]
 coordinates: [55.607961, 37.594369]
 title: ИНПРО
 logo: inpro/inpro.webp

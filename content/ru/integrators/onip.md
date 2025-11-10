@@ -1,5 +1,6 @@
 ---
 district: [moscow]
+tags: [smart_home, automation]
 coordinates: [55.7263305, 37.6783846]
 title: ON-IP
 logo: onip/onip.webp

@@ -1,5 +1,6 @@
 ---
 district: [moscow]
+tags: [smart_home]
 coordinates: [55.7980529, 37.5417883]
 title: Voltagkin
 logo: voltagkin/voltagkin.webp

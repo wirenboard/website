@@ -1,5 +1,6 @@
 ---
 district: [moscow]
+tags: [automation, data_center]
 coordinates: [55.794322812542234, 37.54353093370438]
 title: Форсайт
 logo: foresight/foresight.webp

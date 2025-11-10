@@ -1,5 +1,6 @@
 ---
 district: [moscow, spb, kz]
+tags: [smart_home]
 coordinates: [[55.684270, 37.341547], [59.853491, 30.383736], [43.236073, 76.959694]]
 title: INTELVISION - Smart системный интегратор
 logo: intelvision/intelvision.webp

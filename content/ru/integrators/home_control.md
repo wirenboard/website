@@ -1,5 +1,6 @@
 ---
 district: [volga]
+tags: [smart_home]
 coordinates: [57.984953077944795, 56.265589147424635]
 title: Home Control умный дом
 logo: home_control/home_control.webp

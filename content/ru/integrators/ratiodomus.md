@@ -1,5 +1,6 @@
 ---
 district: [by]
+tags: [smart_home]
 coordinates: [53.923053, 27.670267]
 title: ООО «Рацио Домус»
 logo: ratiodomus/ratiodomus.webp

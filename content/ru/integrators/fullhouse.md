@@ -1,5 +1,6 @@
 ---
 district: [moscow]
+tags: [smart_home]
 coordinates: [55.82475555992766, 37.45003410908481]
 title: FullHouse
 logo: fullhouse/fullhouse.webp

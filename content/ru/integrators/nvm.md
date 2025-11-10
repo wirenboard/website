@@ -1,5 +1,6 @@
 ---
 district: [center]
+tags: [smart_home]
 coordinates: [58.050074, 38.850088]
 title: Новые возможности
 logo: nvm/nvm.webp

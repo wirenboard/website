@@ -1,5 +1,6 @@
 ---
 district: [ural]
+tags: [automation, data_center]
 coordinates: [56.82504365721301, 60.566293814714406]
 title: Энерго ПРО
 logo: e_pro_plus/e_pro_plus.webp

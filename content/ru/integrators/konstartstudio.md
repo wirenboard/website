@@ -1,5 +1,6 @@
 ---
 district: [moscow]
+tags: [smart_home]
 coordinates: [55.756056921132384, 37.59262076232987]
 title: KonstArtStudio
 logo: konstartstudio/konstartstudio.webp

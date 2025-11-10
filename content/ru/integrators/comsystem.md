@@ -1,5 +1,6 @@
 ---
 district: [by]
+tags: [automation]
 coordinates: [55.178501, 30.223216]
 title: ОДО «Комсистем»
 logo: comsystem/comsystem.webp

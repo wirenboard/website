@@ -1,5 +1,6 @@
 ---
 district: [center]
+tags: [smart_home]
 coordinates: [56.129057, 40.406635]
 title: Next Level House
 logo: nlhouse/nlhouse.webp

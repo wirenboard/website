@@ -1,6 +1,6 @@
 ---
 district: [kg]
-tags: [automation, data_center]
+tags: [smart_home, automation, data_center]
 coordinates: [42.843417, 74.604556]
 title: IT Vision
 logo: it_vision/it_vision.webp

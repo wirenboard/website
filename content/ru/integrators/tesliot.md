@@ -1,6 +1,6 @@
 ---
 district: [uz]
-tags: [automation, data_center]
+tags: [retail, automation, data_center]
 coordinates: [41.223542, 69.199574]
 title: TESLA SMART LLC
 logo: tesliot/tesliot.webp

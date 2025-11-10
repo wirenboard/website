@@ -1,5 +1,6 @@
 ---
 district: [siberian]
+tags: [smart_home]
 coordinates: [56.010543, 92.852581]
 title: AVAelectro
 logo: avaelectro/avaelectro.webp
