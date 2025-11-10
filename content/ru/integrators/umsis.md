@@ -1,5 +1,6 @@
 ---
 district: [volga]
+tags: [smart_home]
 coordinates: [55.780213, 49.133444]
 title: Умные системы
 logo: umsis/umsis.webp
