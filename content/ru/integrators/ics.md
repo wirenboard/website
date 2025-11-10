@@ -1,5 +1,6 @@
 ---
 district: [moscow]
+tags: [automation, data_center, retail]
 coordinates: [55.778042963214986, 37.69286596613755]
 title: Группа ICS
 logo: ics/ics.webp
