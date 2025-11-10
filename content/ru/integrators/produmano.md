@@ -1,5 +1,6 @@
 ---
 district: [kg]
+tags: [smart_home]
 coordinates: [42.82789274724515, 74.60996178787109]
 title: ООО «ТекоПро»
 logo: produmano/produmano.webp
