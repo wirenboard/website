@@ -1,5 +1,6 @@
 ---
 district: [moscow,spb,volga]
+tags: [smart_home]
 coordinates: [55.678555, 37.583032]
 title: Apex Технологии Комфорта
 logo: apex/apex.webp
