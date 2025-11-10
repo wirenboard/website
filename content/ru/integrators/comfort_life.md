@@ -1,5 +1,6 @@
 ---
 district: [moscow, spb]
+tags: [smart_home]
 coordinates: [[59.99963804437398, 30.36195935639194], [55.926231656904626, 37.769142359062464]]
 title: Comfort-Life
 logo: comfort_life/comfort_life.webp
