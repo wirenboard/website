@@ -1,5 +1,6 @@
 ---
 district: [moscow]
+tags: [smart_home]
 coordinates: [55.73233355594546, 37.69716221261671]
 title: Intelligent House
 logo: intelligent_house/intelligent_house.webp
