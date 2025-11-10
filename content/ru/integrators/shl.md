@@ -1,5 +1,6 @@
 ---
 district: [southern]
+tags: [smart_home]
 coordinates: [46.347123, 48.031598]
 title: Smart Home Lab
 logo: shl/shl.webp
