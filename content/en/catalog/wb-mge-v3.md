@@ -19,7 +19,7 @@ use_cases: []
 ::product
 #description
 
-**The device in development, the estimated start of sales is November 2025.**
+**The device is under development; sales are expected to start in November 2025.**
 
 The WB-MGE v.3 gateway is designed to connect devices with RS‑485 and WBIO (I/O modules) interfaces over Ethernet and Wi‑Fi.
 
