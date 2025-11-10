@@ -1,5 +1,6 @@
 ---
 district: [moscow]
+tags: [smart_home, retail]
 coordinates: [55.9199817, 37.5037807]
 title: TECOLUX
 logo: tecolux/tecolux.webp
