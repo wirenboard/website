@@ -1,5 +1,6 @@
 ---
 district: [moscow]
+tags: [smart_home]
 coordinates: [55.72505840921418, 37.39902580426399]
 title: XIOT
 logo: xiot/xiot.webp
