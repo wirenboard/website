@@ -1,6 +1,6 @@
 ---
 district: [moscow]
-tags: [smart_home]
+tags: [smart_home, retail, automation]
 coordinates: [55.921612, 37.534927]
 title: HUMIDEX
 logo: humidex/humidex.webp
