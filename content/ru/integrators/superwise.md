@@ -1,5 +1,6 @@
 ---
 district: [moscow]
+tags: [smart_home, automation, retail, data_center]
 coordinates: [55.606004, 37.649957]
 title: SuperWise
 logo: superwise/superwise.webp
