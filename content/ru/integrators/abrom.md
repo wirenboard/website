@@ -1,5 +1,6 @@
 ---
 district: [volga, kg]
+tags: [smart_home]
 coordinates: [[55.82427415604684, 49.19640453369345], [56.146224, 47.248783], [42.874621, 74.569762]]
 title: Abrom
 logo: abrom/abrom.webp
