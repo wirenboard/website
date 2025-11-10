@@ -1,5 +1,6 @@
 ---
 district: [by]
+tags: [smart_home]
 coordinates: [53.947585900865356, 27.69945695143718]
 title: Частное предприятие «ТКАльянсБел»
 logo: tk_allians/tk_allians.webp
