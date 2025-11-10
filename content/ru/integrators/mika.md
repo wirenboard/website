@@ -1,5 +1,6 @@
 ---
 district: [volga]
+tags: [smart_home, automation]
 coordinates: [54.684017, 55.985748]
 title: MIKA
 logo: mika/mika.webp
