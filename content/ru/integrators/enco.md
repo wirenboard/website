@@ -1,5 +1,6 @@
 ---
 district: [moscow]
+tags: [smart_home]
 coordinates: [55.56537581413944, 37.48486319851014]
 title: ENCO
 logo: enco/enco.webp
