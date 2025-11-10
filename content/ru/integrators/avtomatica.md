@@ -1,6 +1,6 @@
 ---
 district: [southern]
-tags: [smart_home]
+tags: [automation, data_center]
 coordinates: [48.750391, 44.504569]
 title: ООО «АВТОМАТИКА»
 logo: avtomatica/avtomatica.webp
