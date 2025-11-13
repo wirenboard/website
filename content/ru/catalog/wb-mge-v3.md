@@ -12,7 +12,8 @@ images: [
   ["wb-mge-v3/wb-mge-v3-main.png"],
   ["wb-mge-v3/wb-mge-v3-top.png"],
   ["wb-mge-v3/wb-mge-v3-pcb-1.png"],
-  ["wb-mge-v3/wb-mge-v3-pcb-2.png"]
+  ["wb-mge-v3/wb-mge-v3-pcb-2.png"],
+  ["wb-mge-v3/wb-mge-v3-with-box.jpg"]
 ]
 video: [
   ["https://peertube.wirenboard.com/w/dWoKUA1staBV8X6sPmRwfo"],
@@ -69,7 +70,7 @@ use_cases: []
 
 ::product-section{title="Терминаторы и failsafe bias на портах RS-485"}
 :photo{
-  src="wb-mge-v3/3_WB-MGEv3_Терминатор_RU.png"
+  src="wb-mge-v3/3_WB-MGEv3_Terminator_RU.png"
   width="500px"
   float="right"
 }
@@ -119,7 +120,7 @@ use_cases: []
 
 ::product-section{title="Индикация"}
 :photo{
-  src="wb-mge-v3/6_WB-MGEv3_Индикация_RU.png"
+  src="wb-mge-v3/6_WB-MGEv3_Indication_RU.png"
   width="500px"
   float="right"
 }
@@ -137,7 +138,7 @@ use_cases: []
 ::product-section{title="Веб-интерфейс для настройки"}
 
 :photo{
-  src="wb-mge-v3/7_WB-MGEv3_ВебUI_RU.png"
+  src="wb-mge-v3/7_WB-MGEv3_WebUI_RU.png"
   float="right"
   width="500px"
 }
@@ -151,7 +152,7 @@ use_cases: []
 ::product-section{title="Поддержка Быстрого Modbus"}
 
 :photo{
-  src="wb-mge-v3/8_WB-MGEv3_Быстрый Modbus_RU.png"
+  src="wb-mge-v3/8_WB-MGEv3_Fast_Modbus_RU.png"
   float="right"
   width="500px"
 }
@@ -168,7 +169,7 @@ WB-MGE v.3 поддерживает Быстрый Modbus во всех режи
 ::product-section{title="Сброс настроек и режим Factory"}
 
 :photo{
-  src="wb-mge-v3/9_WB-MGEv3_Сброс_RU.png"
+  src="wb-mge-v3/9_WB-MGEv3_Reset_RU.png"
   float="right"
   width="500px"
 }
@@ -182,7 +183,7 @@ WB-MGE v.3 поддерживает Быстрый Modbus во всех режи
 ::product-section{title="Обновление прошивки"}
 
 :photo{
-  src="wb-mge-v3/10_WB-MGEv3_Обновление_RU.png"
+  src="wb-mge-v3/10_WB-MGEv3_Update_RU.png"
   float="right"
   width="500px"
 }
