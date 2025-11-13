@@ -147,7 +147,7 @@ If WB‑MGE v.3 is connected to one of the network interfaces of a Wiren Board c
 ::product-section{title="Fast Modbus Support"}
 
 :photo{
-  src="wb-mge-v3/8_WB-MGEv3_Fast Modbus_ENG.png"
+  src="wb-mge-v3/8_WB-MGEv3_Fast_Modbus_ENG.png"
   float="right"
   width="500px"
 }

@@ -152,7 +152,7 @@ use_cases: []
 ::product-section{title="Поддержка Быстрого Modbus"}
 
 :photo{
-  src="wb-mge-v3/8_WB-MGEv3_Fast Modbus_RU.png"
+  src="wb-mge-v3/8_WB-MGEv3_Fast_Modbus_RU.png"
   float="right"
   width="500px"
 }
