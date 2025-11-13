@@ -66,7 +66,7 @@ For each RS‑485 port you can set its TCP port and mode, then poll it over any 
 
 ::product-section{title="Termination and Failsafe Bias on RS‑485 Ports"}
 :photo{
-  src="wb-mge-v3/3_WB-MGEv3_Терминатор_ENG.png"
+  src="wb-mge-v3/3_WB-MGEv3_Terminator_ENG.png"
   width="500px"
   float="right"
 }
@@ -115,7 +115,7 @@ All this enables compact installations without extra terminal blocks — and, wh
 
 ::product-section{title="Indicators"}
 :photo{
-  src="wb-mge-v3/6_WB-MGEv3_Индикация_ENG.png"
+  src="wb-mge-v3/6_WB-MGEv3_Indication_ENG.png"
   width="500px"
   float="right"
 }
@@ -133,7 +133,7 @@ They let you assess the module state without opening the web interface.
 ::product-section{title="Web Interface for Reset/Configuration"}
 
 :photo{
-  src="wb-mge-v3/7_WB-MGEv3_Веб-UI_ENG.png"
+  src="wb-mge-v3/7_WB-MGEv3_Web-UI_ENG.png"
   float="right"
   width="500px"
 }
@@ -147,7 +147,7 @@ If WB‑MGE v.3 is connected to one of the network interfaces of a Wiren Board c
 ::product-section{title="Fast Modbus Support"}
 
 :photo{
-  src="wb-mge-v3/8_WB-MGEv3_Быстрый Modbus_ENG.png"
+  src="wb-mge-v3/8_WB-MGEv3_Fast Modbus_ENG.png"
   float="right"
   width="500px"
 }
@@ -164,7 +164,7 @@ WB‑MGE v.3 supports Fast Modbus in all modes: **transparent gateway** and **Mo
 ::product-section{title="Reset to Defaults and Factory Mode"}
 
 :photo{
-  src="wb-mge-v3/9_WB-MGEv3_Сброс_ENG.png"
+  src="wb-mge-v3/9_WB-MGEv3_Reset_ENG.png"
   float="right"
   width="500px"
 }
@@ -178,7 +178,7 @@ For edge cases when the firmware cannot boot, **Factory mode** is available to r
 ::product-section{title="Firmware Updates"}
 
 :photo{
-  src="wb-mge-v3/10_WB-MGEv3_Обновление_ENG.png"
+  src="wb-mge-v3/10_WB-MGEv3_Update_ENG.png"
   float="right"
   width="500px"
 }
