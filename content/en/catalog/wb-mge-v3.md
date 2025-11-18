@@ -10,6 +10,7 @@ meta: RS-485, Ethernet, Wi‑Fi, WBIO Interface Converter
 keywords: Modbus TCP, RS-485, Ethernet, Wi-Fi, WBIO
 images: [
   ["wb-mge-v3/wb-mge-v3-main.png"],
+  ["wb-mge-v3/wb-mge-v3-main-2.png"],
   ["wb-mge-v3/wb-mge-v3-top.png"],
   ["wb-mge-v3/wb-mge-v3-pcb-1.png"],
   ["wb-mge-v3/wb-mge-v3-pcb-2.png"],
