@@ -17,3 +17,11 @@ Our Kazakhstan office is located in Astana.
         ["about_company/about_1.jpg", "Controller testing stand"], ["about_company/about_2.jpg", "Component warehouse"],    ["about_company/about_3.jpg", "Through-hole soldering"], ["about_company/about_4.jpg", "Devices before packaging"], ["about_company/about_5.jpg", "Visual solder inspection"], ["about_company/about_6.jpg", "In-house SMT assembly for small batches"], ["about_company/about_7.jpg", "SMT assembly at partner facilities"], ["about_company/about_8.jpg", "BGA solder inspection at partner facilities"]
         ]'
         }
+
+Take a tour of our manufacturing process:
+
+:video-gallery{
+    :data='[
+        ["https://peertube.wirenboard.com/videos/embed/cfM4ywEAA3agtrdTm2rbcM", "Wiren Board Factory Tour", "about_company/vid_about.jpeg"]
+        ]'
+}        
