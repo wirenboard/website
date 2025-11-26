@@ -21,8 +21,6 @@ use_cases: []
 ::product
 #description
 
-**The device is under development; sales are expected to start in November 2025.**
-
 The WB-MGE v.3 gateway is designed to connect devices with RS‑485 and WBIO (I/O modules) interfaces over Ethernet and Wi‑Fi.
 
 It provides two independent RS‑485—TCP channels; each can operate in one of the following modes:
