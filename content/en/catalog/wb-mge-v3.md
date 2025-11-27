@@ -4,7 +4,7 @@ name: WB-MGE v.3
 title: Interface Converter
 type: Multi-Protocol Gateway
 sub_title: RS-485, Ethernet, Wi‑Fi, WBIO Interface Converter
-cover: wb-mge-v3/wb-mge-v3-main.png
+cover: wb-mge-v3/wb-mge-v3-top.png
 documentation: https://wirenboard.com/wiki/WB-MGE_v.3_Modbus_Ethernet_Gateway
 meta: RS-485, Ethernet, Wi‑Fi, WBIO Interface Converter
 keywords: Modbus TCP, RS-485, Ethernet, Wi-Fi, WBIO
