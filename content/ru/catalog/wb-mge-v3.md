@@ -4,7 +4,7 @@ name: WB-MGE v.3
 title: Преобразователь интерфейсов
 type: Мульти-протокольный шлюз
 sub_title: Преобразователь интерфейсов RS-485, Ethernet, Wi-Fi, WBIO
-cover: wb-mge-v3/wb-mge-v3-main.png
+cover: wb-mge-v3/wb-mge-v3-top.png
 documentation: https://wirenboard.com/wiki/WB-MGE_v.3_Modbus_Ethernet_Gateway
 meta: Преобразователь интерфейсов RS-485, Ethernet, Wi-Fi, WBIO
 keywords: Modbus TCP, RS-485, Ethernet, Wi-Fi, WBIO
