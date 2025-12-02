@@ -14,6 +14,12 @@ images: [
   ["wb-mge-v3/wb-mge-v3-top.png"],
   ["wb-mge-v3/wb-mge-v3-pcb-1.png"],
   ["wb-mge-v3/wb-mge-v3-pcb-2.png"],
+  ["wb-mge-v3/wb-mge-v3-webui-1.png"],
+  ["wb-mge-v3/wb-mge-v3-webui-2.png"],
+  ["wb-mge-v3/wb-mge-v3-webui-3.png"],
+  ["wb-mge-v3/wb-mge-v3-webui-4.png"],
+  ["wb-mge-v3/wb-mge-v3-webui-5.png"],
+  ["wb-mge-v3/wb-mge-v3-webui-6.png"],
   ["wb-mge-v3/wb-mge-v3-with-box.jpg"]
 ]
 use_cases: []
@@ -131,7 +137,7 @@ They let you assess the module state without opening the web interface.
 
 ::
 
-::product-section{title="Web Interface for Reset/Configuration"}
+::product-section{title="Web Interface for Configuration"}
 
 :photo{
   src="wb-mge-v3/7_WB-MGEv3_Web-UI_ENG.png"
