@@ -71,16 +71,13 @@ const invTotal = computed(() => {
         </div>
         <div class="product-note">{{ t('retailPrice') }} <span v-if="product?.price_max">{{ t('from') }} {{ toTriads(product.price) }} {{ t('to') }} {{ toTriads(product.price_max) }} ₽ {{ t('dependsOnOptions') }}</span></div>
         <div class="product-availability">
-          <template v-if="!product?.items.available">
+          <template v-if="!product?.items.available && !invTotal">
             {{ t('notAvailable') }}
           </template>
 
-          <template v-if="product?.items.available">
-            {{ t('inStock', { n: toTriads(product.items.available) }) }}
-
-            <span v-if="invTotal">
-              , {{ t('scheduled', { n: toTriads(invTotal) }) }}
-            </span>
+          <template v-else>
+            <span>{{ t('inStock', { n: toTriads(product?.items.available as number) }) }}</span>
+            <span v-if="invTotal">, {{ t('scheduled', { n: toTriads(invTotal) }) }}</span>
           </template>
 
           <ul v-if="invTotal" class="product-scheduled">
