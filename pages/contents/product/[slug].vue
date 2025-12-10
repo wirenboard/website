@@ -27,6 +27,9 @@ useContentHead({
       { name: 'description', content: data.value.meta },
       { name: 'keywords', content: data.value.keywords },
       { name: 'wb-hide-heading', content: 'true' },
+      { property: 'og:title', content: product.value?.name },
+      { property: 'og:description', content: data.value?.meta || product.value?.type },
+      { property: 'og:image', content: `https://wirenboard.com/_ipx/_${data.value?.cover}` },
     ]
   }
 });
