@@ -13,6 +13,11 @@ const route = useRoute();
 const { t, locale } = useI18n();
 const { data } = await useLocalizedData(`catalog`, false, { _file: { $icontains: route.params.slug } });
 const { data: product } = await useApi<Product>(`/product/${data.value.article}/?locale=${locale.value}`);
+
+const invTotal = computed(() => {
+  const items = product.value?.items;
+  return items ? items.inv_final_assembly + items.inv_ready_to_assembly + items.inv_scheduled : 0;
+});
 </script>
 
 <template>
@@ -69,9 +74,26 @@ const { data: product } = await useApi<Product>(`/product/${data.value.article}/
           <template v-if="!product?.items.available">
             {{ t('notAvailable') }}
           </template>
-          <template v-else>
-            {{ t('inStock') }} {{ toTriads(product?.items.available as number) }} {{ t('pcs') }}<span v-if="product?.items.inv_final_assembly">, {{ t('more') }} {{ toTriads(product.items.inv_final_assembly) }} {{ t('pcs') }} {{ t('scheduled') }} {{ t(product.items.schedule_unit) }}</span>
+
+          <template v-if="product?.items.available">
+            {{ t('inStock', { n: toTriads(product.items.available) }) }}
+
+            <span v-if="invTotal">
+              , {{ t('scheduled', { n: toTriads(invTotal) }) }}
+            </span>
           </template>
+
+          <ul v-if="invTotal" class="product-scheduled">
+            <li v-if="product?.items.inv_final_assembly">
+              {{ t('invFinalAssembly', { n: toTriads(product.items.inv_final_assembly) }) }}
+            </li>
+            <li v-if="product?.items.inv_ready_to_assembly">
+              {{ t('invReadyToAssembly', { n: toTriads(product.items.inv_ready_to_assembly) }) }}
+            </li>
+            <li v-if="product?.items.inv_scheduled">
+              {{ t('invScheduled', { n: toTriads(product.items.inv_scheduled) }) }}
+            </li>
+          </ul>
         </div>
         <button
           :class="{
@@ -353,6 +375,21 @@ const { data: product } = await useApi<Product>(`/product/${data.value.article}/
   cursor: pointer;
 }
 
+.product-scheduled {
+  font-weight: normal;
+  margin-top: 6px;
+  padding-left: 18px;
+}
+
+.product-scheduled li {
+  line-height: 1.6em;
+}
+
+.product-scheduled li::marker {
+  color: var(--primary-color);
+  font-size: 20px;
+}
+
 .product-contactLink {
   text-decoration: underline;
 }
@@ -418,10 +455,11 @@ const { data: product } = await useApi<Product>(`/product/${data.value.article}/
     "from": "от",
     "to": "до",
     "dependsOnOptions": "в зависимости от опций",
-    "inStock": "На складе",
-    "pcs": "шт.",
-    "more": "ещё",
-    "scheduled": "ожидается через 2—3",
+    "inStock": "На складе {n} шт.",
+    "scheduled": "ещё {n} шт. ожидается:",
+    "invFinalAssembly": "{n} шт. через 2-3 дня",
+    "invReadyToAssembly": "{n} шт. через 1-2 недели",
+    "invScheduled": "{n} шт. через 2-3 месяца",
     "otherVideos": "Все ролики про оборудование можно",
     "videosLink": "посмотреть здесь"
   },
@@ -445,10 +483,11 @@ const { data: product } = await useApi<Product>(`/product/${data.value.article}/
     "from": "from",
     "to": "to",
     "dependsOnOptions": "depending on options",
-    "inStock": "In stock",
-    "pcs": "pcs",
-    "more": "more",
-    "scheduled": "on order in",
+    "inStock": "In stock {n} pcs",
+    "scheduled": "{n} more on order:",
+    "invFinalAssembly": "{n} more in a few days",
+    "invReadyToAssembly": "{n} more in 1-2 weeks",
+    "invScheduled": "{n} more in 2-3 months",
     "otherVideos": "Other hardware videos",
     "videosLink": "here"
   }
