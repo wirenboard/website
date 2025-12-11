@@ -47,7 +47,7 @@ use_cases: []
 
 ::product-section{title="Терминаторы и failsafe bias на портах RS-485"}
 :photo{
-  src="wb-mge-v3/3_WB-MGEv3_Terminator_RU.png"
+  src="wbpro-ethgw3/1_WB-MGEv3_Terminator_RU.png"
   width="500px"
   float="right"
 }
@@ -101,7 +101,7 @@ use_cases: []
 ::product-section{title="Веб-интерфейс для настройки"}
 
 :photo{
-  src="wb-mge-v3/7_WB-MGEv3_WebUI_RU.png"
+  src="wbpro-ethgw3/2_WB-MGEv3_WebUI_RU.png"
   float="right"
   width="500px"
 }
@@ -115,7 +115,7 @@ use_cases: []
 ::product-section{title="Поддержка Быстрого Modbus"}
 
 :photo{
-  src="wb-mge-v3/8_WB-MGEv3_Fast_Modbus_RU.png"
+  src="wbpro-ethgw3/3_WB-MGEv3_Fast_Modbus_RU.png"
   float="right"
   width="500px"
 }
@@ -142,7 +142,7 @@ WBPRO-ETHGW3 поддерживает Быстрый Modbus во всех реж
 ::product-section{title="Обновление прошивки"}
 
 :photo{
-  src="wb-mge-v3/10_WB-MGEv3_Update_RU.png"
+  src="wbpro-ethgw3/4_WB-MGEv3_Update_RU.png"
   float="right"
   width="500px"
 }
