@@ -100,11 +100,6 @@ They let you assess the module state without opening the web interface.
 
 ::product-section{title="Web Interface for Configuration"}
 
-:photo{
-  src="wbpro-ethgw3/2_WBPRO-ETHGW3_Web-UI_ENG.png"
-  float="right"
-  width="500px"
-}
 
 The modern web UI adapts to any screen size and lets you configure network interfaces, port settings, modes, etc. Access is protected with login and password.
 
@@ -114,11 +109,6 @@ If WBPRO-ETHGW3 is connected to one of the network interfaces of a Wiren Board c
 
 ::product-section{title="Fast Modbus Support"}
 
-:photo{
-  src="wbpro-ethgw3/3_WB-MGEv3_Fast_Modbus_ENG.png"
-  float="right"
-  width="500px"
-}
 
 All Wiren Board devices, in addition to standard Modbus RTU, can operate with the extended [**Fast Modbus**](https://wiki.wirenboard.com/wiki/Fast_Modbus/en) ⚡ protocol, which adds:
 - instant reading of input states and measured values via events;
@@ -140,11 +130,7 @@ For edge cases when the firmware cannot boot, **Factory mode** is available to r
 
 ::product-section{title="Firmware Updates"}
 
-:photo{
-  src="wbpro-ethgw3/4_WB-MGEv3_Update_ENG.png"
-  float="right"
-  width="500px"
-}
+
 
 We occasionally release new firmware to fix issues or add features.
 
