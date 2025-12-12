@@ -47,7 +47,7 @@ use_cases: []
 
 ::product-section{title="Терминаторы и failsafe bias на портах RS-485"}
 :photo{
-  src="wbpro-ethgw3/1_WB-MGEv3_Terminator_RU.png"
+  src="wbpro-ethgw3/1_WB-ethgw3_Terminator_RU.png"
   width="500px"
   float="right"
 }
