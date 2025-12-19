@@ -88,6 +88,7 @@ const getUrl = (url: string, time: string) => {
 
 .videoGallery-video {
   grid-area: video;
+  height: fit-content;
 }
 
 .videoGallery-navItem {
