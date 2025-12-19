@@ -84,6 +84,14 @@ const getUrl = (url: string, time: string) => {
   grid-area: navigation;
   margin: 0;
   padding: 0;
+  max-height: 400px;
+  overflow: auto;
+  scrollbar-gutter: stable;
+
+  @media (max-width: 768px) {
+    max-height: unset;
+    overflow: unset;
+  }
 }
 
 .videoGallery-video {
@@ -99,6 +107,8 @@ const getUrl = (url: string, time: string) => {
   border-radius: 6px;
   position: relative;
   overflow: hidden;
+  transition: background 0.2s;
+  margin-right: 4px;
 }
 
 .videoGallery-navItem:hover {
@@ -126,11 +136,12 @@ const getUrl = (url: string, time: string) => {
                        "video navigation";
   width: 100%;
   gap: 12px 24px;
-  padding: 18px;
+  padding: 18px 2px 18px 18px;
   border: 1px solid var(--border-color);
   border-radius: 12px;
 
   @media (max-width: 768px) {
+    padding: 18px;
     grid-template-columns: 1fr;
     grid-template-areas: "title"
                          "video"
