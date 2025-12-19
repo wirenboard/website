@@ -34,7 +34,7 @@ export const getImageUrl = (url?: string) => {
     folder = 'pages';
   } else if (parentTree.includes('Product')) {
     return url;
-  } else if (parentTree.includes('Video')) {
+  } else if (parentTree.includes('Video') || parentTree.includes('VideoEducation')) {
     if (url.startsWith('/ru') || url.startsWith('/en')) {
       return url;
     }

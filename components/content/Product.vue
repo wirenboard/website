@@ -115,7 +115,7 @@ const invTotal = computed(() => {
 
     <div class="product-section" id="video" v-if="data?.video?.length">
       <h2>{{ t('video') }}</h2>
-      <VideoGallery :data="data?.video" />
+      <VideoGallery :data="data?.video" view="tile" />
       <div class="product-otherVideos">{{ t('otherVideos') }} <a :href="hardwarePlaylist">{{ t('videosLink') }}</a>.</div>
     </div>
 
