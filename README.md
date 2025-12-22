@@ -19,5 +19,6 @@
 - [Вакансии](/doc/jobs.md)
 - [Статьи](/doc/articles.md)
 - [Видео](/doc/video.md)
+- [Образовательные видео](/doc/video-education.md)
 - [Готовые решения](/doc/solutions.md)
 - [Каталог товаров](/doc/catalog.md)
