@@ -5,6 +5,7 @@ type: Модуль резервного питания
 title: Модуль бесперебойного питания
 sub_title: на DIN-рейку
 cover: wb-ups-v3/wb-ups-v3-full-face.png
+catalogCover: wb-ups-v3/wb-ups-v3-3-4.png
 documentation: https://wirenboard.com/wiki/UPS3
 images: [
   ["wb-ups-v3/wb-ups-v3-battery.png"],

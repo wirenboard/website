@@ -36,6 +36,14 @@ export default defineEventHandler(async (event) => {
         360: `https://wirenboard.com/_ipx/h_360&q_90&f_webp/${product.cover}`,
         480: `https://wirenboard.com/_ipx/h_480&q_100&f_webp/${product.cover}`,
       },
+      catalogCovers: {
+        120: `https://wirenboard.com/_ipx/h_120&q_70&f_webp/${product.catalogCover}`,
+        160: `https://wirenboard.com/_ipx/h_160&q_70&f_webp/${product.catalogCover}`,
+        240: `https://wirenboard.com/_ipx/h_240&q_80&f_webp/${product.catalogCover}`,
+        320: `https://wirenboard.com/_ipx/h_320&q_80&f_webp/${product.catalogCover}`,
+        360: `https://wirenboard.com/_ipx/h_360&q_90&f_webp/${product.catalogCover}`,
+        480: `https://wirenboard.com/_ipx/h_480&q_100&f_webp/${product.catalogCover}`,
+      },
       description: toHtml(hast, { allowDangerousHtml: true })
     }
     return acc;
