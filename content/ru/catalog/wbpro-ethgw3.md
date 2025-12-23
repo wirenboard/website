@@ -1,6 +1,7 @@
 ---
 article: WBPRO-ETHGW3
 cover: wbpro-ethgw3/wbpro-ethgw3-full-face.png
+catalogCover: wbpro-ethgw3/wbpro-ethgw3-side1.png
 meta: Преобразователь интерфейсов RS-485, Ethernet, Wi-Fi, WBIO
 keywords: Modbus TCP, RS-485, Ethernet, Wi-Fi, WBIO
 images: [
