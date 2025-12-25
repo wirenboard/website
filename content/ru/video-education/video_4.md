@@ -1,0 +1,21 @@
+---
+title: "4. Работа в консоли контроллера Wiren Board"
+url: "https://peertube.wirenboard.com/w/fRzKgAjBWPX1N5XfW6dDsK"
+cover: "video_4/4.png"
+date: "2024-12-22"
+chapters:
+  - time: "00:00"
+    title: "Начало"
+  - time: "02:14"
+    title: "Debug Console"
+  - time: "04:54"
+    title: "MobaXterm (для Windows)"
+  - time: "08:20"
+    title: "Подключение через SSH"
+  - time: "10:30"
+    title: "Смена пароля"
+  - time: "11:26"
+    title: "Настройка часового пояса (тайм-зоны)"
+  - time: "15:50"
+    title: "Управление сервисами (службами)"
+---

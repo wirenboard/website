@@ -1,0 +1,23 @@
+---
+title: "7. Подключение Modbus-модулей к шине RS-485"
+url: "https://peertube.wirenboard.com/w/dWoKUA1staBV8X6sPmRwfo"
+cover: "video_7/7.png"
+date: "2024-12-22"
+chapters:
+  - time: "00:00"
+    title: "Начало"
+  - time: "00:33"
+    title: "Интерфейс"
+  - time: "02:35"
+    title: "Интерфейс RS-485"
+  - time: "03:55"
+    title: "Организация шины RS-485"
+  - time: "05:15"
+    title: "Правильный кабель"
+  - time: "10:34"
+    title: "Уравнивание потенциалов"
+  - time: "14:08"
+    title: "Терминаторы, ответвления и failsafe bias"
+  - time: "17:48"
+    title: "Падение напряжения"
+---
