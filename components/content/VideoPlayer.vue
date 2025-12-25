@@ -1,5 +1,13 @@
 <script setup lang="ts">
-const props = defineProps<{ url: string; width?: number | string; height?: number; float?: 'right' | 'left'; cover?: string; }>();
+const props = defineProps<{
+  url: string;
+  className?: string;
+  width?: number | string;
+  height?: number;
+  float?: 'right' | 'left';
+  cover?: string;
+}>();
+
 const src = computed(() => {
   const url = new URL(props.url);
   const isYoutube = props.url.includes('youtube');
@@ -39,7 +47,7 @@ const width = Number.isInteger(props.width) ? `${(props.width || 500)}px` : prop
     :href="url"
     target="_blank"
     class="videoPlayer-cover"
-    :class="{ 'videoPlayer-floatRight': float === 'right', 'videoPlayer-floatLeft': float === 'left' }"
+    :class="{ [className as string]: !!className, 'videoPlayer-floatRight': float === 'right', 'videoPlayer-floatLeft': float === 'left' }"
     :style="`${width ? `max-width: ${width}` : ''}`"
   >
     <svg class="videoPlayer-coverPlay" width="80" height="80" viewBox="0 0 512 512" fill="#222f3d">

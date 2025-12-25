@@ -49,13 +49,13 @@ const flattenedCategories = computed(() => flattenCategories(videoCategories, lo
           <a :href="`#${category.name}`">{{ category.label }}</a>
         </h2>
 
-        <VideoGallery :data="getFilteredByCategory(data, category).map(video => [video.url, video.title, video.cover]) as Video[]" />
+        <VideoGallery :data="getFilteredByCategory(data, category).map(video => [video.url, video.title, video.cover]) as Video[]" view="tile" />
 
         <hr v-if="category.type !== ArticleType.WithSubCategories && i !== flattenedCategories.length - 1" class="video-separator" />
       </template>
     </div>
 
-    <VideoGallery v-else :data="getFilteredByDate(data, filterDate).map(video => [video.url, video.title, video.cover]) as Video[]" />
+    <VideoGallery v-else :data="getFilteredByDate(data, filterDate).map(video => [video.url, video.title, video.cover]) as Video[]" view="tile" />
 
     <aside class="sidebar">
       <CategoryFilter :categories="videoCategories" v-model:filter="filter" v-model:filter-date="filterDate" page-id="video" />
