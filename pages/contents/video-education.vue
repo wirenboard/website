@@ -11,6 +11,7 @@ useHead({
 });
 
 const query: QueryBuilderParams = { path: '/video-education', where: [{ _locale: locale.value }] };
+const { data: description } = await useLocalizedData('pages/video-education');
 const { data } = await useAsyncData('video', () => queryContent(query.path).where({ _locale: locale.value }).find());
 
 defineOptions({
@@ -26,10 +27,22 @@ if (!data.value?.length) {
 </script>
 
 <template>
-  <div class="" id="video">
-    <VideoGallery :data="data.map(video => [video.url, video.title, video.cover, video.chapters]) as Video[]" view="list" />
+  <div id="video-education" class="videoEducation">
+    <ContentRenderer>
+      <ContentRendererMarkdown :value="description" />
+    </ContentRenderer>
+
+    <VideoGallery :data="data?.map(video => [video.url, video.title, video.cover, video.chapters]) as Video[]" view="list" />
   </div>
 </template>
+
+<style>
+.videoEducation h2 a {
+  color: var(--text-color);
+  text-decoration: none;
+  cursor: text;
+}
+</style>
 
 <i18n>
 {
