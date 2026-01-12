@@ -4,6 +4,7 @@ name: WB-UPS v.3
 type: Battery module
 title: UPS module
 sub_title: on DIN rail
+cover: wb-ups-v3/wb-ups-v3-full-face.png
 catalogCover: wb-ups-v3/wb-ups-v3-3-4.png
 documentation: https://wirenboard.com/wiki/UPS3
 images: [
