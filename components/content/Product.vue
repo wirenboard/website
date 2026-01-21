@@ -18,6 +18,16 @@ const invTotal = computed(() => {
   const items = product.value?.items;
   return items ? items.inv_final_assembly + items.inv_ready_to_assembly + items.inv_scheduled : 0;
 });
+
+const getPriceWithCurrencyIcon = (price: number) => {
+  let data = toTriads(price);
+  if (locale.value === 'ru') {
+    data += ' ₽'
+  } else {
+    data = '€' + data;
+  }
+  return data;
+};
 </script>
 
 <template>
@@ -69,7 +79,7 @@ const invTotal = computed(() => {
         <div class="product-price" v-if="product?.price">
           <sup class="product-priceUnit" v-if="locale === 'en'">€</sup>{{ toTriads(product.price) }}<sup class="product-priceUnit" v-if="locale === 'ru'">₽</sup>
         </div>
-        <div class="product-note">{{ t('retailPrice') }} <span v-if="product?.price_max">{{ t('from') }} {{ toTriads(product.price) }} {{ t('to') }} {{ toTriads(product.price_max) }} {{locale === 'en' ? '€' : '₽'}} {{ t('dependsOnOptions') }}</span></div>
+        <div class="product-note">{{ t('retailPrice') }} <span v-if="product?.price_max">{{ t('from') }} {{ getPriceWithCurrencyIcon(product.price) }} {{ t('to') }} {{ getPriceWithCurrencyIcon(product.price_max) }} {{ t('dependsOnOptions') }}</span></div>
         <div class="product-availability">
           <template v-if="!product?.items.available && !invTotal">
             {{ t('notAvailable') }}
