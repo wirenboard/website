@@ -67,7 +67,7 @@ const invTotal = computed(() => {
 
       <aside class="product-orderInfo" v-if="!product?.discontinued">
         <div class="product-price" v-if="product?.price">
-          <sup class="product-priceUnit" v-if="locale === 'en'">$</sup>{{ toTriads(product.price) }}<sup class="product-priceUnit" v-if="locale === 'ru'">₽</sup>
+          <sup class="product-priceUnit" v-if="locale === 'en'">€</sup>{{ toTriads(product.price) }}<sup class="product-priceUnit" v-if="locale === 'ru'">₽</sup>
         </div>
         <div class="product-note">{{ t('retailPrice') }} <span v-if="product?.price_max">{{ t('from') }} {{ toTriads(product.price) }} {{ t('to') }} {{ toTriads(product.price_max) }} ₽ {{ t('dependsOnOptions') }}</span></div>
         <div class="product-availability">
