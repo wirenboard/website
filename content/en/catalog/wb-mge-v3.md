@@ -112,7 +112,7 @@ Optionally, a PoE module can be installed with support for:
 - **802.3af, 802.3at** — active PoE up to 48 V;
 - **Passive PoE** — delivering up to 24 V over four pairs.
 
-Supply fed into the module via dedicated terminals is provided to devices connected to the RS‑485 ports. There is a **2.5 A** current protection common to both ports, as well as software on/off with state retention across reboots. When powered via PoE, the output provides **24 VDC**, limited to **400 mA**.
+Supply fed into the module via dedicated terminals is provided to devices connected to the RS‑485 ports. There is a **2.5 A** current protection common to both ports, as well as software on/off with state retention across reboots. When powered via PoE, the output provides **24 VDC**, with a maximum current of **500 mA** on Vout.
 
 All this enables compact installations without extra terminal blocks — and, when using PoE, without a separate power supply.
 
