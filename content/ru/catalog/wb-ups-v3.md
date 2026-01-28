@@ -7,6 +7,7 @@ sub_title: на DIN-рейку
 cover: wb-ups-v3/wb-ups-v3-full-face.png
 catalogCover: wb-ups-v3/wb-ups-v3-3-4.png
 documentation: https://wirenboard.com/wiki/UPS3
+meta: Модуль резервного питания
 images: [
   ["wb-ups-v3/wb-ups-v3-battery.png"],
   ["wb-ups-v3/wb-ups-v3-side1.png"],
