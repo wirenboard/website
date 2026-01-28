@@ -24,6 +24,7 @@ useContentHead({
   title: `${product.value?.type ?? ''} ${product.value?.name ?? ''}`,
   head: {
     meta: [
+      { name: 'name', content: data.value.name },
       { name: 'description', content: data.value.meta },
       { name: 'keywords', content: data.value.keywords },
       { name: 'wb-hide-heading', content: 'true' },
