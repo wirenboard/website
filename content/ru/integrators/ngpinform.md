@@ -1,12 +1,12 @@
 ---
 district: [volga, ural, siberian]
-tags: [smart_home]
+tags: [automation]
 coordinates: [54.789426, 56.052844]
 title: ООО «НГП Информ»
 logo: ngpinform/ngpinform.webp
 phone: 78002222991
 website: https://www.ngpinform.ru/
-email:  info@ngpinform.ru
+email: info@ngpinform.ru
 ---
 
 Российская компания, созданная для эффективного и комплексного решения задач, стоящих перед промышленными предприятиями в сфере автоматизации производства.
