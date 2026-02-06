@@ -81,6 +81,11 @@ const width = Number.isInteger(props.width) ? `${(props.width || 500)}px` : prop
 </template>
 
 <style>
+.videoPlayer {
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+}
+
 .videoPlayer-floatLeft {
   float: left;
   margin-right: 12px;
