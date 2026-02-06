@@ -38,7 +38,10 @@ export async function checkComponents() {
       const propsString = match[2] || '';
       const componentName = toPascalCase(rawName);
 
-      const vueFiles = await fg(`${componentsDir}/**/${componentName}.vue`);
+      const vueFiles = await fg([
+        `${componentsDir}/**/${componentName}.vue`,
+        `${componentsDir}/**/${componentName}.client.vue`
+      ]);
       if (vueFiles.length === 0) {
         errors.push(
           `${clickableLink(file)}\n  - ${colors.red}${componentName}${colors.reset}: [NOT FOUND] :${rawName}`

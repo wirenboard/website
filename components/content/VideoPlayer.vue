@@ -81,17 +81,6 @@ const width = Number.isInteger(props.width) ? `${(props.width || 500)}px` : prop
 </template>
 
 <style>
-.videoPlayer {
-  @media(max-width: 650px) {
-    width:350px !important;
-    height: 198px !important;
-  }
-  @media(max-width: 350px) {
-    width:250px !important;
-    height: 141px !important;
-  }
-}
-
 .videoPlayer-floatLeft {
   float: left;
   margin-right: 12px;

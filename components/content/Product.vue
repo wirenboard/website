@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import LinkIcon from '~/assets/icons/external-link.svg';
 import { hardwarePlaylist } from '~/common/links';
 import type { Product } from '~/common/types';
-import ContentGallery from '~/components/content/Gallery.vue';
+import ContentGallery from '~/components/content/Gallery.client.vue';
 import ProductOptions from '~/components/content/ProductOptions.vue';
 import ProductSolutions from '~/components/content/ProductSolutions.vue';
 import { useApi } from '~/composables/useApi';
@@ -135,7 +135,9 @@ const getPriceWithCurrencyIcon = (price: number) => {
 
     <div class="product-section" id="gallery" v-if="data?.images?.length">
       <h2>{{ t('images') }}</h2>
-      <ContentGallery :data="data.images" withBorder />
+      <ClientOnly>
+        <ContentGallery :data="data.images" withBorder />
+      </ClientOnly>
     </div>
 
     <div class="product-section" id="options" v-if="product?.options?.length">
@@ -165,7 +167,7 @@ const getPriceWithCurrencyIcon = (price: number) => {
   display: flex;
   align-items: center;
   white-space: nowrap;
-  color: var(--text-color);
+  color: #000;
   font-size: 36px;
   margin: 24px 0;
 

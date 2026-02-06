@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps<{ path: string; }>();
+const props = defineProps<{ path: string; withSeparator?: string; }>();
 const { locale } = useI18n();
 
 const { data } = await useAsyncData(props.path, () => queryContent(props.path).where({ _locale: locale.value }).findOne());
@@ -27,6 +27,13 @@ updateImagePath(data.value?.body);
 </script>
 
 <template>
-  <ContentRenderer v-if="data" :value="data" />
+  <div :class="{'include-withSeparator': withSeparator === 'true'}">
+    <ContentRenderer v-if="data" :value="data" />
+  </div>
 </template>
 
+<style>
+.include-withSeparator {
+  border-bottom: 1px solid var(--border-color);
+}
+</style>
