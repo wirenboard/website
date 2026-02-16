@@ -33,7 +33,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build static content
-        uses: addnab/docker-run-action@v3
+        uses: maus007/docker-run-action-fork@5ddaad0f7eedd03f64e412b1931852bd3031b273
         with:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
