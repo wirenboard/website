@@ -27,7 +27,6 @@ const getUrl = (url: string, time: string) => {
         className="videoGallery-video"
         :url="video[0]"
         :cover="getImageUrl(video[2])"
-        :height="162"
         width="100%"
       />
       <ul v-if="view === 'list' && video[3] && Array.isArray(video[3]) && video[3].length" class="videoGallery-navigation">
@@ -52,19 +51,11 @@ const getUrl = (url: string, time: string) => {
   grid-template-columns: repeat(3, 1fr);
   width: fit-content;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 900px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 860px) {
-    grid-template-columns: 1fr;
-  }
-
-  @media (max-width: 770px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 510px) {
+  @media (max-width: 530px) {
     grid-template-columns: 1fr;
   }
 }
@@ -97,6 +88,10 @@ const getUrl = (url: string, time: string) => {
 .videoGallery-video {
   grid-area: video;
   height: fit-content;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--image-border-color);
+  aspect-ratio: 16 / 9;
 }
 
 .videoGallery-navItem {

@@ -5,8 +5,7 @@ import type { PhotoLink } from '~/common/types';
 
 const props = defineProps<{ data: PhotoLink[]; }>();
 const { locale } = useI18n();
-
-const numberOfGalleryColumns = computed(() => props.data.length >= 4 ? 4 : props.data.length);
+const numberOfGalleryColumns = useColumns(props.data.length, 4, [460, 600, 800]);
 </script>
 
 <template>
@@ -19,7 +18,7 @@ const numberOfGalleryColumns = computed(() => props.data.length >= 4 ? 4 : props
         :alt="caption"
       />
       <div>
-        <h4 class="linkGallery-title">{{ caption }}</h4>
+        <div class="linkGallery-title">{{ caption }}</div>
         <time v-if="date" :datetime="date" class="linkGallery-date">
           {{ locale === 'ru' ? dayjs(date).locale('ru').format('D MMMM YYYY') : dayjs(date).format('MMM D, YYYY') }}
         </time>
@@ -36,10 +35,6 @@ const numberOfGalleryColumns = computed(() => props.data.length >= 4 ? 4 : props
   display: grid;
   grid-template-columns: repeat(v-bind('numberOfGalleryColumns'), 1fr);
   width: 100%;
-
-  @media (max-width: 700px) {
-    grid-template-columns: 1fr;
-  }
 }
 
 .linkGallery-link {
@@ -63,7 +58,7 @@ const numberOfGalleryColumns = computed(() => props.data.length >= 4 ? 4 : props
   border-radius: 12px;
   text-decoration: none;
   object-fit: cover;
-  border: 1px solid var(--gray-color);
+  border: 1px solid var(--image-border-color);
   min-height: 125px;
   flex-shrink: 0;
 
@@ -82,7 +77,6 @@ const numberOfGalleryColumns = computed(() => props.data.length >= 4 ? 4 : props
 
 .linkGallery-title {
   margin: 6px 0 12px;
-  font-weight: bold;
   color: var(--text-color);
 }
 

@@ -27,7 +27,6 @@ Lithium-ion Battery Uninterruptible Power Supply (2×18650).
 
 During a loss of input power, it provides 9 V to 25 V output to loads not exceeding 15 W.
 #info
-## Main Features
 ::product-section{title="Advantages"}
 :photo{
   src="wb-ups-v3/wb-ups-v3-3-4-side.png"

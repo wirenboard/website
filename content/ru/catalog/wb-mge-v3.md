@@ -41,7 +41,6 @@ use_cases: []
 Модули WBIO подключаются в боковой разъём и представлены как Modbus-устройство на шине RS485-2 с собственным адресом, указанном на наклейке. Поддержку модулей WBIO можно отключить в веб-интерфейсе и освободить порт для любых протоколов.
 
 #info
-## Основные характеристики
 ::product-section{title="Ethernet и Wi-Fi"}
 :photo{
   src="wb-mge-v3/1_WB-MGEv3_Ethernet_Wi-Fi_RU.png"
@@ -219,6 +218,7 @@ WB-MGE v.3 поддерживает Быстрый Modbus во всех режи
 
 :include{
   path="/catalog/includes/quality_control"
+  withSeparator="true"
 }
 
 :include{

@@ -4,8 +4,7 @@ import Photo from './Photo.vue';
 const props = defineProps<{ data: ([string, string?])[]; withBorder?: boolean; }>();
 const photos = ref();
 const openedPhoto = ref(null);
-
-const numberOfGalleryColumns = computed(() => props.data.length >= 5 ? 5 : props.data.length);
+const numberOfGalleryColumns = useColumns(props.data.length, 5, [460, 600, 800, 960]);
 
 const previewWidth = computed(() => {
   const cols = numberOfGalleryColumns.value;
@@ -74,10 +73,6 @@ watch(openedPhoto, () => {
   display: grid;
   grid-template-columns: repeat(v-bind('numberOfGalleryColumns'), 1fr);
   width: 100%;
-
-  @media (max-width: 700px) {
-    grid-template-columns: 1fr;
-  }
 }
 
 body:has(div[role="dialog"][data-pc-section="mask"]) {

@@ -103,10 +103,11 @@ const computedFigureStyle = computed(() => {
 }
 
 .photo-imageFromGallery {
-  height: 250px !important;
+  max-height: 250px !important;
   width: 100%;
   object-fit: cover;
   object-position: center;
+  aspect-ratio: 1 / 1;
 }
 
 .photo-center {

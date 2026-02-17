@@ -24,7 +24,11 @@ useContentHead(data.value);
 
 <style>
 h2 a, h3 a, h4 a, h5 a, h6 a {
-  color: var(--text-color);
+  color: #000;
+}
+
+h2 {
+  margin: 42px 0 22px;
 }
 
 table {

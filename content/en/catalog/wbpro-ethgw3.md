@@ -22,7 +22,6 @@ It provides two independent RS‑485—TCP channels; each can operate in one of 
 WBIO modules connect via the side I/O Bus connector and are exposed as a Modbus device on the RS485‑2 bus with an address printed on the module label. WBIO support can be disabled in the web interface to free the port for any protocols.
 
 #info
-## Main Features
 ::product-section{title="Ethernet and Wi‑Fi"}
 
 
