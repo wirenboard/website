@@ -15,7 +15,10 @@ images: [
 #description
 The module adds a galvanically isolated CAN interface to the Wiren Board 8. It is installed in the connector on the controller board.
 It operates as a CAN network interface in Linux at speeds of up to 1 Mbps. The module is based on the HT42B416 chip (UART-CAN bridge).
+::
 
+:include{
+  path="/catalog/includes/quality_control"
+}
 
-:include{path="/catalog/includes/quality_control"}
-:include{path="/catalog/includes/certificates"}
+::
