@@ -16,6 +16,8 @@ images: [
 Модуль добавляет гальванически изолированный интерфейс CAN в Wiren Board 8. Устанавливается в разъем на плате контроллера. 
 Работает как сетевой интерфейс CAN в Linux на скорости до 1Мбит/с. Основан на чипе HT42B416 (UART-CAN мост).
 
+#info
+## Основные характеристики
 
 :include{path="/catalog/includes/quality_control"}
 :include{path="/catalog/includes/certificates"}
