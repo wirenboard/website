@@ -20,6 +20,7 @@ useContentHead(data.value);
   <ContentRenderer>
     <ContentRendererMarkdown :value="data" />
   </ContentRenderer>
+  <div class="page-clearFix"></div>
 </template>
 
 <style>
@@ -42,5 +43,9 @@ td, th {
 
 td:empty, th:empty {
   padding: 0;
+}
+
+.page-clearFix {
+  clear: both;
 }
 </style>
