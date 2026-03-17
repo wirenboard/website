@@ -5,8 +5,8 @@ coordinates: [44.594162, 37.989089]
 title: Butler DC
 logo: butlerdc/butlerdc.webp
 phone: 78126799798
-website: https://xk@butlerdc.ru/
-email:  https://butlerdc.ru/
+website: https://butlerdc.ru
+email:  xk@butlerdc.ru
 ---
 
 Butler DC — интегратор премиальных систем автоматизации зданий и «умных домов». 
