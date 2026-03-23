@@ -81,5 +81,16 @@
 }
 ```
 
+## Галлерея логотипов
+
+```
+:logo-gallery{
+    :data='[
+        ["URL картинки 1, например /img/articles/ventilation_control/control_1.png", "Ссылка", "Подпись картинки (пользователю не видна)"],
+        ["URL картинки 2, например /img/articles/ventilation_control/control_2.png", "Ссылка"]
+    ]'
+}
+```
+
 ## Карточка вакансии
 Смотрите описание и пример использования в файле [/doc/jobs.md](/doc/jobs.md)
