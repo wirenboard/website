@@ -64,3 +64,5 @@ export interface Product {
 export type Video = [string, string, string, any?];
 
 export type PhotoLink = [string, string, string?, string?];
+
+export type LogoLink = [string, string, string];
