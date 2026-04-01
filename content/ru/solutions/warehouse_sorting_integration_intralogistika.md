@@ -35,7 +35,7 @@ IntraSCADA работает на контроллере [Wiren Board 8](https://
         ["warehouse_sorting_integration_intralogistika/4.jpg", "Схема обмена данными"],
         ["warehouse_sorting_integration_intralogistika/1.png", "Экран ЧМИ со статистикой работы линии"],
         ["warehouse_sorting_integration_intralogistika/2.png", "Веб-интерфейс IntraSCADA"],
-        ["warehouse_sorting_integration_intralogistika/3.jpeg", "Схема конвейера"]
+        ["warehouse_sorting_integration_intralogistika/3.png", "Схема конвейера"]
     ]'
 }
 
