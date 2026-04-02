@@ -9,8 +9,8 @@ website: instagram.com/techelectro.ast
 email: info@electrosmeta.com
 ---
 
-Компания «TECHELECTRO» специализируется на проектировании и сборке электрощитов, а также систем автоматизации для различных объектов. 
+TECHELECTRO specializes in the design and assembly of electrical control panels, as well as automation systems for a wide range of facilities.
 
-Мы предоставляем полный цикл электромонтажных работ, включая разработку, монтаж, настройку и обслуживание.
+We provide a full range of electrical installation services, including design, installation, commissioning, and maintenance.
 
-Наша команда опытных специалистов гарантирует высокое качество и надежность выполненных решений для обеспечения эффективной работы ваших инженерных систем.
+Our team of experienced professionals guarantees high quality and reliability in every solution we deliver, ensuring the efficient operation of your engineering systems.
