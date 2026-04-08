@@ -52,7 +52,7 @@ const { t } = useI18n();
       </template>
 
       <hr />
-      {{t('messageUs')}} <a href="mailto:info@wirenboard.com" target="_blank">info@wirenboard.com</a>.
+      {{t('messageUs')}} <a href="mailto:hr@wirenboard.com" target="_blank">hr@wirenboard.com</a>.
     </div>
   </details>
 </template>
