@@ -18,23 +18,30 @@ const mapCenter = computed(() => {
     : locale.value === 'ru' ? [53, 45] : [50, 52]
 });
 
-const query = reactive({
+const query = computed(() => ({
   path: '/integrators',
   where: [
     {
-      district: { $contains: district.value },
-      tags: { $contains: tag.value },
-      _locale: locale.value
-    }
+    district: { $contains: district.value },
+    tags: { $contains: tag.value },
+    _locale: locale.value
+  }
   ],
   sort: [
     { title: 1 },
     { priority: 1 },
   ]
-});
+}));
 
-const { data, refresh } = await useAsyncData('integrators', () => queryContent(query.path).where(query.where[0]).find());
-const { data: allData } = await useAsyncData('all_integrators', () => queryContent(query.path).where({ _locale: locale.value }).find());
+const { data } = await useAsyncData(
+  'integrators',
+  () => queryContent(query.value.path).where(query.value.where[0]).find(),
+  { watch: [district, tag, locale] }
+);
+const { data: allData } = await useAsyncData(
+  'all_integrators',
+  () => queryContent(query.value.path).where({ _locale: locale.value }).find()
+);
 
 const actualDistricts = computed(() => {
   const districtsInList = [...new Set(data.value?.map((item) => item.district).flat())];
@@ -49,6 +56,12 @@ const actualTags = computed(() => {
 const onChangeMapItems = (items: string[]) => {
   visibleItems.value = items;
 };
+
+watch(data, (val) => {
+  if (val) {
+    visibleItems.value = val.map(i => i._id);
+  }
+}, { immediate: true });
 </script>
 
 <template>
@@ -58,7 +71,6 @@ const onChangeMapItems = (items: string[]) => {
     :zoom="district ? actualDistricts.find((item) => item.value === district)?.zoom as number : 4"
     @visibleItemsChange="onChangeMapItems"
   />
-
   <Select
     class="partners-filter"
     v-model="district"
@@ -66,18 +78,16 @@ const onChangeMapItems = (items: string[]) => {
     optionValue="value"
     :options="actualDistricts"
     :placeholder="t('chooseArea')"
-    :change-callback="refresh"
   />
 
   <Select
     v-if="!!actualTags.length"
     class="partners-filter"
-    v-model="query.where[0].tags.$contains"
+    v-model="tag"
     optionLabel="label"
     optionValue="name"
     :options="actualTags"
     :placeholder="t('tags')"
-    :change-callback="refresh"
   />
 
   <div class="partners">
