@@ -123,6 +123,7 @@ The device status information available via Modbus RTU includes:
 - Input current used for battery charging;
 - Output current when running on battery;
 - Front panel button status and counters for button presses (short, long, double short, short + long).
+
 Moreover, device parameters can be configured via Modbus RTU:
 
 - Operating mode;
@@ -137,6 +138,8 @@ It also enables turning the load on or off when external power is absent.
   float="right"
 }
 The device can be configured via the Wiren Board controller’s web interface.
+
+For configuration without a controller, you can use the [Wiren Board Device Editor](https://wiki.wirenboard.com/wiki/WASM_Device_Editor) paired with a WB-USB485 interface converter or a similar device.
 
 When used with other equipment, configuration is performed by writing setup parameters to the corresponding Modbus registers.
 ::
