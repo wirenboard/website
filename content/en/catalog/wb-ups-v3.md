@@ -47,7 +47,7 @@ During a loss of input power, it provides 9 V to 25 V output to loads not exceed
   width="500px"
   float="right"
 }
-- Input voltage: 10–27 V;
+- Input voltage: from 10 to 27 V;
 - Backup mode output: fixed voltage adjustable from 9 V to 25 V when input power is unavailable;
 - Rated / peak power: 15 W / 20 W;
 - Rated capacity: 15 Wh;
