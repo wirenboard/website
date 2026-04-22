@@ -47,7 +47,7 @@ During a loss of input power, it provides 9 V to 25 V output to loads not exceed
   width="500px"
   float="right"
 }
-- Input voltage: 10–27 V;
+- Input voltage: from 10 to 27 V;
 - Backup mode output: fixed voltage adjustable from 9 V to 25 V when input power is unavailable;
 - Rated / peak power: 15 W / 20 W;
 - Rated capacity: 15 Wh;
@@ -123,6 +123,7 @@ The device status information available via Modbus RTU includes:
 - Input current used for battery charging;
 - Output current when running on battery;
 - Front panel button status and counters for button presses (short, long, double short, short + long).
+
 Moreover, device parameters can be configured via Modbus RTU:
 
 - Operating mode;
@@ -137,6 +138,8 @@ It also enables turning the load on or off when external power is absent.
   float="right"
 }
 The device can be configured via the Wiren Board controller’s web interface.
+
+For configuration without a controller, you can use the [Wiren Board Device Editor](https://wiki.wirenboard.com/wiki/WASM_Device_Editor) paired with a WB-USB485 interface converter or a similar device.
 
 When used with other equipment, configuration is performed by writing setup parameters to the corresponding Modbus registers.
 ::
