@@ -11,7 +11,9 @@ meta: Преобразователь интерфейсов RS-485, Ethernet, Wi
 keywords: Modbus TCP, RS-485, Ethernet, Wi-Fi
 images: [
   ["wb-mgu-v1/wb-mgu-v1-top.png"],
-  ["wb-mgu-v1/wb-mgu-v1-main.png"]
+  ["wb-mgu-v1/wb-mgu-v1-main.png"],
+  ["wb-mgu-v1/wb-mgu-v1-pcb.png"],
+  ["wb-mgu-v1/wb-mgu-v1-open.png"]
 ]
 video: []
 use_cases: []
@@ -25,6 +27,8 @@ use_cases: []
 Для порта RS-485 доступно два режима:
 1. Modbus TCP — только для Modbus-устройств;
 2. прозрачный шлюз — подходит для любых протоколов, работающих поверх RS-485.
+
+Устройство прошито и готово к использованию в качестве шлюза, но вы можете написать для него свою прошивку и использовать для других задач.
 
 #info
 ::product-section{title="Интерфейсы и коммуникации"}
@@ -52,7 +56,7 @@ use_cases: []
 
 ::product-section{title="Терминаторы и failsafe bias на порту RS-485"}
 :photo{
-  src="wb-mge-v3/3_WB-MGEv3_Terminator_RU.png"
+  src="wb-mgu-v1/wb-mgu-v1-terminator.png"
   width="500px"
   float="right"
 }
@@ -105,21 +109,21 @@ use_cases: []
 ::product-section{title="Веб-интерфейс для настройки"}
 
 :photo{
-  src="wb-mge-v3/7_WB-MGEv3_WebUI_RU.png"
+  src="wb-mgu-v1/wb-mgu-v1-web-ui.png"
   float="right"
   width="500px"
 }
 
 Современный веб-интерфейс хорошо адаптируется под любой размер экрана и позволяет настраивать параметры сетевых интерфейсов, портов, выбора режима и пр. Есть ограничение доступа по логину и паролю.
 
-Если WB-MGU v.3 подключён к одному из сетевых интерфейсов контроллера, а контроллер в Wiren Board Cloud — можно настроить проксирование веб-интерфейса модуля и получить доступ к нему через облако. Подробности в документации.
+Если WB-MGU v.1 подключён к одному из сетевых интерфейсов контроллера, а контроллер в Wiren Board Cloud — можно настроить проксирование веб-интерфейса модуля и получить доступ к нему через облако. Подробности в документации.
 
 ::
 
 ::product-section{title="Поддержка Быстрого Modbus"}
 
 :photo{
-  src="wb-mge-v3/8_WB-MGEv3_Fast_Modbus_RU.png"
+  src="wb-mgu-v1/wb-mgu-v1-fast-modbus.png"
   float="right"
   width="500px"
 }
@@ -136,7 +140,7 @@ WB-MGU v.1 поддерживает Быстрый Modbus во всех режи
 ::product-section{title="Сброс настроек и режим Factory"}
 
 :photo{
-  src="wb-mge-v3/9_WB-MGEv3_Reset_RU.png"
+  src="wb-mgu-v1/wb-mgu-v1-reset.png"
   float="right"
   width="500px"
 }
