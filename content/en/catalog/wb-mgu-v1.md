@@ -46,11 +46,12 @@ In the basic configuration of the gateway:
 
 Additionally, using extension modules:
 
-- 4G (LTE) modem for two SIM cards in nano SIM format;
-- Z-Wave и Zigbee;
+- Z-Wave, Zigbee;
+- KNX;
+- RS-485 (isolated), RS-232, CAN;
+- OpenTherm;
 - PoE 802.3af, 802.3at or Passive PoE;
-- HDMI;
-- CAN.
+- and others.
 
 ::
 

@@ -46,11 +46,12 @@ use_cases: []
 
 С помощью модулей расширения вы можете добавить дополнительные интерфейсы:
 
-- 4G (LTE) модем на две SIM-карты формата nano SIM;
-- Z-Wave и Zigbee;
+- Z-Wave, Zigbee;
+- KNX;
+- RS-485 (изолированный), RS-232, CAN;
+- OpenTherm;
 - PoE 802.3af, 802.3at или Passive PoE;
-- HDMI;
-- CAN.
+- и другие.
 
 ::
 
