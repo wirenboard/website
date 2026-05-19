@@ -74,6 +74,7 @@ watch(data, (val) => {
   <Select
     class="partners-filter"
     v-model="district"
+    size="small"
     optionLabel="label"
     optionValue="value"
     :options="actualDistricts"
@@ -83,6 +84,7 @@ watch(data, (val) => {
   <Select
     v-if="!!actualTags.length"
     class="partners-filter"
+    size="small"
     v-model="tag"
     optionLabel="label"
     optionValue="name"

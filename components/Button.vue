@@ -1,17 +1,27 @@
 <script setup lang="ts">
-withDefaults(defineProps<{ id?: string; label: string; size?: 'default' | 'large' }>(), {
+withDefaults(defineProps<{
+  id?: string;
+  label: string;
+  type?: 'button' | 'submit';
+  variant: 'primary' | 'secondary';
+  outlined: boolean;
+  size?: 'default' | 'large' }>(), {
   size: 'default',
+  variant: 'primary',
+  type: 'button',
 });
 
 </script>
 
 <template>
   <button
-    type="button"
+    :type="type"
     class="wb-button"
     :class="{
       'wb-button-m': size === 'default',
       'wb-button-l': size === 'large',
+      'wb-button-primary': variant === 'primary',
+      'wb-button-outlined': outlined
     }"
     :id="id">
     {{ label }}
@@ -24,24 +34,45 @@ withDefaults(defineProps<{ id?: string; label: string; size?: 'default' | 'large
   border-radius: 4px;
   white-space: nowrap;
   position: relative;
-  min-height: 33px;
+  min-height: 31px;
   display: inline-flex;
-  cursor: pointer;
   user-select: none;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: var(--primary-color);
-  color: #fff;
-  border: 0;
-  transition: background 0.2s;
+  transition: background 0.3s, color 0.3s;
   font-weight: bold;
   outline: none;
   line-height: 24px;
 }
 
-.wb-button:hover {
-  background: var(--primary-color-hover);
+.wb-button:not(:disabled) {
+  cursor: pointer;
+}
+
+.wb-button:disabled {
+  filter: opacity(0.5);
+}
+
+.wb-button-primary {
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: #fff;
+}
+
+.wb-button-primary:hover {
+  background: var(--primary-color-hover) !important;
+  color: #fff !important;
+}
+
+.wb-button-primary.wb-button-outlined {
+  background: transparent;
+  color: var(--primary-color)
+}
+
+.wb-button-primary.wb-button-outlined {
+  background: transparent;
+  color: var(--primary-color)
 }
 
 .wb-button-m {
