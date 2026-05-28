@@ -20,7 +20,13 @@ use_cases: []
 ---
 ::product
 #description
-Designed for connecting devices with an RS-485 interface to an automation server via Ethernet or Wi-Fi. The server can be any controller / computer supporting the required protocols.
+**Attention!** This is a "DIY device". It is primarily intended for prototyping, debugging, and developing devices based on it — not for use in projects "as is", unlike the rest of our catalog.
+
+The difference can be illustrated by comparing MGE and MGU (devices on the same hardware base, differing in that MGU has a WBE2 module slot instead of the second port, no MIO converter, and added PSRAM memory):
+WB-MGEv3: you buy the device, install it in the cabinet, enable TCP gateway mode, and use it.
+WB-MGUv1: you buy the device, connect it to a relay via Modbus, then extend the firmware to support MQTT, and get relay control from Home Assistant. Or install a GPS module, extend the firmware, and get a personal Stratum 1 server. Or build a module with an I2S amplifier and flash Wi-Fi radio firmware. Or order a batch from us — for example, a specific OpenTherm-to-MQTT converter (in that case we develop the firmware for your order).
+
+If you want to order — write to us with a few words about how you plan to use the device. Even "just curious" is enough. We just want to make sure you are consciously ordering a DIY kit, so there is no "I thought all modules already work" situation.
 
 The device has one RS-485 (Modbus RTU) port and one slot for WBE2 extension modules. Examples of those modules include wired interfaces like isolated RS-485, CAN, KNX, OpenTherm and so on, or wireless interfaces like Z-Wave LR, Zigbee or Matter. Extension modules are communicating with the main ESP32 MCU via UART.
 
@@ -28,7 +34,8 @@ Two modes are available for the RS-485 port:
 
 1. Modbus TCP — for Modbus devices only;
 2. Transparent gateway — suitable for any protocols running over RS-485.
-The device is flashed and ready to use as a gateway, but you can write your own firmware for it and use it for other tasks. 
+
+The device is flashed and ready to use as a gateway, but you can write your own firmware for it and use it for other tasks.
 
 #info
 ::product-section{title="Interfaces and Communications"}
@@ -86,7 +93,7 @@ Optionally, a PoE module can be installed with support for:
 - **802.3af, 802.3at** — active PoE up to 48 V;
 - **Passive PoE** — delivering up to 24 V over four pairs.
 
-Supply fed into the module via dedicated terminals is provided to devices connected to the RS‑485 ports. There is a **2.5 A** current protection common to both ports, as well as software on/off with state retention across reboots. When powered via PoE, the output provides **24 VDC**, with a maximum current of **500** mA on Vout.
+The module can power connected devices, controlled via software. When powered from a power supply, the maximum current is 2.5 A and the voltage equals the supply voltage. When powered via PoE, the output provides 24 VDC with a maximum current of 500 mA on Vout.
 
 All this enables compact installations without extra terminal blocks — and, when using PoE, without a separate power supply.
 
@@ -179,9 +186,10 @@ Users can upload a new version directly through the web interface — no program
 
 **WB-MGU v.1** is based on an **ESP32** microcontroller and ships with our stock firmware that implements gateway functionality.
 
-However, you can use the hardware with your own firmware and turn the gateway into a compact smart‑home server with the features you need. For convenience we’ve added a USB‑C connector, so you only need a computer and a **USB‑C** cable to flash your software.
+This firmware is published as [open source](https://github.com/wirenboard/wb-mge), and you can use it as a base and add any functionality you need.
+We've added a **USB‑C** connector and a USB-UART bridge inside, so you only need a computer and a **USB‑C** cable to flash your software.
 
-The documentation provides full GPIO descriptions and examples for the popular **ESPHome** platform. Of course, you can use any tool or language you prefer: **C, MicroPython, Lua, etc**.
+The documentation provides full GPIO descriptions, as well as examples for the **ESPHome** platform.
 
 Whatever you try, you can always restore our stock gateway firmware and use the device as intended. The warranty remains valid.
 ::
