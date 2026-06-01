@@ -42,7 +42,8 @@ const to = props.url || `${route.path}${route.path.at(-1) === '/' ? '' : '/'}${p
 
 .article-cover {
   width: 100%;
-  height: 160px;
+  height: 100%;
+  max-height: 200px;
   border-radius: 12px;
   text-decoration: none;
   object-fit: cover;
@@ -50,11 +51,14 @@ const to = props.url || `${route.path}${route.path.at(-1) === '/' ? '' : '/'}${p
   min-height: 125px;
   flex-shrink: 0;
 
+  @media (min-width: 940px) and (max-width: 1940px) {
+    max-height: 180px;
+  }
+
   @media (min-width: 400px) and (max-width: 940px) {
     width: 100%;
     max-width: 220px;
-    height: 100%;
-    max-height: 126px;
+    max-height: 180px;
   }
 
   @media (max-width: 460px) {
