@@ -107,6 +107,8 @@ export default defineNuxtConfig({
         headers: { 'cache-control': 'max-age=31536000' },
         redirect: { to: '/', statusCode: 404 },
       },
+      '/ru/ng/api/**': { proxy: `${process.env.NUXT_API_URL}/ru/ng/api/**` },
+      '/en/ng/api/**': { proxy: `${process.env.NUXT_API_URL}/en/ng/api/**` },
     },
     devProxy: {
       '/api': {

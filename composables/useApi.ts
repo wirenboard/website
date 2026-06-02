@@ -5,14 +5,25 @@ export const useApi = async <T>(url: string, opts?: AsyncDataOptions<T>): Promis
   const config = useRuntimeConfig();
   const { locale } = useI18n();
 
-  const cookieHeader = useRequestHeader('cookie');
-  const headers: Record<string, string> = {
-    ...(config.login ? { Authorization: `Basic ${btoa(`${config.login}:${config.password}`)}` } : {}),
-    ...(cookieHeader ? { Cookie: cookieHeader } : {}),
-  };
+  const headers: Record<string, string> = {};
 
-  const userId = useRequestHeader('x-wb-user-id');
-  const baseURL =  `${config.apiUrl || ''}/${locale.value}/ng/api/v1`;
+  if (import.meta.server) {
+    const cookieHeader = useRequestHeader('cookie');
+    if (config.siteLogin) {
+      headers['Authorization'] = `Basic ${btoa(`${config.siteLogin}:${config.sitePassword}`)}`;
+    }
+    if (cookieHeader) {
+      headers['Cookie'] = cookieHeader;
+    }
+  } else {
+    if (config.public.siteLogin) {
+      headers['Authorization'] = `Basic ${btoa(`${config.public.siteLogin}:${config.public.sitePassword}`)}`;
+    }
+  }
+
+  const userId = import.meta.server ? useRequestHeader('x-wb-user-id') : undefined;
+  const apiBase = import.meta.server ? (config.apiUrl || '') : '';
+  const baseURL = `${apiBase}/${locale.value}/ng/api/v1`;
 
   return useAsyncData<T>(
     url,
