@@ -80,12 +80,33 @@ export interface DeliveryType {
   daysMin: number | null;
   daysMax: number | null;
   title: string;
+  price: number;
+}
+
+export interface DeliveryInfo{
+  available: DeliveryType[];
+  total_sum: number;
+}
+
+export interface CustomerData{
+  individual:{
+   fio: string;
+   phone: string;
+   email: string;
+   comment: string;
+  }
+  entity: {
+    inn: string;
+    orgName: string;
+    address: string;
+    email: string;
+    comment: string;
+  };
 }
 
 export interface OrderInfo {
   countries: Record<number, string>;
-  isFreeDelivery: boolean;
-  delivery: DeliveryType[];
+  customerData: CustomerData;
 }
 
 export interface Tariff {

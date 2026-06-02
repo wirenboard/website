@@ -2,7 +2,7 @@
 import Button from '~/components/Button.vue';
 import Select from '~/components/Select.vue';
 import Textarea from '~/components/Textarea.vue';
-import { Delivery, type DeliveryType, type Destination, type OrderInfo, type Tariff } from '~/common/types';
+import { Delivery, type DeliveryType, type DeliveryInfo,type Destination, type Tariff } from '~/common/types';
 
 const RUSSIA_CODE = '643';
 const DEFAULT_CITY = 'Москва';
@@ -10,16 +10,21 @@ const DEFAULT_CITY = 'Москва';
 const { t } = useI18n();
 const deliveryType = defineModel<string>('deliveryType');
 const deliveryData = defineModel<any>('deliveryData');
+const { delivery, countries } = defineProps<{delivery: DeliveryInfo; countries: Record<number, string>;}>();
+
 const country = ref(RUSSIA_CODE);
 const cdekWidget = ref<null | { open: () => void; close: () => void }>(null);
 const cdekPvzData = ref<null | { tariff: Tariff; destination: Destination }>(null);
-const { data: orderInfo } = await useApi<OrderInfo>(`/order/info/`);
 const selectItems = computed(() => {
-  return orderInfo.value!.delivery.map((item: DeliveryType) => ({
+  return (delivery!.available ?? []).map((item: DeliveryType) => ({
     id: item.id,
     title: item.title,
     img: `/img/delivery/${item.id}.png`,
-    comment: item.daysMin !== item.daysMax ? `${item.daysMin}–${item.daysMax} дня` : `${item.daysMin} дней`
+    comment: (() => {
+      if (item.daysMin == null || item.daysMax == null) return undefined;
+      if (item.daysMin !== item.daysMax) return `${item.daysMin}–${item.daysMax} ${t('days', item.daysMax)}`;
+      return `${item.daysMin} ${t('days', item.daysMin)}`;
+    })()
   }));
 });
 
@@ -126,7 +131,7 @@ watch(() => deliveryType.value, (value) => {
 
     <div class="fulfillment-details">
       <div
-        v-if="orderInfo!.delivery.find((item: DeliveryType) => item.id === deliveryType)?.type === Delivery.Pickup"
+        v-if="delivery?.available.find((item: DeliveryType) => item.id === deliveryType)?.type === Delivery.Pickup"
         class="fulfillment-chooseWrapper"
       >
         <p class="fulfillment-chooseTitle">Выбранный способ доставки – Самовывоз</p>
@@ -134,7 +139,7 @@ watch(() => deliveryType.value, (value) => {
         <p>Пн–Пт 10:00–18:00</p>
       </div>
       <div
-        v-else-if="orderInfo!.delivery.find((item: DeliveryType) => item.id === deliveryType)?.type === Delivery.Point"
+        v-else-if="delivery?.available.find((item: DeliveryType) => item.id === deliveryType)?.type === Delivery.Point"
         class="fulfillment-chooseWrapper"
       >
         <div v-if="!cdekPvzData" class="fulfillment-cdekChooseWrapper">
@@ -156,8 +161,8 @@ watch(() => deliveryType.value, (value) => {
           v-model="country"
           optionLabel="label"
           optionValue="id"
-          :disabled="orderInfo!.delivery.find((item: DeliveryType) => item.id === deliveryType)?.type === Delivery.Taxi"
-          :options="Object.entries(orderInfo!.countries).map(([id, label]) => ({ id, label }))"
+          :disabled="delivery?.available.find((item: DeliveryType) => item.id === deliveryType)?.type === Delivery.Taxi"
+          :options="Object.entries(countries).map(([id, label]) => ({ id, label }))"
           :placeholder="t('Страна')"
           is-searchable
         />
@@ -227,12 +232,14 @@ watch(() => deliveryType.value, (value) => {
   "ru": {
     "title": "Выберите способ получения заказа",
     "cdekChoose": "Выбрать пункт выдачи",
-    "cdekChange": "Изменить пункт выдачи"
+    "cdekChange": "Изменить пункт выдачи",
+    "days": "день | дня | дней"
   },
   "en": {
     "title": "Select a delivery method",
     "cdekChoose": "Select a pickup location",
-    "cdekChange": "Change pickup location"
+    "cdekChange": "Change pickup location",
+    "days": "day | days | days"
   }
 }
 </i18n>

@@ -1,25 +1,20 @@
 <script lang="ts" setup>
 import Loader from '~/components/Loader.vue';
 import Button from '~/components/Button.vue';
-import type {OrderInfo} from "~/common/types";
+import type {OrderInfo, DeliveryInfo} from "~/common/types";
 
 const { t, locale } = useI18n();
 const payerType = ref('individual');
 const paymentType = ref('');
 const deliveryType = ref('wirenboard');
 const deliveryData = ref({});
-const individual = ref({ fio: '', phone: '', email: '', comment: '' });
-const entity = ref({ inn: '', orgName: '', address: '', email: '', comment: '' });
-const pvzQuery = ref({});
+const deliveryQuery = ref({});
 
 const { data: orderInfo } = await useApi<OrderInfo>(`/order/info/`);
-const { data: calculate, pending, refresh } = await useApi(`/order/calculate/`, pvzQuery.value ? { query: pvzQuery.value } : null);
-// TODO пересчитывать стоимость
-// totalSum.value = locale.value === 'ru' ? calculate.value!.total_sum : calculate.value!.total_sum;
-//  http://localhost:8321/ru/ng/api/v1/order/calculate/?delivery_type=cdek&country_id=643&city=%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&postcode=196084&region=qwe
+const { data: delivery, pending, refresh: refreshDelivery } = await useApi<DeliveryInfo>(`/order/delivery/`, deliveryQuery.value);
 
-individual.value = orderInfo.value.savedForm.individual;
-entity.value = orderInfo.value.savedForm.entity;
+const individual = ref(orderInfo.value!.customerData.individual);
+const entity = ref(orderInfo.value!.customerData.entity);
 
 useHead({
   title: t('title'),
@@ -27,7 +22,7 @@ useHead({
 
 const makeOrder = async () => {};
 watch(() => deliveryData.value, async (value) => {
-  pvzQuery.value = {
+  deliveryQuery.value = {
     delivery_type: deliveryData.value.type,
     cdek_pvz_cost: deliveryData.value.tariff.delivery_sum,
     cdek_pvz_tariff: deliveryData.value.tariff.tariff_code,
@@ -35,7 +30,7 @@ watch(() => deliveryData.value, async (value) => {
     cdek_pvz_city_code: deliveryData.value.destination.city_code,
   };
 
-  refresh();
+  refreshDelivery();
 });
 </script>
 
@@ -50,6 +45,8 @@ watch(() => deliveryData.value, async (value) => {
     <OrderFulfillment
       v-model:deliveryType="deliveryType"
       v-model:deliveryData="deliveryData"
+      :delivery="delivery!"
+      :countries="orderInfo!.countries"
     />
 
     <OrderPayment
@@ -63,12 +60,14 @@ watch(() => deliveryData.value, async (value) => {
         size="large"
         :disabled="pending"
         :label="t('checkout')"
+        :variant="'primary'"
+        :outlined="false"
       />
       <div>
         <span class="order-toPay">
           {{ t('toPay') }}
           <Loader v-if="pending" />
-          <span v-else class="order-sum">{{ locale === 'ru' ? `${toTriads(calculate.total_sum)} ₽` : `€${toTriads(calculate.total_sum)}` }}</span>
+          <span v-else class="order-sum">{{ locale === 'ru' ? `${toTriads(delivery?.total_sum)} ₽` : `€${toTriads(delivery?.total_sum)}` }}</span>
         </span>
       </div>
     </div>
