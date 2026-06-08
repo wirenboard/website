@@ -4,7 +4,7 @@ import Textarea from '~/components/Textarea.vue';
 const { t } = useI18n();
 const payerType = defineModel<string>('payerType');
 const individual = defineModel<{ fio: string; phone: string; email: string; comment: string; }>('individual');
-const entity = defineModel<{ inn: string; orgName: string; address: string; email: string; comment: string; }>('entity');
+const entity = defineModel<{ fio: string; phone: string; inn: string; orgName: string; address: string; email: string; comment: string; }>('entity');
 
 // http://localhost:8321/ru/ng/api/v1/org/search/?type=party&term=%D0%92%D0%B8%D1%80%D0%B5%D0%BD%D0%B1%D0%BE%D1%80%D0%B4
 // onMounted(async () => {
@@ -39,6 +39,10 @@ const entity = defineModel<{ inn: string; orgName: string; address: string; emai
       <Textarea v-model="individual!.comment" id="comment" :label="t('comment')" autocomplete="off" />
     </template>
     <template v-else>
+      <div class="customer-fieldWrapper">
+        <Input v-model="entity!.fio" id="fio" :label="t('fio')" autocomplete="name" required autofocus />
+        <Input v-model="entity!.phone" id="phone" :label="t('phone')" autocomplete="tel" inputmode="tel" required />
+      </div>
       <Input v-model="entity!.email" id="email" :label="t('email')" autocomplete="email" type="email" inputmode="email" required />
       <div class="customer-orgFieldWrapper">
         <Input v-model="entity!.inn" id="inn" :label="t('inn')" autocomplete="off" type="number" inputmode="numeric"  required />

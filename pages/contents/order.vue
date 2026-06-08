@@ -1,17 +1,19 @@
 <script lang="ts" setup>
 import Loader from '~/components/Loader.vue';
 import Button from '~/components/Button.vue';
-import type {OrderInfo, DeliveryInfo} from "~/common/types";
+import {DefaultDeliveryId} from "~/common/types";
+import type {OrderInfo} from "~/common/types";
 
 const { t, locale } = useI18n();
 const payerType = ref('individual');
-const paymentType = ref('');
-const deliveryType = ref('wirenboard');
-const deliveryData = ref({});
-const deliveryQuery = ref({});
+const paymentType = ref('card');
+const totalSum = ref(0);
+const pending = ref(false);
+const deliveryData = ref<Record<string, any>>({});
+const deliveryType = ref(DefaultDeliveryId);
+const orderError = ref(false);
 
 const { data: orderInfo } = await useApi<OrderInfo>(`/order/info/`);
-const { data: delivery, pending, refresh: refreshDelivery } = await useApi<DeliveryInfo>(`/order/delivery/`, deliveryQuery.value);
 
 const individual = ref(orderInfo.value!.customerData.individual);
 const entity = ref(orderInfo.value!.customerData.entity);
@@ -20,18 +22,31 @@ useHead({
   title: t('title'),
 });
 
-const makeOrder = async () => {};
-watch(() => deliveryData.value, async (value) => {
-  deliveryQuery.value = {
-    delivery_type: deliveryData.value.type,
-    cdek_pvz_cost: deliveryData.value.tariff.delivery_sum,
-    cdek_pvz_tariff: deliveryData.value.tariff.tariff_code,
-    cdek_pvz_country_code: deliveryData.value.destination.country_code,
-    cdek_pvz_city_code: deliveryData.value.destination.city_code,
-  };
+const orderPayload = ref<any>(null);
+const { execute: submitOrder, data: orderResult, error: orderRequestError } = await useApi<{ redirect_url: string }>(
+  '/order/create/',
+  null,
+  { method: 'POST', body: orderPayload, immediate: false }
+);
 
-  refreshDelivery();
-});
+const makeOrder = async () => {
+  orderError.value = false;
+  orderPayload.value = {
+    payerType: payerType.value,
+    payerData: payerType.value === 'individual' ? individual.value : entity.value,
+    paymentType: paymentType.value,
+    deliveryType: deliveryType.value,
+    deliveryData: deliveryData.value,
+  };
+  await submitOrder();
+  if (orderRequestError.value) {
+    orderError.value = true;
+    return;
+  }
+  if (orderResult.value?.redirect_url) {
+    await navigateTo(orderResult.value.redirect_url, { external: true });
+  }
+};
 </script>
 
 <template>
@@ -45,14 +60,25 @@ watch(() => deliveryData.value, async (value) => {
     <OrderFulfillment
       v-model:deliveryType="deliveryType"
       v-model:deliveryData="deliveryData"
-      :delivery="delivery!"
+      v-model:totalSum="totalSum"
+      v-model:pending="pending"
       :countries="orderInfo!.countries"
+      :defaultCountry="orderInfo!.defaultCountry"
+      :basketData="orderInfo!.basketData"
     />
 
     <OrderPayment
       v-model:paymentType="paymentType"
       :payerType="payerType"
     />
+
+    <p v-if="orderError" class="order-error">
+      <i18n-t keypath="error">
+        <template #office>
+          <a :href="locale === 'ru' ? 'https://wirenboard.com/ru/pages/contacts/' : 'https://wirenboard.com/en/pages/contacts/'" target="_blank">{{ t('office') }}</a>
+        </template>
+      </i18n-t>
+    </p>
 
     <div class="order-finalize">
       <Button
@@ -67,7 +93,7 @@ watch(() => deliveryData.value, async (value) => {
         <span class="order-toPay">
           {{ t('toPay') }}
           <Loader v-if="pending" />
-          <span v-else class="order-sum">{{ locale === 'ru' ? `${toTriads(delivery?.total_sum)} ₽` : `€${toTriads(delivery?.total_sum)}` }}</span>
+          <span v-else class="order-sum">{{ locale === 'ru' ? `${toTriads(totalSum)} ₽` : `€${toTriads(totalSum)}` }}</span>
         </span>
       </div>
     </div>
@@ -111,6 +137,14 @@ watch(() => deliveryData.value, async (value) => {
   margin-right: 16px;
   color: var(--primary-color);
 }
+
+.order-error {
+  background-color: #FF474C;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 15px;
+  opacity: 0.5;
+}
 </style>
 
 <i18n>
@@ -118,12 +152,16 @@ watch(() => deliveryData.value, async (value) => {
   "ru": {
     "title": "Оформление заказа — Wiren Board",
     "checkout": "Оформить заказ",
-    "toPay": "К оплате:"
+    "toPay": "К оплате:",
+    "error": "При создании заказа возникла ошибка. Попробуйте позднее или свяжитесь с {office}.",
+    "office": "офисом"
   },
   "en": {
     "title": "Order — Wiren Board",
     "checkout": "Checkout",
-    "toPay": "To pay:"
+    "toPay": "To pay:",
+    "error": "An error occurred while creating the order. Please try again later or contact our {office}.",
+    "office": "office"
   }
 }
 </i18n>

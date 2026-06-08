@@ -67,25 +67,29 @@ export type PhotoLink = [string, string, string?, string?];
 
 export type LogoLink = [string, string, string];
 
-export enum Delivery {
+export const DefaultDeliveryId = 'wirenboard';
+
+export enum DeliveryType {
   Courier = 'courier',
   Pickup = 'pickup',
   Point = 'point',
   Taxi = 'todoor',
 }
 
-export interface DeliveryType {
+export interface Delivery {
   id: string;
-  type: Delivery;
+  type: string;
   daysMin: number | null;
   daysMax: number | null;
   title: string;
+  address: string | null;
   price: number;
+  total: number;
 }
 
 export interface DeliveryInfo{
-  available: DeliveryType[];
-  total_sum: number;
+  available: Delivery[];
+  freeDelivery: boolean;
 }
 
 export interface CustomerData{
@@ -105,8 +109,10 @@ export interface CustomerData{
 }
 
 export interface OrderInfo {
-  countries: Record<number, string>;
   customerData: CustomerData;
+  basketData: Record<string, number>;
+  countries: Record<number, string>;
+  defaultCountry: number;
 }
 
 export interface Tariff {

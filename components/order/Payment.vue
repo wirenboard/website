@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{ payerType: string }>();
-const paymentType = defineModel<string>('paymentType');
+const paymentType = defineModel<string>('paymentType', { default: 'card' });
 
 const { t } = useI18n();
 const paymentTypes = computed(() => {
@@ -18,7 +18,9 @@ const paymentTypes = computed(() => {
 });
 
 watch(() => props.payerType, (value) => {
-  paymentType.value = value === 'individual' ? 'qr' : 'card';
+  if (value !== 'individual' && paymentType.value === 'qr') {
+    paymentType.value = 'card';
+  }
 });
 </script>
 

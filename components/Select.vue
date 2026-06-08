@@ -7,6 +7,7 @@ defineProps<{
   optionValue: string;
   placeholder: string;
   disabled?: boolean;
+  showClear?: boolean;
   size?: 'small' | 'default';
   isSearchable: boolean;
   changeCallback?: () => void;
@@ -32,7 +33,7 @@ const model = defineModel();
     :overlayStyle="{
       zIndex: 100,
     }"
-    :showClear="!disabled"
+    :showClear="showClear ?? !disabled"
     @change="changeCallback"
   />
 </template>
