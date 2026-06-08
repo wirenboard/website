@@ -15,7 +15,7 @@ const modelValue = defineModel<string>();
     >
       <span class="orderSelect-itemWrapper">
         <span v-if="item.img" class="orderSelect-itemImgWrapper">
-          <img :src="item.img" :alt="item.title" class="orderSelect-itemImg">
+          <NuxtImg :src="item.img" :alt="item.title" class="orderSelect-itemImg" />
         </span>
         <span>
           <input type="radio" :value="item.id" v-model="modelValue" />
