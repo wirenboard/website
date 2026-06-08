@@ -37,6 +37,7 @@ watch(() => props.payerType, (value) => {
 
 <style scoped>
 .order-payment {
+  margin-top: 56px;
   margin-bottom: 48px;
 }
 </style>
