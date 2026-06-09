@@ -15,6 +15,8 @@ title: Конференция и выставка WBCE
 
 ## Предстоящие мероприятия:
 
+- **[WBCE 2027](https://wirenboard.timepad.ru/event/3892350/)**. Даты уточняются
+
 Отчёты:
 
 - [WBCE 2026](https://wirenboard.com/ru/contents/wbce2026). 44 участника и более 1300 гостей.
