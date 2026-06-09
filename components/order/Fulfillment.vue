@@ -10,13 +10,13 @@ const pendingModel = defineModel<boolean>('pending', { default: false });
 const deliveryData = defineModel<Record<string, any>>('deliveryData', { default: () => ({}) });
 const selectedDeliveryId = defineModel<string>('deliveryType');
 
-const { countries, defaultCountry, basketData } = defineProps<{
+const country = defineModel<number>('country');
+
+const { countries, basketData } = defineProps<{
   countries: Record<number, string>;
-  defaultCountry: string;
   basketData: Record<string, number>;
 }>();
 
-const country = ref(Number(defaultCountry));
 const deliveryQuery = ref<Record<string, any>>({ country: country.value });
 const deliveryDetails = ref<Record<string, string>>({});
 watchEffect(() => { deliveryData.value = { ...deliveryQuery.value, ...deliveryDetails.value }; });

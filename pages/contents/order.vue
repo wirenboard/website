@@ -8,13 +8,15 @@ const { t, locale } = useI18n();
 const payerType = ref('individual');
 const paymentType = ref('card');
 const totalSum = ref(0);
-const pending = ref(false);
+const fulfillmentPending = ref(false);
+const submitPending = ref(false);
 const deliveryData = ref<Record<string, any>>({});
 const deliveryType = ref(DefaultDeliveryId);
 const orderError = ref(false);
 
 const { data: orderInfo } = await useApi<OrderInfo>(`/order/info/`);
 
+const country = ref(Number(orderInfo.value!.defaultCountry));
 const individual = ref(orderInfo.value!.customerData.individual);
 const entity = ref(orderInfo.value!.customerData.entity);
 
@@ -31,6 +33,7 @@ const { execute: submitOrder, data: orderResult, error: orderRequestError } = aw
 
 const makeOrder = async () => {
   orderError.value = false;
+  submitPending.value = true;
   orderPayload.value = {
     payerType: payerType.value,
     payerData: payerType.value === 'individual' ? individual.value : entity.value,
@@ -39,6 +42,7 @@ const makeOrder = async () => {
     deliveryData: deliveryData.value,
   };
   await submitOrder();
+  submitPending.value = false;
   if (orderRequestError.value) {
     orderError.value = true;
     return;
@@ -50,7 +54,8 @@ const makeOrder = async () => {
 </script>
 
 <template>
-  <form class="order" @submit.prevent="makeOrder">
+  <p v-if="orderInfo!.basketData.cost === 0" class="order-empty">{{ t('emptyCart') }}</p>
+  <form v-else class="order" @submit.prevent="makeOrder">
     <OrderCustomer
       v-model:payerType="payerType"
       v-model:individual="individual"
@@ -61,15 +66,16 @@ const makeOrder = async () => {
       v-model:deliveryType="deliveryType"
       v-model:deliveryData="deliveryData"
       v-model:totalSum="totalSum"
-      v-model:pending="pending"
+      v-model:pending="fulfillmentPending"
+      v-model:country="country"
       :countries="orderInfo!.countries"
-      :defaultCountry="orderInfo!.defaultCountry"
       :basketData="orderInfo!.basketData"
     />
 
     <OrderPayment
       v-model:paymentType="paymentType"
       :payerType="payerType"
+      :country="country"
     />
 
     <p v-if="orderError" class="order-error">
@@ -84,7 +90,7 @@ const makeOrder = async () => {
       <Button
         type="submit"
         size="large"
-        :disabled="pending"
+        :disabled="fulfillmentPending || submitPending"
         :label="t('checkout')"
         :variant="'primary'"
         :outlined="false"
@@ -92,7 +98,7 @@ const makeOrder = async () => {
       <div>
         <span class="order-toPay">
           {{ t('toPay') }}
-          <Loader v-if="pending" />
+          <Loader v-if="fulfillmentPending" />
           <span v-else class="order-sum">{{ locale === 'ru' ? `${toTriads(totalSum)} ₽` : `€${toTriads(totalSum)}` }}</span>
         </span>
       </div>
@@ -138,6 +144,11 @@ const makeOrder = async () => {
   color: var(--primary-color);
 }
 
+.order-empty {
+  font-size: 23px;
+  font-weight: 500;
+}
+
 .order-error {
   background-color: #FF474C;
   color: #fff;
@@ -151,6 +162,7 @@ const makeOrder = async () => {
 {
   "ru": {
     "title": "Оформление заказа — Wiren Board",
+    "emptyCart": "Ваша корзина пуста",
     "checkout": "Оформить заказ",
     "toPay": "К оплате:",
     "error": "При создании заказа возникла ошибка. Попробуйте позднее или свяжитесь с {office}.",
@@ -158,6 +170,7 @@ const makeOrder = async () => {
   },
   "en": {
     "title": "Order — Wiren Board",
+    "emptyCart": "Your cart is empty",
     "checkout": "Checkout",
     "toPay": "To pay:",
     "error": "An error occurred while creating the order. Please try again later or contact our {office}.",

@@ -1,27 +1,29 @@
 <script setup lang="ts">
-const props = defineProps<{ payerType: string }>();
-const paymentType = defineModel<string>('paymentType', { default: 'card' });
+const props = defineProps<{ payerType: string; country: number }>();
+const paymentType = defineModel<string>('paymentType', { default: '' });
 
 const { t } = useI18n();
-const paymentTypes = computed(() => {
-  const items = [
-    { id: 'qr', title: t('qr'), comment: t('qrComment') },
-    { id: 'card', title: t('card'), comment: t('cardComment') },
-    { id: 'requisites', title: t('requisites'), comment: t('requisitesComment') },
-  ];
-  return items.filter(item => {
-    if (props.payerType !== 'individual' && item.id === 'qr') {
-      return;
-    }
-    return item;
-  });
-});
 
-watch(() => props.payerType, (value) => {
-  if (value !== 'individual' && paymentType.value === 'qr') {
-    paymentType.value = 'card';
+const params = computed(() => ({ payerType: props.payerType, country: props.country }));
+const { data: paymentMethods } = await useApi<string[]>(
+  '/order/payments/',
+  params,
+);
+
+const paymentTypes = computed(() =>
+  (paymentMethods.value!).map(method => ({
+    id: method,
+    title: t(method),
+    comment: t(`${method}Comment`),
+  }))
+);
+
+watch(paymentMethods, (methods) => {
+  if (!methods) return;
+  if (!methods.includes(paymentType.value)) {
+    paymentType.value = methods[0] ?? '';
   }
-});
+}, { immediate: true });
 </script>
 
 <template>
