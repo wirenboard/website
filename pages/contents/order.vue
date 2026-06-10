@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import Loader from '~/components/Loader.vue';
 import Button from '~/components/Button.vue';
-import {DefaultDeliveryId} from "~/common/types";
 import type {OrderInfo} from "~/common/types";
 
 const { t, locale } = useI18n();
@@ -11,14 +10,15 @@ const totalSum = ref(0);
 const fulfillmentPending = ref(false);
 const submitPending = ref(false);
 const deliveryData = ref<Record<string, any>>({});
-const deliveryType = ref(DefaultDeliveryId);
+
 const orderError = ref(false);
 
 const { data: orderInfo } = await useApi<OrderInfo>(`/order/info/`);
 
-const country = ref(Number(orderInfo.value!.defaultCountry));
 const individual = ref(orderInfo.value!.customerData.individual);
 const entity = ref(orderInfo.value!.customerData.entity);
+const country = ref(Number(orderInfo.value!.defaultData.country));
+const deliveryId = ref(orderInfo.value!.defaultDeliveryId);
 
 useHead({
   title: t('title'),
@@ -38,7 +38,7 @@ const makeOrder = async () => {
     payerType: payerType.value,
     payerData: payerType.value === 'individual' ? individual.value : entity.value,
     paymentType: paymentType.value,
-    deliveryType: deliveryType.value,
+    deliveryId: deliveryId.value,
     deliveryData: deliveryData.value,
   };
   await submitOrder();
@@ -63,7 +63,7 @@ const makeOrder = async () => {
     />
 
     <OrderFulfillment
-      v-model:deliveryType="deliveryType"
+      v-model:deliveryId="deliveryId"
       v-model:deliveryData="deliveryData"
       v-model:totalSum="totalSum"
       v-model:pending="fulfillmentPending"

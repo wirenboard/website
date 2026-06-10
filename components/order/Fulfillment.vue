@@ -2,14 +2,13 @@
 import Button from '~/components/Button.vue';
 import Select from '~/components/Select.vue';
 import Textarea from '~/components/Textarea.vue';
-import {DefaultDeliveryId, DeliveryType, type Delivery, type DeliveryInfo, type Destination, type Tariff } from '~/common/types';
+import {DeliveryType, type AvailableDelivery, type AvailableDeliveriesInfo, type Destination, type Tariff } from '~/common/types';
 
 const { t } = useI18n();
 const totalSum = defineModel<number>('totalSum', { default: 0 });
 const pendingModel = defineModel<boolean>('pending', { default: false });
 const deliveryData = defineModel<Record<string, any>>('deliveryData', { default: () => ({}) });
-const selectedDeliveryId = defineModel<string>('deliveryType');
-
+const selectedDeliveryId = defineModel<string>('deliveryId');
 const country = defineModel<number>('country');
 
 const { countries, basketData } = defineProps<{
@@ -20,17 +19,19 @@ const { countries, basketData } = defineProps<{
 const deliveryQuery = ref<Record<string, any>>({ country: country.value });
 const deliveryDetails = ref<Record<string, string>>({});
 watchEffect(() => { deliveryData.value = { ...deliveryQuery.value, ...deliveryDetails.value }; });
-const { data: delivery, pending, refresh } = await useApi<DeliveryInfo>(`/order/delivery/`, deliveryQuery);
-
+const { data: delivery, pending, refresh } = await useApi<AvailableDeliveriesInfo>(`/order/delivery/`, deliveryQuery);
 
 watch(country, (value) => {
   deliveryQuery.value = { country: value };
-  selectedDeliveryId.value = DefaultDeliveryId;
   refresh();
 });
 
+const selectedDelivery = computed<AvailableDelivery | null>(() =>
+  delivery.value?.available.find((item: AvailableDelivery) => item.id === selectedDeliveryId.value) ?? null
+);
+
 const selectItems = computed(() => {
-  return (delivery.value?.available ?? []).map((item: Delivery) => ({
+  return (delivery.value?.available ?? []).map((item: AvailableDelivery) => ({
     id: item.id,
     title: item.title,
     img: `/img/delivery/${item.id}.png`,
@@ -46,10 +47,10 @@ const selectItems = computed(() => {
   }));
 });
 
-const selectedDelivery = computed(() =>
-  delivery.value?.available.find((item: Delivery) => item.id === selectedDeliveryId.value)
-);
-watchEffect(() => {totalSum.value = selectedDelivery.value!.total;});
+watch(selectedDelivery, (value) => {
+  totalSum.value = value?.total ?? 0;
+}, { immediate: true });
+
 watch(pending, (value) => {
   pendingModel.value = value;
 });
