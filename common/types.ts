@@ -110,14 +110,28 @@ export interface CustomerData{
   payerType: 'individual' | 'entity';
 }
 
+export interface RecentAddress {
+  city: string;
+  postcode: string;
+  address: string;
+}
+
+export interface RecentOrg {
+  inn: string;
+  orgName: string;
+  address: string;
+}
+
 export interface OrderInfo {
   payerType: string;
-  payerData: CustomerData;  
+  payerData: CustomerData;
   deliveryType: string;
   deliveryData: Record<string, string>;
   paymentType: string;
   basketData: Record<string, number>;
   countries: Record<number, string>;
+  recentAddresses?: RecentAddress[];
+  recentOrgs?: RecentOrg[];
 }
 
 export interface Tariff {

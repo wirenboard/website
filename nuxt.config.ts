@@ -15,6 +15,7 @@ export default defineNuxtConfig({
       siteLogin: process.env.NUXT_SITE_LOGIN,
       sitePassword: process.env.NUXT_SITE_PASSWORD,
       dadataKey: process.env.NUXT_PUBLIC_DADATA_KEY,
+      yaMapKey: process.env.NUXT_PUBLIC_YA_MAP_KEY,
     },
   },
   devtools: { enabled: false },

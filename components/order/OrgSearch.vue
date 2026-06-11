@@ -10,6 +10,10 @@ interface DadataSuggestion {
   data: DadataOrgData;
 }
 
+const props = defineProps<{
+  recentSuggestions?: DadataSuggestion[];
+}>();
+
 const emit = defineEmits<{
   select: [{ orgName: string; inn: string; address: string }];
 }>();
@@ -20,10 +24,18 @@ const suggestions = ref<DadataSuggestion[]>([]);
 const isOpen = ref(false);
 let debounceTimer: ReturnType<typeof setTimeout> | null = null;
 
+const showRecent = () => {
+  if (props.recentSuggestions?.length) {
+    suggestions.value = props.recentSuggestions;
+    isOpen.value = true;
+  }
+};
+
 const fetchSuggestions = async (value: string) => {
   if (value.trim().length < 2) {
     suggestions.value = [];
     isOpen.value = false;
+    if (!value.trim()) showRecent();
     return;
   }
   const res = await $fetch<{ suggestions: DadataSuggestion[] }>(
@@ -73,7 +85,7 @@ const onBlur = () => {
         autocomplete="off"
         @input="onInput"
         @blur="onBlur"
-        @focus="isOpen = suggestions.length > 0"
+        @focus="() => { if (suggestions.length > 0) isOpen = true; else showRecent(); }"
       />
       <label class="input-label" for="org-search">Поиск организации</label>
     </div>

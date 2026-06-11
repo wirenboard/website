@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import Button from '~/components/Button.vue';
 import Textarea from '~/components/Textarea.vue';
-import {RUSSIA_ID, DeliveryType, type AvailableDelivery, type AvailableDeliveriesInfo, type Destination, type Tariff } from '~/common/types';
+import {RUSSIA_ID, DeliveryType, type AvailableDelivery, type AvailableDeliveriesInfo, type Destination, type Tariff, type RecentAddress } from '~/common/types';
 
 const { t } = useI18n();
+const config = useRuntimeConfig();
 const totalSum = defineModel<number>('totalSum', { default: 0 });
 const pendingModel = defineModel<boolean>('pending', { default: false });
 const deliveryValidModel = defineModel<boolean>('deliveryValid', { default: false });
@@ -11,9 +12,28 @@ const deliveryData = defineModel<Record<string, any>>('deliveryData', { default:
 const selectedDeliveryType = defineModel<string>('deliveryType');
 const country = defineModel<number>('country');
 
-const { basketData } = defineProps<{
+const { basketData, recentAddresses } = defineProps<{
   basketData: Record<string, number>;
+  recentAddresses?: RecentAddress[];
 }>();
+
+const recentSuggestions = computed(() =>
+  (recentAddresses ?? []).map(addr => ({
+    value: `${addr.city}, ${addr.address}`,
+    isRecent: true,
+    data: {
+      postal_code: null,
+      city_with_type: null,
+      settlement_with_type: null,
+      region_with_type: null,
+      street_with_type: null,
+      house: null,
+      block: null,
+      flat_type: null,
+      flat: null,
+    },
+  }))
+);
 
 const deliveryQuery = ref<Record<string, any>>({});
 const deliveryAddress = ref<Record<string, any>>({ country: country.value, city: deliveryData.value.city, postcode: deliveryData.value.postcode, street: deliveryData.value.street, house: deliveryData.value.house });
@@ -110,12 +130,9 @@ onMounted(() => {
   const script = document.createElement('script');
   script.src = 'https://wirenboard.com/npm/@cdek-it/widget@3';
   script.onload = () => {
-    // TODO move
-    const YA_MAP_KEY = '425e7dde-9a86-40d9-ade2-77369f107eaa';
-
     // @ts-ignore
     cdekWidget.value = new window.CDEKWidget({
-      apiKey: YA_MAP_KEY,
+      apiKey: config.public.yaMapKey,
       defaultLocation: 'Москва',
       popup: true,
       canChoose: true,
@@ -196,7 +213,7 @@ onMounted(() => {
       </div>
       <template v-else>
         <template v-if="isRussia && addressMode === 'search'">
-          <OrderAddressAutocomplete @select="applyAddress" />
+          <OrderAddressAutocomplete :recentSuggestions="recentSuggestions" @select="applyAddress" />
           <button type="button" class="fulfillment-manualBtn" @click="addressMode = 'fields'">
             {{ t('manualEntry') }}
           </button>

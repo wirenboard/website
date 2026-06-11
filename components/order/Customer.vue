@@ -1,15 +1,29 @@
 <script setup lang="ts">
 import Textarea from '~/components/Textarea.vue';
 import Select from '~/components/Select.vue';
-import { RUSSIA_ID } from '~/common/types';
+import { RUSSIA_ID, type RecentOrg } from '~/common/types';
 
 const { t } = useI18n();
 const payerType = defineModel<string>('payerType');
 const individual = defineModel<{ fio: string; phone: string; email: string; comment: string; }>('individual');
-const entity = defineModel<{ fio: string; phone: string; inn: string; orgName: string; address: string; email: string; comment: string; }>('entity');
+const entity = defineModel<{ fio: string; phone: string; inn: string; orgName: string; address: string; email: string; comment: string; }>('entity', {required: true});
 const country = defineModel<number>('country');
 
-const { countries } = defineProps<{ countries: Record<number, string> }>();
+const { countries, recentOrgs } = defineProps<{
+  countries: Record<number, string>;
+  recentOrgs?: RecentOrg[];
+}>();
+
+const recentOrgSuggestions = computed(() =>
+  (recentOrgs ?? []).map(org => ({
+    value: org.orgName,
+    data: {
+      inn: org.inn,
+      name: { short_with_opf: org.orgName },
+      address: { unrestricted_value: org.address },
+    },
+  }))
+);
 
 if (entity.value && individual.value) {
   if (!entity.value.fio) entity.value.fio = individual.value.fio;
@@ -22,31 +36,23 @@ const isRussia = computed(() => country.value === RUSSIA_ID);
 const hasSavedOrg = !!(entity.value?.inn || entity.value?.orgName);
 const orgMode = ref<'search' | 'fields'>(isRussia.value && !hasSavedOrg ? 'search' : 'fields');
 
-watch(country, () => {
-  if (entity.value) {
-    entity.value.orgName = '';
-    entity.value.inn = '';
-    entity.value.address = '';
-  }
+const resetOrg = () => {
+  entity.value = { ...entity.value, orgName: '', inn: '', address: '' };
   orgMode.value = isRussia.value ? 'search' : 'fields';
+};
+
+watch(country, () => {
+  resetOrg();
 });
 
 const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; address: string }) => {
-  if (!entity.value) return;
   entity.value.orgName = orgName;
   entity.value.inn = inn;
   entity.value.address = address;
   orgMode.value = 'fields';
 };
 
-const resetOrg = () => {
-  if (entity.value) {
-    entity.value.orgName = '';
-    entity.value.inn = '';
-    entity.value.address = '';
-  }
-  orgMode.value = 'search';
-};
+
 </script>
 
 <template>
@@ -89,7 +95,7 @@ const resetOrg = () => {
       </div>
       <Input v-model="entity!.email" id="email" :label="t('email')" autocomplete="email" type="email" inputmode="email" required />
       <template v-if="isRussia && orgMode === 'search'">
-        <OrderOrgSearch @select="onOrgSelect" />
+        <OrderOrgSearch :recentSuggestions="recentOrgSuggestions" @select="onOrgSelect" />
         <button type="button" class="customer-manualBtn" @click="orgMode = 'fields'">{{ t('manualEntry') }}</button>
       </template>
       <template v-else>
