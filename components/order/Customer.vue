@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import Textarea from '~/components/Textarea.vue';
+import Select from '~/components/Select.vue';
+import { RUSSIA_ID } from '~/common/types';
 
 const { t } = useI18n();
 const payerType = defineModel<string>('payerType');
 const individual = defineModel<{ fio: string; phone: string; email: string; comment: string; }>('individual');
 const entity = defineModel<{ fio: string; phone: string; inn: string; orgName: string; address: string; email: string; comment: string; }>('entity');
+const country = defineModel<number>('country');
+
+const { countries } = defineProps<{ countries: Record<number, string> }>();
 
 if (entity.value && individual.value) {
   if (!entity.value.fio) entity.value.fio = individual.value.fio;
@@ -12,34 +17,52 @@ if (entity.value && individual.value) {
   if (!entity.value.email) entity.value.email = individual.value.email;
 }
 
-const config = useRuntimeConfig();
-const innPending = ref(false);
+const isRussia = computed(() => country.value === RUSSIA_ID);
 
-watch(() => entity.value?.inn, async (inn) => {
-  if (!inn || (inn.length !== 10 && inn.length !== 12) || !entity.value) return;
-  innPending.value = true;
-  try {
-    const res = await $fetch<{ suggestions: { value: string; data: { name: { short_with_opf: string }; address: { unrestricted_value: string } } }[] }>(
-      'https://suggestions.dadata.ru/suggestions/api/4_1/rs/findById/party',
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Authorization': `Token ${config.public.dadataKey}` },
-        body: JSON.stringify({ query: inn }),
-      }
-    );
-    const s = res.suggestions?.[0];
-    if (!s) return;
-    entity.value.orgName = s.data.name.short_with_opf;
-    entity.value.address = s.data.address.unrestricted_value;
-  } finally {
-    innPending.value = false;
+const hasSavedOrg = !!(entity.value?.inn || entity.value?.orgName);
+const orgMode = ref<'search' | 'fields'>(isRussia.value && !hasSavedOrg ? 'search' : 'fields');
+
+watch(country, () => {
+  if (entity.value) {
+    entity.value.orgName = '';
+    entity.value.inn = '';
+    entity.value.address = '';
   }
+  orgMode.value = isRussia.value ? 'search' : 'fields';
 });
+
+const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; address: string }) => {
+  if (!entity.value) return;
+  entity.value.orgName = orgName;
+  entity.value.inn = inn;
+  entity.value.address = address;
+  orgMode.value = 'fields';
+};
+
+const resetOrg = () => {
+  if (entity.value) {
+    entity.value.orgName = '';
+    entity.value.inn = '';
+    entity.value.address = '';
+  }
+  orgMode.value = 'search';
+};
 </script>
 
 <template>
   <h2>{{ t('title') }}</h2>
   <div class="customer">
+    <Select
+      v-model="country"
+      optionLabel="label"
+      optionValue="id"
+      :options="Object.entries(countries).map(([id, label]) => ({ id: Number(id), label }))"
+      :placeholder="t('country')"
+      is-searchable
+      :show-clear="false"
+      class="customer-country"
+    />
+
     <div class="customer-radioGroup">
       <label class="customer-radio" tabindex="0" @keyup.enter="payerType = 'individual'">
         <input type="radio" value="individual" v-model="payerType" />
@@ -65,11 +88,20 @@ watch(() => entity.value?.inn, async (inn) => {
         <Input v-model="entity!.phone" id="phone" :label="t('phone')" autocomplete="tel" inputmode="tel" required />
       </div>
       <Input v-model="entity!.email" id="email" :label="t('email')" autocomplete="email" type="email" inputmode="email" required />
-      <div class="customer-orgFieldWrapper">
-        <Input v-model="entity!.inn" id="inn" :label="t('inn')" autocomplete="off" inputmode="numeric" required />
-        <Input v-model="entity!.orgName" id="orgName" :label="t('orgName')" autocomplete="organization" required />
-      </div>
-      <Input v-model="entity!.address" id="address" :label="t('address')" autocomplete="street-address" required />
+      <template v-if="isRussia && orgMode === 'search'">
+        <OrderOrgSearch @select="onOrgSelect" />
+        <button type="button" class="customer-manualBtn" @click="orgMode = 'fields'">{{ t('manualEntry') }}</button>
+      </template>
+      <template v-else>
+        <template v-if="isRussia">
+          <button type="button" class="customer-changeOrgBtn" @click="resetOrg">← {{ t('changeOrg') }}</button>
+        </template>
+        <div class="customer-orgFieldWrapper">
+          <Input v-model="entity!.inn" id="inn" :label="t('inn')" autocomplete="off" inputmode="numeric" required />
+          <Input v-model="entity!.orgName" id="orgName" :label="t('orgName')" autocomplete="organization" required />
+        </div>
+        <Input v-model="entity!.address" id="address" :label="t('address')" autocomplete="street-address" required />
+      </template>
       <Textarea v-model="entity!.comment" id="comment" :label="t('comment')" autocomplete="off" />
     </template>
   </div>
@@ -94,6 +126,41 @@ watch(() => entity.value?.inn, async (inn) => {
   grid-template-columns: 2fr 3fr;
   width: 100%;
   gap: 18px;
+}
+
+.customer-manualBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 16px;
+  color: #aaa;
+  cursor: pointer;
+  text-align: left;
+}
+
+.customer-manualBtn:hover {
+  color: #666;
+}
+
+.customer-changeOrgBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 16px;
+  color: var(--link-color);
+  cursor: pointer;
+  width: fit-content;
+}
+
+.customer-changeOrgBtn:hover {
+  opacity: 0.75;
+}
+
+.customer-country {
+  display: flex;
+  width: 100%;
 }
 
 .customer-radioGroup {
@@ -142,6 +209,7 @@ watch(() => entity.value?.inn, async (inn) => {
 {
   "ru": {
     "title": "Введите информацию о покупателе",
+    "country": "Страна",
     "individual": "Физическое лицо",
     "entity": "Юридическое лицо",
     "fio": "ФИО",
@@ -150,10 +218,13 @@ watch(() => entity.value?.inn, async (inn) => {
     "comment": "Комментарий",
     "inn": "ИНН организации",
     "orgName": "Наименование организации",
-    "address": "Юридический адрес"
+    "address": "Юридический адрес",
+    "manualEntry": "Ввести вручную",
+    "changeOrg": "Изменить организацию"
   },
   "en": {
     "title": "Enter the customer's information",
+    "country": "Country",
     "individual": "Individuals",
     "entity": "Legal entities",
     "fio": "Full name",
@@ -162,7 +233,9 @@ watch(() => entity.value?.inn, async (inn) => {
     "comment": "Comment",
     "inn": "Taxpayer identification number",
     "orgName": "Full legal entity title",
-    "address": "Legal address"
+    "address": "Legal address",
+    "manualEntry": "Enter manually",
+    "changeOrg": "Change organization"
   }
 }
 </i18n>

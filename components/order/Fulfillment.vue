@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import Button from '~/components/Button.vue';
-import Select from '~/components/Select.vue';
 import Textarea from '~/components/Textarea.vue';
-import {DeliveryType, type AvailableDelivery, type AvailableDeliveriesInfo, type Destination, type Tariff } from '~/common/types';
+import {RUSSIA_ID, DeliveryType, type AvailableDelivery, type AvailableDeliveriesInfo, type Destination, type Tariff } from '~/common/types';
 
 const { t } = useI18n();
 const totalSum = defineModel<number>('totalSum', { default: 0 });
@@ -12,8 +11,7 @@ const deliveryData = defineModel<Record<string, any>>('deliveryData', { default:
 const selectedDeliveryType = defineModel<string>('deliveryType');
 const country = defineModel<number>('country');
 
-const { countries, basketData } = defineProps<{
-  countries: Record<number, string>;
+const { basketData } = defineProps<{
   basketData: Record<string, number>;
 }>();
 
@@ -25,13 +23,14 @@ watchEffect(() => { deliveryQuery.value = { ...deliveryAddress.value, ...deliver
 watchEffect(() => { deliveryData.value = { ...deliveryAddress.value, ...deliveryAddressDetails.value, ...deliveryPVZ.value }; });
 const { data: delivery, pending, refresh } = await useApi<AvailableDeliveriesInfo>(`/order/delivery/`, deliveryQuery);
 
-const isRussia = computed(() => country.value === 643);
+const isRussia = computed(() => country.value === RUSSIA_ID);
 const hasSavedAddress = ['city', 'street', 'house', 'postcode'].some(k => deliveryData.value[k]);
 const addressMode = ref<'search' | 'fields'>(isRussia.value && !hasSavedAddress ? 'search' : 'fields');
 
 const resetAddress = () => {
   deliveryAddressDetails.value = {};
   deliveryAddress.value = { country: country.value };
+  deliveryQuery.value = { ...deliveryAddress.value, ...deliveryPVZ.value };
   addressMode.value = isRussia.value ? 'search' : 'fields';
 };
 
@@ -162,17 +161,6 @@ onMounted(() => {
 <template>
   <div class="fulfillment">
     <h2>{{ t('title') }}</h2>
-
-    <Select
-      v-model="country"
-      class="fulfillment-country"
-      optionLabel="label"
-      optionValue="id"
-      :options="Object.entries(countries).map(([id, label]) => ({ id: Number(id), label }))"
-      :placeholder="t('country')"
-      is-searchable
-      :show-clear="false"
-    />
 
     <OrderSelect
       v-model="selectedDeliveryType"

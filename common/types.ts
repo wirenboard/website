@@ -74,6 +74,8 @@ export enum DeliveryType {
   Taxi = 'todoor',
 }
 
+export const RUSSIA_ID = 643;
+
 export interface AvailableDelivery {
   id: string;
   type: string;

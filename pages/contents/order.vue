@@ -65,6 +65,8 @@ const makeOrder = async () => {
       v-model:payerType="payerType"
       v-model:individual="individual"
       v-model:entity="entity"
+      v-model:country="country"
+      :countries="orderInfo!.countries"
     />
 
     <OrderFulfillment
@@ -74,7 +76,6 @@ const makeOrder = async () => {
       v-model:pending="fulfillmentPending"
       v-model:deliveryValid="fulfillmentValid"
       v-model:country="country"
-      :countries="orderInfo!.countries"
       :basketData="orderInfo!.basketData"
     />
 
