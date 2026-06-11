@@ -4,21 +4,26 @@ import Button from '~/components/Button.vue';
 import type {OrderInfo} from "~/common/types";
 
 const { t, locale } = useI18n();
-const payerType = ref('individual');
-const paymentType = ref('card');
+
 const totalSum = ref(0);
 const fulfillmentPending = ref(false);
+const fulfillmentValid = ref(false);
 const submitPending = ref(false);
-const deliveryData = ref<Record<string, any>>({});
 
 const orderError = ref(false);
 
 const { data: orderInfo } = await useApi<OrderInfo>(`/order/info/`);
 
-const individual = ref(orderInfo.value!.customerData.individual);
-const entity = ref(orderInfo.value!.customerData.entity);
-const country = ref(Number(orderInfo.value!.defaultData.country));
-const deliveryId = ref(orderInfo.value!.defaultDeliveryId);
+const payerType = ref(orderInfo.value!.payerType);
+const individual = ref(orderInfo.value!.payerData.individual);
+const entity = ref(orderInfo.value!.payerData.entity);
+
+const deliveryData = ref(orderInfo.value!.deliveryData);
+const deliveryType = ref(orderInfo.value!.deliveryType);
+const country = ref(Number(orderInfo.value!.deliveryData.country));
+
+const paymentType = ref(orderInfo.value!.paymentType);
+
 
 useHead({
   title: t('title'),
@@ -38,7 +43,7 @@ const makeOrder = async () => {
     payerType: payerType.value,
     payerData: payerType.value === 'individual' ? individual.value : entity.value,
     paymentType: paymentType.value,
-    deliveryId: deliveryId.value,
+    deliveryType: deliveryType.value,
     deliveryData: deliveryData.value,
   };
   await submitOrder();
@@ -48,7 +53,7 @@ const makeOrder = async () => {
     return;
   }
   if (orderResult.value?.redirect_url) {
-    await navigateTo(orderResult.value.redirect_url, { external: true });
+    window.location.replace(orderResult.value.redirect_url);
   }
 };
 </script>
@@ -63,10 +68,11 @@ const makeOrder = async () => {
     />
 
     <OrderFulfillment
-      v-model:deliveryId="deliveryId"
+      v-model:deliveryType="deliveryType"
       v-model:deliveryData="deliveryData"
       v-model:totalSum="totalSum"
       v-model:pending="fulfillmentPending"
+      v-model:deliveryValid="fulfillmentValid"
       v-model:country="country"
       :countries="orderInfo!.countries"
       :basketData="orderInfo!.basketData"
@@ -90,7 +96,7 @@ const makeOrder = async () => {
       <Button
         type="submit"
         size="large"
-        :disabled="fulfillmentPending || submitPending"
+        :disabled="fulfillmentPending || submitPending || !fulfillmentValid"
         :label="t('checkout')"
         :variant="'primary'"
         :outlined="false"

@@ -14,6 +14,7 @@ export default defineNuxtConfig({
       apiUrl: process.env.NUXT_API_URL,
       siteLogin: process.env.NUXT_SITE_LOGIN,
       sitePassword: process.env.NUXT_SITE_PASSWORD,
+      dadataKey: process.env.NUXT_PUBLIC_DADATA_KEY,
     },
   },
   devtools: { enabled: false },

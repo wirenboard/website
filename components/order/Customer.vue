@@ -6,14 +6,35 @@ const payerType = defineModel<string>('payerType');
 const individual = defineModel<{ fio: string; phone: string; email: string; comment: string; }>('individual');
 const entity = defineModel<{ fio: string; phone: string; inn: string; orgName: string; address: string; email: string; comment: string; }>('entity');
 
-// http://localhost:8321/ru/ng/api/v1/org/search/?type=party&term=%D0%92%D0%B8%D1%80%D0%B5%D0%BD%D0%B1%D0%BE%D1%80%D0%B4
-// onMounted(async () => {
-//   const qwe = await $fetch('http://localhost:8321/ru/ng/api/v1/org/search/', {
-//     query: {
-//       term: 'пи'
-//     }
-//   })
-// });
+if (entity.value && individual.value) {
+  if (!entity.value.fio) entity.value.fio = individual.value.fio;
+  if (!entity.value.phone) entity.value.phone = individual.value.phone;
+  if (!entity.value.email) entity.value.email = individual.value.email;
+}
+
+const config = useRuntimeConfig();
+const innPending = ref(false);
+
+watch(() => entity.value?.inn, async (inn) => {
+  if (!inn || (inn.length !== 10 && inn.length !== 12) || !entity.value) return;
+  innPending.value = true;
+  try {
+    const res = await $fetch<{ suggestions: { value: string; data: { name: { short_with_opf: string }; address: { unrestricted_value: string } } }[] }>(
+      'https://suggestions.dadata.ru/suggestions/api/4_1/rs/findById/party',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Token ${config.public.dadataKey}` },
+        body: JSON.stringify({ query: inn }),
+      }
+    );
+    const s = res.suggestions?.[0];
+    if (!s) return;
+    entity.value.orgName = s.data.name.short_with_opf;
+    entity.value.address = s.data.address.unrestricted_value;
+  } finally {
+    innPending.value = false;
+  }
+});
 </script>
 
 <template>
@@ -45,7 +66,7 @@ const entity = defineModel<{ fio: string; phone: string; inn: string; orgName: s
       </div>
       <Input v-model="entity!.email" id="email" :label="t('email')" autocomplete="email" type="email" inputmode="email" required />
       <div class="customer-orgFieldWrapper">
-        <Input v-model="entity!.inn" id="inn" :label="t('inn')" autocomplete="off" type="number" inputmode="numeric"  required />
+        <Input v-model="entity!.inn" id="inn" :label="t('inn')" autocomplete="off" inputmode="numeric" required />
         <Input v-model="entity!.orgName" id="orgName" :label="t('orgName')" autocomplete="organization" required />
       </div>
       <Input v-model="entity!.address" id="address" :label="t('address')" autocomplete="street-address" required />

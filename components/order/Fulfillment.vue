@@ -7,8 +7,9 @@ import {DeliveryType, type AvailableDelivery, type AvailableDeliveriesInfo, type
 const { t } = useI18n();
 const totalSum = defineModel<number>('totalSum', { default: 0 });
 const pendingModel = defineModel<boolean>('pending', { default: false });
+const deliveryValidModel = defineModel<boolean>('deliveryValid', { default: false });
 const deliveryData = defineModel<Record<string, any>>('deliveryData', { default: () => ({}) });
-const selectedDeliveryId = defineModel<string>('deliveryId');
+const selectedDeliveryType = defineModel<string>('deliveryType');
 const country = defineModel<number>('country');
 
 const { countries, basketData } = defineProps<{
@@ -16,18 +17,31 @@ const { countries, basketData } = defineProps<{
   basketData: Record<string, number>;
 }>();
 
-const deliveryQuery = ref<Record<string, any>>({ country: country.value });
-const deliveryDetails = ref<Record<string, string>>({});
-watchEffect(() => { deliveryData.value = { ...deliveryQuery.value, ...deliveryDetails.value }; });
+const deliveryQuery = ref<Record<string, any>>({});
+const deliveryAddress = ref<Record<string, any>>({ country: country.value, city: deliveryData.value.city, postcode: deliveryData.value.postcode, street: deliveryData.value.street, house: deliveryData.value.house });
+const deliveryAddressDetails = ref<Record<string, string>>({ room: deliveryData.value.room});
+const deliveryPVZ = ref<Record<string, any>>({});
+watchEffect(() => { deliveryQuery.value = { ...deliveryAddress.value, ...deliveryPVZ.value }; });
+watchEffect(() => { deliveryData.value = { ...deliveryAddress.value, ...deliveryAddressDetails.value, ...deliveryPVZ.value }; });
 const { data: delivery, pending, refresh } = await useApi<AvailableDeliveriesInfo>(`/order/delivery/`, deliveryQuery);
 
-watch(country, (value) => {
-  deliveryQuery.value = { country: value };
+const isRussia = computed(() => country.value === 643);
+const hasSavedAddress = ['city', 'street', 'house', 'postcode'].some(k => deliveryData.value[k]);
+const addressMode = ref<'search' | 'fields'>(isRussia.value && !hasSavedAddress ? 'search' : 'fields');
+
+const resetAddress = () => {
+  deliveryAddressDetails.value = {};
+  deliveryAddress.value = { country: country.value };
+  addressMode.value = isRussia.value ? 'search' : 'fields';
+};
+
+watch(country, () => {
+  resetAddress();
   refresh();
 });
 
 const selectedDelivery = computed<AvailableDelivery | null>(() =>
-  delivery.value?.available.find((item: AvailableDelivery) => item.id === selectedDeliveryId.value) ?? null
+  delivery.value?.available.find((item: AvailableDelivery) => item.id === selectedDeliveryType.value) ?? null
 );
 
 const selectItems = computed(() => {
@@ -49,18 +63,29 @@ const selectItems = computed(() => {
 
 watch(selectedDelivery, (value) => {
   totalSum.value = value?.total ?? 0;
+  if (value?.type == DeliveryType.Pickup) {
+    deliveryValidModel.value = true;
+    return;
+  }
+  deliveryValidModel.value = (value?.price ?? 0) > 0 || (delivery.value?.freeDelivery ?? false);
 }, { immediate: true });
 
 watch(pending, (value) => {
   pendingModel.value = value;
 });
 
+const applyAddress = ({ city, postcode, street, house, room }: { city: string; postcode: string; street: string; house: string; room: string }) => {
+  deliveryAddress.value = { ...deliveryAddress.value, city, postcode, street, house };
+  if (room) deliveryAddressDetails.value = { ...deliveryAddressDetails.value, room };
+  addressMode.value = 'fields';
+};
+
 let debounceTimer: ReturnType<typeof setTimeout> | null = null;
-watch(deliveryQuery, () => {
+watch(deliveryAddress, () => {
   if (debounceTimer) clearTimeout(debounceTimer);
   debounceTimer = setTimeout(() => {
-    const { city, postcode, address } = deliveryQuery.value;
-    if (!city?.trim() || !postcode?.trim() || !address?.trim()) return;
+    const { city, postcode, street, house } = deliveryAddress.value;
+    if (!city?.trim() || !postcode?.trim() || !street?.trim() || !house?.trim()) return;
     refresh();
   }, 1500);
 }, { deep: true });
@@ -69,7 +94,7 @@ watch(deliveryQuery, () => {
 const cdekWidget = ref<null | { open: () => void; close: () => void }>(null);
 const cdekPvzData = ref<null | { tariff: Tariff; destination: Destination }>(null);
 watch(cdekPvzData, (value) => {
-  deliveryQuery.value = { ...deliveryQuery.value,
+  deliveryPVZ.value = {
     cdek_pvz_tariff: value?.tariff.tariff_code,
     cdek_pvz_country_code: value?.destination.country_code,
     cdek_pvz_city_code: value?.destination.city_code,
@@ -150,11 +175,12 @@ onMounted(() => {
     />
 
     <OrderSelect
-      v-model="selectedDeliveryId"
+      v-model="selectedDeliveryType"
       :items="selectItems"
     />
 
-    <div class="fulfillment-details">
+    <p v-if="selectedDelivery?.error" class="fulfillment-error">{{ t('deliveryError') }}</p>
+    <div class="fulfillment-details">      
       <div
         v-if="selectedDelivery?.type === DeliveryType.Pickup"
         class="fulfillment-chooseWrapper"
@@ -167,11 +193,11 @@ onMounted(() => {
         v-else-if="selectedDelivery?.type === DeliveryType.Point"
         class="fulfillment-chooseWrapper"
       >
-        <div v-if="!cdekPvzData" class="fulfillment-cdekChooseWrapper">
+        <div v-if="!cdekPvzData || selectedDelivery?.error" class="fulfillment-cdekChooseWrapper">
           <p class="fulfillment-chooseTitle">Выберите пункт выдачи заказа</p>
           <Button :label="t('cdekChoose')" outlined @click="cdekWidget!.open()"/>
         </div>
-        <template v-else>
+        <template v-else-if="cdekPvzData && !selectedDelivery?.error">
           <p class="fulfillment-chooseTitle">Выбранный пункт заказа СДЭК – {{cdekPvzData?.destination.code}}</p>
           <p>{{ cdekPvzData?.destination.city }}, {{ cdekPvzData?.destination.address }}</p>
           <p>{{ cdekPvzData?.destination.work_time }}</p>
@@ -181,18 +207,27 @@ onMounted(() => {
         </template>
       </div>
       <template v-else>
-        <div class="fulfillment-placeWrapper">
-          <Input id="city" v-model="deliveryQuery.city" label="Город" required />
-          <Input id="postcode" v-model="deliveryQuery.postcode" label="Почтовый индекс" required />
-          <Input id="address" v-model="deliveryQuery.address" label="Адрес" required />
-        </div>
-        <div class="fulfillment-detailsWrapper">
-          <Input id="room" v-model="deliveryDetails.room" label="Квартира/офис" />
-          <Input id="entrance" v-model="deliveryDetails.entrance" label="Подъезд" />
-          <Input id="floor" v-model="deliveryDetails.floor" label="Этаж" />
-
-        </div>
-        <Textarea id="fukfillmentComment" label="Комментарий" />
+        <template v-if="isRussia && addressMode === 'search'">
+          <OrderAddressAutocomplete @select="applyAddress" />
+          <button type="button" class="fulfillment-manualBtn" @click="addressMode = 'fields'">
+            {{ t('manualEntry') }}
+          </button>
+        </template>
+        <template v-else>
+          <button v-if="isRussia" type="button" class="fulfillment-changeAddressBtn" @click="resetAddress">
+            ← {{ t('changeAddress') }}
+          </button>
+          <div class="fulfillment-cityRow">
+            <Input id="city" v-model="deliveryAddress.city" label="Город" required />
+            <Input id="postcode" v-model="deliveryAddress.postcode" label="Почтовый индекс" required />
+          </div>
+          <div class="fulfillment-streetRow">
+            <Input id="street" v-model="deliveryAddress.street" label="Улица, переулок, проспект" required />
+            <Input id="house" v-model="deliveryAddress.house" label="Дом" required />
+            <Input id="room" v-model="deliveryAddressDetails.room" label="Квартира/офис" />
+          </div>
+          <Textarea id="fulfillmentComment" v-model="deliveryAddressDetails.comment" label="Комментарий" />
+        </template>
       </template>
     </div>
   </div>
@@ -220,6 +255,14 @@ onMounted(() => {
   font-weight: 700;
 }
 
+.fulfillment-error {
+  background-color: #FF474C;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
 .fulfillment-chooseWrapper p {
   margin: 12px;
 }
@@ -235,17 +278,58 @@ onMounted(() => {
   justify-content: space-between;
 }
 
-.fulfillment-placeWrapper {
+.fulfillment-addressGuard {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.fulfillment-manualBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 16px;
+  color: #aaa;
+  cursor: pointer;
+  text-align: left;
+}
+
+.fulfillment-manualBtn:hover {
+  color: #666;
+}
+
+.fulfillment-changeAddressBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 16px;
+  color: var(--link-color);
+  cursor: pointer;
+  width: fit-content;
+}
+
+.fulfillment-changeAddressBtn:hover {
+  opacity: 0.75;
+}
+
+.fulfillment-cityRow {
   display: grid;
-  grid-template-columns: 2fr 1fr 3fr;
+  grid-template-columns: 3fr 1fr;
+  gap: 18px;
+  width: fit-content;
+  min-width: 50%;
+}
+
+.fulfillment-streetRow {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
   gap: 18px;
 }
 
-.fulfillment-detailsWrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
 </style>
 
 <i18n>
@@ -255,18 +339,24 @@ onMounted(() => {
     "country": "Страна",
     "cdekChoose": "Выбрать пункт выдачи",
     "cdekChange": "Изменить пункт выдачи",
+    "manualEntry": "Ввести вручную",
+    "changeAddress": "Изменить адрес",
     "days": "день | дня | дней",
     "freeDelivery": "Бесплатная доставка",
-    "price": "{n} ₽"
+    "price": "{n} ₽",
+    "deliveryError": "Доставка по данному адресу невозможна, проверьте страну и адрес или выберите другой тип доставки"
   },
   "en": {
     "title": "Select a delivery method",
     "country": "Country",
     "cdekChoose": "Select a pickup location",
     "cdekChange": "Change pickup location",
+    "manualEntry": "Enter address manually",
+    "changeAddress": "Change address",
     "days": "day | days | days",
     "freeDelivery": "Free delivery",
-    "price": "€{n}"
+    "price": "€{n}",
+    "deliveryError": "Delivery to this address is not available, please check the country and address or select a different delivery type"
   }
 }
 </i18n>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{ payerType: string; country: number }>();
-const paymentType = defineModel<string>('paymentType', { default: '' });
+const paymentType = defineModel<string>('paymentType');
 
 const { t } = useI18n();
 
@@ -8,6 +8,7 @@ const params = computed(() => ({ payerType: props.payerType, country: props.coun
 const { data: paymentMethods } = await useApi<string[]>(
   '/order/payments/',
   params,
+  { watch: [() => props.payerType, () => props.country] },
 );
 
 const paymentTypes = computed(() =>
@@ -20,7 +21,7 @@ const paymentTypes = computed(() =>
 
 watch(paymentMethods, (methods) => {
   if (!methods) return;
-  if (!methods.includes(paymentType.value)) {
+  if (!methods.includes(paymentType.value ?? '')) {
     paymentType.value = methods[0] ?? '';
   }
 }, { immediate: true });

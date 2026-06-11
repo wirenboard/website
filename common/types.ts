@@ -83,6 +83,7 @@ export interface AvailableDelivery {
   address: string | null;
   price: number;
   total: number;
+  error?: string | null;
 }
 
 export interface AvailableDeliveriesInfo{
@@ -104,26 +105,17 @@ export interface CustomerData{
     email: string;
     comment: string;
   };
+  payerType: 'individual' | 'entity';
 }
 
-export interface DeliveryData {
-  deliveryId: string;
-  country: number;
-  city: string;
-  postcode: string;
-  address: string;
-}
-
-export interface DeliveryDetailedData{
-  room: string;
-  floor: string;
-  entrance: string;
-}
 export interface OrderInfo {
-  customerData: CustomerData;
+  payerType: string;
+  payerData: CustomerData;  
+  deliveryType: string;
+  deliveryData: Record<string, string>;
+  paymentType: string;
   basketData: Record<string, number>;
   countries: Record<number, string>;
-  deliveryData: Record<string, number>;
 }
 
 export interface Tariff {
