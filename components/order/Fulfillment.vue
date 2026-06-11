@@ -37,6 +37,7 @@ const recentSuggestions = computed(() =>
 
 const deliveryQuery = ref<Record<string, any>>({});
 const deliveryAddress = ref<Record<string, any>>({ country: country.value, city: deliveryData.value.city, postcode: deliveryData.value.postcode, street: deliveryData.value.street, house: deliveryData.value.house });
+const deliveryAddresDirty = ref<Record<string, string>>({...deliveryAddress.value});
 const deliveryAddressDetails = ref<Record<string, string>>({ room: deliveryData.value.room});
 const deliveryPVZ = ref<Record<string, any>>({});
 watchEffect(() => { deliveryQuery.value = { ...deliveryAddress.value, ...deliveryPVZ.value }; });
@@ -44,19 +45,18 @@ watchEffect(() => { deliveryData.value = { ...deliveryAddress.value, ...delivery
 const { data: delivery, pending, refresh } = await useApi<AvailableDeliveriesInfo>(`/order/delivery/`, deliveryQuery);
 
 const isRussia = computed(() => country.value === RUSSIA_ID);
-const hasSavedAddress = ['city', 'street', 'house', 'postcode'].some(k => deliveryData.value[k]);
+const hasSavedAddress = ['city', 'street', 'house', 'postcode'].some(k => deliveryAddress.value[k]);
 const addressMode = ref<'search' | 'fields'>(isRussia.value && !hasSavedAddress ? 'search' : 'fields');
 
 const resetAddress = () => {
-  deliveryAddressDetails.value = {};
   deliveryAddress.value = { country: country.value };
-  deliveryQuery.value = { ...deliveryAddress.value, ...deliveryPVZ.value };
+  deliveryAddresDirty.value = {};
+  deliveryAddressDetails.value = {};
   addressMode.value = isRussia.value ? 'search' : 'fields';
 };
 
 watch(country, () => {
   resetAddress();
-  refresh();
 });
 
 const selectedDelivery = computed<AvailableDelivery | null>(() =>
@@ -100,12 +100,12 @@ const applyAddress = ({ city, postcode, street, house, room }: { city: string; p
 };
 
 let debounceTimer: ReturnType<typeof setTimeout> | null = null;
-watch(deliveryAddress, () => {
+watch(deliveryAddresDirty, () => {
   if (debounceTimer) clearTimeout(debounceTimer);
   debounceTimer = setTimeout(() => {
-    const { city, postcode, street, house } = deliveryAddress.value;
+    const { city, postcode, street, house } = deliveryAddresDirty.value;
     if (!city?.trim() || !postcode?.trim() || !street?.trim() || !house?.trim()) return;
-    refresh();
+    deliveryAddress.value = deliveryAddresDirty.value;
   }, 1500);
 }, { deep: true });
 
@@ -119,11 +119,14 @@ watch(cdekPvzData, (value) => {
     cdek_pvz_city_code: value?.destination.city_code,
     cdek_pvz_city: value?.destination.city,
     cdek_pvz_id: value?.destination.code,
-    cdek_pvz_address: value?.destination.address,    
+    cdek_pvz_address: value?.destination.address,
     cdek_pvz_postal_code: value?.destination.postal_code
   };
-  refresh();
 },  { deep: true });
+
+watch(deliveryQuery, () => {
+  refresh();
+}, { deep: true });
 
 
 onMounted(() => {
@@ -223,12 +226,12 @@ onMounted(() => {
             ← {{ t('changeAddress') }}
           </button>
           <div class="fulfillment-cityRow">
-            <Input id="city" v-model="deliveryAddress.city" label="Город" required />
-            <Input id="postcode" v-model="deliveryAddress.postcode" label="Почтовый индекс" required />
+            <Input id="city" v-model="deliveryAddresDirty.city" label="Город" required />
+            <Input id="postcode" v-model="deliveryAddresDirty.postcode" label="Почтовый индекс" required />
           </div>
           <div class="fulfillment-streetRow">
-            <Input id="street" v-model="deliveryAddress.street" label="Улица, переулок, проспект" required />
-            <Input id="house" v-model="deliveryAddress.house" label="Дом" required />
+            <Input id="street" v-model="deliveryAddresDirty.street" label="Улица, переулок, проспект" required />
+            <Input id="house" v-model="deliveryAddresDirty.house" label="Дом" required />
             <Input id="room" v-model="deliveryAddressDetails.room" label="Квартира/офис" />
           </div>
           <Textarea id="fulfillmentComment" v-model="deliveryAddressDetails.comment" label="Комментарий" />
