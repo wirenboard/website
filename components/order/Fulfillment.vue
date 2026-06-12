@@ -39,7 +39,15 @@ const deliveryQuery = ref<Record<string, any>>({});
 const deliveryAddress = ref<Record<string, any>>({ country: country.value, city: deliveryData.value.city, postcode: deliveryData.value.postcode, street: deliveryData.value.street, house: deliveryData.value.house });
 const deliveryAddresDirty = ref<Record<string, string>>({...deliveryAddress.value});
 const deliveryAddressDetails = ref<Record<string, string>>({ room: deliveryData.value.room});
-const deliveryPVZ = ref<Record<string, any>>({});
+const deliveryPVZ = ref<Record<string, any>>({
+  cdek_pvz_tariff: deliveryData.value.cdek_pvz_tariff,
+  cdek_pvz_country_code: deliveryData.value.cdek_pvz_country_code,
+  cdek_pvz_city_code: deliveryData.value.cdek_pvz_city_code,
+  cdek_pvz_city: deliveryData.value.cdek_pvz_city,
+  cdek_pvz_id: deliveryData.value.cdek_pvz_id,
+  cdek_pvz_address: deliveryData.value.cdek_pvz_address,
+  cdek_pvz_postal_code: deliveryData.value.cdek_pvz_postal_code,
+});
 watchEffect(() => { deliveryQuery.value = { ...deliveryAddress.value, ...deliveryPVZ.value }; });
 watchEffect(() => { deliveryData.value = { ...deliveryAddress.value, ...deliveryAddressDetails.value, ...deliveryPVZ.value }; });
 const { data: delivery, pending, refresh } = await useApi<AvailableDeliveriesInfo>(`/order/delivery/`, deliveryQuery);
@@ -94,7 +102,7 @@ watch(pending, (value) => {
 });
 
 const applyAddress = ({ city, postcode, street, house, room }: { city: string; postcode: string; street: string; house: string; room: string }) => {
-  deliveryAddress.value = { ...deliveryAddress.value, city, postcode, street, house };
+  deliveryAddresDirty.value = { ...deliveryAddress.value, city, postcode, street, house };
   if (room) deliveryAddressDetails.value = { ...deliveryAddressDetails.value, room };
   addressMode.value = 'fields';
 };
@@ -111,7 +119,21 @@ watch(deliveryAddresDirty, () => {
 
 
 const cdekWidget = ref<null | { open: () => void; close: () => void }>(null);
-const cdekPvzData = ref<null | { tariff: Tariff; destination: Destination }>(null);
+const cdekPvzData = ref<null | { tariff: Tariff; destination: Destination }>(
+  deliveryData.value.cdek_pvz_id
+    ? {
+        tariff: { tariff_code: deliveryData.value.cdek_pvz_tariff } as Tariff,
+        destination: {
+          country_code: deliveryData.value.cdek_pvz_country_code,
+          city_code: deliveryData.value.cdek_pvz_city_code,
+          city: deliveryData.value.cdek_pvz_city,
+          code: deliveryData.value.cdek_pvz_id,
+          address: deliveryData.value.cdek_pvz_address,
+          postal_code: deliveryData.value.cdek_pvz_postal_code,
+        } as Destination,
+      }
+    : null
+);
 watch(cdekPvzData, (value) => {
   deliveryPVZ.value = {
     cdek_pvz_tariff: value?.tariff.tariff_code,

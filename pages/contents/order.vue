@@ -12,7 +12,7 @@ const submitPending = ref(false);
 
 const orderError = ref(false);
 
-const { data: orderInfo } = await useApi<OrderInfo>(`/order/info/`);
+const { data: orderInfo } = await useApi<OrderInfo>(`/order/prefill-info/`);
 
 const payerType = ref(orderInfo.value!.payerType);
 const individual = ref(orderInfo.value!.payerData.individual);
