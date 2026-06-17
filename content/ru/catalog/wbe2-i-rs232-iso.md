@@ -30,6 +30,7 @@ images: [
 
 Настройка выполняется в веб-интерфейсе контроллера: «Настройки → Конфигурационные файлы → Модули расширения и порты». После включения модуля порт становится доступен в Linux как `/dev/ttyMODx` и работает так же, как обычный serial. 
 ::
+
 :include{path="/catalog/includes/quality_control" withSeparator="true"}
 :include{path="/catalog/includes/certificates"}
 ::
