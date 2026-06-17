@@ -95,6 +95,7 @@ const onSelect = async (suggestion: DadataSuggestion) => {
       }
     );
     if (res.suggestions?.[0]) applyDadataResult(res.suggestions[0]);
+    else emit('noResults', true);
     return;
   }
   applyDadataResult(suggestion);
