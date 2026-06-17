@@ -19,7 +19,6 @@ The module adds a galvanically isolated RS-232 interface to Wiren Board controll
 
 ::product-section{title="Specifications"}
 * physical-layer chip: MAX232;
-* signal levels: ±15 V;
 * line overvoltage protection: ±15 V;
 * galvanic isolation: 1000 V;
 * power consumption: 0.1 W.
