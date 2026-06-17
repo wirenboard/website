@@ -56,6 +56,7 @@ const isRussia = computed(() => country.value === RUSSIA_ID);
 const hasSavedAddress = ['city', 'street', 'house', 'postcode'].some(k => deliveryAddress.value[k]);
 const addressMode = ref<'search' | 'fields'>(isRussia.value && !hasSavedAddress ? 'search' : 'fields');
 const addressFromDadata = ref(isRussia.value && hasSavedAddress);
+const addressSearchNoResults = ref(false);
 
 const resetAddress = () => {
   deliveryAddress.value = { country: country.value };
@@ -63,6 +64,7 @@ const resetAddress = () => {
   deliveryAddressDetails.value = {};
   addressMode.value = isRussia.value ? 'search' : 'fields';
   addressFromDadata.value = false;
+  addressSearchNoResults.value = false;
 };
 
 watch(country, () => {
@@ -241,14 +243,14 @@ onMounted(() => {
       </div>
       <template v-else>
         <template v-if="isRussia && addressMode === 'search'">
-          <OrderAddressAutocomplete :recentSuggestions="recentSuggestions" @select="applyAddress" />
-          <button type="button" class="fulfillment-manualBtn" @click="addressMode = 'fields'; addressFromDadata = false">
+          <OrderAddressAutocomplete :recentSuggestions="recentSuggestions" @select="applyAddress" @no-results="addressSearchNoResults = $event" />
+          <button v-if="addressSearchNoResults" type="button" class="fulfillment-manualBtn" @click="addressMode = 'fields'; addressFromDadata = false">
             {{ t('manualEntry') }}
           </button>
         </template>
         <template v-else>
           <button v-if="isRussia" type="button" class="fulfillment-changeAddressBtn" @click="resetAddress">
-            ← {{ t('changeAddress') }}
+            {{ t('changeAddress') }}
           </button>
           <div class="fulfillment-cityRow">
             <Input id="city" v-model="deliveryAddresDirty.city" label="Город" required :disabled="addressFromDadata" />
@@ -329,13 +331,13 @@ onMounted(() => {
   padding: 0;
   font-family: inherit;
   font-size: 16px;
-  color: #aaa;
+  color: var(--danger-color);
   cursor: pointer;
   text-align: left;
 }
 
 .fulfillment-manualBtn:hover {
-  color: #666;
+  opacity: 0.75;
 }
 
 .fulfillment-changeAddressBtn {
@@ -376,8 +378,8 @@ onMounted(() => {
     "country": "Страна",
     "cdekChoose": "Выбрать пункт выдачи",
     "cdekChange": "Изменить пункт выдачи",
-    "manualEntry": "Ввести вручную",
-    "changeAddress": "Изменить адрес",
+    "manualEntry": "Не удалось найти адрес, введите вручную →",
+    "changeAddress": "← Изменить адрес",
     "days": "день | дня | дней",
     "freeDelivery": "Бесплатная доставка",
     "price": "{n} ₽",
@@ -388,8 +390,8 @@ onMounted(() => {
     "country": "Country",
     "cdekChoose": "Select a pickup location",
     "cdekChange": "Change pickup location",
-    "manualEntry": "Enter address manually",
-    "changeAddress": "Change address",
+    "manualEntry": "Can't find your address? Enter it manually →",
+    "changeAddress": "← Change address",
     "days": "day | days | days",
     "freeDelivery": "Free delivery",
     "price": "€{n}",

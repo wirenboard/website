@@ -23,6 +23,7 @@ const props = defineProps<{
 
 const emit = defineEmits<{
   select: [{ city: string; postcode: string; street: string; house: string; room: string }];
+  noResults: [value: boolean];
 }>();
 
 const config = useRuntimeConfig();
@@ -42,6 +43,7 @@ const fetchSuggestions = async (value: string) => {
   if (value.trim().length < 3) {
     suggestions.value = [];
     isOpen.value = false;
+    emit('noResults', false);
     if (!value.trim()) showRecent();
     return;
   }
@@ -58,6 +60,7 @@ const fetchSuggestions = async (value: string) => {
   );
   suggestions.value = res.suggestions ?? [];
   isOpen.value = suggestions.value.length > 0;
+  emit('noResults', suggestions.value.length === 0);
 };
 
 const onInput = () => {

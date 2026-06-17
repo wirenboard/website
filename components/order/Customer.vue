@@ -36,11 +36,13 @@ const isRussia = computed(() => country.value === RUSSIA_ID);
 const hasSavedOrg = !!(entity.value?.inn || entity.value?.orgName);
 const orgMode = ref<'search' | 'fields'>(isRussia.value && !hasSavedOrg ? 'search' : 'fields');
 const orgFromSearch = ref(isRussia.value && hasSavedOrg);
+const orgSearchNoResults = ref(false);
 
 const resetOrg = () => {
   entity.value = { ...entity.value, orgName: '', inn: '', address: '' };
   orgMode.value = isRussia.value ? 'search' : 'fields';
   orgFromSearch.value = false;
+  orgSearchNoResults.value = false;
 };
 
 watch(country, () => {
@@ -98,12 +100,12 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
       </div>
       <Input v-model="entity!.email" id="email" :label="t('email')" autocomplete="email" type="email" inputmode="email" required />
       <template v-if="isRussia && orgMode === 'search'">
-        <OrderOrgSearch :recentSuggestions="recentOrgSuggestions" @select="onOrgSelect" />
-        <button type="button" class="customer-manualBtn" @click="orgMode = 'fields'; orgFromSearch = false">{{ t('manualEntry') }}</button>
+        <OrderOrgSearch :recentSuggestions="recentOrgSuggestions" @select="onOrgSelect" @no-results="orgSearchNoResults = $event" />
+        <button v-if="orgSearchNoResults" type="button" class="customer-manualBtn" @click="orgMode = 'fields'; orgFromSearch = false">{{ t('manualEntry') }}</button>
       </template>
       <template v-else>
         <template v-if="isRussia">
-          <button type="button" class="customer-changeOrgBtn" @click="resetOrg">← {{ t('changeOrg') }}</button>
+          <button type="button" class="customer-changeOrgBtn" @click="resetOrg">{{ t('changeOrg') }}</button>
         </template>
         <div class="customer-orgFieldWrapper">
           <Input v-model="entity!.inn" id="inn" :label="t('inn')" autocomplete="off" inputmode="numeric" required :disabled="orgFromSearch" />
@@ -143,13 +145,13 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
   padding: 0;
   font-family: inherit;
   font-size: 16px;
-  color: #aaa;
+  color: var(--danger-color);
   cursor: pointer;
   text-align: left;
 }
 
 .customer-manualBtn:hover {
-  color: #666;
+  opacity: 0.75;
 }
 
 .customer-changeOrgBtn {
@@ -228,8 +230,8 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
     "inn": "ИНН организации",
     "orgName": "Наименование организации",
     "address": "Юридический адрес",
-    "manualEntry": "Ввести вручную",
-    "changeOrg": "Изменить организацию"
+    "manualEntry": "Не удалось найти организацию, введите вручную →",
+    "changeOrg": "← Изменить организацию"
   },
   "en": {
     "title": "Enter the customer's information",
@@ -243,8 +245,8 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
     "inn": "Taxpayer identification number",
     "orgName": "Full legal entity title",
     "address": "Legal address",
-    "manualEntry": "Enter manually",
-    "changeOrg": "Change organization"
+    "manualEntry": "Can't find your organization? Enter it manually →",
+    "changeOrg": "← Change organization"
   }
 }
 </i18n>
