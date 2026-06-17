@@ -35,10 +35,12 @@ const isRussia = computed(() => country.value === RUSSIA_ID);
 
 const hasSavedOrg = !!(entity.value?.inn || entity.value?.orgName);
 const orgMode = ref<'search' | 'fields'>(isRussia.value && !hasSavedOrg ? 'search' : 'fields');
+const orgFromSearch = ref(isRussia.value && hasSavedOrg);
 
 const resetOrg = () => {
   entity.value = { ...entity.value, orgName: '', inn: '', address: '' };
   orgMode.value = isRussia.value ? 'search' : 'fields';
+  orgFromSearch.value = false;
 };
 
 watch(country, () => {
@@ -50,6 +52,7 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
   entity.value.inn = inn;
   entity.value.address = address;
   orgMode.value = 'fields';
+  orgFromSearch.value = true;
 };
 
 
@@ -96,17 +99,17 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
       <Input v-model="entity!.email" id="email" :label="t('email')" autocomplete="email" type="email" inputmode="email" required />
       <template v-if="isRussia && orgMode === 'search'">
         <OrderOrgSearch :recentSuggestions="recentOrgSuggestions" @select="onOrgSelect" />
-        <button type="button" class="customer-manualBtn" @click="orgMode = 'fields'">{{ t('manualEntry') }}</button>
+        <button type="button" class="customer-manualBtn" @click="orgMode = 'fields'; orgFromSearch = false">{{ t('manualEntry') }}</button>
       </template>
       <template v-else>
         <template v-if="isRussia">
           <button type="button" class="customer-changeOrgBtn" @click="resetOrg">← {{ t('changeOrg') }}</button>
         </template>
         <div class="customer-orgFieldWrapper">
-          <Input v-model="entity!.inn" id="inn" :label="t('inn')" autocomplete="off" inputmode="numeric" required />
-          <Input v-model="entity!.orgName" id="orgName" :label="t('orgName')" autocomplete="organization" required />
+          <Input v-model="entity!.inn" id="inn" :label="t('inn')" autocomplete="off" inputmode="numeric" required :disabled="orgFromSearch" />
+          <Input v-model="entity!.orgName" id="orgName" :label="t('orgName')" autocomplete="organization" required :disabled="orgFromSearch" />
         </div>
-        <Input v-model="entity!.address" id="address" :label="t('address')" autocomplete="street-address" required />
+        <Input v-model="entity!.address" id="address" :label="t('address')" autocomplete="street-address" required :disabled="orgFromSearch" />
       </template>
       <Textarea v-model="entity!.comment" id="comment" :label="t('comment')" autocomplete="off" />
     </template>

@@ -55,12 +55,14 @@ const { data: delivery, pending, refresh } = await useApi<AvailableDeliveriesInf
 const isRussia = computed(() => country.value === RUSSIA_ID);
 const hasSavedAddress = ['city', 'street', 'house', 'postcode'].some(k => deliveryAddress.value[k]);
 const addressMode = ref<'search' | 'fields'>(isRussia.value && !hasSavedAddress ? 'search' : 'fields');
+const addressFromDadata = ref(isRussia.value && hasSavedAddress);
 
 const resetAddress = () => {
   deliveryAddress.value = { country: country.value };
   deliveryAddresDirty.value = {};
   deliveryAddressDetails.value = {};
   addressMode.value = isRussia.value ? 'search' : 'fields';
+  addressFromDadata.value = false;
 };
 
 watch(country, () => {
@@ -105,6 +107,7 @@ const applyAddress = ({ city, postcode, street, house, room }: { city: string; p
   deliveryAddresDirty.value = { ...deliveryAddress.value, city, postcode, street, house };
   if (room) deliveryAddressDetails.value = { ...deliveryAddressDetails.value, room };
   addressMode.value = 'fields';
+  addressFromDadata.value = true;
 };
 
 let debounceTimer: ReturnType<typeof setTimeout> | null = null;
@@ -239,7 +242,7 @@ onMounted(() => {
       <template v-else>
         <template v-if="isRussia && addressMode === 'search'">
           <OrderAddressAutocomplete :recentSuggestions="recentSuggestions" @select="applyAddress" />
-          <button type="button" class="fulfillment-manualBtn" @click="addressMode = 'fields'">
+          <button type="button" class="fulfillment-manualBtn" @click="addressMode = 'fields'; addressFromDadata = false">
             {{ t('manualEntry') }}
           </button>
         </template>
@@ -248,13 +251,13 @@ onMounted(() => {
             ← {{ t('changeAddress') }}
           </button>
           <div class="fulfillment-cityRow">
-            <Input id="city" v-model="deliveryAddresDirty.city" label="Город" required />
-            <Input id="postcode" v-model="deliveryAddresDirty.postcode" label="Почтовый индекс" required />
+            <Input id="city" v-model="deliveryAddresDirty.city" label="Город" required :disabled="addressFromDadata" />
+            <Input id="postcode" v-model="deliveryAddresDirty.postcode" label="Почтовый индекс" required :disabled="addressFromDadata" />
           </div>
           <div class="fulfillment-streetRow">
-            <Input id="street" v-model="deliveryAddresDirty.street" label="Улица, переулок, проспект" required />
-            <Input id="house" v-model="deliveryAddresDirty.house" label="Дом" required />
-            <Input id="room" v-model="deliveryAddressDetails.room" label="Квартира/офис" />
+            <Input id="street" v-model="deliveryAddresDirty.street" label="Улица, переулок, проспект" required :disabled="addressFromDadata" />
+            <Input id="house" v-model="deliveryAddresDirty.house" label="Дом" required :disabled="addressFromDadata" />
+            <Input id="room" v-model="deliveryAddressDetails.room" label="Квартира/офис" :disabled="addressFromDadata" />
           </div>
           <Textarea id="fulfillmentComment" v-model="deliveryAddressDetails.comment" label="Комментарий" />
         </template>
@@ -264,7 +267,11 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.fulfillment-country { 
+.fulfillment h2 {
+  margin-top: 36px;
+}
+
+.fulfillment-country {
   margin-bottom: 18px;
   display: flex;
 }

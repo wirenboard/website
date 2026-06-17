@@ -9,6 +9,7 @@ const props = defineProps<{
   inputmode?: 'search' | 'text' | 'none' | 'tel' | 'url' | 'email' | 'numeric' | 'decimal';
   autocomplete?: string;
   required?: boolean;
+  disabled?: boolean;
 }>();
 
 const model = defineModel<string>();
@@ -38,6 +39,7 @@ const validate = () => {
       :aria-invalid="error"
       :inputmode="inputmode"
       :required="required"
+      :disabled="disabled"
       :autocomplete="autocomplete"
       @blur="validate"
       @input="validate"
@@ -100,5 +102,15 @@ const validate = () => {
 
 .input-error + .input-label {
   color: var(--danger-color);
+}
+
+.input:disabled {
+  background: var(--bg-secondary, #f5f5f5);
+  color: #666;
+  cursor: not-allowed;
+}
+
+.input:disabled + .input-label {
+  color: #aaa;
 }
 </style>
