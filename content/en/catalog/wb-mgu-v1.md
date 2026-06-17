@@ -134,7 +134,7 @@ If WB‑MGU v.1 is connected to one of the network interfaces of a Wiren Board c
 ::product-section{title="Fast Modbus Support"}
 
 :photo{
-  src="wb-mgu-v1/wb-mgu-v1-fast-modbas.png"
+  src="wb-mgu-v1/wb-mgu-v1-fast-modbus_2.png"
   float="right"
   width="500px"
 }
@@ -151,7 +151,7 @@ WB-MGU v.1 supports Fast Modbus in all modes: **transparent gateway** and **Modb
 ::product-section{title="Reset to Defaults and Factory Mode"}
 
 :photo{
-  src="wb-mgu-v1/wb-mgu-v1-reset.png"
+  src="wb-mgu-v1/wb-mgu-v1-reset_2.png"
   float="right"
   width="500px"
 }
