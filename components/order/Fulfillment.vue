@@ -59,7 +59,7 @@ const addressFromDadata = ref(isRussia.value && hasSavedAddress);
 
 const resetAddress = () => {
   deliveryAddress.value = { country: country.value };
-  deliveryAddresDirty.value = {};
+  deliveryAddresDirty.value = { country: country.value };
   deliveryAddressDetails.value = {};
   addressMode.value = isRussia.value ? 'search' : 'fields';
   addressFromDadata.value = false;
