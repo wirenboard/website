@@ -31,4 +31,3 @@ The module is configured in the controller's web interface under "Settings → C
 ::
 :include{path="/catalog/includes/quality_control" withSeparator="true"}
 :include{path="/catalog/includes/certificates"}
-::
