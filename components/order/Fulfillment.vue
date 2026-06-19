@@ -369,6 +369,32 @@ onMounted(() => {
   gap: 18px;
 }
 
+@media (max-width: 768px) {
+  .fulfillment-cityRow {
+    grid-template-columns: 1fr;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .fulfillment-streetRow {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .fulfillment-streetRow > :first-child {
+    grid-column: 1 / -1;
+  }
+
+  .fulfillment-chooseWrapper {
+    padding: 12px 16px;
+  }
+
+  .fulfillment-cdekChooseWrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+}
+
 </style>
 
 <i18n>

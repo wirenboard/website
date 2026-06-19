@@ -166,6 +166,26 @@ const makeOrder = async () => {
   border-radius: 15px;
   opacity: 0.5;
 }
+
+@media (max-width: 768px) {
+  .order h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .order h2:not(:first-child) {
+    margin-top: 40px;
+  }
+
+  .order-finalize {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .order-sum {
+    white-space: nowrap;
+  }
+}
 </style>
 
 <i18n>

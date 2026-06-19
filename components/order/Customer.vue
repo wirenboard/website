@@ -214,6 +214,13 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
 .customer-radio input {
   display: none;
 }
+
+@media (max-width: 768px) {
+  .customer-fieldWrapper,
+  .customer-orgFieldWrapper {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 
 <i18n>

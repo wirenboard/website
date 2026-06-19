@@ -90,4 +90,14 @@ const modelValue = defineModel<string>();
   width: 24px;
   height: fit-content;
 }
+
+@media (max-width: 768px) {
+  .orderSelect-container {
+    flex-direction: column;
+  }
+
+  .orderSelect-radio {
+    min-width: 0;
+  }
+}
 </style>
