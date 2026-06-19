@@ -1,14 +1,19 @@
 <script setup lang="ts">
+import Spinner from 'assets/icons/spinner.svg';
+
 withDefaults(defineProps<{
   id?: string;
   label: string;
   type?: 'button' | 'submit';
   variant: 'primary' | 'secondary';
   outlined: boolean;
-  size?: 'default' | 'large' }>(), {
+  size?: 'default' | 'large';
+  isLoading?: boolean;
+}>(), {
   size: 'default',
   variant: 'primary',
   type: 'button',
+  isLoading: false,
 });
 
 </script>
@@ -24,7 +29,8 @@ withDefaults(defineProps<{
       'wb-button-outlined': outlined
     }"
     :id="id">
-    {{ label }}
+    <Spinner v-if="isLoading" class="wb-button-spinner" />
+    <span :style="isLoading ? { visibility: 'hidden' } : {}">{{ label }}</span>
   </button>
 </template>
 
@@ -83,5 +89,21 @@ withDefaults(defineProps<{
 .wb-button-l {
   padding: 12px 24px;
   font-size: 18px;
+}
+
+.wb-button-spinner {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  animation: spin 1s linear infinite;
+}
+
+.wb-button-primary .wb-button-spinner {
+  color: #fff;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 </style>

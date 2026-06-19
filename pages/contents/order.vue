@@ -100,6 +100,7 @@ const makeOrder = async () => {
         type="submit"
         size="large"
         :disabled="fulfillmentPending || submitPending || !fulfillmentValid"
+        :isLoading="submitPending"
         :label="t('checkout')"
         :variant="'primary'"
         :outlined="false"
