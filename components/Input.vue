@@ -26,6 +26,7 @@ const validate = () => {
 <template>
   <div class="input-wrapper">
     <input
+      v-if="!disabled"
       v-model="model"
       :type="type"
       placeholder=" "
@@ -39,13 +40,13 @@ const validate = () => {
       :aria-invalid="error"
       :inputmode="inputmode"
       :required="required"
-      :disabled="disabled"
       :autocomplete="autocomplete"
       @blur="validate"
       @input="validate"
     />
+    <div v-else class="input input-static" :id="id">{{ model }}</div>
 
-    <label v-if="label" class="input-label" :for="id">
+    <label v-if="label" class="input-label" :class="{ 'input-label--static': disabled }" :for="id">
       {{ label }}
       <span v-if="required" class="input-required">*</span>
     </label>
@@ -111,6 +112,22 @@ const validate = () => {
 }
 
 .input:disabled + .input-label {
+  color: #aaa;
+}
+
+.input-static {
+  min-height: 74px;
+  height: auto;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  background: var(--bg-secondary, #f5f5f5);
+  color: #666;
+  cursor: not-allowed;
+}
+
+.input-label--static {
+  top: 8px;
+  font-size: 14px;
   color: #aaa;
 }
 </style>
