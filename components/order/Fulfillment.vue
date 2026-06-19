@@ -359,8 +359,6 @@ onMounted(() => {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 18px;
-  width: fit-content;
-  min-width: 50%;
 }
 
 .fulfillment-streetRow {
@@ -372,8 +370,6 @@ onMounted(() => {
 @media (max-width: 768px) {
   .fulfillment-cityRow {
     grid-template-columns: 1fr;
-    width: 100%;
-    min-width: 0;
   }
 
   .fulfillment-streetRow {
