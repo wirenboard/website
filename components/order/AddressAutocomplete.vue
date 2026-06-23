@@ -26,6 +26,7 @@ const emit = defineEmits<{
   noResults: [value: boolean];
 }>();
 
+const { t } = useI18n();
 const config = useRuntimeConfig();
 const query = ref('');
 const suggestions = ref<DadataSuggestion[]>([]);
@@ -121,7 +122,7 @@ const onBlur = () => {
         @blur="onBlur"
         @focus="() => { if (suggestions.length > 0) isOpen = true; else showRecent(); }"
       />
-      <label class="input-label" for="address-search">Поиск адреса</label>
+      <label class="input-label" for="address-search">{{ t('label') }}</label>
     </div>
     <ul v-if="isOpen" class="address-search-dropdown">
       <li
@@ -172,3 +173,10 @@ const onBlur = () => {
   background: #f5f5f5;
 }
 </style>
+
+<i18n>
+{
+  "ru": { "label": "Поиск адреса" },
+  "en": { "label": "Address search" }
+}
+</i18n>

@@ -220,20 +220,20 @@ onMounted(() => {
         v-if="selectedDelivery?.type === DeliveryType.Pickup"
         class="fulfillment-chooseWrapper"
       >
-        <p class="fulfillment-chooseTitle">Выбранный способ доставки – Самовывоз</p>
+        <p class="fulfillment-chooseTitle">{{ t('pickupSelected') }}</p>
         <p><a href="https://yandex.ru/maps/-/CPB46Z4H" target="_blank">{{ selectedDelivery?.address }}</a></p>
-        <p>Пн–Пт 10:00–18:00</p>
+        <p>{{ t('pickupHours') }}</p>
       </div>
       <div
         v-else-if="selectedDelivery?.type === DeliveryType.Point"
         class="fulfillment-chooseWrapper"
       >
         <div v-if="!cdekPvzData || selectedDelivery?.error" class="fulfillment-cdekChooseWrapper">
-          <p class="fulfillment-chooseTitle">Выберите пункт выдачи заказа</p>
+          <p class="fulfillment-chooseTitle">{{ t('cdekSelectTitle') }}</p>
           <Button :label="t('cdekChoose')" outlined @click="cdekWidget!.open()"/>
         </div>
         <template v-else-if="cdekPvzData && !selectedDelivery?.error">
-          <p class="fulfillment-chooseTitle">Выбранный пункт заказа СДЭК – {{cdekPvzData?.destination.code}}</p>
+          <p class="fulfillment-chooseTitle">{{ t('cdekSelectedTitle', { code: cdekPvzData?.destination.code }) }}</p>
           <p>{{ cdekPvzData?.destination.city }}, {{ cdekPvzData?.destination.address }}</p>
           <p>{{ cdekPvzData?.destination.work_time }}</p>
           <p class="fulfillment-cdekSumWrapper">
@@ -253,15 +253,15 @@ onMounted(() => {
             {{ t('changeAddress') }}
           </button>
           <div class="fulfillment-cityRow">
-            <Input id="city" v-model="deliveryAddresDirty.city" label="Город" required :disabled="addressFromDadata" />
-            <Input id="postcode" v-model="deliveryAddresDirty.postcode" label="Почтовый индекс" required :disabled="addressFromDadata" />
+            <Input id="city" v-model="deliveryAddresDirty.city" :label="t('city')" required :disabled="addressFromDadata" />
+            <Input id="postcode" v-model="deliveryAddresDirty.postcode" :label="t('postcode')" required :disabled="addressFromDadata" />
           </div>
           <div class="fulfillment-streetRow">
-            <Input id="street" v-model="deliveryAddresDirty.street" label="Улица, переулок, проспект" required :disabled="addressFromDadata" />
-            <Input id="house" v-model="deliveryAddresDirty.house" label="Дом" required :disabled="addressFromDadata" />
-            <Input id="room" v-model="deliveryAddressDetails.room" label="Квартира/офис" :disabled="addressFromDadata" />
+            <Input id="street" v-model="deliveryAddresDirty.street" :label="t('street')" required :disabled="addressFromDadata" />
+            <Input id="house" v-model="deliveryAddresDirty.house" :label="t('house')" required :disabled="addressFromDadata" />
+            <Input id="room" v-model="deliveryAddressDetails.room" :label="t('room')" :disabled="addressFromDadata" />
           </div>
-          <Textarea id="fulfillmentComment" v-model="deliveryAddressDetails.comment" label="Комментарий" />
+          <Textarea id="fulfillmentComment" v-model="deliveryAddressDetails.comment" :label="t('comment')" />
         </template>
       </template>
     </div>
@@ -400,8 +400,18 @@ onMounted(() => {
     "country": "Страна",
     "cdekChoose": "Выбрать пункт выдачи",
     "cdekChange": "Изменить пункт выдачи",
+    "cdekSelectTitle": "Выберите пункт выдачи заказа",
+    "cdekSelectedTitle": "Выбранный пункт заказа СДЭК – {code}",
+    "pickupSelected": "Выбранный способ доставки – Самовывоз",
+    "pickupHours": "Пн–Пт 10:00–18:00",
     "manualEntry": "Не удалось найти адрес, введите вручную →",
     "changeAddress": "← Изменить адрес",
+    "city": "Город",
+    "postcode": "Почтовый индекс",
+    "street": "Улица, переулок, проспект",
+    "house": "Дом",
+    "room": "Квартира/офис",
+    "comment": "Комментарий",
     "days": "день | дня | дней",
     "freeDelivery": "Бесплатная доставка",
     "price": "{n} ₽",
@@ -412,8 +422,18 @@ onMounted(() => {
     "country": "Country",
     "cdekChoose": "Select a pickup location",
     "cdekChange": "Change pickup location",
+    "cdekSelectTitle": "Select a pickup point",
+    "cdekSelectedTitle": "Selected CDEK pickup point – {code}",
+    "pickupSelected": "Selected delivery method – Pickup",
+    "pickupHours": "Mon–Fri 10:00–18:00",
     "manualEntry": "Can't find your address? Enter it manually →",
     "changeAddress": "← Change address",
+    "city": "City",
+    "postcode": "Postal code",
+    "street": "Street, alley, avenue",
+    "house": "Building",
+    "room": "Apartment / office",
+    "comment": "Comment",
     "days": "day | days | days",
     "freeDelivery": "Free delivery",
     "price": "€{n}",
