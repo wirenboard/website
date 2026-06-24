@@ -33,6 +33,7 @@ watch(paymentMethods, (methods) => {
 
     <OrderSelect
       v-model="paymentType"
+      name="payment"
       :items="paymentTypes"
     />
   </div>

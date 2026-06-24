@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{ items: { id: string; title: string; img?: string; comment?: string }[] }>();
+defineProps<{ name: string; items: { id: string; title: string; img?: string; comment?: string }[] }>();
 
 const modelValue = defineModel<string>();
 </script>
@@ -18,7 +18,7 @@ const modelValue = defineModel<string>();
           <NuxtImg :src="item.img" :alt="item.title" class="orderSelect-itemImg" />
         </span>
         <span>
-          <input type="radio" :value="item.id" v-model="modelValue" />
+          <input type="radio" :name="name" :value="item.id" v-model="modelValue" />
           <span class="orderSelect-title">{{ item.title }}</span>
           <span class="orderSelect-comment">{{ item.comment }}</span>
         </span>

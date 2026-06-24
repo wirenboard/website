@@ -211,6 +211,7 @@ onMounted(() => {
 
     <OrderSelect
       v-model="selectedDeliveryType"
+      name="delivery"
       :items="selectItems"
     />
 
@@ -434,7 +435,7 @@ onMounted(() => {
     "house": "Building",
     "room": "Apartment / office",
     "comment": "Comment",
-    "days": "day | days | days",
+    "days": "day | days",
     "freeDelivery": "Free delivery",
     "price": "€{n}",
     "deliveryError": "Delivery to this address is not available, please check the country and address or select a different delivery type"

@@ -76,11 +76,11 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
 
     <div class="customer-radioGroup">
       <label class="customer-radio" tabindex="0" @keyup.enter="payerType = 'individual'">
-        <input type="radio" value="individual" v-model="payerType" />
+        <input type="radio" name="payerType" value="individual" v-model="payerType" />
         {{ t('individual')}}
       </label>
       <label class="customer-radio" tabindex="0" @keyup.enter="payerType = 'entity'">
-        <input type="radio" value="entity" v-model="payerType" />
+        <input type="radio" name="payerType" value="entity" v-model="payerType" />
         {{ t('entity')}}
       </label>
     </div>
