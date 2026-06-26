@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Button from '~/components/Button.vue';
-import Textarea from '~/components/Textarea.vue';
 import {RUSSIA_ID, DeliveryType, type AvailableDelivery, type AvailableDeliveriesInfo, type Destination, type Tariff, type RecentAddress } from '~/common/types';
 
 const { t } = useI18n();
@@ -262,7 +261,6 @@ onMounted(() => {
             <Input id="house" v-model="deliveryAddresDirty.house" :label="t('house')" required :disabled="addressFromDadata" />
             <Input id="room" v-model="deliveryAddressDetails.room" :label="t('room')" :disabled="addressFromDadata" />
           </div>
-          <Textarea id="fulfillmentComment" v-model="deliveryAddressDetails.comment" :label="t('comment')" />
         </template>
       </template>
     </div>
