@@ -67,6 +67,7 @@ const makeOrder = async () => {
       v-model:entity="entity"
       v-model:country="country"
       :countries="orderInfo!.countries"
+      :cdekCountries="orderInfo!.cdekCountries"
       :recentOrgs="orderInfo!.recentOrgs"
     />
 

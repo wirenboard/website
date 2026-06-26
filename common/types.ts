@@ -97,6 +97,7 @@ export interface CustomerData{
   individual:{
    fio: string;
    phone: string;
+   additional: string;
    email: string;
    comment: string;
   }
@@ -130,6 +131,7 @@ export interface OrderInfo {
   paymentType: string;
   basketData: Record<string, number>;
   countries: Record<number, string>;
+  cdekCountries: number[];
   recentAddresses?: RecentAddress[];
   recentOrgs?: RecentOrg[];
 }

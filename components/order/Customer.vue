@@ -5,12 +5,13 @@ import { RUSSIA_ID, type RecentOrg } from '~/common/types';
 
 const { t } = useI18n();
 const payerType = defineModel<string>('payerType');
-const individual = defineModel<{ fio: string; phone: string; email: string; comment: string; }>('individual');
-const entity = defineModel<{ fio: string; phone: string; inn: string; orgName: string; address: string; email: string; comment: string; }>('entity', {required: true});
+const individual = defineModel<{ fio: string; phone: string; additional: string; email: string; comment: string; }>('individual');
+const entity = defineModel<{ fio: string; phone: string; additional: string; inn: string; orgName: string; address: string; email: string; comment: string; }>('entity', {required: true});
 const country = defineModel<number>('country');
 
-const { countries, recentOrgs } = defineProps<{
+const { countries, cdekCountries, recentOrgs } = defineProps<{
   countries: Record<number, string>;
+  cdekCountries: number[];
   recentOrgs?: RecentOrg[];
 }>();
 
@@ -28,10 +29,13 @@ const recentOrgSuggestions = computed(() =>
 if (entity.value && individual.value) {
   if (!entity.value.fio) entity.value.fio = individual.value.fio;
   if (!entity.value.phone) entity.value.phone = individual.value.phone;
+  if (!entity.value.additional) entity.value.additional = individual.value.additional;
   if (!entity.value.email) entity.value.email = individual.value.email;
 }
 
 const isRussia = computed(() => country.value === RUSSIA_ID);
+// Добавочный номер показываем только для стран, куда доступна доставка СДЭК.
+const isCdekCountry = computed(() => !!country.value && cdekCountries.includes(country.value));
 
 const hasSavedOrg = !!(entity.value?.inn || entity.value?.orgName);
 const orgMode = ref<'search' | 'fields'>(isRussia.value && !hasSavedOrg ? 'search' : 'fields');
@@ -86,17 +90,19 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
     </div>
 
     <template v-if="payerType === 'individual'">
-      <div class="customer-fieldWrapper">
+      <div class="customer-fieldWrapper" :class="{ 'customer-fieldWrapper--withExt': isCdekCountry }">
         <Input v-model="individual!.fio" id="fio" :label="t('fio')" autocomplete="name" required autofocus />
         <Input v-model="individual!.phone" id="phone" :label="t('phone')" autocomplete="tel" inputmode="tel" required />
+        <Input v-if="isCdekCountry" v-model="individual!.additional" id="additional" :label="t('additional')" autocomplete="off" inputmode="numeric" />
       </div>
       <Input v-model="individual!.email" id="email" :label="t('email')" autocomplete="email" type="email" inputmode="email" required />
       <Textarea v-model="individual!.comment" id="comment" :label="t('comment')" autocomplete="off" />
     </template>
     <template v-else>
-      <div class="customer-fieldWrapper">
+      <div class="customer-fieldWrapper" :class="{ 'customer-fieldWrapper--withExt': isCdekCountry }">
         <Input v-model="entity!.fio" id="fio" :label="t('fio')" autocomplete="name" required autofocus />
         <Input v-model="entity!.phone" id="phone" :label="t('phone')" autocomplete="tel" inputmode="tel" required />
+        <Input v-if="isCdekCountry" v-model="entity!.additional" id="additional" :label="t('additional')" autocomplete="off" inputmode="numeric" />
       </div>
       <Input v-model="entity!.email" id="email" :label="t('email')" autocomplete="email" type="email" inputmode="email" required />
       <template v-if="isRussia && orgMode === 'search'">
@@ -130,6 +136,10 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
   grid-template-columns: 3fr minmax(200px, 1fr);
   width: 100%;
   gap: 18px;
+}
+
+.customer-fieldWrapper--withExt {
+  grid-template-columns: 3fr minmax(160px, 1fr) minmax(90px, 140px);
 }
 
 .customer-orgFieldWrapper {
@@ -232,6 +242,7 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
     "entity": "Юридическое лицо",
     "fio": "ФИО",
     "phone": "Номер телефона",
+    "additional": "Добавочный",
     "email": "Email",
     "comment": "Комментарий",
     "inn": "ИНН организации",
@@ -247,6 +258,7 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
     "entity": "Legal entities",
     "fio": "Full name",
     "phone": "Phone number",
+    "additional": "Extension",
     "email": "Email",
     "comment": "Comment",
     "inn": "Taxpayer identification number",
