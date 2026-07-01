@@ -15,7 +15,7 @@ useHead({
 const mapCenter = computed(() => {
   return district.value
     ? districts[locale.value].find(item => item.value === district.value)?.coordinates as number[]
-    : locale.value === 'ru' ? [53, 45] : [50, 52]
+    : locale.value === 'ru' ? [55, 45] : [50, 52]
 });
 
 const query = computed(() => ({
@@ -68,7 +68,7 @@ watch(data, (val) => {
   <Map
     :items="data"
     :center="mapCenter"
-    :zoom="district ? actualDistricts.find((item) => item.value === district)?.zoom as number : 4"
+    :zoom="district ? actualDistricts.find((item) => item.value === district)?.zoom as number : 3"
     @visibleItemsChange="onChangeMapItems"
   />
   <Select

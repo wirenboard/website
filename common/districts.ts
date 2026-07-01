@@ -5,7 +5,7 @@ export const districts: Districts = {
     { value: 'moscow', label: 'Москва и область', coordinates: [55.6, 37.5], zoom: 8 },
     { value: 'spb', label: 'Санкт-Петербург', coordinates: [59.95, 30.5], zoom: 9 },
     { value: 'center', label: 'Центральный округ', coordinates: [54.21, 37.62], zoom: 5 },
-    { value: 'northwestern', label: 'Северо-Западный округ', coordinates: [59.94, 30.31], zoom: 5 },
+    { value: 'northwestern', label: 'Северо-Западный округ', coordinates: [62, 35], zoom: 5 },
     { value: 'southern', label: 'Южный округ', coordinates: [47.24, 39.78], zoom: 6 },
     { value: 'northcaucasus', label: 'Северо-Кавказский округ', coordinates: [44.04, 43.06], zoom: 6 },
     { value: 'volga', label: 'Приволжский округ', coordinates: [55.79, 49.11], zoom: 6 },
