@@ -1,20 +1,47 @@
 import type { _AsyncData, KeysOf, PickFrom, AsyncDataOptions } from '#app/composables/asyncData';
 import type { NuxtError } from '#app';
+import type { MaybeRef } from 'vue';
 
-export const useApi = async <T>(url: string, opts?: AsyncDataOptions<T>): Promise<_AsyncData<PickFrom<T, KeysOf<T>> | null, NuxtError<unknown> | null>> => {
+export const useApi = async <T>(
+  url: string,
+  params?: MaybeRef<Record<string, any>> | null,
+  opts?: AsyncDataOptions<T> & { method?: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'; body?: MaybeRef<any> }
+): Promise<_AsyncData<PickFrom<T, KeysOf<T>> | null, NuxtError<unknown> | null>> => {
   const config = useRuntimeConfig();
   const { locale } = useI18n();
 
-  const headers: Record<string, string> = config.login
-    ? { Authorization: `Basic ${btoa(`${config.login}:${config.password}`)}` }
-    : {};
+  const headers: Record<string, string> = {};
 
-  const userId = useRequestHeader('x-wb-user-id');
-  const baseURL =  `${config.apiUrl || ''}/${locale.value}/ng/api/v1`;
+  if (import.meta.server) {
+    const cookieHeader = useRequestHeader('cookie');
+    if (config.siteLogin) {
+      headers['Authorization'] = `Basic ${btoa(`${config.siteLogin}:${config.sitePassword}`)}`;
+    }
+    if (cookieHeader) {
+      headers['Cookie'] = cookieHeader;
+    }
+  } else {
+    if (config.public.siteLogin) {
+      headers['Authorization'] = `Basic ${btoa(`${config.public.siteLogin}:${config.public.sitePassword}`)}`;
+    }
+  }
+
+  const userId = import.meta.server ? useRequestHeader('x-wb-user-id') : undefined;
+  const apiBase = import.meta.server ? (config.apiUrl || '') : '';
+  const baseURL = `${apiBase}/${locale.value}/ng/api/v1`;
+
+  const { method, body, ...asyncDataOpts } = opts ?? {};
 
   return useAsyncData<T>(
     url,
-    () => $fetch<T>(baseURL + url, { baseURL, headers, params: { user_id: userId } })
-      .then((data) => JSON.parse(data as string))
-  )
+    () => $fetch<T>(baseURL + url, {
+      method: method ?? 'GET',
+      headers,
+      ...(method && method.toUpperCase() !== 'GET'
+        ? { body: toValue(body) }
+        : { params: { user_id: userId, ...toValue(params) } }
+      ),
+    }),
+    asyncDataOpts
+  );
 }
