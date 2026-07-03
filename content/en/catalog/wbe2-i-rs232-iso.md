@@ -12,13 +12,12 @@ images: [
 ---
 ::product
 #description
-The module adds a galvanically isolated RS-232 interface to Wiren Board controllers. It plugs into an internal slot on the controller board. Built around the MAX232 physical-layer transceiver.
+Galvanically isolated RS-232 port. Installs into the connector on the controller board, compatible with Wiren Board 6…8.
 
 #info
 ## Key features
 
 ::product-section{title="Specifications"}
-* physical-layer chip: MAX232;
 * line overvoltage protection: ±15 V;
 * galvanic isolation: 1000 V;
 * power consumption: 0.1 W.
