@@ -69,11 +69,12 @@ Four independent battery overvoltage protection levels:
 2. Hardware protection A prevents charging above 8.2 V;
 3. Protection B stops charging if the voltage of any cell exceeds 4.25 V;
 4. Protection C blows a “sacrificial” fuse if the voltage of any cell exceeds 4.3 V.
+
 Three independent overcurrent protection levels:
 
-- Charge and discharge currents are limited;
-- The battery is disconnected if the current exceeds 4 A;
-- The fuse blows in case of a short-circuit current.
+1. Charge and discharge currents are limited;
+2. The battery is disconnected if the current exceeds 4 A;
+3. The fuse blows in case of a short-circuit current.
 The battery is protected against overheating both by hardware and software mechanisms.
 ::
 ::product-section{title="Prolonged Battery Service Life"}
