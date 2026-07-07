@@ -2,7 +2,7 @@
 title: 'Система архитектурной подсветки на пешеходном мосту'
 cover: light_stream_bridge/light_stream_bridge.webp
 date: 2025-10-01
-category: commercial_estate_monitoring
+category: smart_city_infrastructure
 ---
 
 :photo{

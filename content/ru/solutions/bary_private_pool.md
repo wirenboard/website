@@ -2,7 +2,7 @@
 title: 'Автоматизация бассейна: фильтрация, нагрев и химия без участия человека'
 cover: bary_private_pool/bary_private_pool.webp
 date: 2025-10-01
-category: commercial_estate_monitoring
+category: apartments_automation
 ---
 
 :photo{

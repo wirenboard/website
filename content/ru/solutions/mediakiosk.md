@@ -2,7 +2,7 @@
 title: 'Умные медиакиоски для остановок'
 cover: mediakiosk/mediakiosk.webp
 date: 2024-11-26
-category: commercial_estate_monitoring
+category: smart_city_infrastructure
 ---
 
 _«Контроллеры Wiren Board обеспечили надежность и гибкость, необходимые для круглосуточной работы наших медиакиосков в сложных условиях.», **Олег Енов, руководитель инженерной мастерской W.E.N.D.**_

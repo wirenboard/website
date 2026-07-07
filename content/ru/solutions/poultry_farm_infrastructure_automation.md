@@ -2,7 +2,7 @@
 title: 'Диспетчеризация птицефабрики: микроклимат, дезбарьер, водоподготовка и комбикормовый завод'
 cover: poultry_farm_infrastructure_automation/poultry_farm_infrastructure_automation.webp
 date: 2026-04-29
-category: industrial_dispatching_monitoring
+category: agriculture_automation
 ---
 
 :photo{

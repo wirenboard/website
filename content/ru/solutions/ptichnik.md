@@ -2,7 +2,7 @@
 title: 'Автоматизация современного птичника'
 cover: ptichnik/ptichnik.webp
 date: 2025-06-26
-category: commercial_estate_monitoring
+category: agriculture_automation
 ---
 
 :photo{
