@@ -221,7 +221,10 @@ onMounted(() => {
         class="fulfillment-chooseWrapper"
       >
         <p class="fulfillment-chooseTitle">{{ t('pickupSelected') }}</p>
-        <p><a href="https://yandex.ru/maps/-/CPB46Z4H" target="_blank">{{ selectedDelivery?.address }}</a></p>
+        <p>
+          <a v-if="selectedDelivery?.mapUrl" :href="selectedDelivery.mapUrl" target="_blank">{{ selectedDelivery?.address }}</a>
+          <template v-else>{{ selectedDelivery?.address }}</template>
+        </p>
         <p>{{ t('pickupHours') }}</p>
       </div>
       <div

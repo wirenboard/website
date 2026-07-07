@@ -83,6 +83,7 @@ export interface AvailableDelivery {
   daysMax: number | null;
   title: string;
   address: string | null;
+  mapUrl: string | null;
   price: number;
   total: number;
   error?: string | null;
