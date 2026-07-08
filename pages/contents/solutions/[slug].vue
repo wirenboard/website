@@ -90,6 +90,7 @@ useContentHead({
 
 .article table {
   border-collapse: collapse;
+  border: none !important;
   width: 100%;
 }
 
