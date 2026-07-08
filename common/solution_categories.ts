@@ -10,6 +10,8 @@ export const categories: Categories = {
     { name: 'agriculture_automation', label: 'Автоматизация объектов сельского хозяйства' },
     { name: 'embedded_systems', label: 'Встраиваемые системы' },
     { name: 'apartments_automation', label: 'Автоматизация частных квартир и домов' },
+    { name: 'smart_city_infrastructure', label: 'Городская и общественная инфраструктура' },
+    { name: 'warehousing_logistics', label: 'Хранение и транспортировка' },
   ],
   en: [
     //{ name: 'shops_restaurants_monitoring', label: 'Monitoring of grocery stores and restaurants' },
@@ -20,5 +22,7 @@ export const categories: Categories = {
     { name: 'agriculture_automation', label: 'Automation of agricultural facilities' },
     //{ name: 'embedded_systems', label: 'Embedded systems' },
     { name: 'apartments_automation', label: 'Automation of private apartments and houses' },
+    //{ name: 'smart_city_infrastructure', label: 'Smart City Infrastructure' },
+    //{ name: 'warehousing_logistics', label: 'Warehousing and Logistics' },
   ],
 };
