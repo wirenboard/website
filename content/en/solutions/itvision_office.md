@@ -5,7 +5,9 @@ date: 2025-01-04
 category: commercial_estate_monitoring
 ---
 
-_«Wiren Board is more than just hardware; it is a comprehensive platform that combines hardware and software. We've gained a convenient and flexible tool to address our clients' needs,» **says Vladimir Gorchevsky, Director of IT Vision LLC.**_
+> "Wiren Board is more than just hardware; it is a comprehensive platform that combines hardware and software. We've gained a convenient and flexible tool to address our clients' needs"
+>
+> **Vladimir Gorchevsky, Director of IT Vision LLC**
 
 ## About the Company
 

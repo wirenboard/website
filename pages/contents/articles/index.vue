@@ -14,7 +14,7 @@ const filter = ref(Object.keys(FilterTypeParams).at(0));
 const filterDate = ref(Object.keys(FilterDateParams).at(0));
 
 const query: QueryBuilderParams = { path: '/articles', where: [{ _locale: locale.value }] }
-const { data } = await useAsyncData('articles', () => queryContent(query.path).where({ _locale: locale.value }).find());
+const { data } = await useAsyncData('articles', () => queryContent(query.path).where({ _locale: locale.value, _partial: { $ne: true } }).find());
 
 if (!data.value?.length) {
   throw createError({
@@ -79,6 +79,7 @@ if (!data.value?.length) {
 .articles-title {
   line-height: normal;
   scroll-margin-top: var(--app-bar-height);
+  color: var(--heading-color);
 }
 
 .articles-title:first-child {
@@ -87,14 +88,19 @@ if (!data.value?.length) {
 
 h2.articles-title {
   font-size: 27px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 h3.articles-title {
   font-size: 21px;
+  margin-top: 32px;
+  margin-bottom: 16px;
 }
 
 .articles-title a {
-  color: var(--text-color);
+  color: inherit;
+  transition: color 0.15s ease;
 }
 
 .articles-title a:hover {
@@ -118,7 +124,6 @@ h3.articles-title {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 32px;
 
-
   @media (max-width: 1024px) {
     grid-template-columns: 1fr 1fr;
   }
@@ -129,7 +134,7 @@ h3.articles-title {
 }
 
 .articles-separator {
-  margin: 24px 0;
+  margin: 40px 0;
 }
 </style>
 
