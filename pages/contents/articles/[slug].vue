@@ -110,22 +110,22 @@ useContentHead({
 
 .article tr:first-child td,
 .article tr:first-child th {
-  border-top: none;
+  border-top: none !important;
 }
 
 .article tr:last-child td,
 .article tr:last-child th {
-  border-bottom: none;
+  border-bottom: none !important;
 }
 
 .article td:first-child,
 .article th:first-child {
-  border-left: none;
+  border-left: none !important;
 }
 
 .article td:last-child,
 .article th:last-child {
-  border-right: none;
+  border-right: none !important;
 }
 
 .article th {
