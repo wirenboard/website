@@ -3,5 +3,5 @@ title: 'Метеостанции в Санкт-Петербурге: сбор д
 url: https://wirenboard.com/ru/pages/meteo-piter/
 cover: meteo_piter/meteo_piter.jpg
 date: 2023-12-08
-category: warehousing_logistics
+category: smart_city_infrastructure
 ---
