@@ -8,7 +8,7 @@ export const categories: Categories = {
     { name: 'server_monitoring', label: 'Мониторинг серверного оборудования и базовых станций' },
     { name: 'industrial_dispatching_monitoring', label: 'Промышленная автоматизация и диспетчеризация' },
     { name: 'agriculture_automation', label: 'Автоматизация объектов сельского хозяйства' },
-    { name: 'embedded_systems', label: 'Встраиваемые системы' },
+    //{ name: 'embedded_systems', label: 'Встраиваемые системы' },
     { name: 'apartments_automation', label: 'Автоматизация частных квартир и домов' },
     { name: 'smart_city_infrastructure', label: 'Городская и общественная инфраструктура' },
     { name: 'warehousing_logistics', label: 'Хранение и транспортировка' },
