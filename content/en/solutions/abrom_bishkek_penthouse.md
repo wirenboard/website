@@ -5,7 +5,9 @@ date: 2025-05-25
 category: apartments_automation
 ---
 
-_«Wiren Board is a robust, open-architecture platform that is easy to configure and debug directly on-site.», **says Magdi Minullin, CTO of the integration company Abrom.**_
+> "Wiren Board is a robust, open-architecture platform that is easy to configure and debug directly on-site."
+>
+> **Magdi Minullin, CTO of the integration company Abrom**
 
 ## About the Company
 

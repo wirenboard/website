@@ -89,7 +89,7 @@ const computedFigureStyle = computed(() => {
 .photo {
   text-align: center;
   font-size: 16px;
-  margin: 12px 0;
+  margin: 24px 0;
   clear: both;
   display: table;
   flex-direction: column;
@@ -100,6 +100,7 @@ const computedFigureStyle = computed(() => {
 
 .photo-fromGallery {
   display: flex;
+  margin-bottom: 6px;
 }
 
 .photo-imageFromGallery {
@@ -135,17 +136,13 @@ const computedFigureStyle = computed(() => {
 }
 
 .photo-withCaption {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
   background: var(--gray-color);
   border: 1px solid var(--border-color);
-  border-bottom: 0;
-  border-radius: 6px 6px 0 0;
+  border-radius: 8px;
   padding: 6px;
-  height: fit-content;
-}
-
-.photo-fromGallery.photo-withCaption {
-  border-bottom: 1px solid var(--border-color);
-  border-radius: 6px;
 }
 
 .photo-image {
@@ -159,32 +156,22 @@ const computedFigureStyle = computed(() => {
   max-height: 50vh;
 }
 
+img.photo-image,
+.photo-withCaption [data-pc-section="root"],
+.photo-withCaption picture {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
 .photo-imageWithCaption {
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
 }
 
 .photo-imageCaption {
   text-align: left;
   white-space: pre-line;
-  display: table-caption;
-  caption-side: bottom;
-  border: 1px solid var(--border-color);
-  border-top: 0;
-  border-radius: 0 0 6px 6px;
-  background: var(--gray-color);
-  padding: 6px;
-}
-
-.photo-fromGallery .photo-imageCaption {
-  display: initial;
-  padding: 0;
-  border: 0;
-  margin-top: -6px;
-}
-
-.photo:not(.photo-fromGallery) .photo-imageCaption {
-  margin-top: -16px;
+  padding: 4px 6px 0;
+  color: var(--text-secondary-color);
+  font-size: 14px;
 }
 
 [data-pc-section="root"] {
@@ -198,7 +185,7 @@ const computedFigureStyle = computed(() => {
   cursor: pointer;
   background: rgba(0, 0, 0, 0.4);
   outline: none;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 [data-pc-section="previewmask"] {

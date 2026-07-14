@@ -5,7 +5,9 @@ date: 2025-02-28
 category: apartments_automation
 ---
 
-_«Wiren Board represents flexibility and scalability. If the customer decides to add new devices or integrations, the system can be easily expanded without the need to redesign the entire project,» **says Magdi Minullin, CTO of the integration company Abrom.**_
+> "Wiren Board represents flexibility and scalability. If the customer decides to add new devices or integrations, the system can be easily expanded without the need to redesign the entire project"
+>
+> **Magdi Minullin, CTO of the integration company Abrom**
 
 ## About the Company
 
@@ -177,6 +179,6 @@ Wiren Board designs and provides a wide range of devices for automation and disp
 
 The company provides a two-year warranty on all equipment, offering replacement without the need for prior dispatch to a service center. Their technical support engineers are readily available to assist with both standard and unique challenges.
 
-## Additional Materials
-
+::related-materials
 - [Automation of a One-Bedroom Apartment in a New Development](https://wirenboard.com/en/contents/solutions/abrom_bishkek_apartment)
+::
