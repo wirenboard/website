@@ -42,7 +42,7 @@ INFOTECH ENGINEERING — партнер выставки загородных д
 
 #content
 Видеообзоры объектов:
-* [Умный дом 380 м² в КП «Павловы Озёра»](https://rutube.ru/video/cb5ebddb7faa9534d95244508145cdf9/)
+* [Умный дом 380 м² в КП «Павловы Озера»](https://rutube.ru/video/cb5ebddb7faa9534d95244508145cdf9/)
 * [Умный дом 550 м² с баней на Open Village 2025](https://rutube.ru/video/03b7475a3e5d810540c72426a9165736/)
 * [Двухуровневая квартира с системой «Умный дом»](https://rutube.ru/video/8083736abd340b465b1f13e78f9f16e6/)
 * [Апартаменты в Москва-Сити, башня Neva Towers](https://rutube.ru/video/4f4aebf165191e7b323179afb36dcda8/)
