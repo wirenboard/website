@@ -6,8 +6,9 @@ import { RUSSIA_ID, type RecentOrg } from '~/common/types';
 const { t } = useI18n();
 const payerType = defineModel<string>('payerType');
 const individual = defineModel<{ fio: string; phone: string; additional: string; email: string; comment: string; }>('individual');
-const entity = defineModel<{ fio: string; phone: string; additional: string; inn: string; orgName: string; address: string; email: string; comment: string; }>('entity', {required: true});
+const entity = defineModel<{ fio: string; phone: string; additional: string; inn: string; kpp: string; orgName: string; address: string; email: string; comment: string; }>('entity', {required: true});
 const country = defineModel<number>('country');
+const valid = defineModel<boolean>('valid', { default: false });
 
 const { countries, cdekCountries, recentOrgs } = defineProps<{
   countries: Record<number, string>;
@@ -20,6 +21,7 @@ const recentOrgSuggestions = computed(() =>
     value: org.orgName,
     data: {
       inn: org.inn,
+      kpp: org.kpp,
       name: { short_with_opf: org.orgName },
       address: { unrestricted_value: org.address },
     },
@@ -37,13 +39,27 @@ const isRussia = computed(() => country.value === RUSSIA_ID);
 // Добавочный номер показываем только для стран, куда доступна доставка СДЭК.
 const isCdekCountry = computed(() => !!country.value && cdekCountries.includes(country.value));
 
+const customerComplete = computed(() => {
+  if (payerType.value === 'individual') {
+    const i = individual.value;
+    return [i?.fio, i?.phone, i?.email].every(v => v?.trim());
+  }
+  const e = entity.value;
+  const base = [e.fio, e.phone, e.email, e.orgName, e.address].every(v => v?.trim());
+  const inn = (e.inn ?? '').trim();
+  // для РФ ИНН — 10 цифр (юрлицо) или 12 (ИП); для других стран просто непустой
+  const innOk = isRussia.value ? /^(\d{10}|\d{12})$/.test(inn) : !!inn;
+  return base && innOk;
+});
+watchEffect(() => { valid.value = customerComplete.value; });
+
 const hasSavedOrg = !!(entity.value?.inn || entity.value?.orgName);
 const orgMode = ref<'search' | 'fields'>(isRussia.value && !hasSavedOrg ? 'search' : 'fields');
 const orgFromSearch = ref(isRussia.value && hasSavedOrg);
 const orgSearchNoResults = ref(false);
 
 const resetOrg = () => {
-  entity.value = { ...entity.value, orgName: '', inn: '', address: '' };
+  entity.value = { ...entity.value, orgName: '', inn: '', kpp: '', address: '' };
   orgMode.value = isRussia.value ? 'search' : 'fields';
   orgFromSearch.value = false;
   orgSearchNoResults.value = false;
@@ -53,9 +69,10 @@ watch(country, () => {
   resetOrg();
 });
 
-const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; address: string }) => {
+const onOrgSelect = ({ orgName, inn, kpp, address }: { orgName: string; inn: string; kpp: string; address: string }) => {
   entity.value.orgName = orgName;
   entity.value.inn = inn;
+  entity.value.kpp = kpp;
   entity.value.address = address;
   orgMode.value = 'fields';
   orgFromSearch.value = true;
@@ -113,8 +130,9 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
         <template v-if="isRussia">
           <button type="button" class="customer-changeOrgBtn" @click="resetOrg">{{ t('changeOrg') }}</button>
         </template>
-        <div class="customer-orgFieldWrapper">
+        <div class="customer-orgFieldWrapper" :class="{ 'customer-orgFieldWrapper--withKpp': isRussia }">
           <Input v-model="entity!.inn" id="inn" :label="t('inn')" autocomplete="off" inputmode="numeric" required :disabled="orgFromSearch" />
+          <Input v-if="isRussia" v-model="entity!.kpp" id="kpp" :label="t('kpp')" autocomplete="off" inputmode="numeric" :disabled="orgFromSearch" />
           <Input v-model="entity!.orgName" id="orgName" :label="t('orgName')" autocomplete="organization" required :disabled="orgFromSearch" />
         </div>
         <Input v-model="entity!.address" id="address" :label="t('address')" autocomplete="street-address" required :disabled="orgFromSearch" />
@@ -147,6 +165,10 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
   grid-template-columns: 2fr 3fr;
   width: 100%;
   gap: 18px;
+}
+
+.customer-orgFieldWrapper--withKpp {
+  grid-template-columns: minmax(140px, 1fr) minmax(140px, 1fr) 2fr;
 }
 
 .customer-manualBtn {
@@ -227,7 +249,8 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
 
 @media (max-width: 768px) {
   .customer-fieldWrapper,
-  .customer-orgFieldWrapper {
+  .customer-orgFieldWrapper,
+  .customer-orgFieldWrapper--withKpp {
     grid-template-columns: 1fr;
   }
 }
@@ -246,6 +269,7 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
     "email": "Email",
     "comment": "Комментарий",
     "inn": "ИНН организации",
+    "kpp": "КПП",
     "orgName": "Наименование организации",
     "address": "Юридический адрес",
     "manualEntry": "Не удалось найти организацию, введите вручную →",
@@ -262,6 +286,7 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
     "email": "Email",
     "comment": "Comment",
     "inn": "Taxpayer identification number",
+    "kpp": "Tax Registration Reason Code",
     "orgName": "Full legal entity title",
     "address": "Legal address",
     "manualEntry": "Can't find your organization? Enter it manually →",

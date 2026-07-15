@@ -6,8 +6,9 @@ import type {OrderInfo} from "~/common/types";
 const { t, locale } = useI18n();
 
 const totalSum = ref(0);
-const fulfillmentPending = ref(false);
-const fulfillmentValid = ref(false);
+const deliveryPending = ref(false);
+const deliveryValid = ref(false);
+const customerValid = ref(false);
 const submitPending = ref(false);
 
 const orderError = ref(false);
@@ -66,6 +67,7 @@ const makeOrder = async () => {
       v-model:individual="individual"
       v-model:entity="entity"
       v-model:country="country"
+      v-model:valid="customerValid"
       :countries="orderInfo!.countries"
       :cdekCountries="orderInfo!.cdekCountries"
       :recentOrgs="orderInfo!.recentOrgs"
@@ -75,8 +77,8 @@ const makeOrder = async () => {
       v-model:deliveryType="deliveryType"
       v-model:deliveryData="deliveryData"
       v-model:totalSum="totalSum"
-      v-model:pending="fulfillmentPending"
-      v-model:deliveryValid="fulfillmentValid"
+      v-model:pending="deliveryPending"
+      v-model:valid="deliveryValid"
       v-model:country="country"
       :basketData="orderInfo!.basketData"
       :recentAddresses="orderInfo!.recentAddresses"
@@ -100,7 +102,7 @@ const makeOrder = async () => {
       <Button
         type="submit"
         size="large"
-        :disabled="fulfillmentPending || submitPending || !fulfillmentValid"
+        :disabled="deliveryPending || submitPending || !deliveryValid || !customerValid"
         :isLoading="submitPending"
         :label="t('checkout')"
         :variant="'primary'"
@@ -109,7 +111,7 @@ const makeOrder = async () => {
       <div>
         <span class="order-toPay">
           {{ t('toPay') }}
-          <Loader v-if="fulfillmentPending" />
+          <Loader v-if="deliveryPending" />
           <span v-else class="order-sum">{{ locale === 'ru' ? `${toTriads(totalSum)} ₽` : `€${toTriads(totalSum)}` }}</span>
         </span>
       </div>

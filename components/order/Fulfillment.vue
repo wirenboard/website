@@ -6,7 +6,7 @@ const { t } = useI18n();
 const config = useRuntimeConfig();
 const totalSum = defineModel<number>('totalSum', { default: 0 });
 const pendingModel = defineModel<boolean>('pending', { default: false });
-const deliveryValidModel = defineModel<boolean>('deliveryValid', { default: false });
+const valid = defineModel<boolean>('valid', { default: false });
 const deliveryData = defineModel<Record<string, any>>('deliveryData', { default: () => ({}) });
 const selectedDeliveryType = defineModel<string>('deliveryType');
 const country = defineModel<number>('country');
@@ -91,13 +91,16 @@ const selectItems = computed(() => {
   }));
 });
 
+const addressComplete = computed(() => {
+  if (selectedDelivery.value?.type === DeliveryType.Pickup) return true;
+  if (selectedDelivery.value?.type === DeliveryType.Point) return !!deliveryPVZ.value.cdek_pvz_id;
+  const a = deliveryData.value;
+  return [a.city, a.postcode, a.street, a.house].every(v => v?.trim());
+});
+
 watch(selectedDelivery, (value) => {
   totalSum.value = value?.total ?? 0;
-  if (value?.type == DeliveryType.Pickup) {
-    deliveryValidModel.value = true;
-    return;
-  }
-  deliveryValidModel.value = (value?.price ?? 0) > 0 || (delivery.value?.freeDelivery ?? false);
+  valid.value = !!value && !value.error && addressComplete.value;
 }, { immediate: true });
 
 watch(pending, (value) => {
