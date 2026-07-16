@@ -1,5 +1,5 @@
 ---
-district: [volga, center]
+district: [volga, moscow]
 tags: [smart_home]
 coordinates: [[58.61506434861371, 49.65493736161975], [55.831767, 37.133596]]
 title: INFOTECH ENGINEERING
