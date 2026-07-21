@@ -20,6 +20,7 @@ _Расшифровка нашего доклада с вебинара «Кон
     url="https://peertube.wirenboard.com/w/t276rxEadLXqYQxKKHrKJ4"
     width="650"
     height="367"
+    cover="wb_ci_cd/vid_prev.png"
 }
 
 ## О чём пойдёт речь
