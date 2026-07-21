@@ -104,6 +104,7 @@ export interface CustomerData{
   }
   entity: {
     inn: string;
+    kpp: string;
     orgName: string;
     address: string;
     email: string;
@@ -120,6 +121,7 @@ export interface RecentAddress {
 
 export interface RecentOrg {
   inn: string;
+  kpp: string;
   orgName: string;
   address: string;
 }

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 interface DadataOrgData {
   inn: string;
+  kpp?: string;
   name: { short_with_opf: string };
   address: { unrestricted_value: string };
 }
@@ -15,7 +16,7 @@ const props = defineProps<{
 }>();
 
 const emit = defineEmits<{
-  select: [{ orgName: string; inn: string; address: string }];
+  select: [{ orgName: string; inn: string; kpp: string; address: string }];
   noResults: [value: boolean];
 }>();
 
@@ -66,6 +67,7 @@ const onSelect = (suggestion: DadataSuggestion) => {
   emit('select', {
     orgName: suggestion.value,
     inn: suggestion.data.inn,
+    kpp: suggestion.data.kpp ?? '',
     address: suggestion.data.address.unrestricted_value,
   });
 };
