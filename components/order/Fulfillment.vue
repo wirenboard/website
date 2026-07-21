@@ -123,6 +123,9 @@ watch(deliveryAddresDirty, () => {
 
 
 const cdekWidget = ref<null | { open: () => void; close: () => void }>(null);
+const cdekLoading = ref(false);
+let cdekInitPromise: Promise<void> | null = null;
+
 const cdekPvzData = ref<null | { tariff: Tariff; destination: Destination }>(
   deliveryData.value.cdek_pvz_id
     ? {
@@ -154,54 +157,65 @@ watch(deliveryQuery, () => {
   refresh();
 }, { deep: true });
 
-
-onMounted(() => {
-  const script = document.createElement('script');
-  script.src = 'https://wirenboard.com/npm/@cdek-it/widget@3';
-  script.onload = () => {
-    // @ts-ignore
-    cdekWidget.value = new window.CDEKWidget({
-      apiKey: config.public.yaMapKey,
-      defaultLocation: 'Москва',
-      popup: true,
-      canChoose: true,
-      hideDeliveryOptions: {
-        door: true,
-      },
-      tariffs: {
-        office: [136],
-        pickup: [],
-      },
-      hideFilters: {
-        is_dressing_room: true,
-        have_cashless: true,
-        have_cash: true,
-        type: true,
-      },
-      forceFilters: {
-        type: 'PVZ',
-      },
-      from: {
-        country_code: 'RU',
-        city: 'Долгопрудный',
-        address: 'Лихачёвский проезд, 6с1',
-      },
-      goods: [{ width: 1, height: 1, length: 1, weight: (basketData.weight * 1000), cost: basketData.price }],
-      onChoose: (type: string, tariff: Tariff, destination: Destination) => {
-        cdekPvzData.value = { tariff, destination };
-        cdekWidget.value!.close();
-      },
-      onCalculate: ({ office }: { office: Tariff[] }) => {
-        if (delivery.value?.freeDelivery) {
-          office.map((item: Tariff) => {
-            item.delivery_sum = 0;
-          });
+const initCdekWidget = (): Promise<void> => {
+  if (cdekInitPromise) return cdekInitPromise;
+  cdekInitPromise = new Promise<void>((resolve) => {
+    const script = document.createElement('script');
+    script.src = 'https://wirenboard.com/npm/@cdek-it/widget@3';
+    script.onload = () => {
+      // @ts-ignore
+      cdekWidget.value = new window.CDEKWidget({
+        apiKey: config.public.yaMapKey,
+        defaultLocation: 'Москва',
+        popup: true,
+        canChoose: true,
+        hideDeliveryOptions: {
+          door: true,
+        },
+        tariffs: {
+          office: [136],
+          pickup: [],
+        },
+        hideFilters: {
+          is_dressing_room: true,
+          have_cashless: true,
+          have_cash: true,
+          type: true,
+        },
+        forceFilters: {
+          type: 'PVZ',
+        },
+        from: {
+          country_code: 'RU',
+          city: 'Долгопрудный',
+          address: 'Лихачёвский проезд, 6с1',
+        },
+        goods: [{ width: 1, height: 1, length: 1, weight: (basketData.weight * 1000), cost: basketData.price }],
+        onChoose: (type: string, tariff: Tariff, destination: Destination) => {
+          cdekPvzData.value = { tariff, destination };
+          cdekWidget.value!.close();
+        },
+        onCalculate: ({ office }: { office: Tariff[] }) => {
+          if (delivery.value?.freeDelivery) {
+            office.map((item: Tariff) => {
+              item.delivery_sum = 0;
+            });
+          }
         }
-      }
-    });
-  };
-  document.body.appendChild(script);
-});
+      });
+      resolve();
+    };
+    document.body.appendChild(script);
+  });
+  return cdekInitPromise;
+};
+
+const openCdekWidget = async () => {
+  cdekLoading.value = true;
+  await initCdekWidget();
+  cdekLoading.value = false;
+  cdekWidget.value!.open();
+};
 </script>
 
 <template>
@@ -233,20 +247,20 @@ onMounted(() => {
       >
         <div v-if="!cdekPvzData || selectedDelivery?.error" class="fulfillment-cdekChooseWrapper">
           <p class="fulfillment-chooseTitle">{{ t('cdekSelectTitle') }}</p>
-          <Button :label="t('cdekChoose')" outlined @click="cdekWidget!.open()"/>
+          <Button :label="t('cdekChoose')" outlined :isLoading="cdekLoading" @click="openCdekWidget()"/>
         </div>
         <template v-else-if="cdekPvzData && !selectedDelivery?.error">
           <p class="fulfillment-chooseTitle">{{ t('cdekSelectedTitle', { code: cdekPvzData?.destination.code }) }}</p>
           <p>{{ cdekPvzData?.destination.city }}, {{ cdekPvzData?.destination.address }}</p>
           <p>{{ cdekPvzData?.destination.work_time }}</p>
           <p class="fulfillment-cdekSumWrapper">
-            <Button :label="t('cdekChange')" outlined @click="cdekWidget!.open()"/>
+            <Button :label="t('cdekChange')" outlined :isLoading="cdekLoading" @click="openCdekWidget()"/>
           </p>
         </template>
       </div>
       <template v-else>
         <template v-if="isRussia && addressMode === 'search'">
-          <OrderAddressAutocomplete :recentSuggestions="recentSuggestions" @select="applyAddress" @no-results="addressSearchNoResults = $event" />
+          <OrderAddressAutocomplete required :recentSuggestions="recentSuggestions" @select="applyAddress" @no-results="addressSearchNoResults = $event" />
           <button v-if="addressSearchNoResults" type="button" class="fulfillment-manualBtn" @click="addressMode = 'fields'; addressFromDadata = false">
             {{ t('manualEntry') }}
           </button>
