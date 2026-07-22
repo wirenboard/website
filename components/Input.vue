@@ -10,6 +10,8 @@ const props = defineProps<{
   autocomplete?: string;
   required?: boolean;
   disabled?: boolean;
+  pattern?: string;
+  title?: string;
 }>();
 
 const model = defineModel<string>();
@@ -41,6 +43,8 @@ const validate = () => {
       :inputmode="inputmode"
       :required="required"
       :autocomplete="autocomplete"
+      :pattern="pattern"
+      :title="title"
       @blur="validate"
       @input="validate"
     />
