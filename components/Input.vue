@@ -10,6 +10,7 @@ const props = defineProps<{
   autocomplete?: string;
   required?: boolean;
   disabled?: boolean;
+  validator?: (value: string) => string;
   pattern?: string;
   title?: string;
 }>();
@@ -18,9 +19,18 @@ const model = defineModel<string>();
 
 const touched = ref(false);
 const error = ref(false);
+const inputRef = ref<HTMLInputElement | null>(null);
 
 const validate = () => {
   touched.value = true;
+  if (props.validator) {
+    const msg = model.value ? props.validator(model.value) : '';
+    if (inputRef.value) inputRef.value.setCustomValidity(msg);
+    if (msg) {
+      error.value = true;
+      return;
+    }
+  }
   error.value = !!props.required && !model.value;
 };
 </script>
@@ -29,6 +39,7 @@ const validate = () => {
   <div class="input-wrapper">
     <input
       v-if="!disabled"
+      ref="inputRef"
       v-model="model"
       :type="type"
       placeholder=" "
