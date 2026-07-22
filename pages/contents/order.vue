@@ -7,7 +7,6 @@ const { t, locale } = useI18n();
 
 const totalSum = ref(0);
 const fulfillmentPending = ref(false);
-const fulfillmentValid = ref(false);
 const submitPending = ref(false);
 
 const orderError = ref(false);
@@ -85,7 +84,6 @@ const makeOrder = async () => {
       v-model:deliveryData="deliveryData"
       v-model:totalSum="totalSum"
       v-model:pending="fulfillmentPending"
-      v-model:deliveryValid="fulfillmentValid"
       v-model:country="country"
       :basketData="orderInfo!.basketData"
       :recentAddresses="orderInfo!.recentAddresses"
@@ -109,7 +107,7 @@ const makeOrder = async () => {
       <Button
         type="submit"
         size="large"
-        :disabled="fulfillmentPending || submitPending || !fulfillmentValid"
+        :disabled="fulfillmentPending || submitPending"
         :isLoading="submitPending"
         :label="t('checkout')"
         :variant="'primary'"

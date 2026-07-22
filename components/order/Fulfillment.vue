@@ -6,7 +6,6 @@ const { t } = useI18n();
 const config = useRuntimeConfig();
 const totalSum = defineModel<number>('totalSum', { default: 0 });
 const pendingModel = defineModel<boolean>('pending', { default: false });
-const deliveryValidModel = defineModel<boolean>('deliveryValid', { default: false });
 const deliveryData = defineModel<Record<string, any>>('deliveryData', { default: () => ({}) });
 const selectedDeliveryType = defineModel<string>('deliveryType');
 const country = defineModel<number>('country');
@@ -93,11 +92,6 @@ const selectItems = computed(() => {
 
 watch(selectedDelivery, (value) => {
   totalSum.value = value?.total ?? 0;
-  if (value?.type == DeliveryType.Pickup) {
-    deliveryValidModel.value = true;
-    return;
-  }
-  deliveryValidModel.value = (value?.price ?? 0) > 0 || (delivery.value?.freeDelivery ?? false);
 }, { immediate: true });
 
 watch(pending, (value) => {
