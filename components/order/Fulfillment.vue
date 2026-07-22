@@ -53,7 +53,17 @@ const { data: delivery, pending, refresh } = await useApi<AvailableDeliveriesInf
 const isRussia = computed(() => country.value === RUSSIA_ID);
 const hasSavedAddress = ['city', 'street', 'house', 'postcode'].some(k => deliveryAddress.value[k]);
 const addressMode = ref<'search' | 'fields'>(isRussia.value && !hasSavedAddress ? 'search' : 'fields');
-const addressFromDadata = ref(isRussia.value && hasSavedAddress);
+const addressFromDadata = ref<Record<string, boolean>>(
+  isRussia.value && hasSavedAddress
+    ? {
+        city: !!deliveryAddress.value.city,
+        postcode: !!deliveryAddress.value.postcode,
+        street: !!deliveryAddress.value.street,
+        house: !!deliveryAddress.value.house,
+        room: !!deliveryAddressDetails.value.room,
+      }
+    : {}
+);
 const addressSearchNoResults = ref(false);
 
 const resetAddress = () => {
@@ -61,7 +71,7 @@ const resetAddress = () => {
   deliveryAddressDirty.value = { country: country.value as number };
   deliveryAddressDetails.value = {};
   addressMode.value = isRussia.value ? 'search' : 'fields';
-  addressFromDadata.value = false;
+  addressFromDadata.value = {};
   addressSearchNoResults.value = false;
 };
 
@@ -102,7 +112,13 @@ const applyAddress = ({ city, postcode, street, house, room }: { city: string; p
   deliveryAddressDirty.value = { ...deliveryAddress.value, city, postcode, street, house };
   if (room) deliveryAddressDetails.value = { ...deliveryAddressDetails.value, room };
   addressMode.value = 'fields';
-  addressFromDadata.value = true;
+  addressFromDadata.value = {
+    city: !!city,
+    postcode: !!postcode,
+    street: !!street,
+    house: !!house,
+    room: !!room,
+  };
 };
 
 let debounceTimer: ReturnType<typeof setTimeout> | null = null;
@@ -264,13 +280,13 @@ const openCdekWidget = async () => {
             {{ t('changeAddress') }}
           </button>
           <div class="fulfillment-cityRow">
-            <Input id="city" v-model="deliveryAddressDirty.city" :label="t('city')" required :disabled="addressFromDadata" />
-            <Input id="postcode" v-model="deliveryAddressDirty.postcode" :label="t('postcode')" required :disabled="addressFromDadata" />
+            <Input id="city" v-model="deliveryAddressDirty.city" :label="t('city')" required :disabled="addressFromDadata.city" />
+            <Input id="postcode" v-model="deliveryAddressDirty.postcode" :label="t('postcode')" required :disabled="addressFromDadata.postcode" />
           </div>
           <div class="fulfillment-streetRow">
-            <Input id="street" v-model="deliveryAddressDirty.street" :label="t('street')" required :disabled="addressFromDadata" />
-            <Input id="house" v-model="deliveryAddressDirty.house" :label="t('house')" required :disabled="addressFromDadata" />
-            <Input id="room" v-model="deliveryAddressDetails.room" :label="t('room')" :disabled="addressFromDadata" />
+            <Input id="street" v-model="deliveryAddressDirty.street" :label="t('street')" required :disabled="addressFromDadata.street" />
+            <Input id="house" v-model="deliveryAddressDirty.house" :label="t('house')" required :disabled="addressFromDadata.house" />
+            <Input id="room" v-model="deliveryAddressDetails.room" :label="t('room')" :disabled="addressFromDadata.room" />
           </div>
         </template>
       </template>

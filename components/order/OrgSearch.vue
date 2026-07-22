@@ -34,7 +34,7 @@ const inputRef = ref<HTMLInputElement | null>(null);
 
 watchEffect(() => {
   if (!inputRef.value || !props.required) return;
-  inputRef.value.setCustomValidity(selected.value ? '' : 'Выберите организацию из списка');
+  inputRef.value.setCustomValidity(selected.value ? '' : 'Укажите организацию');
 });
 
 const showRecent = () => {

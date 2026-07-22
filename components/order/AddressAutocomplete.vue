@@ -195,11 +195,11 @@ const onBlur = () => {
 {
   "ru": {
     "label": "Поиск адреса",
-    "validationMessage": "Выберите адрес из списка"
+    "validationMessage": "Введите адрес из списка"
   },
   "en": {
     "label": "Address search",
-    "validationMessage": "Select an address from the list"
+    "validationMessage": "Enter the address"
   }
 }
 </i18n>
