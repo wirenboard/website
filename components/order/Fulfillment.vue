@@ -260,7 +260,7 @@ const openCdekWidget = async () => {
       </div>
       <template v-else>
         <template v-if="isRussia && addressMode === 'search'">
-          <OrderAddressAutocomplete required :recentSuggestions="recentSuggestions" @select="applyAddress" @no-results="addressSearchNoResults = $event" />
+          <OrderAddressAutocomplete :recentSuggestions="recentSuggestions" @select="applyAddress" @no-results="addressSearchNoResults = $event" />
           <button v-if="addressSearchNoResults" type="button" class="fulfillment-manualBtn" @click="addressMode = 'fields'; addressFromDadata = false">
             {{ t('manualEntry') }}
           </button>
