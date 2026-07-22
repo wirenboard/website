@@ -107,6 +107,7 @@ export interface CustomerData{
     phone: string;
     additional: string;
     inn: string;
+    kpp: string;
     orgName: string;
     address: string;
     email: string;
@@ -123,6 +124,7 @@ export interface RecentAddress {
 
 export interface RecentOrg {
   inn: string;
+  kpp: string;
   orgName: string;
   address: string;
 }

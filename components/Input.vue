@@ -11,6 +11,8 @@ const props = defineProps<{
   required?: boolean;
   disabled?: boolean;
   validator?: (value: string) => string;
+  pattern?: string;
+  title?: string;
 }>();
 
 const model = defineModel<string>();
@@ -52,6 +54,8 @@ const validate = () => {
       :inputmode="inputmode"
       :required="required"
       :autocomplete="autocomplete"
+      :pattern="pattern"
+      :title="title"
       @blur="validate"
       @input="validate"
     />
