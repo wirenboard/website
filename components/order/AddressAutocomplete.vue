@@ -19,6 +19,7 @@ interface DadataSuggestion {
 
 const props = defineProps<{
   recentSuggestions?: DadataSuggestion[];
+  required?: boolean;
 }>();
 
 const emit = defineEmits<{
@@ -32,6 +33,16 @@ const query = ref('');
 const suggestions = ref<DadataSuggestion[]>([]);
 const isOpen = ref(false);
 let debounceTimer: ReturnType<typeof setTimeout> | null = null;
+
+const selected = ref(false);
+const touched = ref(false);
+const error = computed(() => !!props.required && touched.value && !selected.value);
+const inputRef = ref<HTMLInputElement | null>(null);
+
+watchEffect(() => {
+  if (!inputRef.value || !props.required) return;
+  inputRef.value.setCustomValidity(selected.value ? '' : t('validationMessage'));
+});
 
 const showRecent = () => {
   if (props.recentSuggestions?.length) {
@@ -70,6 +81,7 @@ const onInput = () => {
 };
 
 const applyDadataResult = (suggestion: DadataSuggestion) => {
+  selected.value = true;
   const { data } = suggestion;
   query.value = suggestion.value;
   isOpen.value = false;
@@ -103,6 +115,7 @@ const onSelect = async (suggestion: DadataSuggestion) => {
 };
 
 const onBlur = () => {
+  touched.value = true;
   setTimeout(() => { isOpen.value = false; }, 150);
 };
 </script>
@@ -111,18 +124,22 @@ const onBlur = () => {
   <div class="address-search">
     <div class="input-wrapper">
       <input
+        ref="inputRef"
         v-model="query"
         type="text"
         placeholder=" "
         class="input"
-        :class="{ 'input-filled': !!query }"
+        :class="{ 'input-filled': !!query, 'input-error': error }"
         id="address-search"
         autocomplete="off"
         @input="onInput"
         @blur="onBlur"
         @focus="() => { if (suggestions.length > 0) isOpen = true; else showRecent(); }"
       />
-      <label class="input-label" for="address-search">{{ t('label') }}</label>
+      <label class="input-label" for="address-search">
+        {{ t('label') }}
+        <span v-if="required" class="input-required">*</span>
+      </label>
     </div>
     <ul v-if="isOpen" class="address-search-dropdown">
       <li
@@ -176,7 +193,13 @@ const onBlur = () => {
 
 <i18n>
 {
-  "ru": { "label": "Поиск адреса" },
-  "en": { "label": "Address search" }
+  "ru": {
+    "label": "Поиск адреса",
+    "validationMessage": "Выберите адрес из списка"
+  },
+  "en": {
+    "label": "Address search",
+    "validationMessage": "Select an address from the list"
+  }
 }
 </i18n>

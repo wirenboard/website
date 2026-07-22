@@ -12,6 +12,7 @@ interface DadataSuggestion {
 
 const props = defineProps<{
   recentSuggestions?: DadataSuggestion[];
+  required?: boolean;
 }>();
 
 const emit = defineEmits<{
@@ -24,6 +25,16 @@ const query = ref('');
 const suggestions = ref<DadataSuggestion[]>([]);
 const isOpen = ref(false);
 let debounceTimer: ReturnType<typeof setTimeout> | null = null;
+
+const selected = ref(false);
+const touched = ref(false);
+const error = computed(() => !!props.required && touched.value && !selected.value);
+const inputRef = ref<HTMLInputElement | null>(null);
+
+watchEffect(() => {
+  if (!inputRef.value || !props.required) return;
+  inputRef.value.setCustomValidity(selected.value ? '' : 'Выберите организацию из списка');
+});
 
 const showRecent = () => {
   if (props.recentSuggestions?.length) {
@@ -62,6 +73,7 @@ const onInput = () => {
 };
 
 const onSelect = (suggestion: DadataSuggestion) => {
+  selected.value = true;
   isOpen.value = false;
   emit('select', {
     orgName: suggestion.value,
@@ -71,6 +83,7 @@ const onSelect = (suggestion: DadataSuggestion) => {
 };
 
 const onBlur = () => {
+  touched.value = true;
   setTimeout(() => { isOpen.value = false; }, 150);
 };
 </script>
@@ -79,18 +92,22 @@ const onBlur = () => {
   <div class="org-search">
     <div class="input-wrapper">
       <input
+        ref="inputRef"
         v-model="query"
         type="text"
         placeholder=" "
         class="input"
-        :class="{ 'input-filled': !!query }"
+        :class="{ 'input-filled': !!query, 'input-error': error }"
         id="org-search"
         autocomplete="off"
         @input="onInput"
         @blur="onBlur"
         @focus="() => { if (suggestions.length > 0) isOpen = true; else showRecent(); }"
       />
-      <label class="input-label" for="org-search">Поиск организации</label>
+      <label class="input-label" for="org-search">
+        Поиск организации
+        <span v-if="required" class="input-required">*</span>
+      </label>
     </div>
     <ul v-if="isOpen" class="org-search-dropdown">
       <li

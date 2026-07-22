@@ -96,13 +96,16 @@ export interface AvailableDeliveriesInfo{
 
 export interface CustomerData{
   individual:{
-   fio: string;
-   phone: string;
-   additional: string;
-   email: string;
-   comment: string;
-  }
+    fio: string;
+    phone: string;
+    additional: string;
+    email: string;
+    comment: string;
+  };
   entity: {
+    fio: string;
+    phone: string;
+    additional: string;
     inn: string;
     orgName: string;
     address: string;

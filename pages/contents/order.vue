@@ -36,7 +36,16 @@ const { execute: submitOrder, data: orderResult, error: orderRequestError } = aw
   { method: 'POST', body: orderPayload, immediate: false }
 );
 
+const formRef = ref<HTMLFormElement | null>(null);
+
 const makeOrder = async () => {
+  const firstInvalid = formRef.value?.querySelector(':invalid:not(fieldset)') as HTMLElement | null;
+  if (firstInvalid) {
+    firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    firstInvalid.focus();
+    return;
+  }
+
   orderError.value = false;
   submitPending.value = true;
   orderPayload.value = {
@@ -60,7 +69,7 @@ const makeOrder = async () => {
 
 <template>
   <p v-if="orderInfo!.basketData.cost === 0" class="order-empty">{{ t('emptyCart') }}</p>
-  <form v-else class="order" @submit.prevent="makeOrder">
+  <form v-else ref="formRef" class="order" @submit.prevent="makeOrder">
     <OrderCustomer
       v-model:payerType="payerType"
       v-model:individual="individual"
@@ -91,7 +100,7 @@ const makeOrder = async () => {
     <p v-if="orderError" class="order-error">
       <i18n-t keypath="error">
         <template #office>
-          <a :href="locale === 'ru' ? 'https://wirenboard.com/ru/pages/contacts/' : 'https://wirenboard.com/en/pages/contacts/'" target="_blank">{{ t('office') }}</a>
+          <a :href="`https://wirenboard.com/${locale}/pages/contacts/`" target="_blank">{{ t('office') }}</a>
         </template>
       </i18n-t>
     </p>
@@ -161,11 +170,19 @@ const makeOrder = async () => {
 }
 
 .order-error {
-  background-color: #FF474C;
+  background-color: #FFA3A5;
   color: #fff;
   padding: 12px 16px;
   border-radius: 15px;
-  opacity: 0.5;
+}
+
+.order-error a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.order-error a:hover {
+  opacity: 0.75;
 }
 
 @media (max-width: 768px) {
