@@ -77,7 +77,7 @@ category: shops_restaurants_monitoring
 :gallery{
     :data='[
         ["techsensor_restaurant_telemetry/9.png", "Скриншот интерфейса диспетчеризации"],
-        ["techsensor_restaurant_telemetry/10.jpeg", "Скриншот интерфейса диспетчеризации"],
+        ["techsensor_restaurant_telemetry/10.jpg", "Скриншот интерфейса диспетчеризации"],
         ["techsensor_restaurant_telemetry/11.jpeg", "Контроль энергопотребления на вводе через модуль WB-MAP3E и токовые трансформаторы"],
         ["techsensor_restaurant_telemetry/12.jpeg", "Ресторан «Жар Пицца»"]
     ]'
