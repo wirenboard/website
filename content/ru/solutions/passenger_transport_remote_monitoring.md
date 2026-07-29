@@ -7,7 +7,7 @@ category: industrial_dispatching_monitoring
 
 :photo{
     src="passenger_transport_remote_monitoring/0.jpeg"
-    caption="Второй вариант ПАК"
+    caption="ПАК"
     width="400"
     float="right"
 }
