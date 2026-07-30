@@ -8,6 +8,7 @@ const { t, locale } = useI18n();
 const totalSum = ref(0);
 const fulfillmentPending = ref(false);
 const submitPending = ref(false);
+const fulfillmentDeliveryError = ref(false);
 
 const orderError = ref(false);
 
@@ -38,6 +39,8 @@ const { execute: submitOrder, data: orderResult, error: orderRequestError } = aw
 const formRef = ref<HTMLFormElement | null>(null);
 
 const makeOrder = async () => {
+  if (fulfillmentDeliveryError.value) return;
+
   const firstInvalid = formRef.value?.querySelector(':invalid:not(fieldset)') as HTMLElement | null;
   if (firstInvalid) {
     firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -84,6 +87,7 @@ const makeOrder = async () => {
       v-model:deliveryData="deliveryData"
       v-model:totalSum="totalSum"
       v-model:pending="fulfillmentPending"
+      v-model:deliveryError="fulfillmentDeliveryError"
       v-model:country="country"
       :basketData="orderInfo!.basketData"
       :recentAddresses="orderInfo!.recentAddresses"
@@ -107,7 +111,7 @@ const makeOrder = async () => {
       <Button
         type="submit"
         size="large"
-        :disabled="fulfillmentPending || submitPending"
+        :disabled="fulfillmentPending || submitPending || fulfillmentDeliveryError"
         :isLoading="submitPending"
         :label="t('checkout')"
         :variant="'primary'"
