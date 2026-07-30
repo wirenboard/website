@@ -6,6 +6,7 @@ const { t } = useI18n();
 const config = useRuntimeConfig();
 const totalSum = defineModel<number>('totalSum', { default: 0 });
 const pendingModel = defineModel<boolean>('pending', { default: false });
+const deliveryError = defineModel<boolean>('deliveryError', { default: false });
 const deliveryData = defineModel<Record<string, any>>('deliveryData', { default: () => ({}) });
 const selectedDeliveryType = defineModel<string>('deliveryType');
 const country = defineModel<number>('country');
@@ -48,7 +49,7 @@ const deliveryPVZ = ref<Record<string, any>>({
 });
 watchEffect(() => { deliveryQuery.value = { ...deliveryAddress.value, ...deliveryPVZ.value }; });
 watchEffect(() => { deliveryData.value = { ...deliveryAddress.value, ...deliveryAddressDetails.value, ...deliveryPVZ.value }; });
-const { data: delivery, pending, refresh } = await useApi<AvailableDeliveriesInfo>(`/order/delivery/`, deliveryQuery);
+const { data: delivery, pending, error: deliveryFetchError, refresh } = await useApi<AvailableDeliveriesInfo>(`/order/delivery/`, deliveryQuery);
 
 const isRussia = computed(() => country.value === RUSSIA_ID);
 const hasSavedAddress = ['city', 'street', 'house', 'postcode'].some(k => deliveryAddress.value[k]);
@@ -88,8 +89,9 @@ const selectItems = computed(() => {
   }));
 });
 
-watch(selectedDelivery, (value) => {
+watch([selectedDelivery, deliveryFetchError], ([value, fetchErr]) => {
   totalSum.value = value?.total ?? 0;
+  deliveryError.value = !!value?.error || !!fetchErr;
 }, { immediate: true });
 
 watch(pending, (value) => {
