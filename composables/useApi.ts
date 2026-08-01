@@ -20,6 +20,12 @@ export const useApi = async <T>(
     if (cookieHeader) {
       headers['Cookie'] = cookieHeader;
     }
+    // WB-2026-015: identify this server-side call as coming from the trusted Nuxt renderer.
+    // The Yii product endpoint is gated on this key so it can't be reached from the public
+    // internet. Only added server-side — the browser must never see the secret.
+    if (config.internalApiKey) {
+      headers['X-Internal-Api-Key'] = config.internalApiKey as string;
+    }
   } else {
     if (config.public.siteLogin) {
       headers['Authorization'] = `Basic ${btoa(`${config.public.siteLogin}:${config.public.sitePassword}`)}`;
