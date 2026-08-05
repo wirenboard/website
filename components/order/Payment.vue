@@ -36,6 +36,14 @@ watch(paymentMethods, (methods) => {
       name="payment"
       :items="paymentTypes"
     />
+
+    <p v-if="paymentType === 'card'" class="order-paymentWarning">
+      <i18n-t keypath="cardWarning">
+        <template #link>
+          <a href="https://ria.ru/20260804/brauzery-2108832797.html" target="_blank" rel="noopener">{{ t('cardWarningLink') }}</a>
+        </template>
+      </i18n-t>
+    </p>
   </div>
 </template>
 
@@ -43,6 +51,21 @@ watch(paymentMethods, (methods) => {
 .order-payment {
   margin-top: 56px;
   margin-bottom: 48px;
+}
+
+.order-paymentWarning {
+  margin-top: 18px;
+  padding: 14px 18px;
+  border: 1px solid #f0c36d;
+  border-radius: 2px;
+  background: #fdf7e6;
+  font-size: 14px;
+  line-height: 1.4em;
+  color: var(--text-color);
+}
+
+.order-paymentWarning a {
+  color: var(--link-color);
 }
 </style>
 
@@ -55,7 +78,9 @@ watch(paymentMethods, (methods) => {
     "card": "Банковской картой",
     "cardComment": "Visa / Mastercard / МИР",
     "requisites": "Банковским переводом",
-    "requisitesComment": "По реквизитам"
+    "requisitesComment": "По реквизитам",
+    "cardWarning": "К сожалению, из-за отзыва сертификатов банков {link}. Для того чтобы оплатить заказ по карте, выберите на следующем шаге оплату по QR-коду, либо оформите заказ в Яндекс Браузере.",
+    "cardWarningLink": "некоторые браузеры ограничивают доступ к оплате по карте"
   },
   "en": {
     "title": "Select a payment method",
@@ -64,7 +89,9 @@ watch(paymentMethods, (methods) => {
     "card": "By bank card",
     "cardComment": "Visa / Mastercard / MIR",
     "requisites": "By bank transfer",
-    "requisitesComment": "Using bank details"
+    "requisitesComment": "Using bank details",
+    "cardWarning": "Unfortunately, due to the revocation of bank certificates, {link}. To pay for your order by card, select QR code payment at the next step, or place your order using Yandex Browser.",
+    "cardWarningLink": "some browsers restrict access to card payments"
   }
 }
 </i18n>
