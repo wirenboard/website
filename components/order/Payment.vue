@@ -62,7 +62,7 @@ watch(paymentMethods, (methods) => {
   border: 1px solid #f0c36d;
   border-radius: 2px;
   background: #fdf7e6;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 1.4em;
   color: var(--text-color);
 }
