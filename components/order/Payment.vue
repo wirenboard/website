@@ -42,6 +42,9 @@ watch(paymentMethods, (methods) => {
         <template #link>
           <a href="https://ria.ru/20260804/brauzery-2108832797.html" target="_blank" rel="noopener">{{ t('cardWarningLink') }}</a>
         </template>
+        <template #certLink>
+          <a href="https://www.gosuslugi.ru/crt" target="_blank" rel="noopener">{{ t('cardWarningCertLink') }}</a>
+        </template>
       </i18n-t>
     </p>
   </div>
@@ -79,8 +82,9 @@ watch(paymentMethods, (methods) => {
     "cardComment": "Visa / Mastercard / МИР",
     "requisites": "Банковским переводом",
     "requisitesComment": "По реквизитам",
-    "cardWarning": "К сожалению, из-за отзыва сертификатов банков {link}. Для того чтобы оплатить заказ по карте, выберите на следующем шаге оплату по QR-коду, либо оформите заказ в Яндекс Браузере.",
-    "cardWarningLink": "некоторые браузеры ограничивают доступ к оплате по карте"
+    "cardWarning": "К сожалению, из-за отзыва сертификатов {link}. Для того чтобы оплатить заказ по карте, выберите на следующем шаге оплату по QR-коду, установите в своем браузере {certLink}, либо оформите заказ в Яндекс Браузере.",
+    "cardWarningLink": "некоторые браузеры ограничивают доступ к оплате по карте",
+    "cardWarningCertLink": "сертификат Минцифры"
   },
   "en": {
     "title": "Select a payment method",
@@ -90,8 +94,9 @@ watch(paymentMethods, (methods) => {
     "cardComment": "Visa / Mastercard / MIR",
     "requisites": "By bank transfer",
     "requisitesComment": "Using bank details",
-    "cardWarning": "Unfortunately, due to the revocation of bank certificates, {link}. To pay for your order by card, select QR code payment at the next step, or place your order using Yandex Browser.",
-    "cardWarningLink": "some browsers restrict access to card payments"
+    "cardWarning": "Unfortunately, due to certificate revocation, {link}. To pay for your order by card, select QR code payment at the next step, install the {certLink} in your browser, or place your order using Yandex Browser.",
+    "cardWarningLink": "some browsers restrict access to card payments",
+    "cardWarningCertLink": "Ministry of Digital Development certificate"
   }
 }
 </i18n>
