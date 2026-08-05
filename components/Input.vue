@@ -13,6 +13,7 @@ const props = defineProps<{
   validator?: (value: string) => string;
   pattern?: string;
   title?: string;
+  errorMessage?: string;
 }>();
 
 const model = defineModel<string>();
@@ -33,6 +34,8 @@ const validate = () => {
   }
   error.value = !!props.required && !model.value;
 };
+
+const hasError = computed(() => error.value || !!props.errorMessage);
 </script>
 
 <template>
@@ -46,11 +49,11 @@ const validate = () => {
       class="input"
       :class="{
         'input-filled': !!model,
-        'input-error': error
+        'input-error': hasError
       }"
       :id="id"
       :autofocus="autofocus"
-      :aria-invalid="error"
+      :aria-invalid="hasError"
       :inputmode="inputmode"
       :required="required"
       :autocomplete="autocomplete"
@@ -65,6 +68,7 @@ const validate = () => {
       {{ label }}
       <span v-if="required" class="input-required">*</span>
     </label>
+    <span v-if="errorMessage" class="input-errorMessage">{{ errorMessage }}</span>
   </div>
 </template>
 
@@ -138,6 +142,13 @@ const validate = () => {
   background: var(--bg-secondary, #f5f5f5);
   color: #666;
   cursor: not-allowed;
+}
+
+.input-errorMessage {
+  color: var(--danger-color);
+  font-size: 13px;
+  margin-top: 4px;
+  display: block;
 }
 
 .input-label--static {

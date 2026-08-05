@@ -9,10 +9,11 @@ const individual = defineModel<{ fio: string; phone: string; additional: string;
 const entity = defineModel<{ fio: string; phone: string; additional: string; inn: string; kpp: string; orgName: string; address: string; email: string; comment: string; }>('entity', {required: true});
 const country = defineModel<number>('country');
 
-const { countries, cdekCountries, recentOrgs } = defineProps<{
+const { countries, cdekCountries, recentOrgs, fieldErrors } = defineProps<{
   countries: Record<number, string>;
   cdekCountries: number[];
   recentOrgs?: RecentOrg[];
+  fieldErrors?: Record<string, string>;
 }>();
 
 const recentOrgSuggestions = computed(() =>
@@ -113,20 +114,20 @@ const onOrgSelect = ({ orgName, inn, kpp, address }: { orgName: string; inn: str
 
     <template v-if="payerType === 'individual'">
       <div class="customer-fieldWrapper" :class="{ 'customer-fieldWrapper--withExt': isCdekCountry }">
-        <Input v-model="individual!.fio" id="fio" :label="t('fio')" autocomplete="name" required autofocus />
-        <Input v-model="individual!.phone" id="phone" :label="t('phone')" autocomplete="tel" inputmode="tel" required />
-        <Input v-if="isCdekCountry" v-model="individual!.additional" id="additional" :label="t('additional')" autocomplete="off" inputmode="numeric" />
+        <Input v-model="individual!.fio" id="fio" :label="t('fio')" autocomplete="name" required autofocus :errorMessage="fieldErrors?.fio" />
+        <Input v-model="individual!.phone" id="phone" :label="t('phone')" autocomplete="tel" inputmode="tel" required :errorMessage="fieldErrors?.phone" />
+        <Input v-if="isCdekCountry" v-model="individual!.additional" id="additional" :label="t('additional')" autocomplete="off" inputmode="numeric" :errorMessage="fieldErrors?.additional" />
       </div>
-      <Input v-model="individual!.email" id="email" :label="t('email')" autocomplete="email" inputmode="email" required :validator="validateEmail" />
+      <Input v-model="individual!.email" id="email" :label="t('email')" autocomplete="email" inputmode="email" required :validator="validateEmail" :errorMessage="fieldErrors?.email" />
       <Textarea v-model="individual!.comment" id="comment" :label="t('comment')" autocomplete="off" />
     </template>
     <template v-else>
       <div class="customer-fieldWrapper" :class="{ 'customer-fieldWrapper--withExt': isCdekCountry }">
-        <Input v-model="entity!.fio" id="fio" :label="t('fio')" autocomplete="name" required autofocus />
-        <Input v-model="entity!.phone" id="phone" :label="t('phone')" autocomplete="tel" inputmode="tel" required />
-        <Input v-if="isCdekCountry" v-model="entity!.additional" id="additional" :label="t('additional')" autocomplete="off" inputmode="numeric" />
+        <Input v-model="entity!.fio" id="fio" :label="t('fio')" autocomplete="name" required autofocus :errorMessage="fieldErrors?.fio" />
+        <Input v-model="entity!.phone" id="phone" :label="t('phone')" autocomplete="tel" inputmode="tel" required :errorMessage="fieldErrors?.phone" />
+        <Input v-if="isCdekCountry" v-model="entity!.additional" id="additional" :label="t('additional')" autocomplete="off" inputmode="numeric" :errorMessage="fieldErrors?.additional" />
       </div>
-      <Input v-model="entity!.email" id="email" :label="t('email')" autocomplete="email" inputmode="email" required :validator="validateEmail" />
+      <Input v-model="entity!.email" id="email" :label="t('email')" autocomplete="email" inputmode="email" required :validator="validateEmail" :errorMessage="fieldErrors?.email" />
       <template v-if="isRussia && orgMode === 'search'">
         <OrderOrgSearch required :recentSuggestions="recentOrgSuggestions" @select="onOrgSelect" @no-results="orgSearchNoResults = $event" />
         <button v-if="orgSearchNoResults" type="button" class="customer-manualBtn" @click="orgMode = 'fields'; orgFromSearch = false">{{ t('manualEntry') }}</button>
@@ -136,11 +137,11 @@ const onOrgSelect = ({ orgName, inn, kpp, address }: { orgName: string; inn: str
           <button type="button" class="customer-changeOrgBtn" @click="resetOrg">{{ t('changeOrg') }}</button>
         </template>
         <div class="customer-orgFieldWrapper" :class="{ 'customer-orgFieldWrapper--withKpp': isRussia }">
-          <Input v-model="entity!.inn" id="inn" :label="t('inn')" autocomplete="off" inputmode="numeric" required :disabled="orgFromSearch" :validator="isRussia ? validateInn : undefined" />
-          <Input v-if="isRussia" v-model="entity!.kpp" id="kpp" :label="t('kpp')" autocomplete="off" inputmode="numeric" pattern="[0-9]{9}" :title="t('kppFormat')" :disabled="orgFromSearch" />
-          <Input v-model="entity!.orgName" id="orgName" :label="t('orgName')" autocomplete="organization" required :disabled="orgFromSearch" />
+          <Input v-model="entity!.inn" id="inn" :label="t('inn')" autocomplete="off" inputmode="numeric" required :disabled="orgFromSearch" :validator="isRussia ? validateInn : undefined" :errorMessage="fieldErrors?.inn" />
+          <Input v-if="isRussia" v-model="entity!.kpp" id="kpp" :label="t('kpp')" autocomplete="off" inputmode="numeric" pattern="[0-9]{9}" :title="t('kppFormat')" :disabled="orgFromSearch" :errorMessage="fieldErrors?.kpp" />
+          <Input v-model="entity!.orgName" id="orgName" :label="t('orgName')" autocomplete="organization" required :disabled="orgFromSearch" :errorMessage="fieldErrors?.orgName" />
         </div>
-        <Input v-model="entity!.address" id="address" :label="t('address')" autocomplete="street-address" required :disabled="orgFromSearch" />
+        <Input v-model="entity!.address" id="address" :label="t('address')" autocomplete="street-address" required :disabled="orgFromSearch" :errorMessage="fieldErrors?.address" />
       </template>
       <Textarea v-model="entity!.comment" id="comment" :label="t('comment')" autocomplete="off" />
     </template>

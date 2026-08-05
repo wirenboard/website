@@ -11,6 +11,32 @@ const submitPending = ref(false);
 const fulfillmentDeliveryError = ref(false);
 
 const orderError = ref(false);
+const fieldErrors = ref<Record<string, string>>({});
+
+const parseErrors = (data: any): Record<string, string> => {
+  const result: Record<string, string> = {};
+  const errors = data?.errors;
+  if (!errors) return result;
+
+  if (Array.isArray(errors)) {
+    for (const e of errors) {
+      if (e.field && e.message) {
+        const key = e.field.includes('.') ? e.field.split('.').pop()! : e.field;
+        result[key] = e.message;
+      }
+    }
+  } else if (typeof errors === 'object') {
+    for (const [field, messages] of Object.entries(errors)) {
+      const key = field.includes('.') ? field.split('.').pop()! : field;
+      if (Array.isArray(messages) && messages.length) {
+        result[key] = messages[0] as string;
+      } else if (typeof messages === 'string') {
+        result[key] = messages;
+      }
+    }
+  }
+  return result;
+};
 
 const { data: orderInfo } = await useApi<OrderInfo>(`/order/prefill-info/`);
 
@@ -48,6 +74,7 @@ const makeOrder = async () => {
     return;
   }
 
+  fieldErrors.value = {};
   orderError.value = false;
   submitPending.value = true;
   orderPayload.value = {
@@ -60,7 +87,19 @@ const makeOrder = async () => {
   await submitOrder();
   submitPending.value = false;
   if (orderRequestError.value) {
+    fieldErrors.value = parseErrors(orderRequestError.value.data);
     orderError.value = true;
+    nextTick(() => {
+      if (Object.keys(fieldErrors.value).length) {
+        const firstErrorInput = document.querySelector('.input-errorMessage')?.closest('.input-wrapper')?.querySelector('input');
+        if (firstErrorInput) {
+          firstErrorInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          firstErrorInput.focus();
+        }
+      } else {
+        document.querySelector('.order-error')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
     return;
   }
   if (orderResult.value?.redirect_url) {
@@ -80,6 +119,7 @@ const makeOrder = async () => {
       :countries="orderInfo!.countries"
       :cdekCountries="orderInfo!.cdekCountries"
       :recentOrgs="orderInfo!.recentOrgs"
+      :fieldErrors="fieldErrors"
     />
 
     <OrderFulfillment
@@ -91,6 +131,7 @@ const makeOrder = async () => {
       v-model:country="country"
       :basketData="orderInfo!.basketData"
       :recentAddresses="orderInfo!.recentAddresses"
+      :fieldErrors="fieldErrors"
     />
 
     <OrderPayment
@@ -99,13 +140,15 @@ const makeOrder = async () => {
       :country="country"
     />
 
-    <p v-if="orderError" class="order-error">
-      <i18n-t keypath="error">
-        <template #office>
-          <a :href="`https://wirenboard.com/${locale}/pages/contacts/`" target="_blank">{{ t('office') }}</a>
-        </template>
-      </i18n-t>
-    </p>
+    <div v-if="orderError && !Object.keys(fieldErrors).length" class="order-error">
+      <p>
+        <i18n-t keypath="error">
+          <template #office>
+            <a :href="`https://wirenboard.com/${locale}/pages/contacts/`" target="_blank">{{ t('office') }}</a>
+          </template>
+        </i18n-t>
+      </p>
+    </div>
 
     <div class="order-finalize">
       <Button
