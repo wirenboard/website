@@ -82,7 +82,7 @@ watch(paymentMethods, (methods) => {
     "cardComment": "Visa / Mastercard / МИР",
     "requisites": "Банковским переводом",
     "requisitesComment": "По реквизитам",
-    "cardWarning": "К сожалению, из-за отзыва сертификатов {link}. Для того чтобы оплатить заказ по карте, выберите на следующем шаге оплату по QR-коду, установите в своем браузере {certLink}, либо оформите заказ в Яндекс Браузере.",
+    "cardWarning": "К сожалению, из-за отзыва сертификатов {link}. Для того чтобы оплатить заказ по карте, выберите на следующем шаге оплату по QR-коду, или установите в своем браузере {certLink}, или оформите заказ в Яндекс Браузере. Приносим свои извинения, мы сделаем все возможное для решения проблемы.",
     "cardWarningLink": "некоторые браузеры ограничивают доступ к оплате по карте",
     "cardWarningCertLink": "сертификат Минцифры"
   },
@@ -94,7 +94,7 @@ watch(paymentMethods, (methods) => {
     "cardComment": "Visa / Mastercard / MIR",
     "requisites": "By bank transfer",
     "requisitesComment": "Using bank details",
-    "cardWarning": "Unfortunately, due to certificate revocation, {link}. To pay for your order by card, select QR code payment at the next step, install the {certLink} in your browser, or place your order using Yandex Browser.",
+    "cardWarning": "Unfortunately, due to certificate revocation, {link}. To pay for your order by card, select QR code payment at the next step, or install the {certLink} in your browser, or place your order using Yandex Browser. We apologize for the inconvenience and are doing our best to resolve the issue.",
     "cardWarningLink": "some browsers restrict access to card payments",
     "cardWarningCertLink": "Ministry of Digital Development certificate"
   }
