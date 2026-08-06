@@ -11,9 +11,10 @@ const deliveryData = defineModel<Record<string, any>>('deliveryData', { default:
 const selectedDeliveryType = defineModel<string>('deliveryType');
 const country = defineModel<number>('country');
 
-const { basketData, recentAddresses } = defineProps<{
+const { basketData, recentAddresses, fieldErrors } = defineProps<{
   basketData: Record<string, number>;
   recentAddresses?: RecentAddress[];
+  fieldErrors?: Record<string, string>;
 }>();
 
 const recentSuggestions = computed(() =>
@@ -263,13 +264,13 @@ const openCdekWidget = async () => {
             {{ t('changeAddress') }}
           </button>
           <div class="fulfillment-cityRow">
-            <Input id="city" v-model="deliveryAddressDirty.city" :label="t('city')" required />
-            <Input id="postcode" v-model="deliveryAddressDirty.postcode" :label="t('postcode')" required />
+            <Input id="city" v-model="deliveryAddressDirty.city" :label="t('city')" required :errorMessage="fieldErrors?.city" />
+            <Input id="postcode" v-model="deliveryAddressDirty.postcode" :label="t('postcode')" required :errorMessage="fieldErrors?.postcode" />
           </div>
           <div class="fulfillment-streetRow">
-            <Input id="street" v-model="deliveryAddressDirty.street" :label="t('street')" required />
-            <Input id="house" v-model="deliveryAddressDirty.house" :label="t('house')" required />
-            <Input id="room" v-model="deliveryAddressDetails.room" :label="t('room')" />
+            <Input id="street" v-model="deliveryAddressDirty.street" :label="t('street')" required :errorMessage="fieldErrors?.street" />
+            <Input id="house" v-model="deliveryAddressDirty.house" :label="t('house')" required :errorMessage="fieldErrors?.house" />
+            <Input id="room" v-model="deliveryAddressDetails.room" :label="t('room')" :errorMessage="fieldErrors?.room" />
           </div>
         </template>
       </template>
