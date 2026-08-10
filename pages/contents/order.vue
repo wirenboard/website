@@ -65,6 +65,7 @@ const { execute: submitOrder, data: orderResult, error: orderRequestError } = aw
 const formRef = ref<HTMLFormElement | null>(null);
 
 const makeOrder = async () => {
+  if (submitPending.value) return;
   if (fulfillmentDeliveryError.value) return;
 
   const firstInvalid = formRef.value?.querySelector(':invalid:not(fieldset)') as HTMLElement | null;

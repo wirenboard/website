@@ -49,7 +49,7 @@ const deliveryPVZ = ref<Record<string, any>>({
   cdek_pvz_postal_code: deliveryData.value.cdek_pvz_postal_code,
 });
 watchEffect(() => { deliveryQuery.value = { ...deliveryAddress.value, ...deliveryPVZ.value }; });
-watchEffect(() => { deliveryData.value = { ...deliveryAddress.value, ...deliveryAddressDetails.value, ...deliveryPVZ.value }; });
+watchEffect(() => { deliveryData.value = { ...deliveryAddressDirty.value, ...deliveryAddressDetails.value, ...deliveryPVZ.value }; });
 const { data: delivery, pending, error: deliveryFetchError, refresh } = await useApi<AvailableDeliveriesInfo>(`/order/delivery/`, deliveryQuery);
 
 const isRussia = computed(() => country.value === RUSSIA_ID);
@@ -120,6 +120,8 @@ const cdekWidget = ref<null | { open: () => void; close: () => void }>(null);
 const cdekLoading = ref(false);
 let cdekInitPromise: Promise<void> | null = null;
 
+const cdekPvzInputRef = ref<HTMLInputElement | null>(null);
+
 const cdekPvzData = ref<null | { tariff: Tariff; destination: Destination }>(
   deliveryData.value.cdek_pvz_id
     ? {
@@ -146,6 +148,11 @@ watch(cdekPvzData, (value) => {
     cdek_pvz_postal_code: value?.destination.postal_code
   };
 },  { deep: true });
+
+watchEffect(() => {
+  if (!cdekPvzInputRef.value) return;
+  cdekPvzInputRef.value.setCustomValidity(cdekPvzData.value ? '' : t('cdekRequired'));
+});
 
 watch(deliveryQuery, () => {
   refresh();
@@ -241,7 +248,15 @@ const openCdekWidget = async () => {
       >
         <div v-if="!cdekPvzData || selectedDelivery?.error" class="fulfillment-cdekChooseWrapper">
           <p class="fulfillment-chooseTitle">{{ t('cdekSelectTitle') }}</p>
-          <Button :label="t('cdekChoose')" outlined :isLoading="cdekLoading" @click="openCdekWidget()"/>
+
+          <div class="fulfillment-pvzWrapper">
+            <Button :label="t('cdekChoose')" outlined :isLoading="cdekLoading" @click="openCdekWidget()"/>
+            <input
+              ref="cdekPvzInputRef"
+              class="fulfillment-addressGuard"
+              tabindex="-1"
+            />
+          </div>
         </div>
         <template v-else-if="cdekPvzData && !selectedDelivery?.error">
           <p class="fulfillment-chooseTitle">{{ t('cdekSelectedTitle', { code: cdekPvzData?.destination.code }) }}</p>
@@ -327,11 +342,15 @@ const openCdekWidget = async () => {
   justify-content: space-between;
 }
 
+.fulfillment-pvzWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .fulfillment-addressGuard {
-  position: absolute;
   opacity: 0;
-  width: 1px;
-  height: 1px;
+  height: 0;
+  padding: 0;
   pointer-events: none;
 }
 
@@ -425,7 +444,8 @@ const openCdekWidget = async () => {
     "days": "день | дня | дней",
     "freeDelivery": "Бесплатная доставка",
     "price": "{n} ₽",
-    "deliveryError": "Доставка по данному адресу невозможна, проверьте страну и адрес или выберите другой тип доставки"
+    "deliveryError": "Доставка по данному адресу невозможна, проверьте страну и адрес или выберите другой тип доставки",
+    "cdekRequired": "Выберите пункт выдачи"
   },
   "en": {
     "title": "Select a delivery method",
@@ -447,7 +467,8 @@ const openCdekWidget = async () => {
     "days": "day | days",
     "freeDelivery": "Free delivery",
     "price": "€{n}",
-    "deliveryError": "Delivery to this address is not available, please check the country and address or select a different delivery type"
+    "deliveryError": "Delivery to this address is not available, please check the country and address or select a different delivery type",
+    "cdekRequired": "Please select a pickup point"
   }
 }
 </i18n>
