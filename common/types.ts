@@ -129,6 +129,11 @@ export interface RecentOrg {
   address: string;
 }
 
+export interface PaymentsInfo {
+  methods: string[];
+  default: string;
+}
+
 export interface OrderInfo {
   payerType: string;
   payerData: CustomerData;

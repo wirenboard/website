@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const props = defineProps<{ paymentsInfo: { methods: string[]; default: string } | null }>();
+import type { PaymentsInfo } from '~/common/types';
+
+const props = defineProps<{ paymentsInfo: PaymentsInfo | null }>();
 const paymentType = defineModel<string>('paymentType');
 
 const { t } = useI18n();

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import Loader from '~/components/Loader.vue';
 import Button from '~/components/Button.vue';
-import type {OrderInfo} from "~/common/types";
+import type {OrderInfo, PaymentsInfo} from "~/common/types";
 
 const { t, locale } = useI18n();
 
@@ -49,7 +49,8 @@ const deliveryType = ref(orderInfo.value!.deliveryType);
 const country = ref(Number(orderInfo.value!.deliveryData.country));
 
 const paymentsParams = computed(() => ({ payerType: payerType.value, country: country.value }));
-const { data: paymentsInfo } = await useApi<{ methods: string[]; default: string }>(
+// Запрос здесь, а не в Payment.vue: paymentType должен встать до первого рендера, иначе SSR-гидрация теряет выделение.
+const { data: paymentsInfo } = await useApi<PaymentsInfo>(
   '/order/payments/',
   paymentsParams,
   { watch: [payerType, country] },
