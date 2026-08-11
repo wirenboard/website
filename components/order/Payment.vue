@@ -1,6 +1,4 @@
 <script setup lang="ts">
-// Список способов и дефолт запрашивает и выбирает order.vue (владелец состояния) —
-// см. комментарий там про SSR/hydration; здесь только отображение.
 const props = defineProps<{ paymentsInfo: { methods: string[]; default: string } | null }>();
 const paymentType = defineModel<string>('paymentType');
 
