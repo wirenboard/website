@@ -48,7 +48,9 @@ const deliveryData = ref(orderInfo.value!.deliveryData);
 const deliveryType = ref(orderInfo.value!.deliveryType);
 const country = ref(Number(orderInfo.value!.deliveryData.country));
 
-const paymentType = ref(orderInfo.value!.paymentType);
+// Способ оплаты из прошлого заказа не подставляем: начальное значение пустое,
+// Payment.vue выберет дефолт из /order/payments/ по типу плательщика.
+const paymentType = ref('');
 
 
 useHead({

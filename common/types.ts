@@ -134,7 +134,6 @@ export interface OrderInfo {
   payerData: CustomerData;
   deliveryType: string;
   deliveryData: Record<string, string>;
-  paymentType: string;
   basketData: Record<string, number>;
   countries: Record<number, string>;
   cdekCountries: number[];
