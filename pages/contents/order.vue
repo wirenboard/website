@@ -48,9 +48,34 @@ const deliveryData = ref(orderInfo.value!.deliveryData);
 const deliveryType = ref(orderInfo.value!.deliveryType);
 const country = ref(Number(orderInfo.value!.deliveryData.country));
 
-// Способ оплаты из прошлого заказа не подставляем: начальное значение пустое,
-// Payment.vue выберет дефолт из /order/payments/ по типу плательщика.
-const paymentType = ref('');
+// Способы оплаты и дефолт запрашиваются здесь, а не в Payment.vue: начальное
+// значение paymentType должно быть установлено ДО первого рендера. Если ставить
+// его из дочернего компонента через defineModel, SSR отдаёт HTML без выделения
+// (emit не возвращается в пропсы в одном проходе), а в проде Vue hydration
+// mismatch не исправляет — выделение так и не появляется.
+const paymentsParams = computed(() => ({ payerType: payerType.value, country: country.value }));
+const { data: paymentsInfo } = await useApi<{ methods: string[]; default: string }>(
+  '/order/payments/',
+  paymentsParams,
+  { watch: [payerType, country] },
+);
+
+// Способ оплаты из прошлого заказа не подставляем — всегда дефолт по типу
+// плательщика (юрлицо — банковский перевод, физлицо — карта).
+const paymentType = ref(paymentsInfo.value?.default ?? '');
+
+// При смене типа плательщика ставим дефолт нового типа из перезапрошенного
+// списка; ручной выбор пользователя сохраняем, пока способ доступен.
+const payerTypeChanged = ref(false);
+watch(payerType, () => { payerTypeChanged.value = true; });
+
+watch(paymentsInfo, (info) => {
+  if (!info) return;
+  if (payerTypeChanged.value || !paymentType.value || !info.methods.includes(paymentType.value)) {
+    payerTypeChanged.value = false;
+    paymentType.value = info.default;
+  }
+});
 
 
 useHead({
@@ -139,8 +164,7 @@ const makeOrder = async () => {
 
     <OrderPayment
       v-model:paymentType="paymentType"
-      :payerType="payerType"
-      :country="country"
+      :paymentsInfo="paymentsInfo"
     />
 
     <div v-if="orderError && !Object.keys(fieldErrors).length" class="order-error">

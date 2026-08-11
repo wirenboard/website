@@ -1,38 +1,18 @@
 <script setup lang="ts">
-const props = defineProps<{ payerType: string; country: number }>();
+// Список способов и дефолт запрашивает и выбирает order.vue (владелец состояния) —
+// см. комментарий там про SSR/hydration; здесь только отображение.
+const props = defineProps<{ paymentsInfo: { methods: string[]; default: string } | null }>();
 const paymentType = defineModel<string>('paymentType');
 
 const { t } = useI18n();
 
-const params = computed(() => ({ payerType: props.payerType, country: props.country }));
-const { data: paymentsInfo } = await useApi<{ methods: string[]; default: string }>(
-  '/order/payments/',
-  params,
-  { watch: [() => props.payerType, () => props.country] },
-);
-
 const paymentTypes = computed(() =>
-  (paymentsInfo.value?.methods ?? []).map(method => ({
+  (props.paymentsInfo?.methods ?? []).map(method => ({
     id: method,
     title: t(method),
     comment: t(`${method}Comment`),
   }))
 );
-
-// Способ оплаты по умолчанию присылает бэк в поле default (зависит от типа
-// плательщика: юрлицо — банковский перевод, физлицо — карта). Ручной выбор
-// пользователя сохраняем, пока он доступен; при смене типа плательщика
-// возвращаемся к дефолту нового типа.
-const payerTypeChanged = ref(false);
-watch(() => props.payerType, () => { payerTypeChanged.value = true; });
-
-watch(paymentsInfo, (info) => {
-  if (!info) return;
-  if (payerTypeChanged.value || !paymentType.value || !info.methods.includes(paymentType.value)) {
-    payerTypeChanged.value = false;
-    paymentType.value = info.default;
-  }
-}, { immediate: true });
 </script>
 
 <template>
