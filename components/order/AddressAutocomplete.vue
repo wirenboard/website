@@ -80,17 +80,39 @@ const onInput = () => {
   debounceTimer = setTimeout(() => fetchSuggestions(query.value), 300);
 };
 
-const applyDadataResult = (suggestion: DadataSuggestion) => {
+const fetchPostcodeWithoutBlock = async (data: DadataAddressData): Promise<string> => {
+  const parts = [data.city_with_type || data.settlement_with_type, data.street_with_type, data.house ? `д ${data.house}` : null].filter(Boolean);
+  if (parts.length < 3) return '';
+  try {
+    const res = await $fetch<{ suggestions: DadataSuggestion[] }>(
+      'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Token ${config.public.dadataKey}` },
+        body: JSON.stringify({ query: parts.join(', '), count: 1 }),
+      }
+    );
+    return res.suggestions?.[0]?.data.postal_code || '';
+  } catch {
+    return '';
+  }
+};
+
+const applyDadataResult = async (suggestion: DadataSuggestion) => {
   selected.value = true;
   const { data } = suggestion;
   query.value = suggestion.value;
   isOpen.value = false;
 
   const city = data.city_with_type || data.settlement_with_type || data.region_with_type || '';
-  const postcode = data.postal_code || '';
   const street = data.street_with_type || '';
   const house = [data.house || null, data.block ? `к${data.block}` : null].filter(Boolean).join(' ');
   const room = data.flat ?? '';
+
+  let postcode = data.postal_code || '';
+  if (!postcode && data.block) {
+    postcode = await fetchPostcodeWithoutBlock(data);
+  }
 
   emit('select', { city, postcode, street, house, room });
 };
