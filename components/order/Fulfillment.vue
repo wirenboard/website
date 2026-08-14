@@ -23,6 +23,7 @@ const recentSuggestions = computed(() =>
     isRecent: true,
     data: {
       postal_code: null,
+      city: null,
       city_with_type: null,
       settlement_with_type: null,
       region_with_type: null,

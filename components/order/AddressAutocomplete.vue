@@ -1,6 +1,7 @@
 <script setup lang="ts">
 interface DadataAddressData {
   postal_code: string | null;
+  city: string | null;
   city_with_type: string | null;
   settlement_with_type: string | null;
   region_with_type: string | null;
@@ -99,8 +100,8 @@ const applyDadataResult = async (suggestion: DadataSuggestion) => {
   query.value = suggestion.value;
   isOpen.value = false;
 
-  const city = data.city_with_type || data.settlement_with_type || data.region_with_type || '';
-  const street = data.street_with_type || '';
+  const city = data.city || data.settlement_with_type || data.region_with_type || '';
+  const street = [data.city && data.settlement_with_type, data.street_with_type].filter(Boolean).join(', ');
   const house = [data.house || null, data.block ? `к${data.block}` : null].filter(Boolean).join(' ');
   const room = data.flat ?? '';
 
