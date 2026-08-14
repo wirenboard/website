@@ -49,7 +49,7 @@ const deliveryType = ref(orderInfo.value!.deliveryType);
 const country = ref(Number(orderInfo.value!.deliveryData.country));
 
 const paymentsParams = computed(() => ({ payerType: payerType.value, country: country.value }));
-// Запрос здесь, а не в Payment.vue: paymentType должен встать до первого рендера, иначе SSR-гидрация теряет выделение.
+// Fetch here rather than in Payment.vue: paymentType must be set before the first render, otherwise SSR hydration loses the selection.
 const { data: paymentsInfo } = await useApi<PaymentsInfo>(
   '/order/payments/',
   paymentsParams,
