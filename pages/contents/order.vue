@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import Loader from '~/components/Loader.vue';
 import Button from '~/components/Button.vue';
-import type {OrderInfo} from "~/common/types";
+import type {OrderInfo, PaymentsInfo} from "~/common/types";
 
 const { t, locale } = useI18n();
 
@@ -48,7 +48,26 @@ const deliveryData = ref(orderInfo.value!.deliveryData);
 const deliveryType = ref(orderInfo.value!.deliveryType);
 const country = ref(Number(orderInfo.value!.deliveryData.country));
 
-const paymentType = ref(orderInfo.value!.paymentType);
+const paymentsParams = computed(() => ({ payerType: payerType.value, country: country.value }));
+// Fetch here rather than in Payment.vue: paymentType must be set before the first render, otherwise SSR hydration loses the selection.
+const { data: paymentsInfo } = await useApi<PaymentsInfo>(
+  '/order/payments/',
+  paymentsParams,
+  { watch: [payerType, country] },
+);
+
+const paymentType = ref(paymentsInfo.value?.default ?? '');
+
+const payerTypeChanged = ref(false);
+watch(payerType, () => { payerTypeChanged.value = true; });
+
+watch(paymentsInfo, (info) => {
+  if (!info) return;
+  if (payerTypeChanged.value || !paymentType.value || !info.methods.includes(paymentType.value)) {
+    payerTypeChanged.value = false;
+    paymentType.value = info.default;
+  }
+});
 
 
 useHead({
@@ -137,8 +156,7 @@ const makeOrder = async () => {
 
     <OrderPayment
       v-model:paymentType="paymentType"
-      :payerType="payerType"
-      :country="country"
+      :paymentsInfo="paymentsInfo"
     />
 
     <div v-if="orderError && !Object.keys(fieldErrors).length" class="order-error">
