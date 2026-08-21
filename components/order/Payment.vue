@@ -1,30 +1,18 @@
 <script setup lang="ts">
-const props = defineProps<{ payerType: string; country: number }>();
+import type { PaymentsInfo } from '~/common/types';
+
+const props = defineProps<{ paymentsInfo: PaymentsInfo | null }>();
 const paymentType = defineModel<string>('paymentType');
 
 const { t } = useI18n();
 
-const params = computed(() => ({ payerType: props.payerType, country: props.country }));
-const { data: paymentMethods } = await useApi<string[]>(
-  '/order/payments/',
-  params,
-  { watch: [() => props.payerType, () => props.country] },
-);
-
 const paymentTypes = computed(() =>
-  (paymentMethods.value!).map(method => ({
+  (props.paymentsInfo?.methods ?? []).map(method => ({
     id: method,
     title: t(method),
     comment: t(`${method}Comment`),
   }))
 );
-
-watch(paymentMethods, (methods) => {
-  if (!methods) return;
-  if (!methods.includes(paymentType.value ?? '')) {
-    paymentType.value = methods[0] ?? '';
-  }
-}, { immediate: true });
 </script>
 
 <template>

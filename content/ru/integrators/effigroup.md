@@ -5,7 +5,7 @@ coordinates: [55.789821, 49.113430]
 title: EFFI GROUP
 logo: effigroup/effigroup.webp
 phone: 78432960026
-website: effi-group.ru
+website: https://effi-group.ru
 email: tko@effi-group.ru
 ---
 
