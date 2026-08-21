@@ -1,16 +1,42 @@
 <script lang="ts" setup>
 import Loader from '~/components/Loader.vue';
 import Button from '~/components/Button.vue';
-import type {OrderInfo} from "~/common/types";
+import type {OrderInfo, PaymentsInfo} from "~/common/types";
 
 const { t, locale } = useI18n();
 
 const totalSum = ref(0);
 const fulfillmentPending = ref(false);
-const fulfillmentValid = ref(false);
 const submitPending = ref(false);
+const fulfillmentDeliveryError = ref(false);
 
 const orderError = ref(false);
+const fieldErrors = ref<Record<string, string>>({});
+
+const parseErrors = (data: any): Record<string, string> => {
+  const result: Record<string, string> = {};
+  const errors = data?.errors;
+  if (!errors) return result;
+
+  if (Array.isArray(errors)) {
+    for (const e of errors) {
+      if (e.field && e.message) {
+        const key = e.field.includes('.') ? e.field.split('.').pop()! : e.field;
+        result[key] = e.message;
+      }
+    }
+  } else if (typeof errors === 'object') {
+    for (const [field, messages] of Object.entries(errors)) {
+      const key = field.includes('.') ? field.split('.').pop()! : field;
+      if (Array.isArray(messages) && messages.length) {
+        result[key] = messages[0] as string;
+      } else if (typeof messages === 'string') {
+        result[key] = messages;
+      }
+    }
+  }
+  return result;
+};
 
 const { data: orderInfo } = await useApi<OrderInfo>(`/order/prefill-info/`);
 
@@ -22,7 +48,26 @@ const deliveryData = ref(orderInfo.value!.deliveryData);
 const deliveryType = ref(orderInfo.value!.deliveryType);
 const country = ref(Number(orderInfo.value!.deliveryData.country));
 
-const paymentType = ref(orderInfo.value!.paymentType);
+const paymentsParams = computed(() => ({ payerType: payerType.value, country: country.value }));
+// Fetch here rather than in Payment.vue: paymentType must be set before the first render, otherwise SSR hydration loses the selection.
+const { data: paymentsInfo } = await useApi<PaymentsInfo>(
+  '/order/payments/',
+  paymentsParams,
+  { watch: [payerType, country] },
+);
+
+const paymentType = ref(paymentsInfo.value?.default ?? '');
+
+const payerTypeChanged = ref(false);
+watch(payerType, () => { payerTypeChanged.value = true; });
+
+watch(paymentsInfo, (info) => {
+  if (!info) return;
+  if (payerTypeChanged.value || !paymentType.value || !info.methods.includes(paymentType.value)) {
+    payerTypeChanged.value = false;
+    paymentType.value = info.default;
+  }
+});
 
 
 useHead({
@@ -36,7 +81,20 @@ const { execute: submitOrder, data: orderResult, error: orderRequestError } = aw
   { method: 'POST', body: orderPayload, immediate: false }
 );
 
+const formRef = ref<HTMLFormElement | null>(null);
+
 const makeOrder = async () => {
+  if (submitPending.value) return;
+  if (fulfillmentDeliveryError.value) return;
+
+  const firstInvalid = formRef.value?.querySelector(':invalid:not(fieldset)') as HTMLElement | null;
+  if (firstInvalid) {
+    firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    firstInvalid.focus();
+    return;
+  }
+
+  fieldErrors.value = {};
   orderError.value = false;
   submitPending.value = true;
   orderPayload.value = {
@@ -49,7 +107,19 @@ const makeOrder = async () => {
   await submitOrder();
   submitPending.value = false;
   if (orderRequestError.value) {
+    fieldErrors.value = parseErrors(orderRequestError.value.data);
     orderError.value = true;
+    nextTick(() => {
+      if (Object.keys(fieldErrors.value).length) {
+        const firstErrorInput = document.querySelector('.input-errorMessage')?.closest('.input-wrapper')?.querySelector('input');
+        if (firstErrorInput) {
+          firstErrorInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          firstErrorInput.focus();
+        }
+      } else {
+        document.querySelector('.order-error')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
     return;
   }
   if (orderResult.value?.redirect_url) {
@@ -60,7 +130,7 @@ const makeOrder = async () => {
 
 <template>
   <p v-if="orderInfo!.basketData.cost === 0" class="order-empty">{{ t('emptyCart') }}</p>
-  <form v-else class="order" @submit.prevent="makeOrder">
+  <form v-else ref="formRef" class="order" @submit.prevent="makeOrder">
     <OrderCustomer
       v-model:payerType="payerType"
       v-model:individual="individual"
@@ -69,6 +139,7 @@ const makeOrder = async () => {
       :countries="orderInfo!.countries"
       :cdekCountries="orderInfo!.cdekCountries"
       :recentOrgs="orderInfo!.recentOrgs"
+      :fieldErrors="fieldErrors"
     />
 
     <OrderFulfillment
@@ -76,31 +147,33 @@ const makeOrder = async () => {
       v-model:deliveryData="deliveryData"
       v-model:totalSum="totalSum"
       v-model:pending="fulfillmentPending"
-      v-model:deliveryValid="fulfillmentValid"
+      v-model:deliveryError="fulfillmentDeliveryError"
       v-model:country="country"
       :basketData="orderInfo!.basketData"
       :recentAddresses="orderInfo!.recentAddresses"
+      :fieldErrors="fieldErrors"
     />
 
     <OrderPayment
       v-model:paymentType="paymentType"
-      :payerType="payerType"
-      :country="country"
+      :paymentsInfo="paymentsInfo"
     />
 
-    <p v-if="orderError" class="order-error">
-      <i18n-t keypath="error">
-        <template #office>
-          <a :href="locale === 'ru' ? 'https://wirenboard.com/ru/pages/contacts/' : 'https://wirenboard.com/en/pages/contacts/'" target="_blank">{{ t('office') }}</a>
-        </template>
-      </i18n-t>
-    </p>
+    <div v-if="orderError && !Object.keys(fieldErrors).length" class="order-error">
+      <p>
+        <i18n-t keypath="error">
+          <template #office>
+            <a :href="`https://wirenboard.com/${locale}/pages/contacts/`" target="_blank">{{ t('office') }}</a>
+          </template>
+        </i18n-t>
+      </p>
+    </div>
 
     <div class="order-finalize">
       <Button
         type="submit"
         size="large"
-        :disabled="fulfillmentPending || submitPending || !fulfillmentValid"
+        :disabled="fulfillmentPending || submitPending || fulfillmentDeliveryError"
         :isLoading="submitPending"
         :label="t('checkout')"
         :variant="'primary'"
@@ -161,11 +234,19 @@ const makeOrder = async () => {
 }
 
 .order-error {
-  background-color: #FF474C;
+  background-color: #FFA3A5;
   color: #fff;
   padding: 12px 16px;
   border-radius: 15px;
-  opacity: 0.5;
+}
+
+.order-error a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.order-error a:hover {
+  opacity: 0.75;
 }
 
 @media (max-width: 768px) {

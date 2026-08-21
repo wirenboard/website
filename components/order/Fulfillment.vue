@@ -6,14 +6,15 @@ const { t } = useI18n();
 const config = useRuntimeConfig();
 const totalSum = defineModel<number>('totalSum', { default: 0 });
 const pendingModel = defineModel<boolean>('pending', { default: false });
-const deliveryValidModel = defineModel<boolean>('deliveryValid', { default: false });
+const deliveryError = defineModel<boolean>('deliveryError', { default: false });
 const deliveryData = defineModel<Record<string, any>>('deliveryData', { default: () => ({}) });
 const selectedDeliveryType = defineModel<string>('deliveryType');
 const country = defineModel<number>('country');
 
-const { basketData, recentAddresses } = defineProps<{
+const { basketData, recentAddresses, fieldErrors } = defineProps<{
   basketData: Record<string, number>;
   recentAddresses?: RecentAddress[];
+  fieldErrors?: Record<string, string>;
 }>();
 
 const recentSuggestions = computed(() =>
@@ -22,6 +23,7 @@ const recentSuggestions = computed(() =>
     isRecent: true,
     data: {
       postal_code: null,
+      city: null,
       city_with_type: null,
       settlement_with_type: null,
       region_with_type: null,
@@ -36,7 +38,7 @@ const recentSuggestions = computed(() =>
 
 const deliveryQuery = ref<Record<string, any>>({});
 const deliveryAddress = ref<Record<string, any>>({ country: country.value, city: deliveryData.value.city, postcode: deliveryData.value.postcode, street: deliveryData.value.street, house: deliveryData.value.house });
-const deliveryAddresDirty = ref<Record<string, string>>({...deliveryAddress.value});
+const deliveryAddressDirty = ref<Record<string, any>>({...deliveryAddress.value});
 const deliveryAddressDetails = ref<Record<string, string>>({ room: deliveryData.value.room});
 const deliveryPVZ = ref<Record<string, any>>({
   cdek_pvz_tariff: deliveryData.value.cdek_pvz_tariff,
@@ -48,21 +50,19 @@ const deliveryPVZ = ref<Record<string, any>>({
   cdek_pvz_postal_code: deliveryData.value.cdek_pvz_postal_code,
 });
 watchEffect(() => { deliveryQuery.value = { ...deliveryAddress.value, ...deliveryPVZ.value }; });
-watchEffect(() => { deliveryData.value = { ...deliveryAddress.value, ...deliveryAddressDetails.value, ...deliveryPVZ.value }; });
-const { data: delivery, pending, refresh } = await useApi<AvailableDeliveriesInfo>(`/order/delivery/`, deliveryQuery);
+watchEffect(() => { deliveryData.value = { ...deliveryAddressDirty.value, ...deliveryAddressDetails.value, ...deliveryPVZ.value }; });
+const { data: delivery, pending, error: deliveryFetchError, refresh } = await useApi<AvailableDeliveriesInfo>(`/order/delivery/`, deliveryQuery);
 
 const isRussia = computed(() => country.value === RUSSIA_ID);
 const hasSavedAddress = ['city', 'street', 'house', 'postcode'].some(k => deliveryAddress.value[k]);
 const addressMode = ref<'search' | 'fields'>(isRussia.value && !hasSavedAddress ? 'search' : 'fields');
-const addressFromDadata = ref(isRussia.value && hasSavedAddress);
 const addressSearchNoResults = ref(false);
 
 const resetAddress = () => {
   deliveryAddress.value = { country: country.value };
-  deliveryAddresDirty.value = { country: country.value };
+  deliveryAddressDirty.value = { country: country.value as number };
   deliveryAddressDetails.value = {};
   addressMode.value = isRussia.value ? 'search' : 'fields';
-  addressFromDadata.value = false;
   addressSearchNoResults.value = false;
 };
 
@@ -91,13 +91,9 @@ const selectItems = computed(() => {
   }));
 });
 
-watch(selectedDelivery, (value) => {
+watch([selectedDelivery, deliveryFetchError], ([value, fetchErr]) => {
   totalSum.value = value?.total ?? 0;
-  if (value?.type == DeliveryType.Pickup) {
-    deliveryValidModel.value = true;
-    return;
-  }
-  deliveryValidModel.value = (value?.price ?? 0) > 0 || (delivery.value?.freeDelivery ?? false);
+  deliveryError.value = !!value?.error || !!fetchErr;
 }, { immediate: true });
 
 watch(pending, (value) => {
@@ -105,24 +101,28 @@ watch(pending, (value) => {
 });
 
 const applyAddress = ({ city, postcode, street, house, room }: { city: string; postcode: string; street: string; house: string; room: string }) => {
-  deliveryAddresDirty.value = { ...deliveryAddress.value, city, postcode, street, house };
+  deliveryAddressDirty.value = { ...deliveryAddress.value, city, postcode, street, house };
   if (room) deliveryAddressDetails.value = { ...deliveryAddressDetails.value, room };
   addressMode.value = 'fields';
-  addressFromDadata.value = true;
 };
 
 let debounceTimer: ReturnType<typeof setTimeout> | null = null;
-watch(deliveryAddresDirty, () => {
+watch(deliveryAddressDirty, () => {
   if (debounceTimer) clearTimeout(debounceTimer);
   debounceTimer = setTimeout(() => {
-    const { city, postcode, street, house } = deliveryAddresDirty.value;
+    const { city, postcode, street, house } = deliveryAddressDirty.value;
     if (!city?.trim() || !postcode?.trim() || !street?.trim() || !house?.trim()) return;
-    deliveryAddress.value = deliveryAddresDirty.value;
+    deliveryAddress.value = deliveryAddressDirty.value;
   }, 1500);
 }, { deep: true });
 
 
 const cdekWidget = ref<null | { open: () => void; close: () => void }>(null);
+const cdekLoading = ref(false);
+let cdekInitPromise: Promise<void> | null = null;
+
+const cdekPvzInputRef = ref<HTMLInputElement | null>(null);
+
 const cdekPvzData = ref<null | { tariff: Tariff; destination: Destination }>(
   deliveryData.value.cdek_pvz_id
     ? {
@@ -150,58 +150,74 @@ watch(cdekPvzData, (value) => {
   };
 },  { deep: true });
 
+watchEffect(() => {
+  if (!cdekPvzInputRef.value) return;
+  cdekPvzInputRef.value.setCustomValidity(cdekPvzData.value ? '' : t('cdekRequired'));
+});
+
 watch(deliveryQuery, () => {
   refresh();
 }, { deep: true });
 
-
-onMounted(() => {
-  const script = document.createElement('script');
-  script.src = 'https://wirenboard.com/npm/@cdek-it/widget@3';
-  script.onload = () => {
-    // @ts-ignore
-    cdekWidget.value = new window.CDEKWidget({
-      apiKey: config.public.yaMapKey,
-      defaultLocation: 'Москва',
-      popup: true,
-      canChoose: true,
-      hideDeliveryOptions: {
-        door: true,
-      },
-      tariffs: {
-        office: [136],
-        pickup: [],
-      },
-      hideFilters: {
-        is_dressing_room: true,
-        have_cashless: true,
-        have_cash: true,
-        type: true,
-      },
-      forceFilters: {
-        type: 'PVZ',
-      },
-      from: {
-        country_code: 'RU',
-        city: 'Долгопрудный',
-        address: 'Лихачёвский проезд, 6с1',
-      },
-      goods: [{ width: 1, height: 1, length: 1, weight: (basketData.weight * 1000), cost: basketData.price }],
-      onChoose: (type: string, tariff: Tariff, destination: Destination) => {
-        cdekPvzData.value = { tariff, destination };
-        cdekWidget.value!.close();
-      },
-      onCalculate: ({ office }: { office: Tariff[] }) => {
-        if (delivery.value?.freeDelivery) {
-          office.map((item: Tariff) => {
-            item.delivery_sum = 0;
-          });
+const initCdekWidget = (): Promise<void> => {
+  if (cdekInitPromise) return cdekInitPromise;
+  cdekInitPromise = new Promise<void>((resolve) => {
+    const script = document.createElement('script');
+    script.src = 'https://wirenboard.com/npm/@cdek-it/widget@3';
+    script.onload = () => {
+      // @ts-ignore
+      cdekWidget.value = new window.CDEKWidget({
+        apiKey: config.public.yaMapKey,
+        defaultLocation: 'Москва',
+        popup: true,
+        canChoose: true,
+        hideDeliveryOptions: {
+          door: true,
+        },
+        tariffs: {
+          office: [136],
+          pickup: [],
+        },
+        hideFilters: {
+          is_dressing_room: true,
+          have_cashless: true,
+          have_cash: true,
+          type: true,
+        },
+        forceFilters: {
+          type: 'PVZ',
+        },
+        from: {
+          country_code: 'RU',
+          city: 'Долгопрудный',
+          address: 'Лихачёвский проезд, 6с1',
+        },
+        goods: [{ width: 1, height: 1, length: 1, weight: (basketData.weight * 1000), cost: basketData.price }],
+        onChoose: (type: string, tariff: Tariff, destination: Destination) => {
+          cdekPvzData.value = { tariff, destination };
+          cdekWidget.value!.close();
+        },
+        onCalculate: ({ office }: { office: Tariff[] }) => {
+          if (delivery.value?.freeDelivery) {
+            office.map((item: Tariff) => {
+              item.delivery_sum = 0;
+            });
+          }
         }
-      }
-    });
-  };
-  document.body.appendChild(script);
-});
+      });
+      resolve();
+    };
+    document.body.appendChild(script);
+  });
+  return cdekInitPromise;
+};
+
+const openCdekWidget = async () => {
+  cdekLoading.value = true;
+  await initCdekWidget();
+  cdekLoading.value = false;
+  cdekWidget.value!.open();
+};
 </script>
 
 <template>
@@ -215,7 +231,7 @@ onMounted(() => {
     />
 
     <p v-if="selectedDelivery?.error" class="fulfillment-error">{{ t('deliveryError') }}</p>
-    <div class="fulfillment-details">      
+    <div class="fulfillment-details">
       <div
         v-if="selectedDelivery?.type === DeliveryType.Pickup"
         class="fulfillment-chooseWrapper"
@@ -233,21 +249,29 @@ onMounted(() => {
       >
         <div v-if="!cdekPvzData || selectedDelivery?.error" class="fulfillment-cdekChooseWrapper">
           <p class="fulfillment-chooseTitle">{{ t('cdekSelectTitle') }}</p>
-          <Button :label="t('cdekChoose')" outlined @click="cdekWidget!.open()"/>
+
+          <div class="fulfillment-pvzWrapper">
+            <Button :label="t('cdekChoose')" outlined :isLoading="cdekLoading" @click="openCdekWidget()"/>
+            <input
+              ref="cdekPvzInputRef"
+              class="fulfillment-addressGuard"
+              tabindex="-1"
+            />
+          </div>
         </div>
         <template v-else-if="cdekPvzData && !selectedDelivery?.error">
           <p class="fulfillment-chooseTitle">{{ t('cdekSelectedTitle', { code: cdekPvzData?.destination.code }) }}</p>
           <p>{{ cdekPvzData?.destination.city }}, {{ cdekPvzData?.destination.address }}</p>
           <p>{{ cdekPvzData?.destination.work_time }}</p>
           <p class="fulfillment-cdekSumWrapper">
-            <Button :label="t('cdekChange')" outlined @click="cdekWidget!.open()"/>
+            <Button :label="t('cdekChange')" outlined :isLoading="cdekLoading" @click="openCdekWidget()"/>
           </p>
         </template>
       </div>
       <template v-else>
         <template v-if="isRussia && addressMode === 'search'">
-          <OrderAddressAutocomplete :recentSuggestions="recentSuggestions" @select="applyAddress" @no-results="addressSearchNoResults = $event" />
-          <button v-if="addressSearchNoResults" type="button" class="fulfillment-manualBtn" @click="addressMode = 'fields'; addressFromDadata = false">
+          <OrderAddressAutocomplete required :recentSuggestions="recentSuggestions" @select="applyAddress" @no-results="addressSearchNoResults = $event" />
+          <button v-if="addressSearchNoResults" type="button" class="fulfillment-manualBtn" @click="addressMode = 'fields'">
             {{ t('manualEntry') }}
           </button>
         </template>
@@ -256,13 +280,13 @@ onMounted(() => {
             {{ t('changeAddress') }}
           </button>
           <div class="fulfillment-cityRow">
-            <Input id="city" v-model="deliveryAddresDirty.city" :label="t('city')" required :disabled="addressFromDadata" />
-            <Input id="postcode" v-model="deliveryAddresDirty.postcode" :label="t('postcode')" required :disabled="addressFromDadata" />
+            <Input id="city" v-model="deliveryAddressDirty.city" :label="t('city')" required :errorMessage="fieldErrors?.city" />
+            <Input id="postcode" v-model="deliveryAddressDirty.postcode" :label="t('postcode')" required :errorMessage="fieldErrors?.postcode" />
           </div>
           <div class="fulfillment-streetRow">
-            <Input id="street" v-model="deliveryAddresDirty.street" :label="t('street')" required :disabled="addressFromDadata" />
-            <Input id="house" v-model="deliveryAddresDirty.house" :label="t('house')" required :disabled="addressFromDadata" />
-            <Input id="room" v-model="deliveryAddressDetails.room" :label="t('room')" :disabled="addressFromDadata" />
+            <Input id="street" v-model="deliveryAddressDirty.street" :label="t('street')" required :errorMessage="fieldErrors?.street" />
+            <Input id="house" v-model="deliveryAddressDirty.house" :label="t('house')" required :errorMessage="fieldErrors?.house" />
+            <Input id="room" v-model="deliveryAddressDetails.room" :label="t('room')" :errorMessage="fieldErrors?.room" />
           </div>
         </template>
       </template>
@@ -319,11 +343,15 @@ onMounted(() => {
   justify-content: space-between;
 }
 
+.fulfillment-pvzWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .fulfillment-addressGuard {
-  position: absolute;
   opacity: 0;
-  width: 1px;
-  height: 1px;
+  height: 0;
+  padding: 0;
   pointer-events: none;
 }
 
@@ -407,7 +435,7 @@ onMounted(() => {
     "pickupSelected": "Выбранный способ доставки – Самовывоз",
     "pickupHours": "Пн–Пт 10:00–18:00",
     "manualEntry": "Не удалось найти адрес, введите вручную →",
-    "changeAddress": "← Изменить адрес",
+    "changeAddress": "← Изменить адрес (быстрый поиск)",
     "city": "Город",
     "postcode": "Почтовый индекс",
     "street": "Улица, переулок, проспект",
@@ -417,7 +445,8 @@ onMounted(() => {
     "days": "день | дня | дней",
     "freeDelivery": "Бесплатная доставка",
     "price": "{n} ₽",
-    "deliveryError": "Доставка по данному адресу невозможна, проверьте страну и адрес или выберите другой тип доставки"
+    "deliveryError": "Доставка по данному адресу невозможна, проверьте страну и адрес или выберите другой тип доставки",
+    "cdekRequired": "Выберите пункт выдачи"
   },
   "en": {
     "title": "Select a delivery method",
@@ -429,7 +458,7 @@ onMounted(() => {
     "pickupSelected": "Selected delivery method – Pickup",
     "pickupHours": "Mon–Fri 10:00–18:00",
     "manualEntry": "Can't find your address? Enter it manually →",
-    "changeAddress": "← Change address",
+    "changeAddress": "← Change address (fast search)",
     "city": "City",
     "postcode": "Postal code",
     "street": "Street, alley, avenue",
@@ -439,7 +468,8 @@ onMounted(() => {
     "days": "day | days",
     "freeDelivery": "Free delivery",
     "price": "€{n}",
-    "deliveryError": "Delivery to this address is not available, please check the country and address or select a different delivery type"
+    "deliveryError": "Delivery to this address is not available, please check the country and address or select a different delivery type",
+    "cdekRequired": "Please select a pickup point"
   }
 }
 </i18n>

@@ -10,6 +10,9 @@ export default defineNuxtConfig({
     apiUrl: process.env.NUXT_API_URL,
     siteLogin: process.env.NUXT_SITE_LOGIN,
     sitePassword: process.env.NUXT_SITE_PASSWORD,
+    // WB-2026-015: server-only shared secret for the internal product endpoint.
+    // Deliberately NOT under `public` — it must never be shipped to the browser.
+    internalApiKey: process.env.NUXT_INTERNAL_API_KEY,
     public: {
       apiUrl: process.env.NUXT_API_URL,
       siteLogin: process.env.NUXT_SITE_LOGIN,

@@ -10,37 +10,55 @@ const props = defineProps<{
   autocomplete?: string;
   required?: boolean;
   disabled?: boolean;
+  validator?: (value: string) => string;
+  pattern?: string;
+  title?: string;
+  errorMessage?: string;
 }>();
 
 const model = defineModel<string>();
 
 const touched = ref(false);
 const error = ref(false);
+const inputRef = ref<HTMLInputElement | null>(null);
 
 const validate = () => {
   touched.value = true;
+  if (props.validator) {
+    const msg = model.value ? props.validator(model.value) : '';
+    if (inputRef.value) inputRef.value.setCustomValidity(msg);
+    if (msg) {
+      error.value = true;
+      return;
+    }
+  }
   error.value = !!props.required && !model.value;
 };
+
+const hasError = computed(() => error.value || !!props.errorMessage);
 </script>
 
 <template>
   <div class="input-wrapper">
     <input
       v-if="!disabled"
+      ref="inputRef"
       v-model="model"
       :type="type"
       placeholder=" "
       class="input"
       :class="{
         'input-filled': !!model,
-        'input-error': error
+        'input-error': hasError
       }"
       :id="id"
       :autofocus="autofocus"
-      :aria-invalid="error"
+      :aria-invalid="hasError"
       :inputmode="inputmode"
       :required="required"
       :autocomplete="autocomplete"
+      :pattern="pattern"
+      :title="title"
       @blur="validate"
       @input="validate"
     />
@@ -50,6 +68,7 @@ const validate = () => {
       {{ label }}
       <span v-if="required" class="input-required">*</span>
     </label>
+    <span v-if="errorMessage" class="input-errorMessage">{{ errorMessage }}</span>
   </div>
 </template>
 
@@ -123,6 +142,13 @@ const validate = () => {
   background: var(--bg-secondary, #f5f5f5);
   color: #666;
   cursor: not-allowed;
+}
+
+.input-errorMessage {
+  color: var(--danger-color);
+  font-size: 13px;
+  margin-top: 4px;
+  display: block;
 }
 
 .input-label--static {

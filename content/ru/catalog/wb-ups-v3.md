@@ -4,8 +4,8 @@ name: WB-UPS v.3
 type: Модуль резервного питания
 title: Модуль бесперебойного питания
 sub_title: на DIN-рейку
-cover: wb-ups-v3/wb-ups-v3-full-face.png
-catalogCover: wb-ups-v3/wb-ups-v3-3-4.png
+cover: wb-ups-v3/3wb-ups-v3-full-face.png
+catalogCover: wb-ups-v3/3wb-ups-v3-3-4.png
 documentation: https://wirenboard.com/wiki/UPS3
 meta: Модуль резервного питания
 images: [
@@ -17,8 +17,8 @@ images: [
   ["wb-ups-v3/wb-ups-v3-side1-board.png"],
   ["wb-ups-v3/wb-ups-v3-side2-board.png"],
   ["wb-ups-v3/wb-ups-v3-side4.png"],
-  ["wb-ups-v3/wb-ups-v3-3-4.png"],
-  ["wb-ups-v3/wb-ups-v3-full-face.png"]
+  ["wb-ups-v3/3wb-ups-v3-3-4.png"],
+  ["wb-ups-v3/3wb-ups-v3-full-face.png"]
 ]
 ---
 ::product

@@ -96,14 +96,18 @@ export interface AvailableDeliveriesInfo{
 
 export interface CustomerData{
   individual:{
-   fio: string;
-   phone: string;
-   additional: string;
-   email: string;
-   comment: string;
-  }
+    fio: string;
+    phone: string;
+    additional: string;
+    email: string;
+    comment: string;
+  };
   entity: {
+    fio: string;
+    phone: string;
+    additional: string;
     inn: string;
+    kpp: string;
     orgName: string;
     address: string;
     email: string;
@@ -120,8 +124,14 @@ export interface RecentAddress {
 
 export interface RecentOrg {
   inn: string;
+  kpp: string;
   orgName: string;
   address: string;
+}
+
+export interface PaymentsInfo {
+  methods: string[];
+  default: string;
 }
 
 export interface OrderInfo {
@@ -129,7 +139,6 @@ export interface OrderInfo {
   payerData: CustomerData;
   deliveryType: string;
   deliveryData: Record<string, string>;
-  paymentType: string;
   basketData: Record<string, number>;
   countries: Record<number, string>;
   cdekCountries: number[];

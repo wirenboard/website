@@ -88,7 +88,7 @@ const modelValue = defineModel<string>();
 
 .orderSelect-itemImg {
   width: 24px;
-  height: fit-content;
+  height: auto;
 }
 
 @media (max-width: 768px) {

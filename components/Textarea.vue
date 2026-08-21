@@ -43,6 +43,7 @@ const error = ref(false)
   border: 1px solid var(--border-color);
   padding: 26px 12px 18px;
   transition: background 0.2s, border 0.2s, outline-offset 0.2s;
+  font-family: 'Plumb', sans-serif;
   font-size: 24px;
   line-height: 24px;
   border-radius: 2px;

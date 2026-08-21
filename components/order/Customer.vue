@@ -6,13 +6,14 @@ import { RUSSIA_ID, type RecentOrg } from '~/common/types';
 const { t } = useI18n();
 const payerType = defineModel<string>('payerType');
 const individual = defineModel<{ fio: string; phone: string; additional: string; email: string; comment: string; }>('individual');
-const entity = defineModel<{ fio: string; phone: string; additional: string; inn: string; orgName: string; address: string; email: string; comment: string; }>('entity', {required: true});
+const entity = defineModel<{ fio: string; phone: string; additional: string; inn: string; kpp: string; orgName: string; address: string; email: string; comment: string; }>('entity', {required: true});
 const country = defineModel<number>('country');
 
-const { countries, cdekCountries, recentOrgs } = defineProps<{
+const { countries, cdekCountries, recentOrgs, fieldErrors } = defineProps<{
   countries: Record<number, string>;
   cdekCountries: number[];
   recentOrgs?: RecentOrg[];
+  fieldErrors?: Record<string, string>;
 }>();
 
 const recentOrgSuggestions = computed(() =>
@@ -20,6 +21,7 @@ const recentOrgSuggestions = computed(() =>
     value: org.orgName,
     data: {
       inn: org.inn,
+      kpp: org.kpp,
       name: { short_with_opf: org.orgName },
       address: { unrestricted_value: org.address },
     },
@@ -43,7 +45,7 @@ const orgFromSearch = ref(isRussia.value && hasSavedOrg);
 const orgSearchNoResults = ref(false);
 
 const resetOrg = () => {
-  entity.value = { ...entity.value, orgName: '', inn: '', address: '' };
+  entity.value = { ...entity.value, orgName: '', inn: '', kpp: '', address: '' };
   orgMode.value = isRussia.value ? 'search' : 'fields';
   orgFromSearch.value = false;
   orgSearchNoResults.value = false;
@@ -53,9 +55,30 @@ watch(country, () => {
   resetOrg();
 });
 
-const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; address: string }) => {
+const validateInn = (value: string): string => {
+  const inn = value.replace(/\s/g, '');
+  if (!/^\d{10}$|^\d{12}$/.test(inn)) return t('innInvalid');
+  const d = inn.split('').map(Number);
+  if (d.length === 10) {
+    const check = [2, 4, 10, 3, 5, 9, 4, 6, 8].reduce((s, w, i) => s + w * d[i], 0) % 11 % 10;
+    if (check !== d[9]) return t('innChecksum');
+  } else {
+    const c1 = [7, 2, 4, 10, 3, 5, 9, 4, 6, 8].reduce((s, w, i) => s + w * d[i], 0) % 11 % 10;
+    const c2 = [3, 7, 2, 4, 10, 3, 5, 9, 4, 6, 8].reduce((s, w, i) => s + w * d[i], 0) % 11 % 10;
+    if (c1 !== d[10] || c2 !== d[11]) return t('innChecksum');
+  }
+  return '';
+};
+
+const validateEmail = (value: string): string => {
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return t('emailInvalid');
+  return '';
+};
+
+const onOrgSelect = ({ orgName, inn, kpp, address }: { orgName: string; inn: string; kpp: string; address: string }) => {
   entity.value.orgName = orgName;
   entity.value.inn = inn;
+  entity.value.kpp = kpp;
   entity.value.address = address;
   orgMode.value = 'fields';
   orgFromSearch.value = true;
@@ -81,43 +104,44 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
     <div class="customer-radioGroup">
       <label class="customer-radio" tabindex="0" @keyup.enter="payerType = 'individual'">
         <input type="radio" name="payerType" value="individual" v-model="payerType" />
-        {{ t('individual')}}
+        {{ t('individual') }}
       </label>
       <label class="customer-radio" tabindex="0" @keyup.enter="payerType = 'entity'">
         <input type="radio" name="payerType" value="entity" v-model="payerType" />
-        {{ t('entity')}}
+        {{ t('entity') }}
       </label>
     </div>
 
     <template v-if="payerType === 'individual'">
       <div class="customer-fieldWrapper" :class="{ 'customer-fieldWrapper--withExt': isCdekCountry }">
-        <Input v-model="individual!.fio" id="fio" :label="t('fio')" autocomplete="name" required autofocus />
-        <Input v-model="individual!.phone" id="phone" :label="t('phone')" autocomplete="tel" inputmode="tel" required />
-        <Input v-if="isCdekCountry" v-model="individual!.additional" id="additional" :label="t('additional')" autocomplete="off" inputmode="numeric" />
+        <Input v-model="individual!.fio" id="fio" :label="t('fio')" autocomplete="name" required autofocus :errorMessage="fieldErrors?.fio" />
+        <Input v-model="individual!.phone" id="phone" :label="t('phone')" autocomplete="tel" inputmode="tel" required :errorMessage="fieldErrors?.phone" />
+        <Input v-if="isCdekCountry" v-model="individual!.additional" id="additional" :label="t('additional')" autocomplete="off" inputmode="numeric" :errorMessage="fieldErrors?.additional" />
       </div>
-      <Input v-model="individual!.email" id="email" :label="t('email')" autocomplete="email" type="email" inputmode="email" required />
+      <Input v-model="individual!.email" id="email" :label="t('email')" autocomplete="email" inputmode="email" required :validator="validateEmail" :errorMessage="fieldErrors?.email" />
       <Textarea v-model="individual!.comment" id="comment" :label="t('comment')" autocomplete="off" />
     </template>
     <template v-else>
       <div class="customer-fieldWrapper" :class="{ 'customer-fieldWrapper--withExt': isCdekCountry }">
-        <Input v-model="entity!.fio" id="fio" :label="t('fio')" autocomplete="name" required autofocus />
-        <Input v-model="entity!.phone" id="phone" :label="t('phone')" autocomplete="tel" inputmode="tel" required />
-        <Input v-if="isCdekCountry" v-model="entity!.additional" id="additional" :label="t('additional')" autocomplete="off" inputmode="numeric" />
+        <Input v-model="entity!.fio" id="fio" :label="t('fio')" autocomplete="name" required autofocus :errorMessage="fieldErrors?.fio" />
+        <Input v-model="entity!.phone" id="phone" :label="t('phone')" autocomplete="tel" inputmode="tel" required :errorMessage="fieldErrors?.phone" />
+        <Input v-if="isCdekCountry" v-model="entity!.additional" id="additional" :label="t('additional')" autocomplete="off" inputmode="numeric" :errorMessage="fieldErrors?.additional" />
       </div>
-      <Input v-model="entity!.email" id="email" :label="t('email')" autocomplete="email" type="email" inputmode="email" required />
+      <Input v-model="entity!.email" id="email" :label="t('email')" autocomplete="email" inputmode="email" required :validator="validateEmail" :errorMessage="fieldErrors?.email" />
       <template v-if="isRussia && orgMode === 'search'">
-        <OrderOrgSearch :recentSuggestions="recentOrgSuggestions" @select="onOrgSelect" @no-results="orgSearchNoResults = $event" />
+        <OrderOrgSearch required :recentSuggestions="recentOrgSuggestions" @select="onOrgSelect" @no-results="orgSearchNoResults = $event" />
         <button v-if="orgSearchNoResults" type="button" class="customer-manualBtn" @click="orgMode = 'fields'; orgFromSearch = false">{{ t('manualEntry') }}</button>
       </template>
       <template v-else>
         <template v-if="isRussia">
           <button type="button" class="customer-changeOrgBtn" @click="resetOrg">{{ t('changeOrg') }}</button>
         </template>
-        <div class="customer-orgFieldWrapper">
-          <Input v-model="entity!.inn" id="inn" :label="t('inn')" autocomplete="off" inputmode="numeric" required :disabled="orgFromSearch" />
-          <Input v-model="entity!.orgName" id="orgName" :label="t('orgName')" autocomplete="organization" required :disabled="orgFromSearch" />
+        <div class="customer-orgFieldWrapper" :class="{ 'customer-orgFieldWrapper--withKpp': isRussia }">
+          <Input v-model="entity!.inn" id="inn" :label="t('inn')" autocomplete="off" inputmode="numeric" required :disabled="orgFromSearch" :validator="isRussia ? validateInn : undefined" :errorMessage="fieldErrors?.inn" />
+          <Input v-if="isRussia" v-model="entity!.kpp" id="kpp" :label="t('kpp')" autocomplete="off" inputmode="numeric" pattern="[0-9]{9}" :title="t('kppFormat')" :disabled="orgFromSearch" :errorMessage="fieldErrors?.kpp" />
+          <Input v-model="entity!.orgName" id="orgName" :label="t('orgName')" autocomplete="organization" required :disabled="orgFromSearch" :errorMessage="fieldErrors?.orgName" />
         </div>
-        <Input v-model="entity!.address" id="address" :label="t('address')" autocomplete="street-address" required :disabled="orgFromSearch" />
+        <Input v-model="entity!.address" id="address" :label="t('address')" autocomplete="street-address" required :disabled="orgFromSearch" :errorMessage="fieldErrors?.address" />
       </template>
       <Textarea v-model="entity!.comment" id="comment" :label="t('comment')" autocomplete="off" />
     </template>
@@ -147,6 +171,10 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
   grid-template-columns: 2fr 3fr;
   width: 100%;
   gap: 18px;
+}
+
+.customer-orgFieldWrapper--withKpp {
+  grid-template-columns: minmax(140px, 1fr) minmax(140px, 1fr) 2fr;
 }
 
 .customer-manualBtn {
@@ -227,7 +255,8 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
 
 @media (max-width: 768px) {
   .customer-fieldWrapper,
-  .customer-orgFieldWrapper {
+  .customer-orgFieldWrapper,
+  .customer-orgFieldWrapper--withKpp {
     grid-template-columns: 1fr;
   }
 }
@@ -246,10 +275,15 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
     "email": "Email",
     "comment": "Комментарий",
     "inn": "ИНН организации",
+    "kpp": "КПП",
     "orgName": "Наименование организации",
     "address": "Юридический адрес",
+    "innInvalid": "ИНН должен содержать 10 или 12 цифр",
+    "innChecksum": "Неверный ИНН, проверьте правильность ввода",
+    "emailInvalid": "Введите корректный email",
     "manualEntry": "Не удалось найти организацию, введите вручную →",
-    "changeOrg": "← Изменить организацию"
+    "changeOrg": "← Изменить организацию",
+    "kppFormat": "КПП — 9 цифр"
   },
   "en": {
     "title": "Enter the customer's information",
@@ -262,10 +296,15 @@ const onOrgSelect = ({ orgName, inn, address }: { orgName: string; inn: string; 
     "email": "Email",
     "comment": "Comment",
     "inn": "Taxpayer identification number",
+    "kpp": "Tax Registration Reason Code",
     "orgName": "Full legal entity title",
     "address": "Legal address",
+    "innInvalid": "TIN must contain 10 or 12 digits",
+    "innChecksum": "Invalid TIN, please check your input",
+    "emailInvalid": "Please enter a valid email address",
     "manualEntry": "Can't find your organization? Enter it manually →",
-    "changeOrg": "← Change organization"
+    "changeOrg": "← Change organization",
+    "kppFormat": "KPP is 9 digits"
   }
 }
 </i18n>
