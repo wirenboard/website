@@ -51,6 +51,16 @@ const showRecent = () => {
   }
 };
 
+const dadataSuggest = (query: string, count: number) =>
+  $fetch<{ suggestions: DadataSuggestion[] }>(
+    'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address',
+    {
+      method: 'POST',
+      headers: { 'Authorization': `Token ${config.public.dadataKey}` },
+      body: { query, count },
+    }
+  );
+
 const fetchSuggestions = async (value: string) => {
   if (value.trim().length < 3) {
     suggestions.value = [];
@@ -59,17 +69,7 @@ const fetchSuggestions = async (value: string) => {
     if (!value.trim()) showRecent();
     return;
   }
-  const res = await $fetch<{ suggestions: DadataSuggestion[] }>(
-    'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address',
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Token ${config.public.dadataKey}`,
-      },
-      body: JSON.stringify({ query: value, count: 6 }),
-    }
-  );
+  const res = await dadataSuggest(value, 6);
   suggestions.value = res.suggestions ?? [];
   isOpen.value = suggestions.value.length > 0;
   emit('noResults', suggestions.value.length === 0);
@@ -80,17 +80,34 @@ const onInput = () => {
   debounceTimer = setTimeout(() => fetchSuggestions(query.value), 300);
 };
 
-const applyDadataResult = (suggestion: DadataSuggestion) => {
+const fetchPostcodeWithoutBlock = async (data: DadataAddressData): Promise<string> => {
+  const parts = [data.city_with_type || data.settlement_with_type, data.street_with_type, data.house ? `д ${data.house}` : null].filter(Boolean);
+  if (parts.length < 3) return '';
+  try {
+    const res = await dadataSuggest(parts.join(', '), 1);
+    const found = res.suggestions?.[0]?.data;
+    if (!found || found.house !== data.house || found.street_with_type !== data.street_with_type) return '';
+    return found.postal_code || '';
+  } catch {
+    return '';
+  }
+};
+
+const applyDadataResult = async (suggestion: DadataSuggestion) => {
   selected.value = true;
   const { data } = suggestion;
   query.value = suggestion.value;
   isOpen.value = false;
 
   const city = data.city_with_type || data.settlement_with_type || data.region_with_type || '';
-  const postcode = data.postal_code || '';
   const street = data.street_with_type || '';
   const house = [data.house || null, data.block ? `к${data.block}` : null].filter(Boolean).join(' ');
   const room = data.flat ?? '';
+
+  let postcode = data.postal_code || '';
+  if (!postcode && data.block) {
+    postcode = await fetchPostcodeWithoutBlock(data);
+  }
 
   emit('select', { city, postcode, street, house, room });
 };
@@ -99,14 +116,7 @@ const onSelect = async (suggestion: DadataSuggestion) => {
   if (suggestion.isRecent) {
     query.value = suggestion.value;
     isOpen.value = false;
-    const res = await $fetch<{ suggestions: DadataSuggestion[] }>(
-      'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address',
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Authorization': `Token ${config.public.dadataKey}` },
-        body: JSON.stringify({ query: suggestion.value, count: 1 }),
-      }
-    );
+    const res = await dadataSuggest(suggestion.value, 1);
     if (res.suggestions?.[0]) applyDadataResult(res.suggestions[0]);
     else emit('noResults', true);
     return;
