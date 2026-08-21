@@ -48,4 +48,5 @@ category: industrial_dispatching_monitoring
 
 ::related-materials
 - [Интеграция Wiren Board в Carrier](https://habr.com/ru/articles/1059594/)
+- [Интеграция Wiren Board в Carrier часть 2](https://habr.com/ru/articles/1072962/)
 ::
