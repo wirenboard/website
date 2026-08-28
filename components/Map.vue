@@ -3,6 +3,7 @@ import type { ParsedContent } from '@nuxt/content';
 import { slug } from 'github-slugger';
 import MarkerIcon from '~/assets/icons/marker.svg';
 
+const config = useRuntimeConfig();
 const props = defineProps<{ items: ParsedContent[] | null, center: number[], zoom: number }>();
 const emit = defineEmits(['visibleItemsChange']);
 
@@ -95,7 +96,7 @@ const onMapMove = (ev: any) => {
       </template>
       <LTileLayer
         :no-wrap="true"
-        url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+        :url="`https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=${config.public.cartoApiKey}`"
         layer-type="base"
       />
     </LMap>
