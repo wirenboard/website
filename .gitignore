@@ -25,3 +25,5 @@ logs
 
 # AI
 .claude
+
+.pnpm-store

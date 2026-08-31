@@ -86,7 +86,8 @@ export interface AvailableDelivery {
   mapUrl: string | null;
   price: number;
   total: number;
-  error?: string | null;
+  error?: boolean | null; // true - unable to delivery 
+  network_error?: boolean; // true - temporary network error , try again later
 }
 
 export interface AvailableDeliveriesInfo{
