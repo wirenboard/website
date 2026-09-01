@@ -89,6 +89,7 @@ const selectItems = computed(() => {
       let price = '';
       if (item.type !== DeliveryType.Pickup && item.price != null) {
         price = item.price === 0 ? ` • ${t('freeDelivery')}` : ` • ${t('price', { n: item.price })}`;
+        if (item.type === DeliveryType.Taxi) price += `, ${t('moscowOnly')}`;
       }
       if (item.daysMin !== item.daysMax) return `${item.daysMin}–${item.daysMax} ${t('days', item.daysMax)}${price}`;
       return `${item.daysMin} ${t('days', item.daysMin)}${price}`;
@@ -474,6 +475,7 @@ const openCdekWidget = async () => {
     "days": "день | дня | дней",
     "freeDelivery": "Бесплатная доставка",
     "price": "{n} ₽",
+    "moscowOnly": "только по Москве",
     "deliveryError": "Доставка по данному адресу невозможна, проверьте страну и адрес или выберите другой тип доставки",
     "cdekRequired": "Выберите пункт выдачи"
   },
@@ -497,6 +499,7 @@ const openCdekWidget = async () => {
     "days": "day | days",
     "freeDelivery": "Free delivery",
     "price": "€{n}",
+    "moscowOnly": "Moscow only",
     "deliveryError": "Delivery to this address is not available, please check the country and address or select a different delivery type",
     "cdekRequired": "Please select a pickup point"
   }
