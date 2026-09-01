@@ -11,7 +11,7 @@ images: [
   ["wbio-di-hvd-8/wbio-di-hvd-8-connection.png"],
   ["wbio-di-hvd-8/wbio-di-hvd-8-pcb.png"]
 ]
-use_cases: []
+use_cases: ["rostics", "liten_magnit", "techsensor_module_cafe"]
 ---
 ::product
 #description
@@ -26,7 +26,7 @@ use_cases: []
 ::product-section{title="Дискретные входы"}
 - 8 дискретных входов, разделённых на 2 изолированные группы;
 - напряжение срабатывания входов — от 110 В переменного тока;
-- напряжение изоляции между входами и интерфейсом — 5000 Вrms.
+- напряжение изоляции между входами и интерфейсом — 5000 В.
 ::
 
 ::product-section{title="Интерфейсы"}
