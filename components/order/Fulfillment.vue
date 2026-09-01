@@ -54,6 +54,11 @@ watchEffect(() => { deliveryData.value = { ...deliveryAddressDirty.value, ...del
 const { data: delivery, pending, error: deliveryFetchError, refresh } = await useApi<AvailableDeliveriesInfo>(`/order/delivery/`, deliveryQuery);
 
 const isRussia = computed(() => country.value === RUSSIA_ID);
+
+const availableDeliveries = computed(() => delivery.value?.available ?? []);
+
+const isTaxi = computed(() => selectedDelivery.value?.type === DeliveryType.Taxi);
+
 const hasSavedAddress = ['city', 'street', 'house', 'postcode'].some(k => deliveryAddress.value[k]);
 const addressMode = ref<'search' | 'fields'>(isRussia.value && !hasSavedAddress ? 'search' : 'fields');
 const addressSearchNoResults = ref(false);
@@ -71,11 +76,11 @@ watch(country, () => {
 });
 
 const selectedDelivery = computed<AvailableDelivery | null>(() =>
-  delivery.value?.available.find((item: AvailableDelivery) => item.id === selectedDeliveryType.value) ?? null
+  availableDeliveries.value.find((item: AvailableDelivery) => item.id === selectedDeliveryType.value) ?? null
 );
 
 const selectItems = computed(() => {
-  return (delivery.value?.available ?? []).map((item: AvailableDelivery) => ({
+  return availableDeliveries.value.map((item: AvailableDelivery) => ({
     id: item.id,
     title: item.title,
     img: `/img/delivery/${item.id}.png`,
@@ -98,6 +103,14 @@ watch([selectedDelivery, deliveryFetchError], ([value, fetchErr]) => {
 
 watch(pending, (value) => {
   pendingModel.value = value;
+});
+
+watch(selectedDeliveryType, () => {
+  if (selectedDelivery.value?.type === DeliveryType.Taxi) {
+    deliveryAddressDirty.value = { country: country.value, city: 'Москва' };
+    deliveryAddressDetails.value = {};
+    addressMode.value = 'fields';
+  }
 });
 
 const applyAddress = ({ city, postcode, street, house, room }: { city: string; postcode: string; street: string; house: string; room: string }) => {
@@ -268,6 +281,16 @@ const openCdekWidget = async () => {
           </p>
         </template>
       </div>
+      <div v-else-if="isTaxi" class="fulfillment-taxiAddress">
+        <div class="fulfillment-cityRow">
+          <Input id="city" v-model="deliveryAddressDirty.city" :label="t('city')" disabled />
+        </div>
+        <div class="fulfillment-streetRow">
+          <Input id="street" v-model="deliveryAddressDirty.street" :label="t('street')" required :errorMessage="fieldErrors?.street" />
+          <Input id="house" v-model="deliveryAddressDirty.house" :label="t('house')" required :errorMessage="fieldErrors?.house" />
+          <Input id="room" v-model="deliveryAddressDetails.room" :label="t('room')" :errorMessage="fieldErrors?.room" />
+        </div>
+      </div>
       <template v-else>
         <template v-if="isRussia && addressMode === 'search'">
           <OrderAddressAutocomplete required :recentSuggestions="recentSuggestions" @select="applyAddress" @no-results="addressSearchNoResults = $event" />
@@ -388,6 +411,12 @@ const openCdekWidget = async () => {
 .fulfillment-cityRow {
   display: grid;
   grid-template-columns: 3fr 1fr;
+  gap: 18px;
+}
+
+.fulfillment-taxiAddress {
+  display: flex;
+  flex-direction: column;
   gap: 18px;
 }
 
