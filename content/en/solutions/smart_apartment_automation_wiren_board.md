@@ -7,7 +7,7 @@ category: apartments_automation
 
 :photo{
     src="smart_apartment_automation_wiren_board/0.jpg"
-    caption=""
+    caption="Apartment automation system"
     width="400"
     float="right"
 }
