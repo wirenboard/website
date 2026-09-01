@@ -19,6 +19,7 @@ export default defineNuxtConfig({
       sitePassword: process.env.NUXT_SITE_PASSWORD,
       dadataKey: process.env.NUXT_PUBLIC_DADATA_KEY,
       yaMapKey: process.env.NUXT_PUBLIC_YA_MAP_KEY,
+      cartoApiKey: process.env.NUXT_PUBLIC_CARTO_API_KEY,
     },
   },
   devtools: { enabled: false },
