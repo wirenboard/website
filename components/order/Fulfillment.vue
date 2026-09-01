@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Button from '~/components/Button.vue';
-import {RUSSIA_ID, DeliveryType, type AvailableDelivery, type AvailableDeliveriesInfo, type Destination, type Tariff, type RecentAddress } from '~/common/types';
+import {RUSSIA_ID, DeliveryType, DeliveryError, type AvailableDelivery, type AvailableDeliveriesInfo, type Destination, type Tariff, type RecentAddress } from '~/common/types';
 
 const { t } = useI18n();
 const config = useRuntimeConfig();
@@ -92,7 +92,7 @@ const selectItems = computed(() => {
 });
 
 
-const deliveryUnreachable = computed(() => !!deliveryFetchError.value || !!selectedDelivery.value?.network_error); // temporary network error
+const deliveryUnreachable = computed(() => !!deliveryFetchError.value || selectedDelivery.value?.error === DeliveryError.Network); // temporary network error
 
 const hasDeliveryError = computed(() => deliveryUnreachable.value || !!selectedDelivery.value?.error); // unable to delivery by address
 
