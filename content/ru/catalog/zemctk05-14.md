@@ -6,7 +6,7 @@ type: "Трансформатор тока до 90 А, 10 мм,"
 sub_title: "На ток до 90 А, 10 мм диаметр провода"
 cover: "zemctk05-14/zemctk05-14_front.jpeg"
 catalogCover: "zemctk05-14/zemctk05-14_front.jpeg"
-documentation: "https://wirenboard.com/wiki/ZEMCTK05-14"
+documentation: "https://wiki.wirenboard.com/wiki/ZEMCTK05-14"
 meta: "Один разъёмный трансформатор тока для использования с измерителями серии WB-MAP."
 keywords: "WB-MAP, ZEMCTK05-14, тт, трансформатор тока"
 images: [

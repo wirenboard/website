@@ -6,7 +6,7 @@ type: "Current transformer up to 90 A, 10 mm,"
 sub_title: "Up to 90 A, 10 mm wire diameter"
 cover: "zemctk05-14/zemctk05-14_front.jpeg"
 catalogCover: "zemctk05-14/zemctk05-14_front.jpeg"
-documentation: "https://wiki-wirenboard-com.translate.goog/wiki/ZEMCTK05-14?_x_tr_sl=ru&_x_tr_tl=en&_x_tr_hl=ru&_x_tr_pto=wapp"
+documentation: "https://wiki.wirenboard.com/wiki/ZEMCTK05-14/en"
 meta: "One split type current transformer for use with WB-MAP series of energy meters."
 keywords: "WB-MAP, ZEMCTK05-14, ct, Current Transformer"
 images: [
