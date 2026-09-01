@@ -92,23 +92,31 @@ const selectItems = computed(() => {
 });
 
 
-const deliveryUnreachable = computed(() => !!deliveryFetchError.value || selectedDelivery.value?.error === DeliveryError.Network); // temporary network error
-
-const hasDeliveryError = computed(() => deliveryUnreachable.value || !!selectedDelivery.value?.error); // unable to delivery by address
-
-const deliveryErrorMessage = computed(() => {
-  if (deliveryUnreachable.value) return t('serviceUnavailable');
-  return selectedDelivery.value?.error ? t('deliveryError') : null;
+// Delivery error kind, null when there is none. An unrecognised code falls back to Network:
+// that is the only message that cannot be wrong - it never blames the address and never
+// discards the pickup point the user has already chosen.
+const deliveryErrorKind = computed<DeliveryError | null>(() => {
+  if (deliveryFetchError.value) return DeliveryError.Network;
+  const error = selectedDelivery.value?.error;
+  if (!error) return null;
+  return error === DeliveryError.AddressUnavailable ? DeliveryError.AddressUnavailable : DeliveryError.Network;
 });
 
-const cdekPvzRejected = computed(() => hasDeliveryError.value && !deliveryUnreachable.value);
+const deliveryErrorMessage = computed(() => {
+  if (!deliveryErrorKind.value) return null;
+  return deliveryErrorKind.value === DeliveryError.Network ? t('serviceUnavailable') : t('deliveryError');
+});
+
+// Reset the chosen pickup point only when the point itself does not fit
+const cdekPvzRejected = computed(() => deliveryErrorKind.value === DeliveryError.AddressUnavailable);
 
 watch(selectedDelivery, (value) => {
   totalSum.value = value?.total ?? 0;
 }, { immediate: true });
 
-watch(hasDeliveryError, (value) => {
-  deliveryError.value = value;
+// The single place that decides whether checkout is blocked
+watch(deliveryErrorKind, (kind) => {
+  deliveryError.value = kind !== null;
 }, { immediate: true });
 
 watch(pending, (value) => {
