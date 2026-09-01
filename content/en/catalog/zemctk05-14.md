@@ -29,12 +29,12 @@ Measured current from 0.15 to 90 A.
   float="right"
 }
 - Measured current from 0.15 to 90 A.
-- Wire outer diameter up to 10 mm.
-- Core type — split.
-- Core material — ferrite.
 - Rated primary current 15 A.
 - Accuracy class 0.5S.
 - Transformation ratio 1:3000 (exact value on the label).
+- Wire outer diameter up to 10 mm.
+- Core type — split.
+- Core material — ferrite.
 - Weight (not including wires) ~15 g.
 - Wire length 3 m.
 ::
