@@ -4,12 +4,23 @@ import ParseInlinedImages from './modules/parse-inlined-images/parse-inlined-ima
 export default defineNuxtConfig({
   ssr: true,
   experimental: {
-    payloadExtraction: false
+    payloadExtraction: false,
   },
   runtimeConfig: {
     apiUrl: process.env.NUXT_API_URL,
-    login: process.env.NUXT_SITE_LOGIN,
-    password: process.env.NUXT_SITE_PASSWORD,
+    siteLogin: process.env.NUXT_SITE_LOGIN,
+    sitePassword: process.env.NUXT_SITE_PASSWORD,
+    // WB-2026-015: server-only shared secret for the internal product endpoint.
+    // Deliberately NOT under `public` — it must never be shipped to the browser.
+    internalApiKey: process.env.NUXT_INTERNAL_API_KEY,
+    public: {
+      apiUrl: process.env.NUXT_API_URL,
+      siteLogin: process.env.NUXT_SITE_LOGIN,
+      sitePassword: process.env.NUXT_SITE_PASSWORD,
+      dadataKey: process.env.NUXT_PUBLIC_DADATA_KEY,
+      yaMapKey: process.env.NUXT_PUBLIC_YA_MAP_KEY,
+      cartoApiKey: process.env.NUXT_PUBLIC_CARTO_API_KEY,
+    },
   },
   devtools: { enabled: false },
   css: [
@@ -39,6 +50,7 @@ export default defineNuxtConfig({
     locales: ['ru', 'en'],
     defaultLocale: 'ru',
     strategy: 'prefix_and_default',
+    vueI18n: './i18n.config.ts',
   },
   app: {
     head: {
@@ -47,9 +59,9 @@ export default defineNuxtConfig({
           rel: 'icon',
           type: 'image/png',
           href: '/img/favicon.png',
-        }
-      ]
-    }
+        },
+      ],
+    },
   },
   image: {
     format: ['webp'],
@@ -65,7 +77,7 @@ export default defineNuxtConfig({
         modifiers: {
           quality: 90,
           format: 'webp',
-        }
+        },
       },
       preview: {
         modifiers: {
@@ -73,35 +85,43 @@ export default defineNuxtConfig({
           quality: 100,
           fit: 'inside',
           format: 'webp',
-        }
+        },
       },
       fullWidthPreview: {
         modifiers: {
           width: 1168,
           quality: 100,
           format: 'webp',
-        }
+        },
       },
       fullWidthGalleryPreview: {
         modifiers: {
           width: 320,
           quality: 100,
           format: 'webp',
-        }
+        },
       },
-    }
+    },
   },
   primevue: {
     options: {
-      unstyled: true
-    }
+      unstyled: true,
+    },
   },
   nitro: {
     routeRules: {
       '/.well-known/appspecific/**': {
         headers: { 'cache-control': 'max-age=31536000' },
-        redirect: { to: '/', statusCode: 404 }
-      }
-    }
-  }
-})
+        redirect: { to: '/', statusCode: 404 },
+      },
+      '/ru/ng/api/**': { proxy: `${process.env.NUXT_API_URL}/ru/ng/api/**` },
+      '/en/ng/api/**': { proxy: `${process.env.NUXT_API_URL}/en/ng/api/**` },
+    },
+    devProxy: {
+      '/api': {
+        target: process.env.NUXT_API_URL,
+        changeOrigin: true,
+      },
+    },
+  },
+});

@@ -5,7 +5,9 @@ date: 2025-03-31
 category: agriculture_automation
 ---
 
-_«The Wiren Board controller turned into a true Swiss Army knife on the farm. It now runs everything — from incubators and brooders to lighting, ventilation, and energy monitoring. All automation logic runs on a single platform: flexible, intuitive, and reliable.», **Maxim Fedrak, founder of a787a**_
+> "The Wiren Board controller turned into a true Swiss Army knife on the farm. It now runs everything — from incubators and brooders to lighting, ventilation, and energy monitoring. All automation logic runs on a single platform: flexible, intuitive, and reliable."
+>
+> **Maxim Fedrak, founder of a787a**
 
 ## About the Company
 

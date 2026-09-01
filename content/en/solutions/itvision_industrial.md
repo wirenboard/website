@@ -5,7 +5,9 @@ date: 2025-01-18
 category: industrial_dispatching_monitoring
 ---
 
-_«Wiren Board is ideal for both industrial and commercial facilities. It allows us to easily scale the system, add new modules, and run services directly on the controller,» **says Vladimir Gorchevsky, Director of IT Vision LLC.**_
+> "Wiren Board is ideal for both industrial and commercial facilities. It allows us to easily scale the system, add new modules, and run services directly on the controller"
+>
+> **Vladimir Gorchevsky, Director of IT Vision LLC**
 
 ## About the Company
 

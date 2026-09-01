@@ -1,11 +1,13 @@
 import { checkComponents } from './check-components.js';
 import { checkImages } from './check-images.js';
+import { checkLineEndings } from './check-line-endings.js';
 
 (async function main() {
   const { errors: compErrors, warnings: compWarnings } = await checkComponents();
   const { errors: imgErrors } = await checkImages();
+  const { errors: eolErrors } = await checkLineEndings();
 
-  const allErrors = [...compErrors, ...imgErrors];
+  const allErrors = [...compErrors, ...imgErrors, ...eolErrors];
   const allWarnings = [...compWarnings];
 
   if (allErrors.length > 0) {

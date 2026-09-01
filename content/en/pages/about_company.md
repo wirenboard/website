@@ -14,7 +14,7 @@ Our Kazakhstan office is located in Astana.
 
 :gallery{ 
     :data='[ 
-        ["about_company/about_1.jpg", "Controller testing stand"], ["about_company/about_2.jpg", "Component warehouse"],    ["about_company/about_3.jpg", "Through-hole soldering"], ["about_company/about_4.jpg", "Devices before packaging"], ["about_company/about_5.jpg", "Visual solder inspection"], ["about_company/about_6.jpg", "In-house SMT assembly for small batches"], ["about_company/about_7.jpg", "SMT assembly at partner facilities"], ["about_company/about_8.jpg", "BGA solder inspection at partner facilities"]
+        ["about_company/about_1.jpg", "Controller testing stand"], ["about_company/about_2.jpg", "Component warehouse"], ["about_company/about_3.jpg", "Robotic through-hole soldering"], ["about_company/about_4.jpg", "Visual quality control (VQC)"], ["about_company/about_5.jpg", "Visual solder joint inspection"], ["about_company/about_6.jpg", "Automated pick-and-place assembly"], ["about_company/about_7.jpg", "SMT assembly at partner facilities"], ["about_company/about_8.jpg", "BGA solder inspection at partner facilities"], ["about_company/about_9.jpg", "WB-DALI3 module prototype testing"], ["about_company/about_10.jpg", "In-house printing operations"], ["about_company/about_11.jpg", "Solder paste printing"], ["about_company/about_12.jpg", "CNC enclosure milling"], ["about_company/about_13.jpg", "Order fulfillment"], ["about_company/about_14.jpg", "Manual through-hole assembly"], ["about_company/about_15.jpg", "WB-Demo Kit assembly"]
         ]'
         }
 

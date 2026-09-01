@@ -27,7 +27,7 @@ updateImagePath(data.value?.body);
 </script>
 
 <template>
-  <div :class="{'include-withSeparator': withSeparator === 'true'}">
+  <div class="include" :class="{'include-withSeparator': withSeparator === 'true'}">
     <ContentRenderer v-if="data" :value="data" />
   </div>
 </template>

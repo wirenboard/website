@@ -112,7 +112,7 @@ Optionally, a PoE module can be installed with support for:
 - **802.3af, 802.3at** — active PoE up to 48 V;
 - **Passive PoE** — delivering up to 24 V over four pairs.
 
-Supply fed into the module via dedicated terminals is provided to devices connected to the RS‑485 ports. There is a **2.5 A** current protection common to both ports, as well as software on/off with state retention across reboots. When powered via PoE, the output provides **24 VDC**, with a maximum current of **500 mA** on Vout.
+The module can power connected devices, controlled via software. When powered from a power supply, the maximum current is 2.5 A and the voltage equals the supply voltage. When powered via PoE, the output provides 24 VDC with a maximum current of 500 mA on Vout.
 
 All this enables compact installations without extra terminal blocks — and, when using PoE, without a separate power supply.
 
@@ -204,9 +204,10 @@ Users can upload a new version directly through the web interface — no program
 
 WB‑MGE v.3 is based on an **ESP32** microcontroller and ships with our stock firmware that implements gateway functionality.
 
-However, you can use the hardware with your own firmware and turn the gateway into a compact smart‑home server with the features you need. For convenience we’ve added a **USB‑C** connector, so you only need a computer and a USB‑C cable to flash your software.
+This firmware is published as [open source](https://github.com/wirenboard/wb-mge), and you can use it as a base and add any functionality you need.
+We've added a **USB‑C** connector and a USB-UART bridge inside, so you only need a computer and a **USB‑C** cable to flash your software.
 
-The documentation provides full GPIO descriptions and examples for the popular **ESPHome** platform. Of course, you can use any tool or language you prefer: ***C, MicroPython, Lua, etc***.
+The documentation provides full GPIO descriptions, as well as examples for the **ESPHome** platform.
 
 Whatever you try, you can always restore our stock gateway firmware and use the device as intended. The warranty remains valid.
 

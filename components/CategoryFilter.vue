@@ -47,7 +47,10 @@ watch(() => filter.value, () => {
 .categoryFilter {
   position: sticky;
   top: 16px;
-  min-width: 310px;
+  min-width: 280px;
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 20px;
 }
 
 .categoryFilter-content {
@@ -56,8 +59,8 @@ watch(() => filter.value, () => {
 
 .categoryFilter ul {
   margin: 0;
-  padding-left: 24px;
-  color: var(--link-color);
+  padding-left: 20px;
+  color: var(--text-color);
 }
 
 .categoryFilter li::marker {
@@ -65,16 +68,18 @@ watch(() => filter.value, () => {
 }
 
 .categoryFilter ul ul {
-  padding-left: 22px;
+  padding-left: 18px;
 }
 
 .categoryFilter ul li div {
   width: fit-content;
+  transition: color 0.15s ease;
 }
 
 .categoryFilter ul li div:hover {
   cursor: pointer;
-  text-decoration: underline;
+  color: var(--link-color);
+  text-decoration: none;
 }
 
 .categoryFilter-date {

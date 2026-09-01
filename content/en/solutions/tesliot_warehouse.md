@@ -5,7 +5,7 @@ date: 2024-12-06
 category: commercial_estate_monitoring
 ---
 
-_«Wiren Board equipment has proven to be a reliable and flexible platform for integrating our BLE sensors and TESLiOT-X BLR bases. Using our joint solution allows us to create efficient climate monitoring systems with high accuracy and stability in a short time,» **says Dmitry Krotov, Director of TESLA SMART UZ.**_
+> «Wiren Board equipment has proven to be a reliable and flexible platform for integrating our BLE sensors and TESLiOT-X BLR bases. Using our joint solution allows us to create efficient climate monitoring systems with high accuracy and stability in a short time,» **says Dmitry Krotov, Director of TESLA SMART UZ**
 
 ## About the Company
 
@@ -92,7 +92,7 @@ Wiren Board offers a comprehensive range of devices for both simple and complex 
 The company provides a two-year warranty on all equipment, offering replacement without the need for prior dispatch to a service center. Their technical support engineers are readily available to assist with both standard and unique challenges.
 
 
-## Additional Materials
-
+::related-materials
 - [Video: Equipping a Food Warehouse with the TESLiOT LR Edition Climate Control System in One Day](https://www.youtube.com/watch?v=0-2IRnvj5rE)
+::
 

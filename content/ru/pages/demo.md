@@ -1,13 +1,23 @@
 ---
-title: Демо
+title: Демо-доступ к контроллеру
 ---
-:photo{
-  src="demo/demo.jpg"
-  width="300px"
-  float="right"
-}
 
 В нашем офисе установлен публичный комплект для демонстрации [WB-demo-kit v.3](https://wirenboard.com/ru/product/WB-demo-kit/). Демо-чемодан подключен к Wiren Board Cloud в специальном демонстрационном аккаунте, войти в который вы можете по кнопке «Демо-аккаунт» на [странице входа](https://wirenboard.cloud/login). Если у вас уже есть учетная запись в Wiren Board Cloud, необходимо предварительно выйти из системы.
 
+:gallery{
+    :data='[
+        ["demo/demo.png"],
+        ["demo/demo_authentication.png"]
+        
+    ]'    
+}
+
 Вы можете зайти в веб-интерфейс и консоль контроллера, чтобы своими руками настроить систему, написать правила или создать дашборд. 
 
+:gallery{
+    :data='[
+        ["demo/demo_cloud.png", "Страница контроллера"],
+        ["demo/demo_devices.png", "Веб-интерфейс"],
+        ["demo/demo_svg.png", "Графическая панель"]        
+    ]'    
+}

@@ -4,8 +4,8 @@ name: WB-UPS v.3
 type: Battery module
 title: UPS module
 sub_title: on DIN rail
-cover: wb-ups-v3/wb-ups-v3-full-face.png
-catalogCover: wb-ups-v3/wb-ups-v3-3-4.png
+cover: wb-ups-v3/wb-ups-v3wb-ups-v3-full-face.png
+catalogCover: wb-ups-v3/wb-ups-v3wb-ups-v3-3-4.png
 documentation: https://wirenboard.com/wiki/UPS3
 meta: Backup power supply module
 images: [
@@ -17,8 +17,8 @@ images: [
   ["wb-ups-v3/wb-ups-v3-side1-board.png"],
   ["wb-ups-v3/wb-ups-v3-side2-board.png"],
   ["wb-ups-v3/wb-ups-v3-side4.png"],
-  ["wb-ups-v3/wb-ups-v3-3-4.png"],
-  ["wb-ups-v3/wb-ups-v3-full-face.png"]
+  ["wb-ups-v3/wb-ups-v3wb-ups-v3-3-4.png"],
+  ["wb-ups-v3/wb-ups-v3wb-ups-v3-full-face.png"]
 ]
 ---
 ::product
@@ -47,7 +47,7 @@ During a loss of input power, it provides 9 V to 25 V output to loads not exceed
   width="500px"
   float="right"
 }
-- Input voltage: 10–27 V;
+- Input voltage: from 10 to 27 V;
 - Backup mode output: fixed voltage adjustable from 9 V to 25 V when input power is unavailable;
 - Rated / peak power: 15 W / 20 W;
 - Rated capacity: 15 Wh;
@@ -69,11 +69,12 @@ Four independent battery overvoltage protection levels:
 2. Hardware protection A prevents charging above 8.2 V;
 3. Protection B stops charging if the voltage of any cell exceeds 4.25 V;
 4. Protection C blows a “sacrificial” fuse if the voltage of any cell exceeds 4.3 V.
+
 Three independent overcurrent protection levels:
 
-- Charge and discharge currents are limited;
-- The battery is disconnected if the current exceeds 4 A;
-- The fuse blows in case of a short-circuit current.
+1. Charge and discharge currents are limited;
+2. The battery is disconnected if the current exceeds 4 A;
+3. The fuse blows in case of a short-circuit current.
 The battery is protected against overheating both by hardware and software mechanisms.
 ::
 ::product-section{title="Prolonged Battery Service Life"}
@@ -123,6 +124,7 @@ The device status information available via Modbus RTU includes:
 - Input current used for battery charging;
 - Output current when running on battery;
 - Front panel button status and counters for button presses (short, long, double short, short + long).
+
 Moreover, device parameters can be configured via Modbus RTU:
 
 - Operating mode;
@@ -137,6 +139,8 @@ It also enables turning the load on or off when external power is absent.
   float="right"
 }
 The device can be configured via the Wiren Board controller’s web interface.
+
+For configuration without a controller, you can use the [Wiren Board Device Editor](https://wiki.wirenboard.com/wiki/WASM_Device_Editor) paired with a WB-USB485 interface converter or a similar device.
 
 When used with other equipment, configuration is performed by writing setup parameters to the corresponding Modbus registers.
 ::

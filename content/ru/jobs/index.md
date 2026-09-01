@@ -5,6 +5,7 @@ title: Работа в Wiren Board
 :video-player{
     url="https://peertube.wirenboard.com/w/bbHYTc72XoaFzbx1XbGGrN"
     float="right"
+    cover="vid_about.jpeg"
 }
 
 Компания Wiren Board разрабатывает и производит электронику для автоматизации инженерных систем: промышленных и коммерческих объектов, частных домов и квартир. Среди клиентов — как профессиональные интеграторы, так и энтузиасты умного дома.

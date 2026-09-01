@@ -28,7 +28,7 @@ defineProps<{ title: string; }>();
   padding: 0;
 }
 
-.productSection:last-of-type {
+.productSection:last-of-type:not(:has(~ .include)) {
   border-bottom: 0;
   padding-bottom: 0;
 }

@@ -5,7 +5,9 @@ date: 2025-01-18
 category: apartments_automation
 ---
 
-_«Thanks to the modular architecture of Wiren Board and its compatibility with various devices, we created a convenient and reliable automation infrastructure that met the client’s needs perfectly,» **says Magdi Minullin, CTO of the integration company Abrom.**_
+> "Thanks to the modular architecture of Wiren Board and its compatibility with various devices, we created a convenient and reliable automation infrastructure that met the client’s needs perfectly"
+>
+> **Magdi Minullin, CTO of the integration company Abrom**
 
 ## About the Company
 

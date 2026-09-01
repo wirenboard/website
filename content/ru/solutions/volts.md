@@ -3,5 +3,5 @@ title: 'VOLTS: накопители электроэнергии на литий
 url: https://wirenboard.com/ru/pages/solutions-volts/
 cover: volts/volts.jpg
 date: 2023-07-29
-category: embedded_systems
+category: industrial_dispatching_monitoring
 ---

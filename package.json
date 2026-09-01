@@ -30,6 +30,8 @@
   "devDependencies": {
     "@primevue/nuxt-module": "4.0.0",
     "@vue/compiler-sfc": "3.5.18",
+    "@wirenboard/eslint": "1.6.0",
+    "eslint": "^9.19.0",
     "fast-glob": "3.3.3",
     "fs-extra": "11.3.0",
     "husky": "9.1.7",

@@ -7,9 +7,9 @@ category: industrial_dispatching_monitoring
 
 ## Why Wiren Board
 
-The ability to remotely configure and program the controller without specialized devices or software was the key factor in our decision.
-
-_Director of a local engineering company_
+> "The ability to remotely configure and program the controller without specialized devices or software was the key factor in our decision."
+>
+> **Director of a local engineering company**
 
 ## About the Company
 
@@ -71,6 +71,8 @@ The boiler house includes 16 pumps: 13 circulation, 2 feed, and 1 dosing pump.
 :photo{
     src="sanatorium_boiler_house_automation/03.jpg"
     caption="Circulation pumps"
+    width="400"
+    float="right"
 }
 
 The dosing pump has its own automation and the controller only reads fault signals via a WBIO-DI-WD-14 module (dry contact). For the remaining pumps, phase-by-phase voltage, current, and power factors are monitored.
@@ -96,6 +98,8 @@ The boiler system includes a water storage tank, which is filled automatically.
 :photo{
     src="sanatorium_boiler_house_automation/08.jpg"
     caption="Water storage tank and feed pumps"
+    width="400"
+    float="right"
 }
 
 Four level sensors (dry contact) are used here:
@@ -126,6 +130,8 @@ The facility houses four Thermex Coloss M condensing boilers with built-in contr
 :photo{
     src="sanatorium_boiler_house_automation/02.jpg"
     caption="Thermex Coloss M boilers"
+    width="400"
+    float="right"
 }
 
 Temperature setpoints are delivered via 0–10 V signals from the [WB-MAO4](https://wirenboard.com/en/product/WB-MAO4/) analog output module. Setpoints are maintained slightly above the highest required loop temperature.

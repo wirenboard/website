@@ -5,7 +5,9 @@ date: 2025-01-14
 category: apartments_automation
 ---
 
-_"We chose the Wiren Board controller for our automation projects because of its reliability and flexibility," **says Egor Tarasov, an eGrid integrator**_
+> "We chose the Wiren Board controller for our automation projects because of its reliability and flexibility"
+>
+> **Egor Tarasov, an eGrid integrator**
 
 ## About the Company
 
