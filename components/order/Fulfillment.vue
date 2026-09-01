@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Button from '~/components/Button.vue';
-import {RUSSIA_ID, DeliveryType, type AvailableDelivery, type AvailableDeliveriesInfo, type Destination, type Tariff, type RecentAddress } from '~/common/types';
+import {RUSSIA_ID, DeliveryType, DeliveryError, type AvailableDelivery, type AvailableDeliveriesInfo, type Destination, type Tariff, type RecentAddress } from '~/common/types';
 
 const { t } = useI18n();
 const config = useRuntimeConfig();
@@ -97,9 +97,27 @@ const selectItems = computed(() => {
   }));
 });
 
-watch([selectedDelivery, deliveryFetchError], ([value, fetchErr]) => {
+
+const deliveryErrorKind = computed<DeliveryError | null>(() => {
+  if (deliveryFetchError.value) return DeliveryError.Network;
+  const error = selectedDelivery.value?.error;
+  if (!error) return null;
+  return error === DeliveryError.AddressUnavailable ? DeliveryError.AddressUnavailable : DeliveryError.Network;
+});
+
+const deliveryErrorMessage = computed(() => {
+  if (!deliveryErrorKind.value) return null;
+  return deliveryErrorKind.value === DeliveryError.Network ? t('serviceUnavailable') : t('deliveryError');
+});
+
+const cdekPvzRejected = computed(() => deliveryErrorKind.value === DeliveryError.AddressUnavailable);
+
+watch(selectedDelivery, (value) => {
   totalSum.value = value?.total ?? 0;
-  deliveryError.value = !!value?.error || !!fetchErr;
+}, { immediate: true });
+
+watch(deliveryErrorKind, (kind) => {
+  deliveryError.value = kind !== null;
 }, { immediate: true });
 
 watch(pending, (value) => {
@@ -244,7 +262,7 @@ const openCdekWidget = async () => {
       :items="selectItems"
     />
 
-    <p v-if="selectedDelivery?.error" class="fulfillment-error">{{ t('deliveryError') }}</p>
+    <p v-if="deliveryErrorMessage" class="fulfillment-error">{{ deliveryErrorMessage }}</p>
     <div class="fulfillment-details">
       <div
         v-if="selectedDelivery?.type === DeliveryType.Pickup"
@@ -261,7 +279,7 @@ const openCdekWidget = async () => {
         v-else-if="selectedDelivery?.type === DeliveryType.Point"
         class="fulfillment-chooseWrapper"
       >
-        <div v-if="!cdekPvzData || selectedDelivery?.error" class="fulfillment-cdekChooseWrapper">
+        <div v-if="!cdekPvzData || cdekPvzRejected" class="fulfillment-cdekChooseWrapper">
           <p class="fulfillment-chooseTitle">{{ t('cdekSelectTitle') }}</p>
 
           <div class="fulfillment-pvzWrapper">
@@ -273,7 +291,7 @@ const openCdekWidget = async () => {
             />
           </div>
         </div>
-        <template v-else-if="cdekPvzData && !selectedDelivery?.error">
+        <template v-else>
           <p class="fulfillment-chooseTitle">{{ t('cdekSelectedTitle', { code: cdekPvzData?.destination.code }) }}</p>
           <p>{{ cdekPvzData?.destination.city }}, {{ cdekPvzData?.destination.address }}</p>
           <p>{{ cdekPvzData?.destination.work_time }}</p>
@@ -477,6 +495,7 @@ const openCdekWidget = async () => {
     "price": "{n} ₽",
     "moscowOnly": "только по Москве",
     "deliveryError": "Доставка по данному адресу невозможна, проверьте страну и адрес или выберите другой тип доставки",
+    "serviceUnavailable": "Служба доставки временно недоступна, попробуйте позже или выберите другой способ доставки",
     "cdekRequired": "Выберите пункт выдачи"
   },
   "en": {
@@ -501,6 +520,7 @@ const openCdekWidget = async () => {
     "price": "€{n}",
     "moscowOnly": "Moscow only",
     "deliveryError": "Delivery to this address is not available, please check the country and address or select a different delivery type",
+    "serviceUnavailable": "The delivery service is temporarily unavailable, please try again later or select a different delivery method",
     "cdekRequired": "Please select a pickup point"
   }
 }

@@ -76,6 +76,12 @@ export enum DeliveryType {
 
 export const RUSSIA_ID = 643;
 
+// Delivery error codes, mirror Delivery::ERROR_* on the backend
+export enum DeliveryError {
+  Network = 'network_error', // failed to reach the delivery service, worth retrying later
+  AddressUnavailable = 'address_unavailable', // service replied, no delivery to this address
+}
+
 export interface AvailableDelivery {
   id: string;
   type: string;
@@ -86,7 +92,7 @@ export interface AvailableDelivery {
   mapUrl: string | null;
   price: number;
   total: number;
-  error?: string | null;
+  error?: DeliveryError | false | null; // false/null - no error
 }
 
 export interface AvailableDeliveriesInfo{
