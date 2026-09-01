@@ -39,21 +39,3 @@ useContentHead({
   </ContentRenderer>
   <ScrollTopButton />
 </template>
-
-<style>
-table {
-  border-collapse: collapse;
-  display: block;
-  max-width: 100%;
-  overflow-x: auto;
-}
-
-td, th {
-  border: 1px solid var(--border-color);
-  padding: 10px 15px;
-}
-
-td:empty, th:empty {
-  padding: 0;
-}
-</style>
