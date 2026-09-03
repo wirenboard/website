@@ -195,7 +195,7 @@ const initCdekWidget = (): Promise<void> => {
   if (cdekInitPromise) return cdekInitPromise;
   cdekInitPromise = new Promise<void>((resolve) => {
     const script = document.createElement('script');
-    script.src = 'https://wirenboard.com/npm/@cdek-it/widget@3';
+    script.src = 'https://wirenboard.com/npm/@cdek-it/widget@3.12';
     script.onload = () => {
       // @ts-ignore
       cdekWidget.value = new window.CDEKWidget({
