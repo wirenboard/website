@@ -11,7 +11,7 @@ images: [
   ["wb-mcm8hv/wb-mcm8hv-pcb-a.png"],
   ["wb-mcm8hv/wb-mcm8hv-pcb-b.png"]
 ]
-use_cases: ["rostics", "liten_magnit", "techsensor_module_cafe"]
+use_cases: []
 ---
 ::product
 #description
