@@ -55,4 +55,47 @@ defineProps<{ title: string; }>();
     margin-top: 12px;
   }
 }
+
+.productSection table {
+  border-collapse: collapse;
+  border: none !important;
+  width: 100%;
+}
+
+.productSection td,
+.productSection th {
+  border: 1px solid var(--border-color);
+  padding: 6px 10px;
+  font-size: 15px;
+}
+
+.productSection tr:first-child td,
+.productSection tr:first-child th {
+  border-top: none !important;
+}
+
+.productSection tr:last-child td,
+.productSection tr:last-child th {
+  border-bottom: none !important;
+}
+
+.productSection td:first-child,
+.productSection th:first-child {
+  border-left: none !important;
+}
+
+.productSection td:last-child,
+.productSection th:last-child {
+  border-right: none !important;
+}
+
+.productSection th {
+  background: var(--gray-color);
+  font-weight: bold;
+}
+
+.productSection td:empty,
+.productSection th:empty {
+  padding: 0;
+}
 </style>
