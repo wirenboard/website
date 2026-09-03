@@ -8,7 +8,7 @@
 | [KCT-6](https://wirenboard.com/ru/product/ct-heyi-kct-06/) | 0.2…27 | 0.5S | 5.5 | Разъёмный |
 | [ZMCT205D](https://wirenboard.com/ru/product/ZMCT205D/) | 0.06…15 | 0.5S | 6.5 | Неразъёмный |
 | [ZMCT134](https://wirenboard.com/ru/product/ZMCT134/) | 0.15…65 | 0.5S | 7.5 | Неразъёмный |
-| [WB-CT309 (ZMCT123)](https://wirenboard.com/ru/product/WB-CT309/) | 0.15…125 | 0.5S | 9.5 | Неразъёмный |
+| [WB-CT309 (ZMCT123)](https://wirenboard.com/ru/product/wb-ct309-v2/) | 0.15…125 | 0.5S | 9.5 | Неразъёмный |
 | [ZEMCTK05-14](https://wirenboard.com/ru/product/ZEMCTK05-14/) | 0.15…90 | 0.5S | 10 | Разъёмный |
 | [ZMDCT21](https://wirenboard.com/ru/product/ZMDCT21/) | 0.8…140 | 0.2S | 12 | Неразъёмный |
 | [ZEMCTK04-13](https://wirenboard.com/ru/product/ZEMCTK04-13/) | 0.25…152 | 0.5S | 16 | Разъёмный |
