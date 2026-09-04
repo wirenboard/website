@@ -1,5 +1,5 @@
 ---
-article: "ZMCT102w"
+article: "ZMCT102W"
 name: "ZMCT102w"
 title: "Current Transformer"
 type: "Current transformer up to 45 A, 5 mm,"
