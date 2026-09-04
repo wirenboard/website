@@ -1,6 +1,6 @@
 ::product-section{title="Selecting a transformer by current"}
 
-For more accurate measurements, choose a current transformer with a larger diameter. A larger core size improves the transformer's measuring performance and reduces the error.
+For more accurate measurements, all else being equal, choose a current transformer with a larger hole diameter. A larger core size improves the transformer's measuring performance and reduces the error.
 
 | Transformer model | Measured current, A | Accuracy class | Hole diameter, mm | Core type |
 | --- | --- | --- | --- | --- |
