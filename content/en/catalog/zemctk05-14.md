@@ -35,7 +35,7 @@ Measured current from 0.15 to 90 A.
 - Wire outer diameter up to 10 mm.
 - Core type — split.
 - Core material — ferrite.
-- Weight (not including wires) ~15 g.
+- Weight (not including wires) 60 g.
 - Wire length 3 m.
 ::
 
