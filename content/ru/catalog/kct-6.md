@@ -10,7 +10,8 @@ documentation: "https://wiki.wirenboard.com/wiki/KCT-6"
 meta: "Один разъёмный трансформатор тока для использования с измерителями серии WB-MAP."
 keywords: "WB-MAP, KCT-6, тт, трансформатор тока"
 images: [
-  ["kct-6/kct-6_front.jpeg"]
+  ["kct-6/kct-6_front.jpeg"],
+  ["kct-6/kct-6_1.jpeg"]
 ]
 ---
 ::product
