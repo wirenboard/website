@@ -2,7 +2,7 @@
 article: "ZMCT205D"
 name: "ZMCT205D"
 title: "Current Transformer"
-type: "Current transformer up to 15 A, 6.5 mm"
+type: "Current transformer up to 15 A, 6.5 mm,"
 sub_title: "Up to 15 A, 6.5 mm wire diameter"
 cover: "zmct205d/zmct205d_front.jpeg"
 catalogCover: "zmct205d/zmct205d_front.jpeg"
@@ -29,8 +29,7 @@ Measured current from 0.06 to 15 A.
 - Measured current from 0.06 to 15 A.
 - Rated primary current 6 A.
 - Accuracy class 0.5S.
-- Transformation ratio 1000:1.
-- Phase shift Δ° (to be set in WB-MAP) 140.
+- Transformation ratio 1:1000 (exact value on the label).
 - Wire outer diameter up to 6.5 mm.
 - Core type — solid.
 - Core material — ferrite.
