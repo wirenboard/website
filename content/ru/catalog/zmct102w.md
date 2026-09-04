@@ -1,5 +1,5 @@
 ---
-article: "ZMCT102W"
+article: "ZMCT102w"
 name: "ZMCT102w"
 title: "Трансформатор тока"
 type: "Трансформатор тока до 45 А, 5 мм,"
