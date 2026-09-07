@@ -14,6 +14,5 @@
 | [ZEMCTK04-13](https://wirenboard.com/ru/product/ZEMCTK04-13/) | 0.25…152 | 0.5S | 16 | Разъёмный |
 | [CTSA024](https://wirenboard.com/ru/product/ct-yuanxing-ctsa024-200a/) | 0.35…290 | 0.5S | 24 | Разъёмный |
 | [CTSA035](https://wirenboard.com/ru/product/ct-yuanxing-ctsa035-400a/) | 5…755 | 0.5S | 35 | Разъёмный |
-| [ZEMCTK09-31G](https://wirenboard.com/ru/product/ZEMCTK09-31G/) | 5…755 | 0.5S | 35 | Разъёмный |
 
 ::
