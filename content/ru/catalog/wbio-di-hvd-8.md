@@ -11,7 +11,7 @@ images: [
   ["wbio-di-hvd-8/wbio-di-hvd-8-connection.png"],
   ["wbio-di-hvd-8/wbio-di-hvd-8-pcb.png"]
 ]
-use_cases: ["rostics", "liten_magnit", "techsensor_module_cafe"]
+use_cases: []
 ---
 ::product
 #description
@@ -40,7 +40,7 @@ use_cases: ["rostics", "liten_magnit", "techsensor_module_cafe"]
 
 ::product-section{title="Совместимость"}
 - контроллеры Wiren Board 5, 6, 7, 8;
-- преобразователей интерфейсов WB-MIO, WB-MIO-E, WB-MGE v.3.
+- преобразователи интерфейсов WB-MIO, WB-MIO-E, WB-MGE v.3.
 ::
 
 :include{path="/catalog/includes/quality_control"}

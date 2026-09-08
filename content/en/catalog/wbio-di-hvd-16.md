@@ -2,8 +2,8 @@
 article: "WBIO-DI-HVD-16"
 cover: "wbio-di-hvd-16/wbio-di-hvd-16-top.png"
 catalogCover: "wbio-di-hvd-16/wbio-di-hvd-16-main.png"
-documentation: "https://wiki.wirenboard.com/wiki/WBIO-DI-HVD-16_8-Channel_230V_Detector_Module"
-meta: "WBIO-DI-HVD-16 is an I/O module with 8 discrete 230V presence inputs and group galvanic isolation."
+documentation: "https://wiki.wirenboard.com/wiki/WBIO-DI-HVD-16_16-Channel_230V_Detector_Module"
+meta: "WBIO-DI-HVD-16 is an I/O module with 16 discrete 230V presence inputs and group galvanic isolation."
 keywords: "Wiren Board, WBIO, WBIO-DI-HVD-16, discrete inputs, 230V voltage detector, I/O module"
 images: [
   ["wbio-di-hvd-16/wbio-di-hvd-16-top.png"],
