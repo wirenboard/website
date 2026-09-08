@@ -4,13 +4,13 @@ name: "ZMCT205D"
 title: "Current Transformer"
 type: "Current transformer up to 15 A, 6.5 mm,"
 sub_title: "Up to 15 A, 6.5 mm wire diameter"
-cover: "zmct205d/zmct205d_front.jpeg"
-catalogCover: "zmct205d/zmct205d_front.jpeg"
+cover: "zmct205d/zmct205d_front.png"
+catalogCover: "zmct205d/zmct205d_front.png"
 documentation: "https://wiki.wirenboard.com/wiki/ZMCT205D/en"
 meta: "One solid core current transformer for use with WB-MAP series of energy meters."
 keywords: "WB-MAP, ZMCT205D, ct, Current Transformer"
 images: [
-  ["zmct205d/zmct205d_front.jpeg"]
+  ["zmct205d/zmct205d_front.png"]
 ]
 ---
 ::product
