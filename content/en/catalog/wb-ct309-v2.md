@@ -10,7 +10,10 @@ documentation: "https://wiki.wirenboard.com/wiki/WB-CT309_v.2_Current_Transforme
 meta: "A strip of three solid core current transformers for use with WB-MAP series of energy meters."
 keywords: "WB-MAP, WB-CT309, ZMCT123, ct, Current Transformer, transformer strip"
 images: [
-  ["wb-ct309-v2/wb-ct309-v2_front.png"]
+  ["wb-ct309-v2/wb-ct309-v2_front.png"],
+  ["wb-ct309-v2/wb-ct309-v2_1.jpeg"],
+  ["wb-ct309-v2/wb-ct309-v2_2.jpeg"],
+  ["wb-ct309-v2/wb-ct309-v2_3.jpeg"]
 ]
 ---
 ::product

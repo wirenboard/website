@@ -10,7 +10,10 @@ documentation: "https://wiki.wirenboard.com/wiki/WB-CT309_v.2_Current_Transforme
 meta: "Сборка из трёх неразъёмных трансформаторов тока для использования с измерителями серии WB-MAP."
 keywords: "WB-MAP, WB-CT309, ZMCT123, тт, трансформатор тока, сборка трансформаторов"
 images: [
-  ["wb-ct309-v2/wb-ct309-v2_front.png"]
+  ["wb-ct309-v2/wb-ct309-v2_front.png"],
+  ["wb-ct309-v2/wb-ct309-v2_1.jpeg"],
+  ["wb-ct309-v2/wb-ct309-v2_2.jpeg"],
+  ["wb-ct309-v2/wb-ct309-v2_3.jpeg"]
 ]
 ---
 ::product
