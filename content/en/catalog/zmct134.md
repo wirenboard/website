@@ -29,7 +29,7 @@ Measured current from 0.15 to 65 A.
 - Measured current from 0.15 to 65 A.
 - Rated primary current 15 A.
 - Accuracy class 0.5S.
-- Transformation ratio 1:2000 (exact value on the label).
+- Transformation ratio 1:2000.
 - Wire outer diameter up to 7.5 mm.
 - Core type — solid.
 - Core material — ferrite.
