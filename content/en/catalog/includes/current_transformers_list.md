@@ -14,6 +14,5 @@ For more accurate measurements, all else being equal, choose a current transform
 | [ZEMCTK04-13](https://wirenboard.com/en/product/ZEMCTK04-13/) | 0.25…152 | 0.5S | 16 | Split |
 | [CTSA024](https://wirenboard.com/en/product/ct-yuanxing-ctsa024-200a/) | 0.35…290 | 0.5S | 24 | Split |
 | [CTSA035](https://wirenboard.com/en/product/ct-yuanxing-ctsa035-400a/) | 5…755 | 0.5S | 35 | Split |
-| [ZEMCTK09-31G](https://wirenboard.com/en/product/ZEMCTK09-31G/) | 5…755 | 0.5S | 35 | Split |
 
 ::
