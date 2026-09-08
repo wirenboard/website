@@ -4,13 +4,13 @@ name: "CTSA035"
 title: "Трансформатор тока"
 type: "Трансформатор тока до 755 А, 35 мм,"
 sub_title: "На ток до 755 А, 35 мм диаметр провода"
-cover: "ctsa035/ctsa035_front.jpeg"
-catalogCover: "ctsa035/ctsa035_front.jpeg"
+cover: "ct-yuanxing-ctsa035-400a/ct-yuanxing-ctsa035-400a_front.jpeg"
+catalogCover: "ct-yuanxing-ctsa035-400a/ct-yuanxing-ctsa035-400a_front.jpeg"
 documentation: "https://wiki.wirenboard.com/wiki/CTSA035"
 meta: "Один разъёмный трансформатор тока для использования с измерителями серии WB-MAP."
 keywords: "WB-MAP, CTSA035, тт, трансформатор тока"
 images: [
-  ["ctsa035/ctsa035_front.jpeg"]
+  ["ct-yuanxing-ctsa035-400a/ct-yuanxing-ctsa035-400a_front.jpeg"]
 ]
 ---
 ::product
@@ -22,7 +22,7 @@ images: [
 #info
 ::product-section{title="Технические характеристики"}
 :photo{
-  src="ctsa035/ctsa035_current.png"
+  src="ct-yuanxing-ctsa035-400a/ct-yuanxing-ctsa035-400a_current.png"
   width="500px"
   float="right"
 }

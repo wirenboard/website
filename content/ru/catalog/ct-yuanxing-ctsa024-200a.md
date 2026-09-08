@@ -4,13 +4,13 @@ name: "CTSA024"
 title: "Трансформатор тока"
 type: "Трансформатор тока до 290 А, 24 мм,"
 sub_title: "На ток до 290 А, 24 мм диаметр провода"
-cover: "ctsa024/ctsa024_front.jpeg"
-catalogCover: "ctsa024/ctsa024_front.jpeg"
+cover: "ct-yuanxing-ctsa024-200a/ct-yuanxing-ctsa024-200a_front.jpeg"
+catalogCover: "ct-yuanxing-ctsa024-200a/ct-yuanxing-ctsa024-200a_front.jpeg"
 documentation: "https://wiki.wirenboard.com/wiki/CTSA024"
 meta: "Один разъёмный трансформатор тока для использования с измерителями серии WB-MAP."
 keywords: "WB-MAP, CTSA024, тт, трансформатор тока"
 images: [
-  ["ctsa024/ctsa024_front.jpeg"]
+  ["ct-yuanxing-ctsa024-200a/ct-yuanxing-ctsa024-200a_front.jpeg"]
 ]
 ---
 ::product
@@ -22,7 +22,7 @@ images: [
 #info
 ::product-section{title="Технические характеристики"}
 :photo{
-  src="ctsa024/ctsa024_current.png"
+  src="ct-yuanxing-ctsa024-200a/ct-yuanxing-ctsa024-200a_current.png"
   width="500px"
   float="right"
 }

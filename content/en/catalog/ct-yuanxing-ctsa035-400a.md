@@ -4,13 +4,13 @@ name: "CTSA035"
 title: "Current Transformer"
 type: "Current transformer up to 755 A, 35 mm,"
 sub_title: "Up to 755 A, 35 mm wire diameter"
-cover: "ctsa035/ctsa035_front.jpeg"
-catalogCover: "ctsa035/ctsa035_front.jpeg"
+cover: "ct-yuanxing-ctsa035-400a/ct-yuanxing-ctsa035-400a_front.jpeg"
+catalogCover: "ct-yuanxing-ctsa035-400a/ct-yuanxing-ctsa035-400a_front.jpeg"
 documentation: "https://wiki.wirenboard.com/wiki/CTSA035/en"
 meta: "One split core current transformer for use with WB-MAP series of energy meters."
 keywords: "WB-MAP, CTSA035, ct, Current Transformer"
 images: [
-  ["ctsa035/ctsa035_front.jpeg"]
+  ["ct-yuanxing-ctsa035-400a/ct-yuanxing-ctsa035-400a_front.jpeg"]
 ]
 ---
 ::product
@@ -22,7 +22,7 @@ Measured current from 5 to 755 A.
 #info
 ::product-section{title="Technical specifications"}
 :photo{
-  src="ctsa035/ctsa035_current_en.png"
+  src="ct-yuanxing-ctsa035-400a/ct-yuanxing-ctsa035-400a_current_en.png"
   width="500px"
   float="right"
 }

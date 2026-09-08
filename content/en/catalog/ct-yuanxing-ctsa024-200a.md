@@ -4,13 +4,13 @@ name: "CTSA024"
 title: "Current Transformer"
 type: "Current transformer up to 290 A, 24 mm,"
 sub_title: "Up to 290 A, 24 mm wire diameter"
-cover: "ctsa024/ctsa024_front.jpeg"
-catalogCover: "ctsa024/ctsa024_front.jpeg"
+cover: "ct-yuanxing-ctsa024-200a/ct-yuanxing-ctsa024-200a_front.jpeg"
+catalogCover: "ct-yuanxing-ctsa024-200a/ct-yuanxing-ctsa024-200a_front.jpeg"
 documentation: "https://wiki.wirenboard.com/wiki/CTSA024/en"
 meta: "One split core current transformer for use with WB-MAP series of energy meters."
 keywords: "WB-MAP, CTSA024, ct, Current Transformer"
 images: [
-  ["ctsa024/ctsa024_front.jpeg"]
+  ["ct-yuanxing-ctsa024-200a/ct-yuanxing-ctsa024-200a_front.jpeg"]
 ]
 ---
 ::product
@@ -22,7 +22,7 @@ Measured current from 0.35 to 290 A.
 #info
 ::product-section{title="Technical specifications"}
 :photo{
-  src="ctsa024/ctsa024_current_en.png"
+  src="ct-yuanxing-ctsa024-200a/ct-yuanxing-ctsa024-200a_current_en.png"
   width="500px"
   float="right"
 }
