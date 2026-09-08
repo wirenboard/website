@@ -29,7 +29,7 @@ Measured current from 0.8 to 140 A.
 - Measured current from 0.8 to 140 A.
 - Rated primary current 80 A.
 - Accuracy class 0.2S.
-- Transformation ratio 1:2500 (exact value on the label).
+- Transformation ratio 1:2500.
 - Wire outer diameter up to 12 mm.
 - Core type — solid.
 - Core material — ferrite.
