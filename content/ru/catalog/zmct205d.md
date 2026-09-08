@@ -4,13 +4,13 @@ name: "ZMCT205D"
 title: "Трансформатор тока"
 type: "Трансформатор тока до 15 А, 6.5 мм,"
 sub_title: "На ток до 15 А, 6.5 мм диаметр провода"
-cover: "zmct205d/zmct205d_front.jpeg"
-catalogCover: "zmct205d/zmct205d_front.jpeg"
+cover: "zmct205d/zmct205d_front.png"
+catalogCover: "zmct205d/zmct205d_front.png"
 documentation: "https://wiki.wirenboard.com/wiki/ZMCT205D"
 meta: "Один неразъёмный трансформатор тока для использования с измерителями серии WB-MAP."
 keywords: "WB-MAP, ZMCT205D, тт, трансформатор тока"
 images: [
-  ["zmct205d/zmct205d_front.jpeg"]
+  ["zmct205d/zmct205d_front.png"]
 ]
 ---
 ::product
