@@ -30,13 +30,87 @@ use_cases: []
 
 The WB-MGE v.3 gateway is designed to connect devices with RS‑485 and WBIO (I/O modules) interfaces over Ethernet and Wi‑Fi.
 
-It provides two independent RS‑485—TCP channels; each can operate in one of the following modes:
-1. Modbus TCP — for working with RS‑485 Modbus RTU devices.
-2. Raw TCP Bridge — for any serial RS‑485 protocol (e.g., Modbus RTU, DOOYA, AKKO, etc.).
+Two independent RS‑485 ports, and each of them can do:
+- **Modbus RTU gateway** — Modbus TCP ⇄ Modbus RTU conversion, up to 8 clients per port.
+- **Transparent mode** — any protocol over RS‑485 (Modbus RTU, DOOYA, AKKO and so on) is passed through as-is.
+- **Sniffer and master emulator** — real-time decoding of the bus exchange and manual request sending.
+- **Caching multimaster** — non-invasive data collection from someone else's line, served through a separate Modbus TCP server.
+- **Repeater** — relaying between the RS‑485 ports: range extension, branching, noise isolation.
+- **Transmission disable (TX)** — receive-only mode for a safe connection to a live system.
 
 WBIO modules connect via the side I/O Bus connector and are exposed as a Modbus device on the RS485‑2 bus with an address printed on the module label. WBIO support can be disabled in the web interface to free the port for any protocols.
 
 #info
+::product-section{title="Modbus RTU gateway"}
+
+:photo{
+  src="wb-mge-v3/16_WB-MGEv3_Gateway_ENG.png"
+  float="right"
+  width="500px"
+}
+
+The core job of the device is to put an RS‑485 bus on the network. The gateway accepts **Modbus TCP** requests over Ethernet or Wi‑Fi, converts them to **Modbus RTU** and sends them to the line, then converts the device's reply back to Modbus TCP and returns it to the client.
+- **Standard Modbus TCP** — works with any PLC, SCADA or software that speaks Modbus TCP: no drivers, no middleware.
+- **Two independent channels** — each RS‑485 port has its own TCP port (502 and 503 by default), its own mode and its own line settings.
+- **Up to 8 clients per port** — several systems can talk to the same port at once (in Modbus TCP mode only).
+
+If RS‑485 carries something other than Modbus, the port can be switched to transparent mode — packets are then passed through as-is.
+
+::
+
+::product-section{title="Sniffer and master emulator"}
+
+:photo{
+  src="wb-mge-v3/12_WB-MGEv3_Sniffer_ENG.png"
+  float="right"
+  width="500px"
+}
+
+A built-in bus analyser: in sniffer mode WB‑MGE v.3 passively listens to the RS‑485 line and shows the whole exchange in the web interface in real time — decoded into packets, not raw bytes.
+- **Modbus and Fast Modbus decoding** — for every packet you see the sender (master or slave), the device address, the function code, the data and the CRC check result.
+- **Filters and statistics** — filter by Slave ID and function code, packet and error counters: you immediately see who went silent and where CRC errors pile up.
+- **Master emulator** — you can send a read or write request by hand and look at the device's reply; the CRC is calculated automatically.
+- **CSV export** — a capture can be exported, analysed later or attached to a support request.
+
+Commissioning and troubleshooting on site no longer need a separate bus analyser and a laptop with an adapter.
+
+::
+
+::product-section{title="Caching multimaster"}
+
+:photo{
+  src="wb-mge-v3/13_WB-MGEv3_Cache_ENG.png"
+  float="right"
+  width="500px"
+}
+
+A classic RS‑485 limitation is that a line may have only **one master**. If a controller is already polling the bus, a second master breaks the exchange.
+
+WB‑MGE v.3 removes that limit: it passively listens to someone else's traffic, remembers register values and serves them through a separate Modbus TCP server — without putting a single packet on the line.
+- **Non-invasive connection** — you can add SCADA, analytics or a second controller to a system that is already running, changing nothing in it.
+- **Zero extra bus load** — data is served from the cache instead of being polled again, so the main master's polling rate does not suffer.
+- **Freshness control** — values have a timeout: if the data is stale the client gets an error instead of a stale number.
+- **Register map** — the web interface shows which devices and registers were discovered on the bus and the statistics for them; the map can be exported to CSV or JSON.
+
+::
+
+::product-section{title="RS-485 line repeater"}
+
+:photo{
+  src="wb-mge-v3/14_WB-MGEv3_Repeater_ENG.png"
+  float="right"
+  width="500px"
+}
+
+The two RS‑485 ports can be linked together: the gateway transparently relays packets from RS485‑1 to RS485‑2 and back, working as a line repeater.
+- **Longer bus** — a segment beyond the allowed length is attached through the repeater instead of being stretched as a single line.
+- **Branching** — a separate branch with its own devices can be taken off the trunk without breaking the topology.
+- **Noise isolation** — each segment gets its own clean line with its own terminators, and noise from one segment does not travel into the other.
+
+Relaying works byte by byte and does not depend on the protocol, and the web interface shows live relay statistics.
+
+::
+
 ::product-section{title="Ethernet and Wi‑Fi"}
 :photo{
   src="wb-mge-v3/1_WB-MGEv3_Ethernet_Wi-Fi_ENG.png"
@@ -81,6 +155,22 @@ Each RS‑485 port provides software‑switchable:
 - **Failsafe bias** — 560 Ω pull resistors that bias the line to avoid undefined levels when all transmitters are idle. Enable if the module acts as a master; otherwise disable.
 
 This simplifies wiring and adds flexibility during design and commissioning.
+
+::
+
+::product-section{title="Transmission disable (TX)"}
+
+:photo{
+  src="wb-mge-v3/15_WB-MGEv3_TX_ENG.png"
+  float="right"
+  width="500px"
+}
+
+On any RS‑485 port the transmitter can be disabled in software — the gateway physically switches to receive-only and cannot put a single bit on the line.
+
+This gives you a **guaranteed safe connection to a live system**: even if a setting is wrong or the software misbehaves, the gateway will not interfere with someone else's exchange or bring down the bus at a working site.
+
+The mode is especially useful together with the sniffer and the caching multimaster — when you need to pull data off someone else's line without disturbing anything.
 
 ::
 
@@ -194,7 +284,7 @@ Users can upload a new version directly through the web interface — no program
 
 ::
 
-::product-section{title="DIY — Experiment with Firmware"}
+::product-section{title="Open‑Source Firmware — Sources on GitHub"}
 
 :photo{
   src="wb-mge-v3/11_WB-MGEv3_DIY.png"
@@ -202,14 +292,16 @@ Users can upload a new version directly through the web interface — no program
   width="500px"
 }
 
-WB‑MGE v.3 is based on an **ESP32** microcontroller and ships with our stock firmware that implements gateway functionality.
+The stock firmware of WB‑MGE v.3 is **fully open source** (MIT‑WB license); its source code is published on [GitHub](https://github.com/wirenboard/wb-mge).
 
-This firmware is published as [open source](https://github.com/wirenboard/wb-mge), and you can use it as a base and add any functionality you need.
-We've added a **USB‑C** connector and a USB-UART bridge inside, so you only need a computer and a **USB‑C** cable to flash your software.
+Open source is your safeguard and independence:
+- **Transparency and trust** — the firmware can be reviewed and security‑audited: you see exactly what the gateway does and how the code is written. We have over 1,600 automated tests, for example — our code quality is backed by evidence.
+- **No vendor lock‑in** — need special logic, your own protocol, or a custom integration? You extend the firmware yourself instead of waiting on the manufacturer or being tied to its roadmap.
+- **Grow it for your tasks** — it's easy to add your own functionality: MQTT support, non‑standard protocols, or your own business logic.
 
-The documentation provides full GPIO descriptions, as well as examples for the **ESPHome** platform.
+Everything you need is already inside: a **USB‑C** connector and a USB-UART bridge, so flashing your own build takes only a computer and a **USB‑C** cable. The documentation provides a full GPIO description.
 
-Whatever you try, you can always restore our stock gateway firmware and use the device as intended. The warranty remains valid.
+And at any time you can restore our stock gateway firmware and use the device as intended — **the warranty remains valid**.
 
 ::
 

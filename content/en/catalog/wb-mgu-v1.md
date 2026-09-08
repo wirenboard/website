@@ -22,9 +22,12 @@ use_cases: []
 #description
 **Attention!** This is a "DIY device". It is primarily intended for prototyping, debugging, and developing devices based on it — not for use in projects "as is", unlike the rest of our catalog.
 
-The difference can be illustrated by comparing MGE and MGU (devices on the same hardware base, differing in that MGU has a WBE2 module slot instead of the second port, no MIO converter, and added PSRAM memory):
-WB-MGEv3: you buy the device, install it in the cabinet, enable TCP gateway mode, and use it.
-WB-MGUv1: you buy the device, connect it to a relay via Modbus, then extend the firmware to support MQTT, and get relay control from Home Assistant. Or install a GPS module, extend the firmware, and get a personal Stratum 1 server. Or build a module with an I2S amplifier and flash Wi-Fi radio firmware. Or order a batch from us — for example, a specific OpenTherm-to-MQTT converter (in that case we develop the firmware for your order).
+If you need an RS-485 ⇄ Ethernet/Wi-Fi gateway, that is **[WB-MGE v.3](/en/contents/product/wb-mge-v3/)** — you can just buy it at any time.
+
+The difference between MGE and MGU (devices on the same hardware base, differing in that MGU has a WBE2 module slot instead of the second port, no MIO converter, and added PSRAM memory):
+
+- **WB-MGEv3**: you buy the device, install it in the cabinet, enable TCP gateway mode, and use it.
+- **WB-MGUv1**: you buy the device, connect it to a relay via Modbus, then extend the firmware to support MQTT, and get relay control from Home Assistant. Or install a GPS module, extend the firmware, and get a personal Stratum 1 server. Or build a module with an I2S amplifier and flash Wi-Fi radio firmware. Or order a batch from us — for example, a specific OpenTherm-to-MQTT converter (in that case we develop the firmware for your order).
 
 If you want to order — write to us with a few words about how you plan to use the device. Even "just curious" is enough. We just want to make sure you are consciously ordering a DIY kit, so there is no "I thought all modules already work" situation.
 
