@@ -4,14 +4,14 @@ name: "KCT-6"
 title: "Трансформатор тока"
 type: "Трансформатор тока до 27 А, 5.5 мм,"
 sub_title: "На ток до 27 А, 5.5 мм диаметр провода"
-cover: "kct-6/kct-6_front.jpeg"
-catalogCover: "kct-6/kct-6_front.jpeg"
+cover: "ct-heyi-kct-06/ct-heyi-kct-06_front.jpeg"
+catalogCover: "ct-heyi-kct-06/ct-heyi-kct-06_front.jpeg"
 documentation: "https://wiki.wirenboard.com/wiki/KCT-6"
 meta: "Один разъёмный трансформатор тока для использования с измерителями серии WB-MAP."
 keywords: "WB-MAP, KCT-6, тт, трансформатор тока"
 images: [
-  ["kct-6/kct-6_front.jpeg"],
-  ["kct-6/kct-6_1.jpeg"]
+  ["ct-heyi-kct-06/ct-heyi-kct-06_front.jpeg"],
+  ["ct-heyi-kct-06/ct-heyi-kct-06_1.jpeg"]
 ]
 ---
 ::product
@@ -23,7 +23,7 @@ images: [
 #info
 ::product-section{title="Технические характеристики"}
 :photo{
-  src="kct-6/kct-6_current.png"
+  src="ct-heyi-kct-06/ct-heyi-kct-06_current.png"
   width="500px"
   float="right"
 }
