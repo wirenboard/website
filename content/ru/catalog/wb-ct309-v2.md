@@ -4,13 +4,13 @@ name: "WB-CT309 v.2"
 title: "Сборка трансформаторов тока"
 type: "Сборка трансформаторов тока до 125 А, 9.5 мм,"
 sub_title: "Три неразъёмных трансформатора на ток до 125 А"
-cover: "wb-ct309-v2/wb-ct309-v2_front.png"
-catalogCover: "wb-ct309-v2/wb-ct309-v2_front.png"
+cover: "wb-ct309-v2/wb-ct309-v2_front.jpeg"
+catalogCover: "wb-ct309-v2/wb-ct309-v2_front.jpeg"
 documentation: "https://wiki.wirenboard.com/wiki/WB-CT309_v.2_Current_Transformer_Strip"
 meta: "Сборка из трёх неразъёмных трансформаторов тока для использования с измерителями серии WB-MAP."
 keywords: "WB-MAP, WB-CT309, ZMCT123, тт, трансформатор тока, сборка трансформаторов"
 images: [
-  ["wb-ct309-v2/wb-ct309-v2_front.png"],
+  ["wb-ct309-v2/wb-ct309-v2_front.jpeg"],
   ["wb-ct309-v2/wb-ct309-v2_1.jpeg"],
   ["wb-ct309-v2/wb-ct309-v2_2.jpeg"],
   ["wb-ct309-v2/wb-ct309-v2_3.jpeg"]

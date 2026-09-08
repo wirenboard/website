@@ -4,13 +4,13 @@ name: "WB-CT309 v.2"
 title: "Current Transformer Strip"
 type: "Current transformer strip up to 125 A, 9.5 mm,"
 sub_title: "Three solid core transformers rated up to 125 A"
-cover: "wb-ct309-v2/wb-ct309-v2_front.png"
-catalogCover: "wb-ct309-v2/wb-ct309-v2_front.png"
+cover: "wb-ct309-v2/wb-ct309-v2_front.jpeg"
+catalogCover: "wb-ct309-v2/wb-ct309-v2_front.jpeg"
 documentation: "https://wiki.wirenboard.com/wiki/WB-CT309_v.2_Current_Transformer_Strip/en"
 meta: "A strip of three solid core current transformers for use with WB-MAP series of energy meters."
 keywords: "WB-MAP, WB-CT309, ZMCT123, ct, Current Transformer, transformer strip"
 images: [
-  ["wb-ct309-v2/wb-ct309-v2_front.png"],
+  ["wb-ct309-v2/wb-ct309-v2_front.jpeg"],
   ["wb-ct309-v2/wb-ct309-v2_1.jpeg"],
   ["wb-ct309-v2/wb-ct309-v2_2.jpeg"],
   ["wb-ct309-v2/wb-ct309-v2_3.jpeg"]
