@@ -17,7 +17,7 @@ images: [
 #description
 A strip of three solid core current transformers for use with WB-MAP series of energy meters. Spaced 1 DIN module apart.
 
-Solid core transformers have a wide operating range — accuracy class 0.5S is maintained for a rated current of 5 A and a maximum of 125 A. They can therefore be used both for direct current measurement and downstream of measuring transformers with a 5 A secondary.
+Solid core transformers have a wide operating range — accuracy class 0.5S is maintained for a rated current of 15 A and a maximum of 125 A. They can therefore be used both for direct current measurement and downstream of measuring transformers with a 15 A secondary.
 
 #info
 ::product-section{title="Technical specifications"}
