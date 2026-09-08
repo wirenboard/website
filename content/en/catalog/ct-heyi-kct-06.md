@@ -4,14 +4,14 @@ name: "KCT-6"
 title: "Current Transformer"
 type: "Current transformer up to 27 A, 5.5 mm,"
 sub_title: "Up to 27 A, 5.5 mm wire diameter"
-cover: "kct-6/kct-6_front.jpeg"
-catalogCover: "kct-6/kct-6_front.jpeg"
+cover: "ct-heyi-kct-06/ct-heyi-kct-06_front.jpeg"
+catalogCover: "ct-heyi-kct-06/ct-heyi-kct-06_front.jpeg"
 documentation: "https://wiki.wirenboard.com/wiki/KCT-6/en"
 meta: "One split core current transformer for use with WB-MAP series of energy meters."
 keywords: "WB-MAP, KCT-6, ct, Current Transformer"
 images: [
-  ["kct-6/kct-6_front.jpeg"],
-  ["kct-6/kct-6_1.jpeg"]
+  ["ct-heyi-kct-06/ct-heyi-kct-06_front.jpeg"],
+  ["ct-heyi-kct-06/ct-heyi-kct-06_1.jpeg"]
 ]
 ---
 ::product
@@ -23,7 +23,7 @@ Measured current from 0.2 to 27 A.
 #info
 ::product-section{title="Technical specifications"}
 :photo{
-  src="kct-6/kct-6_current_en.png"
+  src="ct-heyi-kct-06/ct-heyi-kct-06_current_en.png"
   width="500px"
   float="right"
 }
