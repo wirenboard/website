@@ -1,15 +1,15 @@
 ---
-article: "WBIO-DI-HVD-8"
-cover: "wbio-di-hvd-8/wbio-di-hvd-8-top.png"
-catalogCover: "wbio-di-hvd-8/wbio-di-hvd-8-main.png"
-documentation: "https://wiki.wirenboard.com/wiki/WBIO-DI-HVD-8_8-Channel_230V_Detector_Module"
-meta: "Модуль ввода-вывода WBIO-DI-HVD-8 — 8 дискретных входов наличия 230В с групповой гальванической развязкой."
-keywords: "Wiren Board, WBIO, WBIO-DI-HVD-8, дискретные входы, детектор напряжения 230В, модуль ввода-вывода"
+article: "WBIO-DI-HVD-16"
+cover: "wbio-di-hvd-16/wbio-di-hvd-16-top.png"
+catalogCover: "wbio-di-hvd-16/wbio-di-hvd-16-main.png"
+documentation: "https://wiki.wirenboard.com/wiki/WBIO-DI-HVD-16_16-Channel_230V_Detector_Module"
+meta: "Модуль ввода-вывода WBIO-DI-HVD-16 — 16 дискретных входов наличия 230В с групповой гальванической развязкой."
+keywords: "Wiren Board, WBIO, WBIO-DI-HVD-16, дискретные входы, детектор напряжения 230В, модуль ввода-вывода"
 images: [
-  ["wbio-di-hvd-8/wbio-di-hvd-8-top.png"],
-  ["wbio-di-hvd-8/wbio-di-hvd-8-main.png"],
-  ["wbio-di-hvd-8/wbio-di-hvd-8-connection.png"],
-  ["wbio-di-hvd-8/wbio-di-hvd-8-pcb.png"]
+  ["wbio-di-hvd-16/wbio-di-hvd-16-top.png"],
+  ["wbio-di-hvd-16/wbio-di-hvd-16-main.png"],
+  ["wbio-di-hvd-16/wbio-di-hvd-16-connection.png"],
+  ["wbio-di-hvd-16/wbio-di-hvd-16-pcb.png"]
 ]
 use_cases: []
 ---
@@ -23,11 +23,11 @@ use_cases: []
 
 ::product-section{title="Дискретные входы"}
 :photo{
-  src="wbio-di-hvd-8/wbio-di-hvd-8-connection.png"
+  src="wbio-di-hvd-16/wbio-di-hvd-16-connection.png"
   width="250px"
   float="right"
 }
-- 8 дискретных входов, разделённых на 2 изолированные группы;
+- 16 дискретных входов, разделённых на 2 изолированные группы;
 - напряжение срабатывания от ~110 В;
 - возможность работы в трёхфазных сетях ~380/400 В;
 - напряжение изоляции между входами и контроллером ~5000 В.
