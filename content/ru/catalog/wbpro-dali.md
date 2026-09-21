@@ -35,7 +35,7 @@ use_cases: []
 ::
 ::product-section{title="Аппаратная часть"}
 :photo{
-  src="wbpro-dali/wb-dali-board.png"
+  src="wbpro-dali/wbpro-dali-board.png"
   width="500px"
   float="right"
 }
@@ -70,7 +70,7 @@ use_cases: []
 ::
 ::product-section{title="Настройка"}
 :photo{
-  src="wbpro-dali/wb-dali-configuration.png"
+  src="wbpro-dali/wbpro-dali-configuration.png"
   width="500px"
   float="right"
 }
