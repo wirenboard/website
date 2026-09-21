@@ -1,5 +1,5 @@
 ---
-district: [volga]
+district: [volga, center]
 tags: [smart_home]
 coordinates: [53.503584, 49.380777]
 title: Автоматика.ру
