@@ -48,6 +48,19 @@ Combine data from multiple controllers into a single dashboard for an overview o
     width="500"
 }
 
+## Access to Controller Service Web Interfaces
+
+Open the web interfaces of services running on the controller — Home Assistant, Node-RED, Zigbee2MQTT, and your own applications — via a direct link, without port forwarding or a VPN. Each service gets its own address in the form `https://XXXXXXXX-PPPP.apps.wirenboard.cloud`, accessible to organization users from any device.  
+
+You can open up to 20 web services per controller. Only HTTP/HTTPS services are proxied — the feature does not work with MQTT, Modbus TCP, or other protocols. Services cannot use system ports: 22 (SSH), 80 (built-in web interface), 1883, 8883, 18883–18886 (MQTT), and 6720 (knxd). All other ports can be used without restrictions.
+
+:gallery{
+    :data='[
+        ["cloud/services-buttons.png", "Quick access buttons for services"],
+        ["cloud/services-add.png", "Adding a service"]
+    ]'
+}
+
 ## Multi-user Access  
 Invite colleagues to the organization and share access to controllers. A single user can belong to multiple organizations, making it convenient for companies managing multiple installations.  
 
