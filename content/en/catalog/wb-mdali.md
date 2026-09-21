@@ -1,13 +1,13 @@
 ---
 article: WBPRO-DALI
-cover: wb-dali/wb-dali-frontal-view.png
-catalogCover: wb-dali/wb-dali-side-view.png
+cover: wb-mdali/wb-dali-frontal-view.png
+catalogCover: wb-mdali/wb-dali-side-view.png
 meta: 3-Channel
 keywords: 3-Channel, DALI, WBPRO, Modbus-DALI
 images: [
-  ["wb-dali/wb-dali-frontal-view.png"],
-  ["wb-dali/wb-dali-board.png"],
-  ["wb-dali/wb-dali-side-view.png"]
+  ["wb-mdali/wb-dali-frontal-view.png"],
+  ["wb-mdali/wb-dali-board.png"],
+  ["wb-mdali/wb-dali-side-view.png"]
 ]
 use_cases: []
 ---
@@ -19,7 +19,7 @@ It lets you integrate modern lighting systems (LED drivers, sensors, switches, b
 ## Key features
 ::product-section{title="Advantages"}
 :photo{
-  src="wb-dali/wb-dali-side-view.png"
+  src="wb-mdali/wb-dali-side-view.png"
   width="400px"
   float="right"
 }
@@ -35,7 +35,7 @@ Supports Fast Modbus ⚡, which delivers input states and press counter values t
 ::
 ::product-section{title="Hardware"}
 :photo{
-  src="wb-dali/wb-dali-board.png"
+  src="wb-mdali/wb-dali-board.png"
   width="500px"
   float="right"
 }
@@ -54,7 +54,7 @@ Technical specifications:
 ::
 ::product-section{title="Fast Modbus support"}
 :photo{
-  src="wb-dali/wb-dali-fast-modbus-support.png"
+  src="wb-mdali/wb-dali-fast-modbus-support.png"
   width="500px"
   float="right"
 }
@@ -70,7 +70,7 @@ Enabling these extra capabilities is seamless for the user — if a device suppo
 ::
 ::product-section{title="Configuration"}
 :photo{
-  src="wb-dali/wb-dali-configuration.png"
+  src="wb-mdali/wb-dali-configuration.png"
   width="500px"
   float="right"
 }

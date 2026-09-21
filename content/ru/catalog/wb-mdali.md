@@ -1,13 +1,13 @@
 ---
 article: WBPRO-DALI
-cover: wb-dali/wb-dali-frontal-view.png
-catalogCover: wb-dali/wb-dali-side-view.png
+cover: wb-mdali/wb-dali-frontal-view.png
+catalogCover: wb-mdali/wb-dali-side-view.png
 meta: 3-канальный
 keywords: 3-канальный, DALI, WBPRO, Modbus-DALI
 images: [
-  ["wb-dali/wb-dali-frontal-view.png"],
-  ["wb-dali/wb-dali-board.png"],
-  ["wb-dali/wb-dali-side-view.png"]
+  ["wb-mdali/wb-dali-frontal-view.png"],
+  ["wb-mdali/wb-dali-board.png"],
+  ["wb-mdali/wb-dali-side-view.png"]
 ]
 use_cases: []
 ---
@@ -19,7 +19,7 @@ use_cases: []
 ## Основные характеристики
 ::product-section{title="Преимущества"}
 :photo{
-  src="wb-dali/wb-dali-side-view.png"
+  src="wb-mdali/wb-dali-side-view.png"
   width="400px"
   float="right"
 }
@@ -35,7 +35,7 @@ use_cases: []
 ::
 ::product-section{title="Аппаратная часть"}
 :photo{
-  src="wb-dali/wb-dali-board.png"
+  src="wb-mdali/wb-dali-board.png"
   width="500px"
   float="right"
 }
@@ -70,7 +70,7 @@ use_cases: []
 ::
 ::product-section{title="Настройка"}
 :photo{
-  src="wb-dali/wb-dali-configuration.png"
+  src="wb-mdali/wb-dali-configuration.png"
   width="500px"
   float="right"
 }
