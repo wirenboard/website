@@ -1,5 +1,5 @@
 ---
-article: WB-DALI
+article: WB-DALI3
 cover: wb-dali/wb-dali-frontal-view.png
 catalogCover: wb-dali/wb-dali-side-view.png
 meta: 3-канальный
