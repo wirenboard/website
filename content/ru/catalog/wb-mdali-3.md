@@ -1,7 +1,12 @@
 ---
 article: WB-DALI3
+name: WB-DALI3
+type: Шлюз DALI 3-канальный
+title: Modbus-DALI шлюз
+sub_title: 3-канальный
 cover: wb-dali/wb-dali-frontal-view.png
 catalogCover: wb-dali/wb-dali-side-view.png
+documentation: https://wiki.wirenboard.com/wiki/index.php?title=WB-DALI_Modbus-to-DALI_Gateway_(3-channel)
 meta: 3-канальный
 keywords: 3-канальный, DALI, WBPRO, Modbus-DALI
 images: [

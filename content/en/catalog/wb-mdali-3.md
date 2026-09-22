@@ -1,7 +1,12 @@
 ---
 article: WB-DALI3
+name: WB-DALI3
+type: DALI Gateway 3-channel
+title: Modbus-DALI Gateway
+sub_title: 3-channel
 cover: wb-mdali/wb-dali-frontal-view.png
 catalogCover: wb-mdali/wb-dali-side-view.png
+documentation: https://wiki-wirenboard-com.translate.goog/wiki/index.php?title=WB-DALI_Modbus-to-DALI_Gateway_(3-channel)&_x_tr_sl=ru&_x_tr_tl=en&_x_tr_hl=ru&_x_tr_pto=wapp
 meta: 3-Channel
 keywords: 3-Channel, DALI, WBPRO, Modbus-DALI
 images: [
