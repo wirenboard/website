@@ -57,7 +57,7 @@ const isRussia = computed(() => country.value === RUSSIA_ID);
 
 const availableDeliveries = computed(() => delivery.value?.available ?? []);
 
-const isTaxi = computed(() => selectedDelivery.value?.type === DeliveryType.Taxi);
+const isMoscowDelivery = computed(() => selectedDelivery.value?.id === 'msk');
 
 const hasSavedAddress = ['city', 'street', 'house', 'postcode'].some(k => deliveryAddress.value[k]);
 const addressMode = ref<'search' | 'fields'>(isRussia.value && !hasSavedAddress ? 'search' : 'fields');
@@ -89,7 +89,7 @@ const selectItems = computed(() => {
       let price = '';
       if (item.type !== DeliveryType.Pickup && item.price != null) {
         price = item.price === 0 ? ` • ${t('freeDelivery')}` : ` • ${t('price', { n: item.price })}`;
-        if (item.type === DeliveryType.Taxi) price += `, ${t('moscowOnly')}`;
+        if (item.id === 'msk') price += `, ${t('moscowOnly')}`;
       }
       if (item.daysMin !== item.daysMax) return `${item.daysMin}–${item.daysMax} ${t('days', item.daysMax)}${price}`;
       return `${item.daysMin} ${t('days', item.daysMin)}${price}`;
@@ -126,7 +126,7 @@ watch(pending, (value) => {
 
 watch(selectedDeliveryType, () => {
   if (selectedDelivery.value?.type === DeliveryType.Taxi) {
-    deliveryAddressDirty.value = { country: country.value, city: 'Москва' };
+    deliveryAddressDirty.value = { country: country.value, city: isMoscowDelivery.value ? 'Москва' : undefined };
     deliveryAddressDetails.value = {};
     addressMode.value = 'fields';
   }
@@ -300,9 +300,16 @@ const openCdekWidget = async () => {
           </p>
         </template>
       </div>
-      <div v-else-if="isTaxi" class="fulfillment-taxiAddress">
+      <div v-else-if="selectedDelivery?.type === DeliveryType.Taxi" class="fulfillment-taxiAddress">
         <div class="fulfillment-cityRow">
-          <Input id="city" v-model="deliveryAddressDirty.city" :label="t('city')" disabled />
+          <Input
+            id="city"
+            v-model="deliveryAddressDirty.city"
+            :label="t('city')"
+            :disabled="isMoscowDelivery"
+            :required="!isMoscowDelivery"
+            :errorMessage="fieldErrors?.city"
+          />
         </div>
         <div class="fulfillment-streetRow">
           <Input id="street" v-model="deliveryAddressDirty.street" :label="t('street')" required :errorMessage="fieldErrors?.street" />
