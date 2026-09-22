@@ -6,7 +6,7 @@ meta: 3-канальный
 keywords: 3-канальный, DALI, WBPRO, Modbus-DALI
 images: [
   ["wbpro-dali/wbpro-dali-frontal-view.png"],
-  ["wbpro-dali/wb-dali-board.png"],
+  ["wbpro-dali/wbpro-dali-board.png"],
   ["wbpro-dali/wbpro-dali-side-view.png"]
 ]
 use_cases: []
@@ -65,9 +65,6 @@ use_cases: []
 
 Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
 ::
-:include{
-  path="/catalog/includes/quality_control"}
-::
 ::product-section{title="Настройка"}
 :photo{
   src="wbpro-dali/wbpro-dali-configuration.png"
@@ -81,4 +78,7 @@ use_cases: []
 - настраивать кривую управления яркостью (линейная / по стандарту DALI);
 - запускать идентификацию устройств (мигание светильником);
 - просматривать статус и диагностику шины.
+::
+:include{
+  path="/catalog/includes/quality_control"}
 ::
