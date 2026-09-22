@@ -1,5 +1,5 @@
 ---
-article: WBPRO-DALI
+article: WB-DALI
 cover: wb-mdali/wb-dali-frontal-view.png
 catalogCover: wb-mdali/wb-dali-side-view.png
 meta: 3-Channel
