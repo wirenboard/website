@@ -59,7 +59,7 @@ use_cases: []
 ::
 ::product-section{title="Поддержка Быстрого Modbus"}
 :photo{
-  src="wb-mcm8hv/wb-mcm8hv-fast-modbus-support.png"
+  src="wb-dali/wb-dali-fast-modbus-support.png"
   width="500px"
   float="right"
 }
@@ -69,9 +69,6 @@ use_cases: []
 - разрешение коллизий адресов на шине.
 
 Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
-::
-:include{
-  path="/catalog/includes/quality_control"}
 ::
 ::product-section{title="Настройка"}
 :photo{
@@ -86,4 +83,7 @@ use_cases: []
 - настраивать кривую управления яркостью (линейная / по стандарту DALI);
 - запускать идентификацию устройств (мигание светильником);
 - просматривать статус и диагностику шины.
+::
+:include{path="/catalog/includes/quality_control" withSeparator="true"}
+:include{path="/catalog/includes/certificates"}
 ::
