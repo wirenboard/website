@@ -70,9 +70,6 @@ In addition to standard Modbus RTU, all Wiren Board devices support the [Fast Mo
 
 Enabling these extra capabilities is seamless for the user — if a device supports the extension, the controller's driver communicates with it over Fast Modbus; if the device knows nothing about the extension, it works over standard Modbus RTU.
 ::
-:include{
-  path="/catalog/includes/quality_control"}
-::
 ::product-section{title="Configuration"}
 :photo{
   src="wb-mdali/wb-dali-configuration.png"
@@ -86,4 +83,6 @@ On a Wiren Board controller, you can use the web interface to:
 - configure the brightness control curve (linear / DALI standard);
 - run device identification (light flashing);
 - view bus status and diagnostics.
+::
+:include{path="/catalog/includes/quality_control" withSeparator="true"}
 ::
