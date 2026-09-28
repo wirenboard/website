@@ -320,7 +320,7 @@ function parsePropsString(str) {
   let match;
   while ((match = regex.exec(str))) {
     const key = match[1];
-    const rawValue = match[3] || match[4];
+    const rawValue = match[3] ?? match[4] ?? '';
     const isExpression = match[0].startsWith(':');
     let value = rawValue.trim();
 
