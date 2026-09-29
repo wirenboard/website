@@ -18,7 +18,7 @@ Compatible with controllers starting from revision 8.5.2E.
 
 ## MAIN FEATURES
 
-::product-section{title=""}
+::product-section{title="Technical specifications"}
 :photo{
   src="wbe2-hdmi/wbe2-hdmi-1.png"
   width="500px"

@@ -3,8 +3,8 @@ article: "WB-MIO"
 cover: "wb-mio/cover.png"
 catalogCover: "wb-mio/catalog-cover.png"
 documentation: "https://wirenboard.com/wiki/WB-MIO_Modbus_Interface_Converter"
-meta: "Сoupler RS-485 bus WB-MIO"
-keywords: "Сoupler RS-485 bus WB-MIO"
+meta: "Coupler RS-485 bus WB-MIO"
+keywords: "Coupler RS-485 bus WB-MIO"
 ---
 ::product
 #description

@@ -34,6 +34,8 @@ Features:
   float="right"
 }
 
+Basic configuration:
+
 - 1.2 GHz Quad Core ARM Cortex A7 industrial-grade CPU
 - 1 GB DDR3 RAM
 - 8 GB industrial-grade eMMC Flash
@@ -41,9 +43,9 @@ Features:
 
 When ordering the controller, you can choose a version with 2 GB DDR3 RAM and 64 GB eMMC.
 
-The controller uses the open operating system Debian Linux 9, kernel 5.10, which provides ample opportunities for installing third-party software.
+The controller uses the open operating system Debian Linux 11, kernel 5.10, which provides ample opportunities for installing third-party software.
 
-The built-in software allows configuring the controller and devices connected to it, writing automation scripts, storing and viewing the archive of measurements.
+The built-in software allows configuring the controller and devices connected to it, writing automation scripts, storing and viewing the archive of measurements. [More about the controller software](https://wirenboard.com/en/pages/programmirovanie-kontrollerov/).
 ::
 
 ::product-section{title="Interfaces and Communications"}
@@ -53,7 +55,9 @@ The built-in software allows configuring the controller and devices connected to
   float="right"
 }
 
-- 1 × microSD slot, up to 25 MB / s
+In the minimum controller configuration:
+
+- 1 × microSD slot, up to 60 MB / s
 - 2 × Ethernet 10/100
 - 1 × USB Host
 - Wi-Fi 802.11n (AP, client)
@@ -77,11 +81,12 @@ Additionally, using extension modules:
   float="right"
 }
 
-The controller supports a large number of protocols:
+In its basic configuration, the controller supports a large number of protocols:
 
 - Modbus RTU - a wide range of devices: relays, dimmers, I / O modules
 - Somfy, WINDECO, DOOYA, AKKO - electric curtains
-- IEC 61107, DLMS / COSEM electricity meters
+- GOST IEC 61107, DLMS / COSEM, SPODES (GOST R 58940-2020), Mercury, Milur - electricity meters
+- Pulsar, IVTM - water and heat meters and sensors
 - 1-Wire - temperature sensors DS18B20
 - Wi-Fi, Bluetooth - sensors, gateways and devices
 - Modbus TCP, MQTT, SNMP, Zabbix API - data exchange with other controllers, servers and SCADA
@@ -114,61 +119,13 @@ The open platform makes it possible to install third-party software, or develop 
 A wide range of external modules will help you build a fault-tolerant automation system for any task, and support for various data transfer protocols will help you integrate the controller into an existing one.
 ::
 
-::product-section{title="Text dashboards"}
-:photo{
-  src="wiren-board-73/wiren-board-73-5.png"
-  width="500px"
-  float="right"
-}
+:include{path="/catalog/includes/controller_text_dashboards"}
 
-The main element of the text information panel is a widget. The widget allows you to display information from different sources in one place.
+:include{path="/catalog/includes/controller_graphic_dashboards"}
 
-The text dashboard can adapt to the small screen of a mobile device.
-::
+:include{path="/catalog/includes/controller_data_archive"}
 
-::product-section{title="Graphic dashboards"}
-:photo{
-  src="wiren-board-73/wiren-board-73-6.png"
-  width="500px"
-  float="right"
-}
-
-You can create interactive graphic dashboards based on SVG drawings.
-
-You can output information to text elements of SVG-picture, change the visibility and design of elements. You can also customize the reaction to user action: turn on the light, turn off the alarm, etc.
-
-To set up a graphical dashboard, the controller's web interface has a visual editor.
-
-Read more about dashboards and other features of the web interface in the article [Controller web interface Wiren Board](https://wirenboard.com/en/pages/wb-software/)
-::
-
-::product-section{title="Data archive"}
-:photo{
-  src="wiren-board-73/wiren-board-73-7.png"
-  width="500px"
-  float="right"
-}
-
-All data received by the controller are saved in an archive, the size of which can be configured.
-
-You can build graphs of historical data for several channels at the same time. You can interact with graphs: change the scale, make cursor measurements, etc.
-
-Data from the archive can be uploaded to CSV for analysis in third-party software.
-::
-
-::product-section{title="Automation scripts"}
-:photo{
-  src="wiren-board-73/wiren-board-73-8.png"
-  width="500px"
-  float="right"
-}
-
-The Wiren Board controller firmware contains a flexible scripting tool in Javascript-like language - WB-Rules.
-
-Using scripts, you can automate any action: control lighting, heating or a technological process.
-
-Scripts can be created and edited directly in the web interface, debugging is available in the console.
-::
+:include{path="/catalog/includes/controller_automation_scripts"}
 
 
 ::

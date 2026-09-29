@@ -1,5 +1,5 @@
 ---
-article: "WB-MAI2-mini / СС"
+article: "WB-MAI2-mini / CC"
 cover: "wb-mai2-mini-cc-v1/cover.png"
 catalogCover: "wb-mai2-mini-cc-v1/catalog-cover.png"
 documentation: "https://wirenboard.com/wiki/index.php/WB-MAI2_mini"

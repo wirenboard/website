@@ -20,21 +20,13 @@ The module is difficult to use, so **we do not recommend using it in new project
 
 ::product-section{title="Relay outputs"}
 - 4 groups of outputs
-- Rated current per channel: 3A (NC) / 10A (NO)
-- Pin configuration: SPCO/SPTT (see diagram)
+- Rated current per channel: 10 A NC/NO
+- Pin configuration: SPCO/SPTT (see [diagram](https://wirenboard.com/wiki/WBIO-DO-R10R-4_Relay_Module_For_Roller_Shutter#/media/Файл:Roll.png))
 ::
 
-::product-section{title="Interfaces"}
-- WBIO Bus
-- Can be connected to Modbus RTU and Ethernet via the WB-MIO module
-::
+:include{path="/catalog/includes/wbio_interfaces"}
 
-::product-section{title="Compatibility"}
-- Wiren Board 5 controllers
-- Wiren Board 6 controllers
-- Wiren Board 7 controllers
-- Bus couplers WB-MIO and WB-MIO-E
-::
+:include{path="/catalog/includes/wbio_compatibility_wb5-8"}
 
 
 ::

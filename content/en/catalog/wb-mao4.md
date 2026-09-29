@@ -51,7 +51,7 @@ Specifications:
 - Supply voltage: 9…28 V DC.
 - Interface: RS-485, Modbus RTU.
 - Extended operating temperature range: -40…+80 °C.
-- DIN rail housing, 2 modules.
+- DIN rail enclosure, 2M (36 x 90 x 58 mm).
 ::
 
 ::product-section{title="Manage lighting scenes"}
@@ -78,21 +78,7 @@ If the module is installed at a distance from the switchboard and connected to t
 For each output, you can configure its own safe state and the need to switch to it in case of loss of communication. In addition, you can enable or disable control from inputs in safe mode, for example, prohibit control from buttons when communication with the device is lost.
 ::
 
-::product-section{title="Fast Modbus support"}
-:photo{
-  src="wb-mao4/wb-mao4-5.png"
-  width="500px"
-  float="right"
-}
-
-All Wiren Board devices, in addition to the standard Modbus RTU, can work with its extension [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which adds new features:
-
-- instant polling of input states and measured values via events;
-- quick search for devices connected to the controller;
-- resolving address collisions on the bus.
-
-Additional features are enabled automatically - if the device supports extension, the controller driver will work with the device quickly Modbus if the device does not know anything about the extension - it will work using standard Modbus RTU.
-::
+:include{path="/catalog/includes/fast_modbus"}
 
 :include{path="/catalog/includes/quality_control"}
 

@@ -16,15 +16,10 @@ keywords: "4G modem"
 
 ## Technical Specifications
 
-::product-section{title="Main Features"}
-- Data transmission speed - up to 150 Mbps
-- Support for two nano-SIM cards
-- Alternate operation mode
-- Antenna included
-::
+:include{path="/catalog/includes/modem_4g_general"}
 
 ::product-section{title="Compatibility"}
-- Controllers Wiren Board 7.x
+- Controllers Wiren Board 7.2...7.3
 - Controllers Wiren Board 6.7...6.9
 ::
 

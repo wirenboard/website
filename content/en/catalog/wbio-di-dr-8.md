@@ -8,7 +8,7 @@ keywords: "I/O module , Ethernet, dry contact inputs"
 ::product
 #description
 
-**This model is **discontinued**. [**WBIO-DI-WD-14**](https://wirenboard.com/ru/product/WBIO-DI-WD-14/) is a recommended replacement.**
+**This model is **discontinued**. [**WBIO-DI-WD-14**](https://wirenboard.com/en/product/WBIO-DI-WD-14/) is a recommended replacement.**
 Designed for connecting pulse counters, buttons, switches and sensors with dry contact type intput.
 
 
@@ -23,16 +23,9 @@ Designed for connecting pulse counters, buttons, switches and sensors with dry c
 - Triggering current 1 mA
 ::
 
-::product-section{title="Interfaces"}
-- WBIO Bus
-- Can be connected to Modbus RTU and Ethernet via the WB-MIO module
-::
+:include{path="/catalog/includes/wbio_interfaces"}
 
-::product-section{title="Compatibility"}
-- Wiren Board 5 controllers
-- Wiren Board 6 controllers
-- Bus couplers WB-MIO and WB-MIO-E
-::
+:include{path="/catalog/includes/wbio_compatibility_wb5-6"}
 
 
 ::

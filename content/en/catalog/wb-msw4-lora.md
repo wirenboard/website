@@ -29,6 +29,7 @@ Connects to the Wiren Board controller via LoRa or RS-485. The connection method
 
 - 8 measured parameters in one housing.
 - Wireless transmission of readings over a distance of up to 1.5 km
+- Is a measuring instrument for temperature, humidity and CO2 concentration.
 - Heated temperature and humidity sensor for operation in high humidity conditions.
 - Auto calibration of CO2 and VOC sensors.
 - Controlled sound and light indication.
@@ -110,17 +111,7 @@ CO2 (carbon dioxide) is a colorless gas with a slight sour odor, heavier than ai
 WB-MSW-LORA v.4 uses a non-dispersive infrared (NDIR) sensor to measure CO2 concentration. It allows measurements with an error of 100 ppm + 5% of the measured value.
 ::
 
-::product-section{title="VOC control"}
-:photo{
-  src="wb-msw4-lora/wb-msw4-lora-6.jpg"
-  width="500px"
-  float="right"
-}
-
-Volatile organic substances (VOCs, VOC) are substances released into the atmosphere in the form of gases: evaporation of varnishes/paints and elements of interior decoration (phenol, formaldehyde, toluene, styrene), alcohols, benzene, rotting vegetables, gases emitted by humans, household gas. High concentrations of hazardous VOCs pose a threat to human life and health.
-
-The VOC sensor determines the total concentration of these substances with a typical error of ±15%.
-::
+:include{path="/catalog/includes/voc_control"}
 
 ::product-section{title="Setup"}
 :photo{

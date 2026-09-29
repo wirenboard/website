@@ -24,9 +24,7 @@ keywords: "Модуль ввода-вывода WBPRO-PMOD-DI14"
 - Режим наличия напряжения: подача 12/24В AC/DC между входом и COM. Порог срабатывания от 9 В
 ::
 
-::product-section{title="Интерфейсы"}
-- Шина WBIO
-::
+:include{path="/catalog/includes/wbio_interfaces"}
 
 ::product-section{title="Совместимость"}
 - Контроллеры WBPRO-PLC

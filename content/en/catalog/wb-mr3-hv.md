@@ -25,13 +25,13 @@ Relay module with high in-rush current capacity for lighting management and swit
 ::
 
 ::product-section{title="Discrete inputs"}
-- 4 dry contact inputs with flexible channel control configuration
-- 3 discrete inputs with a direct channel control function (default)
-- 1 digital input for disabling all relay channels simultaneously (default)
+- 3 discrete inputs with a direct channel control function
+- 1 discrete input for disabling all relay channels simultaneously
+- Flexible input configuration for controlling outputs
 - Group galvanic isolation of inputs
 - 220 VAC inputs
-- Inputs pulses count
-- Inputs frequency measure
+- Pulse counting at the input
+- Frequency measurement at the input
 ::
 
 ::product-section{title="Other characteristics"}

@@ -27,14 +27,14 @@ Made in China.
 ## Technical characteristics
 
 ::product-section{title="Hardware"}
-- Rockchip RK3566 Quad-core Cortex-A55, 1.8 ГГц;
+- Rockchip RK3566 Quad-core Cortex-A55, 1.8 GHz;
 - 2 GB RAM;
 - 32 GB eMMC;
 - 4 inch IPS display with touchscreen and 480x480 pixel resolution.
 ::
 
 ::product-section{title="Software"}
-- Android 8 OS;
+- Android 11 OS;
 - Built-in browser with support for all modern technologies;
 - Ability to install hundreds of third-party applications from Google Play and other app stores.
 ::
@@ -47,7 +47,7 @@ Made in China.
 - Two microphones, a speaker, and a light sensor.
 ::
 
-::product-section{title="OTHER CHARACTERISTICS"}
+::product-section{title="Other characteristics"}
 - Power supply: PoE 802.3af (48 V, 2 A) or AC 110 ~ 240 V, 50 Hz.
 - Operating temperature from −10 to 60 °C.
 - Case with mounting on a socket, 86x37x86 mm.

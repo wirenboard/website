@@ -12,16 +12,16 @@ One one-piece current transformer for use with WB-MAP series meters.
 
 #info
 
-::product-section{title="ТеTechnical specifications"}
-- Rated input current 20 А.
+::product-section{title="Technical specifications"}
+- Rated input current 20 A.
 - Transformation ratio 1:2000.
-- Accuracy class 0.5S.
+- Accuracy class 0.2S.
 - Core material - ferrite.
 - Core type - one-piece.
 - Wire outer diameter up to 5 mm.
 - Dimensions 10.2x19.2 mm.
 - Weight (not including wires) ~7 g.
-- Wire length 3 m.
+- Wire length 1.5 m.
 ::
 
 

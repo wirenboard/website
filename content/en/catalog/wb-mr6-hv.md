@@ -27,13 +27,13 @@ The module is designed to control loads up to 10A rated (16 A peak current) with
 ::
 
 ::product-section{title="Discrete inputs"}
-- 7 dry contact inputs with flexible channel control configuration
-- 6 discrete inputs with a direct channel control function (default)
-- 1 digital input for disabling all relay channels simultaneously (default)
+- 6 discrete inputs with a direct channel control function
+- 1 discrete input for disabling all relay channels simultaneously
+- Flexible input configuration for controlling outputs
 - Group galvanic isolation of inputs
 - 220 VAC inputs
-- Inputs pulses count
-- Inputs frequency measure
+- Pulse counting at the input
+- Frequency measurement at the input
 ::
 
 ::product-section{title="Other characteristics"}

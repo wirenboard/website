@@ -28,12 +28,13 @@ Designed for direct control of low-power loads (rated current 7 A) and contactor
 ::
 
 ::product-section{title="Discrete inputs"}
-- 7 dry contact inputs with flexible channel control configuration
-- 6 discrete inputs with a direct channel control function (default)
-- 1 digital input for disabling all relay channels simultaneously (default)
+- 6 discrete inputs with a direct channel control function
+- 1 discrete input for disabling all relay channels simultaneously
+- Flexible input configuration for controlling outputs
 - Group galvanic isolation of inputs
-- Inputs pulses count
-- Inputs frequency measure
+- "Dry contact" inputs
+- Pulse counting at the input
+- Frequency measurement at the input
 ::
 
 ::product-section{title="Other characteristics"}

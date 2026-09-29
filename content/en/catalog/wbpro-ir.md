@@ -29,6 +29,8 @@ Module has very small transmitter wich makes it almost invisible.Learning module
 - Supply voltage: 9 to 28 VDC
 - Interface: RS-485, Modbus RTU
 - Small size: 45x35x14 mm
+- 3.5 mm jack for connecting the transmitter
+- External IR transmitter included
 ::
 
 

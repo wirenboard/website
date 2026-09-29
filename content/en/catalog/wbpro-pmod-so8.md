@@ -23,9 +23,6 @@ Designed for managing low voltage loads, devices with dry contact inputs. The de
 - Voltage up to 30V
 ::
 
-::product-section{title=""}
-
-::
 
 
 ::

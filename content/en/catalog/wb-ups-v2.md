@@ -33,7 +33,7 @@ Suitable for equipment from other manufacturers.
 - Operating Temperature - charge: from 0°C to 55°C, discharge: from -20°C to 60°C
 - Storage Temperature: from -5°C to 35°C
 - Status Indicator
-- DIN Rail Mount, 2 modules
+- DIN rail mount
 - Dimensions: 36x90x58 mm
 ::
 

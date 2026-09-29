@@ -25,7 +25,7 @@ It can be used to show:
 
 ## WHAT IS INCLUDED
 
-::product-section{title="IMPLEMENTED SCENARIOS"}
+::product-section{title="Implemented scenarios"}
 - climate control;
 - ventilation and air conditioning control;
 - lighting control;
@@ -36,7 +36,7 @@ It can be used to show:
 - system operation in case of external power failure.
 ::
 
-::product-section{title="DOCUMENTATION"}
+::product-section{title="Documentation"}
 - The demo suitcase comes with detailed documentation
 - A complete connection diagram
 - A power supply diagram
@@ -44,9 +44,9 @@ It can be used to show:
 - The source codes for dashboards and scenarios
 ::
 
-::product-section{title="DIMENSIONS"}
+::product-section{title="Dimensions"}
 - Weight: 7.3 kg
-- Dimensions: 44х34х15 cm
+- Dimensions: 44x34x15 cm
 ::
 
 

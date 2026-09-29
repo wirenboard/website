@@ -20,9 +20,6 @@ The module is designed to monitor the state of circuit breakers, interrogate sig
 - Triggering voltage >50VAC
 ::
 
-::product-section{title=""}
-
-::
 
 
 ::

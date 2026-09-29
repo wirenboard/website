@@ -25,7 +25,7 @@ No driver installation required on latest versions of Windows, Linux, MacOS and 
 ::product-section{title="Outputs"}
 - RS-485: A/B without galvanic isolation
 - 12V up to 400mA
-- Short circuit protection
+- Protection against short circuit and accidental voltage of up to 30 V
 ::
 
 ::product-section{title="Other characteristics"}

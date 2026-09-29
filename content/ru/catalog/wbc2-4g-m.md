@@ -14,12 +14,7 @@ documentation: "https://wiki.wirenboard.com/wiki/WBC2-4GM"
 
 ## Технические характеристики
 
-::product-section{title="Общие характеристики"}
-- Скорость приема-передачи данных — до 150 Мбит/c
-- Поддержка двух SIM-карт nano-SIM
-- Попеременный режим работы
-- Антенна в комплекте
-::
+:include{path="/catalog/includes/modem_4g_general"}
 
 ::product-section{title="Совместимость"}
 - Контроллеры Wiren Board 8.5M

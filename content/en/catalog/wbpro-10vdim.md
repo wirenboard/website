@@ -28,9 +28,10 @@ The 4-channel lighting control module is designed to control lighting fixtures e
 ::
 
 ::product-section{title="Other characteristics"}
-- Supply voltage: 11 to 24 VDC
+- Supply voltage: 9 to 28 VDC
 - Interface: RS-485, Modbus RTU
-- Dimensions: 65 x 35 x 7 mm
+- DIN rail enclosure, 2 modules
+- Dimensions: 36x90x58 mm
 ::
 
 

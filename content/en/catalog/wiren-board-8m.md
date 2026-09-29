@@ -27,7 +27,9 @@ The controller can be mounted on a DIN rail both horizontally and vertically, as
   float="right"
 }
 
-The controller is equipped with an industrial-grade 4-core 64-bit ARM Cortex A53 processor with a frequency of 1.5 GHz, 4 GB LPDDR4 RAM, and 64 GB eMMC, with an industrial temperature range from -40 to +75 °C. It runs an open Debian Linux 11 operating system, kernel 6.8, providing broad possibilities for installing third-party software. Additionally, it includes a hardware-protected key storage that can be used for controller authentication in your services or for software license binding.
+The controller is equipped with an industrial-grade 4-core 64-bit ARM Cortex A53 processor with a frequency of 1.5 GHz, with 4 GB LPDDR4 RAM and 64 GB eMMC or 2 GB LPDDR4 RAM and 16 GB eMMC, with an industrial temperature range from -40 to +75 °C. It runs an open Debian Linux 11 operating system, kernel 6.8, providing broad possibilities for installing third-party software. Additionally, it includes a hardware-protected key storage that can be used for controller authentication in your services or for software license binding.
+
+The built-in software is free, open and allows you to configure the controller and devices connected to it, write automation scripts, store and view measurement archives. [More about the controller software](https://wirenboard.com/en/pages/programmirovanie-kontrollerov/).
 ::
 
 ::product-section{title="Interfaces and Communications"}
@@ -54,7 +56,7 @@ With expansion modules, you can add additional interfaces:
 - Z-Wave and Zigbee;
 - 2G + 3G + 4G (LTE) modem with support for two nano SIM cards;
 - 2 x RS-485 ports with individual isolation (mod3, mod4);
-- Supercapacitor-based uninterruptible power module;
+- Uninterruptible power module based on supercapacitors or a LiPo battery;
 - OpenTherm, EBUS and other interfaces;
 - PoE, CAN (under development, contact us if needed).
 ::
@@ -70,15 +72,17 @@ The controller supports a wide range of protocols and devices:
 
 - Modbus RTU – relays, dimmers, I/O modules;
 - Somfy, WINDECO, DOOYA, AKKO – electric curtains;
-- IEC 61107, DLMS/COSEM – electricity meters;
+- GOST IEC 61107, DLMS/COSEM, SPODES (GOST R 58940-2020), Mercury – electricity meters;
+- Pulsar, IVTM – water and heat meters and sensors;
 - 1-Wire – temperature sensors like DS18B20;
 - Wi-Fi, Bluetooth – sensors, gateways, and devices;
 - Modbus TCP, MQTT, OPC UA, SNMP, Zabbix API – data exchange with other controllers, servers, and SCADA systems;
-- IEC 60870-5-104 – protocol used in power systems and industrial SCADA integration;
 - Danfoss, Carel, Eliwell – refrigeration controllers such as Danfoss EKC 202B/D, ERC 21x, and Carel BASIC/EASY;
 - KNX – integration with existing KNX systems (with add-on modules);
 - OpenTherm and eBUS – electric and gas boilers (with add-on modules);
 - Z-Wave, Zigbee, DALI – sensors, actuators, and lighting devices (with add-on modules);
+
+[Full list of supported devices and protocols](https://wirenboard.com/wiki/Supported_devices)
 ::
 
 ::product-section{title="Precise Real-Time Clock (RTC)"}
@@ -153,59 +157,15 @@ In the future we plan to add the ability to automatically resolve address collis
 Devices with regular Modbus and other protocols can be added to the configuration manually using templates with register descriptions. The standard driver package includes more than 150 templates and their number continues to grow.
 ::
 
-::product-section{title="Text dashboards"}
-:photo{
-  src="wiren-board-8m/wiren-board-8m-9.png"
-  width="500px"
-  float="right"
-}
+:include{path="/catalog/includes/quality_control"}
 
-The main element of the text information panel is a widget. The widget allows you to display information from different sources in one place.
+:include{path="/catalog/includes/controller_text_dashboards"}
 
-The text dashboard can adapt to the small screen of a mobile device.
-::
+:include{path="/catalog/includes/controller_graphic_dashboards"}
 
-::product-section{title="Graphic dashboards"}
-:photo{
-  src="wiren-board-8m/wiren-board-8m-10.png"
-  width="500px"
-  float="right"
-}
+:include{path="/catalog/includes/controller_data_archive"}
 
-You can create interactive graphic dashboards based on SVG drawings.
-
-You can output information to text elements of SVG-picture, change the visibility and design of elements. You can also customize the reaction to user action: turn on the light, turn off the alarm, etc.
-
-To set up a graphical dashboard, the controller's web interface has a visual editor.
-::
-
-::product-section{title="Data archive"}
-:photo{
-  src="wiren-board-8m/wiren-board-8m-11.png"
-  width="500px"
-  float="right"
-}
-
-All data received by the controller are saved in an archive, the size of which can be configured.
-
-You can build graphs of historical data for several channels at the same time. You can interact with graphs: change the scale, make cursor measurements, etc.
-
-Data from the archive can be uploaded to CSV for analysis in third-party software.
-::
-
-::product-section{title="Automation scripts"}
-:photo{
-  src="wiren-board-8m/wiren-board-8m-12.png"
-  width="500px"
-  float="right"
-}
-
-The Wiren Board controller firmware contains a flexible scripting tool in Javascript-like language - WB-Rules.
-
-Using scripts, you can automate any action: control lighting, heating or a technological process.
-
-Scripts can be created and edited directly in the web interface, debugging is available in the console.
-::
+:include{path="/catalog/includes/controller_automation_scripts"}
 
 ::product-section{title="Scenarios"}
 :photo{

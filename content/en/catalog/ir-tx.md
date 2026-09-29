@@ -8,7 +8,7 @@ keywords: "IR-transmitter for WB-MIR"
 ::product
 #description
 
-IR-transmitter for [WB-MIR](https://wirenboard.com/ru/product/WB-MIR/) with cable and connector similar to the one included with WB-MIR.
+IR-transmitter for [WB-MIR](https://wirenboard.com/en/product/WB-MIR/) with cable and connector similar to the one included with WB-MIR.
 
 
 ::

@@ -20,10 +20,7 @@ keywords: "WBPRO-PMOD-RO4"
 - Номинальный ток на канал - 3А(NC)/10А(NO)
 ::
 
-::product-section{title="Интерфейсы"}
-- Шина WBIO
-- Можно подключать по Modbus RTU и Ethernet при помощи модуля WB-MIO
-::
+:include{path="/catalog/includes/wbio_interfaces"}
 
 ::product-section{title="Совместимость"}
 - Контроллер WBPRO-PLC7-2G-64G

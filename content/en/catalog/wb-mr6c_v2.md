@@ -57,19 +57,19 @@ Specifications:
 - Supply voltage: 9…28 V DC.
 - Interface: RS-485, Modbus RTU.
 - Operating temperature: -40…+80 °C.
-- DIN rail housing, 3 modules.
+- DIN rail enclosure, 3M (53 x 90 x 58 mm).
 ::
 
 ::product-section{title="Hongfa Long Life Relays"}
 :photo{
-  src="wb-mr6c_v2/wb-mr6c_v2-3.png"
+  src="wb-mr6c_v2/wb-mr6c_v2-3.jpg"
   width="500px"
   float="right"
 }
 
 Reliable Hongfa relays are used for switching. The relays feature silver tin dioxide (AgSnO2) contacts, allowing operation with high inrush currents up to 80 A (20 ms). This makes the WB-MR6C v.2 module ideal for controlling LED lamps.
 
-To verify relay quality, we [tested them with inrush currents](https://wirenboard-com.translate.goog/ru/news/proveli-ispytania-rele-na-bolsie-puskovye-toki-458/?_x_tr_sl=ru&_x_tr_tl=en&_x_tr_hl=ru&_x_tr_pto=wapp/) several times higher than the nominal rating.
+To verify relay quality, we [tested them with inrush currents](https://wirenboard.com/ru/news/proveli-ispytania-rele-na-bolsie-puskovye-toki-458/) several times higher than the nominal rating.
 
 The manufacturer claims a lifespan of at least 50,000 operations.
 ::
@@ -110,21 +110,7 @@ The WB-MR6C v.2 module includes a special curtain control mode that prevents sim
 Settings allow you to define opening/closing times, direction-change delays, and behavior during power-on or when entering safe mode. Outputs are configurable individually; some can be used for curtains while others remain available for other loads. Each button press type (4 in total) can trigger its own curtain action.
 ::
 
-::product-section{title="Fast Modbus support"}
-:photo{
-  src="wb-mr6c_v2/wb-mr6c_v2-7.png"
-  width="500px"
-  float="right"
-}
-
-All Wiren Board devices, in addition to the standard Modbus RTU, support the [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡ extension, which adds the following features:
-
-- Instant polling of input states and measurements via events.
-- Fast detection of devices connected to the controller.
-- Address conflict resolution on the bus.
-
-These features are enabled automatically. If the device supports the extension, the controller driver uses Fast Modbus; otherwise, it falls back to standard Modbus RTU.
-::
+:include{path="/catalog/includes/fast_modbus"}
 
 :include{path="/catalog/includes/quality_control"}
 

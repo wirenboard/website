@@ -25,11 +25,7 @@ catalogCover: "wbio-dio-ttl-8/catalog-cover.png"
 - Можно подключать по Modbus RTU и Ethernet при помощи модуля WB-MIO(Е)
 ::
 
-::product-section{title="Совместимость"}
-- Контроллеры Wiren Board 5
-- Контроллеры Wiren Board 6
-- Интерфейсные модули WB-MIO и WB-MIO-E
-::
+:include{path="/catalog/includes/wbio_compatibility_wb5-6"}
 
 
 ::

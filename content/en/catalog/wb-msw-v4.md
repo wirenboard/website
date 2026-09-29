@@ -13,6 +13,8 @@ Combined digital sensor for temperature, humidity, light, motion, noise, CO2 and
 
 There are wireless version [WB-MSW-ZIGBEE v.4](https://wirenboard.com/product/wb-msw4-zigbee/).
 
+WB-MSW v.4 is included in the Register of the State System for Ensuring the Uniformity of Measurements of the Republic of Kazakhstan. Reg. No. KZ.02.03.024533-2026/87443-22.
+
 
 #info
 
@@ -26,6 +28,7 @@ There are wireless version [WB-MSW-ZIGBEE v.4](https://wirenboard.com/product/wb
 }
 
 - 8 measured parameters in one housing.
+- Is a measuring instrument for temperature, humidity and CO2 concentration.
 - Heated temperature and humidity sensor for operation in high humidity conditions.
 - Auto calibration of CO2 and VOC sensors.
 - Controlled sound and light indication.
@@ -35,7 +38,7 @@ There are wireless version [WB-MSW-ZIGBEE v.4](https://wirenboard.com/product/wb
 - Fast and simple integration into the automation and monitoring system.
 - It is possible to apply your company logo.
 
-Supports Fast Modbus, allowing motion sensor events to be instantly delivered to the Wiren Board controller.
+Supports [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, allowing motion sensor events to be instantly delivered to the Wiren Board controller.
 ::
 
 ::product-section{title="Hardware"}
@@ -47,7 +50,7 @@ Supports Fast Modbus, allowing motion sensor events to be instantly delivered to
 
 Measured parameters:
 
-- Temperature: -40°С…+80°С (±0.5°С).
+- Temperature: -40°C…+80°C (±0.5°C).
 - Humidity: 0…95% (±3%).
 - Illumination: 0.02…145000 lux.
 - Noise level: 39…90 dBA.
@@ -91,17 +94,7 @@ CO2 (carbon dioxide) is a colorless gas with a slight sour odor, heavier than ai
 WB-MSW v.4 uses a non-dispersive infrared (NDIR) sensor to measure CO2 concentration. It allows measurements with an error of 100 ppm + 5% of the measured value.
 ::
 
-::product-section{title="VOC control"}
-:photo{
-  src="wb-msw-v4/wb-msw-v4-5.jpg"
-  width="500px"
-  float="right"
-}
-
-Volatile organic substances (VOCs, VOC) are substances released into the atmosphere in the form of gases: evaporation of varnishes/paints and elements of interior decoration (phenol, formaldehyde, toluene, styrene), alcohols, benzene, rotting vegetables, gases emitted by humans, household gas. High concentrations of hazardous VOCs pose a threat to human life and health.
-
-The VOC sensor determines the total concentration of these substances with a typical error of ±15%.
-::
+:include{path="/catalog/includes/voc_control"}
 
 ::product-section{title="Fast Modbus support"}
 :photo{

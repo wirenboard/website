@@ -45,7 +45,7 @@ Made in China.
 - 2 microphones.
 ::
 
-::product-section{title="OTHER CHARACTERISTICS"}
+::product-section{title="Other characteristics"}
 - Supply voltage: PoE 802.3 af (48 V, 2 A) and 12 V DC input.
 - Operating temperature from −5 to 70 °C.
 - Case with mounting on a socket, 199x37x123 mm.

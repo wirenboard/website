@@ -31,18 +31,20 @@ The device works with the Fast Modbus protocol extension — provides scanning c
 - 6 relay channels rated 10 A 230 VAC
 - The outputs are combined in two groups of 3 relays each
 - Channel status indication
+- Rated current: 10 A per channel
 - Maximum continuous current: 16 A per channel
-- Inrush current: 80 A per channel
+- Total rated switching current per group of three channels: 20 A
+- Maximum in-rush current: up to 80 A (20 ms)
 ::
 
 ::product-section{title="Discrete inputs"}
-- 7 dry contact inputs with flexible channel control configuration
-- 6 discrete inputs with a direct channel control function (default)
-- 1 digital input for disabling all relay channels simultaneously (default)
-- Press events: short, long, double and shortlong
+- 6 discrete inputs with a direct channel control function
+- 1 discrete input for disabling all relay channels simultaneously
+- Press handling: short, long, double, and short then long
+- Flexible input configuration for controlling outputs
 - Group galvanic isolation of inputs
-- Inputs pulses count
-- Inputs frequency measure
+- "Dry contact" inputs
+- Pulse counting and frequency measurement at the input
 ::
 
 ::product-section{title="Other characteristics"}

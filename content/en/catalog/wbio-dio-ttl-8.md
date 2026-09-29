@@ -24,11 +24,7 @@ Designed for connection of devices with 5V TTL or 5V CMOS signals. Consists of 8
 - Can be connected to Modbus RTU and Ethernet by via the WB-MIO module
 ::
 
-::product-section{title="Compatibility"}
-- Wiren Board 5 controllers
-- Wiren Board 6 controllers
-- Bus couplers WB-MIO and WB-MIO-E
-::
+:include{path="/catalog/includes/wbio_compatibility_wb5-6"}
 
 
 ::

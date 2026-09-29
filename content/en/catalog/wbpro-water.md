@@ -23,19 +23,19 @@ The main differences from the previous version: by default, five inputs are conf
 
 ## MAIN FEATURES
 
-::product-section{title="dvantages"}
+::product-section{title="Advantages"}
 There are many leakage protection systems on the market, our differences:
 
 - Up to 6 monitoring zones and isolated inputs for connecting active or passive leakage sensors.
 - Accounting of meter pulses even in the event of a power failure (for up to 12 months).
 - Changeover relays with dry contact type outputs - connection of shut-off valve actuators with supply voltages up to 30 V DC and up to 250 V AC.
-- Local control of relay channels for forced opening of valve actuators or triggering scripts.
+- Local control of relay channels for forced opening of valve actuators.
 - Quick response to a leak regardless of the central controller.
 - Works without the Internet, and to protect against leaks it is not necessary to have an automation system
-- Supports Larnitec floor-mounted sensors.
+- Supports Larnitech floor-mounted sensors.
 - Fast and simple integration into automation and monitoring systems.
 
-Supports [Fast Modbs](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which allows you to instantly deliver events from the module to the Wiren Board controller.
+Supports [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which allows you to instantly deliver events from the module to the WBPRO-PLC7-2G-64G controller.
 ::
 
 ::product-section{title="Hardware"}
@@ -59,7 +59,7 @@ Operating temperature from 0 to +60 °C - requirements are dictated by the use o
 ::
 
 ::product-section{title="Setup"}
-When used with a Wiren Board controller, you can use the mouse in the web interface:
+When used with a WBPRO-PLC7-2G-64G controller, you can use the mouse in the web interface:
 
 - switch input operating modes: leakage sensor or button;
 - configure the reaction of outputs and alarm signals to triggered inputs;
@@ -71,7 +71,7 @@ When used with other equipment, the module can be configured via the RS-485 bus 
 ::
 
 ::product-section{title="Status reading and control"}
-If a Wiren Board controller is used, then the counter values, as well as the status of the outputs and alarms, are available in the web interface controller and can be used in automation scripts or transferred to a higher-level system. The device card displays only the channels enabled in the survey settings.
+If a WBPRO-PLC7-2G-64G controller is used, then the counter values, as well as the status of the outputs and alarms, are available in the controller's [web interface](https://wirenboard.com/en/pages/wb-software/) and can be used in automation scripts or transferred to a higher-level system. The device card displays only the channels enabled in the survey settings.
 
 The module also transmits all data via Modbus RTU (RS-485), which can be read by any equipment or software that supports this protocol: third-party controllers, HMI panels or SCADA.
 ::

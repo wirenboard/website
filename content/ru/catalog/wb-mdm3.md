@@ -1,6 +1,6 @@
 ---
 article: "WB-MDM3"
-cover: "wb-mdm3/cover.jpg"
+cover: "wb-mdm3/cover.png"
 catalogCover: "wb-mdm3/catalog-cover.png"
 documentation: "https://wirenboard.com/wiki/index.php/WB-MDM3_230V_Dimmer"
 meta: "Трехканальный диммер светодиодных ламп и ламп накаливания 230В"
@@ -102,21 +102,7 @@ use_cases: ["comfort-life-piter-kvartira", "solutions-intelligenthouse-pik", "ra
 Для отсечки фазы используются MOSFET-транзисторы, которые обеспечивают низкий нагрев и более высокое быстродействие по сравнению с симисторами (TRIAC).
 ::
 
-::product-section{title="Поддержка Быстрого Modbus"}
-:photo{
-  src="wb-mdm3/wb-mdm3-5.png"
-  width="500px"
-  float="right"
-}
-
-Все устройства Wiren Board в дополнение к стандартному Modbus RTU могут работать с его расширением [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, которое добавляет новые возможности:
-
-- мгновенный опрос состояний входов и измеренных значений через события;
-- быстрый поиск подключённых к контроллеру устройств;
-- разрешение коллизий адресов на шине.
-
-Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
-::
+:include{path="/catalog/includes/fast_modbus"}
 
 :include{path="/catalog/includes/quality_control"}
 

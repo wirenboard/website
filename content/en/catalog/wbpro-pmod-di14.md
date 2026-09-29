@@ -17,14 +17,14 @@ Consists of 14 universal inputs("dry contact" type/ low voltage presence with gr
 
 ::product-section{title="Discrete inputs"}
 - 14 inputs
-- 2 operating modes: dry contact/ voltage presence detection with group galvanic isolation
+- Group galvanic isolation
+- 2 operating modes: dry contact / voltage presence detection
+- Both modes can be used simultaneously.
 - Dry contact mode: inputs triggered when connected to the iGND terminal. Triggering current is 1 mA
-- Voltage presence detection mode: inputs are triggered when 12-24V AC/DC voltage is applied between the input and the COM terminal. Voltage detection threshold is 9V. Maximum voltage is 50V
+- Voltage presence detection mode: inputs are triggered when 12/24V AC/DC voltage is applied between the input and the COM terminal. Voltage detection threshold is 9 V
 ::
 
-::product-section{title="Interfaces"}
-- WBIO Bus
-::
+:include{path="/catalog/includes/wbio_interfaces"}
 
 ::product-section{title="Compatibility"}
 - WBPRO-PLC

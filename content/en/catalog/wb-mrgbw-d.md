@@ -43,14 +43,26 @@ Technical specifications:
 The dimmer can work stand-alone or paired with a controller.
 ::
 
-::product-section{title=""}
+::product-section{title="Supported LED strips"}
+Depending on the selected mode, the dimmer can work with strips:
+
+- colored (RGB, RGB+W),
+- yellow and white (CCT),
+- and plain white.
+
+In some modes, several strips of the same or different types can be connected to the dimmer and each of them can be controlled separately.
+
+See the documentation for connection diagrams and available modes.
+::
+
+::product-section{title="Operating modes and functions setup"}
 :photo{
   src="wb-mrgbw-d/wb-mrgbw-d-2.png"
   width="500px"
   float="right"
 }
 
-Wiren Board controller's web intervace allows to:
+Wiren Board controller's web interface allows to:
 
 - select the operating mode and assign actions to inputs;
 - configure input parameters: debounce time, double and long press time, rate of change of brightness and saturation when pressing the button;

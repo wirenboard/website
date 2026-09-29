@@ -22,18 +22,9 @@ Designed for controlling contactors, signal lamps, and other low-power loads.
 - Rated current of 1A per channel, but not more than 10A per group.
 ::
 
-::product-section{title="Interfaces"}
-- WBIO Bus;
-- Can be connected to Modbus RTU and Ethernet via the WB-MIO module.
-::
+:include{path="/catalog/includes/wbio_interfaces"}
 
-::product-section{title="Compatibility"}
-- Wiren Board 5;
-- Wiren Board 6;
-- Wiren Board 7;
-- Wiren Board 8;
-- Interface modules WB-MIO and WB-MIO-E.
-::
+:include{path="/catalog/includes/wbio_compatibility_wb5-8"}
 
 
 ::

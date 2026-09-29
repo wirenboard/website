@@ -32,7 +32,8 @@ Can be used to control the speed of a fan.
 ::
 
 ::product-section{title="Discrete inputs"}
-- Six direct control digital inputs, 2 modes: one-button and two-button control modes
+- 6 discrete inputs
+- Channel control with one or two buttons:
 - Short press: on/off
 - Long press: smooth change of brightness
 - Group galvanic isolation of inputs

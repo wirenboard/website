@@ -9,7 +9,7 @@ keywords: "NBIoTG modem"
 ::product
 #description
 
-**Model discontinued. Recommended replacement: [WBC2-4G](https://wirenboard.com/ru/product/WBC2-4G/)**
+**Model discontinued. Recommended replacement: [WBC2-4G](https://wirenboard.com/en/product/WBC2-4G/)**
  NB-IoT modem. Installed into the Wiren Board 6.7 controller. The kit includes a right-angle antenna with an SMA connector.
 
 

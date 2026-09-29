@@ -21,9 +21,7 @@ keywords: "Дополнительный блок дискретных выход
 - Номинальный ток 1 А на канал, но не более 10 А на группу
 ::
 
-::product-section{title="Интерфейсы"}
-- Шина WBIO
-::
+:include{path="/catalog/includes/wbio_interfaces"}
 
 ::product-section{title="Совместимость"}
 - WBPRO-PLC

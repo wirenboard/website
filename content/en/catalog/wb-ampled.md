@@ -48,7 +48,7 @@ Specifications:
 
 - Service life: 5 years.
 - Extended operating temperature range: -40…+80 °C.
-- DIN rail housing, 2 modules.
+- DIN rail enclosure, 2M (36 x 90 x 58 mm).
 ::
 
 ::product-section{title="Increasing dimming power"}

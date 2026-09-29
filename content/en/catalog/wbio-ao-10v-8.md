@@ -17,19 +17,20 @@ This module is not compatible with the WB-MIO(E) bus coupler
 
 ## TECHNICAL SPECIFICATIONS
 
-::product-section{title="ANALOG OUTPUTS"}
+::product-section{title="Analog outputs"}
 - 8 analog outputs with adjustable voltage 0-10 V
 - Group galvanic isolation
 ::
 
-::product-section{title="COMPATIBILITY"}
+::product-section{title="Compatibility"}
 - Wiren Board 5 controllers
 - Wiren Board 6 controllers
 - Wiren Board 7 controllers
 ::
 
-::product-section{title="OTHER CHARACTERISTICS"}
+::product-section{title="Other characteristics"}
 - Dimensions: 36,30 x 90,2 x 57,50 mm
+- DIN rail mount, 2 units wide
 ::
 
 

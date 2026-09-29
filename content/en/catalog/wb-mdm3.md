@@ -1,6 +1,6 @@
 ---
 article: "WB-MDM3"
-cover: "wb-mdm3/cover.jpg"
+cover: "wb-mdm3/cover.png"
 catalogCover: "wb-mdm3/catalog-cover.png"
 documentation: "https://wirenboard.com/wiki/index.php/WB-MDM3_230V_Dimmer"
 meta: "Three channel dimmer for LED bulbs and incandescent lamps, 230 V"
@@ -59,7 +59,7 @@ Specifications:
 - Supply voltage: 9…28 V DC.
 - Interface: RS-485, Modbus RTU.
 - Extended operating temperature range: -40…+80 °C.
-- DIN rail housing, 3 modules.
+- DIN rail enclosure, 3M (53 x 90 x 58 mm).
 ::
 
 ::product-section{title="Local control"}
@@ -88,21 +88,7 @@ The leading edge mode is used to dim inductive loads: fans, electric motors. The
 MOSFET transistors are used for phase cutting, which provide low heating and higher response speed compared to triacs (TRIAC).
 ::
 
-::product-section{title="Fast Modbus support"}
-:photo{
-  src="wb-mdm3/wb-mdm3-5.png"
-  width="500px"
-  float="right"
-}
-
-All Wiren Board devices, in addition to the standard Modbus RTU, can work with its extension [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which adds new features:
-
-- instant polling of input states and measured values via events;
-- quick search for devices connected to the controller;
-- resolving address collisions on the bus.
-
-Additional features are enabled automatically - if the device supports extension, the controller driver will work with the device quickly Modbus if the device does not know anything about the extension - it will work using standard Modbus RTU.
-::
+:include{path="/catalog/includes/fast_modbus"}
 
 :include{path="/catalog/includes/quality_control"}
 

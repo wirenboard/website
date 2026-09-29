@@ -20,23 +20,18 @@ The sensor connects to the Wiren Board controller via LoRa or RS-485. The mode i
 
 ## TECHNICAL SPECIFICATIONS
 
-::product-section{title="MEASURED VALUES"}
+::product-section{title="Measured values"}
 - Temperature: -40°C — +80°C (±0.5°C)
 - Humidity: 0 — 98% (±3%)
 - Light: 0.02 — 100000 lux
-- Noise level: 40 — 82 dB
-- СО2 concentration: 0 — 5000 ppm.
+- Noise level: 38 — 105 dBA
+- CO2 concentration: 400 — 5000 ppm.
 - VOC concentration: 0 — 60000 ppb.
 ::
 
-::product-section{title="ADDITIONAL FUNCTIONALITY"}
-- IR commands sending
-- Configurable buzzer(Mode on/off)
-- Two-color indication, controlled via Modbus
-- Heated sensor designed for operation in high humidity conditions
-::
+:include{path="/catalog/includes/msw3_additional_functions"}
 
-::product-section{title="OTHER CHARACTERISTICS"}
+::product-section{title="Other characteristics"}
 - Supply voltage: 9 — 28 VDC
 - Interface: LoRa, RS-485 (Modbus RTU)
 - Plastic enclosure with wall mounting option (83 x 83 x 21 mm)

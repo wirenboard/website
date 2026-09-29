@@ -17,6 +17,8 @@ Used to poll 1-Wire sensors in conditions of strong interference and at a great 
 
 The main differences from the previous version are its compact size, which allows the device to be placed in electrical outlets.
 
+WB-M1W2 v.3 is included in the Register of the State System for Ensuring the Uniformity of Measurements of the Republic of Kazakhstan. Reg. No. KZ.02.03.024533-2026/87443-22.
+
 
 #info
 

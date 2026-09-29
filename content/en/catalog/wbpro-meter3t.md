@@ -17,8 +17,8 @@ Electricity meter WBPRO-METER3T is designed for energy management and power qual
 
 ::product-section{title="Measurements"}
 - One three phase or three single phase consumers
-- Maximum current is 125 А
-- Rated current is 5 А
+- Maximum current is 125 A
+- Rated current is 5 A
 - Accuracy class 0,5 S (<0.5% error)
 - Measures instantaneous parameters: voltage, current, power
 - Stores accumulated values of energies
@@ -35,7 +35,7 @@ Electricity meter WBPRO-METER3T is designed for energy management and power qual
 ::
 
 ::product-section{title="Other characteristics"}
-- Supply voltage: 9 — 24 VDC
+- Supply voltage: 9 to 28 VDC
 - Interface: RS-485, Modbus RTU
 - 3-module wide DIN rail mounted enclosure (58 x 90 x 75 mm)
 ::

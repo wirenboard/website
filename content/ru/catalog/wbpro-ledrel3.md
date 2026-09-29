@@ -33,11 +33,7 @@ keywords: "Модуль реле для светодиодного освеще�
 - Счёт импульсов и измерение частоты на входе
 ::
 
-::product-section{title="Прочее"}
-- Напряжение питания: от 9 до 28 В, постоянный ток
-- Интерфейс: RS-485, Modbus RTU
-- Корпус на DIN-рейку, 3M (53 x 90 x 58 мм)
-::
+:include{path="/catalog/includes/din3m_other_characteristics"}
 
 
 ::

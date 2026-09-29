@@ -20,9 +20,11 @@ Zigbee is a wireless communication standard as Wi-Fi and Bluetooth, created spec
 
 ## Specifications
 
-::product-section{title=""}
-- Chip CC2652P
-- Wireless, 2,4 Ghz
+::product-section{title="Connection"}
+- CC2652P chip with Z-Stack 3.x support
+- Wireless, 2.4 GHz
+- Zigbee — an open wireless communication standard
+- Antenna included
 - Zigbee
 - Antenna included
 ::

@@ -17,17 +17,16 @@ Designed for commuting and monitoring of powerful power load of general purpose,
 
 ::product-section{title="Outputs"}
 - 2 relay channels rated 20 A 230 VAC
+- Power measurement error — 2%
 - Channel status indication
-- Maximum continuous current: 31 A per channel
 ::
 
 ::product-section{title="Discrete inputs"}
-- 3 discrete inputs with direct channel management function
-- 1 digital input for disabling all relay channels simultaneously
-- Press events: short, long, double and shortlong
+- 2 discrete inputs with a direct channel control function
+- Press handling: short, long, double, and short then long
 - Group galvanic isolation of inputs
 - "Dry contact" inputs
-- Inputs pulses count and frequency measure
+- Pulse counting and frequency measurement at the input
 ::
 
 ::product-section{title="Other characteristics"}

@@ -60,7 +60,7 @@ Specifications:
 - Supply voltage: 9…28 V direct current and 230 V alternating current.
 - Interface: RS-485, Modbus RTU.
 - Operating temperature: -40…+80 °C.
-- DIN rail housing, 3 modules.
+- DIN rail enclosure, 3M (53 x 90 x 58 mm).
 ::
 
 ::product-section{title="Hongfa Long Life Relays"}
@@ -113,21 +113,7 @@ The WB-MR6C v.3 module has a special mode for working with curtains, which elimi
 The outputs are individually configurable, so only part of the outputs can be used to control curtains, and the rest can be used for other purposes. You can also configure the curtain action for each of the 4 types of button presses connected to the module inputs.
 ::
 
-::product-section{title="Fast Modbus support"}
-:photo{
-  src="wb-mr6c_v3/wb-mr6c_v3-7.png"
-  width="500px"
-  float="right"
-}
-
-All Wiren Board devices, in addition to the standard Modbus RTU, can work with its extension [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which adds new features:
-
-- instant polling of input states and measured values via events;
-- quick search for devices connected to the controller;
-- resolving address collisions on the bus.
-
-Additional features are enabled automatically - if the device supports extension, the controller driver will work with the device quickly Modbus if the device does not know anything about the extension - it will work using standard Modbus RTU.
-::
+:include{path="/catalog/includes/fast_modbus"}
 
 :include{path="/catalog/includes/quality_control"}
 

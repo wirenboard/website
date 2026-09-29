@@ -18,7 +18,9 @@ Designed for switching general purpose high-power loads, including induction loa
 ::product-section{title="Outputs"}
 - 3 relay channels rated 20 A 230 VAC
 - Channel status indication
-- Maximum continuous current: 31 A per channel
+- Rated current: 20 A per channel
+- Maximum continuous current: 26 A per channel
+- Maximum in-rush current: up to 31 A (20 ms)
 ::
 
 ::product-section{title="Discrete inputs"}
@@ -29,11 +31,7 @@ Designed for switching general purpose high-power loads, including induction loa
 - "Dry contact" inputs
 ::
 
-::product-section{title="Other characteristics"}
-- Supply voltage: 9 to 28 VDC
-- Interface: RS-485, Modbus RTU
-- 3-module wide DIN rail enclosure (53 x 90 x 58 mm)
-::
+:include{path="/catalog/includes/din3m_other_characteristics"}
 
 
 ::

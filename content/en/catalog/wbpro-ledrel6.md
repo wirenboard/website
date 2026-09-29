@@ -20,20 +20,19 @@ The module is designed to control loads up to 10A rated (16 A peak current) with
 ::product-section{title="Outputs"}
 - 6 channels with relays rated 10A 230 VAC
 - Channel status indication
+- Rated current: 10 A per channel
 - Maximum continuous current: 16 A per channel
-- Maximum in-rush current:
-- /I models - up to 120 A (20 ms)
-- /S models - up to 800 A (200 µs)
+- Maximum in-rush current up to 165 A (20 ms), up to 500 A (1.5 ms)
 ::
 
 ::product-section{title="Discrete inputs"}
-- 7 dry contact inputs with flexible channel control configuration
-- 6 discrete inputs with a direct channel control function (default)
-- 1 digital input for disabling all relay channels simultaneously (default)
+- 6 discrete inputs with a direct channel control function
+- 1 discrete input for disabling all relay channels simultaneously
+- Press handling: short, long, double, and short then long
+- Flexible input configuration for controlling outputs
 - Group galvanic isolation of inputs
-- Dry contact inputs
-- Inputs pulses count
-- Inputs frequency measure
+- "Dry contact" inputs
+- Pulse counting and frequency measurement at the input
 ::
 
 ::product-section{title="Other characteristics"}

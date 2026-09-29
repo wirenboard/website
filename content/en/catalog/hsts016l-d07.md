@@ -15,7 +15,7 @@ Split-core Hall effect current sensor with 2.5V +/- 0.625V signal, suitable for 
 #info
 
 ::product-section{title="Technical specifications"}
-- Rated current ±100 А.
+- Rated current ±100 A.
 - Wire outer diameter up to 16 mm
 - Dimensions 35\*32\*56 mm
 - Weight (not including wires) ~70 g

@@ -26,18 +26,9 @@ video: [
 - номинальный ток 7А/230В на канал.
 ::
 
-::product-section{title="Интерфейсы"}
-- шина WBIO;
-- можно подключать по Modbus RTU и Ethernet при помощи модуля WB-MIO.
-::
+:include{path="/catalog/includes/wbio_interfaces"}
 
-::product-section{title="Совместимость"}
-- Wiren Board 5;
-- Wiren Board 6;
-- Wiren Board 7;
-- Wiren Board 8;
-- интерфейсные модули WB-MIO и WB-MIO-E.
-::
+:include{path="/catalog/includes/wbio_compatibility_wb5-8"}
 
 
 ::

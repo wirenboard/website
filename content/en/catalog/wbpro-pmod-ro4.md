@@ -21,10 +21,7 @@ Special configuration of outputs designed for controlling motorized curtains, ro
 - Pin configuration: SPCO/SPTT (see diagram)
 ::
 
-::product-section{title="Interfaces"}
-- PMOD Bus
-- Can be connected to Modbus RTU and Ethernet via the WB-MIO module
-::
+:include{path="/catalog/includes/wbio_interfaces"}
 
 ::product-section{title="Compatibility"}
 - WBPRO-PLC7-2G-64G controller

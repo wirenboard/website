@@ -20,20 +20,20 @@ Waterproof digital temperature sensor DS18B20.Waterproof, cable length 1, 3, 5 o
 
 ## TECHNICAL SPECIFICATIONS
 
-::product-section{title="MEASURED VALUES"}
+::product-section{title="Measured values"}
 - Temperature -55°C to +125°C
 - Accuracy ±0.5°C ( -10°C to +85°C)
 ::
 
-::product-section{title="SUPPLY AND CONTROL"}
+::product-section{title="Supply and control"}
 - Interface: 1-wire
 - Power Supply:5V or using controller supply
 ::
 
-::product-section{title="DESIGN"}
-- Sleeve or stainless steel nut for convenient fastening
+::product-section{title="Design"}
+- Sleeve-type tip, 30 x 6 mm
 - 1, 3, 5, 10 metres long
-- Waterproof
+- Waterproof, IP67
 ::
 
 

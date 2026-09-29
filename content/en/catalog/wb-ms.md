@@ -9,9 +9,11 @@ keywords: "RS-485, Modbus RTU"
 ::product
 #description
 
-Combined digital sensor for temperature, humidity, light and volatile organic compounds (VOC). It has two inputs that can be used to connect external 1-wire sensors like [DS18B20](https://wirenboard.com/ru/product/1wire-DS18B20/), pulse counting or reading discrete signals.
+Combined digital sensor for temperature, humidity, light and volatile organic compounds (VOC). It has two inputs that can be used to connect external 1-wire sensors like [DS18B20](https://wirenboard.com/en/product/1wire-DS18B20/), pulse counting or reading discrete signals.
 
 Applicable to control climate parameters in data centers, server rooms, warehouses, technical rooms, as well as inside automation cabinets and other equipment.
+
+WB-MS v.2 is included in the Register of the State System for Ensuring the Uniformity of Measurements of the Republic of Kazakhstan. Reg. No. KZ.02.03.024533-2026/87443-22.
 
 
 #info
@@ -26,6 +28,7 @@ Applicable to control climate parameters in data centers, server rooms, warehous
 }
 
 - 4 measured parameters in one housing.
+- Is a measuring instrument for temperature and humidity.
 - Connecting 1-wire sensors.
 - Connection of discrete and counting signals.
 - The housing can be mounted on a 35 mm DIN rail or through holes on any surface.
@@ -54,17 +57,7 @@ Measured parameters:
 - Plastic housing with DIN rail mounting and mounting holes (84x46x29 mm).
 ::
 
-::product-section{title="VOC control"}
-:photo{
-  src="wb-ms/wb-ms-3.jpg"
-  width="500px"
-  float="right"
-}
-
-Volatile organic substances (VOCs, VOC) are substances released into the atmosphere in the form of gases: evaporation of varnishes/paints and elements of interior decoration (phenol, formaldehyde, toluene, styrene), alcohols, benzene, rotting vegetables, gases emitted by humans, household gas. High concentrations of hazardous VOCs pose a threat to human life and health.
-
-The VOC sensor determines the total concentration of these substances with a typical error of ±15%.
-::
+:include{path="/catalog/includes/voc_control"}
 
 :include{path="/catalog/includes/quality_control"}
 

@@ -41,7 +41,7 @@ Available in entry-level set
 Available in entry-level set
 
 - Extensible open-source software
-- Debian Linux, kernel 4.9.
+- Debian Linux, kernel 4.2
 - Custom scripts
 - Log storage
 - Web interface

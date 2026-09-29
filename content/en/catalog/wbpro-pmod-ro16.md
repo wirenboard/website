@@ -18,12 +18,10 @@ Designed for managing contactors, signal lamps and other low power loads
 ::product-section{title="Relay outputs"}
 - 16 two-position, normally open outputs (SPST, NO)
 - Two groups of 8 outputs with a common contact
-- Rated current of 3A per channel, but not more than 10A per group
+- Rated current of 1 A per channel, but not more than 10 A per group
 ::
 
-::product-section{title="Interfaces"}
-- WBIO Bus
-::
+:include{path="/catalog/includes/wbio_interfaces"}
 
 ::product-section{title="Compatibility"}
 - WBPRO-PLC

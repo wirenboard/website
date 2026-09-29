@@ -9,7 +9,7 @@ keywords: "WB-MS-VOC,WB-MS-VOC v.2"
 ::product
 #description
 
-Combined digital illumination and VОС sensor.
+Combined digital illumination and VOC sensor.
 
 
 #info
@@ -23,12 +23,13 @@ Combined digital illumination and VОС sensor.
 
 ::product-section{title="Additional functionality"}
 - Possible connection of two external digital 1-Wire temperature sensors (DS18B20).
+- The 1-Wire inputs can be used as counting and discrete inputs.
 ::
 
 ::product-section{title="Other characteristics"}
-- Supply voltage: 9 — 24 VDC
+- Supply voltage: 9 to 28 VDC
 - Interface: RS-485, Modbus RTU
-- Plastic enclosure with a DIN-rail mount and wall mounting holes (65x46x29 mm)
+- Plastic enclosure with a DIN-rail mount and wall mounting holes (84x46x29 mm)
 ::
 
 

@@ -15,9 +15,10 @@ Uninterruptible power supply module on lithium polymer batteries. It is used to 
 ## Technical parameters
 
 ::product-section{title="2 modes of operation"}
-- 12 В
-- 24 В
-- The mode is selected by a switch
+- Input voltage: 12-28 V
+- Output voltage: 12 V / 24 V (selected by a switch)
+- Power 12 W
+- Operating time up to 20 min (at 12 W)
 ::
 
 ::product-section{title="Operating characteristics"}

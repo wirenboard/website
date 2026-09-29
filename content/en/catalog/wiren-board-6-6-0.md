@@ -20,10 +20,10 @@ Wiren Board is designed for home and industrial automation and monitoring. It is
 Available in entry-level set, except (\*)
 
 - Freescale iMX6ULL 800 MHz Cortex A7
-- 4 GB flash memory, 512 MB DDR3 RAM
+- 8 GB flash memory, 512 MB DDR3 RAM
 - DIN rail enclosure (103 × 87 mm × 20 mm, 6 units)
 - Built-in Li-ion battery **\***
-- Operating range 0 ... +70°C ( -40.. +85°C available as an option)
+- Operating range -40 ... +85 °C (0 ... +70 °C on request)
 ::
 
 ::product-section{title="Interfaces"}

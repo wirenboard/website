@@ -22,18 +22,20 @@ Rated current: 20 A, inrush current: up to 80 A (20 ms).
 ## Technical specifications
 
 ::product-section{title="Outputs"}
-- 2 relay channels rated 20 A 230 VAC
-- Channel status indication
-- Input voltage measurement with protective load disconnection
+- 2 relay channels rated 20 A 230 VAC (4.5 kW)
 - Maximum inrush current: up to 80 A (20 ms)
+- Power measurement error — 2%
+- Input voltage measurement with protective load disconnection
+- Channel status indication
 ::
 
 ::product-section{title="Discrete inputs"}
-- 3 discrete inputs with direct channel management function
-- 1 digital input for disabling all relay channels simultaneously
-- Press events: short, long, double and shortlong
+- 2 discrete inputs with a direct channel control function
 - Group galvanic isolation of inputs
+- Press handling: short, long, double, and short then long
+- Flexible input configuration for controlling outputs
 - "Dry contact" inputs
+- Pulse counting and frequency measurement at the input
 ::
 
 ::product-section{title="Other characteristics"}

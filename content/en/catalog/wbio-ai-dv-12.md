@@ -26,17 +26,9 @@ Designed for measuring values of analog signals. Typical uses of this module inc
 - Two operation modes: "± 50V" and "0-2.5V"
 ::
 
-::product-section{title="Interfaces"}
-- WBIO Bus
-- Can be connected to Modbus RTU and Ethernet via the WB-MIO module
-::
+:include{path="/catalog/includes/wbio_interfaces"}
 
-::product-section{title="Compatibility"}
-- Wiren Board 5 controllers
-- Wiren Board 6 controllers
-- Wiren Board 7 controllers
-- Bus couplers WB-MIO and WB-MIO-E
-::
+:include{path="/catalog/includes/wbio_compatibility_wb5-7"}
 
 
 ::

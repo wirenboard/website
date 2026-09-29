@@ -24,18 +24,9 @@ Designed for controlling low-voltage loads and devices with dry contact inputs. 
 - Voltage up to 30 V
 ::
 
-::product-section{title="Interfaces"}
-- WBIO bus
-- Can be connected via Modbus RTU or Ethernet using the WB-MIO module
-::
+:include{path="/catalog/includes/wbio_interfaces"}
 
-::product-section{title="Compatibility"}
-- Wiren Board 5
-- Wiren Board 6
-- Wiren Board 7
-- Wiren Board 8
-- Interface modules WB-MIO and WB-MIO-E
-::
+:include{path="/catalog/includes/wbio_compatibility_wb5-8"}
 
 
 ::

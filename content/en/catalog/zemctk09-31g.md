@@ -15,12 +15,12 @@ One split current transformer for use with WB-MAP series meters.
 #info
 
 ::product-section{title="Specifications"}
-- Rated current 500 А.
+- Rated current 500 A.
 - Transformation ratio 1:10000 (exact value on the label).
 - Accuracy class 0.5S.
 - Core material — steel.
 - Cable diameter up to 35 mm.
-- Dimensions - 86\*55\*40 мм
+- Dimensions - 86\*55\*40 mm
 - Weight (without wires) ~ 362g.
 - Wire length 3 m.
 ::

@@ -17,12 +17,7 @@ keywords: "WBPRO-4G"
 
 ## Technical Specifications
 
-::product-section{title="General Specifications"}
-- Data transfer rate - up to 150 Mbps
-- Support for two nano-SIM cards
-- Alternating operation mode
-- Antenna included
-::
+:include{path="/catalog/includes/modem_4g_general"}
 
 ::product-section{title="Frequencies and Data Rates"}
 - Operating frequency bands
