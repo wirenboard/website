@@ -2,6 +2,7 @@
 import type { CatalogCategory, CatalogProduct } from '~/common/types';
 
 const { t, locale } = useI18n();
+const config = useRuntimeConfig();
 
 const { data: categories } = await useApi<CatalogCategory[]>('/catalog/categories/');
 
@@ -41,8 +42,8 @@ watch(searchQuery, (q) => {
     searchAbort = new AbortController();
     try {
       searchResults.value = await $fetch<CatalogProduct[]>(
-        '/_catalog-search',
-        { params: { q: trimmed, locale: locale.value }, signal: searchAbort.signal },
+        `${config.public.apiUrl}/${locale.value}/ng/api/v1/catalog/search/`,
+        { params: { q: trimmed }, signal: searchAbort.signal },
       );
       searchPending.value = false;
     } catch (e: any) {
