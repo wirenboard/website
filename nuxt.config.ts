@@ -122,6 +122,14 @@ export default defineNuxtConfig({
         target: process.env.NUXT_API_URL,
         changeOrigin: true,
       },
+      '/storage': {
+        target: process.env.NUXT_API_URL,
+        changeOrigin: true,
+      },
+      '/glide': {
+        target: process.env.NUXT_API_URL,
+        changeOrigin: true,
+      },
     },
   },
 });
