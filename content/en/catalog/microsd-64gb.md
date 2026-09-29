@@ -1,11 +1,11 @@
 ---
 article: "STS0MBB064G00"
-cover: "microsd-industrial-64gb/microsd-industrial-64gb_front.png"
-catalogCover: "microsd-industrial-64gb/microsd-industrial-64gb_front.png"
+cover: "microsd-64gb/microsd-64gb_front.png"
+catalogCover: "microsd-64gb/microsd-64gb_front.png"
 meta: "An industrial 64 GB SCY microSD memory card with U3 and V30 speed classes and an operating temperature from -25 to +85 °C."
 keywords: "Wiren Board, STS0MBB064G00, SCY, Shichuangyi, microSD, industrial memory card, memory card, 64 GB, U3, V30, UHS-I"
 images: [
-  ["microsd-industrial-64gb/microsd-industrial-64gb_front.png"]
+  ["microsd-64gb/microsd-64gb_front.png"]
 ]
 ---
 ::product
@@ -17,7 +17,7 @@ U3 and V30 speed classes, operating temperature from -25 to +85 °C, 3,000 progr
 #info
 ::product-section{title="Technical specifications"}
 :photo{
-  src="microsd-industrial-64gb/microsd-industrial-64gb_front.png"
+  src="microsd-64gb/microsd-64gb_front.png"
   width="250px"
   float="right"
 }
