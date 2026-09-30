@@ -2,6 +2,11 @@
 article: "WBIO-DO-HS-8"
 cover: "wbio-do-hs-8/cover.png"
 catalogCover: "wbio-do-hs-8/catalog-cover.png"
+images: [
+  ["wbio-do-hs-8/cover.png"],
+  ["wbio-do-hs-8/wbio-do-hs-8-1.png"],
+  ["wbio-do-hs-8/wbio-do-hs-8-2.png"],
+]
 ---
 ::product
 #description
@@ -20,9 +25,17 @@ Designed for managing low-voltage loads such as relays, low voltage motors, sign
 - Protection against overload, short circuit, surges when managing an inductive load
 ::
 
-:include{path="/catalog/includes/wbio_interfaces"}
+::product-section{title="Interfaces"}
+- WBIO Bus
+- Can be connected to Modbus RTU and Ethernet via the WB-MIO module
+::
 
-:include{path="/catalog/includes/wbio_compatibility_wb5-7"}
+::product-section{title="Compatibility"}
+- Wiren Board 5 controllers
+- Wiren Board 6 controllers
+- Wiren Board 7 controllers
+- Bus couplers WB-MIO and WB-MIO-E
+::
 
 
 ::

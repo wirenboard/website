@@ -2,6 +2,9 @@
 article: "WBPRO-METER6"
 cover: "wbpro-meter6/cover.png"
 catalogCover: "wbpro-meter6/catalog-cover.png"
+images: [
+  ["wbpro-meter6/cover.png"],
+]
 meta: "RS-485, Modbus RTU Multi-channel meter WBPRO-METER6"
 keywords: "RS-485, Modbus RTU Multi-channel meter WBPRO-METER6"
 ---

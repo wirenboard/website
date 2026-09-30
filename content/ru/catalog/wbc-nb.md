@@ -2,6 +2,10 @@
 article: "WBC-NB"
 cover: "wbc-nb/cover.png"
 catalogCover: "wbc-nb/catalog-cover.png"
+images: [
+  ["wbc-nb/cover.png"],
+  ["wbc-nb/wbc-nb-1.png"],
+]
 documentation: "https://wirenboard.com/wiki/WBC-NB"
 meta: "Модем NB-IoT"
 keywords: "Модем NB-IoT"

@@ -2,6 +2,17 @@
 article: "WB-MAP3ET"
 cover: "wb-map3et/cover.png"
 catalogCover: "wb-map3et/catalog-cover.png"
+images: [
+  ["wb-map3et/cover.png"],
+  ["wb-map3et/wb-map3et-8.png"],
+  ["wb-map3et/wb-map3et-9.png"],
+  ["wb-map3et/wb-map3et-10.png"],
+  ["wb-map3et/wb-map3et-11.png"],
+  ["wb-map3et/wb-map3et-12.png"],
+  ["wb-map3et/wb-map3et-13.png"],
+  ["wb-map3et/wb-map3et-14.png"],
+  ["wb-map3et/wb-map3et-15.png"],
+]
 documentation: "https://wirenboard.com/wiki/index.php/Map3et"
 meta: "Трёхфазный счётчик с Modbus"
 keywords: "Трёхфазный счётчик с Modbus"
@@ -108,7 +119,21 @@ WB-MAP3ET используется в системах [мониторинга �
 Если не нужно измерять напряжение и энергию, то для измерения тока счетчик не обязательно подключать к силовым линиям, достаточно надеть токовый трансформатор с разъемным сердечником на измеряемую линию. Это позволяет упростить монтаж и интеграцию в систему автоматизации.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Поддержка Быстрого Modbus"}
+:photo{
+  src="wb-map3et/wb-map3et-5.png"
+  width="500px"
+  float="right"
+}
+
+Все устройства Wiren Board в дополнение к стандартному Modbus RTU могут работать с его расширением [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, которое добавляет новые возможности:
+
+- мгновенный опрос состояний входов и измеренных значений через события;
+- быстрый поиск подключённых к контроллеру устройств;
+- разрешение коллизий адресов на шине.
+
+Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

@@ -2,6 +2,11 @@
 article: "WBPRO-REL6-I"
 cover: "wbpro-rel6-i/cover.png"
 catalogCover: "wbpro-rel6-i/catalog-cover.png"
+images: [
+  ["wbpro-rel6-i/cover.png"],
+  ["wbpro-rel6-i/wbpro-rel6-i-1.png"],
+  ["wbpro-rel6-i/wbpro-rel6-i-2.png"],
+]
 meta: "WBPRO-REL6-I"
 keywords: "WBPRO-REL6-I"
 ---

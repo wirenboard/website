@@ -2,6 +2,12 @@
 article: "WB-MSW-ZIGBEE-v.3"
 cover: "wb-msw-zigbee-v3/cover.jpg"
 catalogCover: "wb-msw-zigbee-v3/catalog-cover.jpg"
+images: [
+  ["wb-msw-zigbee-v3/cover.jpg"],
+  ["wb-msw-zigbee-v3/wb-msw-zigbee-v3-1.png"],
+  ["wb-msw-zigbee-v3/wb-msw-zigbee-v3-2.png"],
+  ["wb-msw-zigbee-v3/wb-msw-zigbee-v3-3.jpg"],
+]
 documentation: "https://wirenboard.com/wiki/WB-MSW_v.3_Zigbee_Sensor"
 meta: "Hybrid wall-mounted sensor with Zigbee interface"
 keywords: "Hybrid wall-mounted sensor with Zigbee interface"
@@ -20,16 +26,24 @@ The sensor connects to the Wiren Board controller via Zigbee or RS-485. The conn
 
 ## TECHNICAL SPECIFICATIONS
 
-:include{path="/catalog/includes/msw3_measured_values"}
+::product-section{title="MEASURED VALUES"}
+- Temperature: -40°C — +80°C (±0.5°C)
+- Humidity: 0 — 98% (±3%)
+- Light: 0.02 — 100000 lux
+- Noise level: 40 — 82 dB
+- СО2 concentration: 0 — 5000 ppm.
+- VOC concentration: 0 — 60000 ppb.
+- Motion: up to 8 m, angle — 120°
+::
 
-::product-section{title="Additional functionality"}
+::product-section{title="ADDITIONAL FUNCTIONALITY"}
 - IR commands sending
 - Configurable buzzer (Mode on/off)
 - Two-color indication, controlled
 - Heated sensor designed for operation in high humidity conditions
 ::
 
-::product-section{title="Other characteristics"}
+::product-section{title="OTHER CHARACTERISTICS"}
 - Supply voltage: 9 — 28 VDC
 - Interface: Zigbee
 - Plastic enclosure with wall mounting option (83 x 83 x 21 mm)

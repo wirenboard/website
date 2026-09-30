@@ -2,6 +2,13 @@
 article: "WB-M1W2"
 cover: "wb-m1w2-v1/cover.png"
 catalogCover: "wb-m1w2-v1/catalog-cover.png"
+images: [
+  ["wb-m1w2-v1/cover.png"],
+  ["wb-m1w2-v1/wb-m1w2-v1-5.png"],
+  ["wb-m1w2-v1/wb-m1w2-v1-6.png"],
+  ["wb-m1w2-v1/wb-m1w2-v1-7.png"],
+  ["wb-m1w2-v1/wb-m1w2-v1-8.png"],
+]
 documentation: "https://wirenboard.com/wiki/WB-M1W2_1-Wire_to_Modbus_Temperature_Measurement_Module"
 ---
 ::product

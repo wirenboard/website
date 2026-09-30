@@ -2,6 +2,10 @@
 article: "WBPRO-PMOD-RO4"
 cover: "wbpro-pmod-ro4/cover.png"
 catalogCover: "wbpro-pmod-ro4/catalog-cover.png"
+images: [
+  ["wbpro-pmod-ro4/cover.png"],
+  ["wbpro-pmod-ro4/wbpro-pmod-ro4-1.png"],
+]
 meta: "WBPRO-PMOD-RO4"
 keywords: "WBPRO-PMOD-RO4"
 ---
@@ -21,7 +25,10 @@ Special configuration of outputs designed for controlling motorized curtains, ro
 - Pin configuration: SPCO/SPTT (see diagram)
 ::
 
-:include{path="/catalog/includes/wbio_interfaces"}
+::product-section{title="Interfaces"}
+- PMOD Bus
+- Can be connected to Modbus RTU and Ethernet via the WB-MIO module
+::
 
 ::product-section{title="Compatibility"}
 - WBPRO-PLC7-2G-64G controller

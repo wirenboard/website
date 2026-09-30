@@ -2,6 +2,15 @@
 article: "00142"
 cover: "wb-mdm2/cover.png"
 catalogCover: "wb-mdm2/catalog-cover.png"
+images: [
+  ["wb-mdm2/cover.png"],
+  ["wb-mdm2/wb-mdm2-1.png"],
+  ["wb-mdm2/wb-mdm2-2.png"],
+  ["wb-mdm2/wb-mdm2-3.png"],
+  ["wb-mdm2/wb-mdm2-4.png"],
+  ["wb-mdm2/wb-mdm2-5.png"],
+  ["wb-mdm2/wb-mdm2-6.png"],
+]
 keywords: "Modbus RTU"
 ---
 ::product

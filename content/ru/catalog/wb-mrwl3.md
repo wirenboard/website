@@ -2,6 +2,11 @@
 article: "WB-MRWL3"
 cover: "wb-mrwl3/cover.png"
 catalogCover: "wb-mrwl3/catalog-cover.png"
+images: [
+  ["wb-mrwl3/cover.png"],
+  ["wb-mrwl3/wb-mrwl3-10.png"],
+  ["wb-mrwl3/wb-mrwl3-11.png"],
+]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MRWL3_Modbus_Relay_Module"
 meta: "Модуль реле с RS-485, Modbus RTU"
 keywords: "RS-485, Modbus RTU"
@@ -123,7 +128,21 @@ use_cases: ["solutions-liten-magnit", "solutions-intelligenthouse-knyaje"]
 Выходы настраиваются индивидуально, поэтому для управления шторами можно использовать только часть выходов, а остальные использовать для других целей. Также можно настроить действие со шторами для каждого из 4 типов нажатий кнопок, подключенных к входам модуля.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Поддержка Быстрого Modbus"}
+:photo{
+  src="wb-mrwl3/wb-mrwl3-7.png"
+  width="500px"
+  float="right"
+}
+
+Все устройства Wiren Board в дополнение к стандартному Modbus RTU могут работать с его расширением [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, которое добавляет новые возможности:
+
+- мгновенный опрос состояний входов и измеренных значений через события;
+- быстрый поиск подключённых к контроллеру устройств;
+- разрешение коллизий адресов на шине.
+
+Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

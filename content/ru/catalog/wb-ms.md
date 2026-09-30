@@ -2,6 +2,12 @@
 article: "WB-MS"
 cover: "wb-ms/cover.png"
 catalogCover: "wb-ms/catalog-cover.png"
+images: [
+  ["wb-ms/cover.png"],
+  ["wb-ms/wb-ms-6.png"],
+  ["wb-ms/wb-ms-7.png"],
+  ["wb-ms/wb-ms-8.png"],
+]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MS_Modbus_Sensor"
 meta: "Комбинированный датчик с RS-485, Modbus RTU WB-MS v.2"
 keywords: "RS-485, Modbus RTU WB-MS v.2"
@@ -71,7 +77,17 @@ WB-MS v.2 внесён в реестр государственной систе
 - пластиковый корпус с креплением на DIN-рейку и крепёжными отверстиями (84 x 46 x 29 мм).
 ::
 
-:include{path="/catalog/includes/voc_control"}
+::product-section{title="Контроль VOC"}
+:photo{
+  src="wb-ms/wb-ms-3.jpg"
+  width="500px"
+  float="right"
+}
+
+Летучие органические вещества (ЛОВ, VOC) — это вещества, выделяющиеся в атмосферу в виде газов: испарения лаков/красок и элементов внутренней отделки помещений (фенол, формальдегид, толуол, стирол), спирты, бензол, гниющие овощи, выделяемые человеком газы, бытовой газ. Высокие концентрации опасных ЛОВ представляют угрозу жизни и здоровью человека.
+
+Датчик VOC определяет суммарную концентрацию этих веществ c типовой погрешностью ±15 %.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

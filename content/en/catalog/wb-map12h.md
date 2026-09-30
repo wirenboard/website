@@ -2,6 +2,11 @@
 article: "WB-MAP12H"
 cover: "wb-map12h/cover.jpg"
 catalogCover: "wb-map12h/catalog-cover.jpg"
+images: [
+  ["wb-map12h/cover.jpg"],
+  ["wb-map12h/wb-map12h-1.png"],
+  ["wb-map12h/wb-map12h-2.jpg"],
+]
 meta: "RS-485, Modbus RTU Multi-channel meter"
 keywords: "RS-485, Modbus RTU"
 ---
@@ -24,10 +29,13 @@ The WB-MAP12(H) energy meter is an ideal choice for industrial metering installa
 - Power factor, phase-to-phase angles, harmonics
 ::
 
-:include{path="/catalog/includes/map_ct_connection"}
+::product-section{title="Connection"}
+- Connection via split type current transformers
+- Detection of incorrect phasing
+::
 
 ::product-section{title="Other characteristics"}
-- Supply voltage: 9 to 28 VDC
+- Supply voltage: 9 — 24 VDC
 - Interface: RS-485, Modbus RTU
 - 6-module wide DIN rail mounted enclosure (106 x 90 x 58 mm)
 ::

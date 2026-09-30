@@ -2,6 +2,16 @@
 article: "WB-REF-U-CR"
 cover: "wb-ref-u-cr/cover.jpg"
 catalogCover: "wb-ref-u-cr/catalog-cover.jpg"
+images: [
+  ["wb-ref-u-cr/cover.jpg"],
+  ["wb-ref-u-cr/wb-ref-u-cr-1.png"],
+  ["wb-ref-u-cr/wb-ref-u-cr-2.jpg"],
+  ["wb-ref-u-cr/wb-ref-u-cr-3.jpg"],
+  ["wb-ref-u-cr/wb-ref-u-cr-4.png"],
+  ["wb-ref-u-cr/wb-ref-u-cr-5.png"],
+  ["wb-ref-u-cr/wb-ref-u-cr-6.jpg"],
+  ["wb-ref-u-cr/wb-ref-u-cr-7.jpg"],
+]
 documentation: "https://wirenboard.com/wiki/WB-REF-U-CR_Carel_PYEZ/PJEZ_Modbus_Module"
 meta: "Network card for Carel refrigeration controller"
 keywords: "Network card for Carel refrigeration controller"

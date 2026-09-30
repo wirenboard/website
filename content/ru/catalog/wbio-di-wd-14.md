@@ -2,6 +2,13 @@
 article: "WBIO-DI-WD-14"
 cover: "wbio-di-wd-14/cover.png"
 catalogCover: "wbio-di-wd-14/catalog-cover.png"
+images: [
+  ["wbio-di-wd-14/cover.png"],
+  ["wbio-di-wd-14/wbio-di-wd-14-1.png"],
+  ["wbio-di-wd-14/wbio-di-wd-14-2.png"],
+  ["wbio-di-wd-14/wbio-di-wd-14-3.png"],
+  ["wbio-di-wd-14/wbio-di-wd-14-4.png"],
+]
 documentation: "https://wirenboard.com/wiki/index.php/WBIO-DI-WD-14_I/O_Module"
 meta: "Модуль ввода-вывода WBIO-DI-WD-14"
 keywords: "DI-WD14, WD14, WD-14, DI-WD-14, WD, WBIO-WD-14, 14, WD 14"
@@ -34,7 +41,13 @@ video: [
 - можно подключать по Modbus RTU и Ethernet при помощи модуля WB-MIO(Е).
 ::
 
-:include{path="/catalog/includes/wbio_compatibility_wb5-8"}
+::product-section{title="Совместимость"}
+- Wiren Board 5;
+- Wiren Board 6;
+- Wiren Board 7;
+- Wiren Board 8;
+- интерфейсные модули WB-MIO и WB-MIO-E.
+::
 
 
 ::

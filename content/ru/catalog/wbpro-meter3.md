@@ -2,6 +2,9 @@
 article: "WBPRO-METER3"
 cover: "wbpro-meter3/cover.png"
 catalogCover: "wbpro-meter3/catalog-cover.png"
+images: [
+  ["wbpro-meter3/cover.png"],
+]
 meta: "Трёхфазный счётчик с Modbus WBPRO-METER3"
 keywords: "Трёхфазный счётчик с Modbus WBPRO-METER3"
 ---
@@ -31,7 +34,10 @@ Cчётчик электроэнергии WBPRO-METER3 предназначен
 - Пиковые значения токов и напряжений
 ::
 
-:include{path="/catalog/includes/map_ct_connection"}
+::product-section{title="Подключение"}
+- Подключение через разъёмные измерительные трансформаторы тока
+- Детектирование неправильной фазировки
+::
 
 ::product-section{title="Прочее"}
 - Напряжение питания: от 9 до 28 VDC

@@ -2,6 +2,10 @@
 article: "00109"
 cover: "wbe-do-ssr-2/cover.png"
 catalogCover: "wbe-do-ssr-2/catalog-cover.png"
+images: [
+  ["wbe-do-ssr-2/cover.png"],
+  ["wbe-do-ssr-2/wbe-do-ssr-2-1.png"],
+]
 ---
 ::product
 #description

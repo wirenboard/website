@@ -2,6 +2,15 @@
 article: "WB7-ALL"
 cover: "wiren-board-73/cover.png"
 catalogCover: "wiren-board-73/catalog-cover.png"
+images: [
+  ["wiren-board-73/cover.png"],
+  ["wiren-board-73/wiren-board-73-9.png"],
+  ["wiren-board-73/wiren-board-73-10.png"],
+  ["wiren-board-73/wiren-board-73-11.png"],
+  ["wiren-board-73/wiren-board-73-12.png"],
+  ["wiren-board-73/wiren-board-73-13.png"],
+  ["wiren-board-73/wiren-board-73-14.png"],
+]
 documentation: "https://wirenboard.com/wiki/Wiren_Board_7.3"
 meta: "Контроллер для автоматизации Wiren Board 7.2...7.3"
 keywords: "Контроллер для автоматизации Wiren Board 7.2...7.3"
@@ -117,13 +126,61 @@ Wiren Board 7 — это универсальный контроллер авт�
 Сделано в России.
 ::
 
-:include{path="/catalog/includes/controller_text_dashboards"}
+::product-section{title="Текстовые дашборды"}
+:photo{
+  src="wiren-board-73/wiren-board-73-5.png"
+  width="500px"
+  float="right"
+}
 
-:include{path="/catalog/includes/controller_graphic_dashboards"}
+Основной элемент текстовой информационной панели — виджет. Виджет позволяет вывести в одном месте информацию с разных источников.
 
-:include{path="/catalog/includes/controller_data_archive"}
+Текстовый дашборд может адаптироваться под небольшой экран мобильного устройства.
+::
 
-:include{path="/catalog/includes/controller_automation_scripts"}
+::product-section{title="Графические дашборды"}
+:photo{
+  src="wiren-board-73/wiren-board-73-6.png"
+  width="500px"
+  float="right"
+}
+
+Вы можете создавать интерактивные графические дашборды, в основе которых лежат SVG-рисунки.
+
+Вы можете выводить информацию в текстовые элементы SVG-рисунка, менять видимость и оформление элементов. Также вы можете настроить реакцию на действие пользователя: включить свет, отключить сигнал тревоги и т.п.
+
+Для настройки графического дашборда в веб-интерфейсе контроллера есть визуальный редактор.
+
+Подробнее о дашбордах и других возможностях веб-интерфейса читайте в статье [Веб-интерфейс контроллеров Wiren Board](https://wirenboard.com/ru/pages/wb-software/).
+::
+
+::product-section{title="Архив данных"}
+:photo{
+  src="wiren-board-73/wiren-board-73-7.png"
+  width="500px"
+  float="right"
+}
+
+Все получаемые контроллером данные сохраняются в архив, размер которого можно настроить.
+
+Вы можете построить графики по архивным данным одновременно для нескольких каналов. С графиками можно взаимодействовать: менять масштаб, делать курсорные измерения и т.п.
+
+Данные из архива можно выгрузить в CSV для анализа в стороннем ПО.
+::
+
+::product-section{title="Скрипты автоматизации"}
+:photo{
+  src="wiren-board-73/wiren-board-73-8.png"
+  width="500px"
+  float="right"
+}
+
+Встроенное ПО контроллера Wiren Board содержит гибкий инструмент написания скриптов на Javascript-подобном языке — WB-Rules.
+
+С помощью скриптов можно автоматизировать любые действия: управлять освещением, отоплением или технологическим процессом.
+
+Скрипты можно создавать и редактировать прямо в веб-интерфейсе, доступна отладка в консоли.
+::
 
 
 ::

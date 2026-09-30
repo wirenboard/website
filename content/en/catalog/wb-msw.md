@@ -2,13 +2,18 @@
 article: "00099"
 cover: "wb-msw/cover.png"
 catalogCover: "wb-msw/catalog-cover.png"
+images: [
+  ["wb-msw/cover.png"],
+  ["wb-msw/wb-msw-1.png"],
+  ["wb-msw/wb-msw-2.png"],
+]
 meta: "Hybrid wall-mounted Modbus RTU sensor of temperature, humidity, light, noise and CO2 level, RS-485"
 keywords: "Modbus RTU sensor, temperature, humidity, lighting, noise and CO2 level, RS-485"
 ---
 ::product
 #description
 
-**This model is discontinued. [WB-MSW v.3](https://wirenboard.com/en/product/wb-msw-v3/) is a recommended replacement**
+**This model is discontinued. [WB-MSW v.3](https://wirenboard.com/ru/product/wb-msw-v3/) is a recommended replacement**
 Hybrid digital sensor of temperature, humidity, lighting, noise level and CO2 concentration. Designed for climate control in residential and office premises.
 
 
@@ -21,7 +26,7 @@ Hybrid digital sensor of temperature, humidity, lighting, noise level and CO2 co
 - Humidity: 0 — 98% (+-3%)
 - Light: 10 — 10000 Lux
 - Noise level: 40 — 82 dB
-- CO2 concentration: 0 — 2000 ppm.
+- СО2 concentration: 0 — 2000 ppm.
 ::
 
 ::product-section{title="Additional functionality"}

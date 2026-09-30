@@ -2,6 +2,10 @@
 article: "WB-DEMO-KIT"
 cover: "wb-demo-kit/cover.png"
 catalogCover: "wb-demo-kit/catalog-cover.png"
+images: [
+  ["wb-demo-kit/cover.png"],
+  ["wb-demo-kit/wb-demo-kit-1.png"],
+]
 documentation: "https://wirenboard.com/wiki/Wb-demo-kit"
 meta: "Демонстрационный комплект оборудования Wiren Board в чемодане"
 video: [

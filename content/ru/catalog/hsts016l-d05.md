@@ -2,6 +2,11 @@
 article: "HSTS016L-D05"
 cover: "hsts016l-d05/cover.png"
 catalogCover: "hsts016l-d05/catalog-cover.png"
+images: [
+  ["hsts016l-d05/cover.png"],
+  ["hsts016l-d05/hsts016l-d05-1.png"],
+  ["hsts016l-d05/hsts016l-d05-2.jpg"],
+]
 documentation: "https://wirenboard.com/wiki/YHDC_HSTS016L"
 meta: "Разъёмный датчик постоянного тока HSTS016L-D05 на 30 А для использования с WB-MAI6"
 keywords: "HSTS016L-D05, датчик постоянного тока, WB-MAI6, измерение тока заряда аккумуляторов, для базовых станций"

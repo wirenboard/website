@@ -2,6 +2,9 @@
 article: "KCT-10"
 cover: "ct-heyi-kct-10/cover.png"
 catalogCover: "ct-heyi-kct-10/catalog-cover.png"
+images: [
+  ["ct-heyi-kct-10/cover.png"],
+]
 documentation: "https://wirenboard.com/statics/web/content/files/KCT-10%2075A-25mA.pdf"
 meta: "Split-core Current Transformer KCT-10"
 keywords: "Split-core Current Transformer KCT-10"

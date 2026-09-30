@@ -2,6 +2,9 @@
 article: "WBPRO-LEDREL6"
 cover: "wbpro-ledrel6/cover.png"
 catalogCover: "wbpro-ledrel6/catalog-cover.png"
+images: [
+  ["wbpro-ledrel6/cover.png"],
+]
 meta: "Модуль реле для светодиодного освещения WBPRO-LEDREL6"
 keywords: "Модуль реле для светодиодного освещения WBPRO-LEDREL6"
 ---

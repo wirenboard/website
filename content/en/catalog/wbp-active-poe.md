@@ -2,6 +2,10 @@
 article: "WBP-ACTIVE-POE"
 cover: "wbp-active-poe/cover.png"
 catalogCover: "wbp-active-poe/catalog-cover.png"
+images: [
+  ["wbp-active-poe/cover.png"],
+  ["wbp-active-poe/wbp-active-poe-1.png"],
+]
 documentation: "https://wirenboard.com/wiki/WBP-ACTIVE-POE"
 meta: "PoE for PLC Wiren Board"
 keywords: "PoE, IEEE 802.3af, 802.3at, Wiren Board, Active PoE"

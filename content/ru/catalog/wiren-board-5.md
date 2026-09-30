@@ -2,6 +2,13 @@
 article: "Wiren Board 5"
 cover: "wiren-board-5/cover.png"
 catalogCover: "wiren-board-5/catalog-cover.png"
+images: [
+  ["wiren-board-5/cover.png"],
+  ["wiren-board-5/wiren-board-5-1.png"],
+  ["wiren-board-5/wiren-board-5-2.jpg"],
+  ["wiren-board-5/wiren-board-5-3.jpg"],
+  ["wiren-board-5/wiren-board-5-4.jpg"],
+]
 documentation: "https://wirenboard.com/wiki/index.php/Wiren_Board_5/en"
 meta: "Контроллер для автоматизации Wiren Board 5"
 keywords: "Контроллер для автоматизации Wiren Board 5"

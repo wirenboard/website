@@ -2,6 +2,12 @@
 article: "WBPRO-IR"
 cover: "wbpro-ir/cover.png"
 catalogCover: "wbpro-ir/catalog-cover.png"
+images: [
+  ["wbpro-ir/cover.png"],
+  ["wbpro-ir/wbpro-ir-1.png"],
+  ["wbpro-ir/wbpro-ir-2.png"],
+  ["wbpro-ir/wbpro-ir-3.png"],
+]
 meta: "Встраиваемый модуль ИК-управления с  RS-485, Modbus RTU WBPRO-IR"
 keywords: "Встраиваемый модуль ИК-управления с  RS-485, Modbus RTU WBPRO-IR"
 ---

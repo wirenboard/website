@@ -2,6 +2,14 @@
 article: "WB-MSW3"
 cover: "wb-msw-v3/cover.png"
 catalogCover: "wb-msw-v3/catalog-cover.png"
+images: [
+  ["wb-msw-v3/cover.png"],
+  ["wb-msw-v3/wb-msw-v3-1.png"],
+  ["wb-msw-v3/wb-msw-v3-2.png"],
+  ["wb-msw-v3/wb-msw-v3-3.gif"],
+  ["wb-msw-v3/wb-msw-v3-4.png"],
+  ["wb-msw-v3/wb-msw-v3-5.png"],
+]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MSW_v.3"
 meta: "Настенный комбинированный датчик c RS-485, Modbus RTU"
 keywords: "Настенный комбинированный датчик c RS-485, Modbus RTU"
@@ -20,9 +28,22 @@ keywords: "Настенный комбинированный датчик c RS-4
 
 ## Технические характеристики
 
-:include{path="/catalog/includes/msw3_measured_values"}
+::product-section{title="Измеряемые величины"}
+- Температура: -40°С — +80°С (±0.5°С)
+- Влажность: 0 — 98% (±3%)
+- Освещенность: 0.02 — 100000 лк
+- Уровень шума: 38 — 105 дБА
+- Концентрация СО2: 400 — 5000 ppm.
+- Концентрация VOC: 0 — 60000 ppb.
+- Движение: до 8 м, угол - 120°
+::
 
-:include{path="/catalog/includes/msw3_additional_functions"}
+::product-section{title="Дополнительная функциональность"}
+- Передача ИК-команд
+- Управляемый зуммер
+- Двухцветная индикация, управляемая по Modbus
+- Подогрев датчика для работы в условиях высокой влажности
+::
 
 ::product-section{title="Прочее"}
 - Напряжение питания: от 9 до 28 В постоянного тока

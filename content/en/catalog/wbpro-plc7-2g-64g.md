@@ -2,6 +2,10 @@
 article: "WBPRO-PLC7-2G-64G"
 cover: "wbpro-plc7-2g-64g/cover.png"
 catalogCover: "wbpro-plc7-2g-64g/catalog-cover.png"
+images: [
+  ["wbpro-plc7-2g-64g/cover.png"],
+  ["wbpro-plc7-2g-64g/wbpro-plc7-2g-64g-1.png"],
+]
 meta: "WBPRO-PLC7-2G-64G"
 keywords: "WBPRO-PLC7-2G-64G"
 ---

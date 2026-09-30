@@ -2,6 +2,11 @@
 article: "00161"
 cover: "wbio-di-lvd-8/cover.png"
 catalogCover: "wbio-di-lvd-8/catalog-cover.png"
+images: [
+  ["wbio-di-lvd-8/cover.png"],
+  ["wbio-di-lvd-8/wbio-di-lvd-8-1.png"],
+  ["wbio-di-lvd-8/wbio-di-lvd-8-2.png"],
+]
 ---
 ::product
 #description
@@ -22,9 +27,16 @@ catalogCover: "wbio-di-lvd-8/catalog-cover.png"
 - Напряжение срабатывания от 9В AC/DC
 ::
 
-:include{path="/catalog/includes/wbio_interfaces"}
+::product-section{title="Интерфейсы"}
+- Шина WBIO
+- Можно подключать по Modbus RTU и Ethernet при помощи модуля WB-MIO
+::
 
-:include{path="/catalog/includes/wbio_compatibility_wb5-6"}
+::product-section{title="Совместимость"}
+- Контроллеры Wiren Board 5
+- Контроллеры Wiren Board 6
+- Интерфейсные модули WB-MIO и WB-MIO-E
+::
 
 
 ::

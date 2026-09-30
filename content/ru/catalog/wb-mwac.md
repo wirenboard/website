@@ -2,6 +2,12 @@
 article: "WB-MWAC"
 cover: "wb-mwac/cover.png"
 catalogCover: "wb-mwac/catalog-cover.png"
+images: [
+  ["wb-mwac/cover.png"],
+  ["wb-mwac/wb-mwac-6.png"],
+  ["wb-mwac/wb-mwac-7.png"],
+  ["wb-mwac/wb-mwac-8.png"],
+]
 documentation: "https://wirenboard.com/wiki/WB-MWAC_v.2_Modbus_Water_Consumption_Metering_and_Leak_Monitoring"
 meta: "Модуль c RS-485, Modbus RTU для учета водопотребления и контроля протечек для квартиры, дома или промышленного объекта."
 keywords: "RS-485, Modbus RTU, защита от протечек, автономная, шесть зон, изолированные входы, выходы сухой контакт, wiren board"

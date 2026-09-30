@@ -1,47 +1,45 @@
 ---
 article: "WBIO-DI-HVD-8"
-cover: "wbio-di-hvd-8/wbio-di-hvd-8-top.png"
-catalogCover: "wbio-di-hvd-8/wbio-di-hvd-8-main.png"
-documentation: "https://wiki.wirenboard.com/wiki/WBIO-DI-HVD-8_8-Channel_230V_Detector_Module"
-meta: "WBIO-DI-HVD-8 is an I/O module with 8 discrete 230V presence inputs and group galvanic isolation."
-keywords: "Wiren Board, WBIO, WBIO-DI-HVD-8, discrete inputs, 230V voltage detector, I/O module"
+cover: "wbio-di-hvd-8/cover.png"
+catalogCover: "wbio-di-hvd-8/catalog-cover.png"
 images: [
-  ["wbio-di-hvd-8/wbio-di-hvd-8-top.png"],
-  ["wbio-di-hvd-8/wbio-di-hvd-8-main.png"],
-  ["wbio-di-hvd-8/wbio-di-hvd-8-connection.png"],
-  ["wbio-di-hvd-8/wbio-di-hvd-8-pcb.png"]
+  ["wbio-di-hvd-8/cover.png"],
+  ["wbio-di-hvd-8/wbio-di-hvd-8-1.png"],
+  ["wbio-di-hvd-8/wbio-di-hvd-8-2.png"],
+  ["wbio-di-hvd-8/wbio-di-hvd-8-3.png"],
 ]
-use_cases: []
+documentation: "https://wirenboard.com/wiki/WBIO-DI-HVD-8_8-Channel_230V_Detector_Module"
+meta: "I/O Module WBIO-DI-HVD-8"
+keywords: "I/O Module WBIO-DI-HVD-8"
 ---
 ::product
 #description
 
-The module is designed for monitoring circuit breaker status, polling indicator lamps, and similar tasks.
+Designed for monitoring the status of circuit breakers, polling signal lamps etc.
+
 
 #info
-## Key features
+
+## Technical specifications
 
 ::product-section{title="Discrete inputs"}
-:photo{
-  src="wbio-di-hvd-8/wbio-di-hvd-8-connection.png"
-  width="250px"
-  float="right"
-}
-- 8 discrete inputs, split into 2 isolated groups;
-- trigger voltage from ~110 V;
-- can operate on three-phase ~380/400 V networks;
-- isolation voltage between the inputs and the controller ~5000 V.
+- 8 inputs
+- Group galvanic isolation
+- Inputs are triggered when sensing 230 VAC
+- Triggering voltage >50VAC
 ::
 
-
-::product-section{title="Connecting to the controller"}
-The module connects to a Wiren Board controller over the WBIO bus. It can also be connected over Modbus RTU using a WB-MIO interface converter, or over Modbus RTU and Ethernet using WB-MIO-E or WB-MGE v.3 interface converters.
+::product-section{title="Interfaces"}
+- WBIO Bus
+- Can be connected to Modbus RTU and Ethernet via the WB-MIO module
 ::
 
 ::product-section{title="Compatibility"}
-- Wiren Board 5, 6, 7, 8 controllers;
-- WB-MIO, WB-MIO-E, WB-MGE v.3 interface converters.
+- Wiren Board 5 controllers
+- Wiren Board 6 controllers
+- Wiren Board 7 controllers
+- Bus couplers WB-MIO and WB-MIO-E
 ::
 
-:include{path="/catalog/includes/quality_control"}
+
 ::

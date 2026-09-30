@@ -2,6 +2,10 @@
 article: "KCT-16"
 cover: "ct-heyi-kct-16/cover.png"
 catalogCover: "ct-heyi-kct-16/catalog-cover.png"
+images: [
+  ["ct-heyi-kct-16/cover.png"],
+  ["ct-heyi-kct-16/ct-heyi-kct-16-1.png"],
+]
 documentation: "https://wirenboard.com/wiki/KCT-16"
 meta: "Разъёмный трансформатор тока KCT-16"
 keywords: "Разъёмный трансформатор тока KCT-16"

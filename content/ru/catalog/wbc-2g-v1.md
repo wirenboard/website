@@ -2,6 +2,11 @@
 article: "WBC-2G v.1"
 cover: "wbc-2g-v1/cover.png"
 catalogCover: "wbc-2g-v1/catalog-cover.png"
+images: [
+  ["wbc-2g-v1/cover.png"],
+  ["wbc-2g-v1/wbc-2g-v1-1.png"],
+  ["wbc-2g-v1/wbc-2g-v1-2.png"],
+]
 documentation: "https://wirenboard.com/wiki/WBC-2G v.1"
 meta: "Модуль расширения для WirenBoard 6.7"
 ---

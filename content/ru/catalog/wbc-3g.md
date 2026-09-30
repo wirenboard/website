@@ -2,6 +2,11 @@
 article: "WBC-3G"
 cover: "wbc-3g/cover.png"
 catalogCover: "wbc-3g/catalog-cover.png"
+images: [
+  ["wbc-3g/cover.png"],
+  ["wbc-3g/wbc-3g-1.png"],
+  ["wbc-3g/wbc-3g-2.png"],
+]
 documentation: "https://wirenboard.com/wiki/WBC-3G"
 meta: "Модуль расширения для WirenBoard 6.7"
 ---

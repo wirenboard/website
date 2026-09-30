@@ -1,5 +1,9 @@
 ---
 article: "WBPRO-DI8HV"
+images: [
+  ["wbpro-di8hv/wbpro-di8hv-5.png"],
+  ["wbpro-di8hv/wbpro-di8hv-6.png"],
+]
 documentation: "https://wiki.wirenboard.com/wiki/WB-MCM8HV_v.1_Modbus_AC_Detector"
 ---
 ::product
@@ -14,7 +18,16 @@ An 8-channel mains voltage presence detector module with an RS-485 interface, de
 
 ## MAIN FEATURES
 
+  ## MAIN FEATURES
+
+  
 ::product-section{title="Advantages"}
+:photo{
+  src="wbpro-di8hv/wbpro-di8hv-1.png"
+  width="500px"
+  float="right"
+}
+
 - programmable debounce;
 - recognition of 4 types of presses;
 - input status indication, except for input 8;
@@ -43,7 +56,21 @@ Technical specifications:
 
 :include{path="/catalog/includes/quality_control"}
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Fast Modbus support"}
+:photo{
+  src="wbpro-di8hv/wbpro-di8hv-2.png"
+  width="500px"
+  float="right"
+}
+
+In addition to standard Modbus RTU, all Wiren Board devices can work with its extension [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, which adds new capabilities:
+
+- instant polling of input states and measured values via events;
+- fast discovery of devices connected to the controller;
+- address collision resolution on the bus.
+
+For the user, enabling additional capabilities is seamless — if the device supports the extension, the controller driver will communicate with the device via Fast Modbus; if the device knows nothing about the extension, it will operate via standard Modbus RTU.
+::
 
 ::product-section{title=""}
 :photo{

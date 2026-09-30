@@ -2,6 +2,15 @@
 article: "WB-Backpack"
 cover: "backpack/cover.jpg"
 catalogCover: "backpack/catalog-cover.jpg"
+images: [
+  ["backpack/cover.jpg"],
+  ["backpack/backpack-1.jpg"],
+  ["backpack/backpack-2.jpg"],
+  ["backpack/backpack-3.png"],
+  ["backpack/backpack-4.png"],
+  ["backpack/backpack-5.png"],
+  ["backpack/backpack-6.png"],
+]
 ---
 ::product
 #description

@@ -2,6 +2,13 @@
 article: "00087"
 cover: "wbio-dio-ttl-8/cover.png"
 catalogCover: "wbio-dio-ttl-8/catalog-cover.png"
+images: [
+  ["wbio-dio-ttl-8/cover.png"],
+  ["wbio-dio-ttl-8/wbio-dio-ttl-8-1.png"],
+  ["wbio-dio-ttl-8/wbio-dio-ttl-8-2.jpg"],
+  ["wbio-dio-ttl-8/wbio-dio-ttl-8-3.jpg"],
+  ["wbio-dio-ttl-8/wbio-dio-ttl-8-4.png"],
+]
 ---
 ::product
 #description
@@ -25,7 +32,11 @@ catalogCover: "wbio-dio-ttl-8/catalog-cover.png"
 - Можно подключать по Modbus RTU и Ethernet при помощи модуля WB-MIO(Е)
 ::
 
-:include{path="/catalog/includes/wbio_compatibility_wb5-6"}
+::product-section{title="Совместимость"}
+- Контроллеры Wiren Board 5
+- Контроллеры Wiren Board 6
+- Интерфейсные модули WB-MIO и WB-MIO-E
+::
 
 
 ::

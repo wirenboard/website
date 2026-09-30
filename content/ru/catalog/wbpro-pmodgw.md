@@ -2,6 +2,11 @@
 article: "WBPRO-PMODGW"
 cover: "wbpro-pmodgw/cover.png"
 catalogCover: "wbpro-pmodgw/catalog-cover.png"
+images: [
+  ["wbpro-pmodgw/cover.png"],
+  ["wbpro-pmodgw/wbpro-pmodgw-1.png"],
+  ["wbpro-pmodgw/wbpro-pmodgw-2.png"],
+]
 meta: "WBPRO-PMODGW"
 keywords: "WBPRO-PMODGW"
 ---

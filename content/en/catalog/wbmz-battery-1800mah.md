@@ -2,6 +2,10 @@
 article: "WBMZ-BATTERY"
 cover: "wbmz-battery-1800mah/cover.png"
 catalogCover: "wbmz-battery-1800mah/catalog-cover.png"
+images: [
+  ["wbmz-battery-1800mah/cover.png"],
+  ["wbmz-battery-1800mah/wbmz-battery-1800mah-1.png"],
+]
 ---
 ::product
 #description

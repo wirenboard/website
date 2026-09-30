@@ -2,6 +2,9 @@
 article: "WBPRO-PMDO-R3A-1"
 cover: "wbpro-pmdo-r3a-1/cover.jpg"
 catalogCover: "wbpro-pmdo-r3a-1/cover.jpg"
+images: [
+  ["wbpro-pmdo-r3a-1/cover.jpg"],
+]
 meta: "WBPRO-PMDO-R3A-1"
 keywords: "WBPRO-PMDO-R3A-1"
 ---

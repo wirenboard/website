@@ -2,6 +2,14 @@
 article: "WB7-1G-SH"
 cover: "sprut-hub-wiren-board-7/cover.jpg"
 catalogCover: "sprut-hub-wiren-board-7/catalog-cover.jpg"
+images: [
+  ["sprut-hub-wiren-board-7/cover.jpg"],
+  ["sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-9.png"],
+  ["sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-10.png"],
+  ["sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-11.png"],
+  ["sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-12.jpg"],
+  ["sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-13.jpg"],
+]
 documentation: "https://wirenboard.com/wiki/Wiren_Board_7"
 meta: "Контроллер для автоматизации Wiren Board 7 с Sprut.hub и Sprut.stick"
 keywords: "Контроллер для автоматизации Wiren Board 7, умный дом, smart home, sprut.hub, sprut.stick, zigbee, modbus, zwave"
@@ -112,13 +120,61 @@ Wiren Board 7 — это универсальный контроллер авт�
 Широкий ассортимент внешних модулей поможет вам построить отказоустойчивую систему автоматизации под любые задачи, а поддержка различных протоколов передачи данных — интегрировать контроллер в существующую.
 ::
 
-:include{path="/catalog/includes/controller_text_dashboards"}
+::product-section{title="Текстовые дашборды"}
+:photo{
+  src="sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-5.png"
+  width="500px"
+  float="right"
+}
 
-:include{path="/catalog/includes/controller_graphic_dashboards"}
+Основной элемент текстовой информационной панели — виджет. Виджет позволяет вывести в одном месте информацию с разных источников.
 
-:include{path="/catalog/includes/controller_data_archive"}
+Текстовый дашборд может адаптироваться под небольшой экран мобильного устройства.
+::
 
-:include{path="/catalog/includes/controller_automation_scripts"}
+::product-section{title="Графические дашборды"}
+:photo{
+  src="sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-6.png"
+  width="500px"
+  float="right"
+}
+
+Вы можете создавать интерактивные графические дашборды, в основе которых лежат SVG-рисунки.
+
+Вы можете выводить информацию в текстовые элементы SVG-рисунка, менять видимость и оформление элементов. Также вы можете настроить реакцию на действие пользователя: включить свет, отключить сигнал тревоги и т.п.
+
+Для настройки графического дашборда в веб-интерфейсе контроллера есть визуальный редактор.
+
+Подробнее о дашбордах и других возможностях веб-интерфейса читайте в статье [Веб-интерфейс контроллеров Wiren Board](https://wirenboard.com/ru/pages/wb-software/)
+::
+
+::product-section{title="Архив данных"}
+:photo{
+  src="sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-7.png"
+  width="500px"
+  float="right"
+}
+
+Все получаемые контроллером данные сохраняются в архив, размер которого можно настроить.
+
+Вы можете построить графики по архивным данных одновременно для нескольких каналов. С графиками можно взаимодействовать: менять масштаб, делать курсорные измерения и т.п.
+
+Данные из архива можно выгрузить в CSV для анализа в стороннем ПО.
+::
+
+::product-section{title="Скрипты автоматизации"}
+:photo{
+  src="sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-8.png"
+  width="500px"
+  float="right"
+}
+
+Встроенное ПО контроллера Wiren Board содержит гибкий инструмент написания скриптов на Javascript-подобном языке — WB-Rules.
+
+С помощью скриптов можно автоматизировать любые действия: управлять освещением, отоплением или технологическим процессом.
+
+Скрипты можно создавать и редактировать прямо в веб-интерфейсе, доступна отладка в консоли.
+::
 
 
 ::

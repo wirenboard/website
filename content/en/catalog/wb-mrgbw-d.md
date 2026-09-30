@@ -2,6 +2,18 @@
 article: "WB-MRGBW-D"
 cover: "wb-mrgbw-d/cover.png"
 catalogCover: "wb-mrgbw-d/catalog-cover.png"
+images: [
+  ["wb-mrgbw-d/cover.png"],
+  ["wb-mrgbw-d/wb-mrgbw-d-4.png"],
+  ["wb-mrgbw-d/wb-mrgbw-d-5.png"],
+  ["wb-mrgbw-d/wb-mrgbw-d-6.png"],
+  ["wb-mrgbw-d/wb-mrgbw-d-7.png"],
+  ["wb-mrgbw-d/wb-mrgbw-d-8.png"],
+  ["wb-mrgbw-d/wb-mrgbw-d-9.png"],
+  ["wb-mrgbw-d/wb-mrgbw-d-10.png"],
+  ["wb-mrgbw-d/wb-mrgbw-d-11.png"],
+  ["wb-mrgbw-d/wb-mrgbw-d-12.png"],
+]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MRGBW-D"
 meta: "RS-485, Modbus RTU 4-channel dimmer"
 keywords: "RS-485, Modbus RTU"
@@ -43,26 +55,14 @@ Technical specifications:
 The dimmer can work stand-alone or paired with a controller.
 ::
 
-::product-section{title="Supported LED strips"}
-Depending on the selected mode, the dimmer can work with strips:
-
-- colored (RGB, RGB+W),
-- yellow and white (CCT),
-- and plain white.
-
-In some modes, several strips of the same or different types can be connected to the dimmer and each of them can be controlled separately.
-
-See the documentation for connection diagrams and available modes.
-::
-
-::product-section{title="Operating modes and functions setup"}
+::product-section{title=""}
 :photo{
   src="wb-mrgbw-d/wb-mrgbw-d-2.png"
   width="500px"
   float="right"
 }
 
-Wiren Board controller's web interface allows to:
+Wiren Board controller's web intervace allows to:
 
 - select the operating mode and assign actions to inputs;
 - configure input parameters: debounce time, double and long press time, rate of change of brightness and saturation when pressing the button;

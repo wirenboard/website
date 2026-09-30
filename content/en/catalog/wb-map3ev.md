@@ -2,6 +2,10 @@
 article: "WB-MAP3EV"
 cover: "wb-map3ev/cover.png"
 catalogCover: "wb-map3ev/catalog-cover.png"
+images: [
+  ["wb-map3ev/cover.png"],
+  ["wb-map3ev/wb-map3ev-7.png"],
+]
 documentation: "https://wirenboard.com/wiki/Map3ev"
 meta: "Three-phase voltmeter with Modbus"
 keywords: "Three-phase voltmeter with Modbus"
@@ -73,7 +77,21 @@ The measured parameters can be used to control phase voltage. As well as identif
 To transmit actual voltage values (Urms) WB-MAP3EV uses Fast Modbus ⚡. This allows you to instantly detect phase voltage deviations from the norm and take timely measures to protect electrical equipment.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Fast Modbus support"}
+:photo{
+  src="wb-map3ev/wb-map3ev-4.png"
+  width="500px"
+  float="right"
+}
+
+All Wiren Board devices, in addition to the standard Modbus RTU, can work with its extension [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which adds new features:
+
+- instant polling of input states and measured values via events;
+- quick search for devices connected to the controller;
+- resolving address collisions on the bus.
+
+Additional features are enabled automatically - if the device supports extension, the controller driver will work with the device quickly Modbus if the device does not know anything about the extension - it will work using standard Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

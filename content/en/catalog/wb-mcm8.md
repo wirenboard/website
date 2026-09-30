@@ -2,6 +2,14 @@
 article: "WB-MCM8"
 cover: "wb-mcm8/cover.png"
 catalogCover: "wb-mcm8/catalog-cover.png"
+images: [
+  ["wb-mcm8/cover.png"],
+  ["wb-mcm8/wb-mcm8-7.png"],
+  ["wb-mcm8/wb-mcm8-8.png"],
+  ["wb-mcm8/wb-mcm8-9.png"],
+  ["wb-mcm8/wb-mcm8-10.png"],
+  ["wb-mcm8/wb-mcm8-11.png"],
+]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MCM8_%D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C_%D1%81%D1%87%D0%B5%D1%82%D0%BD%D1%8B%D1%85_%D0%B2%D1%85%D0%BE%D0%B4%D0%BE%D0%B2_8-%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9"
 meta: "Buy WB-MCM8 pulse counter module with Modbus RTU RS-485"
 keywords: "pulse counter module with Modbus RTU RS-485, modbus module, modbus pulse counter"
@@ -54,7 +62,7 @@ Specifications:
 - Supply voltage: 9…28 V DC.
 - Interface: RS-485, Modbus RTU.
 - Extended operating temperature range: -40…+80 °C.
-- DIN rail enclosure: 2M (36 x 90 x 58 mm).
+- DIN rail housing: 2 modules.
 ::
 
 ::product-section{title="Use with encoders"}
@@ -69,7 +77,21 @@ The WB-MCM8 module can be used to connect two- and three-pin quadrature AB and A
 The encoder operation is configured in the web interface of the Wiren Board controller. Meaning encoder position is available in the corresponding MQTT topic. You can set the initial position and track the rotation angle.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Fast Modbus support"}
+:photo{
+  src="wb-mcm8/wb-mcm8-4.png"
+  width="500px"
+  float="right"
+}
+
+All Wiren Board devices, in addition to the standard Modbus RTU, can work with its extension [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which adds new features:
+
+- instant polling of input states and measured values via events;
+- quick search for devices connected to the controller;
+- resolving address collisions on the bus.
+
+Additional features are enabled automatically - if the device supports extension, the controller driver will work with the device quickly Modbus if the device does not know anything about the extension - it will work using standard Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

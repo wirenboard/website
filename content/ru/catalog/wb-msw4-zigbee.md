@@ -2,6 +2,15 @@
 article: "WB-MSW4-ZIGBEE"
 cover: "wb-msw4-zigbee/cover.png"
 catalogCover: "wb-msw4-zigbee/catalog-cover.png"
+images: [
+  ["wb-msw4-zigbee/cover.png"],
+  ["wb-msw4-zigbee/wb-msw4-zigbee-9.png"],
+  ["wb-msw4-zigbee/wb-msw4-zigbee-10.png"],
+  ["wb-msw4-zigbee/wb-msw4-zigbee-11.png"],
+  ["wb-msw4-zigbee/wb-msw4-zigbee-12.png"],
+  ["wb-msw4-zigbee/wb-msw4-zigbee-13.jpg"],
+  ["wb-msw4-zigbee/wb-msw4-zigbee-14.png"],
+]
 documentation: "https://wirenboard.com/wiki/WB-MSW-ZIGBEE_v.4_Sensor"
 meta: "Настенный комбинированный датчик с беспроводным интерфейсом Zigbee"
 keywords: "Настенный комбинированный датчик с беспроводным интерфейсом Zigbee"
@@ -117,7 +126,17 @@ CO2 (углекислый газ) - газ без цвета с легким к�
 В WB-MSW-ZIGBEE v.4 для измерения концентрации CO2 используется недисперсионный инфракрасный (NDIR) сенсор. Он позволяет проводить измерения с погрешностью 100 ppm + 5% от измеренного значения.
 ::
 
-:include{path="/catalog/includes/voc_control"}
+::product-section{title="Контроль VOC"}
+:photo{
+  src="wb-msw4-zigbee/wb-msw4-zigbee-6.jpg"
+  width="500px"
+  float="right"
+}
+
+Летучие органические вещества (ЛОВ, VOC) — это вещества, выделяющиеся в атмосферу в виде газов: испарения лаков/красок и элементов внутренней отделки помещений (фенол, формальдегид, толуол, стирол), спирты, бензол, гниющие овощи, выделяемые человеком газы, бытовой газ. Высокие концентрации опасных ЛОВ представляют угрозу жизни и здоровью человека.
+
+Датчик VOC определяет суммарную концентрацию этих веществ c типовой погрешностью ±15 %.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

@@ -2,6 +2,13 @@
 article: "WB-MR6CU v.2"
 cover: "wb-mr6cu/cover.png"
 catalogCover: "wb-mr6cu/catalog-cover.png"
+images: [
+  ["wb-mr6cu/cover.png"],
+  ["wb-mr6cu/wb-mr6cu-9.png"],
+  ["wb-mr6cu/wb-mr6cu-10.png"],
+  ["wb-mr6cu/wb-mr6cu-11.png"],
+  ["wb-mr6cu/wb-mr6cu-12.png"],
+]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MR6CU_v.2_Modbus_Relay_Modules"
 meta: "Компактный модуль реле с RS-485, Modbus RTU"
 keywords: "Компактный модуль реле с RS-485, Modbus RTU"
@@ -108,7 +115,21 @@ use_cases: ["partronic-banya", "setpoint-desinfection", "solutions-ledfarm"]
 Выходы настраиваются индивидуально, поэтому для управления шторами можно использовать только часть выходов, а остальные использовать для других целей. Также можно настроить действие со шторами для каждого из 4 типов нажатий кнопок, подключенных к входам модуля.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Поддержка Быстрого Modbus"}
+:photo{
+  src="wb-mr6cu/wb-mr6cu-6.png"
+  width="500px"
+  float="right"
+}
+
+Все устройства Wiren Board в дополнение к стандартному Modbus RTU могут работать с его расширением [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, которое добавляет новые возможности:
+
+- мгновенный опрос состояний входов и измеренных значений через события;
+- быстрый поиск подключённых к контроллеру устройств;
+- разрешение коллизий адресов на шине.
+
+Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

@@ -2,6 +2,11 @@
 article: "WBE2-I-EBUS"
 cover: "wbe2-i-ebus/cover.png"
 catalogCover: "wbe2-i-ebus/catalog-cover.png"
+images: [
+  ["wbe2-i-ebus/cover.png"],
+  ["wbe2-i-ebus/wbe2-i-ebus-1.png"],
+  ["wbe2-i-ebus/wbe2-i-ebus-2.jpg"],
+]
 documentation: "https://wirenboard.com/wiki/WBE2-I-EBUS_eBus_Extension_Module"
 meta: "Шлюз eBus для Wiren Board 6…8"
 keywords: "eBus, Wiren Board, Vaillant, Protherm, автоматизация"

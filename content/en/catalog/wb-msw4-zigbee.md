@@ -2,6 +2,15 @@
 article: "WB-MSW4-ZIGBEE"
 cover: "wb-msw4-zigbee/cover.png"
 catalogCover: "wb-msw4-zigbee/catalog-cover.png"
+images: [
+  ["wb-msw4-zigbee/cover.png"],
+  ["wb-msw4-zigbee/wb-msw4-zigbee-9.png"],
+  ["wb-msw4-zigbee/wb-msw4-zigbee-10.png"],
+  ["wb-msw4-zigbee/wb-msw4-zigbee-11.png"],
+  ["wb-msw4-zigbee/wb-msw4-zigbee-12.png"],
+  ["wb-msw4-zigbee/wb-msw4-zigbee-13.jpg"],
+  ["wb-msw4-zigbee/wb-msw4-zigbee-14.png"],
+]
 documentation: "https://wirenboard.com/wiki/WB-MSW-ZIGBEE_v.4_Sensor"
 meta: "WB-MSW4-ZIGBEE"
 keywords: "WB-MSW4-ZIGBEE"
@@ -13,7 +22,7 @@ Combined digital sensor for temperature, humidity, light, motion, noise, CO2 and
 
 It is used to control climate parameters as part of ZigBee networks.
 
-Connects to the Wiren Board controller via ZigBee or RS-485. The connection method is selected by a switch on the board; in all cases, the device requires external power. When using ZigBee, you need to install the [WBE2R-R-ZIGBEE-V.2](https://wirenboard.com/en/product/WBE2R-R-ZIGBEE-v2) adapter into the controller.
+Connects to the Wiren Board controller via ZigBee or RS-485. The connection method is selected by a switch on the board; in all cases, the device requires external power. When using ZigBee, you need to install the [WBE2R-R-ZIGBEE-V.2](https://wirenboard.com/ru/product/WBE2R-R-ZIGBEE-v2) adapter into the controller.
 
 Supported in zigbee2mqtt from version 1.32.2 and in Sprut.hub.
 
@@ -31,7 +40,6 @@ Supported in zigbee2mqtt from version 1.32.2 and in Sprut.hub.
 
 - 8 measured parameters in one housing.
 - Work via the ZigBee wireless protocol or via RS-485 using the Modbus RTU protocol
-- Is a measuring instrument for temperature, humidity and CO2 concentration.
 - Heated temperature and humidity sensor for operation in high humidity conditions.
 - Auto calibration of CO2 and VOC sensors.
 - Controlled sound and light indication.
@@ -107,7 +115,17 @@ CO2 (carbon dioxide) is a colorless gas with a slight sour odor, heavier than ai
 WB-MSW-ZIGBEE v.4 uses a non-dispersive infrared (NDIR) sensor to measure CO2 concentration. It allows measurements with an error of 100 ppm + 5% of the measured value.
 ::
 
-:include{path="/catalog/includes/voc_control"}
+::product-section{title="VOC control"}
+:photo{
+  src="wb-msw4-zigbee/wb-msw4-zigbee-6.jpg"
+  width="500px"
+  float="right"
+}
+
+Volatile organic substances (VOCs, VOC) are substances released into the atmosphere in the form of gases: evaporation of varnishes/paints and elements of interior decoration (phenol, formaldehyde, toluene, styrene), alcohols, benzene, rotting vegetables, gases emitted by humans, household gas. High concentrations of hazardous VOCs pose a threat to human life and health.
+
+The VOC sensor determines the total concentration of these substances with a typical error of ±15%.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

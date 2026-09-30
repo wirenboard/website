@@ -2,6 +2,10 @@
 article: "WB-MAP3EV"
 cover: "wb-map3ev/cover.png"
 catalogCover: "wb-map3ev/catalog-cover.png"
+images: [
+  ["wb-map3ev/cover.png"],
+  ["wb-map3ev/wb-map3ev-7.png"],
+]
 documentation: "https://wirenboard.com/wiki/Map3ev"
 meta: "Трёхфазный вольтметр с Modbus"
 keywords: "Трёхфазный вольтметр с Modbus"
@@ -84,7 +88,21 @@ WB-MAP3EV используется в системах мониторинга э
 Для передачи значений действующего напряжения (Urms) WB-MAP3EV использует Быстрый Modbus ⚡. Это позволяет мгновенно обнаруживать отклонение фазного напряжения от нормы и своевременно принимать меры для защиты электрооборудования.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Поддержка Быстрого Modbus"}
+:photo{
+  src="wb-map3ev/wb-map3ev-4.png"
+  width="500px"
+  float="right"
+}
+
+Все устройства Wiren Board в дополнение к стандартному Modbus RTU могут работать с его расширением [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, которое добавляет новые возможности:
+
+- мгновенный опрос состояний входов и измеренных значений через события;
+- быстрый поиск подключённых к контроллеру устройств;
+- разрешение коллизий адресов на шине.
+
+Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

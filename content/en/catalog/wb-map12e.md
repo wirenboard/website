@@ -2,6 +2,13 @@
 article: "WB-MAP12E"
 cover: "wb-map12e/cover.png"
 catalogCover: "wb-map12e/catalog-cover.png"
+images: [
+  ["wb-map12e/cover.png"],
+  ["wb-map12e/wb-map12e-9.png"],
+  ["wb-map12e/wb-map12e-10.png"],
+  ["wb-map12e/wb-map12e-11.png"],
+  ["wb-map12e/wb-map12e-12.png"],
+]
 documentation: "https://wirenboard.com/wiki/index.php?title=Power_Meter_WB-MAP12E"
 meta: "Multi-circuit energy meter with RS-485, Modbus RTU"
 keywords: "Multi-circuit energy meter with RS-485, Modbus RTU"
@@ -59,7 +66,7 @@ Specifications:
 - Supply voltage: 9…28 V direct current and 230 V AC.
 - Interface: RS-485, Modbus RTU.
 - Extended operating temperature range: -40…+80 °C.
-- DIN rail enclosure, 6M (108 x 90 x 58 mm).
+- DIN rail housing, 6 modules.
 ::
 
 ::product-section{title="Installation without interfering with the power supply system"}
@@ -81,7 +88,7 @@ The meter is installed on a DIN rail in a distribution board or inside an electr
   float="right"
 }
 
-WB-MAP12E is used in systems [power grid monitoring](https://wirenboard.com/en/pages/enegro_monitoring/) and at industrial enterprises, office buildings, data centers. Measures all the main parameters of the electrical network, replacing several measuring instruments: voltmeter, ammeter, wattmeter, frequency meter.
+WB-MAP12E is used in systems [power grid monitoring](https://wirenboard.com/ru/pages/enegro_monitoring/) and at industrial enterprises, office buildings, data centers. Measures all the main parameters of the electrical network, replacing several measuring instruments: voltmeter, ammeter, wattmeter, frequency meter.
 
 The measured parameters can be used to monitor power consumption and quality. As well as identifying emergency situations:
 
@@ -100,12 +107,26 @@ To transmit actual voltage values (Urms), WB-MAP12E uses Fast Modbus ⚡.This al
   float="right"
 }
 
-Measured parameters convenient to use in tasks of managing load priorities to control consumption on each line. WB-MAP12E can continuously measure current on 4 three-phase or 12 single-phase channels and transmit readings to the controller. If the permissible current consumption is exceeded, the low priority load is switched off. To disconnect loads you can use [Wiren Board relay modules](https://wirenboard.com/en/catalog/wb-mr-relay-modules/).
+Measured parameters convenient to use in tasks of managing load priorities to control consumption on each line. WB-MAP12E can continuously measure current on 4 three-phase or 12 single-phase channels and transmit readings to the controller. If the permissible current consumption is exceeded, the low priority load is switched off. To disconnect loads you can use [https://wirenboard.com/ru/catalog/wb-mr-relay-modules/](https://wirenboard.com/ru/catalog/wb-mr-relay-modules/)Wiren Board relay modules.
 
 If you do not need to measure voltage and energy, then to measure current the meter does not have to be connected to power lines, It is enough to put a current transformer with a split core on the measured line. This makes installation and integration into the automation system easier.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Fast Modbus support"}
+:photo{
+  src="wb-map12e/wb-map12e-6.png"
+  width="500px"
+  float="right"
+}
+
+All Wiren Board devices, in addition to the standard Modbus RTU, can work with its extension [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which adds new features:
+
+- instant polling of input states and measured values via events;
+- quick search for devices connected to the controller;
+- resolving address collisions on the bus.
+
+Additional features are enabled automatically - if the device supports extension, the controller driver will work with the device quickly Modbus if the device does not know anything about the extension - it will work using standard Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

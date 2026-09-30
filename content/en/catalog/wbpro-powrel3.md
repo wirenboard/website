@@ -2,6 +2,9 @@
 article: "WBPRO-POWREL3"
 cover: "wbpro-powrel3/cover.png"
 catalogCover: "wbpro-powrel3/catalog-cover.png"
+images: [
+  ["wbpro-powrel3/cover.png"],
+]
 meta: "Relay module for socket groups WBPRO-POWREL3"
 keywords: "Relay module for socket groups WBPRO-POWREL3"
 ---
@@ -18,9 +21,7 @@ Designed for switching general purpose high-power loads, including induction loa
 ::product-section{title="Outputs"}
 - 3 relay channels rated 20 A 230 VAC
 - Channel status indication
-- Rated current: 20 A per channel
-- Maximum continuous current: 26 A per channel
-- Maximum in-rush current: up to 31 A (20 ms)
+- Maximum continuous current: 31 A per channel
 ::
 
 ::product-section{title="Discrete inputs"}
@@ -31,7 +32,11 @@ Designed for switching general purpose high-power loads, including induction loa
 - "Dry contact" inputs
 ::
 
-:include{path="/catalog/includes/din3m_other_characteristics"}
+::product-section{title="Other characteristics"}
+- Supply voltage: 9 to 28 VDC
+- Interface: RS-485, Modbus RTU
+- 3-module wide DIN rail enclosure (53 x 90 x 58 mm)
+::
 
 
 ::

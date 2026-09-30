@@ -2,6 +2,17 @@
 article: "WB-LED"
 cover: "wb-led/cover.png"
 catalogCover: "wb-led/catalog-cover.png"
+images: [
+  ["wb-led/cover.png"],
+  ["wb-led/wb-led-7.png"],
+  ["wb-led/wb-led-8.png"],
+  ["wb-led/wb-led-9.png"],
+  ["wb-led/wb-led-10.png"],
+  ["wb-led/wb-led-11.png"],
+  ["wb-led/wb-led-12.png"],
+  ["wb-led/wb-led-13.png"],
+  ["wb-led/wb-led-14.png"],
+]
 documentation: "https://wirenboard.com/wiki/WB-LED_v.1_Modbus_LED_Dimmer"
 meta: "RS-485, Modbus RTU 4-channel dimmer"
 keywords: "CV LED Dimmer, RGB Strip, RGB+W Strip, CCT Strip, W Strip"
@@ -11,7 +22,7 @@ keywords: "CV LED Dimmer, RGB Strip, RGB+W Strip, CCT Strip, W Strip"
 
 Four-channel LED strip dimmer with RS-485 interface and 4 discrete inputs for connecting switches. Supports all types of LED strips with voltage up to 48 V.
 
-Used to control artistic LED lighting in smart home systems for residential and commercial premises. Allows you to organize local backlight control without using a controller. To increase power, an amplifier [WB-AMPLED](https://wirenboard.com/en/product/WB-AMPLED/) is used.
+Used to control artistic LED lighting in smart home systems for residential and commercial premises. Allows you to organize local backlight control without using a controller. To increase power, an amplifier [WB-AMPLED](https://wirenboard.com/ru/product/WB-AMPLED/) is used.
 
 
 #info
@@ -85,7 +96,7 @@ See the documentation for connection diagrams and available modes.
   float="right"
 }
 
-Wiren Board controller's web interface allows to:
+Wiren Board controller's web intervace allows to:
 
 - select the operating mode and assign actions to inputs;
 - configure input parameters: debounce time, double and long press time, rate of change of brightness and saturation when pressing the button;
@@ -118,7 +129,21 @@ When working with the Wiren Board controller, the dimmer can be controlled from 
 The dimmer sends status of inputs and outputs as well as other information that can be used in automation via RS-485 bus.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Fast Modbus support"}
+:photo{
+  src="wb-led/wb-led-6.png"
+  width="500px"
+  float="right"
+}
+
+All Wiren Board devices, in addition to the standard Modbus RTU, can work with its extension [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which adds new features:
+
+- instant polling of input states and measured values via events;
+- quick search for devices connected to the controller;
+- resolving address collisions on the bus.
+
+Additional features are enabled automatically - if the device supports extension, the controller driver will work with the device quickly Modbus if the device does not know anything about the extension - it will work using standard Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

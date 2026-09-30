@@ -2,6 +2,9 @@
 article: "WBPRO-DI8"
 cover: "wbpro-di8/cover.png"
 catalogCover: "wbpro-di8/catalog-cover.png"
+images: [
+  ["wbpro-di8/cover.png"],
+]
 meta: "WBPRO-DI8"
 keywords: "WBPRO-DI8"
 ---

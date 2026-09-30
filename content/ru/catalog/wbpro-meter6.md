@@ -2,6 +2,9 @@
 article: "WBPRO-METER6"
 cover: "wbpro-meter6/cover.png"
 catalogCover: "wbpro-meter6/catalog-cover.png"
+images: [
+  ["wbpro-meter6/cover.png"],
+]
 meta: "Многоканальный счётчик электроэнергии с RS-485, Modbus RTU WBPRO-METER6"
 keywords: "Многоканальный счётчик электроэнергии с RS-485, Modbus RTU WBPRO-METER6"
 ---

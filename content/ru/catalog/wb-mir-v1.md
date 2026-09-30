@@ -2,6 +2,13 @@
 article: "WB-MIR"
 cover: "wb-mir-v1/cover.png"
 catalogCover: "wb-mir-v1/catalog-cover.png"
+images: [
+  ["wb-mir-v1/cover.png"],
+  ["wb-mir-v1/wb-mir-v1-7.png"],
+  ["wb-mir-v1/wb-mir-v1-8.png"],
+  ["wb-mir-v1/wb-mir-v1-9.png"],
+  ["wb-mir-v1/wb-mir-v1-10.png"],
+]
 documentation: "http://wirenboard.com/wiki/index.php/Устройство_IR-управления_WB-MIR"
 meta: "Устройство ИК-управления с  RS-485, Modbus RTU"
 keywords: "RS-485, Modbus RTU"
@@ -87,7 +94,21 @@ WB-MIR позволяет записывать сигналы с ИК-пульт
 
 :include{path="/catalog/includes/quality_control"}
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Поддержка Быстрого Modbus"}
+:photo{
+  src="wb-mir-v1/wb-mir-v1-4.png"
+  width="500px"
+  float="right"
+}
+
+Все устройства Wiren Board в дополнение к стандартному Modbus RTU могут работать с его расширением [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, которое добавляет новые возможности:
+
+- мгновенный опрос состояний входов и измеренных значений через события;
+- быстрый поиск подключённых к контроллеру устройств;
+- разрешение коллизий адресов на шине.
+
+Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
+::
 
 ::product-section{title="Настройка"}
 :photo{

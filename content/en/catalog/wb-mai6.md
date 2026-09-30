@@ -2,6 +2,12 @@
 article: "WB-MAI6"
 cover: "wb-mai6/cover.png"
 catalogCover: "wb-mai6/catalog-cover.png"
+images: [
+  ["wb-mai6/cover.png"],
+  ["wb-mai6/wb-mai6-5.png"],
+  ["wb-mai6/wb-mai6-6.png"],
+  ["wb-mai6/wb-mai6-7.png"],
+]
 documentation: "https://wirenboard.com/wiki/WB-MAI6_Modbus_Analog_Inputs"
 ---
 ::product
@@ -29,7 +35,7 @@ Technical specifications:
 
 - 6 differential or 12 unipolar measurement channels.
 - Precision, low-noise, 16-bit ADC operating over an extended temperature range.
-- Protection of inputs up to ±30 V simultaneously on all channels and, for a short time (up to 10 s), up to ±60 V on one channel.
+- Protection of inputs up to ±30 V simultaneously on all channels and up to ±45 V on one channel.
 - Built-in terminating resistors for sensors with 4-20mA signal.
 - Two 5V DC outputs to power sensors.
 - Group isolation of measurement channels from the RS-485 bus.
@@ -54,7 +60,7 @@ The module supports all popular sensors and types of analog signals, for example
 - or 6 Pt100 sensors in 3-wire circuit;
 - or 12 NTC 10k sensors;
 - or 6 K type thermocouples;
-- or 12 Hall effect current sensors, e.g. [HSTS016L 30 A](/product/HSTS016L-D05/) or [HSTS016L 100 A](/product/HSTS016L-D07/);
+- or 12 Hall effect current sensors, e.g. HSTS016L;
 - or 12 discrete signals;
 - or 12 voltage sources up to 30 VDC;
 - or 12 voltage sources up to 60 VDC using [WB-VDIV](https://wirenboard.com/product/wb-vdiv/);

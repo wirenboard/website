@@ -2,6 +2,10 @@
 article: "WBMZ3-SUPERCAP"
 cover: "wbmz3-supercap/cover.png"
 catalogCover: "wbmz3-supercap/catalog-cover.png"
+images: [
+  ["wbmz3-supercap/cover.png"],
+  ["wbmz3-supercap/wbmz3-supercap-1.png"],
+]
 documentation: "https://wirenboard.com/wiki/WBMZ3-SUPERCAP"
 meta: "Модуль резервного питания на ионисторах"
 keywords: "Модуль резервного питания на ионисторах"

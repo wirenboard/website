@@ -2,6 +2,10 @@
 article: "00084"
 cover: "wbe-gps/cover.png"
 catalogCover: "wbe-gps/catalog-cover.png"
+images: [
+  ["wbe-gps/cover.png"],
+  ["wbe-gps/wbe-gps-1.png"],
+]
 ---
 ::product
 #description

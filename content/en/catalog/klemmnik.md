@@ -2,6 +2,9 @@
 article: "15EDGKA"
 cover: "klemmnik/cover.png"
 catalogCover: "klemmnik/catalog-cover.png"
+images: [
+  ["klemmnik/cover.png"],
+]
 meta: "Reciprocal terminal block Degson"
 keywords: "Reciprocal terminal block Degson"
 ---

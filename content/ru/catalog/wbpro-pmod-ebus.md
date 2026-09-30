@@ -2,6 +2,10 @@
 article: "WBPRO-PMOD-EBUS"
 cover: "wbpro-pmod-ebus/cover.jpg"
 catalogCover: "wbpro-pmod-ebus/cover.jpg"
+images: [
+  ["wbpro-pmod-ebus/cover.jpg"],
+  ["wbpro-pmod-ebus/wbpro-pmod-ebus-1.jpg"],
+]
 meta: "Интерфейс eBUS для WBPRO-PLC​ WBPRO-PMOD-EBUS"
 keywords: "Интерфейс eBUS для WBPRO-PLC​ WBPRO-PMOD-EBUS"
 ---

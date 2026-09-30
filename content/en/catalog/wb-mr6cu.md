@@ -2,9 +2,16 @@
 article: "WB-MR6CU v.2"
 cover: "wb-mr6cu/cover.png"
 catalogCover: "wb-mr6cu/catalog-cover.png"
+images: [
+  ["wb-mr6cu/cover.png"],
+  ["wb-mr6cu/wb-mr6cu-9.png"],
+  ["wb-mr6cu/wb-mr6cu-10.png"],
+  ["wb-mr6cu/wb-mr6cu-11.png"],
+  ["wb-mr6cu/wb-mr6cu-12.png"],
+]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MR6CU_v.2_Modbus_Relay_Modules"
-meta: "Compact RS-485, Modbus RTU Relay module"
-keywords: "Compact RS-485, Modbus RTU Relay module"
+meta: "Сompact RS-485, Modbus RTU Relay module"
+keywords: "Сompact RS-485, Modbus RTU Relay module"
 ---
 ::product
 #description
@@ -48,12 +55,12 @@ Specifications:
 - Maximum continuous current: 16 A per channel.
 - Maximum starting current: up to 80 A (20 ms).
 - The outputs are combined into two groups of 3 relays each, each group can switch a total of no more than 20 A.
-- No inputs.
+- No entrances.
 
 - Supply voltage: 9…28 V direct current.
 - Interface: RS-485, Modbus RTU.
 - Operating temperature: -40…+80 °C.
-- DIN rail enclosure, 2M (36 x 90 x 58 mm).
+- DIN rail housing, 2 modules.
 ::
 
 ::product-section{title="Hongfa Long Life Relays"}
@@ -63,7 +70,7 @@ Specifications:
   float="right"
 }
 
-Reliable Hongfa relays are used for switching. The relays have silver tin dioxide (AgSnO2) contacts, which ensures operation with high inrush currents up to 80 A (20 ms). Therefore, the WB-MR6CU v.2 moduleFineSuitable for controlling LED lamps.
+Reliable Hongfa relays are used for switching. The relays have silver tin dioxide (AgSnO) contacts, which ensures operation with high inrush currents up to 80 A (20 ms). Therefore, the WB-MR6CU v.2 moduleFineSuitable for controlling LED lamps.
 
 To ensure the quality of the relay we [tested them with high](https://wirenboard.com/ru/news/proveli-ispytania-rele-na-bolsie-puskovye-toki-458/) inrush current several times higher than nominal.
 
@@ -94,7 +101,21 @@ The WB-MR6CU v.2 module has a special mode for working with curtains, which elim
 The outputs are individually configurable, so only part of the outputs can be used to control curtains, and the rest can be used for other purposes. You can also configure the curtain action for each of the 4 types of button presses connected to the module inputs.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Fast Modbus support"}
+:photo{
+  src="wb-mr6cu/wb-mr6cu-6.png"
+  width="500px"
+  float="right"
+}
+
+All Wiren Board devices, in addition to the standard Modbus RTU, can work with its extension [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which adds new features:
+
+- instant polling of input states and measured values via events;
+- quick search for devices connected to the controller;
+- resolving address collisions on the bus.
+
+Additional features are enabled automatically - if the device supports extension, the controller driver will work with the device quickly Modbus if the device does not know anything about the extension - it will work using standard Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

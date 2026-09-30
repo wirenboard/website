@@ -2,6 +2,12 @@
 article: "WB-MSW-ZIGBEE-v.3"
 cover: "wb-msw-zigbee-v3/cover.jpg"
 catalogCover: "wb-msw-zigbee-v3/catalog-cover.jpg"
+images: [
+  ["wb-msw-zigbee-v3/cover.jpg"],
+  ["wb-msw-zigbee-v3/wb-msw-zigbee-v3-1.png"],
+  ["wb-msw-zigbee-v3/wb-msw-zigbee-v3-2.png"],
+  ["wb-msw-zigbee-v3/wb-msw-zigbee-v3-3.jpg"],
+]
 documentation: "https://wirenboard.com/wiki/WB-MSW_v.3_Zigbee_Sensor"
 meta: "Настенный комбинированный датчик с беспроводным интерфейсом Zigbee"
 keywords: "Настенный комбинированный датчик с беспроводным интерфейсом Zigbee"
@@ -24,7 +30,15 @@ keywords: "Настенный комбинированный датчик с б�
 
 ## Технические характеристики
 
-:include{path="/catalog/includes/msw3_measured_values"}
+::product-section{title="Измеряемые величины"}
+- Температура: -40°С — +80°С (±0.5°С)
+- Влажность: 0 — 98% (±3%)
+- Освещенность: 0.02 — 100000 лк
+- Уровень шума: 38 — 105 дБА
+- Концентрация СО2: 400 — 5000 ppm.
+- Концентрация VOC: 0 — 60000 ppb.
+- Движение: до 8 м, угол - 120°
+::
 
 ::product-section{title="Дополнительная функциональность"}
 - Передача ИК-команд

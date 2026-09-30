@@ -2,6 +2,12 @@
 article: "WBIO-AI-DV-12"
 cover: "wbio-ai-dv-12/cover.png"
 catalogCover: "wbio-ai-dv-12/catalog-cover.png"
+images: [
+  ["wbio-ai-dv-12/cover.png"],
+  ["wbio-ai-dv-12/wbio-ai-dv-12-1.png"],
+  ["wbio-ai-dv-12/wbio-ai-dv-12-2.png"],
+  ["wbio-ai-dv-12/wbio-ai-dv-12-3.png"],
+]
 meta: "Модуль ввода-вывода WBIO-AI-DV-12"
 keywords: "Модуль ввода-вывода WBIO-AI-DV-12"
 ---
@@ -26,9 +32,17 @@ keywords: "Модуль ввода-вывода WBIO-AI-DV-12"
 - Два режима: "±50В" и "0—2,5В"
 ::
 
-:include{path="/catalog/includes/wbio_interfaces"}
+::product-section{title="Интерфейсы"}
+- Шина WBIO
+- Можно подключать по Modbus RTU и Ethernet при помощи модуля WB-MIO
+::
 
-:include{path="/catalog/includes/wbio_compatibility_wb5-7"}
+::product-section{title="Совместимость"}
+- Контроллеры Wiren Board 5
+- Контроллеры Wiren Board 6
+- Контроллеры Wiren Board 7
+- Интерфейсные модули WB-MIO и WB-MIO-E
+::
 
 
 ::

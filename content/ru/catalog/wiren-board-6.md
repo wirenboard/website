@@ -2,6 +2,14 @@
 article: "WB6-WF-IND"
 cover: "wiren-board-6/cover.png"
 catalogCover: "wiren-board-6/catalog-cover.png"
+images: [
+  ["wiren-board-6/cover.png"],
+  ["wiren-board-6/wiren-board-6-9.png"],
+  ["wiren-board-6/wiren-board-6-10.png"],
+  ["wiren-board-6/wiren-board-6-11.png"],
+  ["wiren-board-6/wiren-board-6-12.png"],
+  ["wiren-board-6/wiren-board-6-13.png"],
+]
 documentation: "https://wirenboard.com/wiki/Wiren_Board_6"
 meta: "Контроллер для автоматизации Wiren Board 6"
 keywords: "Контроллер для автоматизации Wiren Board 6"

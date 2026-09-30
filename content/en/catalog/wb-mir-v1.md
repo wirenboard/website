@@ -2,6 +2,13 @@
 article: "WB-MIR"
 cover: "wb-mir-v1/cover.png"
 catalogCover: "wb-mir-v1/catalog-cover.png"
+images: [
+  ["wb-mir-v1/cover.png"],
+  ["wb-mir-v1/wb-mir-v1-7.png"],
+  ["wb-mir-v1/wb-mir-v1-8.png"],
+  ["wb-mir-v1/wb-mir-v1-9.png"],
+  ["wb-mir-v1/wb-mir-v1-10.png"],
+]
 documentation: "http://wirenboard.com/wiki/index.php/Устройство_IR-управления_WB-MIR"
 meta: "IR control device with RS-485, Modbus RTU"
 keywords: "RS-485, Modbus RTU"
@@ -73,7 +80,21 @@ By connecting an external 1-wire temperature sensor to the WB-MIR module, you ca
 The wb-rules rules engine built into the controller allows you to implement algorithms regulation, more accurate than those included in climate control devices default. Thanks to this, you can improve the quality of indoor climate control.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Fast Modbus support"}
+:photo{
+  src="wb-mir-v1/wb-mir-v1-4.png"
+  width="500px"
+  float="right"
+}
+
+All Wiren Board devices, in addition to the standard Modbus RTU, can work with its extension [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which adds new features:
+
+- instant polling of input states and measured values via events;
+- quick search for devices connected to the controller;
+- resolving address collisions on the bus.
+
+Additional features are enabled automatically - if the device supports extension, the controller driver will work with the device quickly Modbus if the device does not know anything about the extension - it will work using standard Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

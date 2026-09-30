@@ -2,6 +2,13 @@
 article: "WB-AMPLED"
 cover: "wb-ampled/cover.png"
 catalogCover: "wb-ampled/catalog-cover.png"
+images: [
+  ["wb-ampled/cover.png"],
+  ["wb-ampled/wb-ampled-4.png"],
+  ["wb-ampled/wb-ampled-5.png"],
+  ["wb-ampled/wb-ampled-6.png"],
+  ["wb-ampled/wb-ampled-7.png"],
+]
 documentation: "https://wirenboard.com/wiki/WB-AMPLED_v.1_RGBW_Constant_Voltage_LED_Amplifier"
 meta: "LED Amplifier  4 channel 10 A each"
 keywords: "LED Amplifier"
@@ -48,7 +55,7 @@ Specifications:
 
 - Service life: 5 years.
 - Extended operating temperature range: -40…+80 °C.
-- DIN rail enclosure, 2M (36 x 90 x 58 mm).
+- DIN rail housing, 2 modules.
 ::
 
 ::product-section{title="Increasing dimming power"}

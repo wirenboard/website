@@ -2,6 +2,14 @@
 article: "WB-CT309"
 cover: "wb-ct309/cover.png"
 catalogCover: "wb-ct309/catalog-cover.png"
+images: [
+  ["wb-ct309/cover.png"],
+  ["wb-ct309/wb-ct309-1.jpg"],
+  ["wb-ct309/wb-ct309-2.jpg"],
+  ["wb-ct309/wb-ct309-3.jpg"],
+  ["wb-ct309/wb-ct309-4.png"],
+  ["wb-ct309/wb-ct309-5.jpg"],
+]
 documentation: "https://wirenboard.com/wiki/WB-CT309_Current_Transformer_Strip"
 meta: "Сборка трансформаторов тока WB-CT309"
 keywords: "Сборка трансформаторов тока WB-CT309"

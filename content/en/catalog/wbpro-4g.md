@@ -2,6 +2,9 @@
 article: "WBPRO-4G"
 cover: "wbpro-4g/cover.jpg"
 catalogCover: "wbpro-4g/cover.jpg"
+images: [
+  ["wbpro-4g/cover.jpg"],
+]
 meta: "WBPRO-4G"
 keywords: "WBPRO-4G"
 ---
@@ -17,7 +20,12 @@ keywords: "WBPRO-4G"
 
 ## Technical Specifications
 
-:include{path="/catalog/includes/modem_4g_general"}
+::product-section{title="General Specifications"}
+- Data transfer rate - up to 150 Mbps
+- Support for two nano-SIM cards
+- Alternating operation mode
+- Antenna included
+::
 
 ::product-section{title="Frequencies and Data Rates"}
 - Operating frequency bands

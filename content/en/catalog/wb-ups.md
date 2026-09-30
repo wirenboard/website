@@ -2,6 +2,15 @@
 article: "WB-UPS"
 cover: "wb-ups/cover.png"
 catalogCover: "wb-ups/catalog-cover.png"
+images: [
+  ["wb-ups/cover.png"],
+  ["wb-ups/wb-ups-1.jpg"],
+  ["wb-ups/wb-ups-2.png"],
+  ["wb-ups/wb-ups-3.png"],
+  ["wb-ups/wb-ups-4.png"],
+  ["wb-ups/wb-ups-5.png"],
+  ["wb-ups/wb-ups-6.png"],
+]
 documentation: "https://wirenboard.com/wiki/index.php/WB-UPS"
 ---
 ::product
@@ -15,10 +24,9 @@ Uninterruptible power supply module on lithium polymer batteries. It is used to 
 ## Technical parameters
 
 ::product-section{title="2 modes of operation"}
-- Input voltage: 12-28 V
-- Output voltage: 12 V / 24 V (selected by a switch)
-- Power 12 W
-- Operating time up to 20 min (at 12 W)
+- 12 В
+- 24 В
+- The mode is selected by a switch
 ::
 
 ::product-section{title="Operating characteristics"}

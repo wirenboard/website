@@ -2,6 +2,12 @@
 article: "WB-MGE v.1"
 cover: "wb-mge-v1/cover.png"
 catalogCover: "wb-mge-v1/catalog-cover.png"
+images: [
+  ["wb-mge-v1/cover.png"],
+  ["wb-mge-v1/wb-mge-v1-1.png"],
+  ["wb-mge-v1/wb-mge-v1-2.png"],
+  ["wb-mge-v1/wb-mge-v1-3.png"],
+]
 documentation: "https://wirenboard.com/wiki/WB-MGE_v.1_Modbus-Ethernet_Interface_Converter"
 ---
 ::product

@@ -2,6 +2,11 @@
 article: "WB-BUSHUB"
 cover: "bushub/cover.png"
 catalogCover: "bushub/catalog-cover.png"
+images: [
+  ["bushub/cover.png"],
+  ["bushub/bushub-1.png"],
+  ["bushub/bushub-2.png"],
+]
 documentation: "https://wirenboard.com/wiki/WB-BUSHUB_v1_-_Wire_Connector_Board"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],

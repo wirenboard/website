@@ -2,6 +2,14 @@
 article: "WB-MAP3H"
 cover: "wb-map3h/cover.png"
 catalogCover: "wb-map3h/catalog-cover.png"
+images: [
+  ["wb-map3h/cover.png"],
+  ["wb-map3h/wb-map3h-1.gif"],
+  ["wb-map3h/wb-map3h-2.png"],
+  ["wb-map3h/wb-map3h-3.png"],
+  ["wb-map3h/wb-map3h-4.png"],
+  ["wb-map3h/wb-map3h-5.png"],
+]
 meta: "Three-phase meter with RS-485, Modbus RTU"
 keywords: "RS-485, Modbus RTU"
 ---
@@ -24,10 +32,13 @@ The WB-MAP3H energy meter is an ideal choice for industrial metering installatio
 - Power factor, phase-to-phase angles, harmonics
 ::
 
-:include{path="/catalog/includes/map_ct_connection"}
+::product-section{title="Connection"}
+- Connection via split type current transformers
+- Detection of incorrect phasing
+::
 
 ::product-section{title="Other characteristics"}
-- Supply voltage: 9 to 28 VDC
+- Supply voltage: 9 — 24 VDC
 - Interface: RS-485, Modbus RTU
 - 3-module wide DIN rail mounted enclosure (58 x 90 x 58 mm)
 ::

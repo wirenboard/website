@@ -2,6 +2,16 @@
 article: "YC-SM41P-marked down"
 cover: "yc-sm41p-marked-down/cover.png"
 catalogCover: "yc-sm41p-marked-down/catalog-cover.png"
+images: [
+  ["yc-sm41p-marked-down/cover.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-1.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-2.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-3.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-4.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-5.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-6.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-7.png"],
+]
 documentation: "https://wirenboard.com/wiki/HMI_Wall_Panel_With_Android_and_PoE_YC-SM41P"
 meta: "Панель 4 дюйма на Android с PoE для систем автоматизации"
 keywords: "Android, PoE, Ethernet, HMI, панель, интерфейс системы"

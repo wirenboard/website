@@ -2,6 +2,11 @@
 article: "IR-TX"
 cover: "ir-tx/cover.png"
 catalogCover: "ir-tx/catalog-cover.png"
+images: [
+  ["ir-tx/cover.png"],
+  ["ir-tx/ir-tx-1.png"],
+  ["ir-tx/ir-tx-2.png"],
+]
 meta: "ИК-передатчик для WB-MIR"
 keywords: "ИК-передатчик для WB-MIR"
 ---

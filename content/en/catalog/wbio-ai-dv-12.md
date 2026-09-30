@@ -2,6 +2,12 @@
 article: "WBIO-AI-DV-12"
 cover: "wbio-ai-dv-12/cover.png"
 catalogCover: "wbio-ai-dv-12/catalog-cover.png"
+images: [
+  ["wbio-ai-dv-12/cover.png"],
+  ["wbio-ai-dv-12/wbio-ai-dv-12-1.png"],
+  ["wbio-ai-dv-12/wbio-ai-dv-12-2.png"],
+  ["wbio-ai-dv-12/wbio-ai-dv-12-3.png"],
+]
 meta: "I/O Module WBIO-AI-DV-12"
 keywords: "I/O Module WBIO-AI-DV-12"
 ---
@@ -26,9 +32,17 @@ Designed for measuring values of analog signals. Typical uses of this module inc
 - Two operation modes: "± 50V" and "0-2.5V"
 ::
 
-:include{path="/catalog/includes/wbio_interfaces"}
+::product-section{title="Interfaces"}
+- WBIO Bus
+- Can be connected to Modbus RTU and Ethernet via the WB-MIO module
+::
 
-:include{path="/catalog/includes/wbio_compatibility_wb5-7"}
+::product-section{title="Compatibility"}
+- Wiren Board 5 controllers
+- Wiren Board 6 controllers
+- Wiren Board 7 controllers
+- Bus couplers WB-MIO and WB-MIO-E
+::
 
 
 ::

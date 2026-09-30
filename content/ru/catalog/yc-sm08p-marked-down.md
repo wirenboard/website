@@ -2,6 +2,15 @@
 article: "YC-SM08P-marked down"
 cover: "yc-sm08p-marked-down/cover.jpg"
 catalogCover: "yc-sm08p-marked-down/catalog-cover.jpg"
+images: [
+  ["yc-sm08p-marked-down/cover.jpg"],
+  ["yc-sm08p-marked-down/yc-sm08p-marked-down-1.jpg"],
+  ["yc-sm08p-marked-down/yc-sm08p-marked-down-2.jpg"],
+  ["yc-sm08p-marked-down/yc-sm08p-marked-down-3.jpg"],
+  ["yc-sm08p-marked-down/yc-sm08p-marked-down-4.jpg"],
+  ["yc-sm08p-marked-down/yc-sm08p-marked-down-5.jpg"],
+  ["yc-sm08p-marked-down/yc-sm08p-marked-down-6.jpg"],
+]
 documentation: "https://wirenboard.com/wiki/HMI_Wall_Panel_With_Android_and_PoE_YC-SM08P"
 meta: "Панель 8 дюймов на Android с PoE для систем автоматизации"
 keywords: "Android, PoE, Ethernet, HMI, панель, интерфейс системы"

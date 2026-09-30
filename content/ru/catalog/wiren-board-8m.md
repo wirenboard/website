@@ -2,6 +2,14 @@
 article: "WB8M"
 cover: "wiren-board-8m/cover.png"
 catalogCover: "wiren-board-8m/catalog-cover.png"
+images: [
+  ["wiren-board-8m/cover.png"],
+  ["wiren-board-8m/wiren-board-8m-16.png"],
+  ["wiren-board-8m/wiren-board-8m-17.png"],
+  ["wiren-board-8m/wiren-board-8m-18.png"],
+  ["wiren-board-8m/wiren-board-8m-19.png"],
+  ["wiren-board-8m/wiren-board-8m-20.png"],
+]
 documentation: "https://wirenboard.com/wiki/Wiren_Board_8M"
 meta: "Контроллер для автоматизации Wiren Board 8 в металлическом корпусе"
 keywords: "ПЛК, контроллер, автоматизация, металлический корпус, мониторинг ЦОД, Wiren Board"
@@ -188,13 +196,61 @@ Wiren Board 8M разработан для удобного монтажа на 
 Устройства с обычным Modbus и с другими протоколами можно добавить в конфигурацию вручную, используя шаблоны с описанием регистров. В стандартной поставке драйвера более 150 шаблонов и их количество продолжает расти.
 ::
 
-:include{path="/catalog/includes/controller_text_dashboards"}
+::product-section{title="Текстовые дашборды"}
+:photo{
+  src="wiren-board-8m/wiren-board-8m-10.png"
+  width="500px"
+  float="right"
+}
 
-:include{path="/catalog/includes/controller_graphic_dashboards"}
+Основной элемент текстовой информационной панели — виджет, который позволяет вывести в одном месте информацию с разных источников.
 
-:include{path="/catalog/includes/controller_data_archive"}
+Текстовый дашборд может адаптироваться под небольшой экран мобильного устройства.
+::
 
-:include{path="/catalog/includes/controller_automation_scripts"}
+::product-section{title="Графические дашборды"}
+:photo{
+  src="wiren-board-8m/wiren-board-8m-11.png"
+  width="500px"
+  float="right"
+}
+
+Вы можете создавать интерактивные графические дашборды, в основе которых лежат SVG-рисунки.
+
+В текстовые элементы SVG-рисунка можно выводить информацию, менять видимость и оформление элементов. Также можно настроить реакцию на действие пользователя: включить свет, отключить сигнал тревоги и т.п.
+
+Для настройки графического дашборда в веб-интерфейсе контроллера есть визуальный редактор.
+
+Подробнее о дашбордах и других возможностях веб-интерфейса читайте в статье [Веб-интерфейс контроллеров Wiren Board](https://wirenboard.com/ru/pages/wb-software/).
+::
+
+::product-section{title="Архив данных"}
+:photo{
+  src="wiren-board-8m/wiren-board-8m-12.png"
+  width="500px"
+  float="right"
+}
+
+Все получаемые контроллером данные сохраняются в архив, размер которого можно настроить.
+
+Вы можете построить графики по архивным данным одновременно для нескольких каналов. С графиками можно взаимодействовать: менять масштаб, делать курсорные измерения и т.п.
+
+Данные из архива можно выгрузить в CSV для анализа в стороннем ПО.
+::
+
+::product-section{title="Скрипты автоматизации"}
+:photo{
+  src="wiren-board-8m/wiren-board-8m-13.png"
+  width="500px"
+  float="right"
+}
+
+Встроенное ПО контроллера Wiren Board содержит гибкий инструмент написания скриптов на Javascript-подобном языке — WB-Rules.
+
+С помощью скриптов можно автоматизировать любые действия: управлять освещением, отоплением или технологическим процессом.
+
+Скрипты можно создавать и редактировать прямо в веб-интерфейсе, доступна отладка в консоли.
+::
 
 ::product-section{title="Сценарии"}
 :photo{

@@ -2,6 +2,9 @@
 article: "WBPRO-PMOD-ELDC"
 cover: "wbpro-pmod-eldc/cover.jpg"
 catalogCover: "wbpro-pmod-eldc/cover.jpg"
+images: [
+  ["wbpro-pmod-eldc/cover.jpg"],
+]
 meta: "Модуль резервного питания на ионисторах WBPRO-PMOD-ELDC"
 keywords: "Модуль резервного питания на ионисторах WBPRO-PMOD-ELDC"
 ---

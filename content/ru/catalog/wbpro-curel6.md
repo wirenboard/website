@@ -2,6 +2,9 @@
 article: "WBPRO-CUREL6"
 cover: "wbpro-curel6/cover.png"
 catalogCover: "wbpro-curel6/catalog-cover.png"
+images: [
+  ["wbpro-curel6/cover.png"],
+]
 meta: "Компактный универсальный модуль реле WBPRO-CUREL6"
 keywords: "Компактный универсальный модуль реле WBPRO-CUREL6"
 ---

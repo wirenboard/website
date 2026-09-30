@@ -2,6 +2,9 @@
 article: "STK-RACKMNT"
 cover: "din-rail/cover.png"
 catalogCover: "din-rail/catalog-cover.png"
+images: [
+  ["din-rail/cover.png"],
+]
 meta: "Панель 19″ с DIN-рейкой"
 keywords: "Панель 19″ с DIN-рейкой"
 ---

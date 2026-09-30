@@ -1,5 +1,9 @@
 ---
 article: "WBPRO-DI8HV"
+images: [
+  ["wbpro-di8hv/wbpro-di8hv-4.png"],
+  ["wbpro-di8hv/wbpro-di8hv-5.png"],
+]
 documentation: "https://wiki.wirenboard.com/wiki/WB-MCM8HV_v.1_Modbus_AC_Detector"
 ---
 ::product
@@ -14,6 +18,9 @@ documentation: "https://wiki.wirenboard.com/wiki/WB-MCM8HV_v.1_Modbus_AC_Detecto
 
 ## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
 
+  ## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+
+  
 ::product-section{title="Преимущества"}
 - программируемый антидребезг;
 - распознавание 4 типов нажатий;
@@ -43,7 +50,21 @@ documentation: "https://wiki.wirenboard.com/wiki/WB-MCM8HV_v.1_Modbus_AC_Detecto
 
 :include{path="/catalog/includes/quality_control"}
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Поддержка Быстрого Modbus"}
+:photo{
+  src="wbpro-di8hv/wbpro-di8hv-1.png"
+  width="500px"
+  float="right"
+}
+
+Все устройства Wiren Board в дополнение к стандартному Modbus RTU могут работать с его расширением [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, которое добавляет новые возможности:
+
+- мгновенный опрос состояний входов и измеренных значений через события;
+- быстрый поиск подключённых к контроллеру устройств;
+- разрешение коллизий адресов на шине.
+
+Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
+::
 
 ::product-section{title=""}
 :photo{

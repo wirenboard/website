@@ -2,6 +2,10 @@
 article: "WBC-2G"
 cover: "wbc-2g/cover.png"
 catalogCover: "wbc-2g/catalog-cover.png"
+images: [
+  ["wbc-2g/cover.png"],
+  ["wbc-2g/wbc-2g-1.png"],
+]
 documentation: "https://wirenboard.com/wiki/WBC-2G v.2"
 meta: "Модем 2G"
 keywords: "Модем 2G"

@@ -2,6 +2,13 @@
 article: "WBIO-AO-10V-8"
 cover: "wbio-ao-10v-8/cover.jpg"
 catalogCover: "wbio-ao-10v-8/catalog-cover.jpg"
+images: [
+  ["wbio-ao-10v-8/cover.jpg"],
+  ["wbio-ao-10v-8/wbio-ao-10v-8-1.png"],
+  ["wbio-ao-10v-8/wbio-ao-10v-8-2.png"],
+  ["wbio-ao-10v-8/wbio-ao-10v-8-3.png"],
+  ["wbio-ao-10v-8/wbio-ao-10v-8-4.jpg"],
+]
 meta: "Модуль аналоговых выходов"
 keywords: "Модуль аналоговых выходов"
 ---

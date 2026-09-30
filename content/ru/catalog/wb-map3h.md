@@ -2,6 +2,14 @@
 article: "WB-MAP3H"
 cover: "wb-map3h/cover.png"
 catalogCover: "wb-map3h/catalog-cover.png"
+images: [
+  ["wb-map3h/cover.png"],
+  ["wb-map3h/wb-map3h-1.gif"],
+  ["wb-map3h/wb-map3h-2.png"],
+  ["wb-map3h/wb-map3h-3.png"],
+  ["wb-map3h/wb-map3h-4.png"],
+  ["wb-map3h/wb-map3h-5.png"],
+]
 meta: "Трёхфазный счётчик с RS-485, Modbus RTU"
 keywords: "RS-485, Modbus RTU"
 ---
@@ -26,7 +34,10 @@ keywords: "RS-485, Modbus RTU"
 - Коэффициент мощности, межфазные углы, гармоники
 ::
 
-:include{path="/catalog/includes/map_ct_connection"}
+::product-section{title="Подключение"}
+- Подключение через разъёмные измерительные трансформаторы тока
+- Детектирование неправильной фазировки
+::
 
 ::product-section{title="Прочее"}
 - Напряжение питания: от 9 до 28 VDC

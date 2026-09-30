@@ -2,6 +2,9 @@
 article: "WBPRO-PMOD-GNSS"
 cover: "wbpro-pmod-gnss/cover.png"
 catalogCover: "wbpro-pmod-gnss/catalog-cover.png"
+images: [
+  ["wbpro-pmod-gnss/cover.png"],
+]
 meta: "Модуль расширения GPS/Glonass для WBPRO-PLC WBPRO-PMOD-GNSS"
 keywords: "Модуль расширения GPS/Glonass для WBPRO-PLC WBPRO-PMOD-GNSS"
 ---

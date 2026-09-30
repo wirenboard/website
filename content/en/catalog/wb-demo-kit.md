@@ -2,6 +2,10 @@
 article: "WB-DEMO-KIT"
 cover: "wb-demo-kit/cover.png"
 catalogCover: "wb-demo-kit/catalog-cover.png"
+images: [
+  ["wb-demo-kit/cover.png"],
+  ["wb-demo-kit/wb-demo-kit-1.png"],
+]
 documentation: "https://wirenboard.com/wiki/Wb-demo-kit"
 meta: "Demonstration set of Wiren Board equipment in a handy case"
 video: [
@@ -25,7 +29,7 @@ It can be used to show:
 
 ## WHAT IS INCLUDED
 
-::product-section{title="Implemented scenarios"}
+::product-section{title="IMPLEMENTED SCENARIOS"}
 - climate control;
 - ventilation and air conditioning control;
 - lighting control;
@@ -36,7 +40,7 @@ It can be used to show:
 - system operation in case of external power failure.
 ::
 
-::product-section{title="Documentation"}
+::product-section{title="DOCUMENTATION"}
 - The demo suitcase comes with detailed documentation
 - A complete connection diagram
 - A power supply diagram
@@ -44,9 +48,9 @@ It can be used to show:
 - The source codes for dashboards and scenarios
 ::
 
-::product-section{title="Dimensions"}
+::product-section{title="DIMENSIONS"}
 - Weight: 7.3 kg
-- Dimensions: 44x34x15 cm
+- Dimensions: 44х34х15 cm
 ::
 
 

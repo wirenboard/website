@@ -2,6 +2,14 @@
 article: "WB-USB485"
 cover: "wb-usb485/cover.png"
 catalogCover: "wb-usb485/catalog-cover.png"
+images: [
+  ["wb-usb485/cover.png"],
+  ["wb-usb485/wb-usb485-1.png"],
+  ["wb-usb485/wb-usb485-2.png"],
+  ["wb-usb485/wb-usb485-3.jpg"],
+  ["wb-usb485/wb-usb485-4.jpg"],
+  ["wb-usb485/wb-usb485-5.jpg"],
+]
 documentation: "https://wirenboard.com/wiki/WB-USB485_v.1_Interface_Converter"
 meta: "interface converter USB-RS-485"
 keywords: "interface converter, USB-RS-485,RS-485, RS485, USB-RS485"
@@ -25,7 +33,7 @@ No driver installation required on latest versions of Windows, Linux, MacOS and 
 ::product-section{title="Outputs"}
 - RS-485: A/B without galvanic isolation
 - 12V up to 400mA
-- Protection against short circuit and accidental voltage of up to 30 V
+- Short circuit protection
 ::
 
 ::product-section{title="Other characteristics"}

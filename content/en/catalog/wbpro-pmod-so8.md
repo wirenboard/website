@@ -2,6 +2,9 @@
 article: "WBPRO-PMOD-SO8"
 cover: "wbpro-pmod-so8/cover.png"
 catalogCover: "wbpro-pmod-so8/catalog-cover.png"
+images: [
+  ["wbpro-pmod-so8/cover.png"],
+]
 meta: "WBPRO-PMOD-SO8"
 keywords: "WBPRO-PMOD-SO8"
 ---
@@ -23,6 +26,9 @@ Designed for managing low voltage loads, devices with dry contact inputs. The de
 - Voltage up to 30V
 ::
 
+::product-section{title=""}
+
+::
 
 
 ::

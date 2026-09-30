@@ -2,6 +2,11 @@
 article: "WBMZ5-BATTERY"
 cover: "wbmz5-battery/cover.png"
 catalogCover: "wbmz5-battery/catalog-cover.png"
+images: [
+  ["wbmz5-battery/cover.png"],
+  ["wbmz5-battery/wbmz5-battery-1.png"],
+  ["wbmz5-battery/wbmz5-battery-2.png"],
+]
 documentation: "https://wirenboard.com/wiki/WBMZ5-BATTERY_Backup_Power_Module"
 meta: "Модуль резервного питания для Wiren Board 8"
 keywords: "резервное питание, контроллеры Wiren Board 8"

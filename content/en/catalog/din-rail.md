@@ -2,6 +2,9 @@
 article: "STK-RACKMNT"
 cover: "din-rail/cover.png"
 catalogCover: "din-rail/catalog-cover.png"
+images: [
+  ["din-rail/cover.png"],
+]
 meta: "19″ panel with a DIN rail"
 keywords: "19″ panel with a DIN rail"
 ---

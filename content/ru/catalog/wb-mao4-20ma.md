@@ -2,6 +2,11 @@
 article: "WB-MAO4-20mA"
 cover: "wb-mao4-20ma/cover.png"
 catalogCover: "wb-mao4-20ma/catalog-cover.png"
+images: [
+  ["wb-mao4-20ma/cover.png"],
+  ["wb-mao4-20ma/wb-mao4-20ma-6.png"],
+  ["wb-mao4-20ma/wb-mao4-20ma-7.png"],
+]
 documentation: "https://wirenboard.com/wiki/WB-MAO4-20mA_Modbus_Analog_Outputs_0-20mA"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/0a424378-a514-446c-bfc7-6e9b7393080c"],
@@ -63,7 +68,21 @@ video: [
 - Корпус на DIN-рейку, 3 модуля.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Поддержка Быстрого Modbus"}
+:photo{
+  src="wb-mao4-20ma/wb-mao4-20ma-3.png"
+  width="500px"
+  float="right"
+}
+
+Все устройства Wiren Board в дополнение к стандартному Modbus RTU могут работать с его расширением [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, которое добавляет новые возможности:
+
+- мгновенный опрос состояний входов и измеренных значений через события;
+- быстрый поиск подключённых к контроллеру устройств;
+- разрешение коллизий адресов на шине.
+
+Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

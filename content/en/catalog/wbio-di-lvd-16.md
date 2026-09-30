@@ -2,11 +2,16 @@
 article: "00162"
 cover: "wbio-di-lvd-16/cover.png"
 catalogCover: "wbio-di-lvd-16/catalog-cover.png"
+images: [
+  ["wbio-di-lvd-16/cover.png"],
+  ["wbio-di-lvd-16/wbio-di-lvd-16-1.png"],
+  ["wbio-di-lvd-16/wbio-di-lvd-16-2.png"],
+]
 ---
 ::product
 #description
 
-**This model is **discontinued**. [**WBIO-DI-WD-14**](https://wirenboard.com/en/product/WBIO-DI-WD-14/) is a recommended replacement.**
+**This model is **discontinued**. [**WBIO-DI-WD-14**](https://wirenboard.com/ru/product/WBIO-DI-WD-14/) is a recommended replacement.**
 Input of discrete signals, circuit integrity monitoring, etc.
 
 
@@ -21,9 +26,16 @@ Input of discrete signals, circuit integrity monitoring, etc.
 - Voltage detection threshold is 9V AC/DC
 ::
 
-:include{path="/catalog/includes/wbio_interfaces"}
+::product-section{title="Interfaces"}
+- WBIO Bus
+- Can be connected to Modbus RTU and Ethernet by means of the WB-MIO module
+::
 
-:include{path="/catalog/includes/wbio_compatibility_wb5-6"}
+::product-section{title="Compatibility"}
+- Wiren Board 5 controllers
+- Wiren Board 6 controllers
+- Bus couplers WB-MIO and WB-MIO-E
+::
 
 
 ::

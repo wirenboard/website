@@ -2,6 +2,9 @@
 article: "WBPRO-PMOD-485"
 cover: "wbpro-pmod-485/cover.jpg"
 catalogCover: "wbpro-pmod-485/cover.jpg"
+images: [
+  ["wbpro-pmod-485/cover.jpg"],
+]
 meta: "RS-485 (isolated) extension module for WBPRO-PLC WBPRO-PMOD-485"
 keywords: "RS-485 (isolated) extension module for WBPRO-PLC WBPRO-PMOD-485"
 ---

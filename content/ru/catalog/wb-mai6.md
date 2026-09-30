@@ -2,6 +2,12 @@
 article: "WB-MAI6"
 cover: "wb-mai6/cover.png"
 catalogCover: "wb-mai6/catalog-cover.png"
+images: [
+  ["wb-mai6/cover.png"],
+  ["wb-mai6/wb-mai6-6.png"],
+  ["wb-mai6/wb-mai6-7.png"],
+  ["wb-mai6/wb-mai6-8.png"],
+]
 documentation: "https://wirenboard.com/wiki/WB-MAI6_Modbus_Analog_Inputs"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],

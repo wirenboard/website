@@ -2,6 +2,15 @@
 article: "WB-UPS"
 cover: "wb-ups/cover.png"
 catalogCover: "wb-ups/catalog-cover.png"
+images: [
+  ["wb-ups/cover.png"],
+  ["wb-ups/wb-ups-1.jpg"],
+  ["wb-ups/wb-ups-2.png"],
+  ["wb-ups/wb-ups-3.png"],
+  ["wb-ups/wb-ups-4.png"],
+  ["wb-ups/wb-ups-5.png"],
+  ["wb-ups/wb-ups-6.png"],
+]
 documentation: "https://wirenboard.com/wiki/index.php/WB-UPS"
 ---
 ::product

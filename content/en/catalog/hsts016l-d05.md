@@ -2,6 +2,11 @@
 article: "HSTS016L-D05"
 cover: "hsts016l-d05/cover.png"
 catalogCover: "hsts016l-d05/catalog-cover.png"
+images: [
+  ["hsts016l-d05/cover.png"],
+  ["hsts016l-d05/hsts016l-d05-1.png"],
+  ["hsts016l-d05/hsts016l-d05-2.jpg"],
+]
 documentation: "https://wirenboard.com/wiki/YHDC_HSTS016L"
 meta: "Split-core Current sensor  HSTS016L-D05"
 keywords: "Split-core Current sensor  HSTS016L-D05"
@@ -15,7 +20,7 @@ Split-core Hall effect current sensor with 2.5V +/- 0.625V signal, suitable for 
 #info
 
 ::product-section{title="Technical specifications"}
-- Rated current ±30 A.
+- Rated current ±30 А.
 - Wire outer diameter up to 16 mm
 - Dimensions 35\*32\*56 mm
 - Weight (not including wires) ~70 g

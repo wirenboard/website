@@ -2,6 +2,9 @@
 article: "WBPRO-PMOD-ZB"
 cover: "wbpro-pmod-zb/cover.jpg"
 catalogCover: "wbpro-pmod-zb/cover.jpg"
+images: [
+  ["wbpro-pmod-zb/cover.jpg"],
+]
 meta: "Zigbee interface, WBPRO-PLC WBPRO-PMOD-ZB"
 keywords: "Zigbee interface, WBPRO-PLC WBPRO-PMOD-ZB"
 ---
@@ -20,9 +23,8 @@ Zigbee is a wireless communication standard as Wi-Fi and Bluetooth, created spec
 ## Technical Specifications
 
 ::product-section{title="Connection"}
-- CC2530 chip
-- Wireless, 2.4 GHz
-- Zigbee — an open wireless communication standard
+- Wireless, 2,4 Ghz
+- Zigbee
 - Antenna included
 ::
 

@@ -2,6 +2,9 @@
 article: "WBC2-4G-M"
 cover: "wbc2-4g-m/cover.png"
 catalogCover: "wbc2-4g-m/catalog-cover.png"
+images: [
+  ["wbc2-4g-m/cover.png"],
+]
 documentation: "https://wiki.wirenboard.com/wiki/WBC2-4GM"
 ---
 ::product
@@ -14,7 +17,12 @@ documentation: "https://wiki.wirenboard.com/wiki/WBC2-4GM"
 
 ## Technical Specifications
 
-:include{path="/catalog/includes/modem_4g_general"}
+::product-section{title="General Specifications"}
+- Data transfer rate — up to 150 Mbps
+- Support for two nano-SIM cards
+- Alternating operation mode
+- Antenna included
+::
 
 ::product-section{title="Compatibility"}
 - Wiren Board 8.5M controllers

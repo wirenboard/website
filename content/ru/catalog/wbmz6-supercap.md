@@ -2,6 +2,11 @@
 article: "WBMZ6-SUPERCAP"
 cover: "wbmz6-supercap/cover.jpg"
 catalogCover: "wbmz6-supercap/catalog-cover.jpg"
+images: [
+  ["wbmz6-supercap/cover.jpg"],
+  ["wbmz6-supercap/wbmz6-supercap-1.jpg"],
+  ["wbmz6-supercap/wbmz6-supercap-2.jpg"],
+]
 documentation: "https://wirenboard.com/wiki/WBMZ6-SUPERCAP_Backup_Power_Module"
 meta: "Модуль резервного питания на ионисторах для Wiren Board 8.5"
 keywords: "резервное питание, контроллеры Wiren Board 8.5"

@@ -2,6 +2,9 @@
 article: "18W/18V/WP"
 cover: "power-supply-18w-18v-wp/cover.jpg"
 catalogCover: "power-supply-18w-18v-wp/cover.jpg"
+images: [
+  ["power-supply-18w-18v-wp/cover.jpg"],
+]
 meta: "Power supply 18 V, 18 W, flush-mount"
 keywords: "Power supply 18 V, 18 W, flush-mount"
 ---

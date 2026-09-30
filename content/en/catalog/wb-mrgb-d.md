@@ -2,6 +2,12 @@
 article: "00137"
 cover: "wb-mrgb-d/cover.png"
 catalogCover: "wb-mrgb-d/catalog-cover.png"
+images: [
+  ["wb-mrgb-d/cover.png"],
+  ["wb-mrgb-d/wb-mrgb-d-1.png"],
+  ["wb-mrgb-d/wb-mrgb-d-2.png"],
+  ["wb-mrgb-d/wb-mrgb-d-3.png"],
+]
 ---
 ::product
 #description

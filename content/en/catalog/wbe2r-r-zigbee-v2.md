@@ -2,6 +2,11 @@
 article: "WBE2R-R-ZIGBEE v.2"
 cover: "wbe2r-r-zigbee-v2/cover.png"
 catalogCover: "wbe2r-r-zigbee-v2/catalog-cover.png"
+images: [
+  ["wbe2r-r-zigbee-v2/cover.png"],
+  ["wbe2r-r-zigbee-v2/wbe2r-r-zigbee-v2-1.png"],
+  ["wbe2r-r-zigbee-v2/wbe2r-r-zigbee-v2-2.png"],
+]
 documentation: "https://wirenboard.com/wiki/WBE2R-R-ZIGBEE_v.2_ZigBee_Extension_Module"
 meta: "Zigbee interface, Wiren Board 6…8"
 keywords: "Zigbee interface, Wiren Board Zigbee, zigbe , zigbi"
@@ -20,11 +25,9 @@ Zigbee is a wireless communication standard as Wi-Fi and Bluetooth, created spec
 
 ## Specifications
 
-::product-section{title="Connection"}
-- CC2652P chip with Z-Stack 3.x support
-- Wireless, 2.4 GHz
-- Zigbee — an open wireless communication standard
-- Antenna included
+::product-section{title=""}
+- Chip CC2652P
+- Wireless, 2,4 Ghz
 - Zigbee
 - Antenna included
 ::

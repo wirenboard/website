@@ -2,6 +2,12 @@
 article: "WB-MSW4-TH"
 cover: "wb-msw4-th/cover.png"
 catalogCover: "wb-msw4-th/catalog-cover.png"
+images: [
+  ["wb-msw4-th/cover.png"],
+  ["wb-msw4-th/wb-msw4-th-6.png"],
+  ["wb-msw4-th/wb-msw4-th-7.png"],
+  ["wb-msw4-th/wb-msw4-th-8.png"],
+]
 documentation: "https://wirenboard.com/wiki/WB-MSW_v.4_Modbus_Sensor"
 meta: "Настенный датчик c RS-485, Modbus RTU"
 keywords: "Настенный датчик c RS-485, Modbus RTU"
@@ -65,7 +71,21 @@ use_cases: ["solutions-liten-magnit", "techsensor-module-cafe", "solutions-rekot
 - корпус с возможностью крепления на подрозетник (80 x 80 x 19 мм).
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Поддержка Быстрого Modbus"}
+:photo{
+  src="wb-msw4-th/wb-msw4-th-3.png"
+  width="500px"
+  float="right"
+}
+
+Все устройства Wiren Board в дополнение к стандартному Modbus RTU могут работать с его расширением [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, которое добавляет новые возможности:
+
+- мгновенный опрос состояний входов и измеренных значений через события;
+- быстрый поиск подключённых к контроллеру устройств;
+- разрешение коллизий адресов на шине.
+
+Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

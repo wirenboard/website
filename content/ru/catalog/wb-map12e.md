@@ -2,6 +2,13 @@
 article: "WB-MAP12E"
 cover: "wb-map12e/cover.png"
 catalogCover: "wb-map12e/catalog-cover.png"
+images: [
+  ["wb-map12e/cover.png"],
+  ["wb-map12e/wb-map12e-9.png"],
+  ["wb-map12e/wb-map12e-10.png"],
+  ["wb-map12e/wb-map12e-11.png"],
+  ["wb-map12e/wb-map12e-12.png"],
+]
 documentation: "https://wirenboard.com/wiki/index.php?title=Power_Meter_WB-MAP12E"
 meta: "Многоканальный счётчик с RS-485, Modbus RTU"
 keywords: "Многоканальный счётчик с RS-485, Modbus RTU"
@@ -116,7 +123,21 @@ WB-MAP12E используется в системах [мониторинга �
 Если не нужно измерять напряжение и энергию, то для измерения тока счетчик не обязательно подключать к силовым линиям, достаточно надеть токовый трансформатор с разъемным сердечником на измеряемую линию. Это позволяет упростить монтаж и интеграцию в систему автоматизации.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Поддержка Быстрого Modbus"}
+:photo{
+  src="wb-map12e/wb-map12e-6.png"
+  width="500px"
+  float="right"
+}
+
+Все устройства Wiren Board в дополнение к стандартному Modbus RTU могут работать с его расширением [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, которое добавляет новые возможности:
+
+- мгновенный опрос состояний входов и измеренных значений через события;
+- быстрый поиск подключённых к контроллеру устройств;
+- разрешение коллизий адресов на шине.
+
+Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

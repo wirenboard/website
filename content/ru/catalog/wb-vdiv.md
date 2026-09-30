@@ -2,6 +2,15 @@
 article: "WB-VDIV"
 cover: "wb-vdiv/cover.png"
 catalogCover: "wb-vdiv/catalog-cover.png"
+images: [
+  ["wb-vdiv/cover.png"],
+  ["wb-vdiv/wb-vdiv-1.png"],
+  ["wb-vdiv/wb-vdiv-2.png"],
+  ["wb-vdiv/wb-vdiv-3.png"],
+  ["wb-vdiv/wb-vdiv-4.png"],
+  ["wb-vdiv/wb-vdiv-5.png"],
+  ["wb-vdiv/wb-vdiv-6.jpg"],
+]
 documentation: "https://wirenboard.com/wiki/WB-VDIV"
 ---
 ::product

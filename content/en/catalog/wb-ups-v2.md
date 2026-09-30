@@ -2,6 +2,15 @@
 article: "WB-UPS v.2"
 cover: "wb-ups-v2/cover.png"
 catalogCover: "wb-ups-v2/catalog-cover.png"
+images: [
+  ["wb-ups-v2/cover.png"],
+  ["wb-ups-v2/wb-ups-v2-1.jpg"],
+  ["wb-ups-v2/wb-ups-v2-2.png"],
+  ["wb-ups-v2/wb-ups-v2-3.jpg"],
+  ["wb-ups-v2/wb-ups-v2-4.jpg"],
+  ["wb-ups-v2/wb-ups-v2-5.png"],
+  ["wb-ups-v2/wb-ups-v2-6.png"],
+]
 documentation: "https://wirenboard.com/wiki/UPS2"
 meta: "Uninterruptible Power Supply Module on DIN Rail"
 keywords: "Uninterruptible Power Supply Module on DIN Rail"
@@ -33,7 +42,7 @@ Suitable for equipment from other manufacturers.
 - Operating Temperature - charge: from 0°C to 55°C, discharge: from -20°C to 60°C
 - Storage Temperature: from -5°C to 35°C
 - Status Indicator
-- DIN rail mount
+- DIN Rail Mount, 2 modules
 - Dimensions: 36x90x58 mm
 ::
 

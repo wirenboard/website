@@ -2,6 +2,13 @@
 article: "WB-MR6C"
 cover: "wb-mr6c/cover.png"
 catalogCover: "wb-mr6c/catalog-cover.png"
+images: [
+  ["wb-mr6c/cover.png"],
+  ["wb-mr6c/wb-mr6c-1.png"],
+  ["wb-mr6c/wb-mr6c-2.png"],
+  ["wb-mr6c/wb-mr6c-3.jpg"],
+  ["wb-mr6c/wb-mr6c-4.png"],
+]
 documentation: "https://wirenboard.com/wiki/WB-MR6C_v.1_Modbus_Relay_Modules"
 meta: "Модуль реле с RS-485, Modbus RTU"
 keywords: "RS-485, Modbus RTU"

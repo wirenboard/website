@@ -2,6 +2,12 @@
 article: "00117"
 cover: "wb-msgr/cover.png"
 catalogCover: "wb-msgr/catalog-cover.png"
+images: [
+  ["wb-msgr/cover.png"],
+  ["wb-msgr/wb-msgr-1.png"],
+  ["wb-msgr/wb-msgr-2.png"],
+  ["wb-msgr/wb-msgr-3.png"],
+]
 ---
 ::product
 #description
