@@ -3,7 +3,7 @@ article: "WBPRO-PMOD-ZB"
 cover: "wbpro-pmod-zb/cover.jpg"
 catalogCover: "wbpro-pmod-zb/cover.jpg"
 images: [
-  ["wbpro-pmod-zb/cover.jpg"],
+  ["wbpro-pmod-zb/cover.jpg"]
 ]
 meta: "Zigbee interface, WBPRO-PLC WBPRO-PMOD-ZB"
 keywords: "Zigbee interface, WBPRO-PLC WBPRO-PMOD-ZB"

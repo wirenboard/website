@@ -4,7 +4,7 @@ cover: "co2-sensor/cover.jpg"
 catalogCover: "co2-sensor/catalog-cover.jpg"
 images: [
   ["co2-sensor/cover.jpg"],
-  ["co2-sensor/co2-sensor-1.jpg"],
+  ["co2-sensor/co2-sensor-1.jpg"]
 ]
 meta: "Sensor CO2 for WB-MSW v.3"
 keywords: "Sensor CO2 for WB-MSW v.3"

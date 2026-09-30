@@ -6,7 +6,7 @@ images: [
   ["wiren-board-7m/cover.jpg"],
   ["wiren-board-7m/wiren-board-7m-9.jpeg"],
   ["wiren-board-7m/wiren-board-7m-10.jpeg"],
-  ["wiren-board-7m/wiren-board-7m-11.jpeg"],
+  ["wiren-board-7m/wiren-board-7m-11.jpeg"]
 ]
 meta: "PLC Wiren Board 7 in a metal case"
 keywords: "PLC, controller, automation, metal case, data center monitoring, Wiren Board"

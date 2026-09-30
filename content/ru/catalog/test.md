@@ -6,7 +6,7 @@ images: [
   ["test/cover.jpg"],
   ["test/test-1.png"],
   ["test/test-2.png"],
-  ["test/test-3.jpg"],
+  ["test/test-3.jpg"]
 ]
 ---
 ::product

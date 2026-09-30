@@ -6,7 +6,7 @@ images: [
   ["wiren-board-7m/cover.jpg"],
   ["wiren-board-7m/wiren-board-7m-9.jpeg"],
   ["wiren-board-7m/wiren-board-7m-10.jpeg"],
-  ["wiren-board-7m/wiren-board-7m-11.jpeg"],
+  ["wiren-board-7m/wiren-board-7m-11.jpeg"]
 ]
 meta: "Контроллер для автоматизации Wiren Board 7 в металлическом корпусе"
 keywords: "ПЛК, контроллер, автоматизация, металлический корпус, мониторинг ЦОД, Wiren Board"

@@ -3,7 +3,7 @@ article: "ANT-GSM"
 cover: "gsm-antenna-straight/cover.png"
 catalogCover: "gsm-antenna-straight/catalog-cover.png"
 images: [
-  ["gsm-antenna-straight/cover.png"],
+  ["gsm-antenna-straight/cover.png"]
 ]
 documentation: "https://wirenboard.com/wiki/Antennas"
 meta: "Антенна GSM/3G прямая"

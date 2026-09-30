@@ -3,7 +3,7 @@ article: "WBPRO-MINREL"
 cover: "wbpro-minrel/cover.png"
 catalogCover: "wbpro-minrel/catalog-cover.png"
 images: [
-  ["wbpro-minrel/cover.png"],
+  ["wbpro-minrel/cover.png"]
 ]
 meta: "Plug-in mini relay module WBPRO-MINREL"
 keywords: "Plug-in mini relay module WBPRO-MINREL"

@@ -4,7 +4,7 @@ cover: "wbpro-urel6/cover.png"
 catalogCover: "wbpro-urel6/catalog-cover.png"
 images: [
   ["wbpro-urel6/cover.png"],
-  ["wbpro-urel6/wbpro-urel6-1.png"],
+  ["wbpro-urel6/wbpro-urel6-1.png"]
 ]
 meta: "Universal Relay Module WBPRO-UREL6"
 keywords: "Universal Relay Module WBPRO-UREL6"

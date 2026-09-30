@@ -3,7 +3,7 @@ article: "ANT-4G-3M"
 cover: "4g-vnesnaa-vynosnaa/cover.png"
 catalogCover: "4g-vnesnaa-vynosnaa/catalog-cover.png"
 images: [
-  ["4g-vnesnaa-vynosnaa/cover.png"],
+  ["4g-vnesnaa-vynosnaa/cover.png"]
 ]
 documentation: "https://wirenboard.com/wiki/Antennas"
 meta: "Antenna 4G / LTE external remote"

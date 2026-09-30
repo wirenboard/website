@@ -5,13 +5,13 @@ catalogCover: "wbe2r-r-zigbee-v2/catalog-cover.png"
 images: [
   ["wbe2r-r-zigbee-v2/cover.png"],
   ["wbe2r-r-zigbee-v2/wbe2r-r-zigbee-v2-1.png"],
-  ["wbe2r-r-zigbee-v2/wbe2r-r-zigbee-v2-2.png"],
+  ["wbe2r-r-zigbee-v2/wbe2r-r-zigbee-v2-2.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WBE2R-R-ZIGBEE_v.2_ZigBee_Extension_Module"
 meta: "Zigbee  для Wiren Board"
 keywords: "Zigbee, zigbe , zigbi, зигби, варенборд зигби, вайренборд зигби, зиг"
 video: [
-  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"],
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"]
 ]
 ---
 ::product

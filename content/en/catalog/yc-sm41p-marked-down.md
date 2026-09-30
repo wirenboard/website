@@ -10,7 +10,7 @@ images: [
   ["yc-sm41p-marked-down/yc-sm41p-marked-down-4.png"],
   ["yc-sm41p-marked-down/yc-sm41p-marked-down-5.png"],
   ["yc-sm41p-marked-down/yc-sm41p-marked-down-6.png"],
-  ["yc-sm41p-marked-down/yc-sm41p-marked-down-7.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-7.png"]
 ]
 documentation: "https://wirenboard.com/wiki/HMI_Wall_Panel_With_Android_and_PoE_YC-SM41P"
 ---

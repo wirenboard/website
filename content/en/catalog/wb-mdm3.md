@@ -5,7 +5,7 @@ catalogCover: "wb-mdm3/catalog-cover.png"
 images: [
   ["wb-mdm3/cover.png"],
   ["wb-mdm3/wb-mdm3-8.png"],
-  ["wb-mdm3/wb-mdm3-9.png"],
+  ["wb-mdm3/wb-mdm3-9.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MDM3_230V_Dimmer"
 meta: "Three channel dimmer for LED bulbs and incandescent lamps, 230 V"

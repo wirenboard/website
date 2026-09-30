@@ -5,7 +5,7 @@ catalogCover: "wbpro-minanalog/catalog-cover.png"
 images: [
   ["wbpro-minanalog/cover.png"],
   ["wbpro-minanalog/wbpro-minanalog-1.png"],
-  ["wbpro-minanalog/wbpro-minanalog-2.png"],
+  ["wbpro-minanalog/wbpro-minanalog-2.png"]
 ]
 meta: "RS-485, Modbus RTU Analog input module  WBPRO-MINANALOG"
 keywords: "RS-485, Modbus RTU Analog input module  WBPRO-MINANALOG"

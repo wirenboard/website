@@ -5,7 +5,7 @@ catalogCover: "ir-tx/catalog-cover.png"
 images: [
   ["ir-tx/cover.png"],
   ["ir-tx/ir-tx-1.png"],
-  ["ir-tx/ir-tx-2.png"],
+  ["ir-tx/ir-tx-2.png"]
 ]
 meta: "IR-transmitter for WB-MIR"
 keywords: "IR-transmitter for WB-MIR"

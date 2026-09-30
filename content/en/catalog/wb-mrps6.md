@@ -6,7 +6,7 @@ images: [
   ["wb-mrps6/cover.png"],
   ["wb-mrps6/wb-mrps6-8.png"],
   ["wb-mrps6/wb-mrps6-9.png"],
-  ["wb-mrps6/wb-mrps6-10.png"],
+  ["wb-mrps6/wb-mrps6-10.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MRPS6_Modbus_Relay_Module"
 meta: "RS-485, Modbus RTU Relay module"

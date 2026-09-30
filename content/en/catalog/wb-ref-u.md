@@ -7,7 +7,7 @@ images: [
   ["wb-ref-u/wb-ref-u-1.jpg"],
   ["wb-ref-u/wb-ref-u-2.jpg"],
   ["wb-ref-u/wb-ref-u-3.jpg"],
-  ["wb-ref-u/wb-ref-u-4.jpg"],
+  ["wb-ref-u/wb-ref-u-4.jpg"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-REF-U_Carel_and_Eliwell_Modbus_Module"
 ---

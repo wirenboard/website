@@ -3,7 +3,7 @@ article: "WBPRO-LEDDIM"
 cover: "wbpro-leddim/cover.png"
 catalogCover: "wbpro-leddim/catalog-cover.png"
 images: [
-  ["wbpro-leddim/cover.png"],
+  ["wbpro-leddim/cover.png"]
 ]
 meta: "RS-485, Modbus RTU 4-channel dimmer"
 keywords: "CV LED Dimmer, RGB Strip, RGB+W Strip, CCT Strip, W Strip"

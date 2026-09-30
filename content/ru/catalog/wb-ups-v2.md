@@ -9,7 +9,7 @@ images: [
   ["wb-ups-v2/wb-ups-v2-3.jpg"],
   ["wb-ups-v2/wb-ups-v2-4.jpg"],
   ["wb-ups-v2/wb-ups-v2-5.png"],
-  ["wb-ups-v2/wb-ups-v2-6.png"],
+  ["wb-ups-v2/wb-ups-v2-6.png"]
 ]
 documentation: "https://wirenboard.com/wiki/UPS2"
 meta: "Модуль бесперебойного питания на DIN-рейку"

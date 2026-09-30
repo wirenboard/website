@@ -10,7 +10,7 @@ images: [
   ["wb-ref-u-cr/wb-ref-u-cr-4.png"],
   ["wb-ref-u-cr/wb-ref-u-cr-5.png"],
   ["wb-ref-u-cr/wb-ref-u-cr-6.jpg"],
-  ["wb-ref-u-cr/wb-ref-u-cr-7.jpg"],
+  ["wb-ref-u-cr/wb-ref-u-cr-7.jpg"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-REF-U-CR_Carel_PYEZ/PJEZ_Modbus_Module"
 meta: "Сетевая карта для контроллера холодильного оборудования Carel"

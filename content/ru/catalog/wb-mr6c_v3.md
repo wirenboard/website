@@ -9,7 +9,7 @@ images: [
   ["wb-mr6c_v3/wb-mr6c_v3-12.png"],
   ["wb-mr6c_v3/wb-mr6c_v3-13.png"],
   ["wb-mr6c_v3/wb-mr6c_v3-14.png"],
-  ["wb-mr6c_v3/wb-mr6c_v3-15.png"],
+  ["wb-mr6c_v3/wb-mr6c_v3-15.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MR6C_v.3_Modbus_Relay_Modules"
 meta: "RS-485, Modbus RTU модуль реле"
@@ -17,7 +17,7 @@ keywords: "RS-485, Modbus RTU, 6-канальное реле, встроенны
 video: [
   ["https://peertube.wirenboard.com/videos/embed/0a424378-a514-446c-bfc7-6e9b7393080c"],
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
-  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
+  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
 use_cases: ["cti-office-automatization", "solutions-abrom-module-house", "solutions-intelligenthouse-knyaje"]
 ---

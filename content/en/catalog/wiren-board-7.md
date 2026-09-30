@@ -12,7 +12,7 @@ images: [
   ["wiren-board-7/wiren-board-7-17.png"],
   ["wiren-board-7/wiren-board-7-18.png"],
   ["wiren-board-7/wiren-board-7-19.png"],
-  ["wiren-board-7/wiren-board-7-20.png"],
+  ["wiren-board-7/wiren-board-7-20.png"]
 ]
 documentation: "https://wirenboard.com/wiki/Wiren_Board_7.4"
 ---

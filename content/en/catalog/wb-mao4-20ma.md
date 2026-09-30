@@ -5,7 +5,7 @@ catalogCover: "wb-mao4-20ma/catalog-cover.png"
 images: [
   ["wb-mao4-20ma/cover.png"],
   ["wb-mao4-20ma/wb-mao4-20ma-6.png"],
-  ["wb-mao4-20ma/wb-mao4-20ma-7.png"],
+  ["wb-mao4-20ma/wb-mao4-20ma-7.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MAO4-20mA_Modbus_Analog_Outputs_0-20mA"
 meta: "Токовые выходы 0…20 мА и 4…20 мА с RS485 Modbus RTU"

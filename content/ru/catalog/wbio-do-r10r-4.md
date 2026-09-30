@@ -5,13 +5,13 @@ catalogCover: "wbio-do-r10r-4/catalog-cover.png"
 images: [
   ["wbio-do-r10r-4/cover.png"],
   ["wbio-do-r10r-4/wbio-do-r10r-4-1.png"],
-  ["wbio-do-r10r-4/wbio-do-r10r-4-2.png"],
+  ["wbio-do-r10r-4/wbio-do-r10r-4-2.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/%D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C_%D1%80%D0%B5%D0%BB%D0%B5%D0%B9%D0%BD%D1%8B%D1%85_%D0%B2%D1%8B%D1%85%D0%BE%D0%B4%D0%BE%D0%B2_10A_(roller_shutter)_(WBIO-DO-R10R-4)"
 meta: "Модуль ввода-вывода WBIO-DO-R10R-4"
 keywords: "Модуль ввода-вывода WBIO-DO-R10R-4"
 video: [
-  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"],
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"]
 ]
 ---
 ::product

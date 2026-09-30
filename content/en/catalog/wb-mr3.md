@@ -6,7 +6,7 @@ images: [
   ["wb-mr3/cover.png"],
   ["wb-mr3/wb-mr3-10.png"],
   ["wb-mr3/wb-mr3-11.png"],
-  ["wb-mr3/wb-mr3-12.png"],
+  ["wb-mr3/wb-mr3-12.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MR3xV_and_WB-MR6xV_Modbus_Relay_Modules"
 meta: "RS-485, Modbus RTU Relay module WB-MR3-LV"

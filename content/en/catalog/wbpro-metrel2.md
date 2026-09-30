@@ -3,7 +3,7 @@ article: "WBPRO-METREL2"
 cover: "wbpro-metrel2/cover.png"
 catalogCover: "wbpro-metrel2/catalog-cover.png"
 images: [
-  ["wbpro-metrel2/cover.png"],
+  ["wbpro-metrel2/cover.png"]
 ]
 meta: "Relay module for socket groups with power measurement WBPRO-METREL2"
 keywords: "Relay module for socket groups with power measurement WBPRO-METREL2"

@@ -3,7 +3,7 @@ article: "WBPRO-CUREL6"
 cover: "wbpro-curel6/cover.png"
 catalogCover: "wbpro-curel6/catalog-cover.png"
 images: [
-  ["wbpro-curel6/cover.png"],
+  ["wbpro-curel6/cover.png"]
 ]
 meta: "Compact universal relay module WBPRO-CUREL6"
 keywords: "Compact universal relay module WBPRO-CUREL6"

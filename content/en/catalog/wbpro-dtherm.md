@@ -4,7 +4,7 @@ cover: "wbpro-dtherm/cover.png"
 catalogCover: "wbpro-dtherm/catalog-cover.png"
 images: [
   ["wbpro-dtherm/cover.png"],
-  ["wbpro-dtherm/wbpro-dtherm-1.png"],
+  ["wbpro-dtherm/wbpro-dtherm-1.png"]
 ]
 meta: "Plug-in module for digital thermometers WBPRO-DTHERM"
 keywords: "Plug-in module for digital thermometers WBPRO-DTHERM"

@@ -7,7 +7,7 @@ images: [
   ["wbio-ao-10v-8/wbio-ao-10v-8-1.png"],
   ["wbio-ao-10v-8/wbio-ao-10v-8-2.png"],
   ["wbio-ao-10v-8/wbio-ao-10v-8-3.png"],
-  ["wbio-ao-10v-8/wbio-ao-10v-8-4.jpg"],
+  ["wbio-ao-10v-8/wbio-ao-10v-8-4.jpg"]
 ]
 meta: "Модуль аналоговых выходов"
 keywords: "Модуль аналоговых выходов"

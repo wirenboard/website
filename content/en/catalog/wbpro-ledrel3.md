@@ -3,7 +3,7 @@ article: "WBPRO-LEDREL3"
 cover: "wbpro-ledrel3/cover.png"
 catalogCover: "wbpro-ledrel3/catalog-cover.png"
 images: [
-  ["wbpro-ledrel3/cover.png"],
+  ["wbpro-ledrel3/cover.png"]
 ]
 meta: "Relay module for LED lighting (3 channels) WBPRO-LEDREL3"
 keywords: "Relay module for LED lighting (3 channels) WBPRO-LEDREL3"

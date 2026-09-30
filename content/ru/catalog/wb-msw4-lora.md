@@ -8,13 +8,13 @@ images: [
   ["wb-msw4-lora/wb-msw4-lora-10.png"],
   ["wb-msw4-lora/wb-msw4-lora-11.jpg"],
   ["wb-msw4-lora/wb-msw4-lora-12.png"],
-  ["wb-msw4-lora/wb-msw4-lora-13.png"],
+  ["wb-msw4-lora/wb-msw4-lora-13.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MSW-LORA_v.4_Sensor"
 meta: "Настенный комбинированный датчик c LoRa, Modbus RTU"
 keywords: "датчик климата c LoRa, беспроводной датчик температуры, с поверкой, средство измерения, Modbus RTU, Wiren Board, беспроводной датчик климата, большая дальность, подвалы с толстыми стенами, бытовки и удалённые склады"
 video: [
-  ["//www.youtube.com/embed/2mISKjLYJ3c"],
+  ["//www.youtube.com/embed/2mISKjLYJ3c"]
 ]
 use_cases: ["solutions-liten-magnit", "techsensor-module-cafe", "solutions-rekota-hotel-vertical"]
 ---

@@ -6,7 +6,7 @@ images: [
   ["wb-msw-zigbee-v3/cover.jpg"],
   ["wb-msw-zigbee-v3/wb-msw-zigbee-v3-1.png"],
   ["wb-msw-zigbee-v3/wb-msw-zigbee-v3-2.png"],
-  ["wb-msw-zigbee-v3/wb-msw-zigbee-v3-3.jpg"],
+  ["wb-msw-zigbee-v3/wb-msw-zigbee-v3-3.jpg"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MSW_v.3_Zigbee_Sensor"
 meta: "Настенный комбинированный датчик с беспроводным интерфейсом Zigbee"

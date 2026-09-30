@@ -3,7 +3,7 @@ article: "WBPRO-METER3"
 cover: "wbpro-meter3/cover.png"
 catalogCover: "wbpro-meter3/catalog-cover.png"
 images: [
-  ["wbpro-meter3/cover.png"],
+  ["wbpro-meter3/cover.png"]
 ]
 meta: "Трёхфазный счётчик с Modbus WBPRO-METER3"
 keywords: "Трёхфазный счётчик с Modbus WBPRO-METER3"

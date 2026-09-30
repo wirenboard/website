@@ -8,7 +8,7 @@ images: [
   ["wb-msw4-lora/wb-msw4-lora-10.png"],
   ["wb-msw4-lora/wb-msw4-lora-11.jpg"],
   ["wb-msw4-lora/wb-msw4-lora-12.png"],
-  ["wb-msw4-lora/wb-msw4-lora-13.png"],
+  ["wb-msw4-lora/wb-msw4-lora-13.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MSW-LORA_v.4_Sensor"
 ---

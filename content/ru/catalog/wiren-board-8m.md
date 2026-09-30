@@ -8,14 +8,14 @@ images: [
   ["wiren-board-8m/wiren-board-8m-17.png"],
   ["wiren-board-8m/wiren-board-8m-18.png"],
   ["wiren-board-8m/wiren-board-8m-19.png"],
-  ["wiren-board-8m/wiren-board-8m-20.png"],
+  ["wiren-board-8m/wiren-board-8m-20.png"]
 ]
 documentation: "https://wirenboard.com/wiki/Wiren_Board_8M"
 meta: "Контроллер для автоматизации Wiren Board 8 в металлическом корпусе"
 keywords: "ПЛК, контроллер, автоматизация, металлический корпус, мониторинг ЦОД, Wiren Board"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/8aaea873-1002-4aaa-abfb-700adb3e2624?loop=1&autoplay=1&muted=1&title=0&warningTitle=0"],
-  ["https://peertube.wirenboard.com/videos/embed/79257128-37fc-4830-931f-04642504694e?loop=1&autoplay=1&muted=1&title=0&warningTitle=0"],
+  ["https://peertube.wirenboard.com/videos/embed/79257128-37fc-4830-931f-04642504694e?loop=1&autoplay=1&muted=1&title=0&warningTitle=0"]
 ]
 ---
 ::product

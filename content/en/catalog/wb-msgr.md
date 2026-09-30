@@ -6,7 +6,7 @@ images: [
   ["wb-msgr/cover.png"],
   ["wb-msgr/wb-msgr-1.png"],
   ["wb-msgr/wb-msgr-2.png"],
-  ["wb-msgr/wb-msgr-3.png"],
+  ["wb-msgr/wb-msgr-3.png"]
 ]
 meta: "RS-485, Modbus RTU Gas detection sensor"
 keywords: "RS-485, Modbus RTU"

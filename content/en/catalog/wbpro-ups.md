@@ -3,7 +3,7 @@ article: "WBPRO-UPS"
 cover: "wbpro-ups/cover.png"
 catalogCover: "wbpro-ups/catalog-cover.png"
 images: [
-  ["wbpro-ups/cover.png"],
+  ["wbpro-ups/cover.png"]
 ]
 meta: "DIN-rail UPS with built-in batteries"
 keywords: "DIN-rail UPS with built-in batteries"

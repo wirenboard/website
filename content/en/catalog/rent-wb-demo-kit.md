@@ -6,7 +6,7 @@ images: [
   ["rent-wb-demo-kit/cover.jpg"],
   ["rent-wb-demo-kit/rent-wb-demo-kit-1.jpg"],
   ["rent-wb-demo-kit/rent-wb-demo-kit-2.jpg"],
-  ["rent-wb-demo-kit/rent-wb-demo-kit-3.jpg"],
+  ["rent-wb-demo-kit/rent-wb-demo-kit-3.jpg"]
 ]
 documentation: "https://wirenboard.com/wiki/Wb-demo-kit"
 meta: "Rent-WB-demo-kit v.3"

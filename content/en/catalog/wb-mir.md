@@ -10,7 +10,7 @@ images: [
   ["wb-mir/wb-mir-4.png"],
   ["wb-mir/wb-mir-5.png"],
   ["wb-mir/wb-mir-6.png"],
-  ["wb-mir/wb-mir-7.png"],
+  ["wb-mir/wb-mir-7.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MIR_v3_-_Modbus_IR_Remote_Control"
 meta: "IR control device with RS-485, Modbus RTU"

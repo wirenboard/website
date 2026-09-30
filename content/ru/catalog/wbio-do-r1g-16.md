@@ -6,13 +6,13 @@ images: [
   ["wbio-do-r1g-16/cover.png"],
   ["wbio-do-r1g-16/wbio-do-r1g-16-1.png"],
   ["wbio-do-r1g-16/wbio-do-r1g-16-2.png"],
-  ["wbio-do-r1g-16/wbio-do-r1g-16-3.png"],
+  ["wbio-do-r1g-16/wbio-do-r1g-16-3.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WBIO-DO-R1G-16_I/O_Module"
 meta: "Модуль ввода-вывода WBIO-DO-R1G-16"
 keywords: "Модуль ввода-вывода WBIO-DO-R1G-16"
 video: [
-  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"],
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"]
 ]
 ---
 ::product

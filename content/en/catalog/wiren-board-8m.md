@@ -8,7 +8,7 @@ images: [
   ["wiren-board-8m/wiren-board-8m-15.png"],
   ["wiren-board-8m/wiren-board-8m-16.png"],
   ["wiren-board-8m/wiren-board-8m-17.png"],
-  ["wiren-board-8m/wiren-board-8m-18.png"],
+  ["wiren-board-8m/wiren-board-8m-18.png"]
 ]
 documentation: "https://wirenboard.com/wiki/Wiren_Board_8M"
 meta: "PLC Wiren Board 8 n a metal case"

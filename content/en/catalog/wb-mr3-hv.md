@@ -4,7 +4,7 @@ cover: "wb-mr3-hv/cover.png"
 catalogCover: "wb-mr3-hv/catalog-cover.png"
 images: [
   ["wb-mr3-hv/cover.png"],
-  ["wb-mr3-hv/wb-mr3-hv-1.png"],
+  ["wb-mr3-hv/wb-mr3-hv-1.png"]
 ]
 ---
 ::product

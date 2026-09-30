@@ -6,7 +6,7 @@ images: [
   ["wb-mwac/cover.png"],
   ["wb-mwac/wb-mwac-6.png"],
   ["wb-mwac/wb-mwac-7.png"],
-  ["wb-mwac/wb-mwac-8.png"],
+  ["wb-mwac/wb-mwac-8.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MWAC_v.2_Modbus_Water_Consumption_Metering_and_Leak_Monitoring"
 meta: "Module with RS-485, Modbus RTU for metering water consumption and monitoring leaks for an apartment, house or industrial facility."

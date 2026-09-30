@@ -3,7 +3,7 @@ article: "WB-MRM2-mini v.3"
 cover: "wb-mrm2-mini-v3/cover.jpg"
 catalogCover: "wb-mrm2-mini-v3/catalog-cover.jpg"
 images: [
-  ["wb-mrm2-mini-v3/cover.jpg"],
+  ["wb-mrm2-mini-v3/cover.jpg"]
 ]
 meta: "Compact relay module for socket box with RS-485 Modbus RTU and thermostat function."
 keywords: "relay, socket box, small, compact, thermostat, LED lamp, control"

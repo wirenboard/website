@@ -7,13 +7,13 @@ images: [
   ["wbio-di-wd-14/wbio-di-wd-14-1.png"],
   ["wbio-di-wd-14/wbio-di-wd-14-2.png"],
   ["wbio-di-wd-14/wbio-di-wd-14-3.png"],
-  ["wbio-di-wd-14/wbio-di-wd-14-4.png"],
+  ["wbio-di-wd-14/wbio-di-wd-14-4.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WBIO-DI-WD-14_I/O_Module"
 meta: "Модуль ввода-вывода WBIO-DI-WD-14"
 keywords: "DI-WD14, WD14, WD-14, DI-WD-14, WD, WBIO-WD-14, 14, WD 14"
 video: [
-  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"],
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"]
 ]
 ---
 ::product

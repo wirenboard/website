@@ -7,7 +7,7 @@ images: [
   ["wb-map12e/wb-map12e-9.png"],
   ["wb-map12e/wb-map12e-10.png"],
   ["wb-map12e/wb-map12e-11.png"],
-  ["wb-map12e/wb-map12e-12.png"],
+  ["wb-map12e/wb-map12e-12.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php?title=Power_Meter_WB-MAP12E"
 meta: "Multi-circuit energy meter with RS-485, Modbus RTU"

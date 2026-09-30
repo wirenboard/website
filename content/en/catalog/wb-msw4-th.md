@@ -6,7 +6,7 @@ images: [
   ["wb-msw4-th/cover.png"],
   ["wb-msw4-th/wb-msw4-th-6.png"],
   ["wb-msw4-th/wb-msw4-th-7.png"],
-  ["wb-msw4-th/wb-msw4-th-8.png"],
+  ["wb-msw4-th/wb-msw4-th-8.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MSW_v.4_Modbus_Sensor"
 meta: "RS-485, Modbus RTU Wall-mounted sensor"

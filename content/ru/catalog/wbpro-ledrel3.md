@@ -3,7 +3,7 @@ article: "WBPRO-LEDREL3"
 cover: "wbpro-ledrel3/cover.png"
 catalogCover: "wbpro-ledrel3/catalog-cover.png"
 images: [
-  ["wbpro-ledrel3/cover.png"],
+  ["wbpro-ledrel3/cover.png"]
 ]
 meta: "Модуль реле для светодиодного освещения (3 канала) WBPRO-LEDREL3"
 keywords: "Модуль реле для светодиодного освещения (3 канала) WBPRO-LEDREL3"

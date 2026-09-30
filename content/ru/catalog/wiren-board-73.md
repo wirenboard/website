@@ -9,13 +9,13 @@ images: [
   ["wiren-board-73/wiren-board-73-11.png"],
   ["wiren-board-73/wiren-board-73-12.png"],
   ["wiren-board-73/wiren-board-73-13.png"],
-  ["wiren-board-73/wiren-board-73-14.png"],
+  ["wiren-board-73/wiren-board-73-14.png"]
 ]
 documentation: "https://wirenboard.com/wiki/Wiren_Board_7.3"
 meta: "Контроллер для автоматизации Wiren Board 7.2...7.3"
 keywords: "Контроллер для автоматизации Wiren Board 7.2...7.3"
 video: [
-  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c"],
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c"]
 ]
 ---
 ::product

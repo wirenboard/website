@@ -7,7 +7,7 @@ images: [
   ["wb-mio-e-v1/wb-mio-e-v1-1.png"],
   ["wb-mio-e-v1/wb-mio-e-v1-2.png"],
   ["wb-mio-e-v1/wb-mio-e-v1-3.png"],
-  ["wb-mio-e-v1/wb-mio-e-v1-4.png"],
+  ["wb-mio-e-v1/wb-mio-e-v1-4.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MIO-E_v.1_Modbus_Interface_Converter"
 ---

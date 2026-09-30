@@ -5,7 +5,7 @@ catalogCover: "wbio-do-r10a-8/catalog-cover.png"
 images: [
   ["wbio-do-r10a-8/cover.png"],
   ["wbio-do-r10a-8/wbio-do-r10a-8-1.png"],
-  ["wbio-do-r10a-8/wbio-do-r10a-8-2.png"],
+  ["wbio-do-r10a-8/wbio-do-r10a-8-2.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WBIO-DO-R10A-8_Relay_Module"
 meta: "I/O Module WBIO-DO-R10A-8"

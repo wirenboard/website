@@ -4,7 +4,7 @@ cover: "cable-lan/cover.png"
 catalogCover: "cable-lan/catalog-cover.png"
 images: [
   ["cable-lan/cover.png"],
-  ["cable-lan/cable-lan-1.png"],
+  ["cable-lan/cable-lan-1.png"]
 ]
 documentation: "https://wirenboard.com/storage/source/1/OmYuwGqEvoCr_2Hm01TWvt9sKoL6gyGL.pdf"
 meta: "ParLan Patch F/UTP Cat5e PVC 4х2х0,20 мм кв."

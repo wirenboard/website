@@ -5,7 +5,7 @@ catalogCover: "microsd-industrial-64gb/catalog-cover.jpg"
 images: [
   ["microsd-industrial-64gb/cover.jpg"],
   ["microsd-industrial-64gb/microsd-industrial-64gb-1.jpg"],
-  ["microsd-industrial-64gb/microsd-industrial-64gb-2.jpg"],
+  ["microsd-industrial-64gb/microsd-industrial-64gb-2.jpg"]
 ]
 documentation: "/statics/content/files/61efedcee82c6.pdf"
 meta: "Промышленная карта памяти Transcend 64GB"

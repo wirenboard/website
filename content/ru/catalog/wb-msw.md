@@ -5,7 +5,7 @@ catalogCover: "wb-msw/catalog-cover.png"
 images: [
   ["wb-msw/cover.png"],
   ["wb-msw/wb-msw-1.png"],
-  ["wb-msw/wb-msw-2.png"],
+  ["wb-msw/wb-msw-2.png"]
 ]
 meta: "Комбинированный цифровой датчик температуры, влажности, освещенности, уровня шума и концентрации CO2 с Modbus RTU по шине RS-485."
 keywords: "датчик, температуры, влажности, освещенности, уровня шума, концентрации CO2, Modbus RTU,  RS-485."

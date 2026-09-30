@@ -5,7 +5,7 @@ catalogCover: "wb-mrwm2/catalog-cover.png"
 images: [
   ["wb-mrwm2/cover.png"],
   ["wb-mrwm2/wb-mrwm2-1.png"],
-  ["wb-mrwm2/wb-mrwm2-2.png"],
+  ["wb-mrwm2/wb-mrwm2-2.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MRWM2_Modbus_Relay_Modules"
 meta: "Two-channel module with high-power relays and power measurement"

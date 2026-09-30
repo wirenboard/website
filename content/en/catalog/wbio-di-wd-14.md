@@ -7,7 +7,7 @@ images: [
   ["wbio-di-wd-14/wbio-di-wd-14-1.png"],
   ["wbio-di-wd-14/wbio-di-wd-14-2.png"],
   ["wbio-di-wd-14/wbio-di-wd-14-3.png"],
-  ["wbio-di-wd-14/wbio-di-wd-14-4.png"],
+  ["wbio-di-wd-14/wbio-di-wd-14-4.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WBIO-DI-WD-14_I/O_Module"
 meta: "Universal input-output extension module with 14 universal digital dry contact inputs"

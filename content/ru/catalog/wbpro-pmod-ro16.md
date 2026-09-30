@@ -3,7 +3,7 @@ article: "WBPRO-PMOD-RO16"
 cover: "wbpro-pmod-ro16/cover.png"
 catalogCover: "wbpro-pmod-ro16/catalog-cover.png"
 images: [
-  ["wbpro-pmod-ro16/cover.png"],
+  ["wbpro-pmod-ro16/cover.png"]
 ]
 meta: "Дополнительный блок дискретных выходов WBPRO-PMOD-RO16"
 keywords: "Дополнительный блок дискретных выходов WBPRO-PMOD-RO16"

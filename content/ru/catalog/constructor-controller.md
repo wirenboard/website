@@ -6,7 +6,7 @@ images: [
   ["constructor-controller/cover.png"],
   ["constructor-controller/constructor-controller-1.png"],
   ["constructor-controller/constructor-controller-2.png"],
-  ["constructor-controller/constructor-controller-3.png"],
+  ["constructor-controller/constructor-controller-3.png"]
 ]
 ---
 ::product

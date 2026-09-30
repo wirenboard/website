@@ -8,7 +8,7 @@ images: [
   ["wb-msw-v3/wb-msw-v3-2.png"],
   ["wb-msw-v3/wb-msw-v3-3.gif"],
   ["wb-msw-v3/wb-msw-v3-4.png"],
-  ["wb-msw-v3/wb-msw-v3-5.png"],
+  ["wb-msw-v3/wb-msw-v3-5.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MSW_v.3"
 meta: "Настенный комбинированный датчик c RS-485, Modbus RTU"

@@ -4,7 +4,7 @@ cover: "wbpro-wallsens-zb/cover.png"
 catalogCover: "wbpro-wallsens-zb/catalog-cover.png"
 images: [
   ["wbpro-wallsens-zb/cover.png"],
-  ["wbpro-wallsens-zb/wbpro-wallsens-zb-1.jpg"],
+  ["wbpro-wallsens-zb/wbpro-wallsens-zb-1.jpg"]
 ]
 meta: "Настенный датчик 8 в 1 с Zigbee WBPRO-WALLSENS-ZB"
 keywords: "Настенный датчик 8 в 1 с Zigbee WBPRO-WALLSENS-ZB"

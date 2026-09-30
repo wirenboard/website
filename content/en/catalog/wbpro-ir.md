@@ -6,7 +6,7 @@ images: [
   ["wbpro-ir/cover.png"],
   ["wbpro-ir/wbpro-ir-1.png"],
   ["wbpro-ir/wbpro-ir-2.png"],
-  ["wbpro-ir/wbpro-ir-3.png"],
+  ["wbpro-ir/wbpro-ir-3.png"]
 ]
 meta: "Embedded IR control module with RS-485, Modbus RTU WBPRO-IR"
 keywords: "Embedded IR control module with RS-485, Modbus RTU WBPRO-IR"

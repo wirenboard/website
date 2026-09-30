@@ -8,13 +8,13 @@ images: [
   ["wbe2r-r-zigbee-sh/wbe2r-r-zigbee-sh-2.png"],
   ["wbe2r-r-zigbee-sh/wbe2r-r-zigbee-sh-3.png"],
   ["wbe2r-r-zigbee-sh/wbe2r-r-zigbee-sh-4.png"],
-  ["wbe2r-r-zigbee-sh/wbe2r-r-zigbee-sh-5.png"],
+  ["wbe2r-r-zigbee-sh/wbe2r-r-zigbee-sh-5.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WBE2R-R-ZIGBEE-SH"
 meta: "Zigbee Sprut.stick  для Wiren Board 6…8"
 keywords: "Zigbee, zigbe , zigbi, зигби, варенборд зигби, вайренборд зигби, зиг, sprut, sprut.stick, sprut.hub"
 video: [
-  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"],
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"]
 ]
 ---
 ::product

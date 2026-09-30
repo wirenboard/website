@@ -4,7 +4,7 @@ cover: "wb-mr6lvl/cover.png"
 catalogCover: "wb-mr6lvl/catalog-cover.png"
 images: [
   ["wb-mr6lvl/cover.png"],
-  ["wb-mr6lvl/wb-mr6lvl-9.png"],
+  ["wb-mr6lvl/wb-mr6lvl-9.png"]
 ]
 documentation: "https://wiki.wirenboard.com/wiki/WB-MR3LV/I(K)_and_WB-MR6LV/I(K)_Modbus_Relay_Modules"
 ---

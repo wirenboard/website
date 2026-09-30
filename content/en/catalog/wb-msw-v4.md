@@ -13,7 +13,7 @@ images: [
   ["wb-msw-v4/wb-msw-v4-15.png"],
   ["wb-msw-v4/wb-msw-v4-16.png"],
   ["wb-msw-v4/wb-msw-v4-17.png"],
-  ["wb-msw-v4/wb-msw-v4-18.png"],
+  ["wb-msw-v4/wb-msw-v4-18.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MSW_v.4_Modbus_Sensor"
 meta: "RS-485, Modbus RTU Hybrid wall-mounted sensor"

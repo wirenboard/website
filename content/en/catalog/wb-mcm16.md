@@ -6,7 +6,7 @@ images: [
   ["wb-mcm16/cover.png"],
   ["wb-mcm16/wb-mcm16-1.png"],
   ["wb-mcm16/wb-mcm16-2.png"],
-  ["wb-mcm16/wb-mcm16-3.jpg"],
+  ["wb-mcm16/wb-mcm16-3.jpg"]
 ]
 meta: "Buy WB-MCM16 pulse counter module with Modbus RTU RS-485"
 keywords: "pulse counter module with Modbus RTU RS-485, modbus module, modbus pulse counter"

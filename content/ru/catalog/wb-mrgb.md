@@ -5,7 +5,7 @@ catalogCover: "wb-mrgb/catalog-cover.png"
 images: [
   ["wb-mrgb/cover.png"],
   ["wb-mrgb/wb-mrgb-1.png"],
-  ["wb-mrgb/wb-mrgb-2.png"],
+  ["wb-mrgb/wb-mrgb-2.png"]
 ]
 ---
 ::product

@@ -4,7 +4,7 @@ cover: "wbmz3-supercap/cover.png"
 catalogCover: "wbmz3-supercap/catalog-cover.png"
 images: [
   ["wbmz3-supercap/cover.png"],
-  ["wbmz3-supercap/wbmz3-supercap-1.png"],
+  ["wbmz3-supercap/wbmz3-supercap-1.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WBMZ3-SUPERCAP"
 meta: "Supercapacitor back-up module"

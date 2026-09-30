@@ -5,7 +5,7 @@ catalogCover: "wbmz5-battery/catalog-cover.png"
 images: [
   ["wbmz5-battery/cover.png"],
   ["wbmz5-battery/wbmz5-battery-1.png"],
-  ["wbmz5-battery/wbmz5-battery-2.png"],
+  ["wbmz5-battery/wbmz5-battery-2.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WBMZ5-BATTERY_Backup_Power_Module"
 meta: "Backup Power Module for Wiren Board 8"

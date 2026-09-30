@@ -4,7 +4,7 @@ cover: "wbmz4-supercap/cover.png"
 catalogCover: "wbmz4-supercap/catalog-cover.png"
 images: [
   ["wbmz4-supercap/cover.png"],
-  ["wbmz4-supercap/wbmz4-supercap-1.png"],
+  ["wbmz4-supercap/wbmz4-supercap-1.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WBMZ4-SUPERCAP_Backup_Power_Module"
 meta: "Supercapacitor back-up module for Wiren Board 7"

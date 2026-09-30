@@ -5,7 +5,7 @@ catalogCover: "wb-mdm3/catalog-cover.png"
 images: [
   ["wb-mdm3/cover.png"],
   ["wb-mdm3/wb-mdm3-8.png"],
-  ["wb-mdm3/wb-mdm3-9.png"],
+  ["wb-mdm3/wb-mdm3-9.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MDM3_230V_Dimmer"
 meta: "Трехканальный диммер светодиодных ламп и ламп накаливания 230В"
@@ -15,7 +15,7 @@ video: [
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
   ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
   ["https://peertube.wirenboard.com/videos/embed/84f1ed7f-a9c0-4d7d-8626-93a4598c2efa"],
-  ["https://peertube.wirenboard.com/videos/embed/2ae96e58-39e4-40df-ad06-bd3331aecbb6"],
+  ["https://peertube.wirenboard.com/videos/embed/2ae96e58-39e4-40df-ad06-bd3331aecbb6"]
 ]
 use_cases: ["comfort-life-piter-kvartira", "solutions-intelligenthouse-pik", "raspberry-pi-home-assistant"]
 ---

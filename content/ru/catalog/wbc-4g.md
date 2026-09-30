@@ -5,7 +5,7 @@ catalogCover: "wbc-4g/catalog-cover.png"
 images: [
   ["wbc-4g/cover.png"],
   ["wbc-4g/wbc-4g-1.jpg"],
-  ["wbc-4g/wbc-4g-2.jpg"],
+  ["wbc-4g/wbc-4g-2.jpg"]
 ]
 documentation: "https://wirenboard.com/wiki/WBC-4G_v.1"
 meta: "Модуль расширения для Wiren Board 6.7"

@@ -6,7 +6,7 @@ images: [
   ["wbio-ai-dv-12/cover.png"],
   ["wbio-ai-dv-12/wbio-ai-dv-12-1.png"],
   ["wbio-ai-dv-12/wbio-ai-dv-12-2.png"],
-  ["wbio-ai-dv-12/wbio-ai-dv-12-3.png"],
+  ["wbio-ai-dv-12/wbio-ai-dv-12-3.png"]
 ]
 meta: "I/O Module WBIO-AI-DV-12"
 keywords: "I/O Module WBIO-AI-DV-12"

@@ -6,13 +6,13 @@ images: [
   ["wbio-di-hvd-8/cover.png"],
   ["wbio-di-hvd-8/wbio-di-hvd-8-1.png"],
   ["wbio-di-hvd-8/wbio-di-hvd-8-2.png"],
-  ["wbio-di-hvd-8/wbio-di-hvd-8-3.png"],
+  ["wbio-di-hvd-8/wbio-di-hvd-8-3.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WBIO-DI-HVD-8_8-Channel_230V_Detector_Module"
 meta: "Модуль ввода-вывода WBIO-DI-HVD-8"
 keywords: "Модуль ввода-вывода WBIO-DI-HVD-8"
 video: [
-  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"],
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"]
 ]
 ---
 ::product

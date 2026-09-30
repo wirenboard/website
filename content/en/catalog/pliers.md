@@ -3,7 +3,7 @@ article: "KBT"
 cover: "pliers/cover.jpg"
 catalogCover: "pliers/cover.jpg"
 images: [
-  ["pliers/cover.jpg"],
+  ["pliers/cover.jpg"]
 ]
 meta: "Crimping pliers PKVk-10 for insulated crimp bootlace ferrules"
 keywords: "Crimping pliers PKVk-10 for insulated crimp bootlace ferrules"

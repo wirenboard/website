@@ -5,7 +5,7 @@ catalogCover: "wbpro-rel3-i/catalog-cover.png"
 images: [
   ["wbpro-rel3-i/cover.png"],
   ["wbpro-rel3-i/wbpro-rel3-i-1.png"],
-  ["wbpro-rel3-i/wbpro-rel3-i-2.png"],
+  ["wbpro-rel3-i/wbpro-rel3-i-2.png"]
 ]
 ---
 ::product

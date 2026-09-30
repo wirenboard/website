@@ -4,7 +4,7 @@ cover: "wbe-i-rs485-iso/cover.png"
 catalogCover: "wbe-i-rs485-iso/catalog-cover.png"
 images: [
   ["wbe-i-rs485-iso/cover.png"],
-  ["wbe-i-rs485-iso/wbe-i-rs485-iso-1.png"],
+  ["wbe-i-rs485-iso/wbe-i-rs485-iso-1.png"]
 ]
 ---
 ::product

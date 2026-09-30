@@ -3,7 +3,7 @@ article: "MUG1"
 cover: "mug1/cover.png"
 catalogCover: "mug1/catalog-cover.png"
 images: [
-  ["mug1/cover.png"],
+  ["mug1/cover.png"]
 ]
 ---
 ::product

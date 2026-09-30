@@ -3,7 +3,7 @@ article: "WBPRO-4G"
 cover: "wbpro-4g/cover.jpg"
 catalogCover: "wbpro-4g/cover.jpg"
 images: [
-  ["wbpro-4g/cover.jpg"],
+  ["wbpro-4g/cover.jpg"]
 ]
 meta: "WBPRO-4G"
 keywords: "WBPRO-4G"

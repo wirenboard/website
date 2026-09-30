@@ -6,7 +6,7 @@ images: [
   ["wb-mai6/cover.png"],
   ["wb-mai6/wb-mai6-5.png"],
   ["wb-mai6/wb-mai6-6.png"],
-  ["wb-mai6/wb-mai6-7.png"],
+  ["wb-mai6/wb-mai6-7.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MAI6_Modbus_Analog_Inputs"
 ---

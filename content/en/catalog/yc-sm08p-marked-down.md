@@ -9,7 +9,7 @@ images: [
   ["yc-sm08p-marked-down/yc-sm08p-marked-down-3.jpg"],
   ["yc-sm08p-marked-down/yc-sm08p-marked-down-4.jpg"],
   ["yc-sm08p-marked-down/yc-sm08p-marked-down-5.jpg"],
-  ["yc-sm08p-marked-down/yc-sm08p-marked-down-6.jpg"],
+  ["yc-sm08p-marked-down/yc-sm08p-marked-down-6.jpg"]
 ]
 documentation: "https://wirenboard.com/wiki/HMI_Wall_Panel_With_Android_and_PoE_YC-SM08P"
 ---

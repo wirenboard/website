@@ -5,7 +5,7 @@ catalogCover: "wb-mge/catalog-cover.png"
 images: [
   ["wb-mge/cover.jpeg"],
   ["wb-mge/wb-mge-1.png"],
-  ["wb-mge/wb-mge-2.jpeg"],
+  ["wb-mge/wb-mge-2.jpeg"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MGE_v.2_Modbus-Ethernet_Interface_Converter"
 meta: "Bus coupler RS-485 (Modbus) to Ethernet (IP)"

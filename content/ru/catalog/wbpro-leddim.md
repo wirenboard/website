@@ -3,7 +3,7 @@ article: "WBPRO-LEDDIM"
 cover: "wbpro-leddim/cover.png"
 catalogCover: "wbpro-leddim/catalog-cover.png"
 images: [
-  ["wbpro-leddim/cover.png"],
+  ["wbpro-leddim/cover.png"]
 ]
 meta: "Четырехканальный диммер светодиодных лент с RS-485, Modbus RTU. 11 режимов работы"
 keywords: "CV LED Диммер, RGB лента, RGB+W лента, CCT лента, W лента, Wiren Board, DIN-рейка, защита, короткое замыкание, PRO-LED, PROLED"

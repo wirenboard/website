@@ -3,7 +3,7 @@ article: "15EDGKA"
 cover: "klemmnik/cover.png"
 catalogCover: "klemmnik/catalog-cover.png"
 images: [
-  ["klemmnik/cover.png"],
+  ["klemmnik/cover.png"]
 ]
 meta: "Клеммник ответный Degson"
 keywords: "Клеммник ответный Degson"

@@ -3,7 +3,7 @@ article: "WBPRO-MRGLED"
 cover: "wbpro-mrgled/cover.png"
 catalogCover: "wbpro-mrgled/cover.png"
 images: [
-  ["wbpro-mrgled/cover.png"],
+  ["wbpro-mrgled/cover.png"]
 ]
 meta: "RS-485, Modbus RTU 4-channel dimmer WBPRO-LEDDIM"
 keywords: "RS-485, Modbus RTU 4-channel dimmer WBPRO-LEDDIM"

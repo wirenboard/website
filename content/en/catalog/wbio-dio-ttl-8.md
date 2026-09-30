@@ -7,7 +7,7 @@ images: [
   ["wbio-dio-ttl-8/wbio-dio-ttl-8-1.png"],
   ["wbio-dio-ttl-8/wbio-dio-ttl-8-2.jpg"],
   ["wbio-dio-ttl-8/wbio-dio-ttl-8-3.jpg"],
-  ["wbio-dio-ttl-8/wbio-dio-ttl-8-4.png"],
+  ["wbio-dio-ttl-8/wbio-dio-ttl-8-4.png"]
 ]
 ---
 ::product

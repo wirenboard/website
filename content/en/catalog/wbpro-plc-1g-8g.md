@@ -3,7 +3,7 @@ article: "WBPRO-PLC-1G-8G"
 cover: "wbpro-plc-1g-8g/cover.png"
 catalogCover: "wbpro-plc-1g-8g/cover.png"
 images: [
-  ["wbpro-plc-1g-8g/cover.png"],
+  ["wbpro-plc-1g-8g/cover.png"]
 ]
 meta: "Automation controller WBPRO-PLC-1G-8G"
 keywords: "Automation controller WBPRO-PLC-1G-8G"

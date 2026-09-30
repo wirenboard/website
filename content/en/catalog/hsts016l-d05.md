@@ -5,7 +5,7 @@ catalogCover: "hsts016l-d05/catalog-cover.png"
 images: [
   ["hsts016l-d05/cover.png"],
   ["hsts016l-d05/hsts016l-d05-1.png"],
-  ["hsts016l-d05/hsts016l-d05-2.jpg"],
+  ["hsts016l-d05/hsts016l-d05-2.jpg"]
 ]
 documentation: "https://wirenboard.com/wiki/YHDC_HSTS016L"
 meta: "Split-core Current sensor  HSTS016L-D05"

@@ -4,7 +4,7 @@ cover: "wbe-i-1wire/cover.png"
 catalogCover: "wbe-i-1wire/catalog-cover.png"
 images: [
   ["wbe-i-1wire/cover.png"],
-  ["wbe-i-1wire/wbe-i-1wire-1.png"],
+  ["wbe-i-1wire/wbe-i-1wire-1.png"]
 ]
 ---
 ::product

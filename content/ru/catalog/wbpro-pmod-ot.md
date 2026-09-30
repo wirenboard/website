@@ -4,7 +4,7 @@ cover: "wbpro-pmod-ot/cover.jpg"
 catalogCover: "wbpro-pmod-ot/cover.jpg"
 images: [
   ["wbpro-pmod-ot/cover.jpg"],
-  ["wbpro-pmod-ot/wbpro-pmod-ot-1.jpg"],
+  ["wbpro-pmod-ot/wbpro-pmod-ot-1.jpg"]
 ]
 meta: "Интерфейс OpenTherm для WBPRO-PLC WBPRO-PMOD-OT"
 keywords: "Интерфейс OpenTherm для WBPRO-PLC WBPRO-PMOD-OT"

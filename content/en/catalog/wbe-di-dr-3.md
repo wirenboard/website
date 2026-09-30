@@ -4,7 +4,7 @@ cover: "wbe-di-dr-3/cover.png"
 catalogCover: "wbe-di-dr-3/cover.png"
 images: [
   ["wbe-di-dr-3/cover.png"],
-  ["wbe-di-dr-3/wbe-di-dr-3-1.jpeg"],
+  ["wbe-di-dr-3/wbe-di-dr-3-1.jpeg"]
 ]
 ---
 ::product

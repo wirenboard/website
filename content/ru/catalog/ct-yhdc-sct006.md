@@ -3,7 +3,7 @@ article: "SCT006"
 cover: "ct-yhdc-sct006/cover.jpg"
 catalogCover: "ct-yhdc-sct006/cover.jpg"
 images: [
-  ["ct-yhdc-sct006/cover.jpg"],
+  ["ct-yhdc-sct006/cover.jpg"]
 ]
 meta: "Разъёмный трансформатор тока SCT006"
 keywords: "Разъёмный трансформатор тока SCT006"

@@ -3,7 +3,7 @@ article: "WBPRO-AMP"
 cover: "wbpro-amp/cover.png"
 catalogCover: "wbpro-amp/catalog-cover.png"
 images: [
-  ["wbpro-amp/cover.png"],
+  ["wbpro-amp/cover.png"]
 ]
 meta: "LED усилитель WBPRO-AMP"
 keywords: "LED усилитель WBPRO-AMP"

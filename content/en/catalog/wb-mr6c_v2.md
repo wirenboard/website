@@ -8,7 +8,7 @@ images: [
   ["wb-mr6c_v2/wb-mr6c_v2-11.png"],
   ["wb-mr6c_v2/wb-mr6c_v2-12.png"],
   ["wb-mr6c_v2/wb-mr6c_v2-13.png"],
-  ["wb-mr6c_v2/wb-mr6c_v2-14.png"],
+  ["wb-mr6c_v2/wb-mr6c_v2-14.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MR6C_v.2_Modbus_Relay_Modules"
 meta: "RS-485, Modbus RTU Relay module"

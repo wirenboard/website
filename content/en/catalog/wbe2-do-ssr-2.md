@@ -4,7 +4,7 @@ cover: "wbe2-do-ssr-2/cover.png"
 catalogCover: "wbe2-do-ssr-2/catalog-cover.png"
 images: [
   ["wbe2-do-ssr-2/cover.png"],
-  ["wbe2-do-ssr-2/wbe2-do-ssr-2-1.png"],
+  ["wbe2-do-ssr-2/wbe2-do-ssr-2-1.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php?title=Wiren_Board_6:WBE-DO-SSR-2"
 meta: "“Dry contact” (solid state relay) output extension module for Wiren Board 6…8"

@@ -5,7 +5,7 @@ catalogCover: "wbpro-plc8-4g-64g/catalog-cover.png"
 images: [
   ["wbpro-plc8-4g-64g/cover.png"],
   ["wbpro-plc8-4g-64g/wbpro-plc8-4g-64g-7.png"],
-  ["wbpro-plc8-4g-64g/wbpro-plc8-4g-64g-8.png"],
+  ["wbpro-plc8-4g-64g/wbpro-plc8-4g-64g-8.png"]
 ]
 ---
 ::product

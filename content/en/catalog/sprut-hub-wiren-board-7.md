@@ -8,7 +8,7 @@ images: [
   ["sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-10.png"],
   ["sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-11.png"],
   ["sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-12.jpg"],
-  ["sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-13.jpg"],
+  ["sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-13.jpg"]
 ]
 documentation: "https://wirenboard.com/wiki/Wiren_Board_7"
 ---

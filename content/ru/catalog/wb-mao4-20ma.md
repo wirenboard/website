@@ -5,13 +5,13 @@ catalogCover: "wb-mao4-20ma/catalog-cover.png"
 images: [
   ["wb-mao4-20ma/cover.png"],
   ["wb-mao4-20ma/wb-mao4-20ma-6.png"],
-  ["wb-mao4-20ma/wb-mao4-20ma-7.png"],
+  ["wb-mao4-20ma/wb-mao4-20ma-7.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MAO4-20mA_Modbus_Analog_Outputs_0-20mA"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/0a424378-a514-446c-bfc7-6e9b7393080c"],
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
-  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
+  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
 ---
 ::product

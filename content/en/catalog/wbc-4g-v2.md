@@ -4,7 +4,7 @@ cover: "wbc-4g-v2/cover.png"
 catalogCover: "wbc-4g-v2/catalog-cover.png"
 images: [
   ["wbc-4g-v2/cover.png"],
-  ["wbc-4g-v2/wbc-4g-v2-1.png"],
+  ["wbc-4g-v2/wbc-4g-v2-1.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WBC-4G_v.2"
 meta: "4G modem"

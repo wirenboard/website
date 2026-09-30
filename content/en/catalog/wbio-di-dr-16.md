@@ -6,7 +6,7 @@ images: [
   ["wbio-di-dr-16/cover.png"],
   ["wbio-di-dr-16/wbio-di-dr-16-1.png"],
   ["wbio-di-dr-16/wbio-di-dr-16-2.png"],
-  ["wbio-di-dr-16/wbio-di-dr-16-3.png"],
+  ["wbio-di-dr-16/wbio-di-dr-16-3.png"]
 ]
 ---
 ::product

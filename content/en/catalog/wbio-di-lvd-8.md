@@ -5,7 +5,7 @@ catalogCover: "wbio-di-lvd-8/catalog-cover.png"
 images: [
   ["wbio-di-lvd-8/cover.png"],
   ["wbio-di-lvd-8/wbio-di-lvd-8-1.png"],
-  ["wbio-di-lvd-8/wbio-di-lvd-8-2.png"],
+  ["wbio-di-lvd-8/wbio-di-lvd-8-2.png"]
 ]
 ---
 ::product

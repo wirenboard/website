@@ -5,7 +5,7 @@ catalogCover: "wb-demo-kit-v2/catalog-cover.png"
 images: [
   ["wb-demo-kit-v2/cover.png"],
   ["wb-demo-kit-v2/wb-demo-kit-v2-1.png"],
-  ["wb-demo-kit-v2/wb-demo-kit-v2-2.png"],
+  ["wb-demo-kit-v2/wb-demo-kit-v2-2.png"]
 ]
 documentation: "https://wirenboard.com/wiki/Wb-demo-kit_v.2"
 ---

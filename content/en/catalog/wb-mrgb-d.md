@@ -6,7 +6,7 @@ images: [
   ["wb-mrgb-d/cover.png"],
   ["wb-mrgb-d/wb-mrgb-d-1.png"],
   ["wb-mrgb-d/wb-mrgb-d-2.png"],
-  ["wb-mrgb-d/wb-mrgb-d-3.png"],
+  ["wb-mrgb-d/wb-mrgb-d-3.png"]
 ]
 ---
 ::product

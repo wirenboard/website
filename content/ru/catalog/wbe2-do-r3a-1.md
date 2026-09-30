@@ -4,13 +4,13 @@ cover: "wbe2-do-r3a-1/cover.png"
 catalogCover: "wbe2-do-r3a-1/catalog-cover.png"
 images: [
   ["wbe2-do-r3a-1/cover.png"],
-  ["wbe2-do-r3a-1/wbe2-do-r3a-1-1.png"],
+  ["wbe2-do-r3a-1/wbe2-do-r3a-1-1.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WBE2-DO-R3A-1_Relay_Extension_Module"
 meta: "WBE2-DO-R3A-1"
 keywords: "WBE2-DO-R3A-1"
 video: [
-  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"],
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"]
 ]
 ---
 ::product

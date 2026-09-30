@@ -5,7 +5,7 @@ catalogCover: "wbmz6-battery/catalog-cover.jpg"
 images: [
   ["wbmz6-battery/cover.jpg"],
   ["wbmz6-battery/wbmz6-battery-1.jpg"],
-  ["wbmz6-battery/wbmz6-battery-2.jpg"],
+  ["wbmz6-battery/wbmz6-battery-2.jpg"]
 ]
 documentation: "https://wirenboard.com/wiki/WBMZ6-BATTERY_Backup_Power_Module"
 ---

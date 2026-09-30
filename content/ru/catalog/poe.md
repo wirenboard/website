@@ -6,7 +6,7 @@ images: [
   ["poe/cover.png"],
   ["poe/poe-1.jpg"],
   ["poe/poe-2.jpg"],
-  ["poe/poe-3.png"],
+  ["poe/poe-3.png"]
 ]
 meta: "Блок питания Passive PoE"
 keywords: "Блок питания Passive PoE"

@@ -5,13 +5,13 @@ catalogCover: "wbmz6-battery/catalog-cover.jpg"
 images: [
   ["wbmz6-battery/cover.jpg"],
   ["wbmz6-battery/wbmz6-battery-1.jpg"],
-  ["wbmz6-battery/wbmz6-battery-2.jpg"],
+  ["wbmz6-battery/wbmz6-battery-2.jpg"]
 ]
 documentation: "https://wirenboard.com/wiki/WBMZ6-BATTERY_Backup_Power_Module"
 meta: "Модуль резервного питания для Wiren Board 8.5"
 keywords: "резервное питание, контроллеры Wiren Board 8.5"
 video: [
-  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"],
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"]
 ]
 ---
 ::product

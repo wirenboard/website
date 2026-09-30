@@ -7,7 +7,7 @@ images: [
   ["wb-map12e/wb-map12e-9.png"],
   ["wb-map12e/wb-map12e-10.png"],
   ["wb-map12e/wb-map12e-11.png"],
-  ["wb-map12e/wb-map12e-12.png"],
+  ["wb-map12e/wb-map12e-12.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php?title=Power_Meter_WB-MAP12E"
 meta: "Многоканальный счётчик с RS-485, Modbus RTU"
@@ -15,7 +15,7 @@ keywords: "Многоканальный счётчик с RS-485, Modbus RTU"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/0a424378-a514-446c-bfc7-6e9b7393080c"],
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
-  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
+  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
 ---
 ::product

@@ -5,7 +5,7 @@ catalogCover: "wb-mrwl3/catalog-cover.png"
 images: [
   ["wb-mrwl3/cover.png"],
   ["wb-mrwl3/wb-mrwl3-10.png"],
-  ["wb-mrwl3/wb-mrwl3-11.png"],
+  ["wb-mrwl3/wb-mrwl3-11.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MRWL3_Modbus_Relay_Module"
 meta: "RS-485, Modbus RTU relay module"

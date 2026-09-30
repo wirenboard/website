@@ -5,7 +5,7 @@ catalogCover: "wb-mai/catalog-cover.png"
 images: [
   ["wb-mai/cover.png"],
   ["wb-mai/wb-mai-1.png"],
-  ["wb-mai/wb-mai-2.png"],
+  ["wb-mai/wb-mai-2.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MAI_Modbus_Analog_Inputs"
 meta: "RS-485, Modbus RTU Analog input module"

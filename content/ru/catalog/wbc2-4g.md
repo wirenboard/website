@@ -5,11 +5,11 @@ catalogCover: "wbc2-4g/catalog-cover.png"
 images: [
   ["wbc2-4g/cover.png"],
   ["wbc2-4g/wbc2-4g-1.jpg"],
-  ["wbc2-4g/wbc2-4g-2.png"],
+  ["wbc2-4g/wbc2-4g-2.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WBC2-4G"
 video: [
-  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"],
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"]
 ]
 ---
 ::product

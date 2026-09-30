@@ -5,7 +5,7 @@ catalogCover: "wbio-do-hs-8/catalog-cover.png"
 images: [
   ["wbio-do-hs-8/cover.png"],
   ["wbio-do-hs-8/wbio-do-hs-8-1.png"],
-  ["wbio-do-hs-8/wbio-do-hs-8-2.png"],
+  ["wbio-do-hs-8/wbio-do-hs-8-2.png"]
 ]
 ---
 ::product

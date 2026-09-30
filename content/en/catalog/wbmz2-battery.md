@@ -5,7 +5,7 @@ catalogCover: "wbmz2-battery/catalog-cover.png"
 images: [
   ["wbmz2-battery/cover.png"],
   ["wbmz2-battery/wbmz2-battery-1.png"],
-  ["wbmz2-battery/wbmz2-battery-2.png"],
+  ["wbmz2-battery/wbmz2-battery-2.png"]
 ]
 ---
 ::product

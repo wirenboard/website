@@ -5,13 +5,13 @@ catalogCover: "wbio-do-r10a-8/catalog-cover.png"
 images: [
   ["wbio-do-r10a-8/cover.png"],
   ["wbio-do-r10a-8/wbio-do-r10a-8-1.png"],
-  ["wbio-do-r10a-8/wbio-do-r10a-8-2.png"],
+  ["wbio-do-r10a-8/wbio-do-r10a-8-2.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WBIO-DO-R10A-8_Relay_Module"
 meta: "Модуль ввода-вывода WBIO-DO-R10A-8"
 keywords: "Модуль ввода-вывода WBIO-DO-R10A-8"
 video: [
-  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"],
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"]
 ]
 ---
 ::product

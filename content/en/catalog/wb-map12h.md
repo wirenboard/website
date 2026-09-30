@@ -5,7 +5,7 @@ catalogCover: "wb-map12h/catalog-cover.jpg"
 images: [
   ["wb-map12h/cover.jpg"],
   ["wb-map12h/wb-map12h-1.png"],
-  ["wb-map12h/wb-map12h-2.jpg"],
+  ["wb-map12h/wb-map12h-2.jpg"]
 ]
 meta: "RS-485, Modbus RTU Multi-channel meter"
 keywords: "RS-485, Modbus RTU"

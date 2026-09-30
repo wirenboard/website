@@ -9,7 +9,7 @@ images: [
   ["wb-mdm2/wb-mdm2-3.png"],
   ["wb-mdm2/wb-mdm2-4.png"],
   ["wb-mdm2/wb-mdm2-5.png"],
-  ["wb-mdm2/wb-mdm2-6.png"],
+  ["wb-mdm2/wb-mdm2-6.png"]
 ]
 ---
 ::product

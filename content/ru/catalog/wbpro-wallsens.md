@@ -3,7 +3,7 @@ article: "WBPRO-WALLSENS"
 cover: "wbpro-wallsens/cover.png"
 catalogCover: "wbpro-wallsens/catalog-cover.png"
 images: [
-  ["wbpro-wallsens/cover.png"],
+  ["wbpro-wallsens/cover.png"]
 ]
 meta: "Настенный датчик 8 в 1 WBPRO-WALLSENS"
 keywords: "Настенный датчик 8 в 1 WBPRO-WALLSENS"

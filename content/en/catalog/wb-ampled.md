@@ -7,7 +7,7 @@ images: [
   ["wb-ampled/wb-ampled-4.png"],
   ["wb-ampled/wb-ampled-5.png"],
   ["wb-ampled/wb-ampled-6.png"],
-  ["wb-ampled/wb-ampled-7.png"],
+  ["wb-ampled/wb-ampled-7.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-AMPLED_v.1_RGBW_Constant_Voltage_LED_Amplifier"
 meta: "LED Amplifier  4 channel 10 A each"

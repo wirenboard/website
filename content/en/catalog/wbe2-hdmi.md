@@ -12,7 +12,7 @@ images: [
   ["wbe2-hdmi/wbe2-hdmi-10.png"],
   ["wbe2-hdmi/wbe2-hdmi-11.png"],
   ["wbe2-hdmi/wbe2-hdmi-12.png"],
-  ["wbe2-hdmi/wbe2-hdmi-13.png"],
+  ["wbe2-hdmi/wbe2-hdmi-13.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WBE2-HDMI_v.1_HDMI_Extension_Module"
 meta: "Extension module HDMI for Wiren Board 8.5 controller"

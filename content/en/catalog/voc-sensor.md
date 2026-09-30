@@ -3,7 +3,7 @@ article: "VOC-sensor"
 cover: "voc-sensor/cover.jpg"
 catalogCover: "voc-sensor/cover.jpg"
 images: [
-  ["voc-sensor/cover.jpg"],
+  ["voc-sensor/cover.jpg"]
 ]
 meta: "Sensor VOC for sensor WB-MSW v.3"
 keywords: "Sensor VOC for sensor WB-MSW v.3"

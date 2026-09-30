@@ -3,7 +3,7 @@ article: "WBPRO-WATER"
 cover: "wbpro-water/cover.png"
 catalogCover: "wbpro-water/catalog-cover.png"
 images: [
-  ["wbpro-water/cover.png"],
+  ["wbpro-water/cover.png"]
 ]
 meta: "RS-485, Modbus RTU Water metering and leakage control module WBPRO-WATER"
 keywords: "RS-485, Modbus RTU Water metering and leakage control module WBPRO-WATER"

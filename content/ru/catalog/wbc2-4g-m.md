@@ -3,7 +3,7 @@ article: "WBC2-4G-M"
 cover: "wbc2-4g-m/cover.png"
 catalogCover: "wbc2-4g-m/catalog-cover.png"
 images: [
-  ["wbc2-4g-m/cover.png"],
+  ["wbc2-4g-m/cover.png"]
 ]
 documentation: "https://wiki.wirenboard.com/wiki/WBC2-4GM"
 ---

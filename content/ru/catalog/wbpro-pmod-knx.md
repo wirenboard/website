@@ -3,7 +3,7 @@ article: "WBPRO-PMOD-KNX"
 cover: "wbpro-pmod-knx/cover.jpg"
 catalogCover: "wbpro-pmod-knx/cover.jpg"
 images: [
-  ["wbpro-pmod-knx/cover.jpg"],
+  ["wbpro-pmod-knx/cover.jpg"]
 ]
 meta: "Модуль KNX для WBPRO-PLC WBPRO-PMOD-KNX"
 keywords: "Модуль KNX для WBPRO-PLC WBPRO-PMOD-KNX"

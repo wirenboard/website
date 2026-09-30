@@ -3,7 +3,7 @@ article: "WBPRO-POWREL3"
 cover: "wbpro-powrel3/cover.png"
 catalogCover: "wbpro-powrel3/catalog-cover.png"
 images: [
-  ["wbpro-powrel3/cover.png"],
+  ["wbpro-powrel3/cover.png"]
 ]
 meta: "Модуль реле для розеточных групп WBPRO-POWREL3"
 keywords: "Модуль реле для розеточных групп WBPRO-POWREL3"

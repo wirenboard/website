@@ -11,7 +11,7 @@ images: [
   ["wb-map3et/wb-map3et-12.png"],
   ["wb-map3et/wb-map3et-13.png"],
   ["wb-map3et/wb-map3et-14.png"],
-  ["wb-map3et/wb-map3et-15.png"],
+  ["wb-map3et/wb-map3et-15.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/Map3et"
 meta: "Three-phase meter with RS-485, Modbus RTU"

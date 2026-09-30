@@ -4,13 +4,13 @@ cover: "wb-demo-kit/cover.png"
 catalogCover: "wb-demo-kit/catalog-cover.png"
 images: [
   ["wb-demo-kit/cover.png"],
-  ["wb-demo-kit/wb-demo-kit-1.png"],
+  ["wb-demo-kit/wb-demo-kit-1.png"]
 ]
 documentation: "https://wirenboard.com/wiki/Wb-demo-kit"
 meta: "Demonstration set of Wiren Board equipment in a handy case"
 video: [
   ["https://www.youtube.com/embed/SzAgkkbP44U"],
-  ["https://www.youtube.com/embed/SzAgkkbP44U"],
+  ["https://www.youtube.com/embed/SzAgkkbP44U"]
 ]
 ---
 ::product

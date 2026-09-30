@@ -6,7 +6,7 @@ images: [
   ["wb-mai2-mini-cc/cover.png"],
   ["wb-mai2-mini-cc/wb-mai2-mini-cc-5.jpg"],
   ["wb-mai2-mini-cc/wb-mai2-mini-cc-6.jpg"],
-  ["wb-mai2-mini-cc/wb-mai2-mini-cc-7.png"],
+  ["wb-mai2-mini-cc/wb-mai2-mini-cc-7.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MAI2-mini/CC_v.3_4-20mA_Modbus_Analog_Inputs"
 meta: "RS-485 Modbus RTU Analog input module"

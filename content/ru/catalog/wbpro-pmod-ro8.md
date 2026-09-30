@@ -6,7 +6,7 @@ images: [
   ["wbpro-pmod-ro8/cover.png"],
   ["wbpro-pmod-ro8/wbpro-pmod-ro8-1.png"],
   ["wbpro-pmod-ro8/wbpro-pmod-ro8-2.png"],
-  ["wbpro-pmod-ro8/wbpro-pmod-ro8-3.png"],
+  ["wbpro-pmod-ro8/wbpro-pmod-ro8-3.png"]
 ]
 meta: "WBPRO-PMOD-RO8"
 keywords: "WBPRO-PMOD-RO8"

@@ -3,7 +3,7 @@ article: "WBPRO-PMOD-SO8"
 cover: "wbpro-pmod-so8/cover.png"
 catalogCover: "wbpro-pmod-so8/catalog-cover.png"
 images: [
-  ["wbpro-pmod-so8/cover.png"],
+  ["wbpro-pmod-so8/cover.png"]
 ]
 meta: "WBPRO-PMOD-SO8"
 keywords: "WBPRO-PMOD-SO8"

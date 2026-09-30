@@ -3,7 +3,7 @@ article: "WBPRO-ANALOG11"
 cover: "wbpro-analog11/cover.png"
 catalogCover: "wbpro-analog11/cover.png"
 images: [
-  ["wbpro-analog11/cover.png"],
+  ["wbpro-analog11/cover.png"]
 ]
 meta: "RS-485, Modbus RTU Analog input module WBPRO-ANALOG11"
 keywords: "RS-485, Modbus RTU Analog input module WBPRO-ANALOG11"

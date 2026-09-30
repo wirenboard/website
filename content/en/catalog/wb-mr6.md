@@ -8,7 +8,7 @@ images: [
   ["wb-mr6/wb-mr6-10.png"],
   ["wb-mr6/wb-mr6-11.png"],
   ["wb-mr6/wb-mr6-12.png"],
-  ["wb-mr6/wb-mr6-13.png"],
+  ["wb-mr6/wb-mr6-13.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MR3xV_and_WB-MR6xV_Modbus_Relay_Modules"
 meta: "Relay module with RS-485, Modbus RTU"

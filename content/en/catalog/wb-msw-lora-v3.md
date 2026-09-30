@@ -6,7 +6,7 @@ images: [
   ["wb-msw-lora-v3/cover.jpg"],
   ["wb-msw-lora-v3/wb-msw-lora-v3-1.gif"],
   ["wb-msw-lora-v3/wb-msw-lora-v3-2.png"],
-  ["wb-msw-lora-v3/wb-msw-lora-v3-3.png"],
+  ["wb-msw-lora-v3/wb-msw-lora-v3-3.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MSW_v.3_LoRa_Sensor"
 meta: "LoRa, Modbus RTU Hybrid wall-mounted sensor"

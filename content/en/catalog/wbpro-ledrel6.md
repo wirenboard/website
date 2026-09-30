@@ -3,7 +3,7 @@ article: "WBPRO-LEDREL6"
 cover: "wbpro-ledrel6/cover.png"
 catalogCover: "wbpro-ledrel6/catalog-cover.png"
 images: [
-  ["wbpro-ledrel6/cover.png"],
+  ["wbpro-ledrel6/cover.png"]
 ]
 meta: "Relay module for LED lighting WBPRO-LEDREL6"
 keywords: "Relay module for LED lighting WBPRO-LEDREL6"

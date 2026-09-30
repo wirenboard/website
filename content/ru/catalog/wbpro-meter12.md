@@ -3,7 +3,7 @@ article: "WBPRO-METER12"
 cover: "wbpro-meter12/cover.png"
 catalogCover: "wbpro-meter12/catalog-cover.png"
 images: [
-  ["wbpro-meter12/cover.png"],
+  ["wbpro-meter12/cover.png"]
 ]
 meta: "Многоканальный счётчик электроэнергии (12 линий) WBPRO-METER12"
 keywords: "Многоканальный счётчик электроэнергии (12 линий) WBPRO-METER12"

@@ -9,7 +9,7 @@ images: [
   ["wb-msw4-zigbee/wb-msw4-zigbee-11.png"],
   ["wb-msw4-zigbee/wb-msw4-zigbee-12.png"],
   ["wb-msw4-zigbee/wb-msw4-zigbee-13.jpg"],
-  ["wb-msw4-zigbee/wb-msw4-zigbee-14.png"],
+  ["wb-msw4-zigbee/wb-msw4-zigbee-14.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MSW-ZIGBEE_v.4_Sensor"
 meta: "WB-MSW4-ZIGBEE"

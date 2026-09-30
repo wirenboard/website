@@ -4,7 +4,7 @@ cover: "wbe-do-r6c-1/cover.png"
 catalogCover: "wbe-do-r6c-1/catalog-cover.png"
 images: [
   ["wbe-do-r6c-1/cover.png"],
-  ["wbe-do-r6c-1/wbe-do-r6c-1-1.png"],
+  ["wbe-do-r6c-1/wbe-do-r6c-1-1.png"]
 ]
 ---
 ::product

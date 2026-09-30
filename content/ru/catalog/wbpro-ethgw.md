@@ -3,7 +3,7 @@ article: "WBPRO-ETHGW"
 cover: "wbpro-ethgw/cover.png"
 catalogCover: "wbpro-ethgw/catalog-cover.png"
 images: [
-  ["wbpro-ethgw/cover.png"],
+  ["wbpro-ethgw/cover.png"]
 ]
 meta: "Преобразователь интерфейсов из RS-485  (Modbus)  в Ethernet  (IP)  WBPRO-ETHGW"
 keywords: "Преобразователь интерфейсов из RS-485  (Modbus)  в Ethernet  (IP)  WBPRO-ETHGW"

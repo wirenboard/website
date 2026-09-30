@@ -6,7 +6,7 @@ images: [
   ["wbio-di-dr-8/cover.png"],
   ["wbio-di-dr-8/wbio-di-dr-8-1.png"],
   ["wbio-di-dr-8/wbio-di-dr-8-2.png"],
-  ["wbio-di-dr-8/wbio-di-dr-8-3.png"],
+  ["wbio-di-dr-8/wbio-di-dr-8-3.png"]
 ]
 meta: "I/O Module with 8 digital dry contact inputs"
 keywords: "I/O module , Ethernet, dry contact inputs"

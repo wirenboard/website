@@ -13,7 +13,7 @@ images: [
   ["yc-sm06e/yc-sm06e-7.png"],
   ["yc-sm06e/yc-sm06e-8.jpg"],
   ["yc-sm06e/yc-sm06e-9.jpg"],
-  ["yc-sm06e/yc-sm06e-10.jpeg"],
+  ["yc-sm06e/yc-sm06e-10.jpeg"]
 ]
 documentation: "https://wirenboard.com/wiki/HMI_Wall_Panel_With_Android_and_PoE_YC-SM06E"
 ---

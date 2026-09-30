@@ -5,7 +5,7 @@ catalogCover: "wb-som/catalog-cover.png"
 images: [
   ["wb-som/cover.png"],
   ["wb-som/wb-som-1.png"],
-  ["wb-som/wb-som-2.png"],
+  ["wb-som/wb-som-2.png"]
 ]
 ---
 ::product

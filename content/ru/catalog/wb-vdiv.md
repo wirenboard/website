@@ -9,7 +9,7 @@ images: [
   ["wb-vdiv/wb-vdiv-3.png"],
   ["wb-vdiv/wb-vdiv-4.png"],
   ["wb-vdiv/wb-vdiv-5.png"],
-  ["wb-vdiv/wb-vdiv-6.jpg"],
+  ["wb-vdiv/wb-vdiv-6.jpg"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-VDIV"
 ---

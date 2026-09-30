@@ -6,13 +6,13 @@ images: [
   ["wbio-di-hvd-16/cover.png"],
   ["wbio-di-hvd-16/wbio-di-hvd-16-1.png"],
   ["wbio-di-hvd-16/wbio-di-hvd-16-2.png"],
-  ["wbio-di-hvd-16/wbio-di-hvd-16-3.png"],
+  ["wbio-di-hvd-16/wbio-di-hvd-16-3.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/%D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C_%D0%BD%D0%B0%D0%BB%D0%B8%D1%87%D0%B8%D1%8F_220%D0%92_(WBIO-DI-HVD-16)"
 meta: "Модуль ввода-вывода WBIO-DI-HVD-16"
 keywords: "Модуль ввода-вывода WBIO-DI-HVD-16"
 video: [
-  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"],
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"]
 ]
 ---
 ::product

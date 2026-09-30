@@ -3,7 +3,7 @@ article: "Z-Wave.Me UZB1"
 cover: "z-wave/cover.png"
 catalogCover: "z-wave/catalog-cover.png"
 images: [
-  ["z-wave/cover.png"],
+  ["z-wave/cover.png"]
 ]
 ---
 ::product

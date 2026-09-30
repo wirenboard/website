@@ -7,12 +7,12 @@ images: [
   ["cable-lan-2/cable-lan-2-1.jpg"],
   ["cable-lan-2/cable-lan-2-2.jpg"],
   ["cable-lan-2/cable-lan-2-3.png"],
-  ["cable-lan-2/cable-lan-2-4.png"],
+  ["cable-lan-2/cable-lan-2-4.png"]
 ]
 documentation: "https://wirenboard.com/storage/source/1/OmYuwGqEvoCr_2Hm01TWvt9sKoL6gyGL.pdf"
 video: [
   ["https://www.youtube.com/embed/f9zvU900sPI"],
-  ["https://www.youtube.com/embed/d_olK15Xhkw"],
+  ["https://www.youtube.com/embed/d_olK15Xhkw"]
 ]
 ---
 ::product

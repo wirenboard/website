@@ -5,7 +5,7 @@ catalogCover: "wbmz3-battery/catalog-cover.png"
 images: [
   ["wbmz3-battery/cover.png"],
   ["wbmz3-battery/wbmz3-battery-1.png"],
-  ["wbmz3-battery/wbmz3-battery-2.png"],
+  ["wbmz3-battery/wbmz3-battery-2.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WBMZ3-BATTERY"
 meta: "Модуль резервного питания для Wiren Board 6.7"

@@ -6,7 +6,7 @@ images: [
   ["wbio-di-dr-8/cover.png"],
   ["wbio-di-dr-8/wbio-di-dr-8-1.png"],
   ["wbio-di-dr-8/wbio-di-dr-8-2.png"],
-  ["wbio-di-dr-8/wbio-di-dr-8-3.png"],
+  ["wbio-di-dr-8/wbio-di-dr-8-3.png"]
 ]
 meta: "Модуль ввода-вывода WBIO-DI-DR-8 с Modbus RTU"
 keywords: "Модуль ввода-вывода с Modbus RTU, WBIO-DI-DR-8 , Ethernet"

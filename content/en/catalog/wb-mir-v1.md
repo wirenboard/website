@@ -7,7 +7,7 @@ images: [
   ["wb-mir-v1/wb-mir-v1-7.png"],
   ["wb-mir-v1/wb-mir-v1-8.png"],
   ["wb-mir-v1/wb-mir-v1-9.png"],
-  ["wb-mir-v1/wb-mir-v1-10.png"],
+  ["wb-mir-v1/wb-mir-v1-10.png"]
 ]
 documentation: "http://wirenboard.com/wiki/index.php/Устройство_IR-управления_WB-MIR"
 meta: "IR control device with RS-485, Modbus RTU"

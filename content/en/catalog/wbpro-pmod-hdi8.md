@@ -6,7 +6,7 @@ images: [
   ["wbpro-pmod-hdi8/cover.png"],
   ["wbpro-pmod-hdi8/wbpro-pmod-hdi8-1.png"],
   ["wbpro-pmod-hdi8/wbpro-pmod-hdi8-2.png"],
-  ["wbpro-pmod-hdi8/wbpro-pmod-hdi8-3.png"],
+  ["wbpro-pmod-hdi8/wbpro-pmod-hdi8-3.png"]
 ]
 ---
 ::product

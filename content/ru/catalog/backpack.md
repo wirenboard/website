@@ -9,7 +9,7 @@ images: [
   ["backpack/backpack-3.png"],
   ["backpack/backpack-4.png"],
   ["backpack/backpack-5.png"],
-  ["backpack/backpack-6.png"],
+  ["backpack/backpack-6.png"]
 ]
 ---
 ::product

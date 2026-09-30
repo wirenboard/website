@@ -8,7 +8,7 @@ images: [
   ["wb-usb485/wb-usb485-2.png"],
   ["wb-usb485/wb-usb485-3.jpg"],
   ["wb-usb485/wb-usb485-4.jpg"],
-  ["wb-usb485/wb-usb485-5.jpg"],
+  ["wb-usb485/wb-usb485-5.jpg"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-USB485_v.1_Interface_Converter"
 meta: "interface converter USB-RS-485"

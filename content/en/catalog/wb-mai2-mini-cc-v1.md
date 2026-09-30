@@ -4,7 +4,7 @@ cover: "wb-mai2-mini-cc-v1/cover.png"
 catalogCover: "wb-mai2-mini-cc-v1/catalog-cover.png"
 images: [
   ["wb-mai2-mini-cc-v1/cover.png"],
-  ["wb-mai2-mini-cc-v1/wb-mai2-mini-cc-v1-5.png"],
+  ["wb-mai2-mini-cc-v1/wb-mai2-mini-cc-v1-5.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MAI2_mini"
 meta: "RS-485, Modbus RTU Analog input module"

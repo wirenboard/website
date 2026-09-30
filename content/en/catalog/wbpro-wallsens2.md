@@ -5,7 +5,7 @@ catalogCover: "wbpro-wallsens2/catalog-cover.png"
 images: [
   ["wbpro-wallsens2/cover.png"],
   ["wbpro-wallsens2/wbpro-wallsens2-1.png"],
-  ["wbpro-wallsens2/wbpro-wallsens2-2.png"],
+  ["wbpro-wallsens2/wbpro-wallsens2-2.png"]
 ]
 meta: "RS-485, Modbus RTU Hybrid wall-mounted sensor WBPRO-WALLSENS"
 keywords: "RS-485, Modbus RTU Hybrid wall-mounted sensor WBPRO-WALLSENS"

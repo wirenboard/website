@@ -5,7 +5,7 @@ catalogCover: "wb-mao4/catalog-cover.png"
 images: [
   ["wb-mao4/cover.png"],
   ["wb-mao4/wb-mao4-8.png"],
-  ["wb-mao4/wb-mao4-9.png"],
+  ["wb-mao4/wb-mao4-9.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MAO4_0-10V_Modbus_Analog_Outputs"
 meta: "Lighting control module with Modbus RTU"

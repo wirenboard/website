@@ -3,7 +3,7 @@ article: "WBPRO-MINREL"
 cover: "wbpro-minrel/cover.png"
 catalogCover: "wbpro-minrel/catalog-cover.png"
 images: [
-  ["wbpro-minrel/cover.png"],
+  ["wbpro-minrel/cover.png"]
 ]
 meta: "Встраиваемый модуль мини-реле  WBPRO-MINREL"
 keywords: "Встраиваемый модуль мини-реле  WBPRO-MINREL"

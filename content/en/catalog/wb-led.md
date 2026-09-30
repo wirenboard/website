@@ -11,7 +11,7 @@ images: [
   ["wb-led/wb-led-11.png"],
   ["wb-led/wb-led-12.png"],
   ["wb-led/wb-led-13.png"],
-  ["wb-led/wb-led-14.png"],
+  ["wb-led/wb-led-14.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-LED_v.1_Modbus_LED_Dimmer"
 meta: "RS-485, Modbus RTU 4-channel dimmer"

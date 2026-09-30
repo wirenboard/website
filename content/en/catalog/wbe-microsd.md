@@ -4,7 +4,7 @@ cover: "wbe-microsd/cover.png"
 catalogCover: "wbe-microsd/catalog-cover.png"
 images: [
   ["wbe-microsd/cover.png"],
-  ["wbe-microsd/wbe-microsd-1.png"],
+  ["wbe-microsd/wbe-microsd-1.png"]
 ]
 ---
 ::product

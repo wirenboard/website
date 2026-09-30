@@ -6,7 +6,7 @@ images: [
   ["wbio-do-ssr-8/cover.png"],
   ["wbio-do-ssr-8/wbio-do-ssr-8-1.png"],
   ["wbio-do-ssr-8/wbio-do-ssr-8-2.png"],
-  ["wbio-do-ssr-8/wbio-do-ssr-8-3.png"],
+  ["wbio-do-ssr-8/wbio-do-ssr-8-3.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WBIO-DO-SSR-8_I/O_Module"
 meta: "Solid State Relay Output Module WBIO-DO-SSR-8"

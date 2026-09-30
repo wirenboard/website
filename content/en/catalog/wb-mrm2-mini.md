@@ -7,7 +7,7 @@ images: [
   ["wb-mrm2-mini/wb-mrm2-mini-9.png"],
   ["wb-mrm2-mini/wb-mrm2-mini-10.png"],
   ["wb-mrm2-mini/wb-mrm2-mini-11.png"],
-  ["wb-mrm2-mini/wb-mrm2-mini-12.png"],
+  ["wb-mrm2-mini/wb-mrm2-mini-12.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MRM2-mini"
 meta: "Plug-in module WB-MRM2-mini"

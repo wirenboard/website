@@ -3,7 +3,7 @@ article: "18W/18V/WP"
 cover: "power-supply-18w-18v-wp/cover.jpg"
 catalogCover: "power-supply-18w-18v-wp/cover.jpg"
 images: [
-  ["power-supply-18w-18v-wp/cover.jpg"],
+  ["power-supply-18w-18v-wp/cover.jpg"]
 ]
 meta: "Блок питания в подрозетник"
 keywords: "Блок питания в подрозетник"

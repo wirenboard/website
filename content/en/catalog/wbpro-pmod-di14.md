@@ -3,7 +3,7 @@ article: "WBPRO-PMOD-DI14"
 cover: "wbpro-pmod-di14/cover.png"
 catalogCover: "wbpro-pmod-di14/catalog-cover.png"
 images: [
-  ["wbpro-pmod-di14/cover.png"],
+  ["wbpro-pmod-di14/cover.png"]
 ]
 meta: "Input-output extension module Discrete inputs"
 keywords: "Input-output extension module Discrete inputs"

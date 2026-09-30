@@ -3,7 +3,7 @@ article: "WBPRO-PMOD-ELDC"
 cover: "wbpro-pmod-eldc/cover.jpg"
 catalogCover: "wbpro-pmod-eldc/cover.jpg"
 images: [
-  ["wbpro-pmod-eldc/cover.jpg"],
+  ["wbpro-pmod-eldc/cover.jpg"]
 ]
 meta: "Supercapacitor back-up module WBPRO-PMOD-ELDC"
 keywords: "Supercapacitor back-up module WBPRO-PMOD-ELDC"

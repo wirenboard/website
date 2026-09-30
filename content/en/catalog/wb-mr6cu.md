@@ -7,7 +7,7 @@ images: [
   ["wb-mr6cu/wb-mr6cu-9.png"],
   ["wb-mr6cu/wb-mr6cu-10.png"],
   ["wb-mr6cu/wb-mr6cu-11.png"],
-  ["wb-mr6cu/wb-mr6cu-12.png"],
+  ["wb-mr6cu/wb-mr6cu-12.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MR6CU_v.2_Modbus_Relay_Modules"
 meta: "Сompact RS-485, Modbus RTU Relay module"

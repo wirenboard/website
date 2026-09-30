@@ -8,7 +8,7 @@ images: [
   ["wb-ct309/wb-ct309-2.jpg"],
   ["wb-ct309/wb-ct309-3.jpg"],
   ["wb-ct309/wb-ct309-4.png"],
-  ["wb-ct309/wb-ct309-5.jpg"],
+  ["wb-ct309/wb-ct309-5.jpg"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-CT309_Current_Transformer_Strip"
 meta: "Сборка трансформаторов тока WB-CT309"

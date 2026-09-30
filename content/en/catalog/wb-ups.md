@@ -9,7 +9,7 @@ images: [
   ["wb-ups/wb-ups-3.png"],
   ["wb-ups/wb-ups-4.png"],
   ["wb-ups/wb-ups-5.png"],
-  ["wb-ups/wb-ups-6.png"],
+  ["wb-ups/wb-ups-6.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-UPS"
 ---

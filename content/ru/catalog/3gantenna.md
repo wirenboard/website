@@ -4,7 +4,7 @@ cover: "3gantenna/cover.png"
 catalogCover: "3gantenna/catalog-cover.png"
 images: [
   ["3gantenna/cover.png"],
-  ["3gantenna/3gantenna-1.png"],
+  ["3gantenna/3gantenna-1.png"]
 ]
 documentation: "/statics/content/files/5d567712cd648.pdf"
 meta: "Антенна GSM/3G внешняя выносная"

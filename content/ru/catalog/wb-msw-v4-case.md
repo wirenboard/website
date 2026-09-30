@@ -7,7 +7,7 @@ images: [
   ["wb-msw-v4-case/wb-msw-v4-case-1.png"],
   ["wb-msw-v4-case/wb-msw-v4-case-2.png"],
   ["wb-msw-v4-case/wb-msw-v4-case-3.png"],
-  ["wb-msw-v4-case/wb-msw-v4-case-4.png"],
+  ["wb-msw-v4-case/wb-msw-v4-case-4.png"]
 ]
 meta: "Корпус для датчика WB-MSW v.4"
 keywords: "Корпус для датчика WB-MSW v.4"

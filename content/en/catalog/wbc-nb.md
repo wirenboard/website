@@ -4,7 +4,7 @@ cover: "wbc-nb/cover.png"
 catalogCover: "wbc-nb/catalog-cover.png"
 images: [
   ["wbc-nb/cover.png"],
-  ["wbc-nb/wbc-nb-1.png"],
+  ["wbc-nb/wbc-nb-1.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WBC-NB"
 meta: "NBIoTG modem"

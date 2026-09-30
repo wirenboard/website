@@ -5,7 +5,7 @@ catalogCover: "1wire-ds18b20/catalog-cover.png"
 images: [
   ["1wire-ds18b20/cover.png"],
   ["1wire-ds18b20/1wire-ds18b20-1.png"],
-  ["1wire-ds18b20/1wire-ds18b20-2.png"],
+  ["1wire-ds18b20/1wire-ds18b20-2.png"]
 ]
 documentation: "https://wirenboard.com/wiki/1wire-DS18B20"
 meta: "Temperature sensor 1-wire DS18B20"

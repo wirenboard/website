@@ -7,13 +7,13 @@ images: [
   ["wb-ref-u/wb-ref-u-1.jpg"],
   ["wb-ref-u/wb-ref-u-2.jpg"],
   ["wb-ref-u/wb-ref-u-3.jpg"],
-  ["wb-ref-u/wb-ref-u-4.jpg"],
+  ["wb-ref-u/wb-ref-u-4.jpg"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-REF-U_Carel_and_Eliwell_Modbus_Module"
 meta: "Сетевая карта для контроллера холодильного оборудования Carel и Eliwell"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
-  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
+  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
 ---
 ::product

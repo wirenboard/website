@@ -4,7 +4,7 @@ cover: "wb-map3ev/cover.png"
 catalogCover: "wb-map3ev/catalog-cover.png"
 images: [
   ["wb-map3ev/cover.png"],
-  ["wb-map3ev/wb-map3ev-7.png"],
+  ["wb-map3ev/wb-map3ev-7.png"]
 ]
 documentation: "https://wirenboard.com/wiki/Map3ev"
 meta: "Трёхфазный вольтметр с Modbus"
@@ -12,7 +12,7 @@ keywords: "Трёхфазный вольтметр с Modbus"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/0a424378-a514-446c-bfc7-6e9b7393080c"],
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
-  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
+  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
 ---
 ::product

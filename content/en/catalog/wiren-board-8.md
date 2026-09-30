@@ -7,7 +7,7 @@ images: [
   ["wiren-board-8/wiren-board-8-12.png"],
   ["wiren-board-8/wiren-board-8-13.png"],
   ["wiren-board-8/wiren-board-8-14.png"],
-  ["wiren-board-8/wiren-board-8-15.png"],
+  ["wiren-board-8/wiren-board-8-15.png"]
 ]
 documentation: "https://wirenboard.com/wiki/Wiren_Board_8.5"
 meta: "Powerful universal freely PLC in industrial design"

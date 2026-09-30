@@ -8,7 +8,7 @@ images: [
   ["wb-map3h/wb-map3h-2.png"],
   ["wb-map3h/wb-map3h-3.png"],
   ["wb-map3h/wb-map3h-4.png"],
-  ["wb-map3h/wb-map3h-5.png"],
+  ["wb-map3h/wb-map3h-5.png"]
 ]
 meta: "Трёхфазный счётчик с RS-485, Modbus RTU"
 keywords: "RS-485, Modbus RTU"

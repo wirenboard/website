@@ -5,7 +5,7 @@ catalogCover: "wb-msw/catalog-cover.png"
 images: [
   ["wb-msw/cover.png"],
   ["wb-msw/wb-msw-1.png"],
-  ["wb-msw/wb-msw-2.png"],
+  ["wb-msw/wb-msw-2.png"]
 ]
 meta: "Hybrid wall-mounted Modbus RTU sensor of temperature, humidity, light, noise and CO2 level, RS-485"
 keywords: "Modbus RTU sensor, temperature, humidity, lighting, noise and CO2 level, RS-485"

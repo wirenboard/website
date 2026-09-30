@@ -4,7 +4,7 @@ cover: "wbp-active-poe/cover.png"
 catalogCover: "wbp-active-poe/catalog-cover.png"
 images: [
   ["wbp-active-poe/cover.png"],
-  ["wbp-active-poe/wbp-active-poe-1.png"],
+  ["wbp-active-poe/wbp-active-poe-1.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WBP-ACTIVE-POE"
 meta: "PoE for PLC Wiren Board"

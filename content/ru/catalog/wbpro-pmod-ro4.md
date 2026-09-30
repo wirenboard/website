@@ -4,7 +4,7 @@ cover: "wbpro-pmod-ro4/cover.png"
 catalogCover: "wbpro-pmod-ro4/catalog-cover.png"
 images: [
   ["wbpro-pmod-ro4/cover.png"],
-  ["wbpro-pmod-ro4/wbpro-pmod-ro4-1.png"],
+  ["wbpro-pmod-ro4/wbpro-pmod-ro4-1.png"]
 ]
 meta: "WBPRO-PMOD-RO4"
 keywords: "WBPRO-PMOD-RO4"

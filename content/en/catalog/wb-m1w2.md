@@ -11,7 +11,7 @@ images: [
   ["wb-m1w2/wb-m1w2-10.png"],
   ["wb-m1w2/wb-m1w2-11.png"],
   ["wb-m1w2/wb-m1w2-12.png"],
-  ["wb-m1w2/wb-m1w2-13.png"],
+  ["wb-m1w2/wb-m1w2-13.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-M1W2_v.3_1-Wire_to_Modbus_Temperature_Measurement_Module"
 meta: "Compact converter with Modbus RTU for 1-Wire temperature sensors"

@@ -5,7 +5,7 @@ catalogCover: "wbc-3g/catalog-cover.png"
 images: [
   ["wbc-3g/cover.png"],
   ["wbc-3g/wbc-3g-1.png"],
-  ["wbc-3g/wbc-3g-2.png"],
+  ["wbc-3g/wbc-3g-2.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WBC-3G"
 ---

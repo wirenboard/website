@@ -4,7 +4,7 @@ cover: "wb-map3ev/cover.png"
 catalogCover: "wb-map3ev/catalog-cover.png"
 images: [
   ["wb-map3ev/cover.png"],
-  ["wb-map3ev/wb-map3ev-7.png"],
+  ["wb-map3ev/wb-map3ev-7.png"]
 ]
 documentation: "https://wirenboard.com/wiki/Map3ev"
 meta: "Three-phase voltmeter with Modbus"

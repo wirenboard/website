@@ -7,14 +7,14 @@ images: [
   ["wiren-board-8/wiren-board-8-14.png"],
   ["wiren-board-8/wiren-board-8-15.png"],
   ["wiren-board-8/wiren-board-8-16.png"],
-  ["wiren-board-8/wiren-board-8-17.png"],
+  ["wiren-board-8/wiren-board-8-17.png"]
 ]
 documentation: "https://wirenboard.com/wiki/Wiren_Board_8.5"
 meta: "Мощный универсальный свободно программируемый контроллер в промышленном исполнении"
 keywords: "контроллер для автоматизации, wiren board, диспетчеризация, PLC на Linux, ПЛК"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/7dbc2fba-e234-4f41-9d7d-6d98a0697aa6"],
-  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c"],
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c"]
 ]
 ---
 ::product

@@ -6,7 +6,7 @@ images: [
   ["zemctk09-31g/cover.png"],
   ["zemctk09-31g/zemctk09-31g-1.png"],
   ["zemctk09-31g/zemctk09-31g-2.png"],
-  ["zemctk09-31g/zemctk09-31g-3.png"],
+  ["zemctk09-31g/zemctk09-31g-3.png"]
 ]
 documentation: "https://wirenboard.com/wiki/ZEMCTK09-31G"
 meta: "ZEMCTK09-31G"

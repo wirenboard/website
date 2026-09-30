@@ -4,7 +4,7 @@ cover: "wbe-ao-10v-2/cover.png"
 catalogCover: "wbe-ao-10v-2/catalog-cover.png"
 images: [
   ["wbe-ao-10v-2/cover.png"],
-  ["wbe-ao-10v-2/wbe-ao-10v-2-1.png"],
+  ["wbe-ao-10v-2/wbe-ao-10v-2-1.png"]
 ]
 ---
 ::product

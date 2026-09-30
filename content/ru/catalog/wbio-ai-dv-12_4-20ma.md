@@ -6,7 +6,7 @@ images: [
   ["wbio-ai-dv-12_4-20ma/cover.png"],
   ["wbio-ai-dv-12_4-20ma/wbio-ai-dv-12_4-20ma-1.png"],
   ["wbio-ai-dv-12_4-20ma/wbio-ai-dv-12_4-20ma-2.png"],
-  ["wbio-ai-dv-12_4-20ma/wbio-ai-dv-12_4-20ma-3.png"],
+  ["wbio-ai-dv-12_4-20ma/wbio-ai-dv-12_4-20ma-3.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WBIO-AI-DV-12_4-20MA"
 meta: "Модуль ввода-вывода WBIO-AI-DV-12/4-20mA"

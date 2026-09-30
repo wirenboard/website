@@ -4,7 +4,7 @@ cover: "wb-mai2-mini-cc-v1/cover.png"
 catalogCover: "wb-mai2-mini-cc-v1/catalog-cover.png"
 images: [
   ["wb-mai2-mini-cc-v1/cover.png"],
-  ["wb-mai2-mini-cc-v1/wb-mai2-mini-cc-v1-6.png"],
+  ["wb-mai2-mini-cc-v1/wb-mai2-mini-cc-v1-6.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MAI2_mini"
 meta: "Модуль аналоговых входов c RS-485, Modbus RTU"
@@ -12,7 +12,7 @@ keywords: "RS-485, Modbus RTU"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/0a424378-a514-446c-bfc7-6e9b7393080c"],
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
-  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
+  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
 ---
 ::product

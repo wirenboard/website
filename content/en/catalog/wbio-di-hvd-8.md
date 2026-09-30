@@ -6,7 +6,7 @@ images: [
   ["wbio-di-hvd-8/cover.png"],
   ["wbio-di-hvd-8/wbio-di-hvd-8-1.png"],
   ["wbio-di-hvd-8/wbio-di-hvd-8-2.png"],
-  ["wbio-di-hvd-8/wbio-di-hvd-8-3.png"],
+  ["wbio-di-hvd-8/wbio-di-hvd-8-3.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WBIO-DI-HVD-8_8-Channel_230V_Detector_Module"
 meta: "I/O Module WBIO-DI-HVD-8"

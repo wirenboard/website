@@ -3,7 +3,7 @@ article: "WBPRO-METER3"
 cover: "wbpro-meter3/cover.png"
 catalogCover: "wbpro-meter3/catalog-cover.png"
 images: [
-  ["wbpro-meter3/cover.png"],
+  ["wbpro-meter3/cover.png"]
 ]
 meta: "Three-phase meter with RS-485, Modbus RTU WBPRO-METER3"
 keywords: "Three-phase meter with RS-485, Modbus RTU WBPRO-METER3"

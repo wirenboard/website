@@ -3,7 +3,7 @@ article: "KBT"
 cover: "pliers/cover.jpg"
 catalogCover: "pliers/cover.jpg"
 images: [
-  ["pliers/cover.jpg"],
+  ["pliers/cover.jpg"]
 ]
 meta: "Обжимные пресс-клещи ПКВк-10"
 keywords: "Обжимные пресс-клещи ПКВк-10"

@@ -5,13 +5,13 @@ catalogCover: "wbe2-i-ebus/catalog-cover.png"
 images: [
   ["wbe2-i-ebus/cover.png"],
   ["wbe2-i-ebus/wbe2-i-ebus-1.png"],
-  ["wbe2-i-ebus/wbe2-i-ebus-2.jpg"],
+  ["wbe2-i-ebus/wbe2-i-ebus-2.jpg"]
 ]
 documentation: "https://wirenboard.com/wiki/WBE2-I-EBUS_eBus_Extension_Module"
 meta: "Шлюз eBus для Wiren Board 6…8"
 keywords: "eBus, Wiren Board, Vaillant, Protherm, автоматизация"
 video: [
-  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"],
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"]
 ]
 ---
 ::product

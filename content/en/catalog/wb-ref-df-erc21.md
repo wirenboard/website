@@ -11,7 +11,7 @@ images: [
   ["wb-ref-df-erc21/wb-ref-df-erc21-5.png"],
   ["wb-ref-df-erc21/wb-ref-df-erc21-6.png"],
   ["wb-ref-df-erc21/wb-ref-df-erc21-7.jpg"],
-  ["wb-ref-df-erc21/wb-ref-df-erc21-8.jpg"],
+  ["wb-ref-df-erc21/wb-ref-df-erc21-8.jpg"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-REF-DF-ERC21_Danfoss_ERC_21x_Modbus_Module"
 meta: "Network card for Danfoss refrigeration controller"

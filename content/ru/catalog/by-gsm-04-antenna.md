@@ -3,7 +3,7 @@ article: "ANT-GSM-2.5M"
 cover: "by-gsm-04-antenna/cover.jpg"
 catalogCover: "by-gsm-04-antenna/cover.jpg"
 images: [
-  ["by-gsm-04-antenna/cover.jpg"],
+  ["by-gsm-04-antenna/cover.jpg"]
 ]
 meta: "Антенна GSM выносная 2.5 метра"
 keywords: "Антенна GSM выносная 2.5 метра"

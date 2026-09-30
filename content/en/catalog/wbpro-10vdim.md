@@ -3,7 +3,7 @@ article: "WBPRO-10VDIM"
 cover: "wbpro-10vdim/cover.png"
 catalogCover: "wbpro-10vdim/catalog-cover.png"
 images: [
-  ["wbpro-10vdim/cover.png"],
+  ["wbpro-10vdim/cover.png"]
 ]
 meta: "Lighting control module with Modbus RTU WBPRO-10VDIM"
 keywords: "Lighting control module with Modbus RTU WBPRO-10VDIM"

@@ -12,13 +12,13 @@ images: [
   ["wiren-board-7/wiren-board-7-18.png"],
   ["wiren-board-7/wiren-board-7-19.png"],
   ["wiren-board-7/wiren-board-7-20.png"],
-  ["wiren-board-7/wiren-board-7-12.png"],
+  ["wiren-board-7/wiren-board-7-12.png"]
 ]
 documentation: "https://wirenboard.com/wiki/Wiren_Board_7.4"
 meta: "Универсальный контроллер для автоматизации Wiren Board 7.4"
 keywords: "Wiren Board, контроллер, ПЛК, PLC, автоматизация, мониторинг, управление, производство, умный дом, теплицы, базовые станции"
 video: [
-  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c"],
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c"]
 ]
 ---
 ::product

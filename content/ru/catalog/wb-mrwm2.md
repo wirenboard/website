@@ -5,7 +5,7 @@ catalogCover: "wb-mrwm2/catalog-cover.png"
 images: [
   ["wb-mrwm2/cover.png"],
   ["wb-mrwm2/wb-mrwm2-1.png"],
-  ["wb-mrwm2/wb-mrwm2-2.png"],
+  ["wb-mrwm2/wb-mrwm2-2.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MRWM2_Modbus_Relay_Modules"
 meta: "Модуль реле  RS-485, Modbus RTU c измерением мощности"
@@ -13,7 +13,7 @@ keywords: "Модуль реле  RS-485, Modbus RTU c измерением мо
 video: [
   ["https://peertube.wirenboard.com/videos/embed/0a424378-a514-446c-bfc7-6e9b7393080c"],
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
-  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
+  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
 ---
 ::product

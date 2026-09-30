@@ -13,7 +13,7 @@ images: [
   ["wb-msw-v4/wb-msw-v4-15.png"],
   ["wb-msw-v4/wb-msw-v4-16.png"],
   ["wb-msw-v4/wb-msw-v4-17.png"],
-  ["wb-msw-v4/wb-msw-v4-18.png"],
+  ["wb-msw-v4/wb-msw-v4-18.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MSW_v.4_Modbus_Sensor"
 meta: "Настенный комбинированный датчик c RS-485, Modbus RTU"
@@ -21,7 +21,7 @@ keywords: "Настенный комбинированный датчик c RS-4
 video: [
   ["https://peertube.wirenboard.com/videos/embed/0a424378-a514-446c-bfc7-6e9b7393080c"],
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
-  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
+  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
 use_cases: ["solutions-liten-magnit", "techsensor-module-cafe", "solutions-rekota-hotel-vertical"]
 ---

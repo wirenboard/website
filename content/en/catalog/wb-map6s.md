@@ -7,7 +7,7 @@ images: [
   ["wb-map6s/wb-map6s-9.jpg"],
   ["wb-map6s/wb-map6s-10.png"],
   ["wb-map6s/wb-map6s-11.png"],
-  ["wb-map6s/wb-map6s-12.png"],
+  ["wb-map6s/wb-map6s-12.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/Power_Meter_WB-MAP6S"
 meta: "RS-485, Modbus RTU Multi-channel meter"

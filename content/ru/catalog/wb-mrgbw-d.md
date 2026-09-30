@@ -12,7 +12,7 @@ images: [
   ["wb-mrgbw-d/wb-mrgbw-d-10.png"],
   ["wb-mrgbw-d/wb-mrgbw-d-11.png"],
   ["wb-mrgbw-d/wb-mrgbw-d-12.png"],
-  ["wb-mrgbw-d/wb-mrgbw-d-13.png"],
+  ["wb-mrgbw-d/wb-mrgbw-d-13.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MRGBW-D"
 meta: "Четырехканальный диммер  с RS-485, Modbus RTU"

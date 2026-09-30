@@ -13,7 +13,7 @@ images: [
   ["yc-sm06e/yc-sm06e-7.png"],
   ["yc-sm06e/yc-sm06e-8.jpg"],
   ["yc-sm06e/yc-sm06e-9.jpg"],
-  ["yc-sm06e/yc-sm06e-10.jpeg"],
+  ["yc-sm06e/yc-sm06e-10.jpeg"]
 ]
 documentation: "https://wirenboard.com/wiki/HMI_Wall_Panel_With_Android_and_PoE_YC-SM06E"
 meta: "Панель 4 дюйма на Android с PoE для систем автоматизации"
@@ -21,7 +21,7 @@ keywords: "Android, PoE, Ethernet, HMI, панель, интерфейс сис�
 video: [
   ["https://peertube.wirenboard.com/videos/embed/5146e980-b878-4539-8a3a-ee1fd44980d5"],
   ["https://peertube.wirenboard.com/videos/embed/890292d9-9512-4919-a503-7780f2ddb862"],
-  ["https://peertube.wirenboard.com/videos/embed/0fe4dea1-17c7-46e5-9823-1e1338ae1119"],
+  ["https://peertube.wirenboard.com/videos/embed/0fe4dea1-17c7-46e5-9823-1e1338ae1119"]
 ]
 ---
 ::product

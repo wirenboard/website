@@ -8,7 +8,7 @@ images: [
   ["wiren-board-6/wiren-board-6-2.png"],
   ["wiren-board-6/wiren-board-6-3.png"],
   ["wiren-board-6/wiren-board-6-4.png"],
-  ["wiren-board-6/wiren-board-6-5.png"],
+  ["wiren-board-6/wiren-board-6-5.png"]
 ]
 documentation: "https://wirenboard.com/wiki/Wiren_Board_6"
 meta: "Automation controller Wiren Board 6"

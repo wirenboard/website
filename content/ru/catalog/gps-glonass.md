@@ -3,7 +3,7 @@ article: "ANT-GPS"
 cover: "gps-glonass/cover.png"
 catalogCover: "gps-glonass/catalog-cover.png"
 images: [
-  ["gps-glonass/cover.png"],
+  ["gps-glonass/cover.png"]
 ]
 documentation: "/statics/content/files/6231c1214b1f6.pdf"
 meta: "GPS/ГЛОНАСС антенна внешняя"

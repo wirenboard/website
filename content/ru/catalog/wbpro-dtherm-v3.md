@@ -6,7 +6,7 @@ images: [
   ["wbpro-dtherm-v3/cover.png"],
   ["wbpro-dtherm-v3/wbpro-dtherm-v3-3.png"],
   ["wbpro-dtherm-v3/wbpro-dtherm-v3-4.png"],
-  ["wbpro-dtherm-v3/wbpro-dtherm-v3-5.png"],
+  ["wbpro-dtherm-v3/wbpro-dtherm-v3-5.png"]
 ]
 meta: "Plug-in module for digital thermometers WBPRO-DTHERM v.3"
 keywords: "Plug-in module for digital thermometers WBPRO-DTHERM v.3"

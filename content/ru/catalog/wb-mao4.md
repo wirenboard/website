@@ -5,7 +5,7 @@ catalogCover: "wb-mao4/catalog-cover.png"
 images: [
   ["wb-mao4/cover.png"],
   ["wb-mao4/wb-mao4-8.png"],
-  ["wb-mao4/wb-mao4-9.png"],
+  ["wb-mao4/wb-mao4-9.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MAO4_0-10V_Modbus_Analog_Outputs"
 meta: "Модуль аналогового вывода 0-10В"
@@ -13,7 +13,7 @@ keywords: "Модуль аналогового вывода 0-10В"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/0a424378-a514-446c-bfc7-6e9b7393080c"],
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
-  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
+  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
 ---
 ::product

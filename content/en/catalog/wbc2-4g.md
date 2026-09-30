@@ -5,7 +5,7 @@ catalogCover: "wbc2-4g/catalog-cover.png"
 images: [
   ["wbc2-4g/cover.png"],
   ["wbc2-4g/wbc2-4g-1.jpg"],
-  ["wbc2-4g/wbc2-4g-2.png"],
+  ["wbc2-4g/wbc2-4g-2.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WBC2-4G"
 ---

@@ -6,7 +6,7 @@ images: [
   ["wbio-do-r1g-16/cover.png"],
   ["wbio-do-r1g-16/wbio-do-r1g-16-1.png"],
   ["wbio-do-r1g-16/wbio-do-r1g-16-2.png"],
-  ["wbio-do-r1g-16/wbio-do-r1g-16-3.png"],
+  ["wbio-do-r1g-16/wbio-do-r1g-16-3.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WBIO-DO-R1G-16_I/O_Module"
 meta: "I/O Module WBIO-DO-R1G-16"

@@ -3,7 +3,7 @@ article: "WBPRO-FETDIM"
 cover: "wbpro-fetdim/cover.png"
 catalogCover: "wbpro-fetdim/catalog-cover.png"
 images: [
-  ["wbpro-fetdim/cover.png"],
+  ["wbpro-fetdim/cover.png"]
 ]
 meta: "Three channel dimmer for LED bulbs and incandescent lamps, 230 V WBPRO-FETDIM"
 keywords: "Three channel dimmer for LED bulbs and incandescent lamps, 230 V WBPRO-FETDIM"

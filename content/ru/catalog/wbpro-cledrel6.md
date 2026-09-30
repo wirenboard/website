@@ -3,7 +3,7 @@ article: "WBPRO-CLEDREL6"
 cover: "wbpro-cledrel6/cover.png"
 catalogCover: "wbpro-cledrel6/catalog-cover.png"
 images: [
-  ["wbpro-cledrel6/cover.png"],
+  ["wbpro-cledrel6/cover.png"]
 ]
 meta: "WBPRO-CLEDREL6"
 keywords: "WBPRO-CLEDREL6"

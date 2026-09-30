@@ -5,7 +5,7 @@ catalogCover: "wbio-di-lvd-16/catalog-cover.png"
 images: [
   ["wbio-di-lvd-16/cover.png"],
   ["wbio-di-lvd-16/wbio-di-lvd-16-1.png"],
-  ["wbio-di-lvd-16/wbio-di-lvd-16-2.png"],
+  ["wbio-di-lvd-16/wbio-di-lvd-16-2.png"]
 ]
 ---
 ::product

@@ -8,7 +8,7 @@ images: [
   ["wbe2r-r-zigbee-sh/wbe2r-r-zigbee-sh-2.png"],
   ["wbe2r-r-zigbee-sh/wbe2r-r-zigbee-sh-3.png"],
   ["wbe2r-r-zigbee-sh/wbe2r-r-zigbee-sh-4.png"],
-  ["wbe2r-r-zigbee-sh/wbe2r-r-zigbee-sh-5.png"],
+  ["wbe2r-r-zigbee-sh/wbe2r-r-zigbee-sh-5.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WBE2R-R-ZIGBEE-SH"
 meta: "Zigbee interface, Wiren Board 6…8"

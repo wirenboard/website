@@ -2,7 +2,7 @@
 article: "WBPRO-DI8HV"
 images: [
   ["wbpro-di8hv/wbpro-di8hv-4.png"],
-  ["wbpro-di8hv/wbpro-di8hv-5.png"],
+  ["wbpro-di8hv/wbpro-di8hv-5.png"]
 ]
 documentation: "https://wiki.wirenboard.com/wiki/WB-MCM8HV_v.1_Modbus_AC_Detector"
 ---

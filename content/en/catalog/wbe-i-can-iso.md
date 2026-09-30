@@ -4,7 +4,7 @@ cover: "wbe-i-can-iso/cover.png"
 catalogCover: "wbe-i-can-iso/catalog-cover.png"
 images: [
   ["wbe-i-can-iso/cover.png"],
-  ["wbe-i-can-iso/wbe-i-can-iso-1.png"],
+  ["wbe-i-can-iso/wbe-i-can-iso-1.png"]
 ]
 ---
 ::product

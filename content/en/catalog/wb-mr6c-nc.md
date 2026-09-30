@@ -7,7 +7,7 @@ images: [
   ["wb-mr6c-nc/wb-mr6c-nc-1.png"],
   ["wb-mr6c-nc/wb-mr6c-nc-2.png"],
   ["wb-mr6c-nc/wb-mr6c-nc-3.png"],
-  ["wb-mr6c-nc/wb-mr6c-nc-4.png"],
+  ["wb-mr6c-nc/wb-mr6c-nc-4.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MR6C/NC_Modbus_Relay_Modules"
 meta: "Relay module with RS-485 Modbus RTU"

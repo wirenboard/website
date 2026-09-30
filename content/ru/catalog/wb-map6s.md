@@ -7,7 +7,7 @@ images: [
   ["wb-map6s/wb-map6s-9.jpg"],
   ["wb-map6s/wb-map6s-10.png"],
   ["wb-map6s/wb-map6s-11.png"],
-  ["wb-map6s/wb-map6s-12.png"],
+  ["wb-map6s/wb-map6s-12.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/Power_Meter_WB-MAP6S"
 meta: "Многоканальный счётчик с RS-485, Modbus RTU"
@@ -15,7 +15,7 @@ keywords: "RS-485, Modbus RTU"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/0a424378-a514-446c-bfc7-6e9b7393080c"],
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
-  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
+  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
 use_cases: ["smart-dcim-telecom", "solutions-rostics", "inpro-meat"]
 ---

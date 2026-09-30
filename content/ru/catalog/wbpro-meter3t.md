@@ -6,7 +6,7 @@ images: [
   ["wbpro-meter3t/cover.png"],
   ["wbpro-meter3t/wbpro-meter3t-1.png"],
   ["wbpro-meter3t/wbpro-meter3t-2.png"],
-  ["wbpro-meter3t/wbpro-meter3t-3.png"],
+  ["wbpro-meter3t/wbpro-meter3t-3.png"]
 ]
 meta: "WBPRO-METER3T"
 keywords: "WBPRO-METER3T"

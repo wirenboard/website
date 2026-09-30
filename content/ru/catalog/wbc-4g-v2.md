@@ -4,13 +4,13 @@ cover: "wbc-4g-v2/cover.png"
 catalogCover: "wbc-4g-v2/catalog-cover.png"
 images: [
   ["wbc-4g-v2/cover.png"],
-  ["wbc-4g-v2/wbc-4g-v2-1.png"],
+  ["wbc-4g-v2/wbc-4g-v2-1.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WBC-4G_v.2"
 meta: "Модем сети 4G"
 keywords: "Модем сети 4G"
 video: [
-  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"],
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"]
 ]
 ---
 ::product

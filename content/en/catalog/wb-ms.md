@@ -6,7 +6,7 @@ images: [
   ["wb-ms/cover.png"],
   ["wb-ms/wb-ms-6.png"],
   ["wb-ms/wb-ms-7.png"],
-  ["wb-ms/wb-ms-8.png"],
+  ["wb-ms/wb-ms-8.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MS_Modbus_Sensor"
 meta: "Combined sensor with RS-485, Modbus RTU"

@@ -5,7 +5,7 @@ catalogCover: "wb-map3e/catalog-cover.png"
 images: [
   ["wb-map3e/cover.png"],
   ["wb-map3e/wb-map3e-9.png"],
-  ["wb-map3e/wb-map3e-10.png"],
+  ["wb-map3e/wb-map3e-10.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MAP3E_Power_Meter"
 meta: "Three-phase meter with RS-485, Modbus RTU"

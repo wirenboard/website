@@ -9,7 +9,7 @@ images: [
   ["wiren-board-73/wiren-board-73-11.png"],
   ["wiren-board-73/wiren-board-73-12.png"],
   ["wiren-board-73/wiren-board-73-13.png"],
-  ["wiren-board-73/wiren-board-73-14.png"],
+  ["wiren-board-73/wiren-board-73-14.png"]
 ]
 documentation: "https://wirenboard.com/wiki/Wiren_Board_7.3"
 meta: "Automation controller Wiren Board 7"

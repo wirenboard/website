@@ -7,7 +7,7 @@ images: [
   ["wbio-ao-10v-8/wbio-ao-10v-8-1.png"],
   ["wbio-ao-10v-8/wbio-ao-10v-8-2.png"],
   ["wbio-ao-10v-8/wbio-ao-10v-8-3.png"],
-  ["wbio-ao-10v-8/wbio-ao-10v-8-4.jpg"],
+  ["wbio-ao-10v-8/wbio-ao-10v-8-4.jpg"]
 ]
 meta: "Analog output module WBIO-AO-10V-8"
 keywords: "Analog output module WBIO-AO-10V-8"
