@@ -54,6 +54,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      titleTemplate: '%s - Wiren Board',
       link: [
         {
           rel: 'icon',

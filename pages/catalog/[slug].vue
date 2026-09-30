@@ -2,7 +2,6 @@
 import type { CategoryResponse, CatalogProduct } from '~/common/types';
 
 const { t, locale } = useI18n();
-const config = useRuntimeConfig();
 const route = useRoute();
 const slug = route.params.slug as string;
 
@@ -17,7 +16,7 @@ useHead({
   meta: [
     { name: 'description', content: data.value.category.meta_description || '' },
     { name: 'keywords', content: data.value.category.meta_keywords || '' },
-    { name: 'wb-bc', content: `${t('catalog')}|/${locale.value}/contents/catalog/` },
+    { name: 'wb-bc', content: `${t('catalog')}|/${locale.value}/catalog/` },
     { property: 'og:title', content: data.value.category.meta_title || data.value.category.title },
     { property: 'og:description', content: data.value.category.meta_description || '' },
     { property: 'og:type', content: 'website' },
@@ -46,8 +45,8 @@ watch(searchQuery, (q) => {
     searchAbort = new AbortController();
     try {
       searchResults.value = await $fetch<CatalogProduct[]>(
-        `${config.public.apiUrl}/${locale.value}/ng/api/v1/catalog/search/`,
-        { params: { q: trimmed }, signal: searchAbort.signal },
+        '/_catalog-search',
+        { params: { q: trimmed, locale: locale.value }, signal: searchAbort.signal },
       );
       searchPending.value = false;
     } catch (e: any) {
@@ -196,10 +195,6 @@ watch(searchQuery, (q) => {
 
 .category-headerDesc :deep(u) {
   text-decoration: none;
-}
-
-.category-products {
-  border-top: 1px solid var(--border-color);
 }
 
 @media (max-width: 767px) {

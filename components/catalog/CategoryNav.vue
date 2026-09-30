@@ -32,13 +32,13 @@ const { locale, t } = useI18n();
         <span class="catalogBar-viewLabel" id="catalogBarViewLabel">{{ t('display') }}</span>
         <div class="catalogBar-viewBtns" role="group" aria-labelledby="catalogBarViewLabel">
           <a
-            :href="`/${locale}/contents/catalog/`"
+            :href="`/${locale}/catalog/`"
             class="catalogBar-viewBtn"
             :class="{ 'catalogBar-viewBtn--active': viewMode !== 'list' }"
             :aria-current="viewMode !== 'list' ? 'page' : undefined"
           >{{ t('byGroups') }}</a>
           <a
-            :href="`/${locale}/contents/catalog/list/`"
+            :href="`/${locale}/catalog/list/`"
             class="catalogBar-viewBtn"
             :class="{ 'catalogBar-viewBtn--active': viewMode === 'list' }"
             :aria-current="viewMode === 'list' ? 'page' : undefined"
@@ -55,7 +55,7 @@ const { locale, t } = useI18n();
           class="catalogNav-item"
         >
           <a
-            :href="viewMode === 'list' ? `#category-${cat.slug}` : `/${locale}/contents/catalog/${cat.slug}/`"
+            :href="viewMode === 'list' ? `#category-${cat.slug}` : `/${locale}/catalog/${cat.slug}/`"
             :aria-current="cat.slug === currentSlug ? 'page' : undefined"
           >{{ cat.name }}</a>
         </li>

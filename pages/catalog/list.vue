@@ -49,8 +49,8 @@ watch(searchQuery, (q) => {
     searchAbort = new AbortController();
     try {
       searchResults.value = await $fetch<CatalogProduct[]>(
-        `${config.public.apiUrl}/${locale.value}/ng/api/v1/catalog/search/`,
-        { params: { q: trimmed }, signal: searchAbort.signal },
+        '/_catalog-search',
+        { params: { q: trimmed, locale: locale.value }, signal: searchAbort.signal },
       );
       searchPending.value = false;
     } catch (e: any) {
@@ -122,7 +122,7 @@ const { data: categoryDetails } = await useAsyncData('catalog-list-details', asy
             </div>
             <div class="catalogList-headerInfo">
               <h2>
-                <a :href="`/${locale}/contents/catalog/${catData.category.slug}/`">{{ catData.category.name }}</a>
+                <a :href="`/${locale}/catalog/${catData.category.slug}/`">{{ catData.category.name }}</a>
               </h2>
               <div class="catalogList-headerDesc">
                 <template v-if="isLongDescription(catData.category.description) && !expandedCategories[catData.category.id]">
