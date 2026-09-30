@@ -33,8 +33,8 @@ category: shops_restaurants_monitoring
 :gallery{
     :data='[
         ["restaurant_lighting_automation/1.jpg", "Общий зал ресторана"],
-        ["restaurant_lighting_automation/2.jpg", "Подвесные светильники и бра в общем зале"],
-        ["restaurant_lighting_automation/3.jpg", "Люстра из подвесных светильников"],
+        ["restaurant_lighting_automation/2.jpg", "Потолочные светильники и бра в общем зале"],
+        ["restaurant_lighting_automation/3.jpg", "Подвесные светильники в общем зале"],
         ["restaurant_lighting_automation/4.jpg", "Стойка у открытой кухни"]
     ]'
 }
@@ -80,8 +80,8 @@ category: shops_restaurants_monitoring
 
 :gallery{
     :data='[
-        ["restaurant_lighting_automation/10.jpg", "Дизайнерский подвесной светильник в общем зале"],
-        ["restaurant_lighting_automation/11.jpg", "Дизайнерский подвесной светильник у окна"]
+        ["restaurant_lighting_automation/10.jpg", "Дизайнерский светильник в виде атомной решетки"],
+        ["restaurant_lighting_automation/11.jpg", "Светильник-решетка вблизи"]
     ]'
 }
 
