@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { CategoryResponse, CatalogProduct } from '~/common/types';
+import type { CategoryResponse } from '~/common/types';
 
 const { t, locale } = useI18n();
 const route = useRoute();
@@ -24,36 +24,7 @@ useHead({
   ],
 });
 
-const searchQuery = ref('');
-const searchResults = ref<CatalogProduct[] | null>(null);
-const searchPending = ref(false);
-
-let searchTimer: ReturnType<typeof setTimeout> | null = null;
-let searchAbort: AbortController | null = null;
-
-watch(searchQuery, (q) => {
-  if (searchTimer) clearTimeout(searchTimer);
-  if (searchAbort) searchAbort.abort();
-  const trimmed = q.trim();
-  if (trimmed.length < 3) {
-    searchResults.value = null;
-    searchPending.value = false;
-    return;
-  }
-  searchPending.value = true;
-  searchTimer = setTimeout(async () => {
-    searchAbort = new AbortController();
-    try {
-      searchResults.value = await $fetch<CatalogProduct[]>(
-        '/_catalog-search',
-        { params: { q: trimmed, locale: locale.value }, signal: searchAbort.signal },
-      );
-      searchPending.value = false;
-    } catch (e: any) {
-      if (e.name !== 'AbortError') throw e;
-    }
-  }, 600);
-});
+const { searchQuery, searchResults, searchPending } = useCatalogSearch();
 </script>
 
 <template>
@@ -65,18 +36,8 @@ watch(searchQuery, (q) => {
       :search-pending="searchPending"
     />
 
-    <div class="category-content" :class="{ loading: searchPending }">
-      <template v-if="searchResults !== null">
-        <div v-if="searchResults.length === 0" class="category-searchStatus">{{ t('noResults') }}</div>
-        <div v-else class="category-searchResults">
-          <CatalogProductCard
-            v-for="product in searchResults"
-            :key="product.id"
-            :product="product"
-            grid-layout
-          />
-        </div>
-      </template>
+    <CatalogSearchOverlay :pending="searchPending" class="category-content">
+      <CatalogSearchResults v-if="searchResults !== null" :results="searchResults" />
 
       <template v-else>
         <div class="category-header">
@@ -94,64 +55,11 @@ watch(searchQuery, (q) => {
           />
         </div>
       </template>
-    </div>
+    </CatalogSearchOverlay>
   </div>
 </template>
 
 <style scoped>
-.category-searchStatus {
-  padding: 32px 0;
-  color: var(--text-status-color);
-  text-align: center;
-  font-size: 18px;
-}
-
-.category-content {
-  position: relative;
-}
-
-.category-content.loading::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: #fff;
-  opacity: 0.5;
-  z-index: 1001;
-}
-
-.category-content.loading::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 30px;
-  height: 30px;
-  margin-top: -15px;
-  margin-left: -15px;
-  border-radius: 50%;
-  border: 2px solid var(--spinner-track-color);
-  border-top-color: var(--primary-color);
-  animation: catalogSearchSpinner 0.6s linear infinite;
-  z-index: 1002;
-}
-
-@keyframes catalogSearchSpinner {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.category-searchResults {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-@media (max-width: 767px) {
-  .category-searchResults {
-    grid-template-columns: 1fr;
-  }
-}
-
 .category-header {
   display: flex;
   align-items: center;
@@ -211,12 +119,10 @@ watch(searchQuery, (q) => {
 <i18n>
 {
   "ru": {
-    "catalog": "Каталог продукции",
-    "noResults": "По вашему запросу ничего не найдено"
+    "catalog": "Каталог продукции"
   },
   "en": {
-    "catalog": "Product Catalog",
-    "noResults": "No results found"
+    "catalog": "Product Catalog"
   }
 }
 </i18n>
