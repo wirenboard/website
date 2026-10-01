@@ -12,41 +12,39 @@ keywords: "Universal Relay Module WBPRO-UREL6"
 ::product
 #description
 
-Designed for direct control of LED, incandescent and fluorescent lighting and other loads.
+The module has a built-in power supply that allows you to:
 
-Each output is rated 10A and can withstand inrush current as high as 80A and continous load of up to 16A.
+- Save space and simplify installation in small installations without a controller: no external power supply or wiring for it is needed. At the same time, you get local control from buttons and a foundation for future automation.
+- Keep the relays working if the low-voltage RS-485 bus is disconnected or damaged — the module automatically switches to the internal power supply and continues to operate in the mode set during configuration.
+- Emulate relays with normally closed contacts, but for a much higher current than such relays traditionally switch.
 
-The module has a built-in power supply that allows:
-
-- Save space and simplify installation in small installations without a controller: no need for an external power supply and wires for it. At the same time, you will receive local control from the buttons and a reserve for future automation.
-- Ensure that the relay operates when the low-voltage RS-485 bus is disconnected or damaged — module will automatically switch to the internal power supply and continue to work in the mode specified during configuration.
-- Emulate relays with normally closed contacts, but much more current than such relays traditionally switch.
-
-Also used as general-purpose discrete input/output module.
-
-The device works with the Fast Modbus protocol extension — provides scanning capabilities, convenient configuration and instant polling of device status.
+Works with the Fast Modbus protocol extension — provides scanning, convenient configuration and instant polling of the device status.
 
 
 #info
 
-## Technical specifications
+## Key features
 
 ::product-section{title="Outputs"}
 - 6 relay channels rated 10 A 230 VAC
 - The outputs are combined in two groups of 3 relays each
 - Channel status indication
+- Rated current: 10 A per channel
 - Maximum continuous current: 16 A per channel
-- Inrush current: 80 A per channel
+- Total rated switching current per group of three channels: 20 A
+- Maximum inrush current: up to 80 A (20 ms)
+
+<br>
 ::
 
 ::product-section{title="Discrete inputs"}
-- 7 dry contact inputs with flexible channel control configuration
-- 6 discrete inputs with a direct channel control function (default)
-- 1 digital input for disabling all relay channels simultaneously (default)
-- Press events: short, long, double and shortlong
+- 6 discrete inputs with a direct channel control function
+- 1 discrete input for disabling all relay channels
+- Press handling: short, long, double, and short followed by long
+- Flexible input configuration for controlling outputs
 - Group galvanic isolation of inputs
-- Inputs pulses count
-- Inputs frequency measure
+- Dry contact inputs
+- Pulse counting and frequency measurement on inputs
 ::
 
 ::product-section{title="Other characteristics"}
