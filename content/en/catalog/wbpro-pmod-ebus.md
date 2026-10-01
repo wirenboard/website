@@ -12,7 +12,7 @@ keywords: "eBus interface for WBPRO-PLC​ WBPRO-PMOD-EBUS"
 ::product
 #description
 
-A module for controlling electric and gas boilers via the eBus protocol, developed together with [Nevoton](http://nevoton.ru).
+A module for controlling electric and gas boilers via the eBus protocol.
 
 It is installed in a slot on the controller board and emulates an external thermostat.
 
