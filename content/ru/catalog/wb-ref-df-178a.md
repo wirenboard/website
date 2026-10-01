@@ -2,11 +2,20 @@
 article: "WB-REF-DF-178A"
 cover: "wb-ref-df-178a/cover.png"
 catalogCover: "wb-ref-df-178a/catalog-cover.png"
+images: [
+  ["wb-ref-df-178a/cover.png"],
+  ["wb-ref-df-178a/wb-ref-df-178a-1.jpg"],
+  ["wb-ref-df-178a/wb-ref-df-178a-2.png"],
+  ["wb-ref-df-178a/wb-ref-df-178a-3.png"],
+  ["wb-ref-df-178a/wb-ref-df-178a-4.png"],
+  ["wb-ref-df-178a/wb-ref-df-178a-5.png"],
+  ["wb-ref-df-178a/wb-ref-df-178a-6.png"]
+]
 documentation: "https://wirenboard.com/wiki/WB-REF-DF-178A_Danfoss_EKC_202_Modbus_Module"
 meta: "Сетевая карта для контроллера холодильного оборудования Danfoss"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
-  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
+  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
 ---
 ::product

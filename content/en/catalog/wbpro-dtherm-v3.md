@@ -2,17 +2,16 @@
 article: "WBPRO-DTHERM v.3"
 cover: "wbpro-dtherm-v3/cover.png"
 catalogCover: "wbpro-dtherm-v3/catalog-cover.png"
-meta: "Plug-in module for digital thermometers WBPRO-DTHERM v.3"
-keywords: "Plug-in module for digital thermometers WBPRO-DTHERM v.3"
+images: [
+  ["wbpro-dtherm-v3/cover.png"],
+  ["wbpro-dtherm-v3/wbpro-dtherm-v3-3.png"],
+  ["wbpro-dtherm-v3/wbpro-dtherm-v3-4.png"],
+  ["wbpro-dtherm-v3/wbpro-dtherm-v3-5.png"]
+]
 ---
 ::product
 #description
 
-A compact module with an RS-485 interface and universal inputs for connecting 1-Wire sensors and discrete signals. Size 34 x 19 x 17 mm.
-
-It is used for polling 1-Wire sensors in conditions of strong interference and at a considerable distance from the controller, as well as for polling buttons, reed switches and utility meters with a pulse output. It is a measuring instrument.
-
-The main difference from the previous version is the compact size, which allows the device to be installed in wall boxes.
 
 
 #info
@@ -26,53 +25,69 @@ The main difference from the previous version is the compact size, which allows 
   float="right"
 }
 
-- The miniature size allows the module to be installed in any wall box, cable duct or junction box.
-- 2 1-Wire channels make it easy to identify sensors and reduce commissioning time.
-- The inputs can operate in "dry contact" mode with event counting and press recognition.
-- Is a measuring instrument for temperature.
-- Built-in filter of "suspicious" values.
-- Counter data is written to non-volatile memory, so the module can be used to connect utility meters.
-- Fast and simple integration into the automation and monitoring system.
+- Миниатюрный размер позволяет устанавливать модуль в любые подрозетники, кабель-каналы и распаечные коробки.
+- 2 канала 1-Wire позволяют легко идентифицировать датчики и сократить время на ПНР.
+- Входы могут работать в режиме «сухой контакт» с функциями подсчета срабатываний и распознавания нажатий.
+- Является средством измерений для температуры.
+- Встроенный фильтр «подозрительных» значений.
+- Данные счетчиков записываются в энергонезависимую память, можно использовать для подключения счетчиков энергоресурсов.
+- Быстрая и простая интеграция в систему автоматизации и мониторинга.
 
-- It is possible to apply your company logo.
+- Техническая поддержка на портале.
+- Русскоязычная документация.
+- Возможно нанесение логотипа вашей компании.
 
-Supports [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which allows press and counter change events to be delivered instantly.
+Поддерживает [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, что позволяет мгновенно доставлять события о нажатиях и изменениях счетчиков.
 ::
 
-::product-section{title="Hardware"}
+::product-section{title="Аппаратная часть"}
 :photo{
   src="wbpro-dtherm-v3/wbpro-dtherm-v3-1.jpg"
   width="500px"
   float="right"
 }
 
-Specifications:
+Технические характеристики:
 
-- 2 universal inputs for 1-Wire sensors or buttons/limit switches.
-- 5 V output for powering sensors.
-- Supply voltage: 9…28 V.
-- Operating temperature: 0…+60 °C.
-- Interface: RS-485, Modbus RTU.
-- Dimensions: 57×18×12 mm.
+- 2 универсальных входа для датчиков 1-Wire или кнопок/концевиков.
+- Выход 5 В для питания датчиков.
+- Напряжение питания: 9…28 В.
+- Температура эксплуатации: 0…+60 °С.
+- Интерфейс: RS-485, Modbus RTU.
+- Габаритные размеры: 57×18×12 мм.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Поддержка Быстрого Modbus"}
+:photo{
+  src="wbpro-dtherm-v3/wbpro-dtherm-v3-2.png"
+  width="500px"
+  float="right"
+}
+
+Все устройства Wiren Board в дополнение к стандартному Modbus RTU могут работать с его расширением [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, которое добавляет новые возможности:
+
+- мгновенный опрос состояний входов и измеренных значений через события;
+- быстрый поиск подключённых к контроллеру устройств;
+- разрешение коллизий адресов на шине.
+
+Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 
-::product-section{title="Setup"}
-When used with a [WBPRO-PLC7-2G-64G](https://wirenboard.com/en/product/WBPRO-PLC7-2G-64G/) controller, you can use the mouse in the web interface to:
+::product-section{title="астройка"}
+При использовании с контроллером [WBPRO-PLC7-2G-64G](https://wirenboard.com/ru/product/WBPRO-PLC7-2G-64G/) вы можете мышкой в веб-интерфейсе:
 
-- select the input operating mode: 1-Wire or discrete, and configure input parameters: debounce time, double and long press time;
-- enable and disable input polling.
+- выбрать режим работы входов: 1-wire или дискретный,настроить параметры входов: время подавления дребезга, время двойного и длинного нажатия,
+- включать и отключать опрос входов.
 
-When used with other equipment, the device can be configured via the RS-485 bus by writing values to Modbus registers. The register table is open, well documented and available on our website.
+При использовании с другим оборудованием устройство можно настраивать по шине RS-485 через запись значений в Modbus-регистры. Таблица регистров открыта, хорошо документирована и доступна на нашем сайте.
 ::
 
-::product-section{title="Reading the readings"}
-If a Wiren Board controller is used, the measured values are available in the controller's web interface and can be used in automation scripts or transferred to a higher-level system. The device card displays only the enabled channels.
+::product-section{title="Чтение показаний"}
+Если используется контроллер Wiren Board, то измеренные значения доступны в веб-интерфейсе контроллера и могут быть использованы в сценариях автоматизации или переданы в систему верхнего уровня. В карточке устройства отображаются только включенные каналы.
 
-The module also transmits all data via Modbus RTU (RS-485), which can be read by any equipment or software that supports this protocol: third-party controllers, HMI panels or SCADA.
+Также модуль отдаёт все данные по Modbus RTU (RS-485), которые можно читать любым оборудованием или ПО с поддержкой этого протокола: контроллерами сторонних производителей, HMI панелями или SCADA.
 ::
 
 

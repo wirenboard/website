@@ -2,6 +2,11 @@
 article: "WBMZ2-SUPERCAP"
 cover: "wbmz2-supercap/cover.png"
 catalogCover: "wbmz2-supercap/cover.png"
+images: [
+  ["wbmz2-supercap/cover.png"],
+  ["wbmz2-supercap/wbmz2-supercap-1.png"],
+  ["wbmz2-supercap/wbmz2-supercap-2.png"]
+]
 documentation: "https://wirenboard.com/wiki/index.php?title=WBMZ2-SUPERCAP"
 ---
 ::product

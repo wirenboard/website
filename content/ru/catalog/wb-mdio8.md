@@ -2,6 +2,9 @@
 article: "WB-MDIO8"
 cover: "wb-mdio8/cover.png"
 catalogCover: "wb-mdio8/catalog-cover.png"
+images: [
+  ["wb-mdio8/cover.png"]
+]
 meta: "Компактный модуль для выключателей"
 ---
 ::product

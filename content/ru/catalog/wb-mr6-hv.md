@@ -2,6 +2,9 @@
 article: "wb-mr6-hv"
 cover: "wb-mr6-hv/cover.png"
 catalogCover: "wb-mr6-hv/catalog-cover.png"
+images: [
+  ["wb-mr6-hv/cover.png"]
+]
 ---
 ::product
 #description

@@ -2,6 +2,12 @@
 article: "WB-MWAC v.1"
 cover: "wb-mwac-v1/cover.png"
 catalogCover: "wb-mwac-v1/catalog-cover.png"
+images: [
+  ["wb-mwac-v1/cover.png"],
+  ["wb-mwac-v1/wb-mwac-v1-1.png"],
+  ["wb-mwac-v1/wb-mwac-v1-2.png"],
+  ["wb-mwac-v1/wb-mwac-v1-3.png"]
+]
 documentation: "https://wirenboard.com/wiki/WB-MWAC_v.1_Modbus_Water_Consumption_Metering_and_Leak_Monitoring"
 meta: "RS-485, Modbus RTU Water metering and leakage control module"
 keywords: "RS-485, Modbus RTU"

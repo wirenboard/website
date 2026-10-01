@@ -2,6 +2,11 @@
 article: "WBIO-DO-HS-8"
 cover: "wbio-do-hs-8/cover.png"
 catalogCover: "wbio-do-hs-8/catalog-cover.png"
+images: [
+  ["wbio-do-hs-8/cover.png"],
+  ["wbio-do-hs-8/wbio-do-hs-8-1.png"],
+  ["wbio-do-hs-8/wbio-do-hs-8-2.png"]
+]
 ---
 ::product
 #description
@@ -22,9 +27,17 @@ catalogCover: "wbio-do-hs-8/catalog-cover.png"
 - Защита от перегрузки, короткого замыкания, от всплесков при управлении индуктивной нагрузкой
 ::
 
-:include{path="/catalog/includes/wbio_interfaces"}
+::product-section{title="Интерфейсы"}
+- Шина WBIO
+- Можно подключать по Modbus RTU и Ethernet при помощи модуля WB-MIO
+::
 
-:include{path="/catalog/includes/wbio_compatibility_wb5-7"}
+::product-section{title="Совместимость"}
+- Контроллеры Wiren Board 5
+- Контроллеры Wiren Board 6
+- Контроллеры Wiren Board 7
+- Интерфейсные модули WB-MIO и WB-MIO-E
+::
 
 
 ::

@@ -2,13 +2,18 @@
 article: "WB-MAP3E"
 cover: "wb-map3e/cover.png"
 catalogCover: "wb-map3e/catalog-cover.png"
+images: [
+  ["wb-map3e/cover.png"],
+  ["wb-map3e/wb-map3e-9.png"],
+  ["wb-map3e/wb-map3e-10.png"]
+]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MAP3E_Power_Meter"
 meta: "Трёхфазный счётчик с Modbus"
 keywords: "Трёхфазный счётчик с Modbus"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/0a424378-a514-446c-bfc7-6e9b7393080c"],
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
-  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
+  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
 use_cases: ["smart-dcim-telecom", "solutions-rostics", "inpro-meat"]
 ---
@@ -117,7 +122,21 @@ WB-MAP3E используется в системах [мониторинга э
 Если не нужно измерять напряжение и энергию, то для измерения тока счетчик не обязательно подключать к силовым линиям, достаточно надеть токовый трансформатор с разъемным сердечником на измеряемую линию. Это позволяет упростить монтаж и интеграцию в систему автоматизации.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Поддержка Быстрого Modbus"}
+:photo{
+  src="wb-map3e/wb-map3e-6.png"
+  width="500px"
+  float="right"
+}
+
+Все устройства Wiren Board в дополнение к стандартному Modbus RTU могут работать с его расширением [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, которое добавляет новые возможности:
+
+- мгновенный опрос состояний входов и измеренных значений через события;
+- быстрый поиск подключённых к контроллеру устройств;
+- разрешение коллизий адресов на шине.
+
+Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

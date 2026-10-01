@@ -2,6 +2,9 @@
 article: "WB-MS-VOC"
 cover: "wb-ms-voc/cover.jpg"
 catalogCover: "wb-ms-voc/cover.jpg"
+images: [
+  ["wb-ms-voc/cover.jpg"]
+]
 documentation: "https://contactless.ru/wiki/index.php/WB-MS_Modbus_Sensor"
 meta: "WB-MS-VOC, WB-MS-VOC v.2"
 keywords: "WB-MS-VOC, WB-MS-VOC v.2"

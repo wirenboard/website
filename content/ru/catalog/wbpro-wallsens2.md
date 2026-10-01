@@ -2,6 +2,11 @@
 article: "WBPRO-WALLSENS2"
 cover: "wbpro-wallsens2/cover.png"
 catalogCover: "wbpro-wallsens2/catalog-cover.png"
+images: [
+  ["wbpro-wallsens2/cover.png"],
+  ["wbpro-wallsens2/wbpro-wallsens2-1.png"],
+  ["wbpro-wallsens2/wbpro-wallsens2-2.png"]
+]
 meta: "Настенный датчик 8 в 1 WBPRO-WALLSENS"
 keywords: "Настенный датчик 8 в 1 WBPRO-WALLSENS"
 ---
@@ -25,7 +30,12 @@ keywords: "Настенный датчик 8 в 1 WBPRO-WALLSENS"
 - Движение: до 8 м, угол - 120°
 ::
 
-:include{path="/catalog/includes/msw3_additional_functions"}
+::product-section{title="Дополнительная функциональность"}
+- Передача ИК-команд
+- Управляемый зуммер
+- Двухцветная индикация, управляемая по Modbus
+- Подогрев датчика для работы в условиях высокой влажности
+::
 
 ::product-section{title="Прочее"}
 - Напряжение питания: от 9 до 28 В постоянного тока

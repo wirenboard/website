@@ -2,6 +2,11 @@
 article: "WBC-4G"
 cover: "wbc-4g/cover.png"
 catalogCover: "wbc-4g/catalog-cover.png"
+images: [
+  ["wbc-4g/cover.png"],
+  ["wbc-4g/wbc-4g-1.jpg"],
+  ["wbc-4g/wbc-4g-2.jpg"]
+]
 documentation: "https://wirenboard.com/wiki/WBC-4G_v.1"
 meta: "Модуль расширения для Wiren Board 6.7"
 ---
@@ -17,7 +22,12 @@ meta: "Модуль расширения для Wiren Board 6.7"
 
 ## Технические характеристики
 
-:include{path="/catalog/includes/modem_4g_general"}
+::product-section{title="Общие характеристики"}
+- Скорость приема-передачи данных - до 150 Мбит/c
+- Поддержка двух SIM-карт nano-SIM
+- Попеременный режим работы
+- Антенна в комплекте
+::
 
 ::product-section{title="Совместимость"}
 - Контроллеры Wiren Board 6.7–6.9

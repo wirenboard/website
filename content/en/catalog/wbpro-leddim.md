@@ -2,6 +2,9 @@
 article: "WBPRO-LEDDIM"
 cover: "wbpro-leddim/cover.png"
 catalogCover: "wbpro-leddim/catalog-cover.png"
+images: [
+  ["wbpro-leddim/cover.png"]
+]
 meta: "RS-485, Modbus RTU 4-channel dimmer"
 keywords: "CV LED Dimmer, RGB Strip, RGB+W Strip, CCT Strip, W Strip"
 ---
@@ -68,7 +71,7 @@ See the documentation for connection diagrams and available modes.
   float="right"
 }
 
-Wiren Board controller's web interface allows to:
+Wiren Board controller's web intervace allows to:
 
 - select the operating mode and assign actions to inputs;
 - configure input parameters: debounce time, double and long press time, rate of change of brightness and saturation when pressing the button;

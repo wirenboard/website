@@ -2,6 +2,9 @@
 article: "WBPRO-CLEDREL6"
 cover: "wbpro-cledrel6/cover.png"
 catalogCover: "wbpro-cledrel6/catalog-cover.png"
+images: [
+  ["wbpro-cledrel6/cover.png"]
+]
 meta: "WBPRO-CLEDREL6"
 keywords: "WBPRO-CLEDREL6"
 ---
@@ -27,7 +30,11 @@ keywords: "WBPRO-CLEDREL6"
 - без дискретных входов
 ::
 
-:include{path="/catalog/includes/din3m_other_characteristics"}
+::product-section{title="Прочее"}
+- Напряжение питания: от 9 до 28 В, постоянный ток
+- Интерфейс: RS-485, Modbus RTU
+- Корпус на DIN-рейку, 3M (53 x 90 x 58 мм)
+::
 
 
 ::

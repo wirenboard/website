@@ -2,6 +2,11 @@
 article: "WB-BUSHUB"
 cover: "bushub/cover.png"
 catalogCover: "bushub/catalog-cover.png"
+images: [
+  ["bushub/cover.png"],
+  ["bushub/bushub-1.png"],
+  ["bushub/bushub-2.png"]
+]
 documentation: "https://wirenboard.com/wiki/WB-BUSHUB_v1_-_Wire_Connector_Board"
 meta: "Bus splitter WB-BUSHUB"
 ---

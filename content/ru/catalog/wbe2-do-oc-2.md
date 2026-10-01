@@ -2,6 +2,11 @@
 article: "WBE2-DO-OC-2"
 cover: "wbe2-do-oc-2/cover.png"
 catalogCover: "wbe2-do-oc-2/catalog-cover.png"
+images: [
+  ["wbe2-do-oc-2/cover.png"],
+  ["wbe2-do-oc-2/wbe2-do-oc-2-1.png"],
+  ["wbe2-do-oc-2/wbe2-do-oc-2-2.png"]
+]
 meta: "Модуль расширения WBE2-DO-OC-2"
 keywords: "Модуль расширения WBE2-DO-OC-2"
 ---

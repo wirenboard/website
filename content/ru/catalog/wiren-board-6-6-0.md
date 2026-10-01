@@ -2,6 +2,14 @@
 article: "Wiren Board *"
 cover: "wiren-board-6-6-0/cover.png"
 catalogCover: "wiren-board-6-6-0/catalog-cover.png"
+images: [
+  ["wiren-board-6-6-0/cover.png"],
+  ["wiren-board-6-6-0/wiren-board-6-6-0-1.png"],
+  ["wiren-board-6-6-0/wiren-board-6-6-0-2.png"],
+  ["wiren-board-6-6-0/wiren-board-6-6-0-3.png"],
+  ["wiren-board-6-6-0/wiren-board-6-6-0-4.png"],
+  ["wiren-board-6-6-0/wiren-board-6-6-0-5.png"]
+]
 documentation: "https://wirenboard.com/wiki/Wiren_Board_rev._6.3-6.6"
 meta: "Контроллер для автоматизации Wiren Board 6"
 keywords: "Контроллер для автоматизации Wiren Board 6"

@@ -2,6 +2,18 @@
 article: "WB7.4-ALL"
 cover: "wiren-board-7/cover.png"
 catalogCover: "wiren-board-7/catalog-cover.png"
+images: [
+  ["wiren-board-7/cover.png"],
+  ["wiren-board-7/wiren-board-7-12.png"],
+  ["wiren-board-7/wiren-board-7-13.png"],
+  ["wiren-board-7/wiren-board-7-14.png"],
+  ["wiren-board-7/wiren-board-7-15.png"],
+  ["wiren-board-7/wiren-board-7-16.png"],
+  ["wiren-board-7/wiren-board-7-17.png"],
+  ["wiren-board-7/wiren-board-7-18.png"],
+  ["wiren-board-7/wiren-board-7-19.png"],
+  ["wiren-board-7/wiren-board-7-20.png"]
+]
 documentation: "https://wirenboard.com/wiki/Wiren_Board_7.4"
 ---
 ::product
@@ -25,8 +37,6 @@ The controller is used in the tasks of monitoring server and climatic equipment,
   float="right"
 }
 
-The controller's base configuration includes:
-
 - 1.2 GHz Quad Core ARM Cortex A7 industrial-grade CPU
 - 1 GB DDR3 RAM
 - 8 GB industrial-grade eMMC Flash
@@ -36,7 +46,7 @@ You can optionally configure the controller with 2 GB DDR3 RAM and 64 GB eMMC.
 
 The controller runs Debian Linux 11 with kernel 5.10, providing extensive opportunities for installing third-party software.
 
-Preinstalled software allows you to configure the controller and connected devices, create automation scripts, store measurement archives, and view data. [More about the controller software](https://wirenboard.com/en/pages/programmirovanie-kontrollerov/).
+Preinstalled software allows you to configure the controller and connected devices, create automation scripts, store measurement archives, and view data.
 ::
 
 ::product-section{title="Interfaces and Communications"}
@@ -46,10 +56,8 @@ Preinstalled software allows you to configure the controller and connected devic
   float="right"
 }
 
-The controller's base configuration includes:
-
 - 1 × microSD slot, up to 60 MB/s
-- 2 × Ethernet 10/100
+- 2 × Ethernet 10/100 (1 × PoE)
 - 1 × USB Host
 - Wi-Fi 802.11n (AP, client)
 - Bluetooth 4.0
@@ -58,11 +66,10 @@ The controller's base configuration includes:
 - 2 × 1-Wire / discrete inputs
 - 4 × discrete / analog inputs / outputs ("open collector")
 
-With extension modules you can add extra interfaces:
+Additionally, with extension modules:
 
-- 4G (LTE) dual SIM-card modem, two nano SIM cards
+- 4G (LTE) dual SIM-card modem
 - Z-Wave and Zigbee
-- PoE 802.3af, 802.3at or Passive PoE
 ::
 
 ::product-section{title="Supported protocols"}
@@ -76,8 +83,7 @@ The controller supports a wide range of protocols and devices:
 
 - Modbus RTU – relays, dimmers, I/O modules;
 - Somfy, WINDECO, DOOYA, AKKO – electric curtains;
-- GOST IEC 61107, DLMS/COSEM, SPODES (GOST R 58940-2020), Mercury – electricity meters;
-- Pulsar, IVTM – water and heat meters and sensors;
+- IEC 61107, DLMS/COSEM – electricity meters;
 - 1-Wire – temperature sensors like DS18B20;
 - Wi-Fi, Bluetooth – sensors, gateways, and devices;
 - Modbus TCP, MQTT, OPC UA, SNMP, Zabbix API – data exchange with other controllers, servers, and SCADA systems;
@@ -85,11 +91,23 @@ The controller supports a wide range of protocols and devices:
 - KNX – integration with existing KNX systems (with add-on modules);
 - OpenTherm and eBUS – electric and gas boilers (with add-on modules);
 - Z-Wave, Zigbee, DALI – sensors, actuators, and lighting devices (with add-on modules);
-
-[Full list of supported devices and protocols](https://wirenboard.com/wiki/Supported_devices)
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Fast Modbus support"}
+:photo{
+  src="wiren-board-7/wiren-board-7-4.png"
+  width="500px"
+  float="right"
+}
+
+All Wiren Board devices, in addition to standard Modbus RTU, can operate with its extension [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which adds new capabilities:
+
+- instant polling of input states and measured values via events;
+- quick discovery of devices connected to the controller;
+- automatic resolution of address conflicts on the bus.
+
+These features are enabled automatically — if the device supports Fast Modbus, the controller will use it. Otherwise, it falls back to standard Modbus RTU.
+::
 
 ::product-section{title="Wiren Board Cloud"}
 :photo{
@@ -107,7 +125,7 @@ All Wiren Board controllers are fully autonomous and do not require an internet 
 
 An on-premise version is available for deployment on your own infrastructure.
 
-[Full feature description](/en/pages/cloud/).
+[Full feature description](/en/contents/cloud/).
 ::
 
 ::product-section{title="Features"}
@@ -130,11 +148,45 @@ A broad range of supported modules and communication protocols enables deploymen
 
 :include{path="/catalog/includes/quality_control"}
 
-:include{path="/catalog/includes/controller_text_dashboards"}
+::product-section{title="Text dashboards"}
+:photo{
+  src="wiren-board-7/wiren-board-7-7.png"
+  width="500px"
+  float="right"
+}
 
-:include{path="/catalog/includes/controller_graphic_dashboards"}
+The primary building block of the text information panel is a widget. It allows you to combine data from different sources in a single view.
 
-:include{path="/catalog/includes/controller_data_archive"}
+The dashboard is adaptive and adjusts to the screen size of mobile devices.
+::
+
+::product-section{title="Graphic dashboards"}
+:photo{
+  src="wiren-board-7/wiren-board-7-8.png"
+  width="500px"
+  float="right"
+}
+
+You can create interactive graphic dashboards using SVG drawings.
+
+Data can be displayed in text elements, while the visibility and design of graphical elements can be customized. You can also assign reactions to user actions — like turning on a light or deactivating an alarm.
+
+The controller’s web interface includes a visual editor to simplify dashboard setup.
+::
+
+::product-section{title="Data archive"}
+:photo{
+  src="wiren-board-7/wiren-board-7-9.png"
+  width="500px"
+  float="right"
+}
+
+All data received by the controller is stored in an archive with a configurable size.
+
+You can build historical graphs for multiple channels simultaneously. Interactions like zooming and cursor-based measurements are supported.
+
+Archived data can be exported to CSV format for analysis using external tools.
+::
 
 ::product-section{title="Automation scripts"}
 :photo{

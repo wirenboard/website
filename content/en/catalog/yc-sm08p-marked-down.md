@@ -2,6 +2,15 @@
 article: "YC-SM08P-marked down"
 cover: "yc-sm08p-marked-down/cover.jpg"
 catalogCover: "yc-sm08p-marked-down/catalog-cover.jpg"
+images: [
+  ["yc-sm08p-marked-down/cover.jpg"],
+  ["yc-sm08p-marked-down/yc-sm08p-marked-down-1.jpg"],
+  ["yc-sm08p-marked-down/yc-sm08p-marked-down-2.jpg"],
+  ["yc-sm08p-marked-down/yc-sm08p-marked-down-3.jpg"],
+  ["yc-sm08p-marked-down/yc-sm08p-marked-down-4.jpg"],
+  ["yc-sm08p-marked-down/yc-sm08p-marked-down-5.jpg"],
+  ["yc-sm08p-marked-down/yc-sm08p-marked-down-6.jpg"]
+]
 documentation: "https://wirenboard.com/wiki/HMI_Wall_Panel_With_Android_and_PoE_YC-SM08P"
 ---
 ::product
@@ -45,7 +54,7 @@ Made in China.
 - 2 microphones.
 ::
 
-::product-section{title="Other characteristics"}
+::product-section{title="OTHER CHARACTERISTICS"}
 - Supply voltage: PoE 802.3 af (48 V, 2 A) and 12 V DC input.
 - Operating temperature from −5 to 70 °C.
 - Case with mounting on a socket, 199x37x123 mm.

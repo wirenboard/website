@@ -2,6 +2,9 @@
 article: "WBPRO-METREL2"
 cover: "wbpro-metrel2/cover.png"
 catalogCover: "wbpro-metrel2/catalog-cover.png"
+images: [
+  ["wbpro-metrel2/cover.png"]
+]
 meta: "Модуль реле для розеточных групп с измерением мощности WBPRO-METREL2"
 keywords: "Модуль реле для розеточных групп с измерением мощности WBPRO-METREL2"
 ---

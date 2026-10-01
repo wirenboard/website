@@ -2,6 +2,10 @@
 article: "WBE2-I-OPENTHERM"
 cover: "wbe2-i-opentherm/cover.png"
 catalogCover: "wbe2-i-opentherm/catalog-cover.png"
+images: [
+  ["wbe2-i-opentherm/cover.png"],
+  ["wbe2-i-opentherm/wbe2-i-opentherm-1.png"]
+]
 documentation: "https://wirenboard.com/wiki/WBE2-I-OPENTHERM_OpenTherm_Extension_Module"
 meta: "OpenTherm interface for Wiren Board 6…8"
 keywords: "automation, Wiren Board, OpenTherm, Lemax, WARM, BAXI, Bosch, Buderus, DeDietrich, Ferroli, Fondital, Lamborghini, Novaflorida, Thermona, Viessmann"

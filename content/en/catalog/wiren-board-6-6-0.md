@@ -2,6 +2,14 @@
 article: "Wiren Board *"
 cover: "wiren-board-6-6-0/cover.png"
 catalogCover: "wiren-board-6-6-0/catalog-cover.png"
+images: [
+  ["wiren-board-6-6-0/cover.png"],
+  ["wiren-board-6-6-0/wiren-board-6-6-0-1.png"],
+  ["wiren-board-6-6-0/wiren-board-6-6-0-2.png"],
+  ["wiren-board-6-6-0/wiren-board-6-6-0-3.png"],
+  ["wiren-board-6-6-0/wiren-board-6-6-0-4.png"],
+  ["wiren-board-6-6-0/wiren-board-6-6-0-5.png"]
+]
 documentation: "https://wirenboard.com/wiki/Wiren_Board_rev._6.3-6.6"
 meta: "Automation controller Wiren Board 6"
 keywords: "Automation controller Wiren Board 6"
@@ -20,10 +28,10 @@ Wiren Board is designed for home and industrial automation and monitoring. It is
 Available in entry-level set, except (\*)
 
 - Freescale iMX6ULL 800 MHz Cortex A7
-- 8 GB flash memory, 512 MB DDR3 RAM
+- 4 GB flash memory, 512 MB DDR3 RAM
 - DIN rail enclosure (103 × 87 mm × 20 mm, 6 units)
 - Built-in Li-ion battery **\***
-- Operating range -40 ... +85 °C (0 ... +70 °C on request)
+- Operating range 0 ... +70°C ( -40.. +85°C available as an option)
 ::
 
 ::product-section{title="Interfaces"}

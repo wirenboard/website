@@ -2,6 +2,13 @@
 article: "WB-MRM2-mini"
 cover: "wb-mrm2-mini/cover.png"
 catalogCover: "wb-mrm2-mini/catalog-cover.png"
+images: [
+  ["wb-mrm2-mini/cover.png"],
+  ["wb-mrm2-mini/wb-mrm2-mini-9.png"],
+  ["wb-mrm2-mini/wb-mrm2-mini-10.png"],
+  ["wb-mrm2-mini/wb-mrm2-mini-11.png"],
+  ["wb-mrm2-mini/wb-mrm2-mini-12.png"]
+]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MRM2-mini"
 meta: "Plug-in module WB-MRM2-mini"
 keywords: "Plug-in module WB-MRM2-mini"
@@ -63,7 +70,7 @@ Specifications:
   float="right"
 }
 
-The /NO version uses reliable Hongfa relays with silver tin dioxide (AgSnO2) contacts, which ensures operation with high inrush currents up to 80 A (20 ms). Therefore, the WB-MRM2-mini v.2/NO module is well suited for controlling LED lamps.
+The /NO version uses reliable Hongfa relays with silver tin dioxide (AgSnO) contacts, which ensures operation with high inrush currents up to 80 A (20 ms). Therefore, the WB-MRM2-mini v.2/NO module is well suited for controlling LED lamps.
 
 To ensure the quality of the relay we [tested them with high](https://wirenboard.com/ru/news/proveli-ispytania-rele-na-bolsie-puskovye-toki-458/) inrush current several times higher than nominal.
 
@@ -106,7 +113,21 @@ In the module WB-MRM2-mini v.2/NO is a special mode of operation with curtains, 
 The outputs are individually configurable, so only part of the outputs can be used to control curtains, and the rest can be used for other purposes. You can also configure the curtain action for each of the 4 types of button presses connected to the module inputs.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Fast Modbus support"}
+:photo{
+  src="wb-mrm2-mini/wb-mrm2-mini-6.png"
+  width="500px"
+  float="right"
+}
+
+All Wiren Board devices, in addition to the standard Modbus RTU, can work with its extension [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which adds new features:
+
+- instant polling of input states and measured values via events;
+- quick search for devices connected to the controller;
+- resolving address collisions on the bus.
+
+Additional features are enabled automatically - if the device supports extension, the controller driver will work with the device quickly Modbus if the device does not know anything about the extension - it will work using standard Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

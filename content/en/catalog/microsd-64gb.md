@@ -1,9 +1,7 @@
 ---
 article: "STS0MBB064G00"
-cover: "microsd-64gb/microsd-64gb_front.png"
-catalogCover: "microsd-64gb/microsd-64gb_front.png"
-meta: "An industrial 64 GB SCY microSD memory card for controllers and other devices with a microSD slot: operating temperature from -25 to +85 °C, wear leveling, ECC, 3000 program/erase cycles."
-keywords: "Wiren Board, STS0MBB064G00, SCY, Shichuangyi, microSD, industrial memory card, memory card, 64 GB, U3, V30, UHS-I"
+meta: "Industrial memory card 64GB"
+keywords: "Industrial memory card 64GB"
 ---
 ::product
 #description

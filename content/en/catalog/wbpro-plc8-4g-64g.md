@@ -2,13 +2,18 @@
 article: "WBPRO-PLC8-4G-64G"
 cover: "wbpro-plc8-4g-64g/cover.png"
 catalogCover: "wbpro-plc8-4g-64g/catalog-cover.png"
+images: [
+  ["wbpro-plc8-4g-64g/cover.png"],
+  ["wbpro-plc8-4g-64g/wbpro-plc8-4g-64g-1.png"],
+  ["wbpro-plc8-4g-64g/wbpro-plc8-4g-64g-2.png"]
+]
 ---
 ::product
 #description
 
 WBPRO-PLC8-4G-64G — are used in the tasks of monitoring server and climate equipment, dispatching and collecting data from metering devices, as the basis for "smart home" and industrial automation.
 
-Main differences from [WBPRO-PLC7-2G-64G](https://wirenboard.com/en/product/WBPRO-PLC7-2G-64G/): 64-bit ARM processor 1.5 GHz 28 nm, up to 4 GB of RAM, CAN is now an expansion module.
+Main differences from [WBPRO-PLC7-2G-64G](https://wirenboard.com/ru/product/WBPRO-PLC7-2G-64G/): 64-bit ARM processor 1.5 GHz 28 nm, up to 4 GB of RAM, CAN is now an expansion module.
 
 
 #info

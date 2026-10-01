@@ -2,6 +2,10 @@
 article: "wb-mr3-hv"
 cover: "wb-mr3-hv/cover.png"
 catalogCover: "wb-mr3-hv/catalog-cover.png"
+images: [
+  ["wb-mr3-hv/cover.png"],
+  ["wb-mr3-hv/wb-mr3-hv-1.png"]
+]
 ---
 ::product
 #description
@@ -25,13 +29,13 @@ Relay module with high in-rush current capacity for lighting management and swit
 ::
 
 ::product-section{title="Discrete inputs"}
-- 3 discrete inputs with a direct channel control function
-- 1 discrete input for disabling all relay channels simultaneously
-- Flexible input configuration for controlling outputs
+- 4 dry contact inputs with flexible channel control configuration
+- 3 discrete inputs with a direct channel control function (default)
+- 1 digital input for disabling all relay channels simultaneously (default)
 - Group galvanic isolation of inputs
 - 220 VAC inputs
-- Pulse counting at the input
-- Frequency measurement at the input
+- Inputs pulses count
+- Inputs frequency measure
 ::
 
 ::product-section{title="Other characteristics"}

@@ -2,13 +2,24 @@
 article: "WB-M1W2 v.3"
 cover: "wb-m1w2/cover.png"
 catalogCover: "wb-m1w2/catalog-cover.png"
+images: [
+  ["wb-m1w2/cover.png"],
+  ["wb-m1w2/wb-m1w2-7.jpg"],
+  ["wb-m1w2/wb-m1w2-8.jpg"],
+  ["wb-m1w2/wb-m1w2-9.jpg"],
+  ["wb-m1w2/wb-m1w2-10.jpg"],
+  ["wb-m1w2/wb-m1w2-11.png"],
+  ["wb-m1w2/wb-m1w2-12.png"],
+  ["wb-m1w2/wb-m1w2-13.png"],
+  ["wb-m1w2/wb-m1w2-14.png"]
+]
 documentation: "https://wirenboard.com/wiki/WB-M1W2_v.3_1-Wire_to_Modbus_Temperature_Measurement_Module"
 meta: "Компактный преобразователь с Modbus RTU для датчиков температуры 1-Wire"
 keywords: "1-Wire, Modbus RTU, DS18B20, выключатели, подрозетник, кабель канал"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/0a424378-a514-446c-bfc7-6e9b7393080c"],
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
-  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
+  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
 ---
 ::product

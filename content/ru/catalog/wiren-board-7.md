@@ -2,11 +2,23 @@
 article: "WB7.4-ALL"
 cover: "wiren-board-7/cover.png"
 catalogCover: "wiren-board-7/catalog-cover.png"
+images: [
+  ["wiren-board-7/cover.png"],
+  ["wiren-board-7/wiren-board-7-13.png"],
+  ["wiren-board-7/wiren-board-7-14.png"],
+  ["wiren-board-7/wiren-board-7-15.png"],
+  ["wiren-board-7/wiren-board-7-16.png"],
+  ["wiren-board-7/wiren-board-7-17.png"],
+  ["wiren-board-7/wiren-board-7-18.png"],
+  ["wiren-board-7/wiren-board-7-19.png"],
+  ["wiren-board-7/wiren-board-7-20.png"],
+  ["wiren-board-7/wiren-board-7-12.png"]
+]
 documentation: "https://wirenboard.com/wiki/Wiren_Board_7.4"
 meta: "Универсальный контроллер для автоматизации Wiren Board 7.4"
 keywords: "Wiren Board, контроллер, ПЛК, PLC, автоматизация, мониторинг, управление, производство, умный дом, теплицы, базовые станции"
 video: [
-  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c"],
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c"]
 ]
 ---
 ::product
@@ -102,7 +114,21 @@ Wiren Board 7 — это универсальный модульный конт�
 [Полный список поддерживаемых устройств и протоколов](https://wirenboard.com/wiki/Supported_devices)
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Поддержка Быстрого Modbus"}
+:photo{
+  src="wiren-board-7/wiren-board-7-4.png"
+  width="500px"
+  float="right"
+}
+
+Все устройства Wiren Board в дополнение к стандартному Modbus RTU могут работать с его расширением [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, которое добавляет новые возможности:
+
+- мгновенный опрос состояний входов и измеренных значений через события;
+- быстрый поиск подключённых к контроллеру устройств;
+- разрешение коллизий адресов на шине.
+
+Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
+::
 
 ::product-section{title="Wiren Board Cloud"}
 :photo{
@@ -143,11 +169,47 @@ Wiren Board 7 — это универсальный модульный конт�
 
 :include{path="/catalog/includes/quality_control"}
 
-:include{path="/catalog/includes/controller_text_dashboards"}
+::product-section{title="Текстовые дашборды"}
+:photo{
+  src="wiren-board-7/wiren-board-7-7.png"
+  width="500px"
+  float="right"
+}
 
-:include{path="/catalog/includes/controller_graphic_dashboards"}
+Основной элемент текстовой информационной панели — виджет. Виджет позволяет вывести в одном месте информацию с разных источников.
 
-:include{path="/catalog/includes/controller_data_archive"}
+Текстовый дашборд может адаптироваться под небольшой экран мобильного устройства.
+::
+
+::product-section{title="Графические дашборды"}
+:photo{
+  src="wiren-board-7/wiren-board-7-8.png"
+  width="500px"
+  float="right"
+}
+
+Вы можете создавать интерактивные графические дашборды, в основе которых лежат SVG-рисунки.
+
+Вы можете выводить информацию в текстовые элементы SVG-рисунка, менять видимость и оформление элементов. Также вы можете настроить реакцию на действие пользователя: включить свет, отключить сигнал тревоги и т.п.
+
+Для настройки графического дашборда в веб-интерфейсе контроллера есть визуальный редактор.
+
+Подробнее о дашбордах и других возможностях веб-интерфейса читайте в статье [Веб-интерфейс контроллеров Wiren Board](https://wirenboard.com/ru/pages/wb-software/).
+::
+
+::product-section{title="Архив данных"}
+:photo{
+  src="wiren-board-7/wiren-board-7-9.png"
+  width="500px"
+  float="right"
+}
+
+Все получаемые контроллером данные сохраняются в архив, размер которого можно настроить.
+
+Вы можете построить графики по архивным данным одновременно для нескольких каналов. С графиками можно взаимодействовать: менять масштаб, делать курсорные измерения и т.п.
+
+Данные из архива можно выгрузить в CSV для анализа в стороннем ПО.
+::
 
 ::product-section{title="Редактор правил"}
 :photo{
