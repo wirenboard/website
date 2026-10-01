@@ -1,5 +1,7 @@
 ---
 article: "STS0MBB064G00"
+cover: "microsd-64gb/cover.png"
+catalogCover: "microsd-64gb/cover.png"
 meta: "Промышленная карта памяти 64GB"
 keywords: "Промышленная карта памяти 64GB"
 ---
