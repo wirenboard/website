@@ -22,13 +22,13 @@ Site: [Embers Restaurant](https://www.instagram.com/embers.ast/) at Radisson Hot
 | [WB-MDM3](https://wirenboard.com/en/product/WB-MDM3/) | Dimming 230 V luminaires |
 | [WB-MR6C v.2](https://wirenboard.com/en/product/WB-MR6C_v2/) | Switching non-dimmable lighting groups on and off |
 
-> “The restaurant uses a wide variety of lighting: 24 V LED strips, 48 V magnetic track lights, and dimmable and non-dimmable 230 V luminaires. Wiren Board equipment controls all of these groups.”
+> “The restaurant uses a wide variety of lighting: 24 V and 48 V LED strips, 48 V magnetic track lights, and dimmable and non-dimmable 230 V luminaires. Wiren Board equipment controls all of these groups.”
 >
 > **Dauren Bisenbekov, Technical Specialist at Jarqin Jan**
 
 ## Task
 
-Set up manual, scene-based, and automated control of the restaurant lighting.
+Set up manual, scene-based, and automated control of the restaurant lighting. The top priority set by the designers was scene-based brightness control of the decorative ceiling panel in the foyer.
 
 :gallery{
     :data='[
@@ -85,7 +85,11 @@ Two designer luminaires use dimmable power supplies controlled over Zigbee.
     ]'
 }
 
-The highest-power load is a 1.4 kW decorative ceiling panel in the foyer. This lighting group is connected through three WB-AMPLED amplifiers operating in parallel.
+### Ceiling Panel
+
+The decorative ceiling panel is the centerpiece of the foyer and the highest-power load in the restaurant at 1.4 kW. Its brightness is set in every scene.
+
+At 24 V, the line currents would exceed permissible limits. In addition, the power supplies are located far from the panel, so losses on the long cable runs would be too high. That is why special 48 V LED strips were ordered for the panel: at the same power, they draw half the current. The panel is connected through three WB-AMPLED amplifiers operating in parallel.
 
 :gallery{
     :data='[
