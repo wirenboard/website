@@ -12,7 +12,7 @@ category: shops_restaurants_monitoring
     float="right"
 }
 
-Объект: ресторан Embers в отеле Radisson Hotel Astana. Интегратор: Jarqin Jan, Казахстан.
+Объект: [ресторан Embers](https://www.instagram.com/embers.ast/) в отеле Radisson Hotel Astana. Интегратор: [Jarqin Jan](https://www.instagram.com/jarqin_jan/), Казахстан.
 
 | Оборудование | Функции |
 | :---- | :---- |

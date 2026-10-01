@@ -12,7 +12,7 @@ category: shops_restaurants_monitoring
     float="right"
 }
 
-Site: Embers Restaurant at Radisson Hotel Astana. Integrator: Jarqin Jan, Kazakhstan.
+Site: [Embers Restaurant](https://www.instagram.com/embers.ast/) at Radisson Hotel Astana. Integrator: [Jarqin Jan](https://www.instagram.com/jarqin_jan/), Kazakhstan.
 
 | Equipment | Function |
 | :---- | :---- |
