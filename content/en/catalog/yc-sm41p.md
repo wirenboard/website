@@ -17,8 +17,6 @@ images: [
 ::product
 #description
 
-**This model has been discontinued.**
-
 >Panel with IPS display and touchscreen for creating HMI panels.
 
 The device comes with pure Android 11 without vendor lock and unnecessary applications.
