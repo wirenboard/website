@@ -4,10 +4,12 @@ import type { CatalogProduct } from '~/common/types';
 defineProps<{
   results: CatalogProduct[];
 }>();
+
+const { t } = useI18n();
 </script>
 
 <template>
-  <div v-if="results.length === 0" class="catalogSearchResults-status">{{ $t('noResults') }}</div>
+  <div v-if="results.length === 0" class="catalogSearchResults-status">{{ t('noResults') }}</div>
   <div v-else class="catalogSearchResults-grid">
     <CatalogProductCard
       v-for="product in results"
@@ -21,8 +23,9 @@ defineProps<{
 <style scoped>
 .catalogSearchResults-status {
   padding: 32px 0;
-  font-size: 16px;
   color: var(--text-status-color);
+  text-align: center;
+  font-size: 18px;
 }
 
 .catalogSearchResults-grid {
