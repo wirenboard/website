@@ -1,5 +1,7 @@
 ---
 article: "STS0MBB064G00"
+cover: "microsd-64gb/cover.png"
+catalogCover: "microsd-64gb/cover.png"
 meta: "Industrial memory card 64GB"
 keywords: "Industrial memory card 64GB"
 ---
