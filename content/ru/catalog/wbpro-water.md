@@ -2,6 +2,9 @@
 article: "WBPRO-WATER"
 cover: "wbpro-water/cover.png"
 catalogCover: "wbpro-water/catalog-cover.png"
+images: [
+  ["wbpro-water/cover.png"]
+]
 meta: "Модуль c RS-485, Modbus RTU для учета водопотребления и контроля протечек WBPRO-WATER"
 keywords: "Модуль c RS-485, Modbus RTU для учета водопотребления и контроля протечек WBPRO-WATER"
 ---

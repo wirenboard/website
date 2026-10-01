@@ -2,6 +2,11 @@
 article: "WB-MIO-E"
 cover: "wb-mio-e/cover.jpeg"
 catalogCover: "wb-mio-e/catalog-cover.png"
+images: [
+  ["wb-mio-e/cover.jpeg"],
+  ["wb-mio-e/wb-mio-e-1.png"],
+  ["wb-mio-e/wb-mio-e-2.jpeg"]
+]
 documentation: "https://wirenboard.com/wiki/WB-MIO-E_v.2_Modbus_Interface_Converter"
 meta: "Bus coupler RS-485 and Ethernet"
 keywords: "Bus coupler RS-485 and Ethernet"

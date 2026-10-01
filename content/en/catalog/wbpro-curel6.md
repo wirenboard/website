@@ -2,6 +2,9 @@
 article: "WBPRO-CUREL6"
 cover: "wbpro-curel6/cover.png"
 catalogCover: "wbpro-curel6/catalog-cover.png"
+images: [
+  ["wbpro-curel6/cover.png"]
+]
 meta: "Compact universal relay module WBPRO-CUREL6"
 keywords: "Compact universal relay module WBPRO-CUREL6"
 ---
@@ -22,20 +25,16 @@ Takes only two modules on a DIN rail.
 ## Technical specifications
 
 ::product-section{title="Outputs"}
-- 6 relay channels rated 10 A 230 VAC
+- 6 relay channels rated 7 A 230 VAC
 - The outputs are combined in two groups of 3 relays each
 - Channel status indication
-- Rated current: 10 A per channel
-- Maximum continuous current: 16 A per channel
-- Total rated switching current per group of three channels: 20 A
-- Maximum in-rush current: up to 80 A (20 ms)
+- Maximum continuous current: 10 A per channel
 ::
 
 ::product-section{title="Other characteristics"}
 - Supply voltage: 9 to 28 VDC
 - Interface: RS-485, Modbus RTU
 - 2-module wide DIN rail mounted enclosure
-- Dimensions: 36 x 90 x 58 mm
 ::
 
 

@@ -2,6 +2,12 @@
 article: "WBPRO-IR"
 cover: "wbpro-ir/cover.png"
 catalogCover: "wbpro-ir/catalog-cover.png"
+images: [
+  ["wbpro-ir/cover.png"],
+  ["wbpro-ir/wbpro-ir-1.png"],
+  ["wbpro-ir/wbpro-ir-2.png"],
+  ["wbpro-ir/wbpro-ir-3.png"]
+]
 meta: "Embedded IR control module with RS-485, Modbus RTU WBPRO-IR"
 keywords: "Embedded IR control module with RS-485, Modbus RTU WBPRO-IR"
 ---
@@ -29,8 +35,6 @@ Module has very small transmitter wich makes it almost invisible.Learning module
 - Supply voltage: 9 to 28 VDC
 - Interface: RS-485, Modbus RTU
 - Small size: 45x35x14 mm
-- 3.5 mm jack for connecting the transmitter
-- External IR transmitter included
 ::
 
 

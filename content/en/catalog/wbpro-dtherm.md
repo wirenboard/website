@@ -2,6 +2,10 @@
 article: "WBPRO-DTHERM"
 cover: "wbpro-dtherm/cover.png"
 catalogCover: "wbpro-dtherm/catalog-cover.png"
+images: [
+  ["wbpro-dtherm/cover.png"],
+  ["wbpro-dtherm/wbpro-dtherm-1.png"]
+]
 meta: "Plug-in module for digital thermometers WBPRO-DTHERM"
 keywords: "Plug-in module for digital thermometers WBPRO-DTHERM"
 ---
@@ -17,13 +21,11 @@ Compact module for polling two remote digital 1-Wire temperature sensors over th
 
 ::product-section{title="Measured values"}
 - 2 inputs for external 1-Wire temperature sensors (DS18B20)
-- Any of the inputs can be switched to discrete mode
+- 1 internal temperature sensor
 ::
 
 ::product-section{title="Other characteristics"}
 - Supply voltage: 9 to 28 VDC
-- 5 V output for powering sensors
-- Sealed design
 - Interface: RS-485, Modbus RTU
 - Small size: 38 × 17 × 13 mm
 ::

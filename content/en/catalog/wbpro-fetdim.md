@@ -2,6 +2,9 @@
 article: "WBPRO-FETDIM"
 cover: "wbpro-fetdim/cover.png"
 catalogCover: "wbpro-fetdim/catalog-cover.png"
+images: [
+  ["wbpro-fetdim/cover.png"]
+]
 meta: "Three channel dimmer for LED bulbs and incandescent lamps, 230 V WBPRO-FETDIM"
 keywords: "Three channel dimmer for LED bulbs and incandescent lamps, 230 V WBPRO-FETDIM"
 ---
@@ -32,8 +35,7 @@ Can be used to control the speed of a fan.
 ::
 
 ::product-section{title="Discrete inputs"}
-- 6 discrete inputs
-- Channel control with one or two buttons:
+- Six direct control digital inputs, 2 modes: one-button and two-button control modes
 - Short press: on/off
 - Long press: smooth change of brightness
 - Group galvanic isolation of inputs

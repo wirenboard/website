@@ -2,11 +2,15 @@
 article: "WB-CABLE"
 cover: "wb-cable_v1/cover.png"
 catalogCover: "wb-cable_v1/catalog-cover.png"
+images: [
+  ["wb-cable_v1/cover.png"],
+  ["wb-cable_v1/wb-cable_v1-1.png"]
+]
 documentation: "https://paritet.su/catalog/kdvvgng_a_ls/kdvvgng_a_ls_2kh2kh0_35_tsvet_mark/"
 meta: "Недорогой кабель для шины RS-485 с медными жилами и волновым сопротивлением 100 Ом"
 keywords: "RS-485, 100 Ом, Modbus, Wiren Board, медь, витая пара"
 video: [
-  ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
+  ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"]
 ]
 ---
 ::product

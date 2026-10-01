@@ -2,6 +2,14 @@
 article: "WB-MCM8"
 cover: "wb-mcm8/cover.png"
 catalogCover: "wb-mcm8/catalog-cover.png"
+images: [
+  ["wb-mcm8/cover.png"],
+  ["wb-mcm8/wb-mcm8-7.png"],
+  ["wb-mcm8/wb-mcm8-8.png"],
+  ["wb-mcm8/wb-mcm8-9.png"],
+  ["wb-mcm8/wb-mcm8-10.png"],
+  ["wb-mcm8/wb-mcm8-11.png"]
+]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MCM8_%D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C_%D1%81%D1%87%D0%B5%D1%82%D0%BD%D1%8B%D1%85_%D0%B2%D1%85%D0%BE%D0%B4%D0%BE%D0%B2_8-%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9"
 meta: "WB-MCM8 модуль счетных входов с RS-485, Modbus RTU"
 keywords: "RS-485, Modbus RTU, модуль с Modbus, modbus, модуль с модбас, модбас рс 485, модбас модуль счетных входов"
@@ -10,7 +18,7 @@ video: [
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
   ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
   ["https://peertube.wirenboard.com/videos/embed/84f1ed7f-a9c0-4d7d-8626-93a4598c2efa"],
-  ["https://peertube.wirenboard.com/videos/embed/2ae96e58-39e4-40df-ad06-bd3331aecbb6"],
+  ["https://peertube.wirenboard.com/videos/embed/2ae96e58-39e4-40df-ad06-bd3331aecbb6"]
 ]
 use_cases: ["solutions-rostics", "solutions-liten-magnit", "techsensor-module-cafe"]
 ---
@@ -85,7 +93,21 @@ use_cases: ["solutions-rostics", "solutions-liten-magnit", "techsensor-module-ca
 
 :include{path="/catalog/includes/quality_control"}
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Поддержка Быстрого Modbus"}
+:photo{
+  src="wb-mcm8/wb-mcm8-4.png"
+  width="500px"
+  float="right"
+}
+
+Все устройства Wiren Board в дополнение к стандартному Modbus RTU могут работать с его расширением [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, которое добавляет новые возможности:
+
+- мгновенный опрос состояний входов и измеренных значений через события;
+- быстрый поиск подключённых к контроллеру устройств;
+- разрешение коллизий адресов на шине.
+
+Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
+::
 
 ::product-section{title="Настройка"}
 :photo{

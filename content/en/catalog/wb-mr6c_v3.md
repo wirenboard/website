@@ -2,6 +2,15 @@
 article: "WB-MR6C v.3"
 cover: "wb-mr6c_v3/cover.png"
 catalogCover: "wb-mr6c_v3/catalog-cover.png"
+images: [
+  ["wb-mr6c_v3/cover.png"],
+  ["wb-mr6c_v3/wb-mr6c_v3-10.png"],
+  ["wb-mr6c_v3/wb-mr6c_v3-11.png"],
+  ["wb-mr6c_v3/wb-mr6c_v3-12.png"],
+  ["wb-mr6c_v3/wb-mr6c_v3-13.png"],
+  ["wb-mr6c_v3/wb-mr6c_v3-14.png"],
+  ["wb-mr6c_v3/wb-mr6c_v3-15.png"]
+]
 documentation: "https://wirenboard.com/wiki/WB-MR6C_v.3_Modbus_Relay_Modules"
 meta: "RS-485, Modbus RTU Relay module"
 keywords: "RS-485, Modbus RTU"
@@ -60,7 +69,7 @@ Specifications:
 - Supply voltage: 9…28 V direct current and 230 V alternating current.
 - Interface: RS-485, Modbus RTU.
 - Operating temperature: -40…+80 °C.
-- DIN rail enclosure, 3M (53 x 90 x 58 mm).
+- DIN rail housing, 3 modules.
 ::
 
 ::product-section{title="Hongfa Long Life Relays"}
@@ -113,7 +122,21 @@ The WB-MR6C v.3 module has a special mode for working with curtains, which elimi
 The outputs are individually configurable, so only part of the outputs can be used to control curtains, and the rest can be used for other purposes. You can also configure the curtain action for each of the 4 types of button presses connected to the module inputs.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Fast Modbus support"}
+:photo{
+  src="wb-mr6c_v3/wb-mr6c_v3-7.png"
+  width="500px"
+  float="right"
+}
+
+All Wiren Board devices, in addition to the standard Modbus RTU, can work with its extension [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which adds new features:
+
+- instant polling of input states and measured values via events;
+- quick search for devices connected to the controller;
+- resolving address collisions on the bus.
+
+Additional features are enabled automatically - if the device supports extension, the controller driver will work with the device quickly Modbus if the device does not know anything about the extension - it will work using standard Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

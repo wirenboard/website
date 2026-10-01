@@ -2,6 +2,11 @@
 article: "WBE2R-R-ZIGBEE"
 cover: "wbe2r-r-zigbee/cover.png"
 catalogCover: "wbe2r-r-zigbee/catalog-cover.png"
+images: [
+  ["wbe2r-r-zigbee/cover.png"],
+  ["wbe2r-r-zigbee/wbe2r-r-zigbee-1.png"],
+  ["wbe2r-r-zigbee/wbe2r-r-zigbee-2.png"]
+]
 documentation: "https://wirenboard.com/wiki/WBE2R-R-ZIGBEE_v.1_ZigBee_Extension_Module"
 meta: "Zigbee  для Wiren Board"
 keywords: "Zigbee, zigbe , zigbi, зигби, варенборд зигби, вайренборд зигби, зиг"

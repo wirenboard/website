@@ -2,6 +2,12 @@
 article: "WB-MSW4-TH"
 cover: "wb-msw4-th/cover.png"
 catalogCover: "wb-msw4-th/catalog-cover.png"
+images: [
+  ["wb-msw4-th/cover.png"],
+  ["wb-msw4-th/wb-msw4-th-6.png"],
+  ["wb-msw4-th/wb-msw4-th-7.png"],
+  ["wb-msw4-th/wb-msw4-th-8.png"]
+]
 documentation: "https://wirenboard.com/wiki/WB-MSW_v.4_Modbus_Sensor"
 meta: "RS-485, Modbus RTU Wall-mounted sensor"
 keywords: "RS-485, Modbus RTU Wall-mounted sensor"
@@ -11,7 +17,7 @@ keywords: "RS-485, Modbus RTU Wall-mounted sensor"
 
 Combined digital sensor for temperature and humidity.
 
-A wireless version: [WB-MSW-ZIGBEE v.4](https://wirenboard.com/en/product/wb-msw4-zigbee/).
+A wireless version: [WB-MSW-ZIGBEE v.4](https://wirenboard.com/ru/product/wb-msw4-zigbee/).
 
 
 #info
@@ -26,12 +32,11 @@ A wireless version: [WB-MSW-ZIGBEE v.4](https://wirenboard.com/en/product/wb-msw
 }
 
 - 2 measured parameters in one housing.
-- Is a measuring instrument for temperature and humidity.
 - Heated temperature and humidity sensor for operation in high humidity conditions.
 - Fast and simple integration into the automation and monitoring system.
 - It is possible to apply your company logo.
 
-Supports [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, allowing motion sensor events to be instantly delivered to the Wiren Board controller.
+Supports Fast Modbus, allowing motion sensor events to be instantly delivered to the Wiren Board controller.
 ::
 
 ::product-section{title="Hardware"}
@@ -43,7 +48,7 @@ Supports [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, allowing
 
 Measured parameters:
 
-- Temperature: -40°C…+80°C (±0.5°C).
+- Temperature: -40°С…+80°С (±0.5°С).
 - Humidity: 0…95% (±3%).
 - Two-color indication controlled via Modbus.
 - Sensor heating for operation in high humidity conditions.
@@ -53,7 +58,21 @@ Measured parameters:
 - Plastic case with the possibility of mounting on a socket box (80x80x19 mm).
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Fast Modbus support"}
+:photo{
+  src="wb-msw4-th/wb-msw4-th-3.png"
+  width="500px"
+  float="right"
+}
+
+All Wiren Board devices, in addition to the standard Modbus RTU, can work with its extension [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which adds new features:
+
+- instant polling of input states and measured values via events;
+- quick search for devices connected to the controller;
+- resolving address collisions on the bus.
+
+Additional features are enabled automatically — if the device supports the extension, the controller driver will use Fast Modbus. If the device does not support the extension, it will operate over standard Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

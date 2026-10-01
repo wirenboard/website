@@ -2,8 +2,14 @@
 article: "WBPRO-DTHERM v.3"
 cover: "wbpro-dtherm-v3/cover.png"
 catalogCover: "wbpro-dtherm-v3/catalog-cover.png"
-meta: "Модуль для цифровых термометров WBPRO-DTHERM v.3"
-keywords: "модуль для цифровых термометров, 1-Wire, RS-485, Modbus RTU, WBPRO-DTHERM v.3"
+images: [
+  ["wbpro-dtherm-v3/cover.png"],
+  ["wbpro-dtherm-v3/wbpro-dtherm-v3-3.png"],
+  ["wbpro-dtherm-v3/wbpro-dtherm-v3-4.png"],
+  ["wbpro-dtherm-v3/wbpro-dtherm-v3-5.png"]
+]
+meta: "Plug-in module for digital thermometers WBPRO-DTHERM v.3"
+keywords: "Plug-in module for digital thermometers WBPRO-DTHERM v.3"
 ---
 ::product
 #description
@@ -58,11 +64,25 @@ keywords: "модуль для цифровых термометров, 1-Wire, 
 - Габаритные размеры: 57×18×12 мм.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Поддержка Быстрого Modbus"}
+:photo{
+  src="wbpro-dtherm-v3/wbpro-dtherm-v3-2.png"
+  width="500px"
+  float="right"
+}
+
+Все устройства Wiren Board в дополнение к стандартному Modbus RTU могут работать с его расширением [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, которое добавляет новые возможности:
+
+- мгновенный опрос состояний входов и измеренных значений через события;
+- быстрый поиск подключённых к контроллеру устройств;
+- разрешение коллизий адресов на шине.
+
+Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 
-::product-section{title="Настройка"}
+::product-section{title="астройка"}
 При использовании с контроллером [WBPRO-PLC7-2G-64G](https://wirenboard.com/ru/product/WBPRO-PLC7-2G-64G/) вы можете мышкой в веб-интерфейсе:
 
 - выбрать режим работы входов: 1-wire или дискретный,настроить параметры входов: время подавления дребезга, время двойного и длинного нажатия,

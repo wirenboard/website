@@ -2,6 +2,18 @@
 article: "WBE2-HDMI"
 cover: "wbe2-hdmi/cover.png"
 catalogCover: "wbe2-hdmi/catalog-cover.png"
+images: [
+  ["wbe2-hdmi/cover.png"],
+  ["wbe2-hdmi/wbe2-hdmi-5.png"],
+  ["wbe2-hdmi/wbe2-hdmi-6.png"],
+  ["wbe2-hdmi/wbe2-hdmi-7.png"],
+  ["wbe2-hdmi/wbe2-hdmi-8.png"],
+  ["wbe2-hdmi/wbe2-hdmi-9.png"],
+  ["wbe2-hdmi/wbe2-hdmi-10.png"],
+  ["wbe2-hdmi/wbe2-hdmi-11.png"],
+  ["wbe2-hdmi/wbe2-hdmi-12.png"],
+  ["wbe2-hdmi/wbe2-hdmi-13.png"]
+]
 documentation: "https://wirenboard.com/wiki/WBE2-HDMI_v.1_HDMI_Extension_Module"
 meta: "Extension module HDMI for Wiren Board 8.5 controller"
 keywords: "Extension module HDMI for Wiren Board 8.5 controller"
@@ -18,7 +30,7 @@ Compatible with controllers starting from revision 8.5.2E.
 
 ## MAIN FEATURES
 
-::product-section{title="Technical specifications"}
+::product-section{title=""}
 :photo{
   src="wbe2-hdmi/wbe2-hdmi-1.png"
   width="500px"

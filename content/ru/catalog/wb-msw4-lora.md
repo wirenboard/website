@@ -2,11 +2,19 @@
 article: "WB-MSW4-LORA"
 cover: "wb-msw4-lora/cover.png"
 catalogCover: "wb-msw4-lora/catalog-cover.png"
+images: [
+  ["wb-msw4-lora/cover.png"],
+  ["wb-msw4-lora/wb-msw4-lora-9.png"],
+  ["wb-msw4-lora/wb-msw4-lora-10.png"],
+  ["wb-msw4-lora/wb-msw4-lora-11.jpg"],
+  ["wb-msw4-lora/wb-msw4-lora-12.png"],
+  ["wb-msw4-lora/wb-msw4-lora-13.png"]
+]
 documentation: "https://wirenboard.com/wiki/WB-MSW-LORA_v.4_Sensor"
 meta: "Настенный комбинированный датчик c LoRa, Modbus RTU"
 keywords: "датчик климата c LoRa, беспроводной датчик температуры, с поверкой, средство измерения, Modbus RTU, Wiren Board, беспроводной датчик климата, большая дальность, подвалы с толстыми стенами, бытовки и удалённые склады"
 video: [
-  ["//www.youtube.com/embed/2mISKjLYJ3c"],
+  ["//www.youtube.com/embed/2mISKjLYJ3c"]
 ]
 use_cases: ["solutions-liten-magnit", "techsensor-module-cafe", "solutions-rekota-hotel-vertical"]
 ---
@@ -120,7 +128,17 @@ CO2 (углекислый газ) - газ без цвета с легким к�
 В WB-MSW-LORA v.4 для измерения концентрации CO2 используется недисперсионный инфракрасный (NDIR) сенсор. Он позволяет проводить измерения с погрешностью 100 ppm + 5% от измеренного значения.
 ::
 
-:include{path="/catalog/includes/voc_control"}
+::product-section{title="Контроль VOC"}
+:photo{
+  src="wb-msw4-lora/wb-msw4-lora-6.jpg"
+  width="500px"
+  float="right"
+}
+
+Летучие органические вещества (ЛОВ, VOC) — это вещества, выделяющиеся в атмосферу в виде газов: испарения лаков/красок и элементов внутренней отделки помещений (фенол, формальдегид, толуол, стирол), спирты, бензол, гниющие овощи, выделяемые человеком газы, бытовой газ. Высокие концентрации опасных ЛОВ представляют угрозу жизни и здоровью человека.
+
+Датчик VOC определяет суммарную концентрацию этих веществ c типовой погрешностью ±15 %.
+::
 
 ::product-section{title="Настройка"}
 :photo{

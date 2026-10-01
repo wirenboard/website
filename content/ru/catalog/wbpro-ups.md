@@ -2,6 +2,9 @@
 article: "WBPRO-UPS"
 cover: "wbpro-ups/cover.png"
 catalogCover: "wbpro-ups/catalog-cover.png"
+images: [
+  ["wbpro-ups/cover.png"]
+]
 meta: "ИБП с встроенными аккумуляторами на Din-рейку"
 keywords: "ИБП с встроенными аккумуляторами на Din-рейку"
 ---

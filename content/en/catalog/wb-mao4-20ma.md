@@ -2,9 +2,14 @@
 article: "WB-MAO4-20mA"
 cover: "wb-mao4-20ma/cover.png"
 catalogCover: "wb-mao4-20ma/catalog-cover.png"
+images: [
+  ["wb-mao4-20ma/cover.png"],
+  ["wb-mao4-20ma/wb-mao4-20ma-6.png"],
+  ["wb-mao4-20ma/wb-mao4-20ma-7.png"]
+]
 documentation: "https://wirenboard.com/wiki/WB-MAO4-20mA_Modbus_Analog_Outputs_0-20mA"
-meta: "0…20 mA and 4…20 mA current outputs with RS-485 Modbus RTU"
-keywords: "0…20 mA, 4…20 mA, current output, Modbus, RS-485"
+meta: "Токовые выходы 0…20 мА и 4…20 мА с RS485 Modbus RTU"
+keywords: "0…20 мА,  4…20 мА, токовый выход, Modbus, RS-485"
 ---
 ::product
 #description
@@ -58,7 +63,21 @@ Specifications:
 - DIN rail housing, 3 modules.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Fast Modbus support"}
+:photo{
+  src="wb-mao4-20ma/wb-mao4-20ma-3.png"
+  width="500px"
+  float="right"
+}
+
+All Wiren Board devices, in addition to the standard Modbus RTU, can work with its extension [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which adds new features:
+
+- instant polling of input states and measured values via events;
+- quick search for devices connected to the controller;
+- resolving address collisions on the bus.
+
+Additional features are enabled automatically - if the device supports extension, the controller driver will work with the device quickly Modbus if the device does not know anything about the extension - it will work using standard Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 
@@ -89,7 +108,9 @@ When used with other equipment, the module can be configured via the RS-485 bus 
   float="right"
 }
 
-If a Wiren Board controller is used, the channel control functions, input states and press counters are available in the controller's web interface and can be used in automation scripts or transferred to a higher-level system. The device card displays only the channels enabled in the polling settings.
+The voltmeter does not have its own screen, so reading the connected parameters is carried out via the RS-485, Modbus RTU interface.
+
+If a Wiren Board controller is used, the measured values are available in the controller's web interface and can be transferred to the higher-level system. The device card displays only the channels enabled in the survey settings.
 
 All data can be read by any equipment or software that supports the RS-485, Modbus RTU protocol: third-party controllers, HMI panels or SCADA.
 ::

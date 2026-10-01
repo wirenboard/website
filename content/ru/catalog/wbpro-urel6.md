@@ -2,6 +2,10 @@
 article: "WBPRO-UREL6"
 cover: "wbpro-urel6/cover.png"
 catalogCover: "wbpro-urel6/catalog-cover.png"
+images: [
+  ["wbpro-urel6/cover.png"],
+  ["wbpro-urel6/wbpro-urel6-1.png"]
+]
 meta: "Универсальный модуль реле WBPRO-UREL6"
 keywords: "Универсальный модуль реле WBPRO-UREL6"
 ---
