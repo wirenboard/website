@@ -54,7 +54,10 @@ watch(searchQuery, (q) => {
       );
       searchPending.value = false;
     } catch (e: any) {
-      if (e.name !== 'AbortError') throw e;
+      if (e.name === 'AbortError') return;
+      console.error('Catalog search failed', e);
+      searchResults.value = [];
+      searchPending.value = false;
     }
   }, 600);
 });

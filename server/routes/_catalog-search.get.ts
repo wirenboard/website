@@ -10,13 +10,9 @@ export default defineEventHandler(async (event): Promise<any> => {
   const apiUrl = config.apiUrl || '';
   const locale = (query.locale as string) || 'ru';
 
-  const headers: Record<string, string> = {};
-  if (config.internalApiKey) {
-    headers['X-Internal-Api-Key'] = config.internalApiKey as string;
-  }
-
+  // Unlike the product/category endpoints (see useApi.ts), the Yii search endpoint
+  // is public now and doesn't check X-Internal-Api-Key — no header needed here.
   return $fetch(`${apiUrl}/${locale}/ng/api/v1/catalog/search/`, {
     params: { q },
-    headers,
   });
 });
