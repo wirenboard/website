@@ -13,55 +13,57 @@ images: [
   ["yc-sm41p/yc-sm41p-7.png"],
   ["yc-sm41p/yc-sm41p-8.png"]
 ]
-documentation: "https://wirenboard.com/wiki/HMI_Wall_Panel_With_Android_and_PoE_YC-SM41P"
 ---
 ::product
 #description
 
-Panel with IPS display and touchscreen for creating HMI panels.
+>Panel with IPS display and touchscreen for creating HMI panels.
 
-The device comes with pure Android 8 without vendor lock and unnecessary applications.
+The device comes with pure Android 11 without vendor lock and unnecessary applications.
 
-Interactive SVG panels for Wiren Board controllers are created in the built-in editor, using Node-RED or in Home Assistant, Intra House, Intra SCADA, Rapid SCADA, Master SCADA, etc.
+Interactive SVG panels for Wiren Board controllers are created [in the built-in editor](https://wirenboard.com/wiki/SVG-Dashboards/en), using Node-RED or in Intra House, Intra SCADA, Rapid SCADA, Master SCADA, etc.
 
-The presence of Ethernet with PoE simplifies the installation of the panel and allows you to use it at sites where it is impossible to use Wi-Fi. The absence of a battery eliminates the need to change it regularly.
+Ethernet with PoE simplifies the installation of the panel and allows you to use it at sites where Wi-Fi cannot be used. The absence of a battery eliminates the need to replace it regularly.
 
-The possibility of installation in both round 60 mm (EU type) and square 86 x 86 mm (UK type) mounting boxes (back boxes).
+Can be installed in both a round 68 mm (EU type) and a square 86 x 86 mm (UK type) mounting box (back box).
 
-Third party equipment, 1 year warranty.
+Third-party equipment, 1 year warranty.
 
 Made in China.
 
 
 #info
 
-## Technical characteristics
+## Key features
 
 ::product-section{title="Hardware"}
-- Rockchip RK3566 Quad-core Cortex-A55, 1.8 ГГц;
+- Rockchip RK3566 Quad-core Cortex-A55, 1.8 GHz;
 - 2 GB RAM;
 - 32 GB eMMC;
 - 4 inch IPS display with touchscreen and 480x480 pixel resolution.
+
+<br>
 ::
 
 ::product-section{title="Software"}
-- Android 8 OS;
-- Built-in browser with support for all modern technologies;
-- Ability to install hundreds of third-party applications from Google Play and other app stores.
+- Android 11 OS;
+- built-in browser with support for all modern technologies;
+- ability to install hundreds of third-party applications from Google Play and other app stores.
 ::
 
 ::product-section{title="Interfaces"}
-- Ethernet 100M;
+- Ethernet 100 Mbit/s;
 - Wi-Fi 802.11b/g/n;
 - Bluetooth 5.2;
 - RS-485 port;
-- Two microphones, a speaker, and a light sensor.
+- two microphones, a speaker and a light sensor.
 ::
 
-::product-section{title="OTHER CHARACTERISTICS"}
-- Power supply: PoE 802.3af (48 V, 2 A) or AC 110 ~ 240 V, 50 Hz.
-- Operating temperature from −10 to 60 °C.
-- Case with mounting on a socket, 86x37x86 mm.
+::product-section{title="Other characteristics"}
+- power supply: 48 V via PoE 802.3af or AC 110–240 V, 50 Hz;
+- operating temperature from −10 to 60 °C;
+- enclosure for mounting on a back box, 86 x 37 x 86 mm;
+- battery: none.
 ::
 
 
