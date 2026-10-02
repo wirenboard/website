@@ -12,16 +12,29 @@ keywords: "eBus interface for WBPRO-PLC​ WBPRO-PMOD-EBUS"
 ::product
 #description
 
-eBus coupler WBPRO-PMOD-EBUS is designed to work as an extension module for the WirenBoard 6 and 7 controllers, and is used for remote control of gas and electric boilers with eBus interface.
+A module for controlling electric and gas boilers via the eBus protocol.
+
+It is installed in a slot on the controller board and emulates an external thermostat.
+
+With the module you can:
+
+- set one of four boiler operating modes;
+- get sensor data, boiler status and error code;
+- change temperature setpoints;
+- use the boiler in home automation scenarios.
+
+Boilers from Vaillant and Protherm can be controlled over the eBus bus. We do not guarantee operation with boilers from other manufacturers due to their limited support of the eBus protocol.
 
 
 #info
 
-## Technical Specifications
+## Key features
 
 ::product-section{title="Power Specifications"}
 - Nominal supply voltage: 5 V
 - Maximum current consumption: 0.5 A
+
+<br>
 ::
 
 ::product-section{title="RS-485 / Modbus settings"}
