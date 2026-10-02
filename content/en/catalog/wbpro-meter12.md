@@ -11,36 +11,34 @@ keywords: "Multi-circuit energy meter with RS-485, Modbus RTU WBPRO-METER12"
 ::product
 #description
 
-The WBPRO-METER12 multi-circuit energy meter is an ideal choice for industrial metering installations in apartment houses and office buildings as well as for monitoring energy usage in data centers and smart offices. Designed for operation in single phase or three phase AC networks.
-
-External split-core current transformers allow for installation on live circuits with zero downtime.
-
-The WB-MAP12E can measure inrush currents of various equipment, such as lighting features or motors. It can detect and measure voltage surges as well.
+The WBPRO-METER12 meter is designed for technical energy metering in apartment buildings and office buildings, and for monitoring consumers in data centers and smart offices. Designed for operation in single-phase or three-phase AC networks. External split-core current transformers allow the system to be installed without disconnecting consumers.
 
 
 #info
 
-## Technical specifications
+## Key features
 
 ::product-section{title="Measurements"}
-- 4 three phase or 12 single phase consumers
+- 4 three-phase or 12 single-phase consumers
 - Measures instantaneous parameters: voltage, current, power
-- Stores accumulated values of energies
-- Individual values on all 12 phases and on 4 three phase channels
-- Measurement of active, reactive, full power and energy
+- Stores accumulated energy values
+- Individual values for all 12 phases and for 4 three-phase channels
+- Measurement of active, reactive and apparent power and energy
 - Power factor and phase-to-phase angles
-- Peak value of voltages and currents
+- Peak values of voltages and currents
+
+<br>
 ::
 
 ::product-section{title="Connection"}
-- Connection via split type current transformers
+- Connection via split-core measuring current transformers
 - Detection of incorrect phasing
 ::
 
 ::product-section{title="Other characteristics"}
-- Supply voltage: 9 — 24 VDC
+- Supply voltage: 9 to 28 VDC
 - Interface: RS-485, Modbus RTU
-- 6-module wide DIN rail mounted enclosure (106 x 90 x 58 mm)
+- DIN rail enclosure, 6M (106 x 90 x 58 mm)
 ::
 
 
