@@ -54,6 +54,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      titleTemplate: '%s - Wiren Board',
       link: [
         {
           rel: 'icon',
@@ -119,6 +120,14 @@ export default defineNuxtConfig({
     },
     devProxy: {
       '/api': {
+        target: process.env.NUXT_API_URL,
+        changeOrigin: true,
+      },
+      '/storage': {
+        target: process.env.NUXT_API_URL,
+        changeOrigin: true,
+      },
+      '/glide': {
         target: process.env.NUXT_API_URL,
         changeOrigin: true,
       },
