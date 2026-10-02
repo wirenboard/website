@@ -14,32 +14,39 @@ images: [
   ["wbe2-hdmi/wbe2-hdmi-12.png"],
   ["wbe2-hdmi/wbe2-hdmi-13.png"]
 ]
-documentation: "https://wirenboard.com/wiki/WBE2-HDMI_v.1_HDMI_Extension_Module"
 meta: "Extension module HDMI for Wiren Board 8.5 controller"
 keywords: "Extension module HDMI for Wiren Board 8.5 controller"
 ---
 ::product
 #description
 
-The **WBE2-HDMI** expansion module for [Wiren Board 8.5](https://wirenboard.com/en/product/wiren-board-8/) is designed to integrate an HDMI output into the controller. 
-Compatible with controllers starting from revision 8.5.2E. 
-**A micro‑HDMI to HDMI cable is included.**
+Installed in the MOD4 slot. Adds an HDMI port to the controller 
+for displaying images on monitors, panels, displays and other devices with an HDMI interface.
+
+Touchscreen panels can be used, 
+with the touchscreen itself connected to the controller's USB port.
+
+If you used to be limited to the web interface, now you can display the image of any application running on the controller. This is convenient for building the user interface of a charging station, a parcel locker, a process control panel and any other automation systems where the controller and the display are located next to each other.
+
+Compatible with the Wiren Board 8.5 controller starting from revision 8.5.2E, 
+as well as with some earlier revisions.
 
 
 #info
 
-## MAIN FEATURES
+## Key features
 
-::product-section{title=""}
+::product-section{title="Technical specifications"}
 :photo{
   src="wbe2-hdmi/wbe2-hdmi-1.png"
   width="500px"
   float="right"
 }
 
-- 4K resolution: (3840x2160) - 30 fps;
-- Connector type: Micro-HDMI type D;
-- Sound transmission: supported.
+- maximum resolution: 4K (3840x2160) - 30 fps;
+- connector type: Micro-HDMI type D;
+- audio transmission: supported;
+- CEC control: not supported.
 ::
 
 ::product-section{title="Software"}
@@ -49,8 +56,10 @@ Compatible with controllers starting from revision 8.5.2E.
   float="right"
 }
 
-When the controller starts, the Firefox browser is launched, which displays the controller's web interface. This can be disabled 
-and the necessary application or the text/graphical interface of the operating system itself can be displayed on the screen using Linux tools.
+When the controller starts, the Firefox browser is launched in kiosk mode 
+and displays the controller's web interface. This can be disabled 
+and Linux tools can be used to display the required application 
+or the text/graphical interface of the operating system itself.
 ::
 
 ::product-section{title="Connection"}
@@ -61,10 +70,10 @@ and the necessary application or the text/graphical interface of the operating s
 }
 
 When ordering a controller with HDMI, all connections and settings 
-are made at the factory. When purchasing a module separately, the connection 
-must be made in accordance with the documentation. The module comes with a Micro-HDMI cable — 0.5 m long.
+are made at the factory. When purchasing the module separately, connect it 
+in accordance with the documentation. The module comes with a 0.5 m Micro-HDMI to HDMI cable.
 
-The touch screen connects to the controller via USB.
+The touchscreen connects to the controller via USB.
 ::
 
 ::product-section{title="Settings"}
@@ -74,14 +83,15 @@ The touch screen connects to the controller via USB.
   float="right"
 }
 
-The module can be configured both in the web interface of the Wiren Board controller and in the console.
+The module can be configured both in the web interface of the Wiren Board controller 
+and in the console.
 
 Configurable:
 
 - screen resolution;
 - screen orientation;
-- display mouse cursor;
-- The URL of the browser's start page.
+- mouse cursor display;
+- browser start page URL.
 ::
 
 :include{path="/catalog/includes/quality_control"}
