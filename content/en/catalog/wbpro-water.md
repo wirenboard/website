@@ -27,6 +27,12 @@ The main differences from the previous version: by default, five inputs are conf
 ## Key features
 
 ::product-section{title="Advantages"}
+:photo{
+  src="wbpro-water/wbpro-water-advantages.png"
+  width="500px"
+  float="right"
+}
+
 There are many leak protection systems on the market; here is how ours differs:
 
 - Up to 6 monitoring zones and isolated inputs for connecting active or passive leak sensors.
@@ -38,7 +44,7 @@ There are many leak protection systems on the market; here is how ours differs:
 - Support for Larnitech floor-mounted sensors.
 - Fast and simple integration into automation and monitoring systems.
 
-Supports [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which allows events to be delivered instantly from the module to the WBPRO-PLC7-2G-64G controller.
+Supports [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which allows events to be delivered instantly from the module to the [WBPRO-PLC8-4G-64G](https://wirenboard.com/en/contents/product/wbpro-plc8-4g-64g) controller.
 ::
 
 ::product-section{title="Hardware"}
@@ -61,8 +67,26 @@ Specifications:
 Operating temperature from 0 to +60 °C; the requirements are dictated by the use of a Li-ION battery.
 ::
 
+::product-section{title="Fast Modbus support"}
+:photo{
+  src="wbpro-water/wbpro-water-fast-modbus-support.png"
+  width="500px"
+  float="right"
+}
+
+In addition to standard Modbus RTU, all Wiren Board devices can work with its extension [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which adds new features:
+
+- instant polling of input states and measured values via events;
+- fast search for devices connected to the controller;
+- resolving address collisions on the bus.
+
+For the user, the additional features are enabled transparently: if the device supports the extension, the controller driver works with it over Fast Modbus; if the device knows nothing about the extension, it works over standard Modbus RTU.
+::
+
+:include{path="/catalog/includes/quality_control"}
+
 ::product-section{title="Mode settings"}
-When used with the WBPRO-PLC7-2G-64G controller, you can use the mouse in the web interface to:
+When used with the [WBPRO-PLC8-4G-64G](https://wirenboard.com/en/contents/product/wbpro-plc8-4g-64g) controller, you can use the mouse in the web interface to:
 
 - switch input operating modes: leak sensor or button;
 - configure the response of outputs and the alarm signal to input triggering;
@@ -74,7 +98,7 @@ When used with other equipment, the module can be configured over the RS-485 bus
 ::
 
 ::product-section{title="Status reading and control"}
-If the WBPRO-PLC7-2G-64G controller is used, the counter values, as well as the state of the outputs and the alarm signal, are available in the controller's web interface and can be used in automation scenarios or transferred to a higher-level system. The device card displays only the channels enabled in the polling settings.
+If the [WBPRO-PLC8-4G-64G](https://wirenboard.com/en/contents/product/wbpro-plc8-4g-64g) controller is used, the counter values, as well as the state of the outputs and the alarm signal, are available in the controller's web interface and can be used in automation scenarios or transferred to a higher-level system. The device card displays only the channels enabled in the polling settings.
 
 The module also provides all data via Modbus RTU (RS-485), which can be read by any equipment or software that supports this protocol: third-party controllers, HMI panels or SCADA.
 ::
