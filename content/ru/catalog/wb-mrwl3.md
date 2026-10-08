@@ -15,12 +15,11 @@ video: [
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
   ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
-use_cases: ["solutions-liten-magnit", "solutions-intelligenthouse-knyaje"]
 ---
 ::product
 #description
 
-Предназначен для коммутации нагрузки общего назначения до 4.5 кВт, в том числе индуктивной: группы розеток, двигатели, обогреватели и др.
+Предназначен для коммутации нагрузки общего назначения до 4,5 кВт, в том числе индуктивной: группы розеток, двигатели, обогреватели и др.
 
 Номинальный ток: 20 А, пусковой: до 80 А (20 мс). 
  3 релейных выхода, 4 дискретных входа.
@@ -30,11 +29,11 @@ use_cases: ["solutions-liten-magnit", "solutions-intelligenthouse-knyaje"]
 
 #info
 
-## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+## Основные характеристики
 
 ::product-section{title="Преимущества"}
 :photo{
-  src="wb-mrwl3/wb-mrwl3-1.png"
+  src="wb-mrwl3/wb-mrwl3-advantages.png"
   width="500px"
   float="right"
 }
@@ -44,6 +43,7 @@ use_cases: ["solutions-liten-magnit", "solutions-intelligenthouse-knyaje"]
 - индикация состояния выходов на корпусе для быстрой диагностики и определения состояния выходов при пусконаладке;
 - счёт импульсов и измерение частоты на входах для подключения счетчиков с импульсным выходом и измерения частоты вращения двигателей;
 - безопасный режим на случай обрыва связи RS-485;
+- таймерные функции выходов: задержка включения и отключения, включение на время, циклический режим;
 - программируемая защита от дребезга контактов выключателей;
 - компактный корпус на DIN-рейку;
 - быстрая и простая интеграция в систему автоматизации и мониторинга;
@@ -57,12 +57,10 @@ use_cases: ["solutions-liten-magnit", "solutions-intelligenthouse-knyaje"]
 
 ::product-section{title="Аппаратная часть"}
 :photo{
-  src="wb-mrwl3/wb-mrwl3-2.png"
+  src="wb-mrwl3/wb-mrwl3-hardware.png"
   width="500px"
   float="right"
 }
-
-Технические характеристики:
 
 - 3 канала реле номиналом 20 А 230 В, переменный ток;
 - максимальный длительный ток: 26 А на канал;
@@ -70,29 +68,29 @@ use_cases: ["solutions-liten-magnit", "solutions-intelligenthouse-knyaje"]
 - 4 дискретных входа с групповой гальванической изоляцией, по умолчанию 3 входа управляют одноименными выходами, а один отключает все каналы реле;
 - обработка нажатий: короткое, длинное, двойное, короткое и затем длинное;
 
-- напряжение питания: 9…28 В постоянного тока;
+- напряжение питания: 12…28 В постоянного тока;
 - интерфейс: RS-485, Modbus RTU;
 - температура эксплуатации: -40…+80 °С;
-- корпус на DIN-рейку, 3 модуля.
+- корпус на DIN-рейку, 3M (53 x 90 x 58 мм).
 ::
 
 ::product-section{title="Долговечные реле Hongfa"}
 :photo{
-  src="wb-mrwl3/wb-mrwl3-3.png"
+  src="wb-mrwl3/wb-mrwl3-hongfa.jpg"
   width="500px"
   float="right"
 }
 
 Для коммутации используются надежные реле Hongfa. Реле имеют контакты из серебра - оксида олова (AgSnO2), что обеспечивает устойчивость к высоким токам. Поэтому модуль WB-MRWL3 хорошо подходит для коммутации мощной индуктивной нагрузки.
 
-Чтобы удостовериться в качестве реле мы [испытывали](https://wirenboard.com/ru/news/proveli-ispytania-rele-na-bolsie-puskovye-toki-458/) их большими пусковыми токами в несколько раз превышающими номинальные.
+Чтобы удостовериться в качестве реле, мы [испытывали](https://wirenboard.com/ru/news/proveli-ispytania-rele-na-bolsie-puskovye-toki-458/) их большими пусковыми токами в несколько раз превышающими номинальные.
 
 Производитель реле заявляет ресурс не менее 30 000 срабатываний.
 ::
 
 ::product-section{title="Локальное управление"}
 :photo{
-  src="wb-mrwl3/wb-mrwl3-4.png"
+  src="wb-mrwl3/wb-mrwl3-local-control.jpg"
   width="500px"
   float="right"
 }
@@ -104,7 +102,7 @@ use_cases: ["solutions-liten-magnit", "solutions-intelligenthouse-knyaje"]
 
 ::product-section{title="Безопасный режим"}
 :photo{
-  src="wb-mrwl3/wb-mrwl3-5.png"
+  src="wb-mrwl3/wb-mrwl3-safe-mode.png"
   width="500px"
   float="right"
 }
@@ -118,19 +116,19 @@ use_cases: ["solutions-liten-magnit", "solutions-intelligenthouse-knyaje"]
 
 ::product-section{title="Управление приводами штор"}
 :photo{
-  src="wb-mrwl3/wb-mrwl3-6.png"
+  src="wb-mrwl3/wb-mrwl3-curtains.jpg"
   width="500px"
   float="right"
 }
 
 В модуле WB-MRWL3 есть специальный режим работы со шторами, который исключает одновременное включение реле направлений и гарантирует паузу между переключениями. В настройках можно задать время открытия/закрытия, время паузы при смене направления, а также действия при включении питания и переходе в безопасный режим.
 
-Выходы настраиваются индивидуально, поэтому для управления шторами можно использовать только часть выходов, а остальные использовать для других целей. Также можно настроить действие со шторами для каждого из 4 типов нажатий кнопок, подключенных к входам модуля.
+Выходы настраиваются индивидуально, поэтому для управления шторами можно использовать только часть выходов, а остальные использовать для других целей. К модулю можно подключить один привод — на выходы K1 и K2. Также можно настроить действие со шторами для каждого из 4 типов нажатий кнопок, подключенных к входам модуля.
 ::
 
 ::product-section{title="Поддержка Быстрого Modbus"}
 :photo{
-  src="wb-mrwl3/wb-mrwl3-7.png"
+  src="wb-mrwl3/wb-mrwl3-fast-modbus-support.png"
   width="500px"
   float="right"
 }
@@ -144,7 +142,9 @@ use_cases: ["solutions-liten-magnit", "solutions-intelligenthouse-knyaje"]
 Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
 ::
 
-:include{path="/catalog/includes/quality_control"}
+<br>
+
+:include{path="/catalog/includes/quality_control" withSeparator="true"}
 
 ::product-section{title="Настройка"}
 :photo{
@@ -180,7 +180,15 @@ use_cases: ["solutions-liten-magnit", "solutions-intelligenthouse-knyaje"]
 Также модуль отдаёт все данные по Modbus RTU (RS-485), которые можно читать любым оборудованием или ПО с поддержкой этого протокола: контроллерами сторонних производителей, HMI панелями или SCADA.
 ::
 
-:include{path="/catalog/includes/certificates"}
+::product-section{title="Сертификаты"}
+:photo{
+  src="wb-mrwl3/wb-mrwl3-certificates.jpg"
+  width="500px"
+  float="right"
+}
+
+Устройство соответствует требованиям [ТР ТС 004/2011](https://wirenboard.com/ru/pages/certificate/).
+::
 
 
 ::
