@@ -1,5 +1,6 @@
 import type { Locale } from '@intlify/core-base';
 import type { ParsedContentInternalMeta } from '@nuxt/content';
+import type { Price } from '~/utils/price';
 
 export interface Category {
   name: string;
@@ -197,11 +198,12 @@ export interface CatalogProduct {
   count_available: number;
   count_reserve: number;
   production_time_days: number;
-  price_min: string;
-  price_max: string;
-  currency: string;
-  price_min_rub?: string;
-  price_max_rub?: string;
+  price_min: Price;
+  price_max: Price;
+  // Параллельная цена в рублях — только когда показываем в евро на ru-языке (см.
+  // CatalogController::formatProductForApi()/common/helpers/PriceHelper.php на бэке).
+  price_min_secondary?: Price;
+  price_max_secondary?: Price;
   custom_images?: Record<string, string>;
 }
 

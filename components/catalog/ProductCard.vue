@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { CatalogProduct } from '~/common/types';
 import Button from '~/components/Button.vue';
+import { formatPriceParts, CurrencySymbolPosition } from '~/utils/price';
 
 const props = defineProps<{
   product: CatalogProduct;
@@ -10,6 +11,16 @@ const props = defineProps<{
 const { t, locale } = useI18n();
 
 const productUrl = computed(() => `/${locale.value}/product/${props.product.slug}/`);
+
+const priceMinParts = computed(() => formatPriceParts(props.product.price_min));
+const priceMaxParts = computed(() => formatPriceParts(props.product.price_max));
+const priceMinSecondaryParts = computed(() => (
+  props.product.price_min_secondary ? formatPriceParts(props.product.price_min_secondary) : null
+));
+const priceMaxSecondaryParts = computed(() => (
+  props.product.price_max_secondary ? formatPriceParts(props.product.price_max_secondary) : null
+));
+
 </script>
 
 <template>
@@ -64,28 +75,28 @@ const productUrl = computed(() => `/${locale.value}/product/${props.product.slug
             <div class="productCard-price" :class="{ 'productCard-price--range': product.has_price_range }">
               <span v-if="product.has_options" class="productCard-priceFrom">{{ t('priceFrom') }}&nbsp;</span>
               <span class="productCard-priceValue">
-                <template v-if="product.currency === '₽'">
-                  <strong>{{ product.price_min }}</strong>&nbsp;<span class="productCard-currency">₽</span>
+                <template v-if="priceMinParts.position === CurrencySymbolPosition.Before">
+                  <span class="productCard-currency">{{ priceMinParts.symbol }}</span><strong>{{ priceMinParts.amount }}</strong>
                 </template>
                 <template v-else>
-                  <span class="productCard-currency">€</span><strong>{{ product.price_min }}</strong>
-                  <span v-if="product.price_min_rub" class="productCard-priceRub">
-                    (≈<strong>{{ product.price_min_rub }}</strong>&nbsp;<span class="productCard-currency">₽</span>)
-                  </span>
+                  <strong>{{ priceMinParts.amount }}</strong>&nbsp;<span class="productCard-currency">{{ priceMinParts.symbol }}</span>
                 </template>
+                <span v-if="priceMinSecondaryParts" class="productCard-priceRub">
+                  (≈<strong>{{ priceMinSecondaryParts.amount }}</strong>&nbsp;<span class="productCard-currency">{{ priceMinSecondaryParts.symbol }}</span>)
+                </span>
               </span>
               <template v-if="product.has_price_range">
                 <br><span class="productCard-priceFrom">{{ t('priceTo') }}&nbsp;</span>
                 <span class="productCard-priceValue">
-                  <template v-if="product.currency === '₽'">
-                    <strong>{{ product.price_max }}</strong>&nbsp;<span class="productCard-currency">₽</span>
+                  <template v-if="priceMaxParts.position === CurrencySymbolPosition.Before">
+                    <span class="productCard-currency">{{ priceMaxParts.symbol }}</span><strong>{{ priceMaxParts.amount }}</strong>
                   </template>
                   <template v-else>
-                    <span class="productCard-currency">€</span><strong>{{ product.price_max }}</strong>
-                    <span v-if="product.price_max_rub" class="productCard-priceRub">
-                      (≈<strong>{{ product.price_max_rub }}</strong>&nbsp;<span class="productCard-currency">₽</span>)
-                    </span>
+                    <strong>{{ priceMaxParts.amount }}</strong>&nbsp;<span class="productCard-currency">{{ priceMaxParts.symbol }}</span>
                   </template>
+                  <span v-if="priceMaxSecondaryParts" class="productCard-priceRub">
+                    (≈<strong>{{ priceMaxSecondaryParts.amount }}</strong>&nbsp;<span class="productCard-currency">{{ priceMaxSecondaryParts.symbol }}</span>)
+                  </span>
                 </span>
               </template>
             </div>
