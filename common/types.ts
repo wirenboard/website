@@ -61,6 +61,20 @@ export interface Product {
   use_cases: string[];
 }
 
+// Product data the PHP front attaches to a proxied product page request (X-WB-Product),
+// see server/middleware/product-prefill.ts
+export interface ProductPrefill {
+  article: string;
+  locale: string;
+  product: Product;
+}
+
+declare module 'h3' {
+  interface H3EventContext {
+    wbProduct?: ProductPrefill;
+  }
+}
+
 export type Video = [string, string, string, any?];
 
 export type PhotoLink = [string, string, string?, string?];
