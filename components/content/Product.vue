@@ -2,17 +2,16 @@
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import LinkIcon from '~/assets/icons/external-link.svg';
 import { hardwarePlaylist } from '~/common/links';
-import type { Product } from '~/common/types';
 import ContentGallery from '~/components/content/Gallery.client.vue';
 import ProductOptions from '~/components/content/ProductOptions.vue';
 import ProductSolutions from '~/components/content/ProductSolutions.vue';
-import { useApi } from '~/composables/useApi';
+import { useProduct } from '~/composables/useProduct';
 import 'swiper/css';
 
 const route = useRoute();
 const { t, locale } = useI18n();
 const { data } = await useLocalizedData(`catalog`, false, { _file: { $icontains: route.params.slug } });
-const { data: product } = await useApi<Product>(`/product/${data.value.article}/?locale=${locale.value}`);
+const { data: product } = await useProduct(data.value.article);
 
 const invTotal = computed(() => {
   const items = product.value?.items;
