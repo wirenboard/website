@@ -1,24 +1,65 @@
 <script setup lang="ts">
-defineProps<{ name: string; items: { id: string; title: string; img?: string; comment?: string }[] }>();
+const props = defineProps<{
+  name: string;
+  items: { id: string; title: string; img?: string; comment?: string }[];
+  ariaLabel?: string;
+}>();
 
 const modelValue = defineModel<string>();
+const focusedId = computed(() => modelValue.value ?? props.items[0]?.id);
+
+const itemRefs = ref<Record<string, HTMLElement | undefined>>({});
+const setItemRef = (id: string) => (el: Element | null) => {
+  itemRefs.value[id] = (el as HTMLElement) ?? undefined;
+};
+
+const selectAndFocus = (index: number) => {
+  const item = props.items[index];
+  if (!item) return;
+  modelValue.value = item.id;
+  nextTick(() => itemRefs.value[item.id]?.focus());
+};
+
+const onKeydown = (event: KeyboardEvent, index: number) => {
+  switch (event.key) {
+    case 'ArrowRight':
+    case 'ArrowDown':
+      event.preventDefault();
+      selectAndFocus((index + 1) % props.items.length);
+      break;
+    case 'ArrowLeft':
+    case 'ArrowUp':
+      event.preventDefault();
+      selectAndFocus((index - 1 + props.items.length) % props.items.length);
+      break;
+    case 'Enter':
+    case ' ':
+      event.preventDefault();
+      selectAndFocus(index);
+      break;
+  }
+};
 </script>
 
 <template>
-  <div class="orderSelect-container">
+  <div class="orderSelect-container" role="radiogroup" :aria-label="ariaLabel">
     <label
-      v-for="item in items"
+      v-for="(item, index) in items"
+      :key="item.id"
+      :ref="setItemRef(item.id)"
       class="orderSelect-radio"
       :class="{'orderSelect-radioActive': item.id === modelValue}"
-      tabindex="0"
-      @keyup.enter="modelValue = item.id"
+      role="radio"
+      :aria-checked="item.id === modelValue"
+      :tabindex="item.id === focusedId ? 0 : -1"
+      @keydown="onKeydown($event, index)"
     >
       <span class="orderSelect-itemWrapper">
         <span v-if="item.img" class="orderSelect-itemImgWrapper">
           <NuxtImg :src="item.img" :alt="item.title" class="orderSelect-itemImg" />
         </span>
         <span>
-          <input type="radio" :name="name" :value="item.id" v-model="modelValue" />
+          <input type="radio" :name="name" :value="item.id" v-model="modelValue" tabindex="-1" />
           <span class="orderSelect-title">{{ item.title }}</span>
           <span class="orderSelect-comment">{{ item.comment }}</span>
         </span>
@@ -31,15 +72,16 @@ const modelValue = defineModel<string>();
 
 .orderSelect-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 18px;
 }
 
 .orderSelect-radio {
-  padding: 18px 10px;
+  box-sizing: border-box;
+  padding: 16px 10px;
   border: 1px solid var(--border-color);
   border-radius: 2px;
-  width: 100%;
-  min-width: 230px;
+  flex: 1 1 160px;
   cursor: pointer;
   outline: none;
   transition: border 0.2s, outline-offset 0.2s;
@@ -56,8 +98,9 @@ const modelValue = defineModel<string>();
 
 .orderSelect-title {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   white-space: wrap;
+  line-height: 1em;
 }
 
 .orderSelect-comment {
@@ -97,7 +140,7 @@ const modelValue = defineModel<string>();
   }
 
   .orderSelect-radio {
-    min-width: 0;
+    flex-basis: auto;
   }
 }
 </style>
