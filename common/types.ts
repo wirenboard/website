@@ -1,5 +1,6 @@
 import type { Locale } from '@intlify/core-base';
 import type { ParsedContentInternalMeta } from '@nuxt/content';
+import type { Price } from '~/utils/price';
 
 export interface Category {
   name: string;
@@ -163,6 +164,53 @@ export interface Tariff {
   tariff_code: number;
   tariff_description: string;
   tariff_name: string;
+}
+
+export interface CatalogCategory {
+  id: number;
+  slug: string;
+  name: string;
+  title: string;
+  description: string;
+  image: string;
+  layout: number;
+}
+
+export interface CatalogCategoryDetail extends CatalogCategory {
+  meta_title: string;
+  meta_description: string;
+  meta_keywords: string;
+}
+
+export interface CatalogProduct {
+  id: number;
+  slug: string;
+  article: string;
+  name: string;
+  type: string;
+  description: string;
+  image: string;
+  is_discontinued: boolean;
+  can_order: boolean;
+  has_options: boolean;
+  has_components: boolean;
+  has_price_range: boolean;
+  count_available: number;
+  count_reserve: number;
+  production_time_days: number;
+  price_min: Price;
+  price_max: Price;
+  // Параллельная цена в рублях — только когда показываем в евро на ru-языке (см.
+  // CatalogController::formatProductForApi()/common/helpers/PriceHelper.php на бэке).
+  price_min_secondary?: Price;
+  price_max_secondary?: Price;
+  custom_images?: Record<string, string>;
+}
+
+export interface CategoryResponse {
+  category: CatalogCategoryDetail;
+  products: CatalogProduct[];
+  nav_categories: { slug: string; name: string }[];
 }
 
 export interface Destination {
