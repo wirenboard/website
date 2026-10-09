@@ -1,11 +1,5 @@
 import { timingSafeEqual } from 'node:crypto';
 
-// The PHP front proxies product pages to Nuxt. To avoid a second round trip back to
-// /ng/api/v1/product, it may attach the product data to the proxied request:
-//   X-Internal-Api-Key: <NUXT_INTERNAL_API_KEY>
-//   X-WB-Product: base64(JSON.stringify({ article, locale, product }))
-// The data is trusted only when the key matches; otherwise it is ignored and the page
-// falls back to the regular API call (see composables/useProduct.ts).
 const isValidKey = (given: string | undefined, expected: string | undefined): boolean => {
   if (!given || !expected) return false;
   const a = Buffer.from(given);

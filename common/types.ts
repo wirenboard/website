@@ -61,8 +61,6 @@ export interface Product {
   use_cases: string[];
 }
 
-// Product data the PHP front attaches to a proxied product page request (X-WB-Product),
-// see server/middleware/product-prefill.ts
 export interface ProductPrefill {
   article: string;
   locale: string;
