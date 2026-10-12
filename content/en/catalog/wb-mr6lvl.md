@@ -45,6 +45,8 @@ Rated current: 7 A, inrush current: up to 120 A (20 ms).
 - Your company logo can be applied.
 
 Supports [Fast Modbus](https://wiki.wirenboard.com/wiki/Fast_Modbus/en) ⚡, which allows you to instantly deliver input states and button press counter values to the Wiren Board controller.
+
+<br>
 ::
 
 ::product-section{title="Hardware"}
