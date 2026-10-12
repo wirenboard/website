@@ -1,11 +1,9 @@
 <script lang="ts" setup>
-import { useApi } from '~/composables/useApi';
-import type { Product } from '~/common/types';
+import { useProduct } from '~/composables/useProduct';
 
-const { locale } = useI18n();
 const route = useRoute();
 const { data } = await useLocalizedData('catalog', false, { _file: { $icontains: route.params.slug } });
-const { data: product } = await useApi<Product>(`/product/${data.value.article}/?locale=${locale.value}`);
+const { data: product } = await useProduct(data.value.article);
 
 if (!data.value) {
   throw createError({
