@@ -2,6 +2,11 @@
 article: "DS18B20"
 cover: "1wire-ds18b20/cover.png"
 catalogCover: "1wire-ds18b20/catalog-cover.png"
+images: [
+  ["1wire-ds18b20/cover.png"],
+  ["1wire-ds18b20/1wire-ds18b20-1.png"],
+  ["1wire-ds18b20/1wire-ds18b20-2.png"]
+]
 documentation: "https://wirenboard.com/wiki/1wire-DS18B20"
 meta: "Датчик температуры 1-wire DS18B20"
 keywords: "Датчик температуры 1-wire DS18B20"

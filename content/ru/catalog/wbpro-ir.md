@@ -2,6 +2,12 @@
 article: "WBPRO-IR"
 cover: "wbpro-ir/cover.png"
 catalogCover: "wbpro-ir/catalog-cover.png"
+images: [
+  ["wbpro-ir/cover.png"],
+  ["wbpro-ir/wbpro-ir-1.png"],
+  ["wbpro-ir/wbpro-ir-2.png"],
+  ["wbpro-ir/wbpro-ir-3.png"]
+]
 meta: "Встраиваемый модуль ИК-управления с  RS-485, Modbus RTU WBPRO-IR"
 keywords: "Встраиваемый модуль ИК-управления с  RS-485, Modbus RTU WBPRO-IR"
 ---
@@ -13,16 +19,18 @@ keywords: "Встраиваемый модуль ИК-управления с  R
 
 #info
 
-## Технические характеристики
+## Основные характеристики
 
 ::product-section{title="Общее"}
 - Поддерживает выносной цифровой датчик температуры 1-wire
 - Поддерживает запись сложных ИК сигналов
 - Готовые шаблоны конфигурации для Wiren Board
+
+<br>
 ::
 
 ::product-section{title="Прочее"}
-- Напряжение питания: от 9 до 28 VDC
+- Напряжение питания: от 9 до 28 В, постоянный ток
 - Интерфейс: RS-485, Modbus RTU
 - Небольшой размер: 45×35×14 мм
 - Разъем 3.5 мм для подключения передатчика

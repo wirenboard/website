@@ -2,6 +2,15 @@
 article: "WB-UPS v.2"
 cover: "wb-ups-v2/cover.png"
 catalogCover: "wb-ups-v2/catalog-cover.png"
+images: [
+  ["wb-ups-v2/cover.png"],
+  ["wb-ups-v2/wb-ups-v2-1.jpg"],
+  ["wb-ups-v2/wb-ups-v2-2.png"],
+  ["wb-ups-v2/wb-ups-v2-3.jpg"],
+  ["wb-ups-v2/wb-ups-v2-4.jpg"],
+  ["wb-ups-v2/wb-ups-v2-5.png"],
+  ["wb-ups-v2/wb-ups-v2-6.png"]
+]
 documentation: "https://wirenboard.com/wiki/UPS2"
 meta: "Модуль бесперебойного питания на DIN-рейку"
 keywords: "Модуль бесперебойного питания на DIN-рейку"

@@ -2,6 +2,12 @@
 article: "WBPRO-METER3T"
 cover: "wbpro-meter3t/cover.png"
 catalogCover: "wbpro-meter3t/catalog-cover.png"
+images: [
+  ["wbpro-meter3t/cover.png"],
+  ["wbpro-meter3t/wbpro-meter3t-1.png"],
+  ["wbpro-meter3t/wbpro-meter3t-2.png"],
+  ["wbpro-meter3t/wbpro-meter3t-3.png"]
+]
 meta: "WBPRO-METER3T"
 keywords: "WBPRO-METER3T"
 ---

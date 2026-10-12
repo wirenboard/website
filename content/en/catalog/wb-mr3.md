@@ -2,6 +2,12 @@
 article: "00115"
 cover: "wb-mr3/cover.png"
 catalogCover: "wb-mr3/catalog-cover.png"
+images: [
+  ["wb-mr3/cover.png"],
+  ["wb-mr3/wb-mr3-10.png"],
+  ["wb-mr3/wb-mr3-11.png"],
+  ["wb-mr3/wb-mr3-12.png"]
+]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MR3xV_and_WB-MR6xV_Modbus_Relay_Modules"
 meta: "RS-485, Modbus RTU Relay module WB-MR3-LV"
 keywords: "RS-485, Modbus RTU"
@@ -62,7 +68,7 @@ Specifications:
 - Supply voltage: 9…28 V direct current.
 - Interface: RS-485, Modbus RTU.
 - Extended operating temperature range: -40…+80 °C.
-- DIN rail enclosure, 3M (53 x 90 x 58 mm).
+- DIN rail housing, 3 modules.
 ::
 
 ::product-section{title="Hongfa Long Life Relays"}
@@ -72,7 +78,7 @@ Specifications:
   float="right"
 }
 
-Reliable Hongfa relays are used for switching. The relays have silver tin dioxide (AgSnO2) contacts, which ensures switching of high starting currents. Therefore, the WB-MR3-LV module is suitable for controlling high-power loads and LED lamps.
+Reliable Hongfa relays are used for switching. The relays have silver tin dioxide (AgSnO) contacts, which ensures switching of high starting currents. Therefore, the WB-MR3-LV module is suitable for controlling high-power loads and LED lamps.
 
 To ensure the quality of the relay we [tested them with high](https://wirenboard.com/ru/news/proveli-ispytania-rele-na-bolsie-puskovye-toki-458/) inrush current several times higher than nominal.
 
@@ -115,7 +121,21 @@ The WB-MR3-LV module has a special mode for working with curtains, which elimina
 The outputs are individually configurable, so only part of the outputs can be used to control curtains, and the rest can be used for other purposes. You can also configure the curtain action for each of the 4 types of button presses connected to the module inputs.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Fast Modbus support"}
+:photo{
+  src="wb-mr3/wb-mr3-7.png"
+  width="500px"
+  float="right"
+}
+
+All Wiren Board devices, in addition to the standard Modbus RTU, can work with its extension [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which adds new features:
+
+- instant polling of input states and measured values via events;
+- quick search for devices connected to the controller;
+- resolving address collisions on the bus.
+
+Additional features are enabled automatically - if the device supports extension, the controller driver will work with the device quickly Modbus if the device does not know anything about the extension - it will work using standard Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

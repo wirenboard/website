@@ -2,11 +2,15 @@
 article: "WBE2R-R-ZWAVE-ZWAY"
 cover: "wbe2r-r-zwave-zway/cover.png"
 catalogCover: "wbe2r-r-zwave-zway/catalog-cover.png"
+images: [
+  ["wbe2r-r-zwave-zway/cover.png"],
+  ["wbe2r-r-zwave-zway/wbe2r-r-zwave-zway-1.png"]
+]
 documentation: "https://wirenboard.com/wiki/WBE2R-R-ZWAVE-ZWAY_Z-Wave_Extension_Module"
 meta: "Модуль расширения Z-Wave для Wiren Board"
 keywords: "z-wave, zigbee, домашняя автоматизация, умный дом, Z-Way, Z-way.me"
 video: [
-  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"],
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"]
 ]
 ---
 ::product

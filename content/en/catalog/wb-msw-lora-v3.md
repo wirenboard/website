@@ -2,6 +2,12 @@
 article: "WB-MSW-LORA-v.3"
 cover: "wb-msw-lora-v3/cover.jpg"
 catalogCover: "wb-msw-lora-v3/catalog-cover.jpg"
+images: [
+  ["wb-msw-lora-v3/cover.jpg"],
+  ["wb-msw-lora-v3/wb-msw-lora-v3-1.gif"],
+  ["wb-msw-lora-v3/wb-msw-lora-v3-2.png"],
+  ["wb-msw-lora-v3/wb-msw-lora-v3-3.png"]
+]
 documentation: "https://wirenboard.com/wiki/WB-MSW_v.3_LoRa_Sensor"
 meta: "LoRa, Modbus RTU Hybrid wall-mounted sensor"
 keywords: "LoRa, Modbus RTU"
@@ -20,18 +26,23 @@ The sensor connects to the Wiren Board controller via LoRa or RS-485. The mode i
 
 ## TECHNICAL SPECIFICATIONS
 
-::product-section{title="Measured values"}
+::product-section{title="MEASURED VALUES"}
 - Temperature: -40°C — +80°C (±0.5°C)
 - Humidity: 0 — 98% (±3%)
 - Light: 0.02 — 100000 lux
-- Noise level: 38 — 105 dBA
-- CO2 concentration: 400 — 5000 ppm.
+- Noise level: 40 — 82 dB
+- СО2 concentration: 0 — 5000 ppm.
 - VOC concentration: 0 — 60000 ppb.
 ::
 
-:include{path="/catalog/includes/msw3_additional_functions"}
+::product-section{title="ADDITIONAL FUNCTIONALITY"}
+- IR commands sending
+- Configurable buzzer(Mode on/off)
+- Two-color indication, controlled via Modbus
+- Heated sensor designed for operation in high humidity conditions
+::
 
-::product-section{title="Other characteristics"}
+::product-section{title="OTHER CHARACTERISTICS"}
 - Supply voltage: 9 — 28 VDC
 - Interface: LoRa, RS-485 (Modbus RTU)
 - Plastic enclosure with wall mounting option (83 x 83 x 21 mm)

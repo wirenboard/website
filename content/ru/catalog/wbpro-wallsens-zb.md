@@ -2,6 +2,10 @@
 article: "WBPRO-WALLSENS-ZB"
 cover: "wbpro-wallsens-zb/cover.png"
 catalogCover: "wbpro-wallsens-zb/catalog-cover.png"
+images: [
+  ["wbpro-wallsens-zb/cover.png"],
+  ["wbpro-wallsens-zb/wbpro-wallsens-zb-1.jpg"]
+]
 meta: "Настенный датчик 8 в 1 с Zigbee WBPRO-WALLSENS-ZB"
 keywords: "Настенный датчик 8 в 1 с Zigbee WBPRO-WALLSENS-ZB"
 ---
@@ -17,7 +21,15 @@ keywords: "Настенный датчик 8 в 1 с Zigbee WBPRO-WALLSENS-ZB"
 
 ## Технические характеристики
 
-:include{path="/catalog/includes/msw3_measured_values"}
+::product-section{title="Измеряемые величины"}
+- Температура: -40°С — +80°С (±0.5°С)
+- Влажность: 0 — 98% (±3%)
+- Освещенность: 0.02 — 100000 лк
+- Уровень шума: 38 — 105 дБА
+- Концентрация СО2: 400 — 5000 ppm.
+- Концентрация VOC: 0 — 60000 ppb.
+- Движение: до 8 м, угол - 120°
+::
 
 ::product-section{title="Дополнительная функциональность"}
 - Передача ИК-команд

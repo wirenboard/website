@@ -2,13 +2,20 @@
 article: "WB-MRM2-mini"
 cover: "wb-mrm2-mini/cover.png"
 catalogCover: "wb-mrm2-mini/catalog-cover.png"
+images: [
+  ["wb-mrm2-mini/cover.png"],
+  ["wb-mrm2-mini/wb-mrm2-mini-9.png"],
+  ["wb-mrm2-mini/wb-mrm2-mini-10.png"],
+  ["wb-mrm2-mini/wb-mrm2-mini-11.png"],
+  ["wb-mrm2-mini/wb-mrm2-mini-12.png"]
+]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MRM2-mini"
 meta: "Встраиваемый модуль c RS-485, Modbus RTU"
 keywords: "RS-485, Modbus RTU, встраиваемый модуль"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/0a424378-a514-446c-bfc7-6e9b7393080c"],
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
-  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
+  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
 use_cases: ["solutions-liten-magnit", "inpro-meat", "gate_control"]
 ---
@@ -121,7 +128,21 @@ use_cases: ["solutions-liten-magnit", "inpro-meat", "gate_control"]
 Выходы настраиваются индивидуально, поэтому для управления шторами можно использовать только часть выходов, а остальные использовать для других целей. Также можно настроить действие со шторами для каждого из 4 типов нажатий кнопок, подключенных к входам модуля.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Поддержка Быстрого Modbus"}
+:photo{
+  src="wb-mrm2-mini/wb-mrm2-mini-6.png"
+  width="500px"
+  float="right"
+}
+
+Все устройства Wiren Board в дополнение к стандартному Modbus RTU могут работать с его расширением [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, которое добавляет новые возможности:
+
+- мгновенный опрос состояний входов и измеренных значений через события;
+- быстрый поиск подключённых к контроллеру устройств;
+- разрешение коллизий адресов на шине.
+
+Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

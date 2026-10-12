@@ -2,6 +2,10 @@
 article: "ZMCT102"
 cover: "zmct102/cover.png"
 catalogCover: "zmct102/catalog-cover.png"
+images: [
+  ["zmct102/cover.png"],
+  ["zmct102/zmct102-1.png"]
+]
 documentation: "https://wirenboard.com/wiki/ZMCT102"
 ---
 ::product

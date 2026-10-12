@@ -2,24 +2,27 @@
 article: "WBPRO-CUREL6"
 cover: "wbpro-curel6/cover.png"
 catalogCover: "wbpro-curel6/catalog-cover.png"
+images: [
+  ["wbpro-curel6/cover.png"]
+]
 meta: "Compact universal relay module WBPRO-CUREL6"
 keywords: "Compact universal relay module WBPRO-CUREL6"
 ---
 ::product
 #description
 
-Designed for direct control of LED, incandescent and fluorescent lighting and other loads.
+Designed for direct control of LED, fluorescent and incandescent lighting and other loads rated up to 10 A (2 kW).
 
-Each output is rated 10A and can withstand inrush current as high as 80A and continous load of up to 16A.
+Thanks to the special relay design, each channel can withstand a continuous current of up to 16 A and inrush currents of up to 80 A. Please note that due to the terminal block design, the total rated switching current per group of three channels is 20 A.
 
-Also used as general-purpose discrete input/output module.
+Can be used as a general-purpose output module.
 
 Takes only two modules on a DIN rail.
 
 
 #info
 
-## Technical specifications
+## Key features
 
 ::product-section{title="Outputs"}
 - 6 relay channels rated 10 A 230 VAC
@@ -28,7 +31,9 @@ Takes only two modules on a DIN rail.
 - Rated current: 10 A per channel
 - Maximum continuous current: 16 A per channel
 - Total rated switching current per group of three channels: 20 A
-- Maximum in-rush current: up to 80 A (20 ms)
+- Maximum inrush current: up to 80 A (20 ms)
+
+<br>
 ::
 
 ::product-section{title="Other characteristics"}

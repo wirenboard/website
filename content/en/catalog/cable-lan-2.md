@@ -2,9 +2,16 @@
 article: "ParLanPatch-U/UTP"
 cover: "cable-lan-2/cover.png"
 catalogCover: "cable-lan-2/catalog-cover.png"
+images: [
+  ["cable-lan-2/cover.png"],
+  ["cable-lan-2/cable-lan-2-1.jpg"],
+  ["cable-lan-2/cable-lan-2-2.jpg"],
+  ["cable-lan-2/cable-lan-2-3.png"],
+  ["cable-lan-2/cable-lan-2-4.png"]
+]
 documentation: "https://wirenboard.com/storage/source/1/OmYuwGqEvoCr_2Hm01TWvt9sKoL6gyGL.pdf"
-meta: "ParLan Patch F/UTP Cat5e PVC 2x2x0.35 sq.mm"
-keywords: "ParLan Patch F/UTP Cat5e PVC 2x2x0.35 sq.mm"
+meta: "ParLan Patch Г/UTP Cat5e PVC 2х2х0,35 sq.mm"
+keywords: "ParLan Patch Г/UTP Cat5e PVC 2х2х0,35 sq.mm"
 ---
 ::product
 #description

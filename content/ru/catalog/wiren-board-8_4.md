@@ -2,11 +2,21 @@
 article: "WB8-ALL"
 cover: "wiren-board-8_4/cover.png"
 catalogCover: "wiren-board-8_4/catalog-cover.png"
+images: [
+  ["wiren-board-8_4/cover.png"],
+  ["wiren-board-8_4/wiren-board-8_4-12.png"],
+  ["wiren-board-8_4/wiren-board-8_4-13.png"],
+  ["wiren-board-8_4/wiren-board-8_4-14.png"],
+  ["wiren-board-8_4/wiren-board-8_4-15.png"],
+  ["wiren-board-8_4/wiren-board-8_4-16.png"],
+  ["wiren-board-8_4/wiren-board-8_4-17.png"],
+  ["wiren-board-8_4/wiren-board-8_4-18.png"]
+]
 documentation: "https://wirenboard.com/wiki/Wiren_Board_8.4"
 meta: "Мощный универсальный свободно программируемый контроллер в промышленном исполнении"
 keywords: "контроллер для автоматизации, wiren board, диспетчеризация, PLC на Linux, ПЛК"
 video: [
-  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c"],
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c"]
 ]
 ---
 ::product
@@ -96,7 +106,21 @@ Wiren Board 8 — это универсальный модульный конт�
 [Полный список поддерживаемых устройств и протоколов](https://wirenboard.com/wiki/Supported_devices)
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Поддержка Быстрого Modbus"}
+:photo{
+  src="wiren-board-8_4/wiren-board-8_4-4.png"
+  width="500px"
+  float="right"
+}
+
+Все устройства Wiren Board в дополнение к стандартному Modbus RTU могут работать с его расширением [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, которое добавляет новые возможности:
+
+- мгновенный опрос состояний входов и измеренных значений через события;
+- быстрый поиск подключённых к контроллеру устройств;
+- разрешение коллизий адресов на шине.
+
+Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
+::
 
 ::product-section{title="Wiren Board Cloud"}
 :photo{
@@ -151,13 +175,61 @@ Wiren Board 8 — это универсальный модульный конт�
 Устройства с обычным Modbus и с другими протоколами можно добавить в конфигурацию вручную, используя шаблоны с описанием регистров. В стандартной поставке драйвера более 150 шаблонов и их количество продолжает расти.
 ::
 
-:include{path="/catalog/includes/controller_text_dashboards"}
+::product-section{title="Текстовые дашборды"}
+:photo{
+  src="wiren-board-8_4/wiren-board-8_4-8.png"
+  width="500px"
+  float="right"
+}
 
-:include{path="/catalog/includes/controller_graphic_dashboards"}
+Основной элемент текстовой информационной панели — виджет, который позволяет вывести в одном месте информацию с разных источников.
 
-:include{path="/catalog/includes/controller_data_archive"}
+Текстовый дашборд может адаптироваться под небольшой экран мобильного устройства.
+::
 
-:include{path="/catalog/includes/controller_automation_scripts"}
+::product-section{title="Графические дашборды"}
+:photo{
+  src="wiren-board-8_4/wiren-board-8_4-9.png"
+  width="500px"
+  float="right"
+}
+
+Вы можете создавать интерактивные графические дашборды, в основе которых лежат SVG-рисунки.
+
+В текстовые элементы SVG-рисунка можно выводить информацию, менять видимость и оформление элементов. Также можно настроить реакцию на действие пользователя: включить свет, отключить сигнал тревоги и т.п.
+
+Для настройки графического дашборда в веб-интерфейсе контроллера есть визуальный редактор.
+
+Подробнее о дашбордах и других возможностях веб-интерфейса читайте в статье [Веб-интерфейс контроллеров Wiren Board](https://wirenboard.com/ru/pages/wb-software/).
+::
+
+::product-section{title="Архив данных"}
+:photo{
+  src="wiren-board-8_4/wiren-board-8_4-10.png"
+  width="500px"
+  float="right"
+}
+
+Все получаемые контроллером данные сохраняются в архив, размер которого можно настроить.
+
+Вы можете построить графики по архивным данным одновременно для нескольких каналов. С графиками можно взаимодействовать: менять масштаб, делать курсорные измерения и т.п.
+
+Данные из архива можно выгрузить в CSV для анализа в стороннем ПО.
+::
+
+::product-section{title="Скрипты автоматизации"}
+:photo{
+  src="wiren-board-8_4/wiren-board-8_4-11.png"
+  width="500px"
+  float="right"
+}
+
+Встроенное ПО контроллера Wiren Board содержит гибкий инструмент написания скриптов на Javascript-подобном языке — WB-Rules.
+
+С помощью скриптов можно автоматизировать любые действия: управлять освещением, отоплением или технологическим процессом.
+
+Скрипты можно создавать и редактировать прямо в веб-интерфейсе, доступна отладка в консоли.
+::
 
 
 ::

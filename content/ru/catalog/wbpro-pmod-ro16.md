@@ -2,6 +2,9 @@
 article: "WBPRO-PMOD-RO16"
 cover: "wbpro-pmod-ro16/cover.png"
 catalogCover: "wbpro-pmod-ro16/catalog-cover.png"
+images: [
+  ["wbpro-pmod-ro16/cover.png"]
+]
 meta: "Дополнительный блок дискретных выходов WBPRO-PMOD-RO16"
 keywords: "Дополнительный блок дискретных выходов WBPRO-PMOD-RO16"
 ---
@@ -21,7 +24,9 @@ keywords: "Дополнительный блок дискретных выход
 - Номинальный ток 1 А на канал, но не более 10 А на группу
 ::
 
-:include{path="/catalog/includes/wbio_interfaces"}
+::product-section{title="Интерфейсы"}
+- Шина WBIO
+::
 
 ::product-section{title="Совместимость"}
 - WBPRO-PLC

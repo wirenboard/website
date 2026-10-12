@@ -2,6 +2,10 @@
 article: "WBPRO-UREL6"
 cover: "wbpro-urel6/cover.png"
 catalogCover: "wbpro-urel6/catalog-cover.png"
+images: [
+  ["wbpro-urel6/cover.png"],
+  ["wbpro-urel6/wbpro-urel6-1.png"]
+]
 meta: "Универсальный модуль реле WBPRO-UREL6"
 keywords: "Универсальный модуль реле WBPRO-UREL6"
 ---
@@ -21,7 +25,7 @@ keywords: "Универсальный модуль реле WBPRO-UREL6"
 
 #info
 
-## Технические характеристики
+## Основные характеристики
 
 ::product-section{title="Выходы"}
 - 6 каналов реле номиналом 10 А 230 В, переменный ток
@@ -31,6 +35,8 @@ keywords: "Универсальный модуль реле WBPRO-UREL6"
 - Максимальный длительный ток: 16 А на канал
 - Суммарный номинальный коммутируемый ток на группу из трёх каналов: 20 А
 - Максимальный пусковой ток: до 80 А (20 мс)
+
+<br>
 ::
 
 ::product-section{title="Дискретные входы"}

@@ -2,6 +2,17 @@
 article: "WB-M1W2 v.3"
 cover: "wb-m1w2/cover.png"
 catalogCover: "wb-m1w2/catalog-cover.png"
+images: [
+  ["wb-m1w2/cover.png"],
+  ["wb-m1w2/wb-m1w2-6.jpg"],
+  ["wb-m1w2/wb-m1w2-7.jpg"],
+  ["wb-m1w2/wb-m1w2-8.jpg"],
+  ["wb-m1w2/wb-m1w2-9.jpg"],
+  ["wb-m1w2/wb-m1w2-10.png"],
+  ["wb-m1w2/wb-m1w2-11.png"],
+  ["wb-m1w2/wb-m1w2-12.png"],
+  ["wb-m1w2/wb-m1w2-13.png"]
+]
 documentation: "https://wirenboard.com/wiki/WB-M1W2_v.3_1-Wire_to_Modbus_Temperature_Measurement_Module"
 meta: "Compact converter with Modbus RTU for 1-Wire temperature sensors"
 keywords: "1-Wire, Modbus RTU, DS18B20, switches, socket box, cable channel"

@@ -2,6 +2,9 @@
 article: "TS64GUSD460T"
 cover: "ts64gusd460t/cover.png"
 catalogCover: "ts64gusd460t/catalog-cover.png"
+images: [
+  ["ts64gusd460t/cover.png"]
+]
 meta: "Промышленная карта памяти Transcend 64GB"
 keywords: "Промышленная карта памяти Transcend 64GB"
 ---

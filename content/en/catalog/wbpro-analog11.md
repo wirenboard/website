@@ -2,6 +2,9 @@
 article: "WBPRO-ANALOG11"
 cover: "wbpro-analog11/cover.png"
 catalogCover: "wbpro-analog11/cover.png"
+images: [
+  ["wbpro-analog11/cover.png"]
+]
 meta: "RS-485, Modbus RTU Analog input module WBPRO-ANALOG11"
 keywords: "RS-485, Modbus RTU Analog input module WBPRO-ANALOG11"
 ---
@@ -15,7 +18,7 @@ Designed to measure voltage, current, resistance, temperature; connect signals o
 
 ## TECHNICAL PARAMETERS
 
-::product-section{title="Measured values"}
+::product-section{title="MEASURED VALUES"}
 - Voltage relative to +5V (differential or normal mode)
 - Voltage (differential or normal mode)
 - Resistance (differential or normal mode) for two-wire and three-wire circuits
@@ -25,14 +28,14 @@ Designed to measure voltage, current, resistance, temperature; connect signals o
 - Signals from ratiometric sensors or variable resistors
 ::
 
-::product-section{title="Other characteristics"}
-- Supply voltage: 9 to 28 VDC
+::product-section{title="OTHER CHARACTERISTICS"}
+- Supply voltage: 12 to 24 VD
 - C onnection of "dry contact" and "open collector" signals
-- DIN rail enclosure, 6M (106 x 90 x 58 mm)
+- DIN-railed mount, 6 modules
 - Dimensions: 106.25×90.2×57.5 mm
 ::
 
-::product-section{title="Advantages"}
+::product-section{title="ADVANTAGES"}
 - 11 differential or 22 normal measurement channels
 - does not require additional external pull-up/pull-up resistors
 - Interface: RS - 485, Modbus RTU

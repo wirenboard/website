@@ -1,49 +1,48 @@
 ---
 article: "WBIO-DI-HVD-16"
-cover: "wbio-di-hvd-16/wbio-di-hvd-16-top.png"
-catalogCover: "wbio-di-hvd-16/wbio-di-hvd-16-main.png"
-documentation: "https://wiki.wirenboard.com/wiki/WBIO-DI-HVD-16_16-Channel_230V_Detector_Module"
-meta: "Модуль ввода-вывода WBIO-DI-HVD-16 — 16 дискретных входов наличия 230В с групповой гальванической развязкой."
-keywords: "Wiren Board, WBIO, WBIO-DI-HVD-16, дискретные входы, детектор напряжения 230В, модуль ввода-вывода"
+cover: "wbio-di-hvd-16/cover.png"
+catalogCover: "wbio-di-hvd-16/catalog-cover.png"
 images: [
-  ["wbio-di-hvd-16/wbio-di-hvd-16-top.png"],
-  ["wbio-di-hvd-16/wbio-di-hvd-16-main.png"],
-  ["wbio-di-hvd-16/wbio-di-hvd-16-connection.png"],
-  ["wbio-di-hvd-16/wbio-di-hvd-16-pcb.png"]
+  ["wbio-di-hvd-16/cover.png"],
+  ["wbio-di-hvd-16/wbio-di-hvd-16-1.png"],
+  ["wbio-di-hvd-16/wbio-di-hvd-16-2.png"],
+  ["wbio-di-hvd-16/wbio-di-hvd-16-3.png"]
 ]
-use_cases: []
+documentation: "https://wirenboard.com/wiki/index.php/%D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C_%D0%BD%D0%B0%D0%BB%D0%B8%D1%87%D0%B8%D1%8F_220%D0%92_(WBIO-DI-HVD-16)"
+meta: "Модуль ввода-вывода WBIO-DI-HVD-16"
+keywords: "Модуль ввода-вывода WBIO-DI-HVD-16"
+video: [
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"]
+]
 ---
 ::product
 #description
 
-Модуль предназначен для контроля состояния автоматических выключателей, опроса сигнальных ламп и т.п.
+
 
 #info
-## Основные характеристики
+
+## Технические характеристики
 
 ::product-section{title="Дискретные входы"}
-:photo{
-  src="wbio-di-hvd-16/wbio-di-hvd-16-connection.png"
-  width="250px"
-  float="right"
-}
-- 16 дискретных входов, разделённых на 2 изолированные группы;
-- напряжение срабатывания от ~110 В;
-- возможность работы в трёхфазных сетях ~380/400 В;
-- напряжение изоляции между входами и контроллером ~5000 В.
+- 16 входов;
+- групповая гальваническая развязка;
+- срабатывание входов при подаче 230В переменного напряжения;
+- напряжение срабатывания от 50В.
 ::
 
-
-::product-section{title="Подключение к контроллеру"}
-Модуль подключается к контроллеру Wiren Board по шине WBIO. Также возможно подключение по Modbus RTU при помощи преобразователей интерфейсов WB-MIO или подключение по Modbus RTU и Ethernet при помощи преобразователей интерфейсов WB-MIO-E, WB-MGE v.3.
+::product-section{title="Интерфейсы"}
+- шина WBIO;
+- можно подключать по Modbus RTU и Ethernet при помощи модуля WB-MIO.
 ::
 
 ::product-section{title="Совместимость"}
-- контроллеры Wiren Board 5, 6, 7, 8;
-- преобразователи интерфейсов WB-MIO, WB-MIO-E, WB-MGE v.3.
+- Wiren Board 5;
+- Wiren Board 6;
+- Wiren Board 7;
+- Wiren Board 8;
+- интерфейсные модули WB-MIO и WB-MIO-E.
 ::
 
-:include{path="/catalog/includes/quality_control"}
-:include{path="/catalog/includes/certificates"}
 
 ::

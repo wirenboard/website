@@ -2,13 +2,23 @@
 article: "YC-SM41P-marked down"
 cover: "yc-sm41p-marked-down/cover.png"
 catalogCover: "yc-sm41p-marked-down/catalog-cover.png"
+images: [
+  ["yc-sm41p-marked-down/cover.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-1.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-2.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-3.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-4.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-5.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-6.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-7.png"]
+]
 documentation: "https://wirenboard.com/wiki/HMI_Wall_Panel_With_Android_and_PoE_YC-SM41P"
 meta: "Панель 4 дюйма на Android с PoE для систем автоматизации"
 keywords: "Android, PoE, Ethernet, HMI, панель, интерфейс системы"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/5146e980-b878-4539-8a3a-ee1fd44980d5"],
   ["https://peertube.wirenboard.com/videos/embed/890292d9-9512-4919-a503-7780f2ddb862"],
-  ["https://peertube.wirenboard.com/videos/embed/0fe4dea1-17c7-46e5-9823-1e1338ae1119"],
+  ["https://peertube.wirenboard.com/videos/embed/0fe4dea1-17c7-46e5-9823-1e1338ae1119"]
 ]
 ---
 ::product

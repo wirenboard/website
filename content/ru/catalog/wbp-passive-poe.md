@@ -2,6 +2,10 @@
 article: "WBP-PASSIVE-POE"
 cover: "wbp-passive-poe/cover.png"
 catalogCover: "wbp-passive-poe/catalog-cover.png"
+images: [
+  ["wbp-passive-poe/cover.png"],
+  ["wbp-passive-poe/wbp-passive-poe-1.png"]
+]
 documentation: "https://wirenboard.com/wiki/WBP-PASSIVE-POE"
 ---
 ::product

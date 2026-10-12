@@ -2,6 +2,11 @@
 article: "WBPRO-MINANALOG"
 cover: "wbpro-minanalog/cover.png"
 catalogCover: "wbpro-minanalog/catalog-cover.png"
+images: [
+  ["wbpro-minanalog/cover.png"],
+  ["wbpro-minanalog/wbpro-minanalog-1.png"],
+  ["wbpro-minanalog/wbpro-minanalog-2.png"]
+]
 meta: "Модуль аналоговых входов c RS-485, Modbus RTU WBPRO-MINANALOG"
 keywords: "Модуль аналоговых входов c RS-485, Modbus RTU WBPRO-MINANALOG"
 ---

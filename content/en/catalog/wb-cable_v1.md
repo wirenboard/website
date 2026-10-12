@@ -2,6 +2,10 @@
 article: "WB-CABLE"
 cover: "wb-cable_v1/cover.png"
 catalogCover: "wb-cable_v1/catalog-cover.png"
+images: [
+  ["wb-cable_v1/cover.png"],
+  ["wb-cable_v1/wb-cable_v1-1.png"]
+]
 documentation: "https://paritet.su/catalog/kdvvgng_a_ls/kdvvgng_a_ls_2kh2kh0_35_tsvet_mark/"
 meta: "Inexpensive cable for the RS-485 bus with copper cores and a characteristic impedance of 100 Ohms"
 keywords: "RS-485, 100 Ohm, Modbus, Wiren Board, copper, twisted pair"

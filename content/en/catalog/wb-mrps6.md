@@ -2,6 +2,12 @@
 article: "WB-MRPS6/S"
 cover: "wb-mrps6/cover.png"
 catalogCover: "wb-mrps6/catalog-cover.png"
+images: [
+  ["wb-mrps6/cover.png"],
+  ["wb-mrps6/wb-mrps6-8.png"],
+  ["wb-mrps6/wb-mrps6-9.png"],
+  ["wb-mrps6/wb-mrps6-10.png"]
+]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MRPS6_Modbus_Relay_Module"
 meta: "RS-485, Modbus RTU Relay module"
 keywords: "RS-485, Modbus RTU"
@@ -45,18 +51,14 @@ Supports [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, which allow
 Specifications:
 
 - 6 relay channels rated 10 A 230 V AC.
-- Rated current: 10 A per channel.
 - Maximum continuous current: 16 A per channel.
-- Maximum starting current per channel:
-  - 165 A (20 ms);
-  - 500 A (1.5 ms).
-
-- No inputs.
+- Maximum starting current: up to 80 A (20 ms). 165 A (20 ms), 500 A (1.5 ms).
+- No entrances.
 
 - Supply voltage: 9…28 V direct current.
 - Interface: RS-485, Modbus RTU.
 - Operating temperature: -40…+80 °C.
-- DIN rail enclosure, 3M (53 x 90 x 58 mm).
+- DIN rail housing, 3 modules.
 ::
 
 ::product-section{title="Hongfa Long Life Relays"}
@@ -66,7 +68,7 @@ Specifications:
   float="right"
 }
 
-Reliable Hongfa relays are used for switching. The relays have silver tin dioxide (AgSnO2) contacts, which ensures operation with high inrush currents up to 500 A (1.5 ms).Therefore, the WB-MRPS6/S module is ideal suitable for controlling power distributors and switching high-power UPSs.
+Reliable Hongfa relays are used for switching. The relays have silver tin dioxide (AgSnO) contacts, which ensures operation with high inrush currents up to 500 A (1.5 ms).Therefore, the WB-MRPS6/S module is ideal suitable for controlling power distributors and switching high-power UPSs.
 
 To ensure the quality of the relay we [tested them with high](https://wirenboard.com/ru/news/proveli-ispytania-rele-na-bolsie-puskovye-toki-458/) inrush current several times higher than nominal.
 
@@ -88,10 +90,24 @@ For each output, you can configure its own safe state and the need to switch to 
 
 The WB-MRPS6/S module has a special mode for working with curtains, which eliminates the simultaneous activation of the direction relay and guarantees a pause between switchings. In the settings, you can set the opening/closing time, pause time when changing direction, as well as actions when turning on the power and entering safe mode.
 
-The outputs are individually configurable, so only part of the outputs can be used to control curtains, and the rest can be used for other purposes.
+The outputs are individually configurable, so only part of the outputs can be used to control curtains, and the rest can be used for other purposes. You can also configure the curtain action for each of the 4 types of button presses connected to the module inputs.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Fast Modbus support"}
+:photo{
+  src="wb-mrps6/wb-mrps6-5.png"
+  width="500px"
+  float="right"
+}
+
+All Wiren Board devices, in addition to the standard Modbus RTU, can work with its extension [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which adds new features:
+
+- instant polling of input states and measured values via events;
+- quick search for devices connected to the controller;
+- resolving address collisions on the bus.
+
+Additional features are enabled automatically - if the device supports extension, the controller driver will work with the device quickly Modbus if the device does not know anything about the extension - it will work using standard Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

@@ -2,12 +2,17 @@
 article: "WB-MIO-E"
 cover: "wb-mio-e/cover.jpeg"
 catalogCover: "wb-mio-e/catalog-cover.png"
+images: [
+  ["wb-mio-e/cover.jpeg"],
+  ["wb-mio-e/wb-mio-e-1.png"],
+  ["wb-mio-e/wb-mio-e-2.jpeg"]
+]
 documentation: "https://wirenboard.com/wiki/WB-MIO-E_v.2_Modbus_Interface_Converter"
 meta: "Преобразователь интерфейсов c RS-485 и Ethernet"
 keywords: "Преобразователь интерфейсов c RS-485 и Ethernet"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
-  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
+  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
 ---
 ::product

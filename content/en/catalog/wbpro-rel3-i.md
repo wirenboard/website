@@ -2,6 +2,11 @@
 article: "WBPRO-REL3-I"
 cover: "wbpro-rel3-i/cover.png"
 catalogCover: "wbpro-rel3-i/catalog-cover.png"
+images: [
+  ["wbpro-rel3-i/cover.png"],
+  ["wbpro-rel3-i/wbpro-rel3-i-1.png"],
+  ["wbpro-rel3-i/wbpro-rel3-i-2.png"]
+]
 ---
 ::product
 #description
@@ -16,22 +21,26 @@ Relay module with high in-rush current capacity for lighting management and swit
 ::product-section{title="Outputs"}
 - 3 relay channels rated 10A 230 VAC
 - Channel status indication
-- Rated current: 10 A per channel
 - Maximum continuous current: 16 A per channel
 - Maximum in-rush current up to 120 A (20 ms)
 ::
 
 ::product-section{title="Discrete inputs"}
-- 3 discrete inputs with a direct channel control function
-- 1 discrete input for disabling all relay channels simultaneously
-- Press handling: short, long, double, and short then long
-- Flexible input configuration for controlling outputs
+- 4 dry contact inputs with flexible channel control configuration
+- 3 discrete inputs with a direct channel control function (default)
+- 1 digital input for disabling all relay channels simultaneously (default)
+- Press events: short, long, double and shortlong
 - Group galvanic isolation of inputs
-- "Dry contact" inputs
-- Pulse counting and frequency measurement at the input
+- Dry contact inputs
+- Inputs pulses count
+- Inputs frequency measure
 ::
 
-:include{path="/catalog/includes/din3m_other_characteristics"}
+::product-section{title="Other characteristics"}
+- Supply voltage: 9 to 28 VDC
+- Interface: RS-485, Modbus RTU
+- DIN rail enclosure, 3 units wide (53 x 90 x 58 mm)
+::
 
 
 ::

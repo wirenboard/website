@@ -2,6 +2,10 @@
 article: "WBC-4G v.2"
 cover: "wbc-4g-v2/cover.png"
 catalogCover: "wbc-4g-v2/catalog-cover.png"
+images: [
+  ["wbc-4g-v2/cover.png"],
+  ["wbc-4g-v2/wbc-4g-v2-1.png"]
+]
 documentation: "https://wirenboard.com/wiki/WBC-4G_v.2"
 meta: "4G modem"
 keywords: "4G modem"
@@ -16,10 +20,15 @@ keywords: "4G modem"
 
 ## Technical Specifications
 
-:include{path="/catalog/includes/modem_4g_general"}
+::product-section{title="Main Features"}
+- Data transmission speed - up to 150 Mbps
+- Support for two nano-SIM cards
+- Alternate operation mode
+- Antenna included
+::
 
 ::product-section{title="Compatibility"}
-- Controllers Wiren Board 7.2...7.3
+- Controllers Wiren Board 7.x
 - Controllers Wiren Board 6.7...6.9
 ::
 

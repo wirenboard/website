@@ -2,15 +2,22 @@
 article: "WB-MR6C v.3"
 cover: "wb-mr6c_v3/cover.png"
 catalogCover: "wb-mr6c_v3/catalog-cover.png"
+images: [
+  ["wb-mr6c_v3/wb-mr6c_v3-10.png"],
+  ["wb-mr6c_v3/wb-mr6c_v3-11.png"],
+  ["wb-mr6c_v3/wb-mr6c_v3-12.png"],
+  ["wb-mr6c_v3/wb-mr6c_v3-13.png"],
+  ["wb-mr6c_v3/wb-mr6c_v3-14.png"],
+  ["wb-mr6c_v3/wb-mr6c_v3-15.png"]
+]
 documentation: "https://wirenboard.com/wiki/WB-MR6C_v.3_Modbus_Relay_Modules"
 meta: "RS-485, Modbus RTU модуль реле"
 keywords: "RS-485, Modbus RTU, 6-канальное реле, встроенный блок питания"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/0a424378-a514-446c-bfc7-6e9b7393080c"],
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
-  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
+  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
-use_cases: ["cti-office-automatization", "solutions-abrom-module-house", "solutions-intelligenthouse-knyaje"]
 ---
 ::product
 #description
@@ -27,11 +34,11 @@ use_cases: ["cti-office-automatization", "solutions-abrom-module-house", "soluti
 
 #info
 
-## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+## Основные характеристики
 
 ::product-section{title="Преимущества"}
 :photo{
-  src="wb-mr6c_v3/wb-mr6c_v3-1.png"
+  src="wb-mr6c_v3/wb-mr6c_v3-advantages.png"
   width="500px"
   float="right"
 }
@@ -55,12 +62,10 @@ use_cases: ["cti-office-automatization", "solutions-abrom-module-house", "soluti
 
 ::product-section{title="Аппаратная часть"}
 :photo{
-  src="wb-mr6c_v3/wb-mr6c_v3-2.png"
+  src="wb-mr6c_v3/wb-mr6c_v3-hardware.png"
   width="500px"
   float="right"
 }
-
-Технические характеристики:
 
 - 6 каналов реле номиналом 10 А 230 В, переменный ток;
 - максимальный длительный ток: 16 А на канал;
@@ -77,21 +82,21 @@ use_cases: ["cti-office-automatization", "solutions-abrom-module-house", "soluti
 
 ::product-section{title="Долговечные реле Hongfa"}
 :photo{
-  src="wb-mr6c_v3/wb-mr6c_v3-3.png"
+  src="wb-mr6c_v3/wb-mr6c_v3-hongfa.jpg"
   width="500px"
   float="right"
 }
 
 Для коммутации используются надежные реле Hongfa. Реле имеют контакты из серебра - оксида олова (AgSnO2), что обеспечивает работу с высокими пусковыми токами до 80 А (20 мс). Поэтому модуль WB-MR6C v.3 хорошо подходит для управления светодиодными лампами.
 
-Чтобы удостовериться в качестве реле мы [испытывали](https://wirenboard.com/ru/news/proveli-ispytania-rele-na-bolsie-puskovye-toki-458/) их большими пусковыми токами в несколько раз превышающими номинальные.
+Чтобы удостовериться в качестве реле, мы [испытывали](https://wirenboard.com/ru/news/proveli-ispytania-rele-na-bolsie-puskovye-toki-458/) их большими пусковыми токами в несколько раз превышающими номинальные.
 
 Производитель реле заявляет ресурс не менее 50 000 срабатываний.
 ::
 
 ::product-section{title="Локальное управление"}
 :photo{
-  src="wb-mr6c_v3/wb-mr6c_v3-4.png"
+  src="wb-mr6c_v3/wb-mr6c_v3-local-control.jpg"
   width="500px"
   float="right"
 }
@@ -103,7 +108,7 @@ use_cases: ["cti-office-automatization", "solutions-abrom-module-house", "soluti
 
 ::product-section{title="Безопасный режим"}
 :photo{
-  src="wb-mr6c_v3/wb-mr6c_v3-5.png"
+  src="wb-mr6c_v3/wb-mr6c_v3-safe-mode.png"
   width="500px"
   float="right"
 }
@@ -117,7 +122,7 @@ use_cases: ["cti-office-automatization", "solutions-abrom-module-house", "soluti
 
 ::product-section{title="Управление приводами штор"}
 :photo{
-  src="wb-mr6c_v3/wb-mr6c_v3-6.png"
+  src="wb-mr6c_v3/wb-mr6c_v3-curtains.jpg"
   width="500px"
   float="right"
 }
@@ -127,9 +132,25 @@ use_cases: ["cti-office-automatization", "solutions-abrom-module-house", "soluti
 Выходы настраиваются индивидуально, поэтому для управления шторами можно использовать только часть выходов, а остальные использовать для других целей. Также можно настроить действие со шторами для каждого из 4 типов нажатий кнопок, подключенных к входам модуля.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Поддержка Быстрого Modbus"}
+:photo{
+  src="wb-mr6c_v3/wb-mr6c_v3-fast-modbus-support.png"
+  width="500px"
+  float="right"
+}
 
-:include{path="/catalog/includes/quality_control"}
+Все устройства Wiren Board в дополнение к стандартному Modbus RTU могут работать с его расширением [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, которое добавляет новые возможности:
+
+- мгновенный опрос состояний входов и измеренных значений через события;
+- быстрый поиск подключённых к контроллеру устройств;
+- разрешение коллизий адресов на шине.
+
+Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
+::
+
+<br>
+
+:include{path="/catalog/includes/quality_control" withSeparator="true"}
 
 ::product-section{title="Настройка"}
 :photo{
@@ -165,7 +186,15 @@ use_cases: ["cti-office-automatization", "solutions-abrom-module-house", "soluti
 Также модуль отдаёт все данные по Modbus RTU (RS-485), которые можно читать любым оборудованием или ПО с поддержкой этого протокола: контроллерами сторонних производителей, HMI панелями или SCADA.
 ::
 
-:include{path="/catalog/includes/certificates"}
+::product-section{title="Сертификаты"}
+:photo{
+  src="wb-mr6c_v3/wb-mr6c_v3-certificates.jpg"
+  width="500px"
+  float="right"
+}
+
+Устройство соответствует требованиям [ТР ТС 004/2011](https://wirenboard.com/ru/pages/certificate/).
+::
 
 
 ::

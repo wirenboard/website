@@ -2,6 +2,9 @@
 article: "Z-Wave.Me UZB1"
 cover: "z-wave/cover.png"
 catalogCover: "z-wave/catalog-cover.png"
+images: [
+  ["z-wave/cover.png"]
+]
 meta: "USB-стик Z-Wave для Wiren Board"
 keywords: "z-wave, zigbee, домашняя автоматизация, умынй дом, Z-Way, Z-way.me"
 ---

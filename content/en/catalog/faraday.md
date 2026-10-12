@@ -2,6 +2,9 @@
 article: "00031"
 cover: "faraday/cover.jpg"
 catalogCover: "faraday/catalog-cover.jpg"
+images: [
+  ["faraday/cover.jpg"]
+]
 meta: "Power supply FARADAY 12W/12-24V/DIN"
 keywords: "Power supply FARADAY 12W/12-24V/DIN"
 ---

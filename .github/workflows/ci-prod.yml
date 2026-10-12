@@ -4,6 +4,13 @@ on:
   push:
     branches: [ 'main' ]
 
+# Деплои идут строго по очереди: новый запуск ждёт завершения текущего,
+# а не перетирает теги образа параллельно. Текущий запуск не отменяется,
+# чтобы не оборвать push мультиарх-образа на середине.
+concurrency:
+  group: deploy-prod
+  cancel-in-progress: false
+
 jobs:
   docker:
     runs-on: ubuntu-latest

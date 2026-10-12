@@ -76,13 +76,18 @@ Enabling these extra capabilities is seamless for the user — if a device suppo
   width="500px"
   float="right"
 }
-On a Wiren Board controller, you can use the web interface to:
+In the Wiren Board controller web interface, you can:
 - enable the internal power supply for each DALI bus;
 - set button press behavior and input trigger reactions;
 - control DALI devices: assign addresses, groups, scenes;
+- reset devices to factory settings;
+- control the brightness, color temperature and color of individual luminaires, groups and the whole bus;
 - configure the brightness control curve (linear / DALI standard);
 - run device identification (light flashing);
-- view bus status and diagnostics.
+- send arbitrary DALI commands to the bus;
+- view device status and bus traffic with decoded commands.
+
+Each DALI luminaire, sensor and button, as well as groups and the whole bus, appears in the controller web interface as a separate device. They can be used in automation scenarios or passed to a higher-level system.
 ::
 :include{path="/catalog/includes/quality_control" withSeparator="true"}
 ::

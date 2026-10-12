@@ -2,6 +2,9 @@
 article: "WBPRO-WALLSENS"
 cover: "wbpro-wallsens/cover.png"
 catalogCover: "wbpro-wallsens/catalog-cover.png"
+images: [
+  ["wbpro-wallsens/cover.png"]
+]
 meta: "Настенный датчик 8 в 1 WBPRO-WALLSENS"
 keywords: "Настенный датчик 8 в 1 WBPRO-WALLSENS"
 ---
@@ -15,9 +18,22 @@ keywords: "Настенный датчик 8 в 1 WBPRO-WALLSENS"
 
 ## Технические характеристики
 
-:include{path="/catalog/includes/msw3_measured_values"}
+::product-section{title="Измеряемые величины"}
+- Температура: -40°С — +80°С (±0.5°С)
+- Влажность: 0 — 98% (±3%)
+- Освещенность: 0.02 — 100000 лк
+- Уровень шума: 38 — 105 дБА
+- Концентрация СО2: 400 — 5000 ppm.
+- Концентрация VOC: 0 — 60000 ppb.
+- Движение: до 8 м, угол - 120°
+::
 
-:include{path="/catalog/includes/msw3_additional_functions"}
+::product-section{title="Дополнительная функциональность"}
+- Передача ИК-команд
+- Управляемый зуммер
+- Двухцветная индикация, управляемая по Modbus
+- Подогрев датчика для работы в условиях высокой влажности
+::
 
 ::product-section{title="Прочее"}
 - Напряжение питания: от 9 до 28 В постоянного тока

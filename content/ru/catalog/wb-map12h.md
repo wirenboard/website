@@ -2,6 +2,11 @@
 article: "WB-MAP12H"
 cover: "wb-map12h/cover.jpg"
 catalogCover: "wb-map12h/catalog-cover.jpg"
+images: [
+  ["wb-map12h/cover.jpg"],
+  ["wb-map12h/wb-map12h-1.png"],
+  ["wb-map12h/wb-map12h-2.jpg"]
+]
 meta: "Многоканальный счётчик с RS-485, Modbus RTU"
 keywords: "RS-485, Modbus RTU"
 ---
@@ -30,7 +35,10 @@ keywords: "RS-485, Modbus RTU"
 - Коэффициент мощности, межфазные углы, гармоники
 ::
 
-:include{path="/catalog/includes/map_ct_connection"}
+::product-section{title="Подключение"}
+- Подключение через разъёмные измерительные трансформаторы тока
+- Детектирование неправильной фазировки
+::
 
 ::product-section{title="Прочее"}
 - Напряжение питания: от 9 до 28 VDC

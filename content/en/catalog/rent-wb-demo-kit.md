@@ -2,6 +2,12 @@
 article: "Rent-WB-demo-kit v.3"
 cover: "rent-wb-demo-kit/cover.jpg"
 catalogCover: "rent-wb-demo-kit/catalog-cover.jpg"
+images: [
+  ["rent-wb-demo-kit/cover.jpg"],
+  ["rent-wb-demo-kit/rent-wb-demo-kit-1.jpg"],
+  ["rent-wb-demo-kit/rent-wb-demo-kit-2.jpg"],
+  ["rent-wb-demo-kit/rent-wb-demo-kit-3.jpg"]
+]
 documentation: "https://wirenboard.com/wiki/Wb-demo-kit"
 meta: "Rent-WB-demo-kit v.3"
 keywords: "Rent-WB-demo-kit v.3"
@@ -24,7 +30,7 @@ A demo video can be viewed on [our Youtube channel](https://youtu.be/SzAgkkbP44U
 
 ## WHAT IS INCLUDED
 
-::product-section{title="Implemented scenarios"}
+::product-section{title="IMPLEMENTED SCENARIOS"}
 - climate control;
 - ventilation and air conditioning control;
 - lighting control;
@@ -35,7 +41,7 @@ A demo video can be viewed on [our Youtube channel](https://youtu.be/SzAgkkbP44U
 - system operation in case of external power failure.
 ::
 
-::product-section{title="Documentation"}
+::product-section{title="DOCUMENTATION"}
 - The demo suitcase comes with detailed documentation
 - A complete connection diagram
 - A power supply diagram
@@ -43,9 +49,9 @@ A demo video can be viewed on [our Youtube channel](https://youtu.be/SzAgkkbP44U
 - The source codes for dashboards and scenarios
 ::
 
-::product-section{title="Dimensions"}
+::product-section{title="DIMENSIONS"}
 - Weight: 7.3 kg
-- Dimensions: 44x34x15 cm
+- Dimensions: 44х34х15 cm
 ::
 
 

@@ -2,6 +2,12 @@
 article: "WBIO-AI-DV-12/4-20mA"
 cover: "wbio-ai-dv-12_4-20ma/cover.png"
 catalogCover: "wbio-ai-dv-12_4-20ma/catalog-cover.png"
+images: [
+  ["wbio-ai-dv-12_4-20ma/cover.png"],
+  ["wbio-ai-dv-12_4-20ma/wbio-ai-dv-12_4-20ma-1.png"],
+  ["wbio-ai-dv-12_4-20ma/wbio-ai-dv-12_4-20ma-2.png"],
+  ["wbio-ai-dv-12_4-20ma/wbio-ai-dv-12_4-20ma-3.png"]
+]
 documentation: "https://wirenboard.com/wiki/index.php/WBIO-AI-DV-12_4-20MA"
 meta: "Модуль ввода-вывода WBIO-AI-DV-12/4-20mA"
 keywords: "Модуль ввода-вывода WBIO-AI-DV-12/4-20mA"
@@ -25,9 +31,17 @@ keywords: "Модуль ввода-вывода WBIO-AI-DV-12/4-20mA"
 - Групповая гальваническая развязка
 ::
 
-:include{path="/catalog/includes/wbio_interfaces"}
+::product-section{title="Интерфейсы"}
+- Шина WBIO
+- Можно подключать по Modbus RTU и Ethernet при помощи модуля WB-MIO
+::
 
-:include{path="/catalog/includes/wbio_compatibility_wb5-7"}
+::product-section{title="Совместимость"}
+- Контроллеры Wiren Board 5
+- Контроллеры Wiren Board 6
+- Контроллеры Wiren Board 7
+- Интерфейсные модули WB-MIO и WB-MIO-E
+::
 
 
 ::

@@ -2,6 +2,13 @@
 article: "WB-MAP6S"
 cover: "wb-map6s/cover.png"
 catalogCover: "wb-map6s/catalog-cover.png"
+images: [
+  ["wb-map6s/cover.png"],
+  ["wb-map6s/wb-map6s-9.jpg"],
+  ["wb-map6s/wb-map6s-10.png"],
+  ["wb-map6s/wb-map6s-11.png"],
+  ["wb-map6s/wb-map6s-12.png"]
+]
 documentation: "https://wirenboard.com/wiki/index.php/Power_Meter_WB-MAP6S"
 meta: "RS-485, Modbus RTU Multi-channel meter"
 keywords: "RS-485, Modbus RTU"
@@ -34,7 +41,7 @@ It is used for measuring all types of electrical parameters in three-phase and s
 - Service life 16 years.
 - Fast and easy integration into automation and monitoring systems.
 
-Supports [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, which allows you to instantly deliver the effective voltage value to the Wiren Board controller.
+ПSupports [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, which allows you to instantly deliver the effective voltage value to the Wiren Board controller.
 ::
 
 ::product-section{title="Hardware"}
@@ -57,7 +64,7 @@ Specifications:
 - Supply voltage: 9…28 V DC and 230 V AC.
 - Interface: RS-485, Modbus RTU.
 - Extended operating temperature range: -40…+80 °C.
-- DIN rail enclosure, 3M (53 x 90 x 58 mm).
+- DIN rail housing, 3 modules.
 ::
 
 ::product-section{title="Installation without interfering with the power supply system"}
@@ -79,7 +86,7 @@ The meter is installed on a DIN rail in a distribution board or inside an electr
   float="right"
 }
 
-WB-MAP6S is used in systems [power grid monitoring](https://wirenboard.com/en/pages/enegro_monitoring/) and at industrial enterprises, office buildings, data centers. Measures all the main parameters of the electrical network, replacing several measuring instruments: voltmeter, ammeter, wattmeter, frequency meter.
+WB-MAP6S is used in systems [power grid monitoring](https://wirenboard.com/ru/pages/enegro_monitoring/) and at industrial enterprises, office buildings, data centers. Measures all the main parameters of the electrical network, replacing several measuring instruments: voltmeter, ammeter, wattmeter, frequency meter.
 
 The measured parameters can be used to monitor power consumption and quality. As well as identifying emergency situations:
 
@@ -98,12 +105,26 @@ To transmit actual voltage values (Urms), WB-MAP6S uses Fast Modbus ⚡.This all
   float="right"
 }
 
-The measured parameters are convenient to use in tasks of managing load priorities to control consumption on each line. WB-MAP6S can continuously measure current on 6 single-phase channels and transmit the readings to the controller. If the permissible current consumption is exceeded, the low priority load is switched off. To disconnect loads you can use [Wiren Board relay modules](https://wirenboard.com/en/catalog/wb-mr-relay-modules/).
+The measured parameters are convenient to use in tasks of managing load priorities to control consumption on each line. WB-MAP6S can continuously measure current on 6 single-phase channels and transmit the readings to the controller. If the permissible current consumption is exceeded, the low priority load is switched off. To disconnect loads you can use [https://wirenboard.com/ru/catalog/wb-mr-relay-modules/](https://wirenboard.com/ru/catalog/wb-mr-relay-modules/)Wiren Board relay modules.
 
 If you do not need to measure voltage and energy, then to measure current the meter does not have to be connected to power lines, It is enough to put a current transformer with a split core on the measured line. This makes installation and integration into the automation system easier.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Fast Modbus support"}
+:photo{
+  src="wb-map6s/wb-map6s-6.png"
+  width="500px"
+  float="right"
+}
+
+All Wiren Board devices, in addition to the standard Modbus RTU, can work with its extension [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which adds new features:
+
+- instant polling of input states and measured values via events;
+- quick search for devices connected to the controller;
+- resolving address collisions on the bus.
+
+Additional features are enabled automatically - if the device supports extension, the controller driver will work with the device quickly Modbus if the device does not know anything about the extension - it will work using standard Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

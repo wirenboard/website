@@ -2,6 +2,9 @@
 article: "WBPRO-10VDIM"
 cover: "wbpro-10vdim/cover.png"
 catalogCover: "wbpro-10vdim/catalog-cover.png"
+images: [
+  ["wbpro-10vdim/cover.png"]
+]
 meta: "Модуль аналогового вывода 0-10В WBPRO-10VDIM"
 keywords: "Модуль аналогового вывода 0-10В WBPRO-10VDIM"
 ---

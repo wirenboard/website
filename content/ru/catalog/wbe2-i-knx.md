@@ -2,11 +2,18 @@
 article: "WBE2-I-KNX"
 cover: "wbe2-i-knx/cover.png"
 catalogCover: "wbe2-i-knx/catalog-cover.png"
+images: [
+  ["wbe2-i-knx/cover.png"],
+  ["wbe2-i-knx/wbe2-i-knx-1.png"],
+  ["wbe2-i-knx/wbe2-i-knx-2.png"],
+  ["wbe2-i-knx/wbe2-i-knx-3.png"],
+  ["wbe2-i-knx/wbe2-i-knx-4.png"]
+]
 documentation: "https://wirenboard.com/wiki/index.php/KNX_Module_for_WB6_(WBE2-I-KNX)"
 meta: "Модуль KNX для Wiren Board 6…8"
 keywords: "Модуль KNX для Wiren Board 6…8"
 video: [
-  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"],
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"]
 ]
 ---
 ::product

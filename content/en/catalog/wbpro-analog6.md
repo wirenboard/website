@@ -2,6 +2,9 @@
 article: "WBPRO-ANALOG6"
 cover: "wbpro-analog6/cover.png"
 catalogCover: "wbpro-analog6/catalog-cover.png"
+images: [
+  ["wbpro-analog6/cover.png"]
+]
 meta: "WBPRO-ANALOG6"
 keywords: "WBPRO-ANALOG6"
 ---
@@ -30,7 +33,7 @@ Technical specifications:
 
 - 6 differential or 12 unipolar measurement channels.
 - Precision, low-noise, 16-bit ADC operating over an extended temperature range.
-- Protection of inputs up to ±30 V simultaneously on all channels and, for a short time (up to 10 s), up to ±60 V on one channel.
+- Protection of inputs up to ±30 V simultaneously on all channels and up to ±45 V on one channel.
 - Built-in terminating resistors for sensors with 4-20mA signal.
 - Two 5V DC outputs to power sensors.
 - Group isolation of measurement channels from the RS-485 bus.
@@ -61,7 +64,7 @@ The module supports all popular sensors and types of analog signals, for example
 
 The module firmware can automatically recalculate the values of standard signals into physical quantities, you just need to specify the parameters for the calculation.
 
-See the [device documentation](https://wirenboard.com/wiki/WB-MAI6_Modbus_Analog_Inputs) for a complete list of supported sensors and measurement uncertainties.
+See the device documentation for a complete list of supported sensors and measurement uncertainties.
 ::
 
 ::product-section{title="Mode selection"}

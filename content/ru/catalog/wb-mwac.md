@@ -2,13 +2,19 @@
 article: "WB-MWAC"
 cover: "wb-mwac/cover.png"
 catalogCover: "wb-mwac/catalog-cover.png"
+images: [
+  ["wb-mwac/cover.png"],
+  ["wb-mwac/wb-mwac-6.png"],
+  ["wb-mwac/wb-mwac-7.png"],
+  ["wb-mwac/wb-mwac-8.png"]
+]
 documentation: "https://wirenboard.com/wiki/WB-MWAC_v.2_Modbus_Water_Consumption_Metering_and_Leak_Monitoring"
 meta: "Модуль c RS-485, Modbus RTU для учета водопотребления и контроля протечек для квартиры, дома или промышленного объекта."
 keywords: "RS-485, Modbus RTU, защита от протечек, автономная, шесть зон, изолированные входы, выходы сухой контакт, wiren board"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/0a424378-a514-446c-bfc7-6e9b7393080c"],
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
-  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
+  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
 use_cases: ["solutions-intelligenthouse-knyaje", "solutions-rekota-house", "raspberry-pi-home-assistant"]
 ---

@@ -2,6 +2,18 @@
 article: "WB-MRGBW-D"
 cover: "wb-mrgbw-d/cover.png"
 catalogCover: "wb-mrgbw-d/catalog-cover.png"
+images: [
+  ["wb-mrgbw-d/cover.png"],
+  ["wb-mrgbw-d/wb-mrgbw-d-5.png"],
+  ["wb-mrgbw-d/wb-mrgbw-d-6.png"],
+  ["wb-mrgbw-d/wb-mrgbw-d-7.png"],
+  ["wb-mrgbw-d/wb-mrgbw-d-8.png"],
+  ["wb-mrgbw-d/wb-mrgbw-d-9.png"],
+  ["wb-mrgbw-d/wb-mrgbw-d-10.png"],
+  ["wb-mrgbw-d/wb-mrgbw-d-11.png"],
+  ["wb-mrgbw-d/wb-mrgbw-d-12.png"],
+  ["wb-mrgbw-d/wb-mrgbw-d-13.png"]
+]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MRGBW-D"
 meta: "Четырехканальный диммер  с RS-485, Modbus RTU"
 keywords: "RS-485, Modbus RTU"

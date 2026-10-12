@@ -2,6 +2,12 @@
 article: "WBIO-DO-SSR-8"
 cover: "wbio-do-ssr-8/cover.png"
 catalogCover: "wbio-do-ssr-8/catalog-cover.png"
+images: [
+  ["wbio-do-ssr-8/cover.png"],
+  ["wbio-do-ssr-8/wbio-do-ssr-8-1.png"],
+  ["wbio-do-ssr-8/wbio-do-ssr-8-2.png"],
+  ["wbio-do-ssr-8/wbio-do-ssr-8-3.png"]
+]
 documentation: "https://wirenboard.com/wiki/index.php/WBIO-DO-SSR-8_I/O_Module"
 meta: "Solid State Relay Output Module WBIO-DO-SSR-8"
 keywords: "Solid State Relay Output Module WBIO-DO-SSR-8"
@@ -24,9 +30,18 @@ Designed for controlling low-voltage loads and devices with dry contact inputs. 
 - Voltage up to 30 V
 ::
 
-:include{path="/catalog/includes/wbio_interfaces"}
+::product-section{title="Interfaces"}
+- WBIO bus
+- Can be connected via Modbus RTU or Ethernet using the WB-MIO module
+::
 
-:include{path="/catalog/includes/wbio_compatibility_wb5-8"}
+::product-section{title="Compatibility"}
+- Wiren Board 5
+- Wiren Board 6
+- Wiren Board 7
+- Wiren Board 8
+- Interface modules WB-MIO and WB-MIO-E
+::
 
 
 ::

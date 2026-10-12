@@ -2,6 +2,9 @@
 article: "WBPRO-MRGLED"
 cover: "wbpro-mrgled/cover.png"
 catalogCover: "wbpro-mrgled/cover.png"
+images: [
+  ["wbpro-mrgled/cover.png"]
+]
 meta: "RS-485, Modbus RTU 4-channel dimmer WBPRO-LEDDIM"
 keywords: "RS-485, Modbus RTU 4-channel dimmer WBPRO-LEDDIM"
 ---
@@ -67,7 +70,7 @@ See the documentation for connection diagrams and available modes.
   float="right"
 }
 
-Wiren Board controller's web interface allows to:
+Wiren Board controller's web intervace allows to:
 
 - select the operating mode and assign actions to inputs;
 - configure input parameters: debounce time, double and long press time, rate of change of brightness and saturation when pressing the button;

@@ -2,6 +2,13 @@
 article: "WB-MR6C"
 cover: "wb-mr6c/cover.png"
 catalogCover: "wb-mr6c/catalog-cover.png"
+images: [
+  ["wb-mr6c/cover.png"],
+  ["wb-mr6c/wb-mr6c-1.png"],
+  ["wb-mr6c/wb-mr6c-2.png"],
+  ["wb-mr6c/wb-mr6c-3.jpg"],
+  ["wb-mr6c/wb-mr6c-4.png"]
+]
 documentation: "https://wirenboard.com/wiki/WB-MR6C_v.1_Modbus_Relay_Modules"
 meta: "RS-485, Modbus RTU Relay module"
 keywords: "RS-485, Modbus RTU"
@@ -28,13 +35,12 @@ Designed for direct control of low-power loads (rated current 7 A) and contactor
 ::
 
 ::product-section{title="Discrete inputs"}
-- 6 discrete inputs with a direct channel control function
-- 1 discrete input for disabling all relay channels simultaneously
-- Flexible input configuration for controlling outputs
+- 7 dry contact inputs with flexible channel control configuration
+- 6 discrete inputs with a direct channel control function (default)
+- 1 digital input for disabling all relay channels simultaneously (default)
 - Group galvanic isolation of inputs
-- "Dry contact" inputs
-- Pulse counting at the input
-- Frequency measurement at the input
+- Inputs pulses count
+- Inputs frequency measure
 ::
 
 ::product-section{title="Other characteristics"}

@@ -2,13 +2,18 @@
 article: "WB-MAO4"
 cover: "wb-mao4/cover.png"
 catalogCover: "wb-mao4/catalog-cover.png"
+images: [
+  ["wb-mao4/cover.png"],
+  ["wb-mao4/wb-mao4-8.png"],
+  ["wb-mao4/wb-mao4-9.png"]
+]
 documentation: "https://wirenboard.com/wiki/WB-MAO4_0-10V_Modbus_Analog_Outputs"
 meta: "Модуль аналогового вывода 0-10В"
 keywords: "Модуль аналогового вывода 0-10В"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/0a424378-a514-446c-bfc7-6e9b7393080c"],
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
-  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
+  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
 ---
 ::product
@@ -89,7 +94,21 @@ video: [
 Для каждого выхода можно настроить свое безопасное состояние и необходимость перехода в него в случае потери связи. Кроме того можно включать или отключать управление со входов в безопасном режиме, например, запретить управление с кнопок когда связь с устройством пропала.
 ::
 
-:include{path="/catalog/includes/fast_modbus"}
+::product-section{title="Поддержка Быстрого Modbus"}
+:photo{
+  src="wb-mao4/wb-mao4-5.png"
+  width="500px"
+  float="right"
+}
+
+Все устройства Wiren Board в дополнение к стандартному Modbus RTU могут работать с его расширением [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, которое добавляет новые возможности:
+
+- мгновенный опрос состояний входов и измеренных значений через события;
+- быстрый поиск подключённых к контроллеру устройств;
+- разрешение коллизий адресов на шине.
+
+Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
+::
 
 :include{path="/catalog/includes/quality_control"}
 

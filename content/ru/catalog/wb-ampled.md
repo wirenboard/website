@@ -2,6 +2,13 @@
 article: "WB-AMPLED"
 cover: "wb-ampled/cover.png"
 catalogCover: "wb-ampled/catalog-cover.png"
+images: [
+  ["wb-ampled/cover.png"],
+  ["wb-ampled/wb-ampled-4.png"],
+  ["wb-ampled/wb-ampled-5.png"],
+  ["wb-ampled/wb-ampled-6.png"],
+  ["wb-ampled/wb-ampled-7.png"]
+]
 documentation: "https://wirenboard.com/wiki/WB-AMPLED_v.1_RGBW_Constant_Voltage_LED_Amplifier"
 meta: "Усилитель для светодиодных лент"
 keywords: "Усилитель для светодиодных лент"

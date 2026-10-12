@@ -2,13 +2,26 @@
 article: "WB-MSW4"
 cover: "wb-msw-v4/cover.png"
 catalogCover: "wb-msw-v4/catalog-cover.png"
+images: [
+  ["wb-msw-v4/cover.png"],
+  ["wb-msw-v4/wb-msw-v4-9.png"],
+  ["wb-msw-v4/wb-msw-v4-10.jpg"],
+  ["wb-msw-v4/wb-msw-v4-11.jpg"],
+  ["wb-msw-v4/wb-msw-v4-12.png"],
+  ["wb-msw-v4/wb-msw-v4-13.jpg"],
+  ["wb-msw-v4/wb-msw-v4-14.png"],
+  ["wb-msw-v4/wb-msw-v4-15.png"],
+  ["wb-msw-v4/wb-msw-v4-16.png"],
+  ["wb-msw-v4/wb-msw-v4-17.png"],
+  ["wb-msw-v4/wb-msw-v4-18.png"]
+]
 documentation: "https://wirenboard.com/wiki/WB-MSW_v.4_Modbus_Sensor"
 meta: "Настенный комбинированный датчик c RS-485, Modbus RTU"
 keywords: "Настенный комбинированный датчик c RS-485, Modbus RTU"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/0a424378-a514-446c-bfc7-6e9b7393080c"],
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
-  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
+  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
 use_cases: ["solutions-liten-magnit", "techsensor-module-cafe", "solutions-rekota-hotel-vertical"]
 ---
@@ -109,7 +122,17 @@ CO2 (углекислый газ) — газ без цвета с легким �
 В WB-MSW v.4 для измерения концентрации CO2 используется недисперсионный инфракрасный (NDIR) сенсор. Он позволяет проводить измерения с погрешностью 100 ppm + 5% от измеренного значения.
 ::
 
-:include{path="/catalog/includes/voc_control"}
+::product-section{title="Контроль VOC"}
+:photo{
+  src="wb-msw-v4/wb-msw-v4-5.jpg"
+  width="500px"
+  float="right"
+}
+
+Летучие органические вещества (ЛОВ, VOC) — это вещества, выделяющиеся в атмосферу в виде газов: испарения лаков/красок и элементов внутренней отделки помещений (фенол, формальдегид, толуол, стирол), спирты, бензол, гниющие овощи, выделяемые человеком газы, бытовой газ. Высокие концентрации опасных ЛОВ представляют угрозу жизни и здоровью человека.
+
+Датчик VOC определяет суммарную концентрацию этих веществ c типовой погрешностью ±15 %.
+::
 
 ::product-section{title="Поддержка Быстрого Modbus"}
 :photo{
