@@ -22,7 +22,10 @@ const calculatorClass = 'add-to-basket-set activate_option';
       data-count="1"
       :key="option.id"
     >
-      <NuxtImg class="product-optionImage" :src="`https://wirenboard.com/storage/cache/${option.image}`" />
+      <!-- Обычный img, а не NuxtImg: магазин отдаёт уже готовый адрес — нужного размера и с
+           подписью glide. Повторная обработка не нужна, а любая добавка к query-строке сломала
+           бы подпись. -->
+      <img class="product-optionImage" :src="option.image" :alt="option.name" loading="lazy" />
       <div class="product-optionName">{{ option.name }}</div>
       <div v-html="option.description" class="product-optionDescription"></div>
     </div>
