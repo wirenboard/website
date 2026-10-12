@@ -4,77 +4,85 @@ cover: "wb-mr6lvl/cover.png"
 catalogCover: "wb-mr6lvl/catalog-cover.png"
 images: [
   ["wb-mr6lvl/cover.png"],
-  ["wb-mr6lvl/wb-mr6lvl-9.png"]
+  ["wb-mr6lvl/wb-mr6lvl-9.png"],
+  ["wb-mr6lvl/wb-mr6lvl-board.png"]
 ]
-documentation: "https://wiki.wirenboard.com/wiki/WB-MR3LV/I(K)_and_WB-MR6LV/I(K)_Modbus_Relay_Modules"
 ---
 ::product
 #description
 
 Designed for switching general-purpose loads up to 2 kW, including inductive loads: lighting, curtain drives, etc.
 
-Available in two versions: I — with changeover contacts (SPDT) and S — with normally open contacts (SPST).
+A lightweight version of WB-MR6LV/I: maximum current of 10 A per channel instead of 16 A, but also designed for high inrush currents.
 
-Rated current: 7 A, inrush current (I/S): up to 120/165 A (20 ms). 
+Rated current: 7 A, inrush current: up to 120 A (20 ms). 
  6 relay outputs, 7 discrete inputs.
 
 
 #info
 
-## Main characteristics
+## Key features
 
 ::product-section{title="Advantages"}
 :photo{
-  src="wb-mr6lvl/wb-mr6lvl-1.png"
+  src="wb-mr6lvl/wb-mr6lvl-advantages.png"
   width="500px"
   float="right"
 }
 
 - Changeover contacts.
-- Powerful relays that can withstand high inrush currents.
-- Recognition of button presses on inputs and flexible configuration of the response of outputs to presses allows you to control one or more outputs from any inputs.
-- Indication of the output status on the housing for quick diagnostics and determination of the output status during commissioning.
-- Pulse counting and frequency measurement at the inputs for connecting counters with pulse output and measuring motor rotation speed.
+- Powerful relays that withstand high inrush currents.
+- Recognition of button presses on inputs and flexible configuration of the response of outputs to presses, allows you to control one or more outputs from any inputs.
+- Indication of output status on the housing for quick diagnostics and determination of output status during commissioning.
+- Pulse counting and frequency measurement at inputs for connecting meters with pulse output and measuring motor speed.
 - Safe mode in case of RS-485 communication failure.
+- Output timer functions: on and off delay, switching on for a set time, cyclic mode.
 - Programmable protection against bounce of switch contacts.
 - Compact housing for DIN rail.
 - Fast and easy integration into automation and monitoring systems.
 
-Supports [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, which allows you to instantly deliver input states and click counter values to the Wiren Board controller.
+- Technical support on the portal.
+- Your company logo can be applied.
+
+Supports [Fast Modbus](https://wiki.wirenboard.com/wiki/Fast_Modbus/en) ⚡, which allows you to instantly deliver input states and button press counter values to the Wiren Board controller.
 ::
 
 ::product-section{title="Hardware"}
-Specifications:
+:photo{
+  src="wb-mr6lvl/wb-mr6lvl-hardware.png"
+  width="500px"
+  float="right"
+}
 
 - 6 relay channels rated 7 A 230 V AC.
 - Maximum continuous current: 10 A per channel.
-- Maximum starting current modifications /I - up to 120 A (20 ms)
-- 7 discrete inputs with group galvanic isolation, by default 6 inputs control outputs of the same name, and 1 disables all relay channels.
+- Maximum inrush current: up to 120 A (20 ms).
+- 7 discrete inputs with group galvanic isolation; by default, 6 inputs control the outputs with the same numbers, and one input turns off all relay channels.
 - Press handling: short, long, double and short, then long.
 
 - Supply voltage: 9…28 V direct current.
 - Interface: RS-485, Modbus RTU.
 - Operating temperature: -40…+80 °C.
-- DIN rail housing, 6 modules.
+- DIN rail housing, 6 modules (106 x 90 x 58 mm).
 ::
 
 ::product-section{title="Hongfa Long Life Relays"}
 :photo{
-  src="wb-mr6lvl/wb-mr6lvl-2.jpg"
+  src="wb-mr6lvl/wb-mr6lvl-hongfa.jpg"
   width="500px"
   float="right"
 }
 
-Reliable Hongfa relays are used for switching. The relays have silver tin dioxide (AgSnO) contacts, which ensures switching of high starting currents. Therefore, the WB-MR6-LV module is suitable for controlling high-power loads and LED lamps.
+Reliable Hongfa relays are used for switching. The relays have silver tin oxide contacts (AgSnO2), which ensures switching of high inrush currents. Therefore, the WB-MR6LV/L module is suitable for controlling high-power loads and LED lamps.
 
-To ensure the quality of the relay we [tested them with high](https://wirenboard.com/ru/news/proveli-ispytania-rele-na-bolsie-puskovye-toki-458/) inrush current several times higher than nominal.
+To make sure of the relay quality, we [tested them](https://wirenboard.com/en/news/tested-the-relays-for-high-starting-currents-467/) with inrush currents several times higher than the rated ones.
 
 The relay manufacturer claims a service life of at least 75 000 operations.
 ::
 
 ::product-section{title="Local control"}
 :photo{
-  src="wb-mr6lvl/wb-mr6lvl-3.png"
+  src="wb-mr6lvl/wb-mr6lvl-local-control.jpg"
   width="500px"
   float="right"
 }
@@ -86,7 +94,7 @@ If the module is connected to a bus, local logic can be combined with commands f
 
 ::product-section{title="Safe mode"}
 :photo{
-  src="wb-mr6lvl/wb-mr6lvl-4.png"
+  src="wb-mr6lvl/wb-mr6lvl-safe-mode.png"
   width="500px"
   float="right"
 }
@@ -98,19 +106,19 @@ For each output, you can configure its own safe state and the need to switch to 
 
 ::product-section{title="Curtains controlling"}
 :photo{
-  src="wb-mr6lvl/wb-mr6lvl-5.png"
+  src="wb-mr6lvl/wb-mr6lvl-curtains.jpg"
   width="500px"
   float="right"
 }
 
-The WB-MR6-LV module has a special mode for working with curtains, which eliminates the simultaneous activation of the direction relay and guarantees a pause between switchings. In the settings, you can set the opening/closing time, pause time when changing direction, as well as actions when turning on the power and entering safe mode.
+The WB-MR6LV/L module has a special mode for working with curtains, which eliminates the simultaneous activation of the direction relays and guarantees a pause between switchings. In the settings, you can set the opening/closing time, pause time when changing direction, as well as actions when turning on the power and entering safe mode.
 
-The outputs are individually configurable, so only part of the outputs can be used to control curtains, and the rest can be used for other purposes. You can also configure the curtain action for each of the 4 types of button presses connected to the module inputs.
+The outputs are individually configurable, so only part of the outputs can be used to control curtains, and the rest can be used for other purposes. Up to three drives can be connected to the module — to outputs K1 and K2, K3 and K4, K5 and K6. You can also configure the curtain action for each of the 4 types of button presses connected to the module inputs.
 ::
 
 ::product-section{title="Fast Modbus support"}
 :photo{
-  src="wb-mr6lvl/wb-mr6lvl-6.png"
+  src="wb-mr6lvl/wb-mr6lvl-fast-modbus-support.png"
   width="500px"
   float="right"
 }
@@ -121,10 +129,12 @@ All Wiren Board devices, in addition to the standard Modbus RTU, can work with i
 - quick search for devices connected to the controller;
 - resolving address collisions on the bus.
 
-Additional features are enabled automatically - if the device supports extension, the controller driver will work with the device quickly Modbus if the device does not know anything about the extension - it will work using standard Modbus RTU.
+For the user, the additional features are enabled seamlessly: if the device supports the extension, the controller driver will work with it via Fast Modbus; if the device knows nothing about the extension, it will work via standard Modbus RTU.
 ::
 
-:include{path="/catalog/includes/quality_control"}
+<br>
+
+:include{path="/catalog/includes/quality_control" withSeparator="true"}
 
 ::product-section{title="Setup"}
 :photo{
@@ -135,15 +145,15 @@ Additional features are enabled automatically - if the device supports extension
 
 When used with a Wiren Board controller, you can use the mouse in the web interface:
 
-- enable and disable channels and configure the polling period,
-- set input operating modes,
-- configure the reaction of outputs to inputs,
-- set the state of the outputs when power is applied,
-- configure safe mode settings,
-- adjust the contact bounce protection time,
-- switch the outputs to the curtain drive control mode.
+- Enable and disable channels and configure the polling period.
+- Set input operating modes.
+- Configure the reaction of outputs to inputs.
+- Set the state of the outputs when power is applied.
+- Configure safe mode settings.
+- Adjust the contact bounce protection time.
+- Switch the outputs to the curtain drive control mode.
 
-For configuration without a controller, you can use the [Wiren Board Device Editor](https://wiki.wirenboard.com/wiki/WASM_Device_Editor) paired with a WB-USB485 interface converter or a similar device.
+For configuration without a controller, you can use the Wiren Board Device Editor paired with a WB-USB485 interface converter or a similar device.
 
 When used with other equipment, the module can be configured via the RS-485 bus by writing values to Modbus registers. The register table is open, well documented and available online in the device documentation.
 ::
@@ -155,7 +165,7 @@ When used with other equipment, the module can be configured via the RS-485 bus 
   float="right"
 }
 
-If a Wiren Board controller is used, then the states of inputs, outputs and button press counters available in the controller's web interface and can be used in automation scripts or transferred to a higher-level system. The device card displays only the channels enabled in the survey settings.
+If a Wiren Board controller is used, then the states of inputs, outputs and button press counters are available in the controller's web interface and can be used in automation scripts or transferred to a higher-level system. The device card displays only the channels enabled in the polling settings.
 
 The module also transmits all data via Modbus RTU (RS-485), which can be read by any equipment or software that supports this protocol: third-party controllers, HMI panels or SCADA.
 ::
