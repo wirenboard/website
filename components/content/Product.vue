@@ -39,6 +39,7 @@ const getPriceWithCurrencyIcon = (price: number) => {
       </div>
 
       <div class="product-coverWrapper">
+        qwerty
         <NuxtImg
           :src="data.cover"
           class="product-cover"
