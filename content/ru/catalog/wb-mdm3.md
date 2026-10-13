@@ -4,6 +4,7 @@ cover: "wb-mdm3/cover.png"
 catalogCover: "wb-mdm3/catalog-cover.png"
 images: [
   ["wb-mdm3/cover.png"],
+  ["wb-mdm3/wb-mdm3-side.png"],
   ["wb-mdm3/wb-mdm3-8.png"],
   ["wb-mdm3/wb-mdm3-9.png"]
 ]
@@ -17,32 +18,31 @@ video: [
   ["https://peertube.wirenboard.com/videos/embed/84f1ed7f-a9c0-4d7d-8626-93a4598c2efa"],
   ["https://peertube.wirenboard.com/videos/embed/2ae96e58-39e4-40df-ad06-bd3331aecbb6"]
 ]
-use_cases: ["comfort-life-piter-kvartira", "solutions-intelligenthouse-pik", "raspberry-pi-home-assistant"]
 ---
 ::product
 #description
 
 Трехканальный диммер с интерфейсом RS-485. Монтируется на DIN-рейку, имеет 6 входов для управления выходами. Позволяет реализовать управление диммируемым освещением с помощью кнопочных выключателей.
 
-Применяется для диммирования ламп накаливания, а также поддерживающих функцию диммирования светодиодных ламп, драйверов светодиодных лент, электронных трансформаторов питания галогенных ламп и т.п.
+Применяется для диммирования ламп накаливания, а также поддерживающих функцию диммирования светодиодных ламп, драйверов светодиодных лент, электронных трансформаторов питания галогенных ламп и т. п.
 
 Модуль WB-MDM3 включен в реестр Минпромторга.
 
 
 #info
 
-## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+## Основные характеристики
 
 ::product-section{title="Преимущества"}
 :photo{
-  src="wb-mdm3/wb-mdm3-1.png"
+  src="wb-mdm3/wb-mdm3-advantages.png"
   width="500px"
   float="right"
 }
 
-- мощность до 300 Вт на канал;
+- мощность до 300 Вт на канал для ламп накаливания;
 - гибкая настройка управления кнопками и распознавание нажатий, позволяет настраивать управление выходами со входов;
-- выбор режима управления: по заднему и по переднему фронту, для разных типов нагрузок;
+- выбор режима управления: по переднему и по заднему фронту, для разных типов нагрузок;
 - независимое управление каждым каналом;
 - плавное изменение яркости и настройка скорости изменения яркости;
 - ключевой режим, для управления вместо реле, но без щелчков;
@@ -56,18 +56,19 @@ use_cases: ["comfort-life-piter-kvartira", "solutions-intelligenthouse-pik", "ra
 - возможно нанесение логотипа вашей компании.
 
 Поддерживает [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, что позволяет мгновенно доставлять состояния входов и значения счетчиков нажатий в контроллер Wiren Board.
+
+<br>
 ::
 
 ::product-section{title="Аппаратная часть"}
 :photo{
-  src="wb-mdm3/wb-mdm3-2.png"
+  src="wb-mdm3/wb-mdm3-hardware.png"
   width="500px"
   float="right"
 }
 
-Технические характеристики:
-
-- 3 канала диммирования мощностью до 300 Вт на канал;
+- 3 канала диммирования;
+- максимальная мощность на канал: 300 Вт для ламп накаливания, 180 Вт для диммируемых светодиодных ламп;
 - 6 дискретных входов;
 - отсечка фазы по переднему фронту или по заднему фронту;
 - шаг диммирования — 1 %;
@@ -79,11 +80,13 @@ use_cases: ["comfort-life-piter-kvartira", "solutions-intelligenthouse-pik", "ra
 - интерфейс: RS-485, Modbus RTU;
 - расширенный диапазон температуры эксплуатации: -40…+80 °С;
 - корпус на DIN-рейку, 3M (53 x 90 x 58 мм).
+
+<br>
 ::
 
 ::product-section{title="Локальное управление"}
 :photo{
-  src="wb-mdm3/wb-mdm3-3.jpg"
+  src="wb-mdm3/wb-mdm3-local-control.jpg"
   width="500px"
   float="right"
 }
@@ -95,7 +98,7 @@ use_cases: ["comfort-life-piter-kvartira", "solutions-intelligenthouse-pik", "ra
 
 ::product-section{title="Диммирование по переднему и заднему фронту"}
 :photo{
-  src="wb-mdm3/wb-mdm3-4.png"
+  src="wb-mdm3/wb-mdm3-edges.png"
   width="500px"
   float="right"
 }
@@ -109,7 +112,7 @@ use_cases: ["comfort-life-piter-kvartira", "solutions-intelligenthouse-pik", "ra
 
 ::product-section{title="Поддержка Быстрого Modbus"}
 :photo{
-  src="wb-mdm3/wb-mdm3-5.png"
+  src="wb-mdm3/wb-mdm3-fast-modbus-support.png"
   width="500px"
   float="right"
 }
@@ -123,7 +126,9 @@ use_cases: ["comfort-life-piter-kvartira", "solutions-intelligenthouse-pik", "ra
 Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
 ::
 
-:include{path="/catalog/includes/quality_control"}
+<br>
+
+:include{path="/catalog/includes/quality_control" withSeparator="true"}
 
 ::product-section{title="Настройка"}
 :photo{
@@ -157,7 +162,15 @@ use_cases: ["comfort-life-piter-kvartira", "solutions-intelligenthouse-pik", "ra
 Все данные можно читать любым оборудованием или ПО с поддержкой протокола RS-485, Modbus RTU: контроллерами сторонних производителей, HMI панелями или SCADA.
 ::
 
-:include{path="/catalog/includes/certificates"}
+::product-section{title="Сертификаты"}
+:photo{
+  src="wb-mdm3/wb-mdm3-certificates.jpg"
+  width="500px"
+  float="right"
+}
+
+Устройство соответствует требованиям [ТР ТС 004/2011](https://wirenboard.com/ru/pages/certificate/).
+::
 
 
 ::
