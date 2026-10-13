@@ -4,6 +4,7 @@ cover: "wbe2-i-knx/cover.png"
 catalogCover: "wbe2-i-knx/catalog-cover.png"
 images: [
   ["wbe2-i-knx/cover.png"],
+  ["wbe2-i-knx/back-side.png"],
   ["wbe2-i-knx/wbe2-i-knx-1.png"],
   ["wbe2-i-knx/wbe2-i-knx-2.png"],
   ["wbe2-i-knx/wbe2-i-knx-3.png"],
