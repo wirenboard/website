@@ -9,7 +9,7 @@ const tag = ref();
 const visibleItems = ref<string[]>([]);
 
 useHead({
-  title: t('title'),
+  title: `%{t('title')} — Wiren Board`,
 });
 
 const mapCenter = computed(() => {
@@ -136,13 +136,13 @@ watch(data, (val) => {
 <i18n>
 {
   "ru": {
-    "title": "Компании-интеграторы — Wiren Board",
+    "title": "Компании-интеграторы",
     "chooseArea": "Регион",
     "tags": "Профиль организации",
     "empty": "В данной области пока нет компаний-интеграторов"
   },
   "en": {
-    "title": "Integrators — Wiren Board",
+    "title": "Integrators",
     "chooseArea": "Region",
     "tags": "Category",
     "empty": "There are no integrators in this area yet"
