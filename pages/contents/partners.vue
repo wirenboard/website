@@ -4,7 +4,7 @@ import type { QueryBuilderParams } from '@nuxt/content';
 const { t, locale } = useI18n();
 
 useHead({
-  title: t('title'),
+  title: `${t('title')} — Wiren Board`,
 });
 
 const query: QueryBuilderParams = { path: '/partners', where: [{ _locale: locale.value }], sort: [{ title: 1 }, { priority: 1 }] }
@@ -41,10 +41,10 @@ const query: QueryBuilderParams = { path: '/partners', where: [{ _locale: locale
 <i18n>
 {
   "ru": {
-    "title": "Партнёры — Wiren Board"
+    "title": "Партнёры"
   },
   "en": {
-    "title": "Partners — Wiren Board"
+    "title": "Partners"
   }
 }
 </i18n>
