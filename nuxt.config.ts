@@ -123,6 +123,11 @@ export default defineNuxtConfig({
       unstyled: true,
     },
   },
+  vite: {
+    server: {
+      allowedHosts: true,
+    },
+  },
   nitro: {
     routeRules: {
       '/.well-known/appspecific/**': {

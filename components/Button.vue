@@ -26,6 +26,7 @@ withDefaults(defineProps<{
       'wb-button-m': size === 'default',
       'wb-button-l': size === 'large',
       'wb-button-primary': variant === 'primary',
+      'wb-button-secondary': variant === 'secondary',
       'wb-button-outlined': outlined
     }"
     :id="id">
@@ -76,9 +77,18 @@ withDefaults(defineProps<{
   color: var(--primary-color)
 }
 
-.wb-button-primary.wb-button-outlined {
+.wb-button-secondary {
+  background: var(--gray-color);
+  border: 1px solid var(--border-color);
+  color: var(--heading-color);
+}
+
+.wb-button-secondary:hover {
+  background: var(--border-color) !important;
+}
+
+.wb-button-secondary.wb-button-outlined {
   background: transparent;
-  color: var(--primary-color)
 }
 
 .wb-button-m {

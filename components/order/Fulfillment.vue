@@ -4,17 +4,16 @@ import {RUSSIA_ID, DeliveryType, DeliveryError, type AvailableDelivery, type Ava
 
 const { t } = useI18n();
 const config = useRuntimeConfig();
-const totalSum = defineModel<number>('totalSum', { default: 0 });
-const pendingModel = defineModel<boolean>('pending', { default: false });
-const deliveryError = defineModel<boolean>('deliveryError', { default: false });
 const deliveryData = defineModel<Record<string, any>>('deliveryData', { default: () => ({}) });
 const selectedDeliveryType = defineModel<string>('deliveryType');
 const country = defineModel<number>('country');
 
-const { basketData, recentAddresses, fieldErrors } = defineProps<{
+const { basketData, recentAddresses, fieldErrors, deliveryInfo, deliveryErrorKind } = defineProps<{
   basketData: Record<string, number>;
   recentAddresses?: RecentAddress[];
   fieldErrors?: Record<string, string>;
+  deliveryInfo: AvailableDeliveriesInfo | null;
+  deliveryErrorKind: DeliveryError | null;
 }>();
 
 const recentSuggestions = computed(() =>
@@ -36,9 +35,7 @@ const recentSuggestions = computed(() =>
   }))
 );
 
-const deliveryQuery = ref<Record<string, any>>({});
-const deliveryAddress = ref<Record<string, any>>({ country: country.value, city: deliveryData.value.city, postcode: deliveryData.value.postcode, street: deliveryData.value.street, house: deliveryData.value.house });
-const deliveryAddressDirty = ref<Record<string, any>>({...deliveryAddress.value});
+const deliveryAddressDirty = ref<Record<string, any>>({ country: country.value, city: deliveryData.value.city, postcode: deliveryData.value.postcode, street: deliveryData.value.street, house: deliveryData.value.house });
 const deliveryAddressDetails = ref<Record<string, string>>({ room: deliveryData.value.room});
 const deliveryPVZ = ref<Record<string, any>>({
   cdek_pvz_tariff: deliveryData.value.cdek_pvz_tariff,
@@ -49,22 +46,19 @@ const deliveryPVZ = ref<Record<string, any>>({
   cdek_pvz_address: deliveryData.value.cdek_pvz_address,
   cdek_pvz_postal_code: deliveryData.value.cdek_pvz_postal_code,
 });
-watchEffect(() => { deliveryQuery.value = { ...deliveryAddress.value, ...deliveryPVZ.value }; });
 watchEffect(() => { deliveryData.value = { ...deliveryAddressDirty.value, ...deliveryAddressDetails.value, ...deliveryPVZ.value }; });
-const { data: delivery, pending, error: deliveryFetchError, refresh } = await useApi<AvailableDeliveriesInfo>(`/order/delivery/`, deliveryQuery);
 
 const isRussia = computed(() => country.value === RUSSIA_ID);
 
-const availableDeliveries = computed(() => delivery.value?.available ?? []);
+const availableDeliveries = computed(() => deliveryInfo ?? []);
 
 const isMoscowDelivery = computed(() => selectedDelivery.value?.id === 'msk');
 
-const hasSavedAddress = ['city', 'street', 'house', 'postcode'].some(k => deliveryAddress.value[k]);
+const hasSavedAddress = ['city', 'street', 'house', 'postcode'].some(k => deliveryAddressDirty.value[k]);
 const addressMode = ref<'search' | 'fields'>(isRussia.value && !hasSavedAddress ? 'search' : 'fields');
 const addressSearchNoResults = ref(false);
 
 const resetAddress = () => {
-  deliveryAddress.value = { country: country.value };
   deliveryAddressDirty.value = { country: country.value as number };
   deliveryAddressDetails.value = {};
   addressMode.value = isRussia.value ? 'search' : 'fields';
@@ -88,7 +82,7 @@ const selectItems = computed(() => {
       if (item.daysMin == null || item.daysMax == null) return undefined;
       let price = '';
       if (item.type !== DeliveryType.Pickup && item.price != null) {
-        price = item.price === 0 ? ` • ${t('freeDelivery')}` : ` • ${t('price', { n: item.price })}`;
+        price = item.price === 0 ? ` • ${t('priceFree')}` : ` • ${t('price', { n: item.price })}`;
         if (item.id === 'msk') price += `, ${t('moscowOnly')}`;
       }
       if (item.daysMin !== item.daysMax) return `${item.daysMin}–${item.daysMax} ${t('days', item.daysMax)}${price}`;
@@ -97,32 +91,12 @@ const selectItems = computed(() => {
   }));
 });
 
-
-const deliveryErrorKind = computed<DeliveryError | null>(() => {
-  if (deliveryFetchError.value) return DeliveryError.Network;
-  const error = selectedDelivery.value?.error;
-  if (!error) return null;
-  return error === DeliveryError.AddressUnavailable ? DeliveryError.AddressUnavailable : DeliveryError.Network;
-});
-
 const deliveryErrorMessage = computed(() => {
-  if (!deliveryErrorKind.value) return null;
-  return deliveryErrorKind.value === DeliveryError.Network ? t('serviceUnavailable') : t('deliveryError');
+  if (!deliveryErrorKind) return null;
+  return deliveryErrorKind === DeliveryError.Network ? t('serviceUnavailable') : t('deliveryError');
 });
 
-const cdekPvzRejected = computed(() => deliveryErrorKind.value === DeliveryError.AddressUnavailable);
-
-watch(selectedDelivery, (value) => {
-  totalSum.value = value?.total ?? 0;
-}, { immediate: true });
-
-watch(deliveryErrorKind, (kind) => {
-  deliveryError.value = kind !== null;
-}, { immediate: true });
-
-watch(pending, (value) => {
-  pendingModel.value = value;
-});
+const cdekPvzRejected = computed(() => deliveryErrorKind === DeliveryError.AddressUnavailable);
 
 watch(selectedDeliveryType, () => {
   if (selectedDelivery.value?.type === DeliveryType.Taxi) {
@@ -133,21 +107,10 @@ watch(selectedDeliveryType, () => {
 });
 
 const applyAddress = ({ city, postcode, street, house, room }: { city: string; postcode: string; street: string; house: string; room: string }) => {
-  deliveryAddressDirty.value = { ...deliveryAddress.value, city, postcode, street, house };
+  deliveryAddressDirty.value = { ...deliveryAddressDirty.value, city, postcode, street, house };
   if (room) deliveryAddressDetails.value = { ...deliveryAddressDetails.value, room };
   addressMode.value = 'fields';
 };
-
-let debounceTimer: ReturnType<typeof setTimeout> | null = null;
-watch(deliveryAddressDirty, () => {
-  if (debounceTimer) clearTimeout(debounceTimer);
-  debounceTimer = setTimeout(() => {
-    const { city, postcode, street, house } = deliveryAddressDirty.value;
-    if (!city?.trim() || !postcode?.trim() || !street?.trim() || !house?.trim()) return;
-    deliveryAddress.value = deliveryAddressDirty.value;
-  }, 1500);
-}, { deep: true });
-
 
 const cdekWidget = ref<null | { open: () => void; close: () => void }>(null);
 const cdekLoading = ref(false);
@@ -186,10 +149,6 @@ watchEffect(() => {
   if (!cdekPvzInputRef.value) return;
   cdekPvzInputRef.value.setCustomValidity(cdekPvzData.value ? '' : t('cdekRequired'));
 });
-
-watch(deliveryQuery, () => {
-  refresh();
-}, { deep: true });
 
 const initCdekWidget = (): Promise<void> => {
   if (cdekInitPromise) return cdekInitPromise;
@@ -230,7 +189,8 @@ const initCdekWidget = (): Promise<void> => {
           cdekWidget.value!.close();
         },
         onCalculate: ({ office }: { office: Tariff[] }) => {
-          if (delivery.value?.freeDelivery) {
+          const cdekPvzFree = availableDeliveries.value.find(item => item.id === 'cdek_pvz')?.freeDelivery;
+          if (cdekPvzFree) {
             office.map((item: Tariff) => {
               item.delivery_sum = 0;
             });
@@ -253,13 +213,13 @@ const openCdekWidget = async () => {
 </script>
 
 <template>
+  <legend>{{ t('title') }}</legend>
   <div class="fulfillment">
-    <h2>{{ t('title') }}</h2>
-
     <OrderSelect
       v-model="selectedDeliveryType"
       name="delivery"
       :items="selectItems"
+      :ariaLabel="t('title')"
     />
 
     <p v-if="deliveryErrorMessage" class="fulfillment-error">{{ deliveryErrorMessage }}</p>
@@ -481,7 +441,7 @@ const openCdekWidget = async () => {
 <i18n>
 {
   "ru": {
-    "title": "Выберите способ получения заказа",
+    "title": "Способ получения заказа",
     "country": "Страна",
     "cdekChoose": "Выбрать пункт выдачи",
     "cdekChange": "Изменить пункт выдачи",
@@ -498,7 +458,7 @@ const openCdekWidget = async () => {
     "room": "Квартира/офис",
     "comment": "Комментарий",
     "days": "день | дня | дней",
-    "freeDelivery": "Бесплатная доставка",
+    "priceFree": "Бесплатная доставка",
     "price": "{n} ₽",
     "moscowOnly": "только по Москве",
     "deliveryError": "Доставка по данному адресу невозможна, проверьте страну и адрес или выберите другой тип доставки",
@@ -506,7 +466,7 @@ const openCdekWidget = async () => {
     "cdekRequired": "Выберите пункт выдачи"
   },
   "en": {
-    "title": "Select a delivery method",
+    "title": "Delivery method",
     "country": "Country",
     "cdekChoose": "Select a pickup location",
     "cdekChange": "Change pickup location",
@@ -523,7 +483,7 @@ const openCdekWidget = async () => {
     "room": "Apartment / office",
     "comment": "Comment",
     "days": "day | days",
-    "freeDelivery": "Free delivery",
+    "priceFree": "Free delivery",
     "price": "€{n}",
     "moscowOnly": "Moscow only",
     "deliveryError": "Delivery to this address is not available, please check the country and address or select a different delivery type",

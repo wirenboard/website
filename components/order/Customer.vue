@@ -88,7 +88,7 @@ const onOrgSelect = ({ orgName, inn, kpp, address }: { orgName: string; inn: str
 </script>
 
 <template>
-  <h2>{{ t('title') }}</h2>
+  <legend>{{ t('title') }}</legend>
   <div class="customer">
     <Select
       v-model="country"
@@ -265,7 +265,7 @@ const onOrgSelect = ({ orgName, inn, kpp, address }: { orgName: string; inn: str
 <i18n>
 {
   "ru": {
-    "title": "Введите информацию о покупателе",
+    "title": "Информация о покупателе",
     "country": "Страна",
     "individual": "Физическое лицо",
     "entity": "Юридическое лицо",
@@ -286,7 +286,7 @@ const onOrgSelect = ({ orgName, inn, kpp, address }: { orgName: string; inn: str
     "kppFormat": "КПП — 9 цифр"
   },
   "en": {
-    "title": "Enter the customer's information",
+    "title": "Customer's information",
     "country": "Country",
     "individual": "Individuals",
     "entity": "Legal entities",

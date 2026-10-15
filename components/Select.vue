@@ -8,7 +8,7 @@ defineProps<{
   placeholder: string;
   disabled?: boolean;
   showClear?: boolean;
-  size?: 'small' | 'default';
+  size?: 'small' | 'default' | 'large';
   isSearchable: boolean;
   changeCallback?: () => void;
 }>();
@@ -20,7 +20,8 @@ const model = defineModel();
   <Select
     :class="{
       'wb-select-small': size === 'small',
-      'wb-select-default': size !== 'small',
+      'wb-select-large': size === 'large',
+      'wb-select-default': size !== 'small' && size !== 'large',
       }"
     v-model="model"
     :options="options"
@@ -169,7 +170,6 @@ const model = defineModel();
 [data-pc-section="label"] {
   color: #000;
   font-size: 16px;
-  //font-weight: 500;
 }
 
 [data-pc-name="iconfield"] {
@@ -177,12 +177,17 @@ const model = defineModel();
 }
 
 .wb-select-default {
-  padding: 26px 12px 18px;
+  padding: 17px 12px;
 }
 
-.wb-select-default [data-pc-section="label"]  {
+.wb-select-large {
+  padding: 22px 12px;
+}
+
+.wb-select-default [data-pc-section="label"],
+.wb-select-large [data-pc-section="label"] {
   font-size: 24px;
-  font-weight: 500;
+  line-height: 24px;
 }
 
 .wb-select-small {

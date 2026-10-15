@@ -1,14 +1,12 @@
 <script lang="ts" setup>
-import Loader from '~/components/Loader.vue';
 import Button from '~/components/Button.vue';
-import type {OrderInfo, PaymentsInfo} from "~/common/types";
+import { DeliveryType, DeliveryError, type OrderInfo, type PaymentsInfo, type AvailableDeliveriesInfo } from '~/common/types';
 
 const { t, locale } = useI18n();
 
-const totalSum = ref(0);
-const fulfillmentPending = ref(false);
 const submitPending = ref(false);
-const fulfillmentDeliveryError = ref(false);
+const couponRef = ref<{ applying: boolean } | null>(null);
+const couponApplying = computed(() => couponRef.value?.applying ?? false);
 
 const orderError = ref(false);
 const fieldErrors = ref<Record<string, string>>({});
@@ -49,7 +47,6 @@ const deliveryType = ref(orderInfo.value!.deliveryType);
 const country = ref(Number(orderInfo.value!.deliveryData.country));
 
 const paymentsParams = computed(() => ({ payerType: payerType.value, country: country.value }));
-// Fetch here rather than in Payment.vue: paymentType must be set before the first render, otherwise SSR hydration loses the selection.
 const { data: paymentsInfo } = await useApi<PaymentsInfo>(
   '/order/payments/',
   paymentsParams,
@@ -83,9 +80,90 @@ const { execute: submitOrder, data: orderResult, error: orderRequestError } = aw
 
 const formRef = ref<HTMLFormElement | null>(null);
 
+const settledDeliveryData = ref<Record<string, any>>({ ...deliveryData.value });
+const DELIVERY_DATA_KEYS = [
+  'city', 'postcode', 'street', 'house', 'room',
+  'cdek_pvz_id', 'cdek_pvz_address', 'cdek_pvz_country_code',
+  'cdek_pvz_city_code', 'cdek_pvz_city', 'cdek_pvz_tariff', 'cdek_pvz_postal_code',
+];
+const normalizeDeliveryData = (value: Record<string, any>) =>
+  DELIVERY_DATA_KEYS.map(key => `${key}=${value[key] ?? ''}`).join('|');
+let lastDeliveryDataJson = normalizeDeliveryData(deliveryData.value);
+let deliveryDebounceTimer: ReturnType<typeof setTimeout> | null = null;
+watch(deliveryData, (value, oldValue) => {
+  const json = normalizeDeliveryData(value);
+  if (json === lastDeliveryDataJson) return;
+  lastDeliveryDataJson = json;
+
+  if (deliveryDebounceTimer) clearTimeout(deliveryDebounceTimer);
+  if (value.cdek_pvz_id !== oldValue?.cdek_pvz_id) {
+    settledDeliveryData.value = { ...value };
+    return;
+  }
+  deliveryDebounceTimer = setTimeout(() => {
+    const { city, postcode, street, house } = value;
+    if (!city?.trim() || !postcode?.trim() || !street?.trim() || !house?.trim()) return;
+    settledDeliveryData.value = { ...value };
+  }, 1500);
+}, { deep: true });
+
+const deliveryQuery = computed(() => ({ ...settledDeliveryData.value, country: country.value }));
+const { data: deliveryInfo, pending: deliveryInfoPending, error: deliveryFetchError, refresh: refreshDeliveryInfo } = await useApi<AvailableDeliveriesInfo>(
+  '/order/delivery/',
+  deliveryQuery,
+  { watch: [deliveryType, country, settledDeliveryData] },
+);
+const selectedDeliveryItem = computed(() => deliveryInfo.value?.find(item => item.id === deliveryType.value));
+const deliveryErrorKind = computed<DeliveryError | null>(() => {
+  if (deliveryFetchError.value) return DeliveryError.Network;
+  const error = selectedDeliveryItem.value?.error;
+  if (!error) return null;
+  return error === DeliveryError.AddressUnavailable ? DeliveryError.AddressUnavailable : DeliveryError.Network;
+});
+const fulfillmentDeliveryError = computed(() => deliveryErrorKind.value !== null);
+const deliveryPriceRub = computed(() => selectedDeliveryItem.value?.price ?? 0);
+const deliveryPricePending = computed(() => selectedDeliveryItem.value?.price == null);
+const anyDeliveryFreeFromCoupon = computed(() =>
+  deliveryInfo.value?.some(item => item.freeDelivery) ?? false
+);
+const deliveryCouponIneffective = computed(() =>
+  anyDeliveryFreeFromCoupon.value
+  && !selectedDeliveryItem.value?.freeDelivery
+  && !deliveryPricePending.value
+  && deliveryPriceRub.value > 0
+);
+
+const itemsBreakdown = ref({
+  itemsSumRub: orderInfo.value!.basketData.itemsSumRub,
+  kuponDiscountRub: orderInfo.value!.basketData.kuponDiscountRub,
+  bulkDiscountRub: orderInfo.value!.basketData.bulkDiscountRub,
+  partnerDiscountRub: orderInfo.value!.basketData.partnerDiscountRub,
+});
+
+const onCouponApplied = (
+  basketData: { itemsSumRub: number; kuponDiscountRub: number; bulkDiscountRub: number; partnerDiscountRub: number },
+  deliveryOptions?: AvailableDeliveriesInfo,
+) => {
+  itemsBreakdown.value = basketData;
+  if (deliveryOptions) {
+    deliveryInfo.value = deliveryOptions;
+  }
+};
+
+const totalSum = computed(() =>
+  itemsBreakdown.value.itemsSumRub
+  - itemsBreakdown.value.kuponDiscountRub
+  - itemsBreakdown.value.bulkDiscountRub
+  - itemsBreakdown.value.partnerDiscountRub
+  + deliveryPriceRub.value
+);
+
+const formatMoney = (value: number) => locale.value === 'ru' ? `${toTriads(value)} ₽` : `€${toTriads(value)}`;
+
 const makeOrder = async () => {
   if (submitPending.value) return;
   if (fulfillmentDeliveryError.value) return;
+  if (couponApplying.value) return;
 
   const firstInvalid = formRef.value?.querySelector(':invalid:not(fieldset)') as HTMLElement | null;
   if (firstInvalid) {
@@ -131,60 +209,107 @@ const makeOrder = async () => {
 <template>
   <p v-if="orderInfo!.basketData.cost === 0" class="order-empty">{{ t('emptyCart') }}</p>
   <form v-else ref="formRef" class="order" @submit.prevent="makeOrder">
-    <OrderCustomer
-      v-model:payerType="payerType"
-      v-model:individual="individual"
-      v-model:entity="entity"
-      v-model:country="country"
-      :countries="orderInfo!.countries"
-      :cdekCountries="orderInfo!.cdekCountries"
-      :recentOrgs="orderInfo!.recentOrgs"
-      :fieldErrors="fieldErrors"
-    />
+    <div class="order-layout">
+      <div class="order-mainColumn">
+        <fieldset class="order-sectionCard">
+          <OrderCustomer
+            v-model:payerType="payerType"
+            v-model:individual="individual"
+            v-model:entity="entity"
+            v-model:country="country"
+            :countries="orderInfo!.countries"
+            :cdekCountries="orderInfo!.cdekCountries"
+            :recentOrgs="orderInfo!.recentOrgs"
+            :fieldErrors="fieldErrors"
+          />
+        </fieldset>
 
-    <OrderFulfillment
-      v-model:deliveryType="deliveryType"
-      v-model:deliveryData="deliveryData"
-      v-model:totalSum="totalSum"
-      v-model:pending="fulfillmentPending"
-      v-model:deliveryError="fulfillmentDeliveryError"
-      v-model:country="country"
-      :basketData="orderInfo!.basketData"
-      :recentAddresses="orderInfo!.recentAddresses"
-      :fieldErrors="fieldErrors"
-    />
+        <fieldset class="order-sectionCard">
+          <OrderFulfillment
+            v-model:deliveryType="deliveryType"
+            v-model:deliveryData="deliveryData"
+            v-model:country="country"
+            :deliveryInfo="deliveryInfo"
+            :deliveryErrorKind="deliveryErrorKind"
+            :basketData="orderInfo!.basketData"
+            :recentAddresses="orderInfo!.recentAddresses"
+            :fieldErrors="fieldErrors"
+          />
+        </fieldset>
 
-    <OrderPayment
-      v-model:paymentType="paymentType"
-      :paymentsInfo="paymentsInfo"
-    />
+        <fieldset class="order-sectionCard">
+          <OrderPayment
+            v-model:paymentType="paymentType"
+            :paymentsInfo="paymentsInfo"
+          />
+        </fieldset>
+      </div>
 
-    <div v-if="orderError && !Object.keys(fieldErrors).length" class="order-error">
-      <p>
-        <i18n-t keypath="error">
-          <template #office>
-            <a :href="`https://wirenboard.com/${locale}/pages/contacts/`" target="_blank">{{ t('office') }}</a>
-          </template>
-        </i18n-t>
-      </p>
-    </div>
+      <div class="order-checkoutColumn">
+        <div class="order-sectionCard order-checkoutCard">
+          <div v-if="orderError && !Object.keys(fieldErrors).length" class="order-error">
+            <p>
+              <i18n-t keypath="error">
+                <template #office>
+                  <a :href="`https://wirenboard.com/${locale}/pages/contacts/`" target="_blank">{{ t('office') }}</a>
+                </template>
+              </i18n-t>
+            </p>
+          </div>
 
-    <div class="order-finalize">
-      <Button
-        type="submit"
-        size="large"
-        :disabled="fulfillmentPending || submitPending || fulfillmentDeliveryError"
-        :isLoading="submitPending"
-        :label="t('checkout')"
-        :variant="'primary'"
-        :outlined="false"
-      />
-      <div>
-        <span class="order-toPay">
-          {{ t('toPay') }}
-          <Loader v-if="fulfillmentPending" />
-          <span v-else class="order-sum">{{ locale === 'ru' ? `${toTriads(totalSum)} ₽` : `€${toTriads(totalSum)}` }}</span>
-        </span>
+          <div class="order-summary">
+            <div class="order-summaryRow">
+              <span>{{ t('items') }}</span>
+              <span>{{ formatMoney(itemsBreakdown.itemsSumRub) }}</span>
+            </div>
+            <div v-if="itemsBreakdown.kuponDiscountRub > 0" class="order-summaryRow order-summaryRow--discount">
+              <span>{{ t('kuponDiscount') }}</span>
+              <span>−{{ formatMoney(itemsBreakdown.kuponDiscountRub) }}</span>
+            </div>
+            <div v-if="itemsBreakdown.bulkDiscountRub > 0" class="order-summaryRow order-summaryRow--discount">
+              <span>{{ t('bulkDiscount') }}</span>
+              <span>−{{ formatMoney(itemsBreakdown.bulkDiscountRub) }}</span>
+            </div>
+            <div v-if="itemsBreakdown.partnerDiscountRub > 0" class="order-summaryRow order-summaryRow--discount">
+              <span>{{ t('partnerDiscount') }}</span>
+              <span>−{{ formatMoney(itemsBreakdown.partnerDiscountRub) }}</span>
+            </div>
+            <div v-if="selectedDeliveryItem?.type !== DeliveryType.Pickup" class="order-summaryRow">
+              <span>{{ t('delivery') }}</span>
+              <span v-if="deliveryInfoPending" class="order-summarySkeleton" />
+              <span v-else>{{ deliveryPricePending ? '?' : (deliveryPriceRub > 0 ? formatMoney(deliveryPriceRub) : t('priceFree')) }}</span>
+            </div>
+            <div class="order-summaryRow order-summaryRow--total">
+              <span>{{ t('total') }}</span>
+              <span v-if="deliveryInfoPending" class="order-summarySkeleton order-summarySkeleton--total" />
+              <span v-else>{{ formatMoney(totalSum) }}</span>
+            </div>
+          </div>
+
+          <OrderCoupon
+            ref="couponRef"
+            :payerType="payerType"
+            :initialCode="orderInfo!.promocode"
+            :initialNotices="orderInfo!.promocodeNotices"
+            :fieldErrors="fieldErrors"
+            :deliveryCouponIneffective="deliveryCouponIneffective"
+            :deliveryQuery="deliveryQuery"
+            @applied="onCouponApplied"
+          />
+
+          <div class="order-finalize">
+            <Button
+              type="submit"
+              size="large"
+              class="order-finalizeBtn"
+              :disabled="deliveryInfoPending || submitPending || fulfillmentDeliveryError || couponApplying"
+              :isLoading="submitPending"
+              :label="t('checkout')"
+              :variant="'primary'"
+              :outlined="false"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </form>
@@ -195,37 +320,121 @@ const makeOrder = async () => {
   color: #000;
 }
 
-.order h2 {
-  text-transform: uppercase;
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 1em;
-  margin-bottom: 36px;
+.order-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
 }
 
-.order h2:not(:first-child) {
-  margin-top: 56px;
+.order-mainColumn {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.order-sectionCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  border: 2px solid #f7f7f7 !important;
+}
+
+fieldset.order-sectionCard {
+  border: none;
+  margin: 0;
+  min-width: 0;
+}
+
+.order-sectionCard legend {
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1em;
+  margin-bottom: 4px;
+  padding: 0 6px;
+}
+
+#wrapper {
+  overflow: visible;
+}
+
+.order-checkoutColumn {
+  position: relative;
+  width: 360px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+.order-checkoutCard {
+  width: 100%;
+  z-index: 10;
+  background: var(--gray-color);
+  margin-top: 14px;
+  border: 1px solid var(--border-color) !important;
+  position: sticky;
+  top: 88px;
+}
+
+.order-checkoutCard .order-error {
+  margin-bottom: 24px;
 }
 
 .order-finalize {
   display: flex;
   align-items: center;
-  gap: 48px;
 }
 
-.order-toPay {
-  font-weight: 500;
-  font-size: 23px;
-  line-height: 1em;
-  margin-right: 8px;
+.order-finalizeBtn {
+  width: 100%;
 }
 
-.order-sum {
+.order-summary {
+  margin-bottom: 32px;
+}
+
+.order-summaryRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 4px 0;
+  font-size: 18px;
+}
+
+.order-summaryRow > span:last-child {
+  white-space: nowrap;
+}
+
+.order-summaryRow--total {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
   font-weight: 500;
   font-size: 23px;
-  line-height: 1em;
-  margin-right: 16px;
+}
+
+.order-summaryRow--total span:last-child {
   color: var(--primary-color);
+}
+
+.order-summarySkeleton {
+  display: inline-block;
+  width: 90px;
+  height: 1em;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #eee 25%, #e0e0e0 37%, #eee 63%);
+  background-size: 400% 100%;
+  animation: order-skeletonShimmer 1.4s ease infinite;
+}
+
+.order-summarySkeleton--total {
+  width: 110px;
+}
+
+@keyframes order-skeletonShimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: 0 0; }
 }
 
 .order-empty {
@@ -250,22 +459,23 @@ const makeOrder = async () => {
 }
 
 @media (max-width: 768px) {
-  .order h2 {
-    font-size: 28px;
-    margin-bottom: 24px;
+  .order-sectionCard {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .order-layout {
+    flex-direction: column;
   }
 
-  .order h2:not(:first-child) {
-    margin-top: 40px;
+  .order-checkoutColumn {
+    width: 100%;
+    align-self: auto;
   }
 
-  .order-finalize {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  .order-sum {
-    white-space: nowrap;
+  .order-checkoutCard {
+    position: static;
   }
 }
 </style>
@@ -273,18 +483,30 @@ const makeOrder = async () => {
 <i18n>
 {
   "ru": {
-    "title": "Оформление заказа — Wiren Board",
+    "title": "Оформление заказа",
     "emptyCart": "Ваша корзина пуста",
     "checkout": "Оформить заказ",
-    "toPay": "К оплате:",
+    "items": "Сумма товаров",
+    "kuponDiscount": "Скидка по купону",
+    "bulkDiscount": "Скидка оптовая",
+    "partnerDiscount": "Скидка партнёрская",
+    "delivery": "Доставка",
+    "priceFree": "Бесплатно",
+    "total": "ИТОГО",
     "error": "При создании заказа возникла ошибка. Попробуйте позднее или свяжитесь с {office}.",
     "office": "офисом"
   },
   "en": {
-    "title": "Order — Wiren Board",
+    "title": "Order",
     "emptyCart": "Your cart is empty",
     "checkout": "Checkout",
-    "toPay": "To pay:",
+    "items": "Items total",
+    "kuponDiscount": "Coupon discount",
+    "bulkDiscount": "Bulk discount",
+    "partnerDiscount": "Partner discount",
+    "delivery": "Delivery",
+    "priceFree": "Free",
+    "total": "TOTAL",
     "error": "An error occurred while creating the order. Please try again later or contact our {office}.",
     "office": "office"
   }
