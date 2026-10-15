@@ -9,7 +9,7 @@ defineProps<{
   disabled?: boolean;
   showClear?: boolean;
   size?: 'small' | 'default';
-  isSearchable: boolean;
+  isSearchable?: boolean;
   changeCallback?: () => void;
 }>();
 
@@ -169,7 +169,6 @@ const model = defineModel();
 [data-pc-section="label"] {
   color: #000;
   font-size: 16px;
-  //font-weight: 500;
 }
 
 [data-pc-name="iconfield"] {
