@@ -16,29 +16,31 @@ Combined digital sensor for temperature, humidity, light, motion, noise, CO2 and
 
 #info
 
-## TECHNICAL SPECIFICATIONS
+## Technical Specifications
 
-::product-section{title="MEASURED VALUES"}
-- Temperature: -40°C — +80°C (±0.5°C)
-- Humidity: 0 — 98% (±3%)
-- Light: 0.02 — 100000 lux
-- Noise level: 38 — 105 dBA
-- CO2 concentration: 400 — 5000 ppm.
-- VOC concentration: 0 — 60000 ppb.
-- Motion: up to 8 m, angle — 120°
+::product-section{title="Measured Values"}
+- Temperature: -40…+80 °C (±0.5 °C).
+- Humidity: 0…98% (±3%).
+- Light: 0.02…100000 lux.
+- Noise level: 38…105 dBA.
+- CO2 concentration: 400…5000 ppm.
+- VOC concentration: 0…60000 ppb.
+- Motion: up to 8 m, angle 120°.
+
+<br>
 ::
 
-::product-section{title="ADDITIONAL FUNCTIONALITY"}
-- IR commands sending
-- Controllable buzzer
-- Two-color indication, controlled via Modbus
-- Heated sensor designed for operation in high humidity conditions
+::product-section{title="Additional Functionality"}
+- IR command transmission.
+- Controllable buzzer.
+- Two-color indication controlled via Modbus.
+- Sensor heating for operation in high humidity conditions.
 ::
 
-::product-section{title="OTHER CHARACTERISTICS"}
-- Supply voltage: 9 — 28 VDC
-- Interface: RS-485, Modbus RTU
-- Plastic enclosure with wall mounting option (83 x 83 x 21 mm)
+::product-section{title="Other"}
+- Supply voltage: 9…28 VDC.
+- Interface: RS-485, Modbus RTU.
+- Plastic enclosure with wall mounting option (83 × 83 × 21 mm).
 ::
 
 
