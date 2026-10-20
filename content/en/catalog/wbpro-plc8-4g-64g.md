@@ -4,74 +4,123 @@ cover: "wbpro-plc8-4g-64g/cover.png"
 catalogCover: "wbpro-plc8-4g-64g/catalog-cover.png"
 images: [
   ["wbpro-plc8-4g-64g/cover.png"],
-  ["wbpro-plc8-4g-64g/wbpro-plc8-4g-64g-1.png"],
-  ["wbpro-plc8-4g-64g/wbpro-plc8-4g-64g-2.png"]
+  ["wbpro-plc8-4g-64g/wbpro-plc8-4g-64g-1.png"]
 ]
 ---
 ::product
 #description
 
-WBPRO-PLC8-4G-64G — are used in the tasks of monitoring server and climate equipment, dispatching and collecting data from metering devices, as the basis for "smart home" and industrial automation.
+WBPRO-PLC8-4G-64G is a universal modular automation controller running free open-source software.
 
-Main differences from [WBPRO-PLC7-2G-64G](https://wirenboard.com/ru/product/WBPRO-PLC7-2G-64G/): 64-bit ARM processor 1.5 GHz 28 nm, up to 4 GB of RAM, CAN is now an expansion module.
+Main differences from [WBPRO-PLC7-2G-64G](https://wirenboard.com/en/contents/product/wbpro-plc7-2g-64g): 64-bit 1.5 GHz 28 nm ARM processor, up to 4 GB of RAM, and CAN is now connected as an expansion module.
 
 
 #info
 
-## Technical specifications
+## Key Features
 
-::product-section{title="General characteristics"}
-Available in entry-level set, except (\*)
+::product-section{title="Supported Protocols"}
+:photo{
+  src="wbpro-plc8-4g-64g/wbpro-plc8-4g-64g-1.jpg"
+  width="500px"
+  float="right"
+}
 
-- Industrial 4-core 64-bit ARM Cortex A53 processor with a frequency of 1.5 GHz Cortex-A53
-- 64 GB flash memory, 4 GB LPDDR4 RAM
-- DIN rail enclosure (103 × 87 mm × 20 mm, 6 units)
-- Built-in Li-ion battery **\***
-- Operating range -40 ... +75°C
+In the basic configuration, the controller supports a wide range of protocols:
+
+- Modbus RTU — a wide range of devices: relays, dimmers, I/O modules.
+- Somfy, WINDECO, DOOYA, AKKO — electric curtain rails and blinds.
+- IEC 61107, DLMS/COSEM — electricity meters.
+- 1-Wire — DS18B20 temperature sensors.
+- Wi-Fi, Bluetooth — sensors, gateways and devices.
+- Modbus TCP, MQTT, SNMP, Zabbix API — data exchange with other controllers, servers and SCADA.
+- Danfoss / Carel — refrigeration controllers Danfoss EKC 202B/D, Danfoss ERC 21x, Carel BASIC/EASY.
+
+Expansion modules add support for:
+
+- KNX — the controller can be built into existing KNX integrations.
+- OpenTherm and eBUS — electric and gas boilers.
+- Z-Wave, Zigbee — a wide range of sensors and actuators.
+
+<br>
 ::
 
-::product-section{title="Interfaces"}
-Available in entry-level set
+::product-section{title="Features"}
+:photo{
+  src="wbpro-plc8-4g-64g/wbpro-plc8-4g-64g-2.jpg"
+  width="500px"
+  float="right"
+}
 
-- 2 × RS-485
-- 1 × CAN
-- 2 × 1-Wire/discrete inputs
-- 4 × discrete/analog inputs/"open collector" outputs
+The controller is built on an industrial process technology and can operate for long periods at air temperatures from -40 to +75 °C. It is often used in unheated outdoor panels.
+
+Port overvoltage protection and a watchdog timer allow the controller to be used in solutions that require reliable operation.
+
+The DIN rail housing and the supply voltage range from 9 to 48 volts make it easy to integrate the controller into an existing automation panel or to assemble a new one.
+
+The open platform makes it possible to install third-party software or develop your own.
+
+A wide range of external modules will help you build a fault-tolerant automation system for any task, and support for various data transfer protocols will help you integrate the controller into an existing one.
 ::
 
-::product-section{title="Software"}
-Available in entry-level set
+<br>
 
-- Extensible open-source software
-- Debian Linux 9, kernel 4.9.
-- Custom scripts
-- Log storage
-- Web interface
+:include{path="/catalog/includes/quality_control"}
+
+## Web Interface
+
+::product-section{title="Text Dashboards"}
+:photo{
+  src="wbpro-plc8-4g-64g/wbpro-plc8-4g-64g-3.png"
+  width="500px"
+  float="right"
+}
+
+The main element of a text information panel is a widget. A widget displays information from different sources in one place.
+
+A text dashboard can adapt to the small screen of a mobile device.
 ::
 
-::product-section{title="Communications"}
-Available in entry-level set, except (\*)
+::product-section{title="Graphic Dashboards"}
+:photo{
+  src="wbpro-plc8-4g-64g/wbpro-plc8-4g-64g-4.png"
+  width="500px"
+  float="right"
+}
 
-- 2 x Ethernet 10/100
-- 2 x USB Host
-- Wi-Fi 802.11n (AP, client)**\***
-- Bluetooth 4.0**\***
-- GSM/GPRS modem. Two SIM-cards, microSIM format **\***
-- Z-wave**\***
+You can create interactive graphic dashboards based on SVG drawings.
+
+You can output information to text elements of an SVG drawing and change the visibility and appearance of elements. You can also configure a response to user actions: turn on the light, turn off an alarm, etc.
+
+The controller's web interface has a visual editor for setting up graphic dashboards.
 ::
 
-::product-section{title="Extension modules"}
-to be specified as part of the required set when placing order
+::product-section{title="Data Archive"}
+:photo{
+  src="wbpro-plc8-4g-64g/wbpro-plc8-4g-64g-5.png"
+  width="500px"
+  float="right"
+}
+
+All data received by the controller is saved to an archive, the size of which can be configured.
+
+You can plot archived data for several channels at the same time. The charts are interactive: you can change the scale, take cursor measurements, etc.
+
+Data from the archive can be exported to CSV for analysis in third-party software.
 ::
 
-::product-section{title="I/O Modules"}
-to be specified as part of the required set when placing order
+::product-section{title="Automation Scripts"}
+:photo{
+  src="wbpro-plc8-4g-64g/wbpro-plc8-4g-64g-6.png"
+  width="500px"
+  float="right"
+}
 
-- 8/16 × discrete inputs
-- 12 × analog inputs
-- 8 × 0-10V analog outputs
-- 8/16 × relays etc.
-- connect up to 8 I/O modules
+The Wiren Board controller firmware includes a flexible scripting tool with a JavaScript-like language — WB-Rules.
+
+With scripts, you can automate any action: control lighting, heating or a technological process.
+
+Scripts can be created and edited directly in the web interface, with debugging available in the console.
 ::
 
 
