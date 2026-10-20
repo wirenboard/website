@@ -3,7 +3,7 @@ article: "WB-MRPS6/S"
 cover: "wb-mrps6/cover.png"
 catalogCover: "wb-mrps6/catalog-cover.png"
 images: [
-  ["wb-mrps6/cover.png"],
+  ["wb-mrps6/wb-mrps6-front.png"],
   ["wb-mrps6/wb-mrps6-8.png"],
   ["wb-mrps6/wb-mrps6-9.png"],
   ["wb-mrps6/wb-mrps6-10.png"]
@@ -23,11 +23,11 @@ Rated current: 10 A, inrush current: up to 165 A (20 ms).
 
 #info
 
-## Key features
+## Key Features
 
 ::product-section{title="Advantages"}
 :photo{
-  src="wb-mrps6/wb-mrps6-advantages.png"
+  src="wb-mrps6/wb-mrps6-photo-34.png"
   width="500px"
   float="right"
 }

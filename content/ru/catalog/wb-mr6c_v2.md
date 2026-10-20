@@ -37,7 +37,7 @@ video: [
 
 ::product-section{title="Преимущества"}
 :photo{
-  src="wb-mr6c_v2/wb-mr6c_v2-advantages.png"
+  src="wb-mr6c_v2/wb-mr6c_v2-photo-34.png"
   width="500px"
   float="right"
 }

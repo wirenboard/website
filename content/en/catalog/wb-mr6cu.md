@@ -3,11 +3,11 @@ article: "WB-MR6CU v.2"
 cover: "wb-mr6cu/cover.png"
 catalogCover: "wb-mr6cu/catalog-cover.png"
 images: [
-  ["wb-mr6cu/cover.png"],
-  ["wb-mr6cu/wb-mr6cu-9.png"],
+  ["wb-mr6cu/wb-mr6cu-front.png"],
+  ["wb-mr6cu/wb-mr6cu-12.png"],
   ["wb-mr6cu/wb-mr6cu-10.png"],
-  ["wb-mr6cu/wb-mr6cu-11.png"],
-  ["wb-mr6cu/wb-mr6cu-12.png"]
+  ["wb-mr6cu/wb-mr6cu-9.png"],
+  ["wb-mr6cu/wb-mr6cu-11.png"]
 ]
 meta: "Сompact RS-485, Modbus RTU Relay module"
 keywords: "Сompact RS-485, Modbus RTU Relay module"
@@ -23,11 +23,11 @@ Rated current: 10 A, inrush current: up to 80 A (20 ms).
 
 #info
 
-## Key features
+## Key Features
 
 ::product-section{title="Advantages"}
 :photo{
-  src="wb-mr6cu/wb-mr6cu-advantages.png"
+  src="wb-mr6cu/wb-mr6cu-photo-34.png"
   width="500px"
   float="right"
 }

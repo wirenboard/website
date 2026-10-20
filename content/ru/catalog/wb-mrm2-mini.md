@@ -3,11 +3,11 @@ article: "WB-MRM2-mini"
 cover: "wb-mrm2-mini/cover.png"
 catalogCover: "wb-mrm2-mini/catalog-cover.png"
 images: [
-  ["wb-mrm2-mini/cover.png"],
-  ["wb-mrm2-mini/wb-mrm2-mini-9.png"],
   ["wb-mrm2-mini/wb-mrm2-mini-10.png"],
+  ["wb-mrm2-mini/wb-mrm2-mini-34.png"],
   ["wb-mrm2-mini/wb-mrm2-mini-11.png"],
-  ["wb-mrm2-mini/wb-mrm2-mini-12.png"]
+  ["wb-mrm2-mini/wb-mrm2-mini-12.png"],
+  ["wb-mrm2-mini/wb-mrm2-mini-9.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MRM2-mini"
 meta: "Встраиваемый модуль c RS-485, Modbus RTU"
@@ -37,7 +37,7 @@ video: [
 
 ::product-section{title="Преимущества"}
 :photo{
-  src="wb-mrm2-mini/wb-mrm2-mini-advantages.png"
+  src="wb-mrm2-mini/wb-mrm2-mini-photo-34.png"
   width="500px"
   float="right"
 }

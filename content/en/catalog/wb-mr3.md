@@ -3,10 +3,10 @@ article: "00115"
 cover: "wb-mr3/cover.png"
 catalogCover: "wb-mr3/catalog-cover.png"
 images: [
-  ["wb-mr3/cover.png"],
+  ["wb-mr3/wb-mr3-front.png"],
   ["wb-mr3/wb-mr3-side.png"],
-  ["wb-mr3/wb-mr3-11.png"],
-  ["wb-mr3/wb-mr3-12.png"]
+  ["wb-mr3/wb-mr3-12.png"],
+  ["wb-mr3/wb-mr3-11.png"]
 ]
 meta: "RS-485, Modbus RTU Relay module WB-MR3-LV"
 keywords: "RS-485, Modbus RTU"
@@ -24,11 +24,11 @@ Rated current: 10 A, inrush current (I/S): up to 120/165 A (20 ms).
 
 #info
 
-## Key features
+## Key Features
 
 ::product-section{title="Advantages"}
 :photo{
-  src="wb-mr3/wb-mr3-advantages.png"
+  src="wb-mr3/wb-mr3-photo-34.png"
   width="500px"
   float="right"
 }

@@ -3,9 +3,10 @@ article: "WB-MRWL3"
 cover: "wb-mrwl3/cover.png"
 catalogCover: "wb-mrwl3/catalog-cover.png"
 images: [
-  ["wb-mrwl3/cover.png"],
-  ["wb-mrwl3/wb-mrwl3-10.png"],
-  ["wb-mrwl3/wb-mrwl3-11.png"]
+  ["wb-mrwl3/wb-mrwl3-front.png"],
+  ["wb-mrwl3/wb-mrwl3-34.png"],
+  ["wb-mrwl3/wb-mrwl3-11.png"],
+  ["wb-mrwl3/wb-mrwl3-10.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MRWL3_Modbus_Relay_Module"
 meta: "Модуль реле с RS-485, Modbus RTU"
@@ -33,7 +34,7 @@ video: [
 
 ::product-section{title="Преимущества"}
 :photo{
-  src="wb-mrwl3/wb-mrwl3-advantages.png"
+  src="wb-mrwl3/wb-mrwl3-photo-34.png"
   width="500px"
   float="right"
 }
@@ -53,6 +54,8 @@ video: [
 - возможно нанесение логотипа вашей компании.
 
 Поддерживает [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, что позволяет мгновенно доставлять состояния входов и значения счетчиков нажатий в контроллер Wiren Board.
+
+<br>
 ::
 
 ::product-section{title="Аппаратная часть"}

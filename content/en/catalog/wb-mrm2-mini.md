@@ -3,11 +3,11 @@ article: "WB-MRM2-mini"
 cover: "wb-mrm2-mini/cover.png"
 catalogCover: "wb-mrm2-mini/catalog-cover.png"
 images: [
-  ["wb-mrm2-mini/cover.png"],
-  ["wb-mrm2-mini/wb-mrm2-mini-9.png"],
   ["wb-mrm2-mini/wb-mrm2-mini-10.png"],
+  ["wb-mrm2-mini/wb-mrm2-mini-34.png"],
   ["wb-mrm2-mini/wb-mrm2-mini-11.png"],
-  ["wb-mrm2-mini/wb-mrm2-mini-12.png"]
+  ["wb-mrm2-mini/wb-mrm2-mini-12.png"],
+  ["wb-mrm2-mini/wb-mrm2-mini-9.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MRM2-mini_Modbus_Relay_Modules/en"
 meta: "Plug-in module WB-MRM2-mini"
@@ -26,11 +26,11 @@ Rated current (NO/NC): 10/2 A, inrush current: up to 80 A (20 ms).
 
 #info
 
-## Key features
+## Key Features
 
 ::product-section{title="Advantages"}
 :photo{
-  src="wb-mrm2-mini/wb-mrm2-mini-advantages.png"
+  src="wb-mrm2-mini/wb-mrm2-mini-photo-34.png"
   width="500px"
   float="right"
 }
