@@ -3,10 +3,10 @@ article: "00115"
 cover: "wb-mr3/cover.png"
 catalogCover: "wb-mr3/catalog-cover.png"
 images: [
-  ["wb-mr3/cover.png"],
+  ["wb-mr3/wb-mr3-front.png"],
   ["wb-mr3/wb-mr3-side.png"],
-  ["wb-mr3/wb-mr3-11.png"],
-  ["wb-mr3/wb-mr3-12.png"]
+  ["wb-mr3/wb-mr3-12.png"],
+  ["wb-mr3/wb-mr3-11.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MR3xV_and_WB-MR6xV_Modbus_Relay_Modules"
 meta: "Модуль реле c RS-485, Modbus RTU"
@@ -36,7 +36,7 @@ video: [
 
 ::product-section{title="Преимущества"}
 :photo{
-  src="wb-mr3/wb-mr3-advantages.png"
+  src="wb-mr3/wb-mr3-photo-34.png"
   width="500px"
   float="right"
 }

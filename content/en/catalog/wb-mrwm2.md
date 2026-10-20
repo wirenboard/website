@@ -5,8 +5,8 @@ catalogCover: "wb-mrwm2/catalog-cover.png"
 images: [
   ["wb-mrwm2/wb-mrwm2-front.jpg"],
   ["wb-mrwm2/wb-mrwm2-34.jpg"],
-  ["wb-mrwm2/wb-mrwm2-1.png"],
-  ["wb-mrwm2/wb-mrwm2-2.png"]
+  ["wb-mrwm2/wb-mrwm2-2.png"],
+  ["wb-mrwm2/wb-mrwm2-1.png"]
 ]
 meta: "Two-channel module with high-power relays and power measurement"
 keywords: "Two-channel module with high-power relays and power measurement"
@@ -24,11 +24,11 @@ Rated current: 20 A, inrush current: up to 80 A (20 ms).
 
 #info
 
-## Key features
+## Key Features
 
 ::product-section{title="Advantages"}
 :photo{
-  src="wb-mrwm2/wb-mrwm2-advantages.png"
+  src="wb-mrwm2/wb-mrwm2-photo-34.png"
   width="500px"
   float="right"
 }

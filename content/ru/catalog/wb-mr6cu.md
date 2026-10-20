@@ -3,11 +3,11 @@ article: "WB-MR6CU v.2"
 cover: "wb-mr6cu/cover.png"
 catalogCover: "wb-mr6cu/catalog-cover.png"
 images: [
-  ["wb-mr6cu/cover.png"],
-  ["wb-mr6cu/wb-mr6cu-9.png"],
+  ["wb-mr6cu/wb-mr6cu-front.png"],
+  ["wb-mr6cu/wb-mr6cu-12.png"],
   ["wb-mr6cu/wb-mr6cu-10.png"],
-  ["wb-mr6cu/wb-mr6cu-11.png"],
-  ["wb-mr6cu/wb-mr6cu-12.png"]
+  ["wb-mr6cu/wb-mr6cu-9.png"],
+  ["wb-mr6cu/wb-mr6cu-11.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MR6CU_v.2_Modbus_Relay_Modules"
 meta: "Компактный модуль реле с RS-485, Modbus RTU"
@@ -35,7 +35,7 @@ video: [
 
 ::product-section{title="Преимущества"}
 :photo{
-  src="wb-mr6cu/wb-mr6cu-advantages.png"
+  src="wb-mr6cu/wb-mr6cu-photo-34.png"
   width="500px"
   float="right"
 }

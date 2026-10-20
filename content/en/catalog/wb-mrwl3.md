@@ -3,9 +3,10 @@ article: "WB-MRWL3"
 cover: "wb-mrwl3/cover.png"
 catalogCover: "wb-mrwl3/catalog-cover.png"
 images: [
-  ["wb-mrwl3/cover.png"],
-  ["wb-mrwl3/wb-mrwl3-10.png"],
-  ["wb-mrwl3/wb-mrwl3-11.png"]
+  ["wb-mrwl3/wb-mrwl3-front.png"],
+  ["wb-mrwl3/wb-mrwl3-34.png"],
+  ["wb-mrwl3/wb-mrwl3-11.png"],
+  ["wb-mrwl3/wb-mrwl3-10.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MRWL3_Modbus_Relay_Modules/en"
 meta: "RS-485, Modbus RTU relay module"
@@ -22,11 +23,11 @@ Rated current: 20 A, inrush current: up to 80 A (20 ms).
 
 #info
 
-## Key features
+## Key Features
 
 ::product-section{title="Advantages"}
 :photo{
-  src="wb-mrwl3/wb-mrwl3-advantages.png"
+  src="wb-mrwl3/wb-mrwl3-photo-34.png"
   width="500px"
   float="right"
 }
@@ -45,6 +46,8 @@ Rated current: 20 A, inrush current: up to 80 A (20 ms).
 - Your company logo can be applied.
 
 Supports [Fast Modbus](https://wiki.wirenboard.com/wiki/Fast_Modbus/en) ⚡, which allows you to instantly deliver input states and button press counter values to the Wiren Board controller.
+
+<br>
 ::
 
 ::product-section{title="Hardware"}

@@ -3,7 +3,7 @@ article: "WB-MR6LV/L"
 cover: "wb-mr6lvl/cover.png"
 catalogCover: "wb-mr6lvl/catalog-cover.png"
 images: [
-  ["wb-mr6lvl/cover.png"],
+  ["wb-mr6lvl/wb-mr6lvl-front.png"],
   ["wb-mr6lvl/wb-mr6lvl-9.png"],
   ["wb-mr6lvl/wb-mr6lvl-board.png"]
 ]
@@ -33,7 +33,7 @@ video: [
 
 ::product-section{title="Преимущества"}
 :photo{
-  src="wb-mr6lvl/wb-mr6lvl-advantages.png"
+  src="wb-mr6lvl/wb-mr6lvl-photo-34.png"
   width="500px"
   float="right"
 }

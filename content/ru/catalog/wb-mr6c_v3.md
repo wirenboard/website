@@ -4,11 +4,12 @@ cover: "wb-mr6c_v3/cover.png"
 catalogCover: "wb-mr6c_v3/catalog-cover.png"
 images: [
   ["wb-mr6c_v3/wb-mr6c_v3-10.png"],
-  ["wb-mr6c_v3/wb-mr6c_v3-11.png"],
+  ["wb-mr6c_v3/wb-mr6c_v3-34.png"],
+  ["wb-mr6c_v3/wb-mr6c_v3-15.png"],
   ["wb-mr6c_v3/wb-mr6c_v3-12.png"],
+  ["wb-mr6c_v3/wb-mr6c_v3-11.png"],
   ["wb-mr6c_v3/wb-mr6c_v3-13.png"],
-  ["wb-mr6c_v3/wb-mr6c_v3-14.png"],
-  ["wb-mr6c_v3/wb-mr6c_v3-15.png"]
+  ["wb-mr6c_v3/wb-mr6c_v3-14.png"]
 ]
 documentation: "https://wirenboard.com/wiki/WB-MR6C_v.3_Modbus_Relay_Modules"
 meta: "RS-485, Modbus RTU модуль реле"
@@ -38,7 +39,7 @@ video: [
 
 ::product-section{title="Преимущества"}
 :photo{
-  src="wb-mr6c_v3/wb-mr6c_v3-advantages.png"
+  src="wb-mr6c_v3/wb-mr6c_v3-photo-34.png"
   width="500px"
   float="right"
 }
@@ -58,6 +59,8 @@ video: [
 - возможно нанесение логотипа вашей компании.
 
 Поддерживает [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, что позволяет мгновенно доставлять состояния входов и значения счетчиков нажатий в контроллер Wiren Board.
+
+<br>
 ::
 
 ::product-section{title="Аппаратная часть"}

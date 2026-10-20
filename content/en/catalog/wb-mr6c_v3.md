@@ -4,11 +4,12 @@ cover: "wb-mr6c_v3/cover.png"
 catalogCover: "wb-mr6c_v3/catalog-cover.png"
 images: [
   ["wb-mr6c_v3/wb-mr6c_v3-10.png"],
-  ["wb-mr6c_v3/wb-mr6c_v3-11.png"],
+  ["wb-mr6c_v3/wb-mr6c_v3-34.png"],
+  ["wb-mr6c_v3/wb-mr6c_v3-15.png"],
   ["wb-mr6c_v3/wb-mr6c_v3-12.png"],
+  ["wb-mr6c_v3/wb-mr6c_v3-11.png"],
   ["wb-mr6c_v3/wb-mr6c_v3-13.png"],
-  ["wb-mr6c_v3/wb-mr6c_v3-14.png"],
-  ["wb-mr6c_v3/wb-mr6c_v3-15.png"]
+  ["wb-mr6c_v3/wb-mr6c_v3-14.png"]
 ]
 meta: "RS-485, Modbus RTU Relay module"
 keywords: "RS-485, Modbus RTU"
@@ -26,11 +27,11 @@ Rated current: 10 A, inrush current: up to 80 A (20 ms).
 
 #info
 
-## Key features
+## Key Features
 
 ::product-section{title="Advantages"}
 :photo{
-  src="wb-mr6c_v3/wb-mr6c_v3-advantages.png"
+  src="wb-mr6c_v3/wb-mr6c_v3-photo-34.png"
   width="500px"
   float="right"
 }
@@ -49,6 +50,8 @@ Rated current: 10 A, inrush current: up to 80 A (20 ms).
 - Your company logo can be applied.
 
 Supports [Fast Modbus](https://wiki.wirenboard.com/wiki/Fast_Modbus/en) ⚡, which allows you to instantly deliver input states and button press counter values to the Wiren Board controller.
+
+<br>
 ::
 
 ::product-section{title="Hardware"}
