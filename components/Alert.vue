@@ -35,9 +35,9 @@ defineProps<{
 }
 
 .wb-alert-success {
-  background: #ecfdf5;
-  border-color: #a7f3d0;
-  color: #047857;
+  background: #eff8e6;
+  border-color: #b7e0a0;
+  color: var(--primary-color-hover);
 }
 
 .wb-alert-warning {
