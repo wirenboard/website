@@ -5,7 +5,7 @@ coordinates: [51.130417, 71.514898]
 title: ELT Engineering
 logo: elt/elt.webp
 phone: [77052683112, 77471460322]
-website: instagram.com/electroteam_kz
+website: https://instagr.am/electroteam_kz
 email:  electroteam01@mail.ru
 ---
 

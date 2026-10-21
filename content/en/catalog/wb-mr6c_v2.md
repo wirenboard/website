@@ -3,14 +3,14 @@ article: "WB-MR6C v.2"
 cover: "wb-mr6c_v2/cover.png"
 catalogCover: "wb-mr6c_v2/catalog-cover.png"
 images: [
-  ["wb-mr6c_v2/cover.png"],
+  ["wb-mr6c_v2/wb-mr6c_v2-front.png"],
+  ["wb-mr6c_v2/wb-mr6c_v2-34.png"],
+  ["wb-mr6c_v2/wb-mr6c_v2-13.png"],
+  ["wb-mr6c_v2/wb-mr6c_v2-14.png"],
   ["wb-mr6c_v2/wb-mr6c_v2-10.png"],
   ["wb-mr6c_v2/wb-mr6c_v2-11.png"],
-  ["wb-mr6c_v2/wb-mr6c_v2-12.png"],
-  ["wb-mr6c_v2/wb-mr6c_v2-13.png"],
-  ["wb-mr6c_v2/wb-mr6c_v2-14.png"]
+  ["wb-mr6c_v2/wb-mr6c_v2-12.png"]
 ]
-documentation: "https://wirenboard.com/wiki/WB-MR6C_v.2_Modbus_Relay_Modules"
 meta: "RS-485, Modbus RTU Relay module"
 keywords: "RS-485, Modbus RTU"
 ---
@@ -25,149 +25,159 @@ Rated current: 10 A, inrush current: up to 80 A (20 ms).
 
 #info
 
-## Main characteristics
+## Key Features
 
 ::product-section{title="Advantages"}
 :photo{
-  src="wb-mr6c_v2/wb-mr6c_v2-1.png"
+  src="wb-mr6c_v2/wb-mr6c_v2-photo-34.png"
   width="500px"
   float="right"
 }
 
 - Powerful relays that can withstand high inrush currents.
 - Recognition of button presses on inputs and flexible configuration of output responses allow you to control one or more outputs from any inputs.
-- Output status indication on the housing for quick diagnostics during commissioning.
+- Output status indication on the housing for quick diagnostics and checking output states during commissioning.
 - Pulse counting and frequency measurement at the inputs for connecting pulse-output meters and measuring motor speed.
 - Safe mode in case of RS-485 communication failure.
-- Programmable protection against contact bounce.
+- Output timer functions: on and off delay, switching on for a set time, cyclic mode.
+- Programmable protection against switch contact bounce.
 - Compact DIN rail housing.
 - Fast and easy integration into automation and monitoring systems.
 
-Supports [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, which allows instant delivery of input states and button press counter values to the Wiren Board controller.
+- Technical support on the portal.
+- Your company logo can be applied.
+
+Supports [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, which allows instant delivery of input states and button press counter values to the Wiren Board controller.
+
+<br>
 ::
 
 ::product-section{title="Hardware"}
 :photo{
-  src="wb-mr6c_v2/wb-mr6c_v2-2.png"
+  src="wb-mr6c_v2/wb-mr6c_v2-hardware.png"
   width="500px"
   float="right"
 }
 
-Specifications:
-
 - 6 relay channels rated 10 A 230 V AC.
-- Maximum continuous current: 16 A per channel.
+- Maximum switching current: 16 A per channel.
 - Maximum inrush current: up to 80 A (20 ms).
-- The outputs are grouped into two sets of 3 relays; each group can switch a total of no more than 20 A.
-- 7 discrete inputs with group galvanic isolation; by default, 6 inputs control their corresponding outputs, and one disables all relay channels.
+- The outputs are grouped into two sets of 3 relays; each group can switch a total of no more than 30 A.
+- 7 discrete inputs with group galvanic isolation; by default, 6 inputs control the outputs with the same numbers, and one input turns off all relay channels.
 - Button press handling: short, long, double, and short followed by long.
 
 - Supply voltage: 9…28 V DC.
 - Interface: RS-485, Modbus RTU.
 - Operating temperature: -40…+80 °C.
-- DIN rail housing, 3 modules.
+- DIN rail housing, 3 modules (53 x 90 x 58 mm).
+
+<br>
 ::
 
 ::product-section{title="Hongfa Long Life Relays"}
 :photo{
-  src="wb-mr6c_v2/wb-mr6c_v2-3.jpg"
+  src="wb-mr6c_v2/wb-mr6c_v2-hongfa.jpg"
   width="500px"
   float="right"
 }
 
-Reliable Hongfa relays are used for switching. The relays feature silver tin dioxide (AgSnO2) contacts, allowing operation with high inrush currents up to 80 A (20 ms). This makes the WB-MR6C v.2 module ideal for controlling LED lamps.
+Reliable Hongfa relays are used for switching. The relays have silver tin oxide (AgSnO2) contacts, which allow operation with high inrush currents up to 80 A (20 ms). This makes the WB-MR6C v.2 module well suited for controlling LED lamps.
 
-To verify relay quality, we [tested them with inrush currents](https://wirenboard-com.translate.goog/ru/news/proveli-ispytania-rele-na-bolsie-puskovye-toki-458/?_x_tr_sl=ru&_x_tr_tl=en&_x_tr_hl=ru&_x_tr_pto=wapp/) several times higher than the nominal rating.
+To verify the relay quality, we [tested them](https://wirenboard.com/en/news/tested-the-relays-for-high-starting-currents-467/) with inrush currents several times higher than the rated ones.
 
-The manufacturer claims a lifespan of at least 50,000 operations.
+The relay manufacturer claims a service life of at least 100 000 operations.
 ::
 
 ::product-section{title="Local control"}
 :photo{
-  src="wb-mr6c_v2/wb-mr6c_v2-4.png"
+  src="wb-mr6c_v2/wb-mr6c_v2-local-control.jpg"
   width="500px"
   float="right"
 }
 
-Flexible configuration of output responses to button presses allows local control of loads and implementation of simple logic without contactors or intermediate relays. This is convenient in small installations without a controller or RS-485 bus.
+Flexible configuration of output responses to button presses allows you to use the module for local control of loads and to implement simple logic without contactors or intermediate relays. This is convenient in small installations where there is no controller and no way to run an RS-485 bus.
 
-If the module is connected to a bus, local logic can be combined with controller commands. Input-output interactions are configured via the Wiren Board web interface or Modbus registers and stored in the module memory.
+If the module is connected to a bus, local logic can be combined with commands from the controller. The interaction of inputs and outputs is configured in the Wiren Board controller web interface or by writing to Modbus registers, and the settings are stored in the module memory.
 ::
 
 ::product-section{title="Safe mode"}
 :photo{
-  src="wb-mr6c_v2/wb-mr6c_v2-5.png"
+  src="wb-mr6c_v2/wb-mr6c_v2-safe-mode.png"
   width="500px"
   float="right"
 }
 
-If the module is installed remotely and connected via RS-485, there is a risk of losing control from the head unit. The safe mode feature ensures that outputs switch to a predefined state in case of communication loss.
+If the module is installed far from the switchboard and connected to the RS-485 bus, there is a risk of losing control from the head unit. To keep control over an important technological process, the module has a safe mode that switches the relay outputs to a specified state.
 
-You can configure individual safe states for each output and define whether inputs remain active in safe mode—for example, disabling button control when communication is lost.
+For each output, you can configure its own safe state and whether to switch to it when communication is lost. You can also enable or disable control from the inputs in safe mode, for example, to prohibit control from buttons when communication with the device is lost.
 ::
 
 ::product-section{title="Curtain control"}
 :photo{
-  src="wb-mr6c_v2/wb-mr6c_v2-6.png"
+  src="wb-mr6c_v2/wb-mr6c_v2-curtains.jpg"
   width="500px"
   float="right"
 }
 
-The WB-MR6C v.2 module includes a special curtain control mode that prevents simultaneous activation of directional relays and enforces a pause between switching.
+The WB-MR6C v.2 module has a special curtain mode that prevents simultaneous activation of the direction relays and guarantees a pause between switchings. In the settings, you can set the opening/closing time, the pause when changing direction, as well as actions at power-on and when entering safe mode.
 
-Settings allow you to define opening/closing times, direction-change delays, and behavior during power-on or when entering safe mode. Outputs are configurable individually; some can be used for curtains while others remain available for other loads. Each button press type (4 in total) can trigger its own curtain action.
+The outputs are configured individually, so only some of the outputs can be used for curtains, and the rest can be used for other purposes. You can also configure a curtain action for each of the 4 types of presses of buttons connected to the module inputs.
 ::
 
 ::product-section{title="Fast Modbus support"}
 :photo{
-  src="wb-mr6c_v2/wb-mr6c_v2-7.png"
+  src="wb-mr6c_v2/wb-mr6c_v2-fast-modbus-support.png"
   width="500px"
   float="right"
 }
 
 All Wiren Board devices, in addition to the standard Modbus RTU, support the [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡ extension, which adds the following features:
 
-- Instant polling of input states and measurements via events.
-- Fast detection of devices connected to the controller.
-- Address conflict resolution on the bus.
+- Instant polling of input states and measured values via events.
+- Fast search for devices connected to the controller.
+- Address collision resolution on the bus.
 
-These features are enabled automatically. If the device supports the extension, the controller driver uses Fast Modbus; otherwise, it falls back to standard Modbus RTU.
+For the user, the additional features are enabled seamlessly: if the device supports the extension, the controller driver will work with it via Fast Modbus; if the device knows nothing about the extension, it will work via standard Modbus RTU.
 ::
 
-:include{path="/catalog/includes/quality_control"}
+<br>
+
+:include{path="/catalog/includes/quality_control" withSeparator="true"}
 
 ::product-section{title="Setup"}
 :photo{
-  src="wb-mr6c_v2/wb-mr6c_v2-8.png"
+  src="wb-mr6c_v2/wb-mr6c_v2-setup.png"
   width="500px"
   float="right"
 }
 
-When used with a Wiren Board controller, the web interface allows you to:
+When used with a Wiren Board controller, you can use the mouse in the web interface to:
 
-- Enable/disable channels and configure polling intervals.
-- Set input modes.
-- Configure output reactions to inputs.
-- Set output states at power-on.
-- Adjust safe mode parameters.
-- Set contact bounce protection time.
-- Enable curtain control mode on specific outputs.
+- Enable and disable channels and configure the polling period.
+- Set input operating modes.
+- Configure the reaction of outputs to inputs.
+- Set the state of the outputs at power-on.
+- Configure safe mode settings.
+- Adjust the contact bounce protection time.
+- Switch the outputs to the curtain drive control mode.
+- Configure the power-on delay and the restart delay.
+- Configure output timer functions.
 
-For configuration without a controller, you can use the [Wiren Board Device Editor](https://wiki.wirenboard.com/wiki/WASM_Device_Editor) paired with a WB-USB485 interface converter or a similar device.
+For configuration without a controller, you can use the Wiren Board Device Editor paired with a WB-USB485 interface converter or a similar device.
 
-When used with other equipment, the module can be configured via RS-485 by writing to Modbus registers. The register map is open, well-documented, and available online.
+When used with other equipment, the module can be configured via the RS-485 bus by writing values to Modbus registers. The register map is open, well documented and available online in the device documentation.
 ::
 
 ::product-section{title="Reading the readings"}
 :photo{
-  src="wb-mr6c_v2/wb-mr6c_v2-9.png"
+  src="wb-mr6c_v2/wb-mr6c_v2-readings.png"
   width="500px"
   float="right"
 }
 
-If a Wiren Board controller is used, the states of inputs, outputs, and button press counters are available in the web interface. They can be used in automation scripts or sent to higher-level systems. Only channels enabled in the polling settings are displayed.
+If a Wiren Board controller is used, the states of inputs, outputs and button press counters are available in the controller web interface and can be used in automation scripts or transferred to a higher-level system. The device card displays only the channels enabled in the polling settings.
 
-The module also provides all data via Modbus RTU (RS-485), which can be accessed by any compatible device or software, including third-party controllers, HMI panels, and SCADA systems.
+The module also transmits all data via Modbus RTU (RS-485), which can be read by any equipment or software that supports this protocol: third-party controllers, HMI panels or SCADA.
 ::
 
 

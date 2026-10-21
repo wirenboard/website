@@ -9,7 +9,7 @@ defineProps<{
   disabled?: boolean;
   showClear?: boolean;
   size?: 'small' | 'default' | 'large';
-  isSearchable: boolean;
+  isSearchable?: boolean;
   changeCallback?: () => void;
 }>();
 

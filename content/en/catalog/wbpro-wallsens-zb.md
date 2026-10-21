@@ -12,36 +12,38 @@ keywords: "Wall sensor 8 in 1 with Zigbee WBPRO-WALLSENS-ZB"
 ::product
 #description
 
-**The device is still being tested. Standard technical support is not provided. Only for those who know what it is and how to work with it.**
+Combined digital sensor for temperature, humidity, light, motion, noise, CO2 and volatile organic compounds. Equipped with an IR transmitter (and receiver for learning). Designed for climate control in residential and office premises.
 
-Hybrid digital sensor of temperature, humidity, illumination, noise, CO2 and VOC level. It is equipped with the IR blaster (and the receiver for learning). Designed for climate control in residential and office premises.
+The sensor runs over Zigbee: it works with zigbee2mqtt 1.23 and later or with SprutHub.
 
 
 #info
 
-## TECHNICAL SPECIFICATIONS
+## Technical Specifications
 
-::product-section{title="MEASURED VALUES"}
-- Temperature: -40°C — +80°C (±0.5°C)
-- Humidity: 0 — 98% (±3%)
-- Light: 0.02 — 100000 lux
-- Noise level: 40 — 82 dB
-- СО2 concentration: 0 — 5000 ppm.
-- VOC concentration: 0 — 60000 ppb.
-- Motion: up to 8 m, angle — 120°
+::product-section{title="Measured Values"}
+- Temperature: -40…+80 °C (±0.5 °C).
+- Humidity: 0…98% (±3%).
+- Light: 0.02…100000 lux.
+- Noise level: 38…105 dBA.
+- CO2 concentration: 400…5000 ppm.
+- VOC concentration: 0…60000 ppb.
+- Motion: up to 8 m, angle 120°.
+
+<br>
 ::
 
-::product-section{title="ADDITIONAL FUNCTIONALITY"}
-- IR commands sending
-- Configurable buzzer(Mode on/off)
-- Two-color indication, controlled
-- Heated sensor designed for operation in high humidity conditions
+::product-section{title="Additional Functionality"}
+- IR command transmission.
+- Controllable buzzer.
+- Controllable two-color indication.
+- Sensor heating for operation in high humidity conditions.
 ::
 
-::product-section{title="OTHER CHARACTERISTICS"}
-- Supply voltage: 9 — 28 VDC
-- Interface: Zigbee
-- Plastic enclosure with wall mounting option (83 x 83 x 21 mm)
+::product-section{title="Other"}
+- Supply voltage: 9…28 VDC.
+- Interface: Zigbee.
+- Plastic enclosure with wall mounting option (83 × 83 × 21 mm).
 ::
 
 

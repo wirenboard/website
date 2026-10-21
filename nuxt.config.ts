@@ -1,4 +1,14 @@
+import { createRequire } from 'node:module';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import ParseInlinedImages from './modules/parse-inlined-images/parse-inlined-images';
+
+const contentAssetsPublicDir = join(
+  dirname(dirname(createRequire(import.meta.url).resolve('nuxt-content-assets'))),
+  'cache',
+  'public',
+);
+const projectPublicDir = fileURLToPath(new URL('./public', import.meta.url));
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -65,6 +75,11 @@ export default defineNuxtConfig({
   },
   image: {
     format: ['webp'],
+    ipx: {
+      fs: {
+        dir: [projectPublicDir, contentAssetsPublicDir],
+      },
+    },
     screens: {
       xs: 320,
       sm: 768,

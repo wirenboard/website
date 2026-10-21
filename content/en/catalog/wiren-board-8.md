@@ -25,7 +25,7 @@ In Wiren Board 8.5, all four slots for MOD1...MOD4 modules have terminal block o
 
 #info
 
-## MAIN FEATURES
+## Key Features
 
 ::product-section{title="Hardware and software"}
 :photo{
@@ -36,12 +36,12 @@ In Wiren Board 8.5, all four slots for MOD1...MOD4 modules have terminal block o
 
 Any configuration includes an industrial 4-core 64-bit ARM Cortex A53 processor with a frequency of 1.5 GHz, but the available RAM and permanent memory depend on the version:
 
-- from −40 to +75 °C: up to 4 GB LPDDR4 RAM and up to 64 GB eMMC;
-- from −40 to +75 °C: 1 GB LPDDR4 RAM and 8 GB eMMC.
+- 4 GB LPDDR4 RAM and 64 GB eMMC;
+- 2 GB LPDDR4 RAM and 16 GB eMMC.
 
-The controller uses the open operating system Debian Linux 11, kernel 6.8, which provides ample opportunities to install third-party software. There is also hardware protected a key store that can be used to authorize the controller in its services or to link software licenses.
+The controller uses the open operating system Debian Linux 11, kernel 6.8, which provides ample opportunities to install third-party software. There is also a hardware-protected key store that can be used to authorize the controller in your services or to bind software licenses.
 
-The built-in software is free, open and allows you to configure the controller and devices connected to it, write automation scripts, store and view archives measurements.
+The built-in software is free, open and allows you to configure the controller and devices connected to it, write automation scripts, store and view the measurement archive.
 ::
 
 ::product-section{title="Interfaces and Communications"}
@@ -106,7 +106,26 @@ All Wiren Board devices, in addition to the standard Modbus RTU, can work with i
 - quick search for devices connected to the controller;
 - resolving address collisions on the bus.
 
-Additional features are enabled automatically - if the device supports extension, the controller driver will work with the device quickly Modbus if the device does not know anything about the extension - it will work using standard Modbus RTU.
+For the user, the additional features are enabled seamlessly: if the device supports the extension, the controller driver will work with it via Fast Modbus; if the device knows nothing about the extension, it will work via standard Modbus RTU.
+::
+
+::product-section{title="Wiren Board Cloud"}
+:photo{
+  src="wiren-board-8/wiren-board-8-cloud.png"
+  width="500px"
+  float="right"
+}
+
+All Wiren Board controllers are fully autonomous and do not depend on internet access. However, you can connect them to the Wiren Board Cloud remote administration service and gain:
+
+- Remote access to the web interface and SSH from a computer or phone via a regular browser.
+- Data archive in Grafana — create your own dashboards with charts, indicators and analytics.
+- A unified list of controllers with current statuses, serial numbers, software versions, etc. — useful for inventory.
+- Multi-user access and grouping by groups and organizations — useful for companies servicing controllers of different organizations.
+
+In addition to the public version of Wiren Board Cloud, **there is an on-premise version for installation on the customer's server**.
+
+[Full feature description](https://wirenboard.com/en/contents/cloud/).
 ::
 
 ::product-section{title="Features"}
@@ -127,10 +146,12 @@ The open platform makes it possible to install third-party software or develop y
 A wide range of external modules will help you build a fault-tolerant automation system for any task, and support for various data transfer protocols will help you integrate the controller into an existing one.
 ::
 
+<br>
+
 :include{path="/catalog/includes/quality_control"}
 
 
-## WEB INTERFACE
+## Web Interface
 
 ::product-section{title="Quickly search for devices on the bus"}
 :photo{

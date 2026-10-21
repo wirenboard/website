@@ -3,11 +3,11 @@ article: "WB-MRM2-mini"
 cover: "wb-mrm2-mini/cover.png"
 catalogCover: "wb-mrm2-mini/catalog-cover.png"
 images: [
-  ["wb-mrm2-mini/cover.png"],
-  ["wb-mrm2-mini/wb-mrm2-mini-9.png"],
   ["wb-mrm2-mini/wb-mrm2-mini-10.png"],
+  ["wb-mrm2-mini/wb-mrm2-mini-34.png"],
   ["wb-mrm2-mini/wb-mrm2-mini-11.png"],
-  ["wb-mrm2-mini/wb-mrm2-mini-12.png"]
+  ["wb-mrm2-mini/wb-mrm2-mini-12.png"],
+  ["wb-mrm2-mini/wb-mrm2-mini-9.png"]
 ]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MRM2-mini"
 meta: "Встраиваемый модуль c RS-485, Modbus RTU"
@@ -17,7 +17,6 @@ video: [
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
   ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
-use_cases: ["solutions-liten-magnit", "inpro-meat", "gate_control"]
 ---
 ::product
 #description
@@ -34,21 +33,22 @@ use_cases: ["solutions-liten-magnit", "inpro-meat", "gate_control"]
 
 #info
 
-## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+## Основные характеристики
 
 ::product-section{title="Преимущества"}
 :photo{
-  src="wb-mrm2-mini/wb-mrm2-mini-1.png"
+  src="wb-mrm2-mini/wb-mrm2-mini-photo-34.png"
   width="500px"
   float="right"
 }
 
-- установка в распаечную коробку и кабель канал;
+- установка в распаечную коробку и кабель-канал;
 - мощные реле, выдерживающие большие пусковые токи;
 - распознавание нажатий кнопок на входах и гибкая настройка реакции выходов на нажатия, позволяет управлять одним или несколькими выходами с любых входов;
-- индикация состояния выходов на корпусе для быстрой диагностики и определения состояния выходов при пусконаладке;
+- индикатор статуса обмена по Modbus на корпусе для быстрой диагностики при пусконаладке;
 - счёт импульсов и измерение частоты на входах для подключения счетчиков с импульсным выходом и измерения частоты вращения двигателей;
 - безопасный режим на случай обрыва связи RS-485;
+- таймерные функции выходов: задержка включения и отключения, включение на время, циклический режим;
 - программируемая защита от дребезга контактов выключателей;
 - быстрая и простая интеграция в систему автоматизации и мониторинга;
 
@@ -57,42 +57,48 @@ use_cases: ["solutions-liten-magnit", "inpro-meat", "gate_control"]
 - возможно нанесение логотипа вашей компании.
 
 Поддерживает [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, что позволяет мгновенно доставлять состояния входов и значения счетчиков нажатий в контроллер Wiren Board.
+
+<br>
 ::
 
 ::product-section{title="Аппаратная часть"}
-Технические характеристики:
+:photo{
+  src="wb-mrm2-mini/wb-mrm2-mini-hardware.png"
+  width="500px"
+  float="right"
+}
 
 - 2 канала реле;
 - модификации:
-  - /NO — Реле с нормально разомкнутыми контактами, 10 А / 230 В переменного тока (до 80 А в течение 20 мс);
-  - /NC — Реле с нормально замкнутыми контактами, 2 А / 230 В переменного тока.
+  - /NO — нормально разомкнутые контакты, номинал 10 А / 230 В переменного тока, максимальный длительный ток 16 А, пусковой до 80 А (20 мс);
+  - /NC — нормально замкнутые контакты, номинал 2 А / 230 В переменного тока, максимальный длительный ток 5 А.
 
 - 2 дискретных входа с функцией прямого управления каналами;
 - обработка нажатий: короткое, длинное, двойное, короткое и затем длинное;
 
 - напряжение питания: 9…28 В постоянного тока;
 - интерфейс: RS-485, Modbus RTU;
-- расширенный диапазон температуры эксплуатации: -40…+50 °С;
-- размеры корпуса: 52 х 24 х 20.5 мм.
+- температура эксплуатации: -40…+50 °C;
+- размеры корпуса: 51,5 x 23 x 21,5 мм.
 ::
 
 ::product-section{title="Долговечные реле Hongfa"}
 :photo{
-  src="wb-mrm2-mini/wb-mrm2-mini-2.jpg"
+  src="wb-mrm2-mini/wb-mrm2-mini-hongfa.jpg"
   width="500px"
   float="right"
 }
 
 В версии /NO используются надежные реле Hongfa с контактами из серебра - оксида олова (AgSnO2), что обеспечивает работу с высокими пусковыми токами до 80 А (20 мс). Поэтому модуль WB-MRM2-mini v.2/NO хорошо подходит для управления светодиодными лампами.
 
-Чтобы удостовериться в качестве реле мы [испытывали](https://wirenboard.com/ru/news/proveli-ispytania-rele-na-bolsie-puskovye-toki-458/) их большими пусковыми токами в несколько раз превышающими номинальные.
+Чтобы удостовериться в качестве реле, мы [испытывали](https://wirenboard.com/ru/news/proveli-ispytania-rele-na-bolsie-puskovye-toki-458/) их большими пусковыми токами в несколько раз превышающими номинальные.
 
-Производитель реле заявляет ресурс не менее 50 000 срабатываний.
+Производитель реле заявляет ресурс не менее 100 000 срабатываний.
 ::
 
 ::product-section{title="Локальное управление"}
 :photo{
-  src="wb-mrm2-mini/wb-mrm2-mini-3.jpg"
+  src="wb-mrm2-mini/wb-mrm2-mini-local-control.jpg"
   width="500px"
   float="right"
 }
@@ -104,7 +110,7 @@ use_cases: ["solutions-liten-magnit", "inpro-meat", "gate_control"]
 
 ::product-section{title="Безопасный режим"}
 :photo{
-  src="wb-mrm2-mini/wb-mrm2-mini-4.png"
+  src="wb-mrm2-mini/wb-mrm2-mini-safe-mode.png"
   width="500px"
   float="right"
 }
@@ -118,19 +124,19 @@ use_cases: ["solutions-liten-magnit", "inpro-meat", "gate_control"]
 
 ::product-section{title="Управление приводами штор"}
 :photo{
-  src="wb-mrm2-mini/wb-mrm2-mini-5.jpg"
+  src="wb-mrm2-mini/wb-mrm2-mini-curtains.jpg"
   width="500px"
   float="right"
 }
 
 В модуле WB-MRM2-mini v.2/NO есть специальный режим работы со шторами, который исключает одновременное включение реле направлений и гарантирует паузу между переключениями. В настройках можно задать время открытия/закрытия, время паузы при смене направления, а также действия при включении питания и переходе в безопасный режим.
 
-Выходы настраиваются индивидуально, поэтому для управления шторами можно использовать только часть выходов, а остальные использовать для других целей. Также можно настроить действие со шторами для каждого из 4 типов нажатий кнопок, подключенных к входам модуля.
+К модулю можно подключить один привод — на выходы K1 и K2. Также можно настроить действие со шторами для каждого из 4 типов нажатий кнопок, подключенных к входам модуля.
 ::
 
 ::product-section{title="Поддержка Быстрого Modbus"}
 :photo{
-  src="wb-mrm2-mini/wb-mrm2-mini-6.png"
+  src="wb-mrm2-mini/wb-mrm2-mini-fast-modbus-support.png"
   width="500px"
   float="right"
 }
@@ -144,7 +150,9 @@ use_cases: ["solutions-liten-magnit", "inpro-meat", "gate_control"]
 Для пользователя включение дополнительных возможностей происходит незаметно — если устройство поддерживает расширение, драйвер контроллера будет работать с устройством по Быстрому Modbus, если устройство ничего про расширение не знает — оно будет работать по стандартному Modbus RTU.
 ::
 
-:include{path="/catalog/includes/quality_control"}
+<br>
+
+:include{path="/catalog/includes/quality_control" withSeparator="true"}
 
 ::product-section{title="Настройка"}
 :photo{
@@ -180,7 +188,15 @@ use_cases: ["solutions-liten-magnit", "inpro-meat", "gate_control"]
 Также модуль отдаёт все данные по Modbus RTU (RS-485), которые можно читать любым оборудованием или ПО с поддержкой этого протокола: контроллерами сторонних производителей, HMI панелями или SCADA.
 ::
 
-:include{path="/catalog/includes/certificates"}
+::product-section{title="Сертификаты"}
+:photo{
+  src="wb-mrm2-mini/wb-mrm2-mini-certificates.jpg"
+  width="500px"
+  float="right"
+}
+
+Устройство соответствует требованиям [ТР ТС 004/2011](https://wirenboard.com/ru/pages/certificate/).
+::
 
 
 ::
