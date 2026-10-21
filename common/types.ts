@@ -150,7 +150,7 @@ export interface PaymentsInfo {
   default: string;
 }
 
-export interface KuponNotice {
+export interface PromocodeNotice {
   type: 'invalid_code' | 'payer_type' | 'sum_from' | 'capped' | 'outbid';
   message: string;
   severity: 'error' | 'warning' | 'info';
@@ -162,7 +162,7 @@ export interface OrderInfo {
   deliveryType: string;
   deliveryData: Record<string, string>;
   promocode: string;
-  promocodeNotices: KuponNotice[];
+  promocodeNotices: PromocodeNotice[];
   basketData: Record<string, number>;
   countries: Record<number, string>;
   cdekCountries: number[];

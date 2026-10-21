@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { ComponentPublicInstance } from 'vue';
+
 const props = defineProps<{
   name: string;
   items: { id: string; title: string; img?: string; comment?: string }[];
@@ -9,7 +11,7 @@ const modelValue = defineModel<string>();
 const focusedId = computed(() => modelValue.value ?? props.items[0]?.id);
 
 const itemRefs = ref<Record<string, HTMLElement | undefined>>({});
-const setItemRef = (id: string) => (el: Element | null) => {
+const setItemRef = (id: string) => (el: Element | ComponentPublicInstance | null) => {
   itemRefs.value[id] = (el as HTMLElement) ?? undefined;
 };
 
