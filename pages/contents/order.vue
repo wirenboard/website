@@ -31,18 +31,22 @@ const {
   deliveryPromocodeIneffective,
 } = await useOrderDelivery(orderInfo, country);
 
-const pricing = ref({
-  itemsSumRub: orderInfo.value!.basketData.itemsSumRub,
-  promocodeDiscountRub: orderInfo.value!.basketData.promocodeDiscountRub,
-  bulkDiscountRub: orderInfo.value!.basketData.bulkDiscountRub,
-  partnerDiscountRub: orderInfo.value!.basketData.partnerDiscountRub,
+type BasketPricing = { itemsSumRub: number; promocodeDiscountRub: number; bulkDiscountRub: number; partnerDiscountRub: number };
+
+const normalizePricing = (data: Partial<BasketPricing>): BasketPricing => ({
+  itemsSumRub: data.itemsSumRub ?? 0,
+  promocodeDiscountRub: data.promocodeDiscountRub ?? 0,
+  bulkDiscountRub: data.bulkDiscountRub ?? 0,
+  partnerDiscountRub: data.partnerDiscountRub ?? 0,
 });
 
+const pricing = ref(normalizePricing(orderInfo.value!.basketData));
+
 const onPromocodeApplied = (
-  basketData: { itemsSumRub: number; promocodeDiscountRub: number; bulkDiscountRub: number; partnerDiscountRub: number },
+  basketData: Partial<BasketPricing>,
   deliveryOptions?: AvailableDeliveriesInfo,
 ) => {
-  pricing.value = basketData;
+  pricing.value = normalizePricing(basketData);
   if (deliveryOptions) {
     deliveryInfo.value = deliveryOptions;
   }
