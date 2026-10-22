@@ -9,15 +9,16 @@ const individual = defineModel<{ fio: string; phone: string; additional: string;
 const entity = defineModel<{ fio: string; phone: string; additional: string; inn: string; kpp: string; orgName: string; address: string; email: string; comment: string; }>('entity', {required: true});
 const country = defineModel<number>('country');
 
-const { countries, cdekCountries, recentOrgs, fieldErrors } = defineProps<{
+const props = defineProps<{
   countries: Record<number, string>;
   cdekCountries: number[];
   recentOrgs?: RecentOrg[];
   fieldErrors?: Record<string, string>;
 }>();
+const { countries, cdekCountries, recentOrgs, fieldErrors } = toRefs(props);
 
 const recentOrgSuggestions = computed(() =>
-  (recentOrgs ?? []).map(org => ({
+  (recentOrgs.value ?? []).map(org => ({
     value: org.orgName,
     data: {
       inn: org.inn,
@@ -37,7 +38,7 @@ if (entity.value && individual.value) {
 
 const isRussia = computed(() => country.value === RUSSIA_ID);
 // Добавочный номер показываем только для стран, куда доступна доставка СДЭК.
-const isCdekCountry = computed(() => !!country.value && cdekCountries.includes(country.value));
+const isCdekCountry = computed(() => !!country.value && cdekCountries.value.includes(country.value));
 
 const hasSavedOrg = !!(entity.value?.inn || entity.value?.orgName);
 const orgMode = ref<'search' | 'fields'>(isRussia.value && !hasSavedOrg ? 'search' : 'fields');

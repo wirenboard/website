@@ -8,16 +8,17 @@ const deliveryData = defineModel<Record<string, any>>('deliveryData', { default:
 const selectedDeliveryType = defineModel<string>('deliveryType');
 const country = defineModel<number>('country');
 
-const { basketData, recentAddresses, fieldErrors, deliveryInfo, deliveryErrorKind } = defineProps<{
+const props = defineProps<{
   basketData: Record<string, number>;
   recentAddresses?: RecentAddress[];
   fieldErrors?: Record<string, string>;
   deliveryInfo: AvailableDeliveriesInfo | null;
   deliveryErrorKind: DeliveryError | null;
 }>();
+const { basketData, recentAddresses, fieldErrors, deliveryInfo, deliveryErrorKind } = toRefs(props);
 
 const recentSuggestions = computed(() =>
-  (recentAddresses ?? []).map(addr => ({
+  (recentAddresses.value ?? []).map(addr => ({
     value: `${addr.city}, ${addr.address}`,
     isRecent: true,
     data: {
@@ -50,7 +51,7 @@ watchEffect(() => { deliveryData.value = { ...deliveryAddressDirty.value, ...del
 
 const isRussia = computed(() => country.value === RUSSIA_ID);
 
-const availableDeliveries = computed(() => deliveryInfo ?? []);
+const availableDeliveries = computed(() => deliveryInfo.value ?? []);
 
 const isMoscowDelivery = computed(() => selectedDelivery.value?.id === 'msk');
 
@@ -92,14 +93,14 @@ const selectItems = computed(() => {
 });
 
 const deliveryErrorMessage = computed(() => {
-  if (!deliveryErrorKind) return null;
-  return deliveryErrorKind === DeliveryError.Network ? t('serviceUnavailable') : t('deliveryError');
+  if (!deliveryErrorKind.value) return null;
+  return deliveryErrorKind.value === DeliveryError.Network ? t('serviceUnavailable') : t('deliveryError');
 });
 
-const cdekPvzRejected = computed(() => deliveryErrorKind === DeliveryError.AddressUnavailable);
+const cdekPvzRejected = computed(() => deliveryErrorKind.value === DeliveryError.AddressUnavailable);
 
 watch(selectedDeliveryType, () => {
-  if (selectedDelivery.value?.type === DeliveryType.Taxi) {
+  if (isMoscowDelivery.value) {
     deliveryAddressDirty.value = { country: country.value, city: isMoscowDelivery.value ? 'Москва' : undefined };
     deliveryAddressDetails.value = {};
     addressMode.value = 'fields';
@@ -183,7 +184,7 @@ const initCdekWidget = (): Promise<void> => {
           city: 'Долгопрудный',
           address: 'Лихачёвский проезд, 6с1',
         },
-        goods: [{ width: 1, height: 1, length: 1, weight: (basketData.weight * 1000), cost: basketData.price }],
+        goods: [{ width: 1, height: 1, length: 1, weight: (basketData.value.weight * 1000), cost: basketData.value.price }],
         onChoose: (type: string, tariff: Tariff, destination: Destination) => {
           cdekPvzData.value = { tariff, destination };
           cdekWidget.value!.close();
@@ -260,7 +261,7 @@ const openCdekWidget = async () => {
           </p>
         </template>
       </div>
-      <div v-else-if="selectedDelivery?.type === DeliveryType.Taxi" class="fulfillment-taxiAddress">
+      <div v-else-if="isMoscowDelivery" class="fulfillment-taxiAddress">
         <div class="fulfillment-cityRow">
           <Input
             id="city"
