@@ -6,13 +6,16 @@ withDefaults(defineProps<{
   label: string;
   type?: 'button' | 'submit';
   variant: 'primary' | 'secondary';
-  outlined: boolean;
+  outlined?: boolean;
   size?: 'default' | 'large';
+  block?: boolean;
   isLoading?: boolean;
 }>(), {
   size: 'default',
   variant: 'primary',
   type: 'button',
+  outlined: false,
+  block: false,
   isLoading: false,
 });
 
@@ -26,7 +29,8 @@ withDefaults(defineProps<{
       'wb-button-m': size === 'default',
       'wb-button-l': size === 'large',
       'wb-button-primary': variant === 'primary',
-      'wb-button-outlined': outlined
+      'wb-button-outlined': outlined,
+      'wb-button-block': block
     }"
     :id="id">
     <Spinner v-if="isLoading" class="wb-button-spinner" />
@@ -52,12 +56,18 @@ withDefaults(defineProps<{
   line-height: 24px;
 }
 
+.wb-button:focus-visible {
+  outline: 2px solid var(--heading-color);
+  outline-offset: 2px;
+}
+
 .wb-button:not(:disabled) {
   cursor: pointer;
 }
 
 .wb-button:disabled {
   filter: opacity(0.5);
+  cursor: default;
 }
 
 .wb-button-primary {
@@ -66,7 +76,14 @@ withDefaults(defineProps<{
   color: #fff;
 }
 
-.wb-button-primary:hover {
+.wb-button-primary:disabled {
+  background: #aeaeae;
+  border-color: #aeaeae;
+  color: #fff;
+  filter: none;
+}
+
+.wb-button-primary:not(:disabled):hover {
   background: var(--primary-color-hover) !important;
   color: #fff !important;
 }
@@ -89,6 +106,11 @@ withDefaults(defineProps<{
 .wb-button-l {
   padding: 12px 24px;
   font-size: 18px;
+}
+
+.wb-button-block {
+  display: flex;
+  width: 100%;
 }
 
 .wb-button-spinner {
