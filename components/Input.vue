@@ -14,6 +14,7 @@ const props = defineProps<{
   pattern?: string;
   title?: string;
   errorMessage?: string;
+  size?: 'default' | 'large';
 }>();
 
 const model = defineModel<string>();
@@ -49,7 +50,9 @@ const hasError = computed(() => error.value || !!props.errorMessage);
       class="input"
       :class="{
         'input-filled': !!model,
-        'input-error': hasError
+        'input-error': hasError,
+        'input-hasAction': !!$slots.action,
+        'input-large': size === 'large'
       }"
       :id="id"
       :autofocus="autofocus"
@@ -62,12 +65,15 @@ const hasError = computed(() => error.value || !!props.errorMessage);
       @blur="validate"
       @input="validate"
     />
-    <div v-else class="input input-static" :id="id">{{ model }}</div>
+    <div v-else class="input input-static" :class="{ 'input-large': size === 'large' }" :id="id">{{ model }}</div>
 
     <label v-if="label" class="input-label" :class="{ 'input-label--static': disabled }" :for="id">
       {{ label }}
       <span v-if="required" class="input-required">*</span>
     </label>
+    <div v-if="$slots.action" class="input-action">
+      <slot name="action" />
+    </div>
     <span v-if="errorMessage" class="input-errorMessage">{{ errorMessage }}</span>
   </div>
 </template>
@@ -82,7 +88,7 @@ const hasError = computed(() => error.value || !!props.errorMessage);
   color: #000;
   font-family: 'Plumb', sans-serif;
   border: 1px solid var(--border-color);
-  padding: 26px 12px 18px;
+  padding: 26px 12px 8px;
   transition: background 0.2s, border 0.2s, outline-offset 0.2s;
   font-size: 24px;
   line-height: 24px;
@@ -106,17 +112,19 @@ const hasError = computed(() => error.value || !!props.errorMessage);
 .input-label {
   position: absolute;
   z-index: 1;
-  top: 26px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 12px;
   color: #ccc;
   font-size: 16px;
   font-weight: 500;
-  transition: top 0.2s, font-weight 0.2s, font-size 0.2s;
+  transition: top 0.2s, font-weight 0.2s, font-size 0.2s, transform 0.2s;
 }
 
 .input:not(:placeholder-shown) + .input-label,
 .input:focus + .input-label {
   top: 8px;
+  transform: translateY(0);
   font-size: 14px;
 }
 
@@ -134,14 +142,34 @@ const hasError = computed(() => error.value || !!props.errorMessage);
   color: #aaa;
 }
 
-.input-static {
+.input-large {
+  padding-bottom: 18px;
+}
+
+.input-static.input-large {
   min-height: 74px;
+}
+
+.input-static {
+  min-height: 64px;
   height: auto;
   white-space: normal;
   overflow-wrap: anywhere;
   background: var(--bg-secondary, #f5f5f5);
   color: #666;
   cursor: not-allowed;
+}
+
+.input-hasAction {
+  padding-right: 112px;
+}
+
+.input-action {
+  position: absolute;
+  z-index: 1;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .input-errorMessage {

@@ -102,15 +102,13 @@ export interface AvailableDelivery {
   title: string;
   address: string | null;
   mapUrl: string | null;
-  price: number;
+  price: number | null;
   total: number;
   error?: DeliveryError | false | null; // false/null - no error
-}
-
-export interface AvailableDeliveriesInfo{
-  available: AvailableDelivery[];
   freeDelivery: boolean;
 }
+
+export type AvailableDeliveriesInfo = AvailableDelivery[];
 
 export interface CustomerData{
   individual:{
@@ -152,11 +150,19 @@ export interface PaymentsInfo {
   default: string;
 }
 
+export interface PromocodeNotice {
+  type: 'invalid_code' | 'payer_type' | 'sum_from' | 'capped' | 'outbid';
+  message: string;
+  severity: 'error' | 'warning' | 'info';
+}
+
 export interface OrderInfo {
   payerType: string;
   payerData: CustomerData;
   deliveryType: string;
   deliveryData: Record<string, string>;
+  promocode: string;
+  promocodeNotices: PromocodeNotice[];
   basketData: Record<string, number>;
   countries: Record<number, string>;
   cdekCountries: number[];
