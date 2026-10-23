@@ -24,7 +24,7 @@ It is used to control climate parameters as part of ZigBee networks.
 
 Connects to the Wiren Board controller via ZigBee or RS-485. The connection method is selected by a switch on the board; in all cases, the device requires external power. When using ZigBee, you need to install the [WBE2R-R-ZIGBEE-V.2](https://wirenboard.com/ru/product/WBE2R-R-ZIGBEE-v2) adapter into the controller.
 
-Supported in zigbee2mqtt from version 1.32.2 and in Sprut.hub.
+Supported in zigbee2mqtt from version 2.13.0 and in Sprut.hub.
 
 
 #info
@@ -148,7 +148,7 @@ If the sensor is connected via Modbus RTU, then the configuration is performed i
   float="right"
 }
 
-The sensor can be used with the Wiren Board controller and other devices with SprutHub or zigbee2mqtt 1.32.2.
+The sensor can be used with the Wiren Board controller and other devices with zigbee2mqtt or Sprut.hub software installed.
 
 If a Wiren Board controller is used, the measured values are available in the controller's web interface and can be used in automation scripts or transferred to a higher-level system.
 
