@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import Alert from '~/components/Alert.vue';
 import Button from '~/components/Button.vue';
 import { DeliveryType, type OrderInfo, type AvailableDeliveriesInfo } from '~/common/types';
 
@@ -119,15 +120,13 @@ const { submitPending, orderError, fieldErrors, makeOrder } = await useOrderSubm
 
       <div class="order-checkoutColumn">
         <div class="order-sectionCard order-checkoutCard">
-          <div v-if="orderError && !Object.keys(fieldErrors).length" class="order-error">
-            <p>
-              <i18n-t keypath="error">
-                <template #office>
-                  <a :href="`https://wirenboard.com/${locale}/pages/contacts/`" target="_blank">{{ t('office') }}</a>
-                </template>
-              </i18n-t>
-            </p>
-          </div>
+          <Alert v-if="orderError && !Object.keys(fieldErrors).length" variant="error" class="order-error">
+            <i18n-t keypath="error">
+              <template #office>
+                <a :href="`https://wirenboard.com/${locale}/pages/contacts/`" target="_blank">{{ t('office') }}</a>
+              </template>
+            </i18n-t>
+          </Alert>
 
           <OrderSummary
             :itemsSumRub="pricing.itemsSumRub"
@@ -246,22 +245,6 @@ fieldset.order-sectionCard {
 .order-empty {
   font-size: 23px;
   font-weight: 500;
-}
-
-.order-error {
-  background-color: #FFA3A5;
-  color: #fff;
-  padding: 12px 16px;
-  border-radius: 15px;
-}
-
-.order-error a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.order-error a:hover {
-  opacity: 0.75;
 }
 
 @media (max-width: 768px) {

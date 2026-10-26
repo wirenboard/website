@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Alert from '~/components/Alert.vue';
 import Button from '~/components/Button.vue';
 import {RUSSIA_ID, DeliveryType, DeliveryError, type AvailableDelivery, type AvailableDeliveriesInfo, type Destination, type Tariff, type RecentAddress } from '~/common/types';
 
@@ -223,7 +224,7 @@ const openCdekWidget = async () => {
       :ariaLabel="t('title')"
     />
 
-    <p v-if="deliveryErrorMessage" class="fulfillment-error">{{ deliveryErrorMessage }}</p>
+    <Alert v-if="deliveryErrorMessage" variant="error">{{ deliveryErrorMessage }}</Alert>
     <div class="fulfillment-details">
       <div
         v-if="selectedDelivery?.type === DeliveryType.Pickup"
@@ -328,14 +329,6 @@ const openCdekWidget = async () => {
 
 .fulfillment-chooseTitle {
   font-weight: 700;
-}
-
-.fulfillment-error {
-  background-color: #FF474C;
-  color: #fff;
-  padding: 12px 16px;
-  border-radius: 2px;
-  opacity: 0.7;
 }
 
 .fulfillment-chooseWrapper p {
