@@ -275,14 +275,14 @@ fieldset.order-sectionCard {
     "title": "Оформление заказа",
     "emptyCart": "Ваша корзина пуста",
     "checkout": "Оформить заказ",
-    "error": "При создании заказа возникла ошибка. Попробуйте позднее или свяжитесь с {office}.",
+    "error": "Возникла проблема с выбранным способом оплаты. Попробуйте другой способ, повторите попытку позже или свяжитесь с нашим {office}.",
     "office": "офисом"
   },
   "en": {
     "title": "Order",
     "emptyCart": "Your cart is empty",
     "checkout": "Checkout",
-    "error": "An error occurred while creating the order. Please try again later or contact our {office}.",
+    "error": "There was an issue with your selected payment method. Please try another payment method, try again later, or contact our {office}.",
     "office": "office"
   }
 }
