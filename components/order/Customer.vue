@@ -9,15 +9,16 @@ const individual = defineModel<{ fio: string; phone: string; additional: string;
 const entity = defineModel<{ fio: string; phone: string; additional: string; inn: string; kpp: string; orgName: string; address: string; email: string; comment: string; }>('entity', {required: true});
 const country = defineModel<number>('country');
 
-const { countries, cdekCountries, recentOrgs, fieldErrors } = defineProps<{
+const props = defineProps<{
   countries: Record<number, string>;
   cdekCountries: number[];
   recentOrgs?: RecentOrg[];
   fieldErrors?: Record<string, string>;
 }>();
+const { countries, cdekCountries, recentOrgs, fieldErrors } = toRefs(props);
 
 const recentOrgSuggestions = computed(() =>
-  (recentOrgs ?? []).map(org => ({
+  (recentOrgs.value ?? []).map(org => ({
     value: org.orgName,
     data: {
       inn: org.inn,
@@ -37,7 +38,7 @@ if (entity.value && individual.value) {
 
 const isRussia = computed(() => country.value === RUSSIA_ID);
 // Добавочный номер показываем только для стран, куда доступна доставка СДЭК.
-const isCdekCountry = computed(() => !!country.value && cdekCountries.includes(country.value));
+const isCdekCountry = computed(() => !!country.value && cdekCountries.value.includes(country.value));
 
 const hasSavedOrg = !!(entity.value?.inn || entity.value?.orgName);
 const orgMode = ref<'search' | 'fields'>(isRussia.value && !hasSavedOrg ? 'search' : 'fields');
@@ -88,7 +89,7 @@ const onOrgSelect = ({ orgName, inn, kpp, address }: { orgName: string; inn: str
 </script>
 
 <template>
-  <h2>{{ t('title') }}</h2>
+  <legend>{{ t('title') }}</legend>
   <div class="customer">
     <Select
       v-model="country"
@@ -265,7 +266,7 @@ const onOrgSelect = ({ orgName, inn, kpp, address }: { orgName: string; inn: str
 <i18n>
 {
   "ru": {
-    "title": "Введите информацию о покупателе",
+    "title": "Информация о покупателе",
     "country": "Страна",
     "individual": "Физическое лицо",
     "entity": "Юридическое лицо",
@@ -286,7 +287,7 @@ const onOrgSelect = ({ orgName, inn, kpp, address }: { orgName: string; inn: str
     "kppFormat": "КПП — 9 цифр"
   },
   "en": {
-    "title": "Enter the customer's information",
+    "title": "Customer's information",
     "country": "Country",
     "individual": "Individuals",
     "entity": "Legal entities",
