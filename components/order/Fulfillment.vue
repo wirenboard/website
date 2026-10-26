@@ -224,7 +224,7 @@ const openCdekWidget = async () => {
       :ariaLabel="t('title')"
     />
 
-    <Alert v-if="deliveryErrorMessage" variant="error">{{ deliveryErrorMessage }}</Alert>
+    <Alert v-if="deliveryErrorMessage" variant="error" class="fulfillment-error">{{ deliveryErrorMessage }}</Alert>
     <div class="fulfillment-details">
       <div
         v-if="selectedDelivery?.type === DeliveryType.Pickup"
@@ -329,6 +329,10 @@ const openCdekWidget = async () => {
 
 .fulfillment-chooseTitle {
   font-weight: 700;
+}
+
+.fulfillment-error {
+  margin-top: 18px;
 }
 
 .fulfillment-chooseWrapper p {
@@ -455,7 +459,7 @@ const openCdekWidget = async () => {
     "priceFree": "Бесплатная доставка",
     "price": "{n} ₽",
     "moscowOnly": "только по Москве",
-    "deliveryError": "Доставка по данному адресу невозможна, проверьте страну и адрес или выберите другой тип доставки",
+    "deliveryError": "Доставка по данному адресу невозможна, проверьте адрес или выберите другой тип доставки",
     "serviceUnavailable": "Служба доставки временно недоступна, попробуйте позже или выберите другой способ доставки",
     "cdekRequired": "Выберите пункт выдачи"
   },
@@ -480,7 +484,7 @@ const openCdekWidget = async () => {
     "priceFree": "Free delivery",
     "price": "€{n}",
     "moscowOnly": "Moscow only",
-    "deliveryError": "Delivery to this address is not available, please check the country and address or select a different delivery type",
+    "deliveryError": "Delivery to this address is not available, please check the address or select a different delivery type",
     "serviceUnavailable": "The delivery service is temporarily unavailable, please try again later or select a different delivery method",
     "cdekRequired": "Please select a pickup point"
   }
