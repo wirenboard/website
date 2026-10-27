@@ -395,6 +395,7 @@ const openCdekWidget = async () => {
 .fulfillment-cityRow {
   display: grid;
   grid-template-columns: 3fr 1fr;
+  align-items: start;
   gap: 18px;
 }
 
@@ -407,6 +408,7 @@ const openCdekWidget = async () => {
 .fulfillment-streetRow {
   display: grid;
   grid-template-columns: 3fr 1fr 1fr;
+  align-items: start;
   gap: 18px;
 }
 

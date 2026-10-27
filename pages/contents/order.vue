@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import Alert from '~/components/Alert.vue';
 import Button from '~/components/Button.vue';
-import { DeliveryType, type OrderInfo, type AvailableDeliveriesInfo } from '~/common/types';
+import { DeliveryType, OrderErrorKind, type OrderInfo, type AvailableDeliveriesInfo } from '~/common/types';
 
 const { t, locale } = useI18n();
 
@@ -67,7 +67,7 @@ const promocodeApplying = computed(() => promocodeRef.value?.applying ?? false);
 const formRef = ref<HTMLFormElement | null>(null);
 const submitBlocked = computed(() => fulfillmentDeliveryError.value || promocodeApplying.value);
 
-const { submitPending, orderError, fieldErrors, makeOrder } = await useOrderSubmit({
+const { submitPending, orderError, orderErrorKind, fieldErrors, makeOrder } = await useOrderSubmit({
   formRef,
   payerType,
   individual,
@@ -121,7 +121,7 @@ const { submitPending, orderError, fieldErrors, makeOrder } = await useOrderSubm
       <div class="order-checkoutColumn">
         <div class="order-sectionCard order-checkoutCard">
           <Alert v-if="orderError && !Object.keys(fieldErrors).length" variant="error" class="order-error">
-            <i18n-t keypath="error">
+            <i18n-t :keypath="orderErrorKind === OrderErrorKind.Payment ? 'paymentError' : 'error'">
               <template #office>
                 <a :href="`https://wirenboard.com/${locale}/pages/contacts/`" target="_blank">{{ t('office') }}</a>
               </template>
@@ -275,14 +275,16 @@ fieldset.order-sectionCard {
     "title": "Оформление заказа",
     "emptyCart": "Ваша корзина пуста",
     "checkout": "Оформить заказ",
-    "error": "Возникла проблема с выбранным способом оплаты. Попробуйте другой способ, повторите попытку позже или свяжитесь с нашим {office}.",
+    "error": "При создании заказа возникла ошибка. Попробуйте позднее или свяжитесь с {office}.",
+    "paymentError": "Возникла проблема с выбранным способом оплаты. Попробуйте другой способ, повторите попытку позже или свяжитесь с нашим {office}.",
     "office": "офисом"
   },
   "en": {
     "title": "Order",
     "emptyCart": "Your cart is empty",
     "checkout": "Checkout",
-    "error": "There was an issue with your selected payment method. Please try another payment method, try again later, or contact our {office}.",
+    "error": "An error occurred while creating the order. Please try again later or contact our {office}.",
+    "paymentError": "There was an issue with your selected payment method. Please try another payment method, try again later, or contact our {office}.",
     "office": "office"
   }
 }
