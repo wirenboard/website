@@ -21,6 +21,7 @@ video: [
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
   ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
+use_cases: ["zhelezno", "techsensor_module_cafe", "rekota_hotel_vertical"]
 ---
 ::product
 #description
@@ -38,21 +39,8 @@ WB-M1W2 v.3 внесён в реестр государственной сист
 
 #info
 
-## Примеры использования
 
-::product-section{title=""}
-:photo{
-  src="wb-m1w2/wb-m1w2-1.jpg"
-  caption="ГК «Железно»"
-  width="500px"
-  float="right"
-}
-
-
-::
-
-
-## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+## Основные характеристики
 
 ::product-section{title="Преимущества"}
 :photo{

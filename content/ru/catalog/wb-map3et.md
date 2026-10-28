@@ -36,7 +36,7 @@ WB-MAP3ET включен в [реестр](https://gisp.gov.ru/goods/#/product/5
 
 #info
 
-## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+## Основные характеристики
 
 ::product-section{title="Преимущества"}
 :photo{

@@ -16,10 +16,7 @@ documentation: "https://wiki.wirenboard.com/wiki/WB-MCM8HV_v.1_Modbus_AC_Detecto
 
 #info
 
-## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
-
-  ## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
-
+## Основные характеристики
   
 ::product-section{title="Преимущества"}
 - программируемый антидребезг;

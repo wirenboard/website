@@ -2,7 +2,7 @@
 import { useProduct } from '~/composables/useProduct';
 
 const route = useRoute();
-const { data } = await useLocalizedData('catalog', false, { _file: { $icontains: route.params.slug } });
+const { data } = await useLocalizedData(`/catalog/${route.params.slug}`, false, {});
 const { data: product } = await useProduct(data.value.article);
 
 if (!data.value) {

@@ -1,13 +1,9 @@
-import { createRequire } from 'node:module';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import ParseInlinedImages from './modules/parse-inlined-images/parse-inlined-images';
 
-const contentAssetsPublicDir = join(
-  dirname(dirname(createRequire(import.meta.url).resolve('nuxt-content-assets'))),
-  'cache',
-  'public',
-);
+const projectRoot = dirname(fileURLToPath(import.meta.url));
+const contentAssetsPublicDir = join(projectRoot, 'node_modules', 'nuxt-content-assets', 'cache', 'public');
 const projectPublicDir = fileURLToPath(new URL('./public', import.meta.url));
 
 // https://nuxt.com/docs/api/configuration/nuxt-config

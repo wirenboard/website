@@ -17,7 +17,7 @@ video: [
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
   ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
-use_cases: ["solutions-abrom-module-house", "greenery-city"]
+use_cases: ["abrom_module_house", "greenery_city"]
 ---
 ::product
 #description
@@ -31,7 +31,7 @@ use_cases: ["solutions-abrom-module-house", "greenery-city"]
 
 #info
 
-## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+## Основные характеристики
 
 ::product-section{title="Преимущества"}
 :photo{

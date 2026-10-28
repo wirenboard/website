@@ -14,7 +14,7 @@ images: [
 documentation: "https://wirenboard.com/wiki/WB-MSW-ZIGBEE_v.4_Sensor"
 meta: "Настенный комбинированный датчик с беспроводным интерфейсом Zigbee"
 keywords: "Настенный комбинированный датчик с беспроводным интерфейсом Zigbee"
-use_cases: ["solutions-liten-magnit", "techsensor-module-cafe", "solutions-rekota-hotel-vertical"]
+use_cases: ["liten_magnit", "techsensor_module_cafe", "rekota_hotel_vertical"]
 ---
 ::product
 #description
@@ -34,7 +34,7 @@ use_cases: ["solutions-liten-magnit", "techsensor-module-cafe", "solutions-rekot
 
 #info
 
-## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+## Основные характеристики
 
 ::product-section{title="Преимущества"}
 :photo{

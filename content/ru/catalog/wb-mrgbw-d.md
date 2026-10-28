@@ -32,7 +32,7 @@ keywords: "RS-485, Modbus RTU"
 
 #info
 
-## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+## Основные характеристики
 
 ::product-section{title="Аппаратная часть"}
 :photo{

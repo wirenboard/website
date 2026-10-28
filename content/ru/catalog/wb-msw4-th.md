@@ -16,7 +16,7 @@ video: [
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
   ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
-use_cases: ["solutions-liten-magnit", "techsensor-module-cafe", "solutions-rekota-hotel-vertical"]
+use_cases: ["liten_magnit", "techsensor_module_cafe", "rekota_hotel_vertical"]
 ---
 ::product
 #description
@@ -29,10 +29,9 @@ use_cases: ["solutions-liten-magnit", "techsensor-module-cafe", "solutions-rekot
 
 Является средством измерений. Номер в реестре СИ: [87443-22](https://fgis.gost.ru/fundmetrology/cm/mits/a10542eb-2d27-a60c-f98b-51bab672629a).
 
-
 #info
 
-## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+## Основные характеристики
 
 ::product-section{title="Преимущества"}
 :photo{
