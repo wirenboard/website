@@ -3,7 +3,6 @@ import { useProduct } from '~/composables/useProduct';
 
 const route = useRoute();
 const { data } = await useLocalizedData(`/catalog/${route.params.slug}`, false, {});
-const { data: product } = await useProduct(data.value.article);
 
 if (!data.value) {
   throw createError({
@@ -11,6 +10,8 @@ if (!data.value) {
     statusMessage: `Page not found: ${route.path}`,
   });
 }
+
+const { data: product } = await useProduct(data.value.article);
 
 defineOptions({
   name: 'Product',
