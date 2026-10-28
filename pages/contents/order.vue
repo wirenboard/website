@@ -2,6 +2,7 @@
 import Loader from '~/components/Loader.vue';
 import Button from '~/components/Button.vue';
 import type {OrderInfo, PaymentsInfo} from "~/common/types";
+import { useOrderPrefill, prefilledFor } from "~/composables/useOrderPrefill";
 
 const { t, locale } = useI18n();
 
@@ -38,7 +39,13 @@ const parseErrors = (data: any): Record<string, string> => {
   return result;
 };
 
-const { data: orderInfo } = await useApi<OrderInfo>(`/order/prefill-info/`);
+// Ответы этих эндпоинтов PHP-прокси присылает вместе с запросом страницы (X-WB-Order), чтобы при
+// SSR не ходить за ними обратно в PHP; см. composables/useOrderPrefill.ts. На клиенте — undefined.
+const orderPrefill = useOrderPrefill();
+
+const { data: orderInfo } = await useApi<OrderInfo>(`/order/prefill-info/`, null, {
+  prefill: () => orderPrefill?.prefillInfo,
+});
 
 const payerType = ref(orderInfo.value!.payerType);
 const individual = ref(orderInfo.value!.payerData.individual);
@@ -53,7 +60,7 @@ const paymentsParams = computed(() => ({ payerType: payerType.value, country: co
 const { data: paymentsInfo } = await useApi<PaymentsInfo>(
   '/order/payments/',
   paymentsParams,
-  { watch: [payerType, country] },
+  { watch: [payerType, country], prefill: (params) => prefilledFor(orderPrefill?.payments, params) },
 );
 
 const paymentType = ref(paymentsInfo.value?.default ?? '');

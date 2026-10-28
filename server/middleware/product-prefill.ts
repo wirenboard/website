@@ -1,18 +1,11 @@
-import { timingSafeEqual } from 'node:crypto';
-
-const isValidKey = (given: string | undefined, expected: string | undefined): boolean => {
-  if (!given || !expected) return false;
-  const a = Buffer.from(given);
-  const b = Buffer.from(expected);
-  return a.length === b.length && timingSafeEqual(a, b);
-};
+import { isValidInternalApiKey } from '../utils/internalApiKey';
 
 export default defineEventHandler((event) => {
   const raw = getHeader(event, 'x-wb-product');
   if (!raw) return;
 
   const config = useRuntimeConfig(event);
-  if (!isValidKey(getHeader(event, 'x-internal-api-key'), config.internalApiKey as string)) {
+  if (!isValidInternalApiKey(getHeader(event, 'x-internal-api-key'), config.internalApiKey as string)) {
     console.warn(`[product-prefill] X-WB-Product ignored: missing or invalid X-Internal-Api-Key (${event.path})`);
     return;
   }

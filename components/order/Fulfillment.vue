@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Button from '~/components/Button.vue';
 import {RUSSIA_ID, DeliveryType, DeliveryError, type AvailableDelivery, type AvailableDeliveriesInfo, type Destination, type Tariff, type RecentAddress } from '~/common/types';
+import { useOrderPrefill, prefilledFor } from '~/composables/useOrderPrefill';
 
 const { t } = useI18n();
 const config = useRuntimeConfig();
@@ -51,7 +52,12 @@ const deliveryPVZ = ref<Record<string, any>>({
 });
 watchEffect(() => { deliveryQuery.value = { ...deliveryAddress.value, ...deliveryPVZ.value }; });
 watchEffect(() => { deliveryData.value = { ...deliveryAddressDirty.value, ...deliveryAddressDetails.value, ...deliveryPVZ.value }; });
-const { data: delivery, pending, error: deliveryFetchError, refresh } = await useApi<AvailableDeliveriesInfo>(`/order/delivery/`, deliveryQuery);
+// Ответ /order/delivery для адреса из prefill-info PHP-прокси присылает вместе с запросом страницы
+// (X-WB-Order, см. composables/useOrderPrefill.ts): при SSR запрос в PHP тогда не нужен.
+const orderPrefill = useOrderPrefill();
+const { data: delivery, pending, error: deliveryFetchError, refresh } = await useApi<AvailableDeliveriesInfo>(`/order/delivery/`, deliveryQuery, {
+  prefill: (params) => prefilledFor(orderPrefill?.delivery, params),
+});
 
 const isRussia = computed(() => country.value === RUSSIA_ID);
 
@@ -195,7 +201,7 @@ const initCdekWidget = (): Promise<void> => {
   if (cdekInitPromise) return cdekInitPromise;
   cdekInitPromise = new Promise<void>((resolve) => {
     const script = document.createElement('script');
-    script.src = 'https://wirenboard.com/npm/@cdek-it/widget@3.12';
+    script.src = 'https://wirenboard.com/npm/@cdek-it/widget@3.13.1';
     script.onload = () => {
       // @ts-ignore
       cdekWidget.value = new window.CDEKWidget({

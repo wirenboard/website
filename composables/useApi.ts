@@ -5,7 +5,16 @@ import type { MaybeRef } from 'vue';
 export const useApi = async <T>(
   url: string,
   params?: MaybeRef<Record<string, any>> | null,
-  opts?: AsyncDataOptions<T> & { method?: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'; body?: MaybeRef<any> }
+  opts?: AsyncDataOptions<T> & {
+    method?: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+    body?: MaybeRef<any>;
+    /**
+     * Готовый ответ для SSR: если вернёт не undefined, запрос в API не делается, и в payload
+     * страницы уходит это значение. Вызывается с параметрами запроса (без user_id). На клиенте
+     * не используется — повторные запросы (watch, refresh) идут в API.
+     */
+    prefill?: (params: Record<string, any>) => T | undefined;
+  }
 ): Promise<_AsyncData<PickFrom<T, KeysOf<T>> | null, NuxtError<unknown> | null>> => {
   const config = useRuntimeConfig();
   const { locale } = useI18n();
@@ -36,18 +45,27 @@ export const useApi = async <T>(
   const apiBase = import.meta.server ? (config.apiUrl || '') : '';
   const baseURL = `${apiBase}/${locale.value}/ng/api/v1`;
 
-  const { method, body, ...asyncDataOpts } = opts ?? {};
+  const { method, body, prefill, ...asyncDataOpts } = opts ?? {};
 
   return useAsyncData<T>(
     url,
-    () => $fetch<T>(baseURL + url, {
-      method: method ?? 'GET',
-      headers,
-      ...(method && method.toUpperCase() !== 'GET'
-        ? { body: toValue(body) }
-        : { params: { user_id: userId, ...toValue(params) } }
-      ),
-    }),
+    () => {
+      const query = toValue(params) ?? {};
+      if (import.meta.server && prefill) {
+        const prefilled = prefill(query);
+        if (prefilled !== undefined) {
+          return Promise.resolve(prefilled);
+        }
+      }
+      return $fetch<T>(baseURL + url, {
+        method: method ?? 'GET',
+        headers,
+        ...(method && method.toUpperCase() !== 'GET'
+          ? { body: toValue(body) }
+          : { params: { user_id: userId, ...query } }
+        ),
+      });
+    },
     asyncDataOpts
   );
 }
