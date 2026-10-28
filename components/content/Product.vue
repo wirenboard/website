@@ -10,7 +10,11 @@ import 'swiper/css';
 
 const route = useRoute();
 const { t, locale } = useI18n();
-const { data } = await useLocalizedData(`/catalog/${route.params.slug}`, false, {});
+// Та же нормализация регистра, что и в pages/contents/product/[slug].vue: этот компонент
+// рендерится как тег <product> внутри тела markdown-страницы и независимо запрашивает тот
+// же контент по slug из URL, поэтому должен приводить его к нижнему регистру так же.
+const slug = String(route.params.slug).toLowerCase();
+const { data } = await useLocalizedData(`/catalog/${slug}`, false, {});
 const { data: product } = await useProduct(data.value.article);
 
 const invTotal = computed(() => {

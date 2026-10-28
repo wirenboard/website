@@ -2,8 +2,10 @@
 import { useProduct } from '~/composables/useProduct';
 
 const route = useRoute();
-const { data } = await useLocalizedData(`/catalog/${route.params.slug}`, false, {});
-const { data: product } = await useProduct(data.value.article);
+// Контентные файлы лежат с slug в нижнем регистре; артикулы в ссылках (в т.ч. старых/внешних)
+// бывают в исходном регистре (WB-MCM8) — приводим перед точным поиском по пути.
+const slug = String(route.params.slug).toLowerCase();
+const { data } = await useLocalizedData(`/catalog/${slug}`, false, {});
 
 if (!data.value) {
   throw createError({
@@ -11,6 +13,8 @@ if (!data.value) {
     statusMessage: `Page not found: ${route.path}`,
   });
 }
+
+const { data: product } = await useProduct(data.value.article);
 
 defineOptions({
   name: 'Product',
