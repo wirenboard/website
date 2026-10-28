@@ -3,7 +3,7 @@ import { useApi } from '~/composables/useApi';
 
 export const useProduct = async (article: string) => {
   const { locale } = useI18n();
-  const url = `/product/${article}/?locale=${locale.value}`;
+  const url = `/product/${encodeURIComponent(article)}/?locale=${locale.value}`;
 
   if (import.meta.server) {
     const prefill = useRequestEvent()?.context.wbProduct;

@@ -15,6 +15,7 @@ video: [
   ["https://www.youtube.com/embed/f9zvU900sPI"],
   ["https://www.youtube.com/embed/d_olK15Xhkw"]
 ]
+use_cases: ["zhelezno"]
 ---
 ::product
 #description
@@ -32,21 +33,7 @@ video: [
 
 #info
 
-## Примеры использования
-
-::product-section{title=""}
-:photo{
-  src="wb-m1w2-v1/wb-m1w2-v1-1.jpg"
-  caption="ГК «Железно»"
-  width="500px"
-  float="right"
-}
-
-
-::
-
-
-## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+## Основные характеристики
 
 ::product-section{title="Преимущества"}
 :photo{

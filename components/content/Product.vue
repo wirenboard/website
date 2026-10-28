@@ -10,7 +10,7 @@ import 'swiper/css';
 
 const route = useRoute();
 const { t, locale } = useI18n();
-const { data } = await useLocalizedData(`catalog`, false, { _file: { $icontains: route.params.slug } });
+const { data } = await useLocalizedData(`/catalog/${route.params.slug}`, false, {});
 const { data: product } = await useProduct(data.value.article);
 
 const invTotal = computed(() => {
@@ -40,6 +40,7 @@ const getPriceWithCurrencyIcon = (price: number) => {
 
       <div class="product-coverWrapper">
         <NuxtImg
+          v-if="data.cover"
           :src="data.cover"
           class="product-cover"
           :alt="product?.title"
@@ -126,6 +127,10 @@ const getPriceWithCurrencyIcon = (price: number) => {
       </aside>
     </div>
 
+    <div class="product-section">
+      <ContentSlot :use="$slots.info" unwrap="p" />
+    </div>
+
     <div class="product-section" id="useCases" v-if="data?.use_cases?.length">
       <h2>{{ t('useCases') }}</h2>
       <ProductSolutions :data="data?.use_cases" />
@@ -135,10 +140,6 @@ const getPriceWithCurrencyIcon = (price: number) => {
       <h2>{{ t('video') }}</h2>
       <VideoGallery :data="data?.video" view="tile" />
       <div class="product-otherVideos">{{ t('otherVideos') }} <a :href="hardwarePlaylist">{{ t('videosLink') }}</a>.</div>
-    </div>
-
-    <div class="product-section">
-      <ContentSlot :use="$slots.info" unwrap="p" />
     </div>
 
     <div class="product-section" id="gallery" v-if="data?.images?.length">
@@ -324,6 +325,7 @@ const getPriceWithCurrencyIcon = (price: number) => {
 
 .product-description {
   font-size: 21px;
+  flex-grow: 1;
 
   @media (max-width: 768px) {
     font-size: 18px;

@@ -1,4 +1,9 @@
-export const useColumns = (dataLength: number, maxColumns: number, resolutions: number[]): ComputedRef<number> => {
+export const useColumns = (
+  dataLength: number,
+  maxColumns: number,
+  resolutions: number[],
+  fitToDataLength = true,
+): ComputedRef<number> => {
   const windowWidth = ref(typeof window !== 'undefined' ? window.innerWidth : 1200);
 
   onMounted(() => {
@@ -14,7 +19,7 @@ export const useColumns = (dataLength: number, maxColumns: number, resolutions: 
   }, 100);
 
   return computed(() => {
-    const availableColumns = Math.min(dataLength, maxColumns);
+    const availableColumns = fitToDataLength ? Math.min(dataLength, maxColumns) : maxColumns;
     
     // Используем переданные resolutions для определения количества колонок
     for (let i = 0; i < resolutions.length; i++) {

@@ -20,7 +20,7 @@ keywords: "CV LED Диммер, RGB лента, RGB+W лента, CCT лента
 
 #info
 
-## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+## Основные характеристики
 
 ::product-section{title="Аппаратная часть"}
 :photo{

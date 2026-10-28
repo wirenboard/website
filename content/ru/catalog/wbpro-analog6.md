@@ -20,7 +20,7 @@ keywords: "WBPRO-ANALOG6"
 
 #info
 
-## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+## Основные характеристики
 
 ::product-section{title="Аппаратная часть"}
 :photo{

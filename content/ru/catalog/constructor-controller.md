@@ -1,5 +1,5 @@
 ---
-article: "Сonstructor"
+article: "Constructor"
 cover: "constructor-controller/cover.png"
 catalogCover: "constructor-controller/catalog-cover.png"
 images: [

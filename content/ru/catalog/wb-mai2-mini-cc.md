@@ -16,6 +16,7 @@ video: [
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
   ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
+use_cases: ["liten_magnit", "meteo_piter"]
 ---
 ::product
 #description
@@ -29,21 +30,7 @@ video: [
 
 #info
 
-## Примеры использования
-
-::product-section{title=""}
-:photo{
-  src="wb-mai2-mini-cc/wb-mai2-mini-cc-1.jpg"
-  caption="Магнит"
-  width="500px"
-  float="right"
-}
-
-
-::
-
-
-## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+## Основные характеристики
 
 ::product-section{title="Преимущества"}
 :photo{

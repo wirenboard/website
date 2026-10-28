@@ -20,7 +20,7 @@ video: [
   ["https://peertube.wirenboard.com/videos/embed/84f1ed7f-a9c0-4d7d-8626-93a4598c2efa"],
   ["https://peertube.wirenboard.com/videos/embed/2ae96e58-39e4-40df-ad06-bd3331aecbb6"]
 ]
-use_cases: ["solutions-rostics", "solutions-liten-magnit", "techsensor-module-cafe"]
+use_cases: ["rostics", "liten_magnit", "techsensor_module_cafe"]
 ---
 ::product
 #description
@@ -34,7 +34,7 @@ use_cases: ["solutions-rostics", "solutions-liten-magnit", "techsensor-module-ca
 
 #info
 
-## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+## Основные характеристики
 
 ::product-section{title="Преимущества"}
 :photo{

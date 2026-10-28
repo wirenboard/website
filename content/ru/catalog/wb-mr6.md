@@ -18,7 +18,7 @@ video: [
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
   ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
-use_cases: ["solutions-zhelezno", "solutions-edselectro-bath", "comfort-life-piter-kvartira"]
+use_cases: ["zhelezno", "edselectro_bath", "comfort_life_piter_kvartira"]
 ---
 ::product
 #description
@@ -35,7 +35,7 @@ use_cases: ["solutions-zhelezno", "solutions-edselectro-bath", "comfort-life-pit
 
 #info
 
-## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+## Основные характеристики
 
 ::product-section{title="Преимущества"}
 :photo{

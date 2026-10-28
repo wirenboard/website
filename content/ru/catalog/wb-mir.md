@@ -15,6 +15,7 @@ images: [
 documentation: "https://wirenboard.com/wiki/WB-MIR_v3_-_Modbus_IR_Remote_Control"
 meta: "Устройство ИК-управления с  RS-485, Modbus RTU"
 keywords: "RS-485, Modbus RTU"
+use_cases: ["abrom_module_house", "greenery_city"]
 ---
 ::product
 #description
