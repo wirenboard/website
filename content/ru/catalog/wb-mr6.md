@@ -81,7 +81,7 @@ use_cases: ["zhelezno", "edselectro_bath", "comfort_life_piter_kvartira"]
 
 ::product-section{title="Долговечные реле Hongfa"}
 :photo{
-  src="wb-mr6/wb-mr6-2.png"
+  src="wb-mr6/wb-mr6-hongfa.jpg"
   width="500px"
   float="right"
 }
@@ -151,7 +151,7 @@ use_cases: ["zhelezno", "edselectro_bath", "comfort_life_piter_kvartira"]
 
 ::product-section{title="Настройка"}
 :photo{
-  src="wb-mr6/wb-mr6-7.png"
+  src="wb-mr6/wb-mr6-setup.png"
   width="500px"
   float="right"
 }
@@ -173,7 +173,7 @@ use_cases: ["zhelezno", "edselectro_bath", "comfort_life_piter_kvartira"]
 
 ::product-section{title="Чтение показаний"}
 :photo{
-  src="wb-mr6/wb-mr6-8.png"
+  src="wb-mr6/wb-mr6-readings.png"
   width="500px"
   float="right"
 }

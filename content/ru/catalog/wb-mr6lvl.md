@@ -151,7 +151,7 @@ video: [
 
 ::product-section{title="Настройка"}
 :photo{
-  src="wb-mr6lvl/wb-mr6lvl-7.png"
+  src="wb-mr6lvl/wb-mr6lvl-setup.png"
   width="500px"
   float="right"
 }
@@ -173,7 +173,7 @@ video: [
 
 ::product-section{title="Чтение показаний"}
 :photo{
-  src="wb-mr6lvl/wb-mr6lvl-8.png"
+  src="wb-mr6lvl/wb-mr6lvl-readings.png"
   width="500px"
   float="right"
 }
