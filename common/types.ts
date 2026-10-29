@@ -94,6 +94,10 @@ export enum DeliveryError {
   AddressUnavailable = 'address_unavailable', // service replied, no delivery to this address
 }
 
+export enum OrderErrorKind {
+  Payment = 'payment_error', // payment method rejected/unavailable
+}
+
 export interface AvailableDelivery {
   id: string;
   type: string;

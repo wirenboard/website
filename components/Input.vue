@@ -41,38 +41,40 @@ const hasError = computed(() => error.value || !!props.errorMessage);
 
 <template>
   <div class="input-wrapper">
-    <input
-      v-if="!disabled"
-      ref="inputRef"
-      v-model="model"
-      :type="type"
-      placeholder=" "
-      class="input"
-      :class="{
-        'input-filled': !!model,
-        'input-error': hasError,
-        'input-hasAction': !!$slots.action,
-        'input-large': size === 'large'
-      }"
-      :id="id"
-      :autofocus="autofocus"
-      :aria-invalid="hasError"
-      :inputmode="inputmode"
-      :required="required"
-      :autocomplete="autocomplete"
-      :pattern="pattern"
-      :title="title"
-      @blur="validate"
-      @input="validate"
-    />
-    <div v-else class="input input-static" :class="{ 'input-large': size === 'large' }" :id="id">{{ model }}</div>
+    <div class="input-box">
+      <input
+        v-if="!disabled"
+        ref="inputRef"
+        v-model="model"
+        :type="type"
+        placeholder=" "
+        class="input"
+        :class="{
+          'input-filled': !!model,
+          'input-error': hasError,
+          'input-hasAction': !!$slots.action,
+          'input-large': size === 'large'
+        }"
+        :id="id"
+        :autofocus="autofocus"
+        :aria-invalid="hasError"
+        :inputmode="inputmode"
+        :required="required"
+        :autocomplete="autocomplete"
+        :pattern="pattern"
+        :title="title"
+        @blur="validate"
+        @input="validate"
+      />
+      <div v-else class="input input-static" :class="{ 'input-large': size === 'large' }" :id="id">{{ model }}</div>
 
-    <label v-if="label" class="input-label" :class="{ 'input-label--static': disabled }" :for="id">
-      {{ label }}
-      <span v-if="required" class="input-required">*</span>
-    </label>
-    <div v-if="$slots.action" class="input-action">
-      <slot name="action" />
+      <label v-if="label" class="input-label" :class="{ 'input-label--static': disabled }" :for="id">
+        {{ label }}
+        <span v-if="required" class="input-required">*</span>
+      </label>
+      <div v-if="$slots.action" class="input-action">
+        <slot name="action" />
+      </div>
     </div>
     <span v-if="errorMessage" class="input-errorMessage">{{ errorMessage }}</span>
   </div>
@@ -80,6 +82,10 @@ const hasError = computed(() => error.value || !!props.errorMessage);
 
 <style>
 .input-wrapper {
+  position: relative;
+}
+
+.input-box {
   position: relative;
 }
 

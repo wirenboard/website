@@ -1,5 +1,5 @@
 import type { Ref } from 'vue';
-import type { CustomerData } from '~/common/types';
+import { OrderErrorKind, type CustomerData } from '~/common/types';
 
 const parseErrors = (data: any): Record<string, string> => {
   const result: Record<string, string> = {};
@@ -38,6 +38,7 @@ export const useOrderSubmit = async (params: {
 }) => {
   const submitPending = ref(false);
   const orderError = ref(false);
+  const orderErrorKind = ref<OrderErrorKind | null>(null);
   const fieldErrors = ref<Record<string, string>>({});
 
   const orderPayload = ref<any>(null);
@@ -60,6 +61,7 @@ export const useOrderSubmit = async (params: {
 
     fieldErrors.value = {};
     orderError.value = false;
+    orderErrorKind.value = null;
     submitPending.value = true;
     orderPayload.value = {
       payerType: params.payerType.value,
@@ -71,7 +73,9 @@ export const useOrderSubmit = async (params: {
     await submitOrder();
     submitPending.value = false;
     if (orderRequestError.value) {
-      fieldErrors.value = parseErrors(orderRequestError.value.data);
+      const errorData = orderRequestError.value.data as { errors?: unknown; kind?: string } | undefined;
+      fieldErrors.value = parseErrors(errorData);
+      orderErrorKind.value = errorData?.kind === OrderErrorKind.Payment ? OrderErrorKind.Payment : null;
       orderError.value = true;
       nextTick(() => {
         if (Object.keys(fieldErrors.value).length) {
@@ -91,5 +95,5 @@ export const useOrderSubmit = async (params: {
     }
   };
 
-  return { submitPending, orderError, fieldErrors, makeOrder };
+  return { submitPending, orderError, orderErrorKind, fieldErrors, makeOrder };
 };

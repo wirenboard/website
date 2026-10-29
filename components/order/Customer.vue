@@ -159,6 +159,7 @@ const onOrgSelect = ({ orgName, inn, kpp, address }: { orgName: string; inn: str
 .customer-fieldWrapper {
   display: grid;
   grid-template-columns: 3fr minmax(200px, 1fr);
+  align-items: start;
   width: 100%;
   gap: 18px;
 }
@@ -170,6 +171,7 @@ const onOrgSelect = ({ orgName, inn, kpp, address }: { orgName: string; inn: str
 .customer-orgFieldWrapper {
   display: grid;
   grid-template-columns: 2fr 3fr;
+  align-items: start;
   width: 100%;
   gap: 18px;
 }
@@ -259,6 +261,23 @@ const onOrgSelect = ({ orgName, inn, kpp, address }: { orgName: string; inn: str
   .customer-orgFieldWrapper,
   .customer-orgFieldWrapper--withKpp {
     grid-template-columns: 1fr;
+  }
+
+  .customer-radioGroup {
+    flex-direction: column;
+  }
+
+  .customer-radio {
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .customer-radio:first-child {
+    border-radius: 2px 2px 0 0;
+  }
+
+  .customer-radio:last-of-type {
+    border-radius: 0 0 2px 2px;
   }
 }
 </style>
