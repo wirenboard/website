@@ -157,7 +157,7 @@ video: [
 
 ::product-section{title="Настройка"}
 :photo{
-  src="wb-mr6c_v3/wb-mr6c_v3-8.png"
+  src="wb-mr6c_v3/wb-mr6c_v3-setup.png"
   width="500px"
   float="right"
 }
@@ -179,7 +179,7 @@ video: [
 
 ::product-section{title="Чтение показаний"}
 :photo{
-  src="wb-mr6c_v3/wb-mr6c_v3-9.png"
+  src="wb-mr6c_v3/wb-mr6c_v3-readings.png"
   width="500px"
   float="right"
 }

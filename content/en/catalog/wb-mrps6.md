@@ -125,7 +125,7 @@ For the user, the additional features are enabled seamlessly: if the device supp
 
 ::product-section{title="Setup"}
 :photo{
-  src="wb-mrps6/wb-mrps6-6.png"
+  src="wb-mrps6/wb-mrps6-setup.png"
   width="500px"
   float="right"
 }
@@ -144,7 +144,7 @@ When used with other equipment, the module can be configured via the RS-485 bus 
 
 ::product-section{title="Reading the readings"}
 :photo{
-  src="wb-mrps6/wb-mrps6-7.png"
+  src="wb-mrps6/wb-mrps6-readings.png"
   width="500px"
   float="right"
 }

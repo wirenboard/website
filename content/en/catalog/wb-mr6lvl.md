@@ -140,7 +140,7 @@ For the user, the additional features are enabled seamlessly: if the device supp
 
 ::product-section{title="Setup"}
 :photo{
-  src="wb-mr6lvl/wb-mr6lvl-7.png"
+  src="wb-mr6lvl/wb-mr6lvl-setup.png"
   width="500px"
   float="right"
 }
@@ -162,7 +162,7 @@ When used with other equipment, the module can be configured via the RS-485 bus 
 
 ::product-section{title="Reading the readings"}
 :photo{
-  src="wb-mr6lvl/wb-mr6lvl-8.png"
+  src="wb-mr6lvl/wb-mr6lvl-readings.png"
   width="500px"
   float="right"
 }

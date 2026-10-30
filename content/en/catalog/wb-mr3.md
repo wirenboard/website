@@ -147,7 +147,7 @@ For the user, the additional features are enabled seamlessly: if the device supp
 
 ::product-section{title="Setup"}
 :photo{
-  src="wb-mr3/wb-mr3-8.png"
+  src="wb-mr3/wb-mr3-setup.png"
   width="500px"
   float="right"
 }
@@ -169,7 +169,7 @@ When used with other equipment, the module can be configured via the RS-485 bus 
 
 ::product-section{title="Reading the readings"}
 :photo{
-  src="wb-mr3/wb-mr3-9.png"
+  src="wb-mr3/wb-mr3-readings.png"
   width="500px"
   float="right"
 }

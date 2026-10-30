@@ -135,7 +135,7 @@ video: [
 
 ::product-section{title="Настройка"}
 :photo{
-  src="wb-mrps6/wb-mrps6-6.png"
+  src="wb-mrps6/wb-mrps6-setup.png"
   width="500px"
   float="right"
 }
@@ -154,7 +154,7 @@ video: [
 
 ::product-section{title="Чтение показаний"}
 :photo{
-  src="wb-mrps6/wb-mrps6-7.png"
+  src="wb-mrps6/wb-mrps6-readings.png"
   width="500px"
   float="right"
 }

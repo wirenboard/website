@@ -69,7 +69,7 @@ Specifications:
 
 ::product-section{title="Hongfa Long Life Relays"}
 :photo{
-  src="wb-mr6/wb-mr6-2.png"
+  src="wb-mr6/wb-mr6-hongfa.jpg"
   width="500px"
   float="right"
 }
@@ -137,7 +137,7 @@ Additional features are enabled automatically - if the device supports extension
 
 ::product-section{title="Setup"}
 :photo{
-  src="wb-mr6/wb-mr6-7.png"
+  src="wb-mr6/wb-mr6-setup.png"
   width="500px"
   float="right"
 }
@@ -159,7 +159,7 @@ When used with other equipment, the module can be configured via the RS-485 bus 
 
 ::product-section{title="Reading the readings"}
 :photo{
-  src="wb-mr6/wb-mr6-8.png"
+  src="wb-mr6/wb-mr6-readings.png"
   width="500px"
   float="right"
 }

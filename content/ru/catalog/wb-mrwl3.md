@@ -151,7 +151,7 @@ video: [
 
 ::product-section{title="Настройка"}
 :photo{
-  src="wb-mrwl3/wb-mrwl3-8.png"
+  src="wb-mrwl3/wb-mrwl3-setup.png"
   width="500px"
   float="right"
 }
@@ -173,7 +173,7 @@ video: [
 
 ::product-section{title="Чтение показаний"}
 :photo{
-  src="wb-mrwl3/wb-mrwl3-9.png"
+  src="wb-mrwl3/wb-mrwl3-readings.png"
   width="500px"
   float="right"
 }

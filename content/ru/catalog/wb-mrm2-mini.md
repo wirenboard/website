@@ -156,7 +156,7 @@ video: [
 
 ::product-section{title="Настройка"}
 :photo{
-  src="wb-mrm2-mini/wb-mrm2-mini-7.png"
+  src="wb-mrm2-mini/wb-mrm2-mini-setup.png"
   width="500px"
   float="right"
 }
@@ -178,7 +178,7 @@ video: [
 
 ::product-section{title="Чтение показаний"}
 :photo{
-  src="wb-mrm2-mini/wb-mrm2-mini-8.png"
+  src="wb-mrm2-mini/wb-mrm2-mini-readings.png"
   width="500px"
   float="right"
 }

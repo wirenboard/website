@@ -135,7 +135,7 @@ video: [
 
 ::product-section{title="Настройка"}
 :photo{
-  src="wb-mr6cu/wb-mr6cu-7.png"
+  src="wb-mr6cu/wb-mr6cu-setup.png"
   width="500px"
   float="right"
 }
@@ -154,7 +154,7 @@ video: [
 
 ::product-section{title="Чтение показаний"}
 :photo{
-  src="wb-mr6cu/wb-mr6cu-8.png"
+  src="wb-mr6cu/wb-mr6cu-readings.png"
   width="500px"
   float="right"
 }
