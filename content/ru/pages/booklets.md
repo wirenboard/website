@@ -2,7 +2,7 @@
 title: Печатные каталоги
 ---
 
-<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 460px), 1fr)); gap: 24px 40px;">
+<div style="display: grid; grid-template-columns: minmax(0, 880px); gap: 24px 40px;">
 
 <div style="display: flow-root; position: relative;">
 
