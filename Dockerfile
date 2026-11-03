@@ -1,4 +1,5 @@
-FROM node:18.19.0-slim
+# 22.23.4 and newer: fix for the Brotli decoder CVE-2026-111497 (Node 18 gets no fix)
+FROM node:22.23.4-bookworm-slim
 
 WORKDIR /var/www
 
