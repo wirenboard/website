@@ -67,9 +67,24 @@ export interface ProductPrefill {
   product: Product;
 }
 
+/**
+ * X-WB-Order: всё, что страница оформления заказа запрашивала бы при SSR у PHP
+ * (/order/prefill-info/, /order/payments/, /order/delivery/), собранное PHP заранее и переданное
+ * вместе с запросом (server/middleware/order-prefill.ts, composables/useOrderPrefill.ts).
+ * params/query — с какими параметрами собраны payments и deliveryOptions: подсказка годится,
+ * только если страница стартует с них же.
+ */
+export interface OrderPrefill {
+  locale: string;
+  orderInfo: OrderInfo;
+  payments: { params: Record<string, any>; data: PaymentsInfo };
+  deliveryOptions: { query: Record<string, any>; data: AvailableDeliveriesInfo };
+}
+
 declare module 'h3' {
   interface H3EventContext {
     wbProduct?: ProductPrefill;
+    wbOrder?: OrderPrefill;
   }
 }
 
@@ -106,8 +121,8 @@ export interface AvailableDelivery {
   title: string;
   address: string | null;
   mapUrl: string | null;
-  price: number | null;
-  total: number;
+  price: number | null; // цена доставки в валюте локали; null — ещё не посчитана / ошибка
+  total: number;        // итог заказа с этой доставкой в той же валюте (то, что покажет «ИТОГО»)
   error?: DeliveryError | false | null; // false/null - no error
   freeDelivery: boolean;
 }
@@ -160,6 +175,26 @@ export interface PromocodeNotice {
   severity: 'error' | 'warning' | 'info';
 }
 
+export type Currency = 'RUB' | 'EUR';
+
+/**
+ * Разбивка суммы корзины для страницы оформления заказа (/order/prefill-info/ и /basket/promocode/).
+ * Суммы — в валюте `currency`; её выбирает бэкенд по локали (ru — рубли, иначе евро), фронт
+ * только форматирует. Итог заказа — `AvailableDelivery.total` у выбранной доставки, в той же валюте.
+ */
+export interface BasketPricing {
+  currency: Currency;
+  itemsSum: number;
+  promocodeDiscount: number;
+  bulkDiscount: number;
+  partnerDiscount: number;
+}
+
+export interface BasketData extends BasketPricing {
+  cost: number;   // сумма корзины в рублях — для виджета СДЭК и проверки «корзина пуста»
+  weight: number; // кг
+}
+
 export interface OrderInfo {
   payerType: string;
   payerData: CustomerData;
@@ -167,7 +202,7 @@ export interface OrderInfo {
   deliveryData: Record<string, string>;
   promocode: string;
   promocodeNotices: PromocodeNotice[];
-  basketData: Record<string, number>;
+  basketData: BasketData;
   countries: Record<number, string>;
   cdekCountries: number[];
   recentAddresses?: RecentAddress[];

@@ -5,7 +5,17 @@ import type { _AsyncData, KeysOf, PickFrom, AsyncDataOptions } from '#app/compos
 export const useApi = async <T>(
   url: string,
   params?: MaybeRef<Record<string, any>> | null,
-  opts?: AsyncDataOptions<T> & { method?: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'; body?: MaybeRef<any>; key?: string },
+  opts?: AsyncDataOptions<T> & {
+    method?: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+    body?: MaybeRef<any>;
+    key?: string;
+    /**
+     * Данные, которые PHP уже передал вместе с исходным запросом (X-WB-Order, см.
+     * useOrderPrefill). Используется только при SSR и только для первого запроса: если вернёт
+     * значение, в эндпоинт не ходим. В браузере и при повторных запросах по watch — всегда $fetch.
+     */
+    prefill?: () => T | null | undefined;
+  },
 ): Promise<_AsyncData<PickFrom<T, KeysOf<T>> | null, NuxtError<unknown> | null>> => {
   const config = useRuntimeConfig();
   const { locale } = useI18n();
@@ -36,18 +46,24 @@ export const useApi = async <T>(
   const apiBase = import.meta.server ? (config.apiUrl || '') : '';
   const baseURL = `${apiBase}/${locale.value}/ng/api/v1`;
 
-  const { method, body, key, ...asyncDataOpts } = opts ?? {};
+  const { method, body, key, prefill, ...asyncDataOpts } = opts ?? {};
 
   return useAsyncData<T>(
     key ?? url,
-    () => $fetch<T>(baseURL + url, {
-      method: method ?? 'GET',
-      headers,
-      ...(method && method.toUpperCase() !== 'GET'
-        ? { body: toValue(body) }
-        : { params: { user_id: userId, ...toValue(params) } }
-      ),
-    }),
+    () => {
+      if (import.meta.server && prefill) {
+        const prefilled = prefill();
+        if (prefilled != null) return Promise.resolve(prefilled);
+      }
+      return $fetch<T>(baseURL + url, {
+        method: method ?? 'GET',
+        headers,
+        ...(method && method.toUpperCase() !== 'GET'
+          ? { body: toValue(body) }
+          : { params: { user_id: userId, ...toValue(params) } }
+        ),
+      });
+    },
     asyncDataOpts,
   );
 };
