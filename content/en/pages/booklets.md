@@ -6,7 +6,7 @@ title: Booklets and leaflets
 
 <div style="display: flow-root; position: relative;">
 
-<a href="/en/pages/booklets/booklet_en_11_2026.pdf" target="_blank" aria-label="Wiren Board Booklet in English (November 2026)" style="position: absolute; top: 0; left: 0; width: 197px; height: 300px; z-index: 1;"></a>
+<a href="https://wiki.wirenboard.com/wiki/images/2/26/WB-Booklet_EN_2026-11_web.pdf" target="_blank" aria-label="Wiren Board Booklet in English (November 2026)" style="position: absolute; top: 0; left: 0; width: 197px; height: 300px; z-index: 1;"></a>
 
 :photo{
     src="booklets/booklet_en.png"
@@ -14,16 +14,16 @@ title: Booklets and leaflets
     float="left"
 }
 
-### [Wiren Board Booklet in English (November 2026)](/en/pages/booklets/booklet_en_11_2026.pdf)
+### [Wiren Board Booklet in English (November 2026)](https://wiki.wirenboard.com/wiki/images/2/26/WB-Booklet_EN_2026-11_web.pdf)
 The latest booklet on all our products with up-to-date prices and installation examples in English.
 
-<a href="/en/pages/booklets/booklet_en_11_2026.pdf" target="_blank">Download PDF</a>
+<a href="https://wiki.wirenboard.com/wiki/images/2/26/WB-Booklet_EN_2026-11_web.pdf" target="_blank">Download PDF</a>
 
 </div>
 
 <div style="display: flow-root; position: relative;">
 
-<a href="/en/pages/booklets/booklet_it_11_2026.pdf" target="_blank" aria-label="Opuscolo Wiren Board in italiano (novembre 2026)" style="position: absolute; top: 0; left: 0; width: 197px; height: 300px; z-index: 1;"></a>
+<a href="https://wiki.wirenboard.com/wiki/images/9/97/WB-Booklet_IT_2026-11_web.pdf" target="_blank" aria-label="Opuscolo Wiren Board in italiano (novembre 2026)" style="position: absolute; top: 0; left: 0; width: 197px; height: 300px; z-index: 1;"></a>
 
 :photo{
     src="booklets/booklet_it.png"
@@ -31,16 +31,16 @@ The latest booklet on all our products with up-to-date prices and installation e
     float="left"
 }
 
-### [Opuscolo Wiren Board in italiano (novembre 2026)](/en/pages/booklets/booklet_it_11_2026.pdf)
+### [Opuscolo Wiren Board in italiano (novembre 2026)](https://wiki.wirenboard.com/wiki/images/9/97/WB-Booklet_IT_2026-11_web.pdf)
 L’opuscolo più recente su tutti i nostri prodotti con prezzi aggiornati ed esempi di installazioni in italiano.
 
-<a href="/en/pages/booklets/booklet_it_11_2026.pdf" target="_blank">Scarica il PDF</a>
+<a href="https://wiki.wirenboard.com/wiki/images/9/97/WB-Booklet_IT_2026-11_web.pdf" target="_blank">Scarica il PDF</a>
 
 </div>
 
 <div style="display: flow-root; position: relative;">
 
-<a href="/en/pages/booklets/booklet_fr_11_2026.pdf" target="_blank" aria-label="Brochure Wiren Board en français (novembre 2026)" style="position: absolute; top: 0; left: 0; width: 197px; height: 300px; z-index: 1;"></a>
+<a href="https://wiki.wirenboard.com/wiki/images/3/32/WB-Booklet_FR_2026-11_web.pdf" target="_blank" aria-label="Brochure Wiren Board en français (novembre 2026)" style="position: absolute; top: 0; left: 0; width: 197px; height: 300px; z-index: 1;"></a>
 
 :photo{
     src="booklets/booklet_fr.png"
@@ -48,16 +48,16 @@ L’opuscolo più recente su tutti i nostri prodotti con prezzi aggiornati ed es
     float="left"
 }
 
-### [Brochure Wiren Board en français (novembre 2026)](/en/pages/booklets/booklet_fr_11_2026.pdf)
+### [Brochure Wiren Board en français (novembre 2026)](https://wiki.wirenboard.com/wiki/images/3/32/WB-Booklet_FR_2026-11_web.pdf)
 La brochure la plus récente sur tous nos produits avec des prix à jour et des exemples d’installations en français.
 
-<a href="/en/pages/booklets/booklet_fr_11_2026.pdf" target="_blank">Télécharger le PDF</a>
+<a href="https://wiki.wirenboard.com/wiki/images/3/32/WB-Booklet_FR_2026-11_web.pdf" target="_blank">Télécharger le PDF</a>
 
 </div>
 
 <div style="display: flow-root; position: relative;">
 
-<a href="/en/pages/booklets/booklet_de_11_2026.pdf" target="_blank" aria-label="Wiren-Board-Broschüre auf Deutsch (November 2026)" style="position: absolute; top: 0; left: 0; width: 197px; height: 300px; z-index: 1;"></a>
+<a href="https://wiki.wirenboard.com/wiki/images/e/e3/WB-Booklet_DE_2026-11_web.pdf" target="_blank" aria-label="Wiren-Board-Broschüre auf Deutsch (November 2026)" style="position: absolute; top: 0; left: 0; width: 197px; height: 300px; z-index: 1;"></a>
 
 :photo{
     src="booklets/booklet_de.png"
@@ -65,10 +65,10 @@ La brochure la plus récente sur tous nos produits avec des prix à jour et des 
     float="left"
 }
 
-### [Wiren-Board-Broschüre auf Deutsch (November 2026)](/en/pages/booklets/booklet_de_11_2026.pdf)
+### [Wiren-Board-Broschüre auf Deutsch (November 2026)](https://wiki.wirenboard.com/wiki/images/e/e3/WB-Booklet_DE_2026-11_web.pdf)
 Die neueste Broschüre zu allen unseren Produkten mit aktuellen Preisen und Installationsbeispielen auf Deutsch.
 
-<a href="/en/pages/booklets/booklet_de_11_2026.pdf" target="_blank">PDF herunterladen</a>
+<a href="https://wiki.wirenboard.com/wiki/images/e/e3/WB-Booklet_DE_2026-11_web.pdf" target="_blank">PDF herunterladen</a>
 
 </div>
 </div>
