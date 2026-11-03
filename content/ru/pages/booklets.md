@@ -2,11 +2,11 @@
 title: Печатные каталоги
 ---
 
-<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 460px), 1fr)); gap: 24px 40px;">
+<div style="display: grid; grid-template-columns: minmax(0, 880px); gap: 24px 40px;">
 
 <div style="display: flow-root; position: relative;">
 
-<a href="https://wiki.wirenboard.com/wiki/images/5/58/Booklet_ru_10_2026.pdf" target="_blank" aria-label="Буклет Wiren Board на русском языке (октябрь, 2026)" style="position: absolute; top: 0; left: 0; width: 197px; height: 300px; z-index: 1;"></a>
+<a href="https://wiki.wirenboard.com/wiki/images/e/e3/WB-Booklet_RU_2026-11_web.pdf" target="_blank" aria-label="Буклет Wiren Board на русском языке (ноябрь, 2026)" style="position: absolute; top: 0; left: 0; width: 197px; height: 300px; z-index: 1;"></a>
 
 :photo{
     src="booklets/booklet_ru.png"
@@ -14,16 +14,16 @@ title: Печатные каталоги
     float="left"
 }
 
-### [Буклет Wiren Board на русском языке (октябрь, 2026)](https://wiki.wirenboard.com/wiki/images/5/58/Booklet_ru_10_2026.pdf)
-Самый свежий каталог всей нашей продукции с актуальными ценами и примерами инсталляций на русском языке.
+### [Буклет Wiren Board на русском языке (ноябрь, 2026)](https://wiki.wirenboard.com/wiki/images/e/e3/WB-Booklet_RU_2026-11_web.pdf)
+Самый свежий буклет обо всей нашей продукции с актуальными ценами и примерами инсталляций на русском языке.
 
-<a href="https://wiki.wirenboard.com/wiki/images/5/58/Booklet_ru_10_2026.pdf" target="_blank">Скачать PDF</a>
+<a href="https://wiki.wirenboard.com/wiki/images/e/e3/WB-Booklet_RU_2026-11_web.pdf" target="_blank">Скачать PDF</a>
 
 </div>
 
 <div style="display: flow-root; position: relative;">
 
-<a href="https://wiki.wirenboard.com/wiki/images/0/0e/Booklet_kz_10_2026.pdf" target="_blank" aria-label="Буклет Wiren Board на русском языке, цены в тенге (октябрь, 2026)" style="position: absolute; top: 0; left: 0; width: 197px; height: 300px; z-index: 1;"></a>
+<a href="https://wiki.wirenboard.com/wiki/images/4/4a/WB-Booklet_KZ_2026-11_web.pdf" target="_blank" aria-label="Буклет Wiren Board на русском языке, цены в тенге (ноябрь, 2026)" style="position: absolute; top: 0; left: 0; width: 197px; height: 300px; z-index: 1;"></a>
 
 :photo{
     src="booklets/booklet_ru.png"
@@ -31,10 +31,10 @@ title: Печатные каталоги
     float="left"
 }
 
-### [Буклет Wiren Board на русском языке, цены в тенге (октябрь, 2026)](https://wiki.wirenboard.com/wiki/images/0/0e/Booklet_kz_10_2026.pdf)
-Каталог всей нашей продукции с актуальными ценами в тенге и примерами инсталляций на русском языке.
+### [Буклет Wiren Board на русском языке, цены в тенге (ноябрь, 2026)](https://wiki.wirenboard.com/wiki/images/4/4a/WB-Booklet_KZ_2026-11_web.pdf)
+Буклет обо всей нашей продукции с актуальными ценами в тенге и примерами инсталляций на русском языке.
 
-<a href="https://wiki.wirenboard.com/wiki/images/0/0e/Booklet_kz_10_2026.pdf" target="_blank">Скачать PDF</a>
+<a href="https://wiki.wirenboard.com/wiki/images/4/4a/WB-Booklet_KZ_2026-11_web.pdf" target="_blank">Скачать PDF</a>
 
 </div>
 </div>
