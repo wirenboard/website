@@ -4,7 +4,7 @@ import Photo from './Photo.vue';
 const props = defineProps<{ data: ([string, string?])[]; withBorder?: boolean; }>();
 const photos = ref();
 const openedPhoto = ref(null);
-const numberOfGalleryColumns = useColumns(props.data.length, 5, [460, 600, 800, 960], false);
+const numberOfGalleryColumns = useColumns(props.data.length, 5, [460, 600, 800, 960]);
 
 const previewWidth = computed(() => {
   const cols = numberOfGalleryColumns.value;
