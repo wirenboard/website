@@ -9,8 +9,11 @@ export const useOrderPayment = async (payerType: Ref<string>, country: Ref<numbe
     paymentsParams,
     {
       watch: [payerType, country],
-      // При SSR — из X-WB-Order, если PHP собрал способы оплаты для тех же payerType и country.
-      prefill: () => (prefill && isSameQuery(prefill.payments.params, paymentsParams.value) ? prefill.payments.data : undefined),
+      // При SSR — из X-WB-Order, если PHP собрал способы оплаты для тех же payerType и country;
+      // нет этой части в заголовке — обычный запрос.
+      prefill: () => (prefill?.payments && isSameQuery(prefill.payments.params, paymentsParams.value)
+        ? prefill.payments.data
+        : undefined),
     },
   );
 

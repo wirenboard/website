@@ -42,8 +42,11 @@ export const useOrderDelivery = async (orderInfo: Ref<OrderInfo | null>, country
     deliveryQuery,
     {
       watch: [deliveryType, country, settledDeliveryData],
-      // При SSR — из X-WB-Order, если PHP считал способы доставки для того же deliveryQuery.
-      prefill: () => (prefill && isSameQuery(prefill.deliveryOptions.query, deliveryQuery.value) ? prefill.deliveryOptions.data : undefined),
+      // При SSR — из X-WB-Order, если PHP считал способы доставки для того же deliveryQuery;
+      // нет этой части в заголовке — обычный запрос.
+      prefill: () => (prefill?.deliveryOptions && isSameQuery(prefill.deliveryOptions.query, deliveryQuery.value)
+        ? prefill.deliveryOptions.data
+        : undefined),
     },
   );
 

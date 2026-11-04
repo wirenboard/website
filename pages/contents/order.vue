@@ -1,7 +1,14 @@
 <script lang="ts" setup>
 import Alert from '~/components/Alert.vue';
 import Button from '~/components/Button.vue';
-import { DeliveryType, OrderErrorKind, type OrderInfo, type AvailableDeliveriesInfo, type BasketPricing } from '~/common/types';
+import {
+  DeliveryType,
+  OrderErrorKind,
+  type OrderInfo,
+  type AvailableDeliveriesInfo,
+  type BasketPricing,
+  type BasketPricingResponse,
+} from '~/common/types';
 
 const { t, locale } = useI18n();
 
@@ -11,7 +18,7 @@ useHead({
 
 // При SSR всё, что нужно странице, PHP уже передал в заголовке X-WB-Order (useOrderPrefill):
 // иначе этот запрос и два следующих (payments, delivery) шли бы из Nuxt обратно в тот же PHP,
-// который в это время ждёт ответа Nuxt.
+// который в это время ждёт ответа Nuxt. Чего в заголовке нет — запрашивается у API как обычно.
 const orderPrefill = useOrderPrefill();
 const { data: orderInfo } = await useApi<OrderInfo>(`/order/prefill-info/`, null, { prefill: () => orderPrefill?.orderInfo });
 
@@ -37,19 +44,26 @@ const {
 } = await useOrderDelivery(orderInfo, country, orderPrefill);
 
 // Все суммы приходят с бэкенда уже в валюте локали (basketData.currency) — фронт их не
-// пересчитывает и не выбирает валюту по локали сам.
-const normalizePricing = (data: Partial<BasketPricing>): BasketPricing => ({
-  currency: data.currency ?? 'RUB',
-  itemsSum: data.itemsSum ?? 0,
-  promocodeDiscount: data.promocodeDiscount ?? 0,
-  bulkDiscount: data.bulkDiscount ?? 0,
-  partnerDiscount: data.partnerDiscount ?? 0,
-});
+// пересчитывает и не выбирает валюту по локали сам. Откат на переходный период: если бэкенд новых
+// полей не прислал (не выкачен или откачен), берём старые *Rub — они всегда в рублях, поэтому и
+// валюта RUB; на en это даст рубли вместо евро, но не нули.
+const normalizePricing = (data: BasketPricingResponse): BasketPricing => {
+  if (data.itemsSum === undefined) {
+    console.warn('[order] basketData without itemsSum/currency, falling back to legacy *Rub fields');
+  }
+  return {
+    currency: data.currency ?? 'RUB',
+    itemsSum: data.itemsSum ?? data.itemsSumRub ?? 0,
+    promocodeDiscount: data.promocodeDiscount ?? data.promocodeDiscountRub ?? 0,
+    bulkDiscount: data.bulkDiscount ?? data.bulkDiscountRub ?? 0,
+    partnerDiscount: data.partnerDiscount ?? data.partnerDiscountRub ?? 0,
+  };
+};
 
 const pricing = ref(normalizePricing(orderInfo.value!.basketData));
 
 const onPromocodeApplied = (
-  basketData: Partial<BasketPricing>,
+  basketData: BasketPricingResponse,
   deliveryOptions?: AvailableDeliveriesInfo,
 ) => {
   pricing.value = normalizePricing(basketData);

@@ -73,12 +73,14 @@ export interface ProductPrefill {
  * вместе с запросом (server/middleware/order-prefill.ts, composables/useOrderPrefill.ts).
  * params/query — с какими параметрами собраны payments и deliveryOptions: подсказка годится,
  * только если страница стартует с них же.
+ * Любая часть может отсутствовать (PHP её не прислал или middleware отбросил как невалидную) —
+ * тогда страница запрашивает именно её у API как обычно, остальные части используются.
  */
 export interface OrderPrefill {
   locale: string;
-  orderInfo: OrderInfo;
-  payments: { params: Record<string, any>; data: PaymentsInfo };
-  deliveryOptions: { query: Record<string, any>; data: AvailableDeliveriesInfo };
+  orderInfo?: OrderInfo;
+  payments?: { params: Record<string, any>; data: PaymentsInfo };
+  deliveryOptions?: { query: Record<string, any>; data: AvailableDeliveriesInfo };
 }
 
 declare module 'h3' {
@@ -190,8 +192,21 @@ export interface BasketPricing {
   partnerDiscount: number;
 }
 
-export interface BasketData extends BasketPricing {
-  cost: number;   // сумма корзины в рублях — для виджета СДЭК и проверки «корзина пуста»
+/**
+ * basketData как его шлёт бэкенд: новые поля BasketPricing плюс старые *Rub (всегда рубли), которые
+ * бэкенд оставляет на переходный период. Если новых полей нет (PHP ещё не выкачен или откачен), фронт
+ * берёт старые и считает валюту рублями — см. normalizePricing в pages/contents/order.vue.
+ * TODO: убрать *Rub и Partial, когда бэкенд с новыми полями подтверждённо выкачен везде.
+ */
+export interface BasketPricingResponse extends Partial<BasketPricing> {
+  itemsSumRub?: number;
+  promocodeDiscountRub?: number;
+  bulkDiscountRub?: number;
+  partnerDiscountRub?: number;
+}
+
+export interface BasketData extends BasketPricingResponse {
+  cost: number; // сумма корзины в рублях — для проверки «корзина пуста»
   weight: number; // кг
 }
 

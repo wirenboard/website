@@ -185,7 +185,9 @@ const initCdekWidget = (): Promise<void> => {
           city: 'Долгопрудный',
           address: 'Лихачёвский проезд, 6с1',
         },
-        goods: [{ width: 1, height: 1, length: 1, weight: (basketData.value.weight * 1000), cost: basketData.value.cost }],
+        // Объявленную ценность в виджет не передаём (cost: 0), как и раньше (сюда уходил undefined):
+        // виджет нужен только для выбора ПВЗ, цена доставки на странице берётся из /order/delivery/.
+        goods: [{ width: 1, height: 1, length: 1, weight: (basketData.value.weight * 1000), cost: 0 }],
         onChoose: (type: string, tariff: Tariff, destination: Destination) => {
           cdekPvzData.value = { tariff, destination };
           cdekWidget.value!.close();
