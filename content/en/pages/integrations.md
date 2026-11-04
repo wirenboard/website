@@ -100,7 +100,7 @@ Applications can access equipment data through MQTT without implementing each se
 :gallery{
     :data='[
         ["integrations/wb-rules-editor.png", "The wb-rules editor: logging a message when CPU temperature exceeds a threshold."],
-        ["integrations/nodered-flow.png", "Node-RED: an example flow for processing switch events."]
+        ["integrations/nodered-flow.png", "Node-RED: a flow that sorts CPU temperature readings from MQTT into ranges."]
     ]'
 }
 

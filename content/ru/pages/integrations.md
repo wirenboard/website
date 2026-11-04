@@ -101,7 +101,7 @@ Wiren Board объединяет датчики, счётчики, освеще�
 :gallery{
     :data='[
         ["integrations/wb-rules-editor.png", "Редактор wb-rules: правило записи сообщения в журнал при высокой температуре процессора."],
-        ["integrations/nodered-flow.png", "Node-RED: управление вытяжкой по показаниям датчика CO₂ Wiren Board."]
+        ["integrations/nodered-flow.png", "Node-RED: поток распределяет показания температуры CPU из MQTT по диапазонам."]
     ]'
 }
 
