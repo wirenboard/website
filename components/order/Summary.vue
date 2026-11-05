@@ -1,43 +1,54 @@
 <script lang="ts" setup>
-const { t, locale } = useI18n();
+import type { Currency } from '~/common/types';
+
+const { t } = useI18n();
 
 const props = defineProps<{
-  itemsSumRub: number;
-  promocodeDiscountRub: number;
-  bulkDiscountRub: number;
-  partnerDiscountRub: number;
+  currency: Currency;
+  itemsSum: number;
+  promocodeDiscount: number;
+  bulkDiscount: number;
+  partnerDiscount: number;
   showDelivery: boolean;
   deliveryPending: boolean;
   deliveryPricePending: boolean;
-  deliveryPriceRub: number;
+  deliveryPrice: number;
   totalSum: number;
 }>();
 
-const formatMoney = (value: number) => locale.value === 'ru' ? `${toTriads(value)} ₽` : `€${toTriads(value)}`;
+// Валюту называет бэкенд (basketData.currency), суммы приходят уже в ней — по локали здесь ничего
+// не выбирается. Рубли показываем целыми, евро — с центами, как в карточке товара.
+const formatMoney = (value: number) => {
+  if (props.currency === 'EUR') {
+    const [whole, cents] = value.toFixed(2).split('.');
+    return `€${toTriads(Number(whole))}.${cents}`;
+  }
+  return `${toTriads(Math.round(value))} ₽`;
+};
 </script>
 
 <template>
   <div class="order-summary">
     <div class="order-summaryRow">
       <span>{{ t('items') }}</span>
-      <span>{{ formatMoney(props.itemsSumRub) }}</span>
+      <span>{{ formatMoney(props.itemsSum) }}</span>
     </div>
-    <div v-if="props.promocodeDiscountRub > 0" class="order-summaryRow order-summaryRow--discount">
+    <div v-if="props.promocodeDiscount > 0" class="order-summaryRow order-summaryRow--discount">
       <span>{{ t('promoCodeDiscount') }}</span>
-      <span>−{{ formatMoney(props.promocodeDiscountRub) }}</span>
+      <span>−{{ formatMoney(props.promocodeDiscount) }}</span>
     </div>
-    <div v-if="props.bulkDiscountRub > 0" class="order-summaryRow order-summaryRow--discount">
+    <div v-if="props.bulkDiscount > 0" class="order-summaryRow order-summaryRow--discount">
       <span>{{ t('bulkDiscount') }}</span>
-      <span>−{{ formatMoney(props.bulkDiscountRub) }}</span>
+      <span>−{{ formatMoney(props.bulkDiscount) }}</span>
     </div>
-    <div v-if="props.partnerDiscountRub > 0" class="order-summaryRow order-summaryRow--discount">
+    <div v-if="props.partnerDiscount > 0" class="order-summaryRow order-summaryRow--discount">
       <span>{{ t('partnerDiscount') }}</span>
-      <span>−{{ formatMoney(props.partnerDiscountRub) }}</span>
+      <span>−{{ formatMoney(props.partnerDiscount) }}</span>
     </div>
     <div v-if="props.showDelivery" class="order-summaryRow">
       <span>{{ t('delivery') }}</span>
       <span v-if="props.deliveryPending" class="order-summarySkeleton" />
-      <span v-else>{{ props.deliveryPricePending ? '?' : (props.deliveryPriceRub > 0 ? formatMoney(props.deliveryPriceRub) : t('priceFree')) }}</span>
+      <span v-else>{{ props.deliveryPricePending ? '?' : (props.deliveryPrice > 0 ? formatMoney(props.deliveryPrice) : t('priceFree')) }}</span>
     </div>
     <div class="order-summaryRow order-summaryRow--total">
       <span>{{ t('total') }}</span>

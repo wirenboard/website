@@ -1,7 +1,14 @@
 <script lang="ts" setup>
 import Alert from '~/components/Alert.vue';
 import Button from '~/components/Button.vue';
-import { DeliveryType, OrderErrorKind, type OrderInfo, type AvailableDeliveriesInfo } from '~/common/types';
+import {
+  DeliveryType,
+  OrderErrorKind,
+  type OrderInfo,
+  type AvailableDeliveriesInfo,
+  type BasketPricing,
+  type BasketPricingResponse,
+} from '~/common/types';
 
 const { t, locale } = useI18n();
 
@@ -9,14 +16,18 @@ useHead({
   title: t('title'),
 });
 
-const { data: orderInfo } = await useApi<OrderInfo>(`/order/prefill-info/`);
+// При SSR всё, что нужно странице, PHP уже передал в заголовке X-WB-Order (useOrderPrefill):
+// иначе этот запрос и два следующих (payments, delivery) шли бы из Nuxt обратно в тот же PHP,
+// который в это время ждёт ответа Nuxt. Чего в заголовке нет — запрашивается у API как обычно.
+const orderPrefill = useOrderPrefill();
+const { data: orderInfo } = await useApi<OrderInfo>(`/order/prefill-info/`, null, { prefill: () => orderPrefill?.orderInfo });
 
 const payerType = ref(orderInfo.value!.payerType);
 const individual = ref(orderInfo.value!.payerData.individual);
 const entity = ref(orderInfo.value!.payerData.entity);
 const country = ref(Number(orderInfo.value!.deliveryData.country));
 
-const { paymentsInfo, paymentType } = await useOrderPayment(payerType, country);
+const { paymentsInfo, paymentType } = await useOrderPayment(payerType, country, orderPrefill);
 
 const {
   deliveryData,
@@ -27,24 +38,32 @@ const {
   selectedDeliveryItem,
   deliveryErrorKind,
   fulfillmentDeliveryError,
-  deliveryPriceRub,
+  deliveryPrice,
   deliveryPricePending,
   deliveryPromocodeIneffective,
-} = await useOrderDelivery(orderInfo, country);
+} = await useOrderDelivery(orderInfo, country, orderPrefill);
 
-type BasketPricing = { itemsSumRub: number; promocodeDiscountRub: number; bulkDiscountRub: number; partnerDiscountRub: number };
-
-const normalizePricing = (data: Partial<BasketPricing>): BasketPricing => ({
-  itemsSumRub: data.itemsSumRub ?? 0,
-  promocodeDiscountRub: data.promocodeDiscountRub ?? 0,
-  bulkDiscountRub: data.bulkDiscountRub ?? 0,
-  partnerDiscountRub: data.partnerDiscountRub ?? 0,
-});
+// Все суммы приходят с бэкенда уже в валюте локали (basketData.currency) — фронт их не
+// пересчитывает и не выбирает валюту по локали сам. Откат на переходный период: если бэкенд новых
+// полей не прислал (не выкачен или откачен), берём старые *Rub — они всегда в рублях, поэтому и
+// валюта RUB; на en это даст рубли вместо евро, но не нули.
+const normalizePricing = (data: BasketPricingResponse): BasketPricing => {
+  if (data.itemsSum === undefined) {
+    console.warn('[order] basketData without itemsSum/currency, falling back to legacy *Rub fields');
+  }
+  return {
+    currency: data.currency ?? 'RUB',
+    itemsSum: data.itemsSum ?? data.itemsSumRub ?? 0,
+    promocodeDiscount: data.promocodeDiscount ?? data.promocodeDiscountRub ?? 0,
+    bulkDiscount: data.bulkDiscount ?? data.bulkDiscountRub ?? 0,
+    partnerDiscount: data.partnerDiscount ?? data.partnerDiscountRub ?? 0,
+  };
+};
 
 const pricing = ref(normalizePricing(orderInfo.value!.basketData));
 
 const onPromocodeApplied = (
-  basketData: Partial<BasketPricing>,
+  basketData: BasketPricingResponse,
   deliveryOptions?: AvailableDeliveriesInfo,
 ) => {
   pricing.value = normalizePricing(basketData);
@@ -53,13 +72,18 @@ const onPromocodeApplied = (
   }
 };
 
-const totalSum = computed(() =>
-  pricing.value.itemsSumRub
-  - pricing.value.promocodeDiscountRub
-  - pricing.value.bulkDiscountRub
-  - pricing.value.partnerDiscountRub
-  + deliveryPriceRub.value
+// «ИТОГО» — total выбранной доставки из /order/delivery/ (и из deliveryOptions ответа промокода):
+// одно число в валюте локали, которое бэкенд считает из тех же сумм, что и строки выше и виджет
+// корзины (см. CheckoutCurrency в PHP). Сумму строк считаем сами только пока выбранного варианта
+// доставки ещё нет.
+const linesSum = computed(() =>
+  pricing.value.itemsSum
+  - pricing.value.promocodeDiscount
+  - pricing.value.bulkDiscount
+  - pricing.value.partnerDiscount
+  + deliveryPrice.value
 );
+const totalSum = computed(() => selectedDeliveryItem.value?.total ?? linesSum.value);
 
 const promocodeRef = ref<{ applying: boolean } | null>(null);
 const promocodeApplying = computed(() => promocodeRef.value?.applying ?? false);
@@ -129,14 +153,15 @@ const { submitPending, orderError, orderErrorKind, fieldErrors, makeOrder } = aw
           </Alert>
 
           <OrderSummary
-            :itemsSumRub="pricing.itemsSumRub"
-            :promocodeDiscountRub="pricing.promocodeDiscountRub"
-            :bulkDiscountRub="pricing.bulkDiscountRub"
-            :partnerDiscountRub="pricing.partnerDiscountRub"
+            :currency="pricing.currency"
+            :itemsSum="pricing.itemsSum"
+            :promocodeDiscount="pricing.promocodeDiscount"
+            :bulkDiscount="pricing.bulkDiscount"
+            :partnerDiscount="pricing.partnerDiscount"
             :showDelivery="selectedDeliveryItem?.type !== DeliveryType.Pickup"
             :deliveryPending="deliveryInfoPending"
             :deliveryPricePending="deliveryPricePending"
-            :deliveryPriceRub="deliveryPriceRub"
+            :deliveryPrice="deliveryPrice"
             :totalSum="totalSum"
           />
 
