@@ -20,6 +20,15 @@ defineOptions({
   name: 'Product',
 });
 
+// Картинки товара для PHP-обёртки (ExternalContentController в wirenboard.com): она собирает из
+// них og:image и schema.org/Product для Google, потому что сама до frontmatter не дотягивается.
+// Готовые URL ipx через `|`, первая - обложка. Ширина 1200 без смены формата: прозрачный PNG
+// остаётся PNG. Один модификатор, чтобы в значении не было `&`.
+const img = useImage();
+const productImages = [data.value.cover, ...(data.value.images ?? []).map((image: [string, string?]) => image[0])]
+  .filter((src: unknown): src is string => typeof src === 'string' && src !== '')
+  .map((src: string) => img(src, { width: 1200 }));
+
 useContentHead({
   ...data.value,
   // @ts-ignore
@@ -30,6 +39,7 @@ useContentHead({
       { name: 'description', content: data.value.meta },
       { name: 'keywords', content: data.value.keywords },
       { name: 'wb-hide-heading', content: 'true' },
+      { name: 'wb-product-images', content: productImages.join('|') },
     ]
   }
 });
