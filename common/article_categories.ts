@@ -20,6 +20,7 @@ export const categories: Categories = {
         { name: 'apartments', label: 'Многоквартирные дома и ЖК' },
         { name: 'embedded', label: 'Встраиваемые системы и метеостанции' },
         { name: 'home_automation', label: 'Домашняя автоматизация' },
+        { name: 'smart_city_infrastructure', label: 'Городская и общественная инфраструктура' },
       ]
     },
     { name: 'manufactoring', label: 'О производстве и процессах' },

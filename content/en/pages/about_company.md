@@ -6,7 +6,7 @@ Wiren Board is a group of companies that has been designing and manufacturing eq
 
 Our devices control oil wells, bank branches, individual homes, and entire residential districts, maintain microclimate conditions in server rooms, supermarkets and offices, and collect and analyze data from sensors and external devices.
 
-Today, Wiren Board is a team of over 100 specialists, including electronics engineers, software developers, quality engineers, technicians, and managers.
+Today, Wiren Board is a team of 150 specialists, including electronics engineers, software developers, quality engineers, technicians, and managers.
 
 To maintain the high quality of our products, we perform all key stages of the manufacturing process in-house. This includes component sourcing, testing, and final assembly. Every device we manufacture undergoes rigorous testing with modern automated test equipment.
 
