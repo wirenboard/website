@@ -407,4 +407,4 @@ category: hardware_selection
 
 По аналогии можно придумать сценарии и интегрировать в общую систему автоматизации и вытяжку над плитой на кухне.
 
-**Читайте продолжение во [второй части](https://wirenboard.com/ru/pages/sh-principles-part2/)**
+**Читайте продолжение во [второй части](https://wirenboard.com/ru/contents/articles/smart_home_design_principles_part2)**
