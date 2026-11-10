@@ -18,6 +18,12 @@ const computedFigureStyle = computed(() => {
   const width = typeof props.width === 'string' ? props.width : `${props.width}px`;
   return `${props.width ? `max-width: ${width};` : ''}${props.isGallery ? 'width: 100%;' : ''}`;
 });
+
+// A percentage width limits the figure; the image itself fills the figure,
+// otherwise the percentage is applied twice and leaves an empty framed area.
+const imageWidth = computed(() => (
+  typeof props.width === 'string' && props.width.endsWith('%') ? '100%' : props.width
+));
 </script>
 
 <template>
@@ -36,7 +42,7 @@ const computedFigureStyle = computed(() => {
       ref="photo"
       :src="src"
       :alt="caption"
-      :width="width"
+      :width="imageWidth"
       preview
       @show="$emit('openPhoto', photo.$attrSelector)"
       @hide="$emit('openPhoto', null)"
@@ -49,10 +55,10 @@ const computedFigureStyle = computed(() => {
           :class="{
             'photo-imageFromGallery': isGallery
           }"
-          :preset="previewPreset || width === '100%' ? 'fullWidthPreview' : 'preview'"
+          :preset="previewPreset || imageWidth === '100%' ? 'fullWidthPreview' : 'preview'"
           :sizes="previewPreset === '' ? 'xs:100vw' : 'lg:100vw'"
           :img-attrs="{
-            width,
+            width: imageWidth,
             class: `photo-image ${isGallery ? 'photo-imageFromGallery' : ''} ${caption ? 'photo-imageWithCaption' : ''}`,
             'data-pc-section': 'image',
           }"
