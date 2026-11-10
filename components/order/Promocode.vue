@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Button from '~/components/Button.vue';
 import Alert from '~/components/Alert.vue';
-import type { PromocodeNotice, AvailableDeliveriesInfo } from '~/common/types';
+import type { PromocodeNotice, AvailableDeliveriesInfo, BasketPricingResponse } from '~/common/types';
 
 const { t } = useI18n();
 const applying = ref(false);
@@ -16,10 +16,8 @@ const props = defineProps<{
   deliveryQuery?: Record<string, any>;
 }>();
 
-type PromocodeBasketData = { itemsSumRub: number; promocodeDiscountRub: number; bulkDiscountRub: number; partnerDiscountRub: number };
-
 const emit = defineEmits<{
-  applied: [basketData: PromocodeBasketData, deliveryOptions: AvailableDeliveriesInfo | undefined];
+  applied: [basketData: BasketPricingResponse, deliveryOptions: AvailableDeliveriesInfo | undefined];
 }>();
 
 const code = ref(props.initialCode ?? '');
@@ -28,7 +26,12 @@ const notices = ref<PromocodeNotice[]>(props.initialNotices ?? []);
 const hasBlockingNotice = computed(() => notices.value.some(n => n.type === 'sum_from'));
 
 const payload = ref<{ code: string; payerType: string; deliveryQuery?: Record<string, any> }>({ code: '', payerType: props.payerType });
-const { execute: checkPromocode, data: result } = await useApi<{ active: boolean; notices: PromocodeNotice[]; basketData: PromocodeBasketData; deliveryOptions?: AvailableDeliveriesInfo }>(
+const { execute: checkPromocode, data: result } = await useApi<{
+  active: boolean;
+  notices: PromocodeNotice[];
+  basketData: BasketPricingResponse;
+  deliveryOptions?: AvailableDeliveriesInfo;
+}>(
   '/basket/promocode/',
   null,
   { method: 'POST', body: payload, immediate: false },

@@ -1,5 +1,6 @@
 import type { Ref } from 'vue';
-import { DeliveryError, type OrderInfo, type AvailableDeliveriesInfo } from '~/common/types';
+import { DeliveryError, type OrderInfo, type AvailableDeliveriesInfo, type OrderPrefill } from '~/common/types';
+import { isSameQuery } from '~/composables/useOrderPrefill';
 
 const DELIVERY_DATA_KEYS = [
   'city', 'postcode', 'street', 'house', 'room',
@@ -10,7 +11,7 @@ const DELIVERY_DATA_KEYS = [
 const normalizeDeliveryData = (value: Record<string, any>) =>
   DELIVERY_DATA_KEYS.map((key) => `${key}=${value[key] ?? ''}`).join('|');
 
-export const useOrderDelivery = async (orderInfo: Ref<OrderInfo | null>, country: Ref<number>) => {
+export const useOrderDelivery = async (orderInfo: Ref<OrderInfo | null>, country: Ref<number>, prefill?: OrderPrefill) => {
   const deliveryData = ref(orderInfo.value!.deliveryData);
   const deliveryType = ref(orderInfo.value!.deliveryType);
 
@@ -39,7 +40,14 @@ export const useOrderDelivery = async (orderInfo: Ref<OrderInfo | null>, country
   const { data: deliveryInfo, pending: deliveryInfoPending, error: deliveryFetchError } = await useApi<AvailableDeliveriesInfo>(
     '/order/delivery/',
     deliveryQuery,
-    { watch: [deliveryType, country, settledDeliveryData] },
+    {
+      watch: [deliveryType, country, settledDeliveryData],
+      // При SSR — из X-WB-Order, если PHP считал способы доставки для того же deliveryQuery;
+      // нет этой части в заголовке — обычный запрос.
+      prefill: () => (prefill?.deliveryOptions && isSameQuery(prefill.deliveryOptions.query, deliveryQuery.value)
+        ? prefill.deliveryOptions.data
+        : undefined),
+    },
   );
 
   const selectedDeliveryItem = computed(() => deliveryInfo.value?.find((item) => item.id === deliveryType.value));
@@ -50,7 +58,8 @@ export const useOrderDelivery = async (orderInfo: Ref<OrderInfo | null>, country
     return error === DeliveryError.AddressUnavailable ? DeliveryError.AddressUnavailable : DeliveryError.Network;
   });
   const fulfillmentDeliveryError = computed(() => deliveryErrorKind.value !== null);
-  const deliveryPriceRub = computed(() => selectedDeliveryItem.value?.price ?? 0);
+  // price приходит с бэкенда уже в валюте локали (как и basketData.currency на странице заказа).
+  const deliveryPrice = computed(() => selectedDeliveryItem.value?.price ?? 0);
   const deliveryPricePending = computed(() => selectedDeliveryItem.value?.price == null);
   const anyDeliveryFreeFromPromocode = computed(() =>
     deliveryInfo.value?.some((item) => item.freeDelivery) ?? false,
@@ -59,7 +68,7 @@ export const useOrderDelivery = async (orderInfo: Ref<OrderInfo | null>, country
     anyDeliveryFreeFromPromocode.value
     && !selectedDeliveryItem.value?.freeDelivery
     && !deliveryPricePending.value
-    && deliveryPriceRub.value > 0,
+    && deliveryPrice.value > 0,
   );
 
   return {
@@ -71,7 +80,7 @@ export const useOrderDelivery = async (orderInfo: Ref<OrderInfo | null>, country
     selectedDeliveryItem,
     deliveryErrorKind,
     fulfillmentDeliveryError,
-    deliveryPriceRub,
+    deliveryPrice,
     deliveryPricePending,
     deliveryPromocodeIneffective,
   };
