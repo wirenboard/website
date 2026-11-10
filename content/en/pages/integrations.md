@@ -12,7 +12,7 @@ Wiren Board brings sensors, meters, lighting, HVAC, and other equipment into one
 
 ## Applications
 
-Wiren Board is used in commercial buildings, shops and restaurants, warehouses, manufacturing, public infrastructure, and homes. See real-world projects in [Solutions](https://wirenboard.com/en/contents/solutions).
+Wiren Board is used in commercial buildings, shops and restaurants, warehouses, manufacturing, public infrastructure, and homes. See real-world projects in [Solutions](https://wirenboard.com/en/contents/solutions/).
 
 | Sites | Typical tasks |
 | --- | --- |
@@ -38,11 +38,11 @@ The controller comes with software for connecting equipment, exchanging data, an
 
 - **Modbus RTU/TCP devices** — read measurements from sensors and meters, monitor actuator status, and send control commands. Ready-made device templates are available for many models.
 - **MQTT** — exchange measurements and commands between connected equipment, applications on the controller, and external software.
-- **Modbus RTU/TCP gateway** — make data from connected equipment available to supervisory systems and receive control commands.
+- **Modbus RTU/TCP gateway** — make data from connected equipment available to SCADA and other supervisory systems, and receive control commands from them.
 - **Scenarios** — configure if-then logic, thermostats, schedules, and other functions without writing code. The built-in wb-rules engine supports custom JavaScript rules.
 - **History and notifications** — record measurements, view charts, and send email or SMS notifications. SMS requires a modem and a SIM card.
 
-Automation logic runs on the controller. Local control and configuration do not depend on a cloud service. Use the web interface to configure equipment, manage services, and create dashboards.
+Automation logic runs on the controller. Local control and configuration work without a cloud service. Use the web interface to configure equipment, manage services, and create dashboards.
 
 :gallery{
     :data='[
@@ -69,7 +69,7 @@ The table below shows the main equipment groups and selected examples. Compatibi
 | Heating and thermostats | Siemens RDF302 and ENGO EFAN fan coil thermostats. | Change setpoints and operating modes, and monitor temperature and heating status. Boilers can be integrated using OpenTherm or eBUS with a suitable interface. |
 | Electricity, water, and heat meters | Eastron SDM120M/SDM220M electricity meters, water and heat meters with pulse outputs, and [Wiren Board energy meters](https://wirenboard.com/en/catalog/wb-map-energy-meters/). | Collect readings in one system to track and analyze consumption. |
 | Lighting | [WB-DALI3](https://wirenboard.com/en/product/wb-mdali-3/) and compatible DALI-2 lighting equipment; [WB-LED](https://wirenboard.com/en/contents/product/WB-LED/) dimmers for LED strips. | Control luminaires, dim LED strips, and include lighting sensors and switches in automation logic. |
-| Curtains and blinds | Dooya DT82, A-OK AM68/LM100, and Somfy SDN (Sonesse, Glydea) drives in supported RS-485 versions. Drives with phase control (separate open and close wires) connect through [WB-MR relay modules](https://wirenboard.com/wiki/WB-MR6C_v.3_Modbus_Relay_Modules#%D0%9F%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BF%D1%80%D0%B8%D0%B2%D0%BE%D0%B4%D0%BE%D0%B2_%D1%88%D1%82%D0%BE%D1%80). | Open and close blinds or curtains, set their position, and combine them with other automation functions. |
+| Curtains and blinds | Dooya DT82, A-OK AM68/LM100, and Somfy SDN (Sonesse, Glydea) drives in supported RS-485 versions. Drives with separate open and close wires connect through [WB-MR relay modules](https://wirenboard.com/en/catalog/wb-mr-relay-modules/). | Open and close blinds or curtains, set their position, and combine them with other automation functions. |
 | Sensors | DS18B20 temperature sensors, for example through a [WB-M1W2 v.3](https://wirenboard.com/en/contents/product/WB-M1W2/) module. With [WB-MAI6](https://wirenboard.com/en/contents/product/wb-mai6/): Type K thermocouples, Pt100/Pt1000 resistance temperature detectors (RTDs), NTC thermistors, 4–20 mA and 0–10 V sensors, and compatible Hall-effect current sensors. | Measure temperature and current, and acquire analog signals for monitoring and control. |
 | Refrigeration | Selected Carel and Eliwell refrigeration controllers with a [WB-REF-U](https://wirenboard.com/en/product/WB-REF-U/) network card, Danfoss ERC 211/213/214 controllers with a [WB-REF-DF-ERC21](https://wirenboard.com/en/product/WB-REF-DF-ERC21/) network card, and Danfoss EKC 202/204 controllers with a [WB-REF-DF-178A](https://wirenboard.com/en/contents/product/WB-REF-DF-178A/) network card. | Monitor temperature and operating status, adjust setpoints, and control defrost cycles. |
 | Water leak protection | [WB-MWAC](https://wirenboard.com/en/product/WB-MWAC/) with compatible leak sensors and shutoff valves. | Detect leaks, shut off the water supply, and report status to the automation system. |
@@ -117,9 +117,9 @@ Add applications to the controller or connect it to an existing control and moni
     float="center"
 }
 
-**Apple HomeKit** makes selected devices available in the Apple Home app and through Siri. Set up a software bridge, for example using Node-RED and the [node-red-contrib-homekit-bridged](https://flows.nodered.org/node/node-red-contrib-homekit-bridged) module. Alternatively, [Home Assistant's HomeKit Bridge](https://www.home-assistant.io/integrations/homekit/) exposes supported entities to Apple Home. This integration is not preconfigured on the controller and must be set up separately.
+**Apple HomeKit** makes selected devices available in the Apple Home app and through Siri. HomeKit is not preconfigured on the controller and requires a software bridge, for example Node-RED with the [node-red-contrib-homekit-bridged](https://flows.nodered.org/node/node-red-contrib-homekit-bridged) module or the [HomeKit Bridge](https://www.home-assistant.io/integrations/homekit/) integration in Home Assistant.
 
-**SCADA and monitoring.** Zabbix and Grafana support infrastructure monitoring and dashboards. [Rapid SCADA](https://rapidscada.org/product/documentation/) provides tools for monitoring and supervisory control. FUXA is an option for browser-based SCADA. Connect external systems using MQTT, Modbus RTU/TCP, or an OPC UA gateway.
+**SCADA and monitoring.** Zabbix and Grafana provide infrastructure monitoring and dashboards. [Rapid SCADA](https://rapidscada.org/product/documentation/) provides tools for monitoring and supervisory control. FUXA provides SCADA and HMI screens in a web browser. Connect external systems using MQTT, Modbus RTU/TCP, or an OPC UA gateway.
 
 :photo{
     src="integrations/scada.png"
@@ -142,7 +142,7 @@ Add applications to the controller or connect it to an existing control and moni
 
 **Remote maintenance.** From a browser, configure controllers, use an SSH terminal, manage files, and open web applications running on the controller. Share access with colleagues and download diagnostic archives. No public IP address or router port forwarding is required.
 
-**Metrics and alerts.** Enable data uploads to access controller health dashboards in Grafana. Create charts for connected equipment and set alert thresholds. Send notifications to Telegram, Discord, or email.
+**Metrics and alerts.** Turn on data upload to get controller health dashboards in Grafana. Create charts for readings from connected equipment and set alert thresholds. Receive alerts in Telegram, Discord, or email.
 
 :photo{
     src="integrations/cloud-grafana-news.png"
@@ -151,7 +151,7 @@ Add applications to the controller or connect it to an existing control and moni
     float="center"
 }
 
-The service is available as a hosted cloud service or as an on-premise installation on your own server. Explore the [demo account](https://wirenboard.cloud/) without registering or connecting a controller.
+Wiren Board Cloud is available as a hosted service or as an on-premise installation on your own server. Explore the [demo account](https://wirenboard.cloud/) without registering or connecting a controller.
 
 ## Choosing a Solution
 
