@@ -45,7 +45,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
-          image: ghcr.io/wirenboard/website-base-image:node24-3c73ac6c
+          image: ghcr.io/wirenboard/website-base-image:node24-25299144
           options: -v ${{ github.workspace }}:/var/www
           run: |
             cd /var/www
