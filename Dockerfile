@@ -1,4 +1,6 @@
-FROM node:18.19.0-slim
+# Node 24 LTS (supported until 2028-04-30) on current Debian stable; 24.22.1+ carries the fix
+# for the Brotli decoder CVE-2026-111497 (Node 18 gets no fix). Node 22 ends 2027-04-30.
+FROM node:24.22.2-trixie-slim
 
 WORKDIR /var/www
 
