@@ -131,10 +131,16 @@ export interface Pricelist {
   categories: PricelistCategory[];
 }
 
+export interface PricelistPrefill {
+  locale: string;
+  pricelist: Pricelist;
+}
+
 declare module 'h3' {
   interface H3EventContext {
     wbProduct?: ProductPrefill;
     wbOrder?: OrderPrefill;
+    wbPricelist?: PricelistPrefill;
   }
 }
 

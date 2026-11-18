@@ -7,7 +7,10 @@ useHead({
   title: t('title'),
 });
 
-const { data: pricelist } = await useApi<Pricelist>(`/pricelist?locale=${locale.value}`);
+const pricelistPrefill = usePricelistPrefill();
+const { data: pricelist } = await useApi<Pricelist>(`/pricelist?locale=${locale.value}`, null, {
+  prefill: () => pricelistPrefill,
+});
 
 if (!pricelist.value) {
   throw createError({
