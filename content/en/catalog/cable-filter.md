@@ -1,0 +1,5 @@
+---
+article: "cable-filter"
+---
+::product
+::

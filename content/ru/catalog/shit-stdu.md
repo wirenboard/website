@@ -1,0 +1,5 @@
+---
+article: "shit-stdu"
+---
+::product
+::
