@@ -6,7 +6,7 @@ import { timingSafeEqual } from 'node:crypto';
  */
 export const isValidInternalApiKey = (given: string | undefined, expected: string | undefined): boolean => {
   if (!given || !expected) return false;
-  const a = Buffer.from(given);
-  const b = Buffer.from(expected);
+  const a = Uint8Array.from(Buffer.from(given));
+  const b = Uint8Array.from(Buffer.from(expected));
   return a.length === b.length && timingSafeEqual(a, b);
 };
