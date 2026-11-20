@@ -13,11 +13,7 @@ ___________________________________
 ___________________________________
 **Деплой на тестовый сайт:**
 
-<!-- Замени ВЕТКА на хвост имени ветки после последнего «/» (feature/promocode → promocode):
-     так CI называет тег образа ghcr.io/wirenboard/website. Ссылка открывает в Jenkins форму
-     с уже заполненными параметрами, остаётся нажать «Build» (нужен логин в Jenkins).
-     Если PR парный с wirenboard.com, допиши в extra-var через %20 тег бэка:
-     extra-var=content_tag=ВЕТКА%20website_tag=ВЕТКА_БЭКА -->
+<!-- ВЕТКА = хвост имени ветки после последнего «/», это тег образа из CI. Для парного PR допиши через %20: website_tag=<ветка бэка> -->
 [Задеплоить ветку на www-test](https://jenkins.wirenboard.com/job/pipelines/job/deploy-infra/buildWithParameters?Host=www_test_vm&Tag=website&Branch=main&extra-var=content_tag=ВЕТКА)
 
 Стенд: https://www-test.wirenboard.com (логин в Bitwarden, группа IT/Website)
