@@ -11,6 +11,14 @@ ___________________________________
 
 
 ___________________________________
+**Деплой на тестовый сайт:**
+
+<!-- ВЕТКА = хвост имени ветки после последнего «/», это тег образа из CI. Для парного PR допиши через %20: website_tag=<ветка бэка> -->
+[Задеплоить ветку на www-test](https://jenkins.wirenboard.com/job/pipelines/job/deploy-infra/buildWithParameters?Host=www_test_vm&Tag=website&Branch=main&extra-var=content_tag=ВЕТКА)
+
+Стенд: https://www-test.wirenboard.com (логин в Bitwarden, группа IT/Website)
+
+___________________________________
 **Чеклист ревью:**
 
 Перед мержем не забудь проверить:
