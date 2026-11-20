@@ -24,6 +24,10 @@ const computedFigureStyle = computed(() => {
 const imageWidth = computed(() => (
   typeof props.width === 'string' && props.width.endsWith('%') ? '100%' : props.width
 ));
+
+// GIFs must keep their original format, otherwise the image module converts them
+// to a static WebP and the animation is lost.
+const isGif = computed(() => props.src.toLowerCase().endsWith('.gif'));
 </script>
 
 <template>
@@ -56,6 +60,7 @@ const imageWidth = computed(() => (
             'photo-imageFromGallery': isGallery
           }"
           :preset="previewPreset || imageWidth === '100%' ? 'fullWidthPreview' : 'preview'"
+          :format="isGif ? 'gif' : undefined"
           :sizes="previewPreset === '' ? 'xs:100vw' : 'lg:100vw'"
           :img-attrs="{
             width: imageWidth,
@@ -76,6 +81,7 @@ const imageWidth = computed(() => (
             'data-pc-section': 'original'
           }"
           preset="original"
+          :format="isGif ? 'gif' : undefined"
           sizes="(max-width: 1920px) 90vw, 1920px"
           densities="x1"
           :style="slotProps.style"
