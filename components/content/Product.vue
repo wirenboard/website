@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import LinkIcon from '~/assets/icons/external-link.svg';
 import { hardwarePlaylist } from '~/common/links';
 import ContentGallery from '~/components/content/Gallery.client.vue';
+import Model3D from '~/components/content/Model3D.client.vue';
 import ProductOptions from '~/components/content/ProductOptions.vue';
 import ProductSolutions from '~/components/content/ProductSolutions.vue';
 import { useProduct } from '~/composables/useProduct';
@@ -16,6 +17,32 @@ const { t, locale } = useI18n();
 const slug = String(route.params.slug).toLowerCase();
 const { data } = await useLocalizedData(`/catalog/${slug}`, false, {});
 const { data: product } = await useProduct(data.value.article);
+
+const config = useRuntimeConfig();
+const modelUrl = config.public.modelsUrl ? `${config.public.modelsUrl}/${slug}.glb` : '';
+// The same device without its case, optional.
+const nocaseUrl = config.public.modelsUrl ? `${config.public.modelsUrl}/${slug}.nocase.glb` : '';
+const hasModel = ref(false);
+const hasNocase = ref(false);
+
+const exists = async (url: string) => {
+  try {
+    return (await fetch(url, { method: 'HEAD' })).ok;
+  } catch {
+    return false;
+  }
+};
+
+// The models are uploaded separately from the site, so their presence is only known by asking the bucket.
+// Both answers are awaited before the viewer appears, so the case switch does not pop in under it later.
+onMounted(async () => {
+  if (!modelUrl) {
+    return;
+  }
+  const found = await exists(modelUrl);
+  hasNocase.value = found && await exists(nocaseUrl);
+  hasModel.value = found;
+});
 
 const invTotal = computed(() => {
   const items = product.value?.items;
@@ -43,8 +70,11 @@ const getPriceWithCurrencyIcon = (price: number) => {
       </div>
 
       <div class="product-coverWrapper">
+        <ClientOnly v-if="hasModel">
+          <Model3D :src="modelUrl" :nocase-src="hasNocase ? nocaseUrl : ''" :alt="product?.name" />
+        </ClientOnly>
         <NuxtImg
-          v-if="data.cover"
+          v-else-if="data.cover"
           :src="data.cover"
           class="product-cover"
           :alt="product?.title"

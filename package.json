@@ -12,6 +12,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@google/model-viewer": "4.4.0",
     "@nuxt/content": "2.13.0",
     "@nuxt/image": "1.7.0",
     "@nuxtjs/i18n": "8.3.1",
@@ -24,6 +25,7 @@
     "nuxt-content-assets": "1.4.4",
     "primevue": "4.0.0",
     "swiper": "^11.1.15",
+    "three": "0.183.0",
     "vue": "3.4.29",
     "vue-router": "4.3.3"
   },

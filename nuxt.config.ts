@@ -26,6 +26,12 @@ export default defineNuxtConfig({
       dadataKey: process.env.NUXT_PUBLIC_DADATA_KEY,
       yaMapKey: process.env.NUXT_PUBLIC_YA_MAP_KEY,
       cartoApiKey: process.env.NUXT_PUBLIC_CARTO_API_KEY,
+      modelsUrl: process.env.NUXT_PUBLIC_MODELS_URL,
+    },
+  },
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) => tag === 'model-viewer',
     },
   },
   devtools: { enabled: false },
@@ -125,6 +131,16 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
+    // Draco decoder for <model-viewer>, served from the installed three package. It lives under
+    // /_nuxt/ because that is the only prefix the production front passes to Node unchanged;
+    // files at the root of public/ are routed to PHP there and answer 404.
+    publicAssets: [
+      {
+        dir: join(projectRoot, 'node_modules', 'three', 'examples', 'jsm', 'libs', 'draco', 'gltf'),
+        baseURL: '/_nuxt/draco',
+        maxAge: 60 * 60 * 24 * 30,
+      },
+    ],
     routeRules: {
       '/.well-known/appspecific/**': {
         headers: { 'cache-control': 'max-age=31536000' },
