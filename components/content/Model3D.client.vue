@@ -24,9 +24,10 @@ onMounted(async () => {
 
 <template>
   <div class="model3d">
-    <!-- A three-quarter view: the default front view shows DIN-rail devices end-on. Zoom is off so the
-         mouse wheel over the header scrolls the page instead of zooming the model. -->
-    <model-viewer :src="current" :alt="alt" camera-controls disable-zoom camera-orbit="-30deg 65deg auto" touch-action="pan-y" class="model3d-viewer" />
+    <!-- From above the front, the label readable and the terminals towards the viewer: the default front view
+         shows DIN-rail devices end-on. Exposure 0.7 matches the catalogue photos: at 1 the white case burns out.
+         Zoom is off so the mouse wheel over the header scrolls the page instead of zooming the model. -->
+    <model-viewer :src="current" :alt="alt" camera-controls disable-zoom camera-orbit="120deg 45deg auto" exposure="0.7" touch-action="pan-y" class="model3d-viewer" />
     <!-- allowEmpty off: a click on the active option must not reset the view, even for a moment. -->
     <SelectButton v-if="nocaseSrc" v-model="view" :options="options as any" optionLabel="label" optionValue="value" :allowEmpty="false" />
   </div>
