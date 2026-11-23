@@ -1,10 +1,5 @@
 ---
 article: "Room Ctl mezzanine"
-cover: "room-ctl-mezzanine/cover.jpg"
-catalogCover: "room-ctl-mezzanine/catalog-cover.jpg"
-images: [
-  ["room-ctl-mezzanine/cover.jpg"]
-]
 ---
 ::product
 #description
