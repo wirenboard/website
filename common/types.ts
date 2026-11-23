@@ -83,6 +83,59 @@ export interface OrderPrefill {
   deliveryOptions?: { query: Record<string, any>; data: AvailableDeliveriesInfo };
 }
 
+interface Price {
+  amount: string;
+  currency: 'rub' | 'usd';
+}
+
+interface PriceWithHint {
+  primary: Price;
+  secondary: Price | null;
+}
+
+interface PricelistOptionValue {
+  label: string;
+  delta: (PriceWithHint & { sign: '+' | '-' }) | null;
+}
+
+interface PricelistOption {
+  name: string;
+  values: PricelistOptionValue[];
+}
+
+interface PricelistSet {
+  name: string;
+  options: { name: string; value: string }[];
+  sku: string;
+  price: PriceWithHint;
+}
+
+export interface PricelistProduct {
+  type: 'simple' | 'detailed';
+  slug: string;
+  name: string;
+  short_desc: string;
+  sku: string;
+  price?: PriceWithHint | null;
+  base_config_price?: PriceWithHint;
+  options?: PricelistOption[];
+  sets?: PricelistSet[];
+}
+
+export interface PricelistCategory {
+  name: string;
+  products: PricelistProduct[];
+}
+
+export interface Pricelist {
+  categories: PricelistCategory[];
+}
+
+export interface PricelistPrefill {
+  locale: string;
+  pricelist: Pricelist;
+}
+
 export interface OrdersPrefill {
   locale: string;
   query: Record<string, any>;
@@ -93,6 +146,7 @@ declare module 'h3' {
   interface H3EventContext {
     wbProduct?: ProductPrefill;
     wbOrder?: OrderPrefill;
+    wbPricelist?: PricelistPrefill;
     wbOrders?: OrdersPrefill;
   }
 }
