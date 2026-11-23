@@ -104,7 +104,7 @@ To transmit actual voltage values (Urms), WB-MAP3ET uses Fast Modbus ⚡.This al
 
 The measured parameters are convenient to use in tasks of managing load priorities to control consumption on each line. WB-MAP3ET can continuously measure the current of 3 single-phase channels and transmit the readings to the controller. If the permissible current consumption is exceeded, the low priority load is switched off. To disconnect loads you can use [https://wirenboard.com/ru/catalog/wb-mr-relay-modules/](https://wirenboard.com/ru/catalog/wb-mr-relay-modules/)Wiren Board relay modules.
 
-If you do not need to measure voltage and energy, then to measure current the meter does not have to be connected to power lines, It is enough to put a current transformer with a split core on the measured line. This makes installation and integration into the automation system easier.
+If you do not need to measure voltage and energy, then to measure current the meter does not have to be connected to power lines, it is enough to pass the wire of the measured line through the built-in current transformer. This makes installation and integration into the automation system easier.
 ::
 
 ::product-section{title="Fast Modbus support"}

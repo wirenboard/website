@@ -49,7 +49,7 @@ use_cases: ["liten_magnit", "techsensor_module_cafe", "rekota_hotel_vertical"]
 - русскоязычная документация;
 - возможно нанесение логотипа вашей компании.
 
-Поддерживает [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡, что позволяет мгновенно доставлять события датчика движения в контроллер Wiren Board.
+Поддерживает [Быстрый Modbus](https://wirenboard.com/wiki/Fast_Modbus) ⚡.
 ::
 
 ::product-section{title="Аппаратная часть"}

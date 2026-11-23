@@ -36,7 +36,7 @@ A wireless version: [WB-MSW-ZIGBEE v.4](https://wirenboard.com/ru/product/wb-msw
 - Fast and simple integration into the automation and monitoring system.
 - It is possible to apply your company logo.
 
-Supports Fast Modbus, allowing motion sensor events to be instantly delivered to the Wiren Board controller.
+Supports Fast Modbus.
 ::
 
 ::product-section{title="Hardware"}
@@ -50,7 +50,6 @@ Measured parameters:
 
 - Temperature: -40°С…+80°С (±0.5°С).
 - Humidity: 0…95% (±3%).
-- Two-color indication controlled via Modbus.
 - Sensor heating for operation in high humidity conditions.
 - Supply voltage: 9 to 28 VDC.
 - Power consumption: from 0.5 to 4 W.
