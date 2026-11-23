@@ -33,7 +33,7 @@ export default defineEventHandler((event) => {
 
   let data: unknown;
   try {
-    data = JSON.parse(gunzipSync(Buffer.from(raw, 'base64')).toString('utf8'));
+    data = JSON.parse(gunzipSync(Uint8Array.from(Buffer.from(raw, 'base64'))).toString('utf8'));
   } catch (e) {
     console.warn(`[order-prefill] X-WB-Order ignored: ${(e as Error).message} (${event.path})`);
     return;
