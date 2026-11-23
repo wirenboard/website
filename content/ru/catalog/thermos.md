@@ -1,0 +1,5 @@
+---
+article: "Thermos"
+---
+::product
+::

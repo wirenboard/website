@@ -1,0 +1,5 @@
+---
+article: "label layout"
+---
+::product
+::

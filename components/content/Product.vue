@@ -79,14 +79,12 @@ const getPriceWithCurrencyIcon = (price: number) => {
     </nav>
 
     <div class="product-descriptionWrapper">
-      <template v-if="$slots.description">
-        <div class="product-description product-section" id="description">
-          <p v-if="product?.discontinued" class="product-discontinued">
-            {{ t('discontinued') }} — <a href="https://wirenboard.com/ru/pages/contacts/" class="product-contactLink">{{ t('contactUs') }}</a>.
-          </p>
-          <ContentSlot :use="$slots.description" />
-        </div>
-      </template>
+      <div class="product-description product-section" id="description" v-if="$slots.description || product?.discontinued">
+        <p v-if="product?.discontinued" class="product-discontinued">
+          {{ t('discontinued') }} — <a href="https://wirenboard.com/ru/pages/contacts/" class="product-contactLink">{{ t('contactUs') }}</a>.
+        </p>
+        <ContentSlot v-if="$slots.description" :use="$slots.description" />
+      </div>
 
       <aside class="product-orderInfo" v-if="!product?.discontinued">
         <div class="product-price" v-if="product?.price">
@@ -353,6 +351,7 @@ const getPriceWithCurrencyIcon = (price: number) => {
 
 .product-orderInfo {
   min-width: 450px;
+  margin-left: auto;
 
   @media (max-width: 768px) {
     min-width: auto;

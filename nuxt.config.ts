@@ -118,6 +118,19 @@ export default defineNuxtConfig({
     options: {
       unstyled: true,
     },
+    // Every PrimeVue component used in this site is explicitly imported ('primevue/...'), so
+    // none of it needs PrimeVue's own auto-import — which otherwise silently wins over any of
+    // our own components sharing a name with a PrimeVue one (e.g. components/Badge.vue vs
+    // PrimeVue's own Badge — components.exclude alone doesn't help, @primevue/auto-import-resolver
+    // ignores it). v-tooltip (the only directive this site uses) still gets registered — the
+    // module's own generated plugin registers directives by hand whenever autoImport is off.
+    autoImport: false,
+    // autoImport: false still globally registers every PrimeVue component via Nuxt's
+    // addComponent() (a separate code path from the auto-import resolver above, but one that
+    // *does* honor `exclude`) unless told not to — so exclude all of them here too.
+    components: {
+      exclude: '*',
+    },
   },
   vite: {
     server: {

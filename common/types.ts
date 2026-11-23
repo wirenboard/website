@@ -136,11 +136,18 @@ export interface PricelistPrefill {
   pricelist: Pricelist;
 }
 
+export interface OrdersPrefill {
+  locale: string;
+  query: Record<string, any>;
+  data: UserOrdersResponse;
+}
+
 declare module 'h3' {
   interface H3EventContext {
     wbProduct?: ProductPrefill;
     wbOrder?: OrderPrefill;
     wbPricelist?: PricelistPrefill;
+    wbOrders?: OrdersPrefill;
   }
 }
 
@@ -289,6 +296,30 @@ export interface Tariff {
   tariff_code: number;
   tariff_description: string;
   tariff_name: string;
+}
+
+export interface UserOrder {
+  id: number;
+  created: number;
+  email: string;
+  orgName: string | null;
+  status: number;
+  payStatus: number;
+  sum: number;
+  language: string;
+  rate: number;
+  canCancel: boolean;
+  canUpd: boolean;
+}
+
+export interface UserOrdersResponse {
+  orders: UserOrder[];
+  pagination: {
+    page: number;
+    pageSize: number;
+    pageCount: number;
+    totalCount: number;
+  };
 }
 
 export interface Destination {
