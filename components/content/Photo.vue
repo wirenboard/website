@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import ArrowRight from '~/assets/icons/arrow-next.svg';
 import ArrowLeft from '~/assets/icons/arrow-previous.svg';
+import Image from 'primevue/image';
 
 const props = defineProps<{ src: string; caption?: string; width?: number | string; isGallery?: boolean; previewPreset?: string | null; withBorder?: boolean; float?: 'right' | 'left' | 'center'; }>();
 
