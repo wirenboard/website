@@ -18,7 +18,7 @@ video: [
 ::product
 #description
 
-**Модель снята с производства. Рекомендуемая замена [WB-MGE v.3](/contents/product/wb-mge-v3).**
+**Модель снята с производства. Рекомендуемая замена [WB-MGE v.3](/ru/contents/product/wb-mge-v3).**
 
 Предназначен для удалённого подключения устройств WBIO (модули ввода-вывода) по протоколу Modbus по шине RS-485 и/или Ethernet (протоколы Modbus TCP и Modbus RTU over TCP).
 
