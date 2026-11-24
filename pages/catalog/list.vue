@@ -1,16 +1,24 @@
 <script lang="ts" setup>
-import type { CatalogCategory, CategoryResponse } from '~/common/types';
+import type { CatalogListResponse } from '~/common/types';
 
 const { t, locale } = useI18n();
 
-const { data: categories } = await useApi<CatalogCategory[]>('/catalog/categories/');
+// При SSR всё, что нужно странице, PHP уже передал в заголовке X-WB-Catalog-List
+// (useCatalogListPrefill): иначе Nuxt при отрисовке сам шёл за списком категорий, а затем ещё по
+// одному запросу на каждую категорию — обратно в тот же PHP, который в это время ждёт ответа
+// Nuxt (см. CatalogController::catalogListPrefillHeaders() на бэке). Без подсказки — один
+// запрос в ng/api/v1/catalog/list вместо прежнего N+1.
+const catalogListPrefill = useCatalogListPrefill();
+const { data } = await useApi<CatalogListResponse>('/catalog/list/', null, {
+  prefill: () => catalogListPrefill,
+});
 
-if (!categories.value) {
+if (!data.value) {
   throw createError({ statusCode: 404, statusMessage: 'Categories not found' });
 }
 
-const config = useRuntimeConfig();
-const cookieHeader = import.meta.server ? useRequestHeader('cookie') : undefined;
+const categories = computed(() => data.value!.categories);
+const categoryDetails = computed(() => data.value!.categoryDetails);
 
 const DESCRIPTION_TRUNCATE_LENGTH = 400;
 const expandedCategories = ref<Record<number, boolean>>({});
@@ -29,31 +37,6 @@ useHead({
 });
 
 const { searchQuery, searchResults, searchPending } = useCatalogSearch();
-
-const { data: categoryDetails } = await useAsyncData('catalog-list-details', async () => {
-  const headers: Record<string, string> = {};
-  if (import.meta.server) {
-    if (config.siteLogin) {
-      headers['Authorization'] = `Basic ${btoa(`${config.siteLogin}:${config.sitePassword}`)}`;
-    }
-    if (cookieHeader) headers['Cookie'] = cookieHeader;
-    if (config.internalApiKey) headers['X-Internal-Api-Key'] = config.internalApiKey as string;
-  } else {
-    if (config.public.siteLogin) {
-      headers['Authorization'] = `Basic ${btoa(`${config.public.siteLogin}:${config.public.sitePassword}`)}`;
-    }
-  }
-  const apiBase = import.meta.server ? (config.apiUrl || '') : '';
-
-  const results = await Promise.allSettled(
-    categories.value!.map(cat =>
-      $fetch<CategoryResponse>(`${apiBase}/${locale.value}/ng/api/v1/catalog/categories/${cat.slug}/`, { headers })
-    )
-  );
-  return results
-    .filter((r): r is PromiseFulfilledResult<CategoryResponse> => r.status === 'fulfilled')
-    .map(r => r.value);
-});
 </script>
 
 <template>

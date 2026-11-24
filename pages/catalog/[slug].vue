@@ -5,7 +5,13 @@ const { t, locale } = useI18n();
 const route = useRoute();
 const slug = route.params.slug as string;
 
-const { data } = await useApi<CategoryResponse>(`/catalog/categories/${slug}/`);
+// При SSR всё, что нужно странице, PHP уже передал в заголовке X-WB-Catalog-Category
+// (useCatalogCategoryPrefill): иначе этот запрос шёл бы из Nuxt обратно в тот же PHP, который в
+// это время ждёт ответа Nuxt.
+const catalogCategoryPrefill = useCatalogCategoryPrefill();
+const { data } = await useApi<CategoryResponse>(`/catalog/categories/${slug}/`, null, {
+  prefill: () => (catalogCategoryPrefill?.slug === slug ? catalogCategoryPrefill.data : undefined),
+});
 
 if (!data.value) {
   throw createError({ statusCode: 404, statusMessage: 'Category not found' });

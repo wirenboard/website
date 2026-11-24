@@ -3,7 +3,13 @@ import type { CatalogCategory } from '~/common/types';
 
 const { t, locale } = useI18n();
 
-const { data: categories } = await useApi<CatalogCategory[]>('/catalog/categories/');
+// При SSR всё, что нужно странице, PHP уже передал в заголовке X-WB-Catalog-Categories
+// (useCatalogCategoriesPrefill): иначе этот запрос шёл бы из Nuxt обратно в тот же PHP, который
+// в это время ждёт ответа Nuxt.
+const catalogCategoriesPrefill = useCatalogCategoriesPrefill();
+const { data: categories } = await useApi<CatalogCategory[]>('/catalog/categories/', null, {
+  prefill: () => catalogCategoriesPrefill,
+});
 
 useHead({
   title: t('title'),
