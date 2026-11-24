@@ -5,7 +5,6 @@ coordinates: [43.204, 76.923]
 title: Kemel Integration
 logo: kemel_integration/kemel_integration.webp
 phone: 77470837838
-website: https://www.instagram.com/kemel.integration
 email: kemel.integration@gmail.com
 ---
 
