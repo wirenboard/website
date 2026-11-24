@@ -2,8 +2,10 @@
 import type { PaymentsInfo } from '~/common/types';
 import Alert from '~/components/Alert.vue';
 
-const props = defineProps<{ paymentsInfo: PaymentsInfo | null }>();
+const props = defineProps<{ paymentsInfo: PaymentsInfo | null; country?: number }>();
 const paymentType = defineModel<string>('paymentType');
+
+const BELARUS_COUNTRY_ID = 112;
 
 const { t } = useI18n();
 
@@ -33,6 +35,10 @@ const paymentTypes = computed(() =>
         </template>
       </i18n-t>
     </Alert>
+
+    <Alert v-if="paymentType === 'card' && country === BELARUS_COUNTRY_ID" variant="info" class="order-paymentWarning">
+      {{ t('cardBelarusNotice') }}
+    </Alert>
   </div>
 </template>
 
@@ -58,7 +64,8 @@ const paymentTypes = computed(() =>
     "requisites": "Банковским переводом",
     "requisitesComment": "По реквизитам",
     "cardWarning": "К сожалению, из-за отзыва сертификатов {link}. Для того чтобы оплатить заказ по карте, выберите на следующем шаге оплату по QR-коду, либо оформите заказ в Яндекс Браузере. Приносим свои извинения, мы сделаем все возможное для решения проблемы.",
-    "cardWarningLink": "некоторые браузеры ограничивают доступ к оплате по карте"
+    "cardWarningLink": "некоторые браузеры ограничивают доступ к оплате по карте",
+    "cardBelarusNotice": "Только для платежной системы Белкарт"
   },
   "en": {
     "title": "Payment method",
@@ -69,7 +76,8 @@ const paymentTypes = computed(() =>
     "requisites": "By bank transfer",
     "requisitesComment": "Using bank details",
     "cardWarning": "Unfortunately, due to certificate revocation, {link}. To pay for your order by card, select QR code payment at the next step, or place your order using Yandex Browser. We apologize for the inconvenience and are doing our best to resolve the issue.",
-    "cardWarningLink": "some browsers restrict access to card payments"
+    "cardWarningLink": "some browsers restrict access to card payments",
+    "cardBelarusNotice": "Belkart payment system only"
   }
 }
 </i18n>
