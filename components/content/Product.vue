@@ -2,17 +2,20 @@
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import LinkIcon from '~/assets/icons/external-link.svg';
 import { hardwarePlaylist } from '~/common/links';
-import type { Product } from '~/common/types';
 import ContentGallery from '~/components/content/Gallery.client.vue';
 import ProductOptions from '~/components/content/ProductOptions.vue';
 import ProductSolutions from '~/components/content/ProductSolutions.vue';
-import { useApi } from '~/composables/useApi';
+import { useProduct } from '~/composables/useProduct';
 import 'swiper/css';
 
 const route = useRoute();
 const { t, locale } = useI18n();
-const { data } = await useLocalizedData(`catalog`, false, { _file: { $icontains: route.params.slug } });
-const { data: product } = await useApi<Product>(`/product/${data.value.article}/?locale=${locale.value}`);
+// Та же нормализация регистра, что и в pages/contents/product/[slug].vue: этот компонент
+// рендерится как тег <product> внутри тела markdown-страницы и независимо запрашивает тот
+// же контент по slug из URL, поэтому должен приводить его к нижнему регистру так же.
+const slug = String(route.params.slug).toLowerCase();
+const { data } = await useLocalizedData(`/catalog/${slug}`, false, {});
+const { data: product } = await useProduct(data.value.article);
 
 const invTotal = computed(() => {
   const items = product.value?.items;
@@ -40,7 +43,17 @@ const getPriceWithCurrencyIcon = (price: number) => {
       </div>
 
       <div class="product-coverWrapper">
-        <NuxtImg :src="data.cover" class="product-cover" :alt="product?.title" />
+        <NuxtImg
+          v-if="data.cover"
+          :src="data.cover"
+          class="product-cover"
+          :alt="product?.title"
+          width="552"
+          sizes="xs:100vw sm:50vw lg:552px"
+          format="webp"
+          quality="80"
+          loading="lazy"
+        />
       </div>
     </div>
 
@@ -66,14 +79,12 @@ const getPriceWithCurrencyIcon = (price: number) => {
     </nav>
 
     <div class="product-descriptionWrapper">
-      <template v-if="$slots.description">
-        <div class="product-description product-section" id="description">
-          <p v-if="product?.discontinued" class="product-discontinued">
-            {{ t('discontinued') }} — <a href="https://wirenboard.com/ru/pages/contacts/" class="product-contactLink">{{ t('contactUs') }}</a>.
-          </p>
-          <ContentSlot :use="$slots.description" />
-        </div>
-      </template>
+      <div class="product-description product-section" id="description" v-if="$slots.description || product?.discontinued">
+        <p v-if="product?.discontinued" class="product-discontinued">
+          {{ t('discontinued') }} — <a href="https://wirenboard.com/ru/pages/contacts/" class="product-contactLink">{{ t('contactUs') }}</a>.
+        </p>
+        <ContentSlot v-if="$slots.description" :use="$slots.description" />
+      </div>
 
       <aside class="product-orderInfo" v-if="!product?.discontinued">
         <div class="product-price" v-if="product?.price">
@@ -118,6 +129,10 @@ const getPriceWithCurrencyIcon = (price: number) => {
       </aside>
     </div>
 
+    <div class="product-section">
+      <ContentSlot :use="$slots.info" unwrap="p" />
+    </div>
+
     <div class="product-section" id="useCases" v-if="data?.use_cases?.length">
       <h2>{{ t('useCases') }}</h2>
       <ProductSolutions :data="data?.use_cases" />
@@ -127,10 +142,6 @@ const getPriceWithCurrencyIcon = (price: number) => {
       <h2>{{ t('video') }}</h2>
       <VideoGallery :data="data?.video" view="tile" />
       <div class="product-otherVideos">{{ t('otherVideos') }} <a :href="hardwarePlaylist">{{ t('videosLink') }}</a>.</div>
-    </div>
-
-    <div class="product-section">
-      <ContentSlot :use="$slots.info" unwrap="p" />
     </div>
 
     <div class="product-section" id="gallery" v-if="data?.images?.length">
@@ -316,6 +327,7 @@ const getPriceWithCurrencyIcon = (price: number) => {
 
 .product-description {
   font-size: 21px;
+  flex-grow: 1;
 
   @media (max-width: 768px) {
     font-size: 18px;
@@ -339,6 +351,7 @@ const getPriceWithCurrencyIcon = (price: number) => {
 
 .product-orderInfo {
   min-width: 450px;
+  margin-left: auto;
 
   @media (max-width: 768px) {
     min-width: auto;

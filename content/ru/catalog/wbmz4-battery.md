@@ -2,11 +2,16 @@
 article: "WBMZ4-BATTERY"
 cover: "wbmz4-battery/cover.png"
 catalogCover: "wbmz4-battery/catalog-cover.png"
+images: [
+  ["wbmz4-battery/cover.png"],
+  ["wbmz4-battery/wbmz4-battery-1.png"],
+  ["wbmz4-battery/wbmz4-battery-2.png"]
+]
 documentation: "https://wirenboard.com/wiki/WBMZ4-BATTERY_Backup_Power_Module"
 meta: "Модуль резервного питания для Wiren Board 7"
 keywords: "Модуль резервного питания для Wiren Board 7"
 video: [
-  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"],
+  ["https://peertube.wirenboard.com/video-playlists/embed/6623c76e-1abe-4728-959c-f5dde919d80c?playlistPosition=9"]
 ]
 ---
 ::product

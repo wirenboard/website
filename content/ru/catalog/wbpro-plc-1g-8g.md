@@ -2,6 +2,9 @@
 article: "WBPRO-PLC-1G-8G"
 cover: "wbpro-plc-1g-8g/cover.png"
 catalogCover: "wbpro-plc-1g-8g/cover.png"
+images: [
+  ["wbpro-plc-1g-8g/cover.png"]
+]
 meta: "Automation controller"
 keywords: "Automation controller"
 ---
@@ -15,7 +18,7 @@ WBPRO-PLC-1G-8G — это универсальный контроллер ав�
 
 #info
 
-## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+## Основные характеристики
 
 ::product-section{title="Поддерживаемые протоколы"}
 :photo{

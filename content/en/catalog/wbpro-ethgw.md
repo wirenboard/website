@@ -2,6 +2,9 @@
 article: "WBPRO-ETHGW"
 cover: "wbpro-ethgw/cover.png"
 catalogCover: "wbpro-ethgw/catalog-cover.png"
+images: [
+  ["wbpro-ethgw/cover.png"]
+]
 meta: "Bus coupler RS-485 (Modbus) to Ethernet (IP) WBPRO-ETHGW"
 keywords: "Bus coupler RS-485 (Modbus) to Ethernet (IP) WBPRO-ETHGW"
 ---

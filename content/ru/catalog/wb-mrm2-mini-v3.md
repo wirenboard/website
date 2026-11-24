@@ -2,6 +2,9 @@
 article: "WB-MRM2-mini v.3"
 cover: "wb-mrm2-mini-v3/cover.jpg"
 catalogCover: "wb-mrm2-mini-v3/catalog-cover.jpg"
+images: [
+  ["wb-mrm2-mini-v3/cover.jpg"]
+]
 meta: "Компактный модуль реле в подрозетник с RS-485 Modbus RTU и функцией термостата."
 keywords: "реле, подрозетник, маленькое, компактное, термостат, светодиодная лампа, управление"
 ---

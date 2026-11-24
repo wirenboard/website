@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import ArrowRight from '~/assets/icons/arrow-next.svg';
 import ArrowLeft from '~/assets/icons/arrow-previous.svg';
+import Image from 'primevue/image';
 
 const props = defineProps<{ src: string; caption?: string; width?: number | string; isGallery?: boolean; previewPreset?: string | null; withBorder?: boolean; float?: 'right' | 'left' | 'center'; }>();
 
@@ -18,6 +19,16 @@ const computedFigureStyle = computed(() => {
   const width = typeof props.width === 'string' ? props.width : `${props.width}px`;
   return `${props.width ? `max-width: ${width};` : ''}${props.isGallery ? 'width: 100%;' : ''}`;
 });
+
+// A percentage width limits the figure; the image itself fills the figure,
+// otherwise the percentage is applied twice and leaves an empty framed area.
+const imageWidth = computed(() => (
+  typeof props.width === 'string' && props.width.endsWith('%') ? '100%' : props.width
+));
+
+// GIFs must keep their original format, otherwise the image module converts them
+// to a static WebP and the animation is lost.
+const isGif = computed(() => props.src.toLowerCase().endsWith('.gif'));
 </script>
 
 <template>
@@ -36,7 +47,7 @@ const computedFigureStyle = computed(() => {
       ref="photo"
       :src="src"
       :alt="caption"
-      :width="width"
+      :width="imageWidth"
       preview
       @show="$emit('openPhoto', photo.$attrSelector)"
       @hide="$emit('openPhoto', null)"
@@ -49,10 +60,11 @@ const computedFigureStyle = computed(() => {
           :class="{
             'photo-imageFromGallery': isGallery
           }"
-          :preset="previewPreset || width === '100%' ? 'fullWidthPreview' : 'preview'"
+          :preset="previewPreset || imageWidth === '100%' ? 'fullWidthPreview' : 'preview'"
+          :format="isGif ? 'gif' : undefined"
           :sizes="previewPreset === '' ? 'xs:100vw' : 'lg:100vw'"
           :img-attrs="{
-            width,
+            width: imageWidth,
             class: `photo-image ${isGallery ? 'photo-imageFromGallery' : ''} ${caption ? 'photo-imageWithCaption' : ''}`,
             'data-pc-section': 'image',
           }"
@@ -70,6 +82,7 @@ const computedFigureStyle = computed(() => {
             'data-pc-section': 'original'
           }"
           preset="original"
+          :format="isGif ? 'gif' : undefined"
           sizes="(max-width: 1920px) 90vw, 1920px"
           densities="x1"
           :style="slotProps.style"

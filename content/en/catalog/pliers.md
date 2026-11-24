@@ -2,6 +2,9 @@
 article: "KBT"
 cover: "pliers/cover.jpg"
 catalogCover: "pliers/cover.jpg"
+images: [
+  ["pliers/cover.jpg"]
+]
 meta: "Crimping pliers PKVk-10 for insulated crimp bootlace ferrules"
 keywords: "Crimping pliers PKVk-10 for insulated crimp bootlace ferrules"
 ---
@@ -17,7 +20,7 @@ Universal tool for crimping almost the entire range of crimp bootlace ferrules
 
 ::product-section{title="The range of sections of the ferrules:"}
 - Insulated wire ferrules: 0.25–10 mm²
-- Insulated wire twin ferrules: 2x0.5–2x6.0 mm²
+- Insulated wire twin ferrules: 2х0.5–2х6.0 mm²
 ::
 
 ::product-section{title="Additional functionality"}

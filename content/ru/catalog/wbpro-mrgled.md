@@ -2,6 +2,9 @@
 article: "WBPRO-MRGLED"
 cover: "wbpro-mrgled/cover.png"
 catalogCover: "wbpro-mrgled/cover.png"
+images: [
+  ["wbpro-mrgled/cover.png"]
+]
 meta: "Четырехканальный диммер с RS-485, Modbus RTU WBPRO-LEDDIM"
 keywords: "Четырехканальный диммер с RS-485, Modbus RTU WBPRO-LEDDIM"
 ---
@@ -17,7 +20,7 @@ keywords: "Четырехканальный диммер с RS-485, Modbus RTU W
 
 #info
 
-## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+## Основные характеристики
 
 ::product-section{title="Аппаратная часть"}
 :photo{

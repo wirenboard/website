@@ -2,6 +2,11 @@
 article: "WBPRO-REL3-I"
 cover: "wbpro-rel3-i/cover.png"
 catalogCover: "wbpro-rel3-i/catalog-cover.png"
+images: [
+  ["wbpro-rel3-i/cover.png"],
+  ["wbpro-rel3-i/wbpro-rel3-i-1.png"],
+  ["wbpro-rel3-i/wbpro-rel3-i-2.png"]
+]
 ---
 ::product
 #description
@@ -31,7 +36,11 @@ catalogCover: "wbpro-rel3-i/catalog-cover.png"
 - Счёт импульсов и измерение частоты на входе
 ::
 
-:include{path="/catalog/includes/din3m_other_characteristics"}
+::product-section{title="Прочее"}
+- Напряжение питания: от 9 до 28 В, постоянный ток
+- Интерфейс: RS-485, Modbus RTU
+- Корпус на DIN-рейку, 3M (53 x 90 x 58 мм)
+::
 
 
 ::

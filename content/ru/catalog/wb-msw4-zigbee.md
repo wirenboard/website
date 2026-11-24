@@ -2,10 +2,19 @@
 article: "WB-MSW4-ZIGBEE"
 cover: "wb-msw4-zigbee/cover.png"
 catalogCover: "wb-msw4-zigbee/catalog-cover.png"
+images: [
+  ["wb-msw4-zigbee/cover.png"],
+  ["wb-msw4-zigbee/wb-msw4-zigbee-9.png"],
+  ["wb-msw4-zigbee/wb-msw4-zigbee-10.png"],
+  ["wb-msw4-zigbee/wb-msw4-zigbee-11.png"],
+  ["wb-msw4-zigbee/wb-msw4-zigbee-12.png"],
+  ["wb-msw4-zigbee/wb-msw4-zigbee-13.jpg"],
+  ["wb-msw4-zigbee/wb-msw4-zigbee-14.png"]
+]
 documentation: "https://wirenboard.com/wiki/WB-MSW-ZIGBEE_v.4_Sensor"
 meta: "Настенный комбинированный датчик с беспроводным интерфейсом Zigbee"
 keywords: "Настенный комбинированный датчик с беспроводным интерфейсом Zigbee"
-use_cases: ["solutions-liten-magnit", "techsensor-module-cafe", "solutions-rekota-hotel-vertical"]
+use_cases: ["liten_magnit", "techsensor_module_cafe", "rekota_hotel_vertical"]
 ---
 ::product
 #description
@@ -16,7 +25,7 @@ use_cases: ["solutions-liten-magnit", "techsensor-module-cafe", "solutions-rekot
 
 Подключается к контроллеру Wiren Board через ZigBee или RS-485. Способ подключения выбирается переключателем на плате, во всех случаях устройству нужно внешнее питание. При использовании ZigBee в контроллер нужно установить адаптер [WBE2R-R-ZIGBEE-V.2](https://wirenboard.com/ru/product/WBE2R-R-ZIGBEE-v2).
 
-Поддерживается в zigbee2mqtt с версии 1.32.2 и в Sprut.hub.
+Поддерживается в zigbee2mqtt с версии 2.13.0 и в Sprut.hub.
 
 Является средством измерений. Номер в реестре СИ: [87443-22](https://fgis.gost.ru/fundmetrology/cm/mits/a10542eb-2d27-a60c-f98b-51bab672629a).
 
@@ -25,7 +34,7 @@ use_cases: ["solutions-liten-magnit", "techsensor-module-cafe", "solutions-rekot
 
 #info
 
-## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+## Основные характеристики
 
 ::product-section{title="Преимущества"}
 :photo{
@@ -117,7 +126,17 @@ CO2 (углекислый газ) - газ без цвета с легким к�
 В WB-MSW-ZIGBEE v.4 для измерения концентрации CO2 используется недисперсионный инфракрасный (NDIR) сенсор. Он позволяет проводить измерения с погрешностью 100 ppm + 5% от измеренного значения.
 ::
 
-:include{path="/catalog/includes/voc_control"}
+::product-section{title="Контроль VOC"}
+:photo{
+  src="wb-msw4-zigbee/wb-msw4-zigbee-6.jpg"
+  width="500px"
+  float="right"
+}
+
+Летучие органические вещества (ЛОВ, VOC) — это вещества, выделяющиеся в атмосферу в виде газов: испарения лаков/красок и элементов внутренней отделки помещений (фенол, формальдегид, толуол, стирол), спирты, бензол, гниющие овощи, выделяемые человеком газы, бытовой газ. Высокие концентрации опасных ЛОВ представляют угрозу жизни и здоровью человека.
+
+Датчик VOC определяет суммарную концентрацию этих веществ c типовой погрешностью ±15 %.
+::
 
 :include{path="/catalog/includes/quality_control"}
 
@@ -140,7 +159,7 @@ CO2 (углекислый газ) - газ без цвета с легким к�
   float="right"
 }
 
-Датчик можно использовать с контроллером Wiren Board и другими устройствами со SprutHub или zigbee2mqtt 1.32.2.
+Датчик можно использовать с контроллером Wiren Board и другими устройствами с установленным zigbee2mqtt или Sprut.hub.
 
 Если используется контроллер Wiren Board, то измеренные значения доступны в веб-интерфейсе контроллера и могут быть использованы в сценариях автоматизации или переданы в систему верхнего уровня.
 

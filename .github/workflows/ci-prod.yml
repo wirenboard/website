@@ -4,6 +4,13 @@ on:
   push:
     branches: [ 'main' ]
 
+# Деплои идут строго по очереди: новый запуск ждёт завершения текущего,
+# а не перетирает теги образа параллельно. Текущий запуск не отменяется,
+# чтобы не оборвать push мультиарх-образа на середине.
+concurrency:
+  group: deploy-prod
+  cancel-in-progress: false
+
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -38,7 +45,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
-          image: ghcr.io/wirenboard/website-base-image:initial
+          image: ghcr.io/wirenboard/website-base-image:latest
           options: -v ${{ github.workspace }}:/var/www
           run: |
             cd /var/www

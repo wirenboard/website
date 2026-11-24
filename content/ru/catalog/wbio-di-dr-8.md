@@ -2,6 +2,12 @@
 article: "00090"
 cover: "wbio-di-dr-8/cover.png"
 catalogCover: "wbio-di-dr-8/catalog-cover.png"
+images: [
+  ["wbio-di-dr-8/cover.png"],
+  ["wbio-di-dr-8/wbio-di-dr-8-1.png"],
+  ["wbio-di-dr-8/wbio-di-dr-8-2.png"],
+  ["wbio-di-dr-8/wbio-di-dr-8-3.png"]
+]
 meta: "Модуль ввода-вывода WBIO-DI-DR-8 с Modbus RTU"
 keywords: "Модуль ввода-вывода с Modbus RTU, WBIO-DI-DR-8 , Ethernet"
 ---
@@ -24,9 +30,16 @@ keywords: "Модуль ввода-вывода с Modbus RTU, WBIO-DI-DR-8 , Et
 - Ток срабатывания 1 мА
 ::
 
-:include{path="/catalog/includes/wbio_interfaces"}
+::product-section{title="Интерфейсы"}
+- Шина WBIO
+- Можно подключать по Modbus RTU и Ethernet при помощи модуля WB-MIO
+::
 
-:include{path="/catalog/includes/wbio_compatibility_wb5-6"}
+::product-section{title="Совместимость"}
+- Контроллеры Wiren Board 5
+- Контроллеры Wiren Board 6
+- Интерфейсные модули WB-MIO и WB-MIO-E
+::
 
 
 ::

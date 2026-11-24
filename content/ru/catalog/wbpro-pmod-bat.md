@@ -2,6 +2,9 @@
 article: "WBPRO-PMOD-BAT"
 cover: "wbpro-pmod-bat/cover.jpg"
 catalogCover: "wbpro-pmod-bat/cover.jpg"
+images: [
+  ["wbpro-pmod-bat/cover.jpg"]
+]
 meta: "Модуль резервного питания для WBPRO-PLC​ WBPRO-PMOD-BAT"
 keywords: "Модуль резервного питания для WBPRO-PLC​ WBPRO-PMOD-BAT"
 ---

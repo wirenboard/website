@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --host",
     "generate": "nuxt generate",
     "preview": "nuxt preview --port=80",
     "postinstall": "nuxt prepare",
@@ -21,7 +21,7 @@
     "hast-util-to-html": "^9.0.5",
     "mdast-util-to-hast": "^13.2.0",
     "nuxt": "3.12.2",
-    "nuxt-content-assets": "^1.4.4",
+    "nuxt-content-assets": "1.4.4",
     "primevue": "4.0.0",
     "swiper": "^11.1.15",
     "vue": "3.4.29",

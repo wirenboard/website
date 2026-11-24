@@ -2,6 +2,9 @@
 article: "WBPRO-AMP"
 cover: "wbpro-amp/cover.png"
 catalogCover: "wbpro-amp/catalog-cover.png"
+images: [
+  ["wbpro-amp/cover.png"]
+]
 meta: "LED amplifier WBPRO-AMP"
 keywords: "LED amplifier WBPRO-AMP"
 ---

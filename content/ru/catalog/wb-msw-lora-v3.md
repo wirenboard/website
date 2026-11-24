@@ -2,6 +2,12 @@
 article: "WB-MSW-LORA-v.3"
 cover: "wb-msw-lora-v3/cover.jpg"
 catalogCover: "wb-msw-lora-v3/catalog-cover.jpg"
+images: [
+  ["wb-msw-lora-v3/cover.jpg"],
+  ["wb-msw-lora-v3/wb-msw-lora-v3-1.gif"],
+  ["wb-msw-lora-v3/wb-msw-lora-v3-2.png"],
+  ["wb-msw-lora-v3/wb-msw-lora-v3-3.png"]
+]
 documentation: "https://wirenboard.com/wiki/WB-MSW_v.3_LoRa_Sensor"
 meta: "Настенный комбинированный датчик c LoRa, Modbus RTU"
 keywords: "Настенный комбинированный датчик c LoRa, Modbus RTU"
@@ -31,7 +37,12 @@ keywords: "Настенный комбинированный датчик c LoRa
 - Концентрация VOC: 0 — 60000 ppb.
 ::
 
-:include{path="/catalog/includes/msw3_additional_functions"}
+::product-section{title="Дополнительная функциональность"}
+- Передача ИК-команд
+- Управляемый зуммер
+- Двухцветная индикация, управляемая по Modbus
+- Подогрев датчика для работы в условиях высокой влажности
+::
 
 ::product-section{title="Прочее"}
 - Напряжение питания: от 9 до 28 В постоянного тока

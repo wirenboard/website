@@ -1,190 +1,195 @@
 <script lang="ts" setup>
-import Loader from '~/components/Loader.vue';
+import Alert from '~/components/Alert.vue';
 import Button from '~/components/Button.vue';
-import type {OrderInfo, PaymentsInfo} from "~/common/types";
+import {
+  DeliveryType,
+  OrderErrorKind,
+  type OrderInfo,
+  type AvailableDeliveriesInfo,
+  type BasketPricing,
+  type BasketPricingResponse,
+} from '~/common/types';
 
 const { t, locale } = useI18n();
-
-const totalSum = ref(0);
-const fulfillmentPending = ref(false);
-const submitPending = ref(false);
-const fulfillmentDeliveryError = ref(false);
-
-const orderError = ref(false);
-const fieldErrors = ref<Record<string, string>>({});
-
-const parseErrors = (data: any): Record<string, string> => {
-  const result: Record<string, string> = {};
-  const errors = data?.errors;
-  if (!errors) return result;
-
-  if (Array.isArray(errors)) {
-    for (const e of errors) {
-      if (e.field && e.message) {
-        const key = e.field.includes('.') ? e.field.split('.').pop()! : e.field;
-        result[key] = e.message;
-      }
-    }
-  } else if (typeof errors === 'object') {
-    for (const [field, messages] of Object.entries(errors)) {
-      const key = field.includes('.') ? field.split('.').pop()! : field;
-      if (Array.isArray(messages) && messages.length) {
-        result[key] = messages[0] as string;
-      } else if (typeof messages === 'string') {
-        result[key] = messages;
-      }
-    }
-  }
-  return result;
-};
-
-const { data: orderInfo } = await useApi<OrderInfo>(`/order/prefill-info/`);
-
-const payerType = ref(orderInfo.value!.payerType);
-const individual = ref(orderInfo.value!.payerData.individual);
-const entity = ref(orderInfo.value!.payerData.entity);
-
-const deliveryData = ref(orderInfo.value!.deliveryData);
-const deliveryType = ref(orderInfo.value!.deliveryType);
-const country = ref(Number(orderInfo.value!.deliveryData.country));
-
-const paymentsParams = computed(() => ({ payerType: payerType.value, country: country.value }));
-// Fetch here rather than in Payment.vue: paymentType must be set before the first render, otherwise SSR hydration loses the selection.
-const { data: paymentsInfo } = await useApi<PaymentsInfo>(
-  '/order/payments/',
-  paymentsParams,
-  { watch: [payerType, country] },
-);
-
-const paymentType = ref(paymentsInfo.value?.default ?? '');
-
-const payerTypeChanged = ref(false);
-watch(payerType, () => { payerTypeChanged.value = true; });
-
-watch(paymentsInfo, (info) => {
-  if (!info) return;
-  if (payerTypeChanged.value || !paymentType.value || !info.methods.includes(paymentType.value)) {
-    payerTypeChanged.value = false;
-    paymentType.value = info.default;
-  }
-});
-
 
 useHead({
   title: t('title'),
 });
 
-const orderPayload = ref<any>(null);
-const { execute: submitOrder, data: orderResult, error: orderRequestError } = await useApi<{ redirect_url: string }>(
-  '/order/create/',
-  null,
-  { method: 'POST', body: orderPayload, immediate: false }
-);
+// При SSR всё, что нужно странице, PHP уже передал в заголовке X-WB-Order (useOrderPrefill):
+// иначе этот запрос и два следующих (payments, delivery) шли бы из Nuxt обратно в тот же PHP,
+// который в это время ждёт ответа Nuxt. Чего в заголовке нет — запрашивается у API как обычно.
+const orderPrefill = useOrderPrefill();
+const { data: orderInfo } = await useApi<OrderInfo>(`/order/prefill-info/`, null, { prefill: () => orderPrefill?.orderInfo });
 
-const formRef = ref<HTMLFormElement | null>(null);
+const payerType = ref(orderInfo.value!.payerType);
+const individual = ref(orderInfo.value!.payerData.individual);
+const entity = ref(orderInfo.value!.payerData.entity);
+const country = ref(Number(orderInfo.value!.deliveryData.country));
 
-const makeOrder = async () => {
-  if (submitPending.value) return;
-  if (fulfillmentDeliveryError.value) return;
+const { paymentsInfo, paymentType } = await useOrderPayment(payerType, country, orderPrefill);
 
-  const firstInvalid = formRef.value?.querySelector(':invalid:not(fieldset)') as HTMLElement | null;
-  if (firstInvalid) {
-    firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    firstInvalid.focus();
-    return;
+const {
+  deliveryData,
+  deliveryType,
+  deliveryQuery,
+  deliveryInfo,
+  deliveryInfoPending,
+  selectedDeliveryItem,
+  deliveryErrorKind,
+  fulfillmentDeliveryError,
+  deliveryPrice,
+  deliveryPricePending,
+  deliveryPromocodeIneffective,
+} = await useOrderDelivery(orderInfo, country, orderPrefill);
+
+// Все суммы приходят с бэкенда уже в валюте локали (basketData.currency) — фронт их не
+// пересчитывает и не выбирает валюту по локали сам. Откат на переходный период: если бэкенд новых
+// полей не прислал (не выкачен или откачен), берём старые *Rub — они всегда в рублях, поэтому и
+// валюта RUB; на en это даст рубли вместо евро, но не нули.
+const normalizePricing = (data: BasketPricingResponse): BasketPricing => {
+  if (data.itemsSum === undefined) {
+    console.warn('[order] basketData without itemsSum/currency, falling back to legacy *Rub fields');
   }
-
-  fieldErrors.value = {};
-  orderError.value = false;
-  submitPending.value = true;
-  orderPayload.value = {
-    payerType: payerType.value,
-    payerData: payerType.value === 'individual' ? individual.value : entity.value,
-    paymentType: paymentType.value,
-    deliveryType: deliveryType.value,
-    deliveryData: deliveryData.value,
+  return {
+    currency: data.currency ?? 'RUB',
+    itemsSum: data.itemsSum ?? data.itemsSumRub ?? 0,
+    promocodeDiscount: data.promocodeDiscount ?? data.promocodeDiscountRub ?? 0,
+    bulkDiscount: data.bulkDiscount ?? data.bulkDiscountRub ?? 0,
+    partnerDiscount: data.partnerDiscount ?? data.partnerDiscountRub ?? 0,
   };
-  await submitOrder();
-  submitPending.value = false;
-  if (orderRequestError.value) {
-    fieldErrors.value = parseErrors(orderRequestError.value.data);
-    orderError.value = true;
-    nextTick(() => {
-      if (Object.keys(fieldErrors.value).length) {
-        const firstErrorInput = document.querySelector('.input-errorMessage')?.closest('.input-wrapper')?.querySelector('input');
-        if (firstErrorInput) {
-          firstErrorInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          firstErrorInput.focus();
-        }
-      } else {
-        document.querySelector('.order-error')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    });
-    return;
-  }
-  if (orderResult.value?.redirect_url) {
-    window.location.replace(orderResult.value.redirect_url);
+};
+
+const pricing = ref(normalizePricing(orderInfo.value!.basketData));
+
+const onPromocodeApplied = (
+  basketData: BasketPricingResponse,
+  deliveryOptions?: AvailableDeliveriesInfo,
+) => {
+  pricing.value = normalizePricing(basketData);
+  if (deliveryOptions) {
+    deliveryInfo.value = deliveryOptions;
   }
 };
+
+// «ИТОГО» — total выбранной доставки из /order/delivery/ (и из deliveryOptions ответа промокода):
+// одно число в валюте локали, которое бэкенд считает из тех же сумм, что и строки выше и виджет
+// корзины (см. CheckoutCurrency в PHP). Сумму строк считаем сами только пока выбранного варианта
+// доставки ещё нет.
+const linesSum = computed(() =>
+  pricing.value.itemsSum
+  - pricing.value.promocodeDiscount
+  - pricing.value.bulkDiscount
+  - pricing.value.partnerDiscount
+  + deliveryPrice.value
+);
+const totalSum = computed(() => selectedDeliveryItem.value?.total ?? linesSum.value);
+
+const promocodeRef = ref<{ applying: boolean } | null>(null);
+const promocodeApplying = computed(() => promocodeRef.value?.applying ?? false);
+
+const formRef = ref<HTMLFormElement | null>(null);
+const submitBlocked = computed(() => fulfillmentDeliveryError.value || promocodeApplying.value);
+
+const { submitPending, orderError, orderErrorKind, fieldErrors, makeOrder } = await useOrderSubmit({
+  formRef,
+  payerType,
+  individual,
+  entity,
+  paymentType,
+  deliveryType,
+  deliveryData,
+  blocked: submitBlocked,
+});
 </script>
 
 <template>
   <p v-if="orderInfo!.basketData.cost === 0" class="order-empty">{{ t('emptyCart') }}</p>
   <form v-else ref="formRef" class="order" @submit.prevent="makeOrder">
-    <OrderCustomer
-      v-model:payerType="payerType"
-      v-model:individual="individual"
-      v-model:entity="entity"
-      v-model:country="country"
-      :countries="orderInfo!.countries"
-      :cdekCountries="orderInfo!.cdekCountries"
-      :recentOrgs="orderInfo!.recentOrgs"
-      :fieldErrors="fieldErrors"
-    />
+    <div class="order-layout">
+      <div class="order-mainColumn">
+        <fieldset class="order-sectionCard">
+          <OrderCustomer
+            v-model:payerType="payerType"
+            v-model:individual="individual"
+            v-model:entity="entity"
+            v-model:country="country"
+            :countries="orderInfo!.countries"
+            :cdekCountries="orderInfo!.cdekCountries"
+            :recentOrgs="orderInfo!.recentOrgs"
+            :fieldErrors="fieldErrors"
+          />
+        </fieldset>
 
-    <OrderFulfillment
-      v-model:deliveryType="deliveryType"
-      v-model:deliveryData="deliveryData"
-      v-model:totalSum="totalSum"
-      v-model:pending="fulfillmentPending"
-      v-model:deliveryError="fulfillmentDeliveryError"
-      v-model:country="country"
-      :basketData="orderInfo!.basketData"
-      :recentAddresses="orderInfo!.recentAddresses"
-      :fieldErrors="fieldErrors"
-    />
+        <fieldset class="order-sectionCard">
+          <OrderFulfillment
+            v-model:deliveryType="deliveryType"
+            v-model:deliveryData="deliveryData"
+            v-model:country="country"
+            :deliveryInfo="deliveryInfo"
+            :deliveryErrorKind="deliveryErrorKind"
+            :basketData="orderInfo!.basketData"
+            :recentAddresses="orderInfo!.recentAddresses"
+            :fieldErrors="fieldErrors"
+          />
+        </fieldset>
 
-    <OrderPayment
-      v-model:paymentType="paymentType"
-      :paymentsInfo="paymentsInfo"
-    />
+        <fieldset class="order-sectionCard">
+          <OrderPayment
+            v-model:paymentType="paymentType"
+            :paymentsInfo="paymentsInfo"
+            :country="country"
+          />
+        </fieldset>
+      </div>
 
-    <div v-if="orderError && !Object.keys(fieldErrors).length" class="order-error">
-      <p>
-        <i18n-t keypath="error">
-          <template #office>
-            <a :href="`https://wirenboard.com/${locale}/pages/contacts/`" target="_blank">{{ t('office') }}</a>
-          </template>
-        </i18n-t>
-      </p>
-    </div>
+      <div class="order-checkoutColumn">
+        <div class="order-sectionCard order-checkoutCard">
+          <Alert v-if="orderError && !Object.keys(fieldErrors).length" variant="error" class="order-error">
+            <i18n-t :keypath="orderErrorKind === OrderErrorKind.Payment ? 'paymentError' : 'error'">
+              <template #office>
+                <a :href="`https://wirenboard.com/${locale}/pages/contacts/`" target="_blank">{{ t('office') }}</a>
+              </template>
+            </i18n-t>
+          </Alert>
 
-    <div class="order-finalize">
-      <Button
-        type="submit"
-        size="large"
-        :disabled="fulfillmentPending || submitPending || fulfillmentDeliveryError"
-        :isLoading="submitPending"
-        :label="t('checkout')"
-        :variant="'primary'"
-        :outlined="false"
-      />
-      <div>
-        <span class="order-toPay">
-          {{ t('toPay') }}
-          <Loader v-if="fulfillmentPending" />
-          <span v-else class="order-sum">{{ locale === 'ru' ? `${toTriads(totalSum)} ₽` : `€${toTriads(totalSum)}` }}</span>
-        </span>
+          <OrderSummary
+            :currency="pricing.currency"
+            :itemsSum="pricing.itemsSum"
+            :promocodeDiscount="pricing.promocodeDiscount"
+            :bulkDiscount="pricing.bulkDiscount"
+            :partnerDiscount="pricing.partnerDiscount"
+            :showDelivery="selectedDeliveryItem?.type !== DeliveryType.Pickup"
+            :deliveryPending="deliveryInfoPending"
+            :deliveryPricePending="deliveryPricePending"
+            :deliveryPrice="deliveryPrice"
+            :totalSum="totalSum"
+          />
+
+          <OrderPromocode
+            ref="promocodeRef"
+            :payerType="payerType"
+            :initialCode="orderInfo!.promocode"
+            :initialNotices="orderInfo!.promocodeNotices"
+            :fieldErrors="fieldErrors"
+            :deliveryPromocodeIneffective="deliveryPromocodeIneffective"
+            :deliveryQuery="deliveryQuery"
+            @applied="onPromocodeApplied"
+          />
+
+          <div class="order-finalize">
+            <Button
+              type="submit"
+              size="large"
+              class="order-finalizeBtn"
+              :disabled="deliveryInfoPending || submitPending || fulfillmentDeliveryError || promocodeApplying"
+              :isLoading="submitPending"
+              :label="t('checkout')"
+              :variant="'primary'"
+              :outlined="false"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </form>
@@ -195,37 +200,72 @@ const makeOrder = async () => {
   color: #000;
 }
 
-.order h2 {
-  text-transform: uppercase;
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 1em;
-  margin-bottom: 36px;
+.order-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
 }
 
-.order h2:not(:first-child) {
-  margin-top: 56px;
+.order-mainColumn {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.order-sectionCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid var(--border-color) !important;
+}
+
+fieldset.order-sectionCard {
+  border: none;
+  margin: 0;
+  min-width: 0;
+}
+
+.order-sectionCard legend {
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1em;
+  margin-bottom: 4px;
+  padding: 0 6px;
+}
+
+#wrapper {
+  overflow: visible;
+}
+
+.order-checkoutColumn {
+  position: relative;
+  width: 360px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+.order-checkoutCard {
+  width: 100%;
+  z-index: 10;
+  margin-top: 14px;
+  position: sticky;
+  top: 88px;
+}
+
+.order-checkoutCard .order-error {
+  margin-bottom: 24px;
 }
 
 .order-finalize {
   display: flex;
   align-items: center;
-  gap: 48px;
 }
 
-.order-toPay {
-  font-weight: 500;
-  font-size: 23px;
-  line-height: 1em;
-  margin-right: 8px;
-}
-
-.order-sum {
-  font-weight: 500;
-  font-size: 23px;
-  line-height: 1em;
-  margin-right: 16px;
-  color: var(--primary-color);
+.order-finalizeBtn {
+  width: 100%;
 }
 
 .order-empty {
@@ -233,39 +273,24 @@ const makeOrder = async () => {
   font-weight: 500;
 }
 
-.order-error {
-  background-color: #FFA3A5;
-  color: #fff;
-  padding: 12px 16px;
-  border-radius: 15px;
-}
-
-.order-error a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.order-error a:hover {
-  opacity: 0.75;
-}
-
 @media (max-width: 768px) {
-  .order h2 {
-    font-size: 28px;
-    margin-bottom: 24px;
+  .order-sectionCard {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .order-layout {
+    flex-direction: column;
   }
 
-  .order h2:not(:first-child) {
-    margin-top: 40px;
+  .order-checkoutColumn {
+    width: 100%;
+    align-self: auto;
   }
 
-  .order-finalize {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  .order-sum {
-    white-space: nowrap;
+  .order-checkoutCard {
+    position: static;
   }
 }
 </style>
@@ -273,19 +298,19 @@ const makeOrder = async () => {
 <i18n>
 {
   "ru": {
-    "title": "Оформление заказа — Wiren Board",
+    "title": "Оформление заказа",
     "emptyCart": "Ваша корзина пуста",
     "checkout": "Оформить заказ",
-    "toPay": "К оплате:",
     "error": "При создании заказа возникла ошибка. Попробуйте позднее или свяжитесь с {office}.",
+    "paymentError": "Возникла проблема с выбранным способом оплаты. Попробуйте другой способ, повторите попытку позже или свяжитесь с нашим {office}.",
     "office": "офисом"
   },
   "en": {
-    "title": "Order — Wiren Board",
+    "title": "Order",
     "emptyCart": "Your cart is empty",
     "checkout": "Checkout",
-    "toPay": "To pay:",
     "error": "An error occurred while creating the order. Please try again later or contact our {office}.",
+    "paymentError": "There was an issue with your selected payment method. Please try another payment method, try again later, or contact our {office}.",
     "office": "office"
   }
 }

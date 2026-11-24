@@ -2,6 +2,13 @@
 article: "00087"
 cover: "wbio-dio-ttl-8/cover.png"
 catalogCover: "wbio-dio-ttl-8/catalog-cover.png"
+images: [
+  ["wbio-dio-ttl-8/cover.png"],
+  ["wbio-dio-ttl-8/wbio-dio-ttl-8-1.png"],
+  ["wbio-dio-ttl-8/wbio-dio-ttl-8-2.jpg"],
+  ["wbio-dio-ttl-8/wbio-dio-ttl-8-3.jpg"],
+  ["wbio-dio-ttl-8/wbio-dio-ttl-8-4.png"]
+]
 ---
 ::product
 #description
@@ -24,7 +31,11 @@ Designed for connection of devices with 5V TTL or 5V CMOS signals. Consists of 8
 - Can be connected to Modbus RTU and Ethernet by via the WB-MIO module
 ::
 
-:include{path="/catalog/includes/wbio_compatibility_wb5-6"}
+::product-section{title="Compatibility"}
+- Wiren Board 5 controllers
+- Wiren Board 6 controllers
+- Bus couplers WB-MIO and WB-MIO-E
+::
 
 
 ::

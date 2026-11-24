@@ -2,6 +2,10 @@
 article: "WBE2R-R-ZWAVE-ZWAY"
 cover: "wbe2r-r-zwave-zway/cover.png"
 catalogCover: "wbe2r-r-zwave-zway/catalog-cover.png"
+images: [
+  ["wbe2r-r-zwave-zway/cover.png"],
+  ["wbe2r-r-zwave-zway/wbe2r-r-zwave-zway-1.png"]
+]
 documentation: "https://wirenboard.com/wiki/WBE2R-R-ZWAVE-ZWAY_Z-Wave_Extension_Module"
 meta: "Z-Wave interface and license for Z-Way software stack"
 keywords: "Z-Wave interface and license for Z-Way software stack"

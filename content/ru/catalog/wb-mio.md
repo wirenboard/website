@@ -2,13 +2,19 @@
 article: "WB-MIO"
 cover: "wb-mio/cover.png"
 catalogCover: "wb-mio/catalog-cover.png"
+images: [
+  ["wb-mio/cover.png"],
+  ["wb-mio/wb-mio-1.png"],
+  ["wb-mio/wb-mio-2.png"],
+  ["wb-mio/wb-mio-3.png"]
+]
 documentation: "https://wirenboard.com/wiki/WB-MIO_Modbus_Interface_Converter"
 meta: "Преобразователь интерфейсов WB-MIO c RS-485"
 keywords: "Преобразователь интерфейсов WB-MIO c RS-485"
 video: [
   ["https://peertube.wirenboard.com/videos/embed/0a424378-a514-446c-bfc7-6e9b7393080c"],
   ["https://peertube.wirenboard.com/videos/embed/68c5da1d-17fc-41f6-82b9-9a591f3e4cc2"],
-  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"],
+  ["https://peertube.wirenboard.com/videos/embed/629d95d8-7ce8-4bad-83ad-7718ececeb98"]
 ]
 ---
 ::product

@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import { useApi } from '~/composables/useApi';
-import type { Product } from '~/common/types';
+import { useProduct } from '~/composables/useProduct';
 
-const { locale } = useI18n();
 const route = useRoute();
-const { data } = await useLocalizedData('catalog', false, { _file: { $icontains: route.params.slug } });
-const { data: product } = await useApi<Product>(`/product/${data.value.article}/?locale=${locale.value}`);
+// Контентные файлы лежат с slug в нижнем регистре; артикулы в ссылках (в т.ч. старых/внешних)
+// бывают в исходном регистре (WB-MCM8) — приводим перед точным поиском по пути.
+const slug = String(route.params.slug).toLowerCase();
+const { data } = await useLocalizedData(`/catalog/${slug}`, false, {});
 
 if (!data.value) {
   throw createError({
@@ -13,6 +13,8 @@ if (!data.value) {
     statusMessage: `Page not found: ${route.path}`,
   });
 }
+
+const { data: product } = await useProduct(data.value.article);
 
 defineOptions({
   name: 'Product',

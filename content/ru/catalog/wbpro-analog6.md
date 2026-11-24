@@ -2,6 +2,9 @@
 article: "WBPRO-ANALOG6"
 cover: "wbpro-analog6/cover.png"
 catalogCover: "wbpro-analog6/catalog-cover.png"
+images: [
+  ["wbpro-analog6/cover.png"]
+]
 meta: "WBPRO-ANALOG6"
 keywords: "WBPRO-ANALOG6"
 ---
@@ -17,7 +20,7 @@ keywords: "WBPRO-ANALOG6"
 
 #info
 
-## ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+## Основные характеристики
 
 ::product-section{title="Аппаратная часть"}
 :photo{

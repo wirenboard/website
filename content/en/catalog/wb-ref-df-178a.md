@@ -2,6 +2,15 @@
 article: "WB-REF-DF-178A"
 cover: "wb-ref-df-178a/cover.png"
 catalogCover: "wb-ref-df-178a/catalog-cover.png"
+images: [
+  ["wb-ref-df-178a/cover.png"],
+  ["wb-ref-df-178a/wb-ref-df-178a-1.jpg"],
+  ["wb-ref-df-178a/wb-ref-df-178a-2.png"],
+  ["wb-ref-df-178a/wb-ref-df-178a-3.png"],
+  ["wb-ref-df-178a/wb-ref-df-178a-4.png"],
+  ["wb-ref-df-178a/wb-ref-df-178a-5.png"],
+  ["wb-ref-df-178a/wb-ref-df-178a-6.png"]
+]
 documentation: "https://wirenboard.com/wiki/WB-REF-DF-178A_Danfoss_EKC_202_Modbus_Module"
 meta: "Network card for Danfoss refrigeration controller"
 keywords: "Network card for Danfoss refrigeration controller"

@@ -2,6 +2,19 @@
 article: "WB-MSW4"
 cover: "wb-msw-v4/cover.png"
 catalogCover: "wb-msw-v4/catalog-cover.png"
+images: [
+  ["wb-msw-v4/cover.png"],
+  ["wb-msw-v4/wb-msw-v4-9.png"],
+  ["wb-msw-v4/wb-msw-v4-10.jpg"],
+  ["wb-msw-v4/wb-msw-v4-11.jpg"],
+  ["wb-msw-v4/wb-msw-v4-12.png"],
+  ["wb-msw-v4/wb-msw-v4-13.jpg"],
+  ["wb-msw-v4/wb-msw-v4-14.png"],
+  ["wb-msw-v4/wb-msw-v4-15.png"],
+  ["wb-msw-v4/wb-msw-v4-16.png"],
+  ["wb-msw-v4/wb-msw-v4-17.png"],
+  ["wb-msw-v4/wb-msw-v4-18.png"]
+]
 documentation: "https://wirenboard.com/wiki/WB-MSW_v.4_Modbus_Sensor"
 meta: "RS-485, Modbus RTU Hybrid wall-mounted sensor"
 keywords: "RS-485, Modbus RTU"
@@ -28,7 +41,6 @@ WB-MSW v.4 is included in the Register of the State System for Ensuring the Unif
 }
 
 - 8 measured parameters in one housing.
-- Is a measuring instrument for temperature, humidity and CO2 concentration.
 - Heated temperature and humidity sensor for operation in high humidity conditions.
 - Auto calibration of CO2 and VOC sensors.
 - Controlled sound and light indication.
@@ -38,7 +50,7 @@ WB-MSW v.4 is included in the Register of the State System for Ensuring the Unif
 - Fast and simple integration into the automation and monitoring system.
 - It is possible to apply your company logo.
 
-Supports [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, allowing motion sensor events to be instantly delivered to the Wiren Board controller.
+Supports Fast Modbus, allowing motion sensor events to be instantly delivered to the Wiren Board controller.
 ::
 
 ::product-section{title="Hardware"}
@@ -50,7 +62,7 @@ Supports [Fast Modbus](https://wirenboard.com/wiki/Fast_Modbus/en) ⚡, allowing
 
 Measured parameters:
 
-- Temperature: -40°C…+80°C (±0.5°C).
+- Temperature: -40°С…+80°С (±0.5°С).
 - Humidity: 0…95% (±3%).
 - Illumination: 0.02…145000 lux.
 - Noise level: 39…90 dBA.
@@ -94,7 +106,17 @@ CO2 (carbon dioxide) is a colorless gas with a slight sour odor, heavier than ai
 WB-MSW v.4 uses a non-dispersive infrared (NDIR) sensor to measure CO2 concentration. It allows measurements with an error of 100 ppm + 5% of the measured value.
 ::
 
-:include{path="/catalog/includes/voc_control"}
+::product-section{title="VOC control"}
+:photo{
+  src="wb-msw-v4/wb-msw-v4-5.jpg"
+  width="500px"
+  float="right"
+}
+
+Volatile organic substances (VOCs, VOC) are substances released into the atmosphere in the form of gases: evaporation of varnishes/paints and elements of interior decoration (phenol, formaldehyde, toluene, styrene), alcohols, benzene, rotting vegetables, gases emitted by humans, household gas. High concentrations of hazardous VOCs pose a threat to human life and health.
+
+The VOC sensor determines the total concentration of these substances with a typical error of ±15%.
+::
 
 ::product-section{title="Fast Modbus support"}
 :photo{

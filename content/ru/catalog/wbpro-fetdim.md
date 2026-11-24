@@ -2,6 +2,9 @@
 article: "WBPRO-FETDIM"
 cover: "wbpro-fetdim/cover.png"
 catalogCover: "wbpro-fetdim/catalog-cover.png"
+images: [
+  ["wbpro-fetdim/cover.png"]
+]
 meta: "Трехканальный диммер светодиодных ламп и ламп накаливания 230В  WBPRO-FETDIM"
 keywords: "Трехканальный диммер светодиодных ламп и ламп накаливания 230В  WBPRO-FETDIM"
 ---

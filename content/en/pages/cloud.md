@@ -115,6 +115,23 @@ This option is suitable both for companies integrating Wiren Board products and 
 
 [Repository and installation guide](https://github.com/wirenboard/cloud-on-premise/blob/main/README_EN.md).
 
+#### License Cost
+
+The license is paid and depends on the number of controllers; above 5000 controllers a flat price applies.
+
+| Controllers | License per month |
+|-------------|---------------------|
+| up to 100   | €0 + metrics\*      |
+| up to 100   | €300                |
+| up to 500   | €600                |
+| up to 1000  | €900                |
+| up to 2000  | €1400               |
+| up to 3000  | €1950               |
+| up to 4000  | €2450               |
+| 5000+       | €2950               |
+
+\*Free for up to 100 controllers when anonymized metrics are sent to Wiren Board
+
 ## Try It Out  
 There’s a demo cabinet with a real controller:
 1. Go to the link [https://wirenboard.cloud/](https://wirenboard.cloud/).

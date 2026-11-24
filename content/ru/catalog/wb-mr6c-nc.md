@@ -2,6 +2,13 @@
 article: "MR6C/NC"
 cover: "wb-mr6c-nc/cover.png"
 catalogCover: "wb-mr6c-nc/catalog-cover.png"
+images: [
+  ["wb-mr6c-nc/cover.png"],
+  ["wb-mr6c-nc/wb-mr6c-nc-1.png"],
+  ["wb-mr6c-nc/wb-mr6c-nc-2.png"],
+  ["wb-mr6c-nc/wb-mr6c-nc-3.png"],
+  ["wb-mr6c-nc/wb-mr6c-nc-4.png"]
+]
 documentation: "https://wirenboard.com/wiki/index.php/WB-MR6C/NC_Modbus_Relay_Modules"
 meta: "Модуль реле с RS-485 Modbus RTU"
 keywords: "RS-485, Modbus RTU"

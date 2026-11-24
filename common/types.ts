@@ -62,6 +62,99 @@ export interface Product {
   use_cases: string[];
 }
 
+export interface ProductPrefill {
+  article: string;
+  locale: string;
+  product: Product;
+}
+
+/**
+ * X-WB-Order: всё, что страница оформления заказа запрашивала бы при SSR у PHP
+ * (/order/prefill-info/, /order/payments/, /order/delivery/), собранное PHP заранее и переданное
+ * вместе с запросом (server/middleware/order-prefill.ts, composables/useOrderPrefill.ts).
+ * params/query — с какими параметрами собраны payments и deliveryOptions: подсказка годится,
+ * только если страница стартует с них же.
+ * Любая часть может отсутствовать (PHP её не прислал или middleware отбросил как невалидную) —
+ * тогда страница запрашивает именно её у API как обычно, остальные части используются.
+ */
+export interface OrderPrefill {
+  locale: string;
+  orderInfo?: OrderInfo;
+  payments?: { params: Record<string, any>; data: PaymentsInfo };
+  deliveryOptions?: { query: Record<string, any>; data: AvailableDeliveriesInfo };
+}
+
+// Формат PricelistApiData::formatPrice() на бэке — отдельный от общего Price (~/utils/price),
+// который использует PriceHelper::format() (CatalogProduct и остальной каталог): сумма уже
+// строкой и без символа валюты, currency — просто 'rub'/'usd'.
+interface PricelistPrice {
+  amount: string;
+  currency: 'rub' | 'usd';
+}
+
+interface PriceWithHint {
+  primary: PricelistPrice;
+  secondary: PricelistPrice | null;
+}
+
+interface PricelistOptionValue {
+  label: string;
+  delta: (PriceWithHint & { sign: '+' | '-' }) | null;
+}
+
+interface PricelistOption {
+  name: string;
+  values: PricelistOptionValue[];
+}
+
+interface PricelistSet {
+  name: string;
+  options: { name: string; value: string }[];
+  sku: string;
+  price: PriceWithHint;
+}
+
+export interface PricelistProduct {
+  type: 'simple' | 'detailed';
+  slug: string;
+  name: string;
+  short_desc: string;
+  sku: string;
+  price?: PriceWithHint | null;
+  base_config_price?: PriceWithHint;
+  options?: PricelistOption[];
+  sets?: PricelistSet[];
+}
+
+export interface PricelistCategory {
+  name: string;
+  products: PricelistProduct[];
+}
+
+export interface Pricelist {
+  categories: PricelistCategory[];
+}
+
+export interface PricelistPrefill {
+  locale: string;
+  pricelist: Pricelist;
+}
+
+export interface OrdersPrefill {
+  locale: string;
+  query: Record<string, any>;
+  data: UserOrdersResponse;
+}
+
+declare module 'h3' {
+  interface H3EventContext {
+    wbProduct?: ProductPrefill;
+    wbOrder?: OrderPrefill;
+    wbPricelist?: PricelistPrefill;
+    wbOrders?: OrdersPrefill;
+  }
+}
+
 export type Video = [string, string, string, any?];
 
 export type PhotoLink = [string, string, string?, string?];
@@ -83,6 +176,10 @@ export enum DeliveryError {
   AddressUnavailable = 'address_unavailable', // service replied, no delivery to this address
 }
 
+export enum OrderErrorKind {
+  Payment = 'payment_error', // payment method rejected/unavailable
+}
+
 export interface AvailableDelivery {
   id: string;
   type: string;
@@ -91,15 +188,13 @@ export interface AvailableDelivery {
   title: string;
   address: string | null;
   mapUrl: string | null;
-  price: number;
-  total: number;
+  price: number | null; // цена доставки в валюте локали; null — ещё не посчитана / ошибка
+  total: number; // итог заказа с этой доставкой в той же валюте (то, что покажет «ИТОГО»)
   error?: DeliveryError | false | null; // false/null - no error
-}
-
-export interface AvailableDeliveriesInfo{
-  available: AvailableDelivery[];
   freeDelivery: boolean;
 }
+
+export type AvailableDeliveriesInfo = AvailableDelivery[];
 
 export interface CustomerData{
   individual:{
@@ -141,12 +236,53 @@ export interface PaymentsInfo {
   default: string;
 }
 
+export interface PromocodeNotice {
+  type: 'invalid_code' | 'payer_type' | 'sum_from' | 'capped' | 'outbid';
+  message: string;
+  severity: 'error' | 'warning' | 'info';
+}
+
+export type Currency = 'RUB' | 'EUR';
+
+/**
+ * Разбивка суммы корзины для страницы оформления заказа (/order/prefill-info/ и /basket/promocode/).
+ * Суммы — в валюте `currency`; её выбирает бэкенд по локали (ru — рубли, иначе евро), фронт
+ * только форматирует. Итог заказа — `AvailableDelivery.total` у выбранной доставки, в той же валюте.
+ */
+export interface BasketPricing {
+  currency: Currency;
+  itemsSum: number;
+  promocodeDiscount: number;
+  bulkDiscount: number;
+  partnerDiscount: number;
+}
+
+/**
+ * basketData как его шлёт бэкенд: новые поля BasketPricing плюс старые *Rub (всегда рубли), которые
+ * бэкенд оставляет на переходный период. Если новых полей нет (PHP ещё не выкачен или откачен), фронт
+ * берёт старые и считает валюту рублями — см. normalizePricing в pages/contents/order.vue.
+ * TODO: убрать *Rub и Partial, когда бэкенд с новыми полями подтверждённо выкачен везде.
+ */
+export interface BasketPricingResponse extends Partial<BasketPricing> {
+  itemsSumRub?: number;
+  promocodeDiscountRub?: number;
+  bulkDiscountRub?: number;
+  partnerDiscountRub?: number;
+}
+
+export interface BasketData extends BasketPricingResponse {
+  cost: number; // сумма корзины в рублях — для проверки «корзина пуста»
+  weight: number; // кг
+}
+
 export interface OrderInfo {
   payerType: string;
   payerData: CustomerData;
   deliveryType: string;
   deliveryData: Record<string, string>;
-  basketData: Record<string, number>;
+  promocode: string;
+  promocodeNotices: PromocodeNotice[];
+  basketData: BasketData;
   countries: Record<number, string>;
   cdekCountries: number[];
   recentAddresses?: RecentAddress[];
@@ -211,6 +347,37 @@ export interface CategoryResponse {
   category: CatalogCategoryDetail;
   products: CatalogProduct[];
   nav_categories: { slug: string; name: string }[];
+}
+
+// /catalog/list/ — все включённые категории с товарами одним запросом (см. CatalogListData::
+// buildAll() на бэке) вместо цикла из отдельного запроса на каждую категорию.
+export interface CatalogListResponse {
+  categories: CatalogCategory[];
+  categoryDetails: CategoryResponse[];
+}
+
+export interface UserOrder {
+  id: number;
+  created: number;
+  email: string;
+  orgName: string | null;
+  status: number;
+  payStatus: number;
+  sum: number;
+  language: string;
+  rate: number;
+  canCancel: boolean;
+  canUpd: boolean;
+}
+
+export interface UserOrdersResponse {
+  orders: UserOrder[];
+  pagination: {
+    page: number;
+    pageSize: number;
+    pageCount: number;
+    totalCount: number;
+  };
 }
 
 export interface Destination {

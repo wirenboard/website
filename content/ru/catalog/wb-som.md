@@ -2,6 +2,11 @@
 article: "WB-SOM"
 cover: "wb-som/cover.png"
 catalogCover: "wb-som/catalog-cover.png"
+images: [
+  ["wb-som/cover.png"],
+  ["wb-som/wb-som-1.png"],
+  ["wb-som/wb-som-2.png"]
+]
 ---
 ::product
 #description

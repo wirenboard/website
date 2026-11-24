@@ -2,6 +2,9 @@
 article: "wb-mr6-hv"
 cover: "wb-mr6-hv/cover.png"
 catalogCover: "wb-mr6-hv/catalog-cover.png"
+images: [
+  ["wb-mr6-hv/cover.png"]
+]
 ---
 ::product
 #description
@@ -27,13 +30,13 @@ The module is designed to control loads up to 10A rated (16 A peak current) with
 ::
 
 ::product-section{title="Discrete inputs"}
-- 6 discrete inputs with a direct channel control function
-- 1 discrete input for disabling all relay channels simultaneously
-- Flexible input configuration for controlling outputs
+- 7 dry contact inputs with flexible channel control configuration
+- 6 discrete inputs with a direct channel control function (default)
+- 1 digital input for disabling all relay channels simultaneously (default)
 - Group galvanic isolation of inputs
 - 220 VAC inputs
-- Pulse counting at the input
-- Frequency measurement at the input
+- Inputs pulses count
+- Inputs frequency measure
 ::
 
 ::product-section{title="Other characteristics"}

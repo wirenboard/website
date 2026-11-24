@@ -2,6 +2,9 @@
 article: "WBPRO-4G"
 cover: "wbpro-4g/cover.jpg"
 catalogCover: "wbpro-4g/cover.jpg"
+images: [
+  ["wbpro-4g/cover.jpg"]
+]
 meta: "WBPRO-4G"
 keywords: "WBPRO-4G"
 ---
@@ -17,7 +20,12 @@ keywords: "WBPRO-4G"
 
 ## Технические характеристики
 
-:include{path="/catalog/includes/modem_4g_general"}
+::product-section{title="Общие характеристики"}
+- Скорость приема-передачи данных - до 150 Мбит/c
+- Поддержка двух SIM-карт nano-SIM
+- Попеременный режим работы
+- Антенна в комплекте
+::
 
 ::product-section{title="Частоты и скорости"}
 - Рабочие диапазоны частот

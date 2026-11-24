@@ -2,6 +2,14 @@
 article: "WB7-1G-SH"
 cover: "sprut-hub-wiren-board-7/cover.jpg"
 catalogCover: "sprut-hub-wiren-board-7/catalog-cover.jpg"
+images: [
+  ["sprut-hub-wiren-board-7/cover.jpg"],
+  ["sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-9.png"],
+  ["sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-10.png"],
+  ["sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-11.png"],
+  ["sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-12.jpg"],
+  ["sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-13.jpg"]
+]
 documentation: "https://wirenboard.com/wiki/Wiren_Board_7"
 ---
 ::product
@@ -25,14 +33,10 @@ This is a customized version of [Wiren Board 7](/en/product/wiren-board-7/).
   float="right"
 }
 
-Basic configuration:
-
-- 1.2 GHz Quad Core ARM Cortex A7 industrial-grade CPU
-- 1 GB DDR3 RAM
-- 8 GB Flash
+- 1.2GHz Quad Core ARM Cortex A7 industrial-grade CPU
+- 1 GB DDR3 RAM (2GB available in Q1 22)
+- 8 GB industrial-grade eMMC Flash (64GB available in Q1 22)
 - Dedicated secure key storage
-
-When ordering the controller, you can choose a version with 2 GB DDR3 RAM and 64 GB Flash.
 
 The controller uses the open operating system Debian Linux 9, kernel 5.10, which provides ample opportunities for installing third-party software.
 
@@ -70,12 +74,11 @@ Additionally, using extension modules:
   float="right"
 }
 
-In its basic configuration, the controller supports a large number of protocols:
+The controller supports a large number of protocols:
 
 - Modbus RTU - a wide range of devices: relays, dimmers, I / O modules
 - Somfy, WINDECO, DOOYA, AKKO - electric curtains
-- GOST IEC 61107, DLMS / COSEM, SPODES (GOST R 58940-2020), Mercury, Milur - electricity meters
-- Pulsar, IVTM - water and heat meters and sensors
+- IEC 61107, DLMS / COSEM electricity meters
 - 1-Wire - temperature sensors DS18B20
 - Wi-Fi, Bluetooth - sensors, gateways and devices
 - Modbus TCP, MQTT, SNMP, Zabbix API - data exchange with other controllers, servers and SCADA
@@ -108,13 +111,61 @@ The open platform makes it possible to install third-party software, or develop 
 A wide range of external modules will help you build a fault-tolerant automation system for any task, and support for various data transfer protocols will help you integrate the controller into an existing one.
 ::
 
-:include{path="/catalog/includes/controller_text_dashboards"}
+::product-section{title="Text dashboards"}
+:photo{
+  src="sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-5.png"
+  width="500px"
+  float="right"
+}
 
-:include{path="/catalog/includes/controller_graphic_dashboards"}
+The main element of the text information panel is a widget. The widget allows you to display information from different sources in one place.
 
-:include{path="/catalog/includes/controller_data_archive"}
+The text dashboard can adapt to the small screen of a mobile device.
+::
 
-:include{path="/catalog/includes/controller_automation_scripts"}
+::product-section{title="Graphic dashboards"}
+:photo{
+  src="sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-6.png"
+  width="500px"
+  float="right"
+}
+
+You can create interactive graphic dashboards based on SVG drawings.
+
+You can output information to text elements of SVG-picture, change the visibility and design of elements. You can also customize the reaction to user action: turn on the light, turn off the alarm, etc.
+
+To set up a graphical dashboard, the controller's web interface has a visual editor.
+
+Read more about dashboards and other features of the web interface in the article [Controller web interface Wiren Board](https://wirenboard.com/en/pages/wb-software/)
+::
+
+::product-section{title="Data archive"}
+:photo{
+  src="sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-7.png"
+  width="500px"
+  float="right"
+}
+
+All data received by the controller are saved in an archive, the size of which can be configured.
+
+You can build graphs of historical data for several channels at the same time. You can interact with graphs: change the scale, make cursor measurements, etc.
+
+Data from the archive can be uploaded to CSV for analysis in third-party software.
+::
+
+::product-section{title="Automation scripts"}
+:photo{
+  src="sprut-hub-wiren-board-7/sprut-hub-wiren-board-7-8.png"
+  width="500px"
+  float="right"
+}
+
+The Wiren Board controller firmware contains a flexible scripting tool in Javascript-like language - WB-Rules.
+
+Using scripts, you can automate any action: control lighting, heating or a technological process.
+
+Scripts can be created and edited directly in the web interface, debugging is available in the console.
+::
 
 
 ::

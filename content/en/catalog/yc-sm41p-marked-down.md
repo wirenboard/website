@@ -2,6 +2,16 @@
 article: "YC-SM41P-marked down"
 cover: "yc-sm41p-marked-down/cover.png"
 catalogCover: "yc-sm41p-marked-down/catalog-cover.png"
+images: [
+  ["yc-sm41p-marked-down/cover.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-1.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-2.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-3.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-4.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-5.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-6.png"],
+  ["yc-sm41p-marked-down/yc-sm41p-marked-down-7.png"]
+]
 documentation: "https://wirenboard.com/wiki/HMI_Wall_Panel_With_Android_and_PoE_YC-SM41P"
 ---
 ::product
@@ -29,14 +39,14 @@ Made in China.
 ## Technical characteristics
 
 ::product-section{title="Hardware"}
-- Rockchip RK3566 Quad-core Cortex-A55, 1.8 GHz;
+- Rockchip RK3566 Quad-core Cortex-A55, 1.8 ГГц;
 - 2 GB RAM;
 - 32 GB eMMC;
 - 4 inch IPS display with touchscreen and 480x480 pixel resolution.
 ::
 
 ::product-section{title="Software"}
-- Android 11 OS;
+- Android 8 OS;
 - Built-in browser with support for all modern technologies;
 - Ability to install hundreds of third-party applications from Google Play and other app stores.
 ::
@@ -49,7 +59,7 @@ Made in China.
 - Two microphones, a speaker, and a light sensor.
 ::
 
-::product-section{title="Other characteristics"}
+::product-section{title="OTHER CHARACTERISTICS"}
 - Power supply: PoE 802.3af (48 V, 2 A) or AC 110 ~ 240 V, 50 Hz.
 - Operating temperature from −10 to 60 °C.
 - Case with mounting on a socket, 86x37x86 mm.

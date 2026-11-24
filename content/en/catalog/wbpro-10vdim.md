@@ -2,6 +2,9 @@
 article: "WBPRO-10VDIM"
 cover: "wbpro-10vdim/cover.png"
 catalogCover: "wbpro-10vdim/catalog-cover.png"
+images: [
+  ["wbpro-10vdim/cover.png"]
+]
 meta: "Lighting control module with Modbus RTU WBPRO-10VDIM"
 keywords: "Lighting control module with Modbus RTU WBPRO-10VDIM"
 ---
@@ -28,10 +31,9 @@ The 4-channel lighting control module is designed to control lighting fixtures e
 ::
 
 ::product-section{title="Other characteristics"}
-- Supply voltage: 9 to 28 VDC
+- Supply voltage: 11 to 24 VDC
 - Interface: RS-485, Modbus RTU
-- DIN rail enclosure, 2 modules
-- Dimensions: 36x90x58 mm
+- Dimensions: 65 x 35 x 7 mm
 ::
 
 

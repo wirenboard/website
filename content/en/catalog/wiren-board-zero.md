@@ -2,6 +2,11 @@
 article: "WB6-ZERO"
 cover: "wiren-board-zero/cover.png"
 catalogCover: "wiren-board-zero/catalog-cover.png"
+images: [
+  ["wiren-board-zero/cover.png"],
+  ["wiren-board-zero/wiren-board-zero-1.png"],
+  ["wiren-board-zero/wiren-board-zero-2.png"]
+]
 documentation: "https://wirenboard.com/wiki/Wiren_Board_rev._6.3-6.6"
 ---
 ::product

@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import Photo from './Photo.vue';
 
-const props = defineProps<{ data: ([string, string?])[]; withBorder?: boolean; }>();
+const props = withDefaults(defineProps<{ data: ([string, string?])[]; withBorder?: boolean; maxColumns?: number; }>(), {
+  maxColumns: 5,
+});
 const photos = ref();
 const openedPhoto = ref(null);
-const numberOfGalleryColumns = useColumns(props.data.length, 5, [460, 600, 800, 960]);
+const numberOfGalleryColumns = useColumns(props.data.length, props.maxColumns, [460, 600, 800, 960]);
 
 const previewWidth = computed(() => {
   const cols = numberOfGalleryColumns.value;
@@ -56,7 +58,7 @@ watch(openedPhoto, () => {
        :height="300"
        :width="previewWidth"
        :withBorder="withBorder"
-       :previewPreset="data.length >= 5 ? 'fullWidthGalleryPreview' : null"
+       previewPreset="fullWidthGalleryPreview"
        isGallery
        :key="i"
        @open-photo="(openedPhotoAttr) => openedPhoto = openedPhotoAttr"

@@ -2,7 +2,7 @@
 interface Option {
   id: number;
   name: string;
-  image: string;
+  image: string | null;
   description: string;
 }
 
@@ -22,7 +22,18 @@ const calculatorClass = 'add-to-basket-set activate_option';
       data-count="1"
       :key="option.id"
     >
-      <NuxtImg class="product-optionImage" :src="`https://wirenboard.com/storage/cache/${option.image}`" />
+      <!-- Обычный img, а не NuxtImg: магазин отдаёт уже готовый адрес — нужного размера и с
+           подписью glide. Повторная обработка не нужна, а любая добавка к query-строке сломала
+           бы подпись.
+           v-if: картинка есть не у всех опций и комплектаций (в админке поле необязательное),
+           а <img> без src браузер рисует значком битой картинки. -->
+      <img
+        v-if="option.image"
+        class="product-optionImage"
+        :src="option.image"
+        :alt="option.name"
+        loading="lazy"
+      />
       <div class="product-optionName">{{ option.name }}</div>
       <div v-html="option.description" class="product-optionDescription"></div>
     </div>
@@ -67,6 +78,11 @@ const calculatorClass = 'add-to-basket-set activate_option';
 .product-optionName {
   margin: 0 16px 8px;
   font-weight: bold;
+}
+
+/* Без картинки название оказывается первым в карточке и иначе прилипает к её краю. */
+.product-optionName:first-child {
+  margin-top: 16px;
 }
 
 .product-optionDescription {

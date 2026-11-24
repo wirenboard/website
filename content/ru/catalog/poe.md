@@ -2,6 +2,12 @@
 article: "PoE-12V"
 cover: "poe/cover.png"
 catalogCover: "poe/catalog-cover.png"
+images: [
+  ["poe/cover.png"],
+  ["poe/poe-1.jpg"],
+  ["poe/poe-2.jpg"],
+  ["poe/poe-3.png"]
+]
 meta: "Блок питания Passive PoE"
 keywords: "Блок питания Passive PoE"
 ---

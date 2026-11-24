@@ -5,8 +5,8 @@ coordinates: [55.7980529, 37.5417883]
 title: Voltagkin
 logo: voltagkin/voltagkin.webp
 phone: 79952991512
-website: https://voltagkin.ru
-email: info@voltagkin.ru
+website: https://voltagkin.com
+email: info@voltagkin.com
 ---
 
 Компания «Voltagkin» является ведущим интегратором решений для умного дома, предлагая инновационные технологии и сервисы, которые делают вашу жизнь более комфортной, безопасной и энергоэффективной.
