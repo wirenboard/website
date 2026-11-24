@@ -138,6 +138,7 @@ const { submitPending, orderError, orderErrorKind, fieldErrors, makeOrder } = aw
           <OrderPayment
             v-model:paymentType="paymentType"
             :paymentsInfo="paymentsInfo"
+            :country="country"
           />
         </fieldset>
       </div>
