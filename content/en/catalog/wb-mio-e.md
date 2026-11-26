@@ -14,7 +14,7 @@ keywords: "Bus coupler RS-485 and Ethernet"
 ::product
 #description
 
-**The module has been discontinued. Recommended replacement [WB-MGE v.3](/contents/product/wb-mge-v3)**
+**The module has been discontinued. Recommended replacement [WB-MGE v.3](/en/contents/product/wb-mge-v3)**
 
 Designed for remote connection of WBIO devices (I/O modules) using the Modbus protocol over the RS-485 bus and/or Ethernet.
 

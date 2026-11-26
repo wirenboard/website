@@ -14,7 +14,7 @@ keywords: "Bus coupler RS-485 (Modbus) to Ethernet (IP)"
 ::product
 #description
 
-**The module has been discontinued. Recommended replacement [WB-MGE v.3](/contents/product/wb-mge-v3)**
+**The module has been discontinued. Recommended replacement [WB-MGE v.3](/en/contents/product/wb-mge-v3)**
 
 The WB-MGE bus coupler is designed for remote connection of Modbus RTU devices with RS-485 bus via Ethernet (Modbus TCP and Modbus RTU over TCP protocols). The module can be connected directly to the controller, as well as via local network or the Internet.
 

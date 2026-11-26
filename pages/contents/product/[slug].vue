@@ -20,6 +20,10 @@ defineOptions({
   name: 'Product',
 });
 
+definePageMeta({
+  key: (route) => route.fullPath,
+});
+
 useContentHead({
   ...data.value,
   // @ts-ignore
