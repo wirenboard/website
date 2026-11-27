@@ -19,7 +19,8 @@ documentation: "https://wirenboard.com/wiki/Wiren_Board_7.4"
 ::product
 #description
 
-**We recommend using the newer controller [Wiren Board 8](/en/product/wiren-board-8_5/) in new projects.**
+**This device is not recommended for new projects. Recommended successor: [Wiren Board 8](/en/product/wiren-board-8_5/).
+Wiren Board 7 uses a 32-bit processor; Home Assistant, Node.js and Zigbee2MQTT will stop releasing builds for it in 2027.**
 
 Wiren Board 7 is a universal modular controller for automation, powered by the company’s own open-source Linux-based software.
 
