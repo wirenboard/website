@@ -1,5 +1,6 @@
 import type { Locale } from '@intlify/core-base';
 import type { ParsedContentInternalMeta } from '@nuxt/content';
+import type { Price } from '~/utils/price';
 
 export interface Category {
   name: string;
@@ -83,14 +84,17 @@ export interface OrderPrefill {
   deliveryOptions?: { query: Record<string, any>; data: AvailableDeliveriesInfo };
 }
 
-interface Price {
+// Формат PricelistApiData::formatPrice() на бэке — отдельный от общего Price (~/utils/price),
+// который использует PriceHelper::format() (CatalogProduct и остальной каталог): сумма уже
+// строкой и без символа валюты, currency — просто 'rub'/'usd'.
+interface PricelistPrice {
   amount: string;
   currency: 'rub' | 'usd';
 }
 
 interface PriceWithHint {
-  primary: Price;
-  secondary: Price | null;
+  primary: PricelistPrice;
+  secondary: PricelistPrice | null;
 }
 
 interface PricelistOptionValue {
@@ -296,6 +300,60 @@ export interface Tariff {
   tariff_code: number;
   tariff_description: string;
   tariff_name: string;
+}
+
+export interface CatalogCategory {
+  id: number;
+  slug: string;
+  name: string;
+  title: string;
+  description: string;
+  image: string;
+  layout: number;
+}
+
+export interface CatalogCategoryDetail extends CatalogCategory {
+  meta_title: string;
+  meta_description: string;
+  meta_keywords: string;
+}
+
+export interface CatalogProduct {
+  id: number;
+  slug: string;
+  article: string;
+  name: string;
+  type: string;
+  description: string;
+  image: string;
+  is_discontinued: boolean;
+  can_order: boolean;
+  has_options: boolean;
+  has_components: boolean;
+  has_price_range: boolean;
+  count_available: number;
+  count_reserve: number;
+  production_time_days: number;
+  price_min: Price;
+  price_max: Price;
+  // Параллельная цена в рублях — только когда показываем в евро на ru-языке (см.
+  // CatalogController::formatProductForApi()/common/helpers/PriceHelper.php на бэке).
+  price_min_secondary?: Price;
+  price_max_secondary?: Price;
+  custom_images?: Record<string, string>;
+}
+
+export interface CategoryResponse {
+  category: CatalogCategoryDetail;
+  products: CatalogProduct[];
+  nav_categories: { slug: string; name: string }[];
+}
+
+// /catalog/list/ — все включённые категории с товарами одним запросом (см. CatalogListData::
+// buildAll() на бэке) вместо цикла из отдельного запроса на каждую категорию.
+export interface CatalogListResponse {
+  categories: CatalogCategory[];
+  categoryDetails: CategoryResponse[];
 }
 
 export interface UserOrder {
